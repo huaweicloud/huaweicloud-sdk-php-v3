@@ -49,7 +49,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiging：迁移演练中 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
     * oemSystem  是否是OEM操作系统(Windows)
-    * startType  启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     * ioReadWait  磁盘IO读时延，单位为ms
     * hasTc  是否安装tc组件，Linux系统此参数为必选，否则无法通过后续环境检查
     * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware：VMware hyperv：HyperV other：其他 default：默认
@@ -123,7 +123,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiging：迁移演练中 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
     * oemSystem  是否是OEM操作系统(Windows)
-    * startType  启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     * ioReadWait  磁盘IO读时延，单位为ms
     * hasTc  是否安装tc组件，Linux系统此参数为必选，否则无法通过后续环境检查
     * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware：VMware hyperv：HyperV other：其他 default：默认
@@ -218,7 +218,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiging：迁移演练中 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
     * oemSystem  是否是OEM操作系统(Windows)
-    * startType  启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     * ioReadWait  磁盘IO读时延，单位为ms
     * hasTc  是否安装tc组件，Linux系统此参数为必选，否则无法通过后续环境检查
     * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware：VMware hyperv：HyperV other：其他 default：默认
@@ -292,7 +292,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiging：迁移演练中 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
     * oemSystem  是否是OEM操作系统(Windows)
-    * startType  启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     * ioReadWait  磁盘IO读时延，单位为ms
     * hasTc  是否安装tc组件，Linux系统此参数为必选，否则无法通过后续环境检查
     * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware：VMware hyperv：HyperV other：其他 default：默认
@@ -366,7 +366,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * migrationCycle  迁移周期 cutovering:启动目的端中 cutovered:启动目的端完成 checking:检查中 setting:设置中 replicating:复制中 syncing:同步中
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 skipping：跳过中 deleting：删除中 clearing: 清理快照资源中 cleared：清理快照资源完成 clearfailed：清理快照资源失败 premigready：迁移演练就绪 premiging：迁移演练中 premiged：迁移演练完成 premigfailed：迁移演练失败 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成 error：错误
     * oemSystem  是否是OEM操作系统(Windows)
-    * startType  启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     * ioReadWait  磁盘IO读时延，单位为ms
     * hasTc  是否安装tc组件，Linux系统此参数为必选，否则无法通过后续环境检查
     * platform  平台信息: hw：华为  ali：阿里 aws：亚马逊 azure：微软云 gcp：谷歌云 tencent：腾讯云 vmware：VMware hyperv：HyperV other：其他 default：默认
@@ -1530,7 +1530,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets startType
-    *  启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    *  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @return string|null
     */
@@ -1542,7 +1542,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets startType
     *
-    * @param string|null $startType 启动方式 可以取值MANUAL、MGC或者空，不进行校验
+    * @param string|null $startType 启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @return $this
     */

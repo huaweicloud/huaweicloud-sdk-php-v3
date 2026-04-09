@@ -23,7 +23,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
     * result  result
     * taskUri  任务uri
     * taskResultUri  测试套结果URI
-    * testCaseUris  用例uri
+    * testCaseUris  用例uri列表
     * isAsyn  是否异步执行
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
             'result' => '\HuaweiCloud\SDK\Cloudtest\V1\Model\AddTestCaseResultInfo',
             'taskUri' => 'string',
             'taskResultUri' => 'string',
-            'testCaseUris' => 'string',
+            'testCaseUris' => 'string[]',
             'isAsyn' => 'bool'
     ];
 
@@ -41,7 +41,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
     * result  result
     * taskUri  任务uri
     * taskResultUri  测试套结果URI
-    * testCaseUris  用例uri
+    * testCaseUris  用例uri列表
     * isAsyn  是否异步执行
     *
     * @var string[]
@@ -80,7 +80,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
     * result  result
     * taskUri  任务uri
     * taskResultUri  测试套结果URI
-    * testCaseUris  用例uri
+    * testCaseUris  用例uri列表
     * isAsyn  是否异步执行
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
     * result  result
     * taskUri  任务uri
     * taskResultUri  测试套结果URI
-    * testCaseUris  用例uri
+    * testCaseUris  用例uri列表
     * isAsyn  是否异步执行
     *
     * @var string[]
@@ -116,7 +116,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
     * result  result
     * taskUri  任务uri
     * taskResultUri  测试套结果URI
-    * testCaseUris  用例uri
+    * testCaseUris  用例uri列表
     * isAsyn  是否异步执行
     *
     * @var string[]
@@ -290,9 +290,9 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets testCaseUris
-    *  用例uri
+    *  用例uri列表
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getTestCaseUris()
     {
@@ -302,7 +302,7 @@ class BatchAddTestCaseResultInTaskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets testCaseUris
     *
-    * @param string|null $testCaseUris 用例uri
+    * @param string[]|null $testCaseUris 用例uri列表
     *
     * @return $this
     */

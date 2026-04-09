@@ -26,6 +26,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * windowsLogInfo  windowsLogInfo
     * stdout  标准输出开关，仅CCE接入类型时使用
     * stderr  标准输出开关标准错误开关，仅CCE接入类型时使用
+    * combineStdout  **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
     * pathType  CCE接入类型，仅CCE接入类型时使用
     * namespaceRegex  K8s Namespace正则匹配，仅CCE接入类型时使用
     * podNameRegex  K8s Pod正则匹配，仅CCE接入类型时使用
@@ -58,6 +59,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
             'windowsLogInfo' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigWindowsLogInfoCreate',
             'stdout' => 'bool',
             'stderr' => 'bool',
+            'combineStdout' => 'bool',
             'pathType' => 'string',
             'namespaceRegex' => 'string',
             'podNameRegex' => 'string',
@@ -90,6 +92,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * windowsLogInfo  windowsLogInfo
     * stdout  标准输出开关，仅CCE接入类型时使用
     * stderr  标准输出开关标准错误开关，仅CCE接入类型时使用
+    * combineStdout  **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
     * pathType  CCE接入类型，仅CCE接入类型时使用
     * namespaceRegex  K8s Namespace正则匹配，仅CCE接入类型时使用
     * podNameRegex  K8s Pod正则匹配，仅CCE接入类型时使用
@@ -122,6 +125,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
         'windowsLogInfo' => null,
         'stdout' => null,
         'stderr' => null,
+        'combineStdout' => null,
         'pathType' => null,
         'namespaceRegex' => null,
         'podNameRegex' => null,
@@ -175,6 +179,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * windowsLogInfo  windowsLogInfo
     * stdout  标准输出开关，仅CCE接入类型时使用
     * stderr  标准输出开关标准错误开关，仅CCE接入类型时使用
+    * combineStdout  **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
     * pathType  CCE接入类型，仅CCE接入类型时使用
     * namespaceRegex  K8s Namespace正则匹配，仅CCE接入类型时使用
     * podNameRegex  K8s Pod正则匹配，仅CCE接入类型时使用
@@ -207,6 +212,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
             'windowsLogInfo' => 'windows_log_info',
             'stdout' => 'stdout',
             'stderr' => 'stderr',
+            'combineStdout' => 'combine_stdout',
             'pathType' => 'pathType',
             'namespaceRegex' => 'namespaceRegex',
             'podNameRegex' => 'podNameRegex',
@@ -239,6 +245,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * windowsLogInfo  windowsLogInfo
     * stdout  标准输出开关，仅CCE接入类型时使用
     * stderr  标准输出开关标准错误开关，仅CCE接入类型时使用
+    * combineStdout  **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
     * pathType  CCE接入类型，仅CCE接入类型时使用
     * namespaceRegex  K8s Namespace正则匹配，仅CCE接入类型时使用
     * podNameRegex  K8s Pod正则匹配，仅CCE接入类型时使用
@@ -271,6 +278,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
             'windowsLogInfo' => 'setWindowsLogInfo',
             'stdout' => 'setStdout',
             'stderr' => 'setStderr',
+            'combineStdout' => 'setCombineStdout',
             'pathType' => 'setPathType',
             'namespaceRegex' => 'setNamespaceRegex',
             'podNameRegex' => 'setPodNameRegex',
@@ -303,6 +311,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     * windowsLogInfo  windowsLogInfo
     * stdout  标准输出开关，仅CCE接入类型时使用
     * stderr  标准输出开关标准错误开关，仅CCE接入类型时使用
+    * combineStdout  **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
     * pathType  CCE接入类型，仅CCE接入类型时使用
     * namespaceRegex  K8s Namespace正则匹配，仅CCE接入类型时使用
     * podNameRegex  K8s Pod正则匹配，仅CCE接入类型时使用
@@ -335,6 +344,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
             'windowsLogInfo' => 'getWindowsLogInfo',
             'stdout' => 'getStdout',
             'stderr' => 'getStderr',
+            'combineStdout' => 'getCombineStdout',
             'pathType' => 'getPathType',
             'namespaceRegex' => 'getNamespaceRegex',
             'podNameRegex' => 'getPodNameRegex',
@@ -440,6 +450,7 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
         $this->container['windowsLogInfo'] = isset($data['windowsLogInfo']) ? $data['windowsLogInfo'] : null;
         $this->container['stdout'] = isset($data['stdout']) ? $data['stdout'] : null;
         $this->container['stderr'] = isset($data['stderr']) ? $data['stderr'] : null;
+        $this->container['combineStdout'] = isset($data['combineStdout']) ? $data['combineStdout'] : null;
         $this->container['pathType'] = isset($data['pathType']) ? $data['pathType'] : null;
         $this->container['namespaceRegex'] = isset($data['namespaceRegex']) ? $data['namespaceRegex'] : null;
         $this->container['podNameRegex'] = isset($data['podNameRegex']) ? $data['podNameRegex'] : null;
@@ -638,6 +649,30 @@ class AccessConfigDeatilCreate implements ModelInterface, ArrayAccess
     public function setStderr($stderr)
     {
         $this->container['stderr'] = $stderr;
+        return $this;
+    }
+
+    /**
+    * Gets combineStdout
+    *  **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
+    *
+    * @return bool|null
+    */
+    public function getCombineStdout()
+    {
+        return $this->container['combineStdout'];
+    }
+
+    /**
+    * Sets combineStdout
+    *
+    * @param bool|null $combineStdout **参数解释：** 云容器引擎CCE应用日志接入时，是否将标准输出和标准错误采集到同一个文件。 **取值范围：** - true：将标准输出和标准错误采集到同一个文件（stdout.log）。 - false：将标准输出和标准错误采集到不同的文件（stdout.log和stderr.log）。
+    *
+    * @return $this
+    */
+    public function setCombineStdout($combineStdout)
+    {
+        $this->container['combineStdout'] = $combineStdout;
         return $this;
     }
 

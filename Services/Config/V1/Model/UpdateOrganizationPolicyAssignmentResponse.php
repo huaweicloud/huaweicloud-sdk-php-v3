@@ -29,6 +29,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
     * description  描述信息。
     * period  触发周期。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * parameters  规则参数。
     * policyDefinitionId  策略ID。
     * createdAt  创建时间。
@@ -45,6 +46,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
             'description' => 'string',
             'period' => 'string',
             'policyFilter' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinition',
+            'policyFilterV2' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2',
             'parameters' => 'map[string,\HuaweiCloud\SDK\Config\V1\Model\PolicyParameterValue]',
             'policyDefinitionId' => 'string',
             'createdAt' => 'string',
@@ -61,6 +63,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
     * description  描述信息。
     * period  触发周期。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * parameters  规则参数。
     * policyDefinitionId  策略ID。
     * createdAt  创建时间。
@@ -77,6 +80,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
         'description' => null,
         'period' => null,
         'policyFilter' => null,
+        'policyFilterV2' => null,
         'parameters' => null,
         'policyDefinitionId' => null,
         'createdAt' => null,
@@ -114,6 +118,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
     * description  描述信息。
     * period  触发周期。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * parameters  规则参数。
     * policyDefinitionId  策略ID。
     * createdAt  创建时间。
@@ -130,6 +135,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
             'description' => 'description',
             'period' => 'period',
             'policyFilter' => 'policy_filter',
+            'policyFilterV2' => 'policy_filter_v2',
             'parameters' => 'parameters',
             'policyDefinitionId' => 'policy_definition_id',
             'createdAt' => 'created_at',
@@ -146,6 +152,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
     * description  描述信息。
     * period  触发周期。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * parameters  规则参数。
     * policyDefinitionId  策略ID。
     * createdAt  创建时间。
@@ -162,6 +169,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
             'description' => 'setDescription',
             'period' => 'setPeriod',
             'policyFilter' => 'setPolicyFilter',
+            'policyFilterV2' => 'setPolicyFilterV2',
             'parameters' => 'setParameters',
             'policyDefinitionId' => 'setPolicyDefinitionId',
             'createdAt' => 'setCreatedAt',
@@ -178,6 +186,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
     * description  描述信息。
     * period  触发周期。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * parameters  规则参数。
     * policyDefinitionId  策略ID。
     * createdAt  创建时间。
@@ -194,6 +203,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
             'description' => 'getDescription',
             'period' => 'getPeriod',
             'policyFilter' => 'getPolicyFilter',
+            'policyFilterV2' => 'getPolicyFilterV2',
             'parameters' => 'getParameters',
             'policyDefinitionId' => 'getPolicyDefinitionId',
             'createdAt' => 'getCreatedAt',
@@ -266,6 +276,7 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['policyFilter'] = isset($data['policyFilter']) ? $data['policyFilter'] : null;
+        $this->container['policyFilterV2'] = isset($data['policyFilterV2']) ? $data['policyFilterV2'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['policyDefinitionId'] = isset($data['policyDefinitionId']) ? $data['policyDefinitionId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
@@ -483,6 +494,30 @@ class UpdateOrganizationPolicyAssignmentResponse implements ModelInterface, Arra
     public function setPolicyFilter($policyFilter)
     {
         $this->container['policyFilter'] = $policyFilter;
+        return $this;
+    }
+
+    /**
+    * Gets policyFilterV2
+    *  policyFilterV2
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2|null
+    */
+    public function getPolicyFilterV2()
+    {
+        return $this->container['policyFilterV2'];
+    }
+
+    /**
+    * Sets policyFilterV2
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2|null $policyFilterV2 policyFilterV2
+    *
+    * @return $this
+    */
+    public function setPolicyFilterV2($policyFilterV2)
+    {
+        $this->container['policyFilterV2'] = $policyFilterV2;
         return $this;
     }
 

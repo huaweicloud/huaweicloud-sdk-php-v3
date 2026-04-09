@@ -23,13 +23,15 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     * excludedAccounts  需要排除配置规则的帐号。
     * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
+    * customPolicyAssignmentMetadata  customPolicyAssignmentMetadata
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'excludedAccounts' => 'string[]',
             'organizationPolicyAssignmentName' => 'string',
-            'managedPolicyAssignmentMetadata' => '\HuaweiCloud\SDK\Config\V1\Model\ManagedPolicyAssignmentMetadata'
+            'managedPolicyAssignmentMetadata' => '\HuaweiCloud\SDK\Config\V1\Model\ManagedPolicyAssignmentMetadata',
+            'customPolicyAssignmentMetadata' => '\HuaweiCloud\SDK\Config\V1\Model\CustomPolicyAssignmentMetadata'
     ];
 
     /**
@@ -37,13 +39,15 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     * excludedAccounts  需要排除配置规则的帐号。
     * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
+    * customPolicyAssignmentMetadata  customPolicyAssignmentMetadata
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'excludedAccounts' => null,
         'organizationPolicyAssignmentName' => null,
-        'managedPolicyAssignmentMetadata' => null
+        'managedPolicyAssignmentMetadata' => null,
+        'customPolicyAssignmentMetadata' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     * excludedAccounts  需要排除配置规则的帐号。
     * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
+    * customPolicyAssignmentMetadata  customPolicyAssignmentMetadata
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'excludedAccounts' => 'excluded_accounts',
             'organizationPolicyAssignmentName' => 'organization_policy_assignment_name',
-            'managedPolicyAssignmentMetadata' => 'managed_policy_assignment_metadata'
+            'managedPolicyAssignmentMetadata' => 'managed_policy_assignment_metadata',
+            'customPolicyAssignmentMetadata' => 'custom_policy_assignment_metadata'
     ];
 
     /**
@@ -86,13 +92,15 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     * excludedAccounts  需要排除配置规则的帐号。
     * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
+    * customPolicyAssignmentMetadata  customPolicyAssignmentMetadata
     *
     * @var string[]
     */
     protected static $setters = [
             'excludedAccounts' => 'setExcludedAccounts',
             'organizationPolicyAssignmentName' => 'setOrganizationPolicyAssignmentName',
-            'managedPolicyAssignmentMetadata' => 'setManagedPolicyAssignmentMetadata'
+            'managedPolicyAssignmentMetadata' => 'setManagedPolicyAssignmentMetadata',
+            'customPolicyAssignmentMetadata' => 'setCustomPolicyAssignmentMetadata'
     ];
 
     /**
@@ -100,13 +108,15 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     * excludedAccounts  需要排除配置规则的帐号。
     * organizationPolicyAssignmentName  组织合规规则名称
     * managedPolicyAssignmentMetadata  managedPolicyAssignmentMetadata
+    * customPolicyAssignmentMetadata  customPolicyAssignmentMetadata
     *
     * @var string[]
     */
     protected static $getters = [
             'excludedAccounts' => 'getExcludedAccounts',
             'organizationPolicyAssignmentName' => 'getOrganizationPolicyAssignmentName',
-            'managedPolicyAssignmentMetadata' => 'getManagedPolicyAssignmentMetadata'
+            'managedPolicyAssignmentMetadata' => 'getManagedPolicyAssignmentMetadata',
+            'customPolicyAssignmentMetadata' => 'getCustomPolicyAssignmentMetadata'
     ];
 
     /**
@@ -170,6 +180,7 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
         $this->container['excludedAccounts'] = isset($data['excludedAccounts']) ? $data['excludedAccounts'] : null;
         $this->container['organizationPolicyAssignmentName'] = isset($data['organizationPolicyAssignmentName']) ? $data['organizationPolicyAssignmentName'] : null;
         $this->container['managedPolicyAssignmentMetadata'] = isset($data['managedPolicyAssignmentMetadata']) ? $data['managedPolicyAssignmentMetadata'] : null;
+        $this->container['customPolicyAssignmentMetadata'] = isset($data['customPolicyAssignmentMetadata']) ? $data['customPolicyAssignmentMetadata'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
     public function setManagedPolicyAssignmentMetadata($managedPolicyAssignmentMetadata)
     {
         $this->container['managedPolicyAssignmentMetadata'] = $managedPolicyAssignmentMetadata;
+        return $this;
+    }
+
+    /**
+    * Gets customPolicyAssignmentMetadata
+    *  customPolicyAssignmentMetadata
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\CustomPolicyAssignmentMetadata|null
+    */
+    public function getCustomPolicyAssignmentMetadata()
+    {
+        return $this->container['customPolicyAssignmentMetadata'];
+    }
+
+    /**
+    * Sets customPolicyAssignmentMetadata
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\CustomPolicyAssignmentMetadata|null $customPolicyAssignmentMetadata customPolicyAssignmentMetadata
+    *
+    * @return $this
+    */
+    public function setCustomPolicyAssignmentMetadata($customPolicyAssignmentMetadata)
+    {
+        $this->container['customPolicyAssignmentMetadata'] = $customPolicyAssignmentMetadata;
         return $this;
     }
 

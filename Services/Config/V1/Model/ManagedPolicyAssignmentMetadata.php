@@ -24,6 +24,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
     * period  触发周期。
     * parameters  输入参数。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * policyDefinitionId  预定义策略标识符。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
             'period' => 'string',
             'parameters' => 'map[string,\HuaweiCloud\SDK\Config\V1\Model\PolicyParameterValue]',
             'policyFilter' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinition',
+            'policyFilterV2' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2',
             'policyDefinitionId' => 'string'
     ];
 
@@ -42,6 +44,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
     * period  触发周期。
     * parameters  输入参数。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * policyDefinitionId  预定义策略标识符。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
         'period' => null,
         'parameters' => null,
         'policyFilter' => null,
+        'policyFilterV2' => null,
         'policyDefinitionId' => null
     ];
 
@@ -81,6 +85,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
     * period  触发周期。
     * parameters  输入参数。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * policyDefinitionId  预定义策略标识符。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
             'period' => 'period',
             'parameters' => 'parameters',
             'policyFilter' => 'policy_filter',
+            'policyFilterV2' => 'policy_filter_v2',
             'policyDefinitionId' => 'policy_definition_id'
     ];
 
@@ -99,6 +105,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
     * period  触发周期。
     * parameters  输入参数。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * policyDefinitionId  预定义策略标识符。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
             'period' => 'setPeriod',
             'parameters' => 'setParameters',
             'policyFilter' => 'setPolicyFilter',
+            'policyFilterV2' => 'setPolicyFilterV2',
             'policyDefinitionId' => 'setPolicyDefinitionId'
     ];
 
@@ -117,6 +125,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
     * period  触发周期。
     * parameters  输入参数。
     * policyFilter  policyFilter
+    * policyFilterV2  policyFilterV2
     * policyDefinitionId  预定义策略标识符。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
             'period' => 'getPeriod',
             'parameters' => 'getParameters',
             'policyFilter' => 'getPolicyFilter',
+            'policyFilterV2' => 'getPolicyFilterV2',
             'policyDefinitionId' => 'getPolicyDefinitionId'
     ];
 
@@ -212,6 +222,7 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['policyFilter'] = isset($data['policyFilter']) ? $data['policyFilter'] : null;
+        $this->container['policyFilterV2'] = isset($data['policyFilterV2']) ? $data['policyFilterV2'] : null;
         $this->container['policyDefinitionId'] = isset($data['policyDefinitionId']) ? $data['policyDefinitionId'] : null;
     }
 
@@ -353,6 +364,30 @@ class ManagedPolicyAssignmentMetadata implements ModelInterface, ArrayAccess
     public function setPolicyFilter($policyFilter)
     {
         $this->container['policyFilter'] = $policyFilter;
+        return $this;
+    }
+
+    /**
+    * Gets policyFilterV2
+    *  policyFilterV2
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2|null
+    */
+    public function getPolicyFilterV2()
+    {
+        return $this->container['policyFilterV2'];
+    }
+
+    /**
+    * Sets policyFilterV2
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinitionV2|null $policyFilterV2 policyFilterV2
+    *
+    * @return $this
+    */
+    public function setPolicyFilterV2($policyFilterV2)
+    {
+        $this->container['policyFilterV2'] = $policyFilterV2;
         return $this;
     }
 

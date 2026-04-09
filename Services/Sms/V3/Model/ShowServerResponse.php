@@ -50,6 +50,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -82,7 +83,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'int',
             'stageActionTime' => 'int',
             'agentVersion' => 'string',
-            'hasTc' => 'bool'
+            'hasTc' => 'bool',
+            'startType' => 'string'
     ];
 
     /**
@@ -116,6 +118,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -148,7 +151,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
         'lastVisitTime' => 'int64',
         'stageActionTime' => 'int64',
         'agentVersion' => null,
-        'hasTc' => null
+        'hasTc' => null,
+        'startType' => null
     ];
 
     /**
@@ -203,6 +207,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -235,7 +240,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'last_visit_time',
             'stageActionTime' => 'stage_action_time',
             'agentVersion' => 'agent_version',
-            'hasTc' => 'has_tc'
+            'hasTc' => 'has_tc',
+            'startType' => 'start_type'
     ];
 
     /**
@@ -269,6 +275,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -301,7 +308,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'setLastVisitTime',
             'stageActionTime' => 'setStageActionTime',
             'agentVersion' => 'setAgentVersion',
-            'hasTc' => 'setHasTc'
+            'hasTc' => 'setHasTc',
+            'startType' => 'setStartType'
     ];
 
     /**
@@ -335,6 +343,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     * stageActionTime  迁移周期（migration_cycle）上一次变化的时间戳
     * agentVersion  Agent版本信息
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -367,7 +376,8 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             'lastVisitTime' => 'getLastVisitTime',
             'stageActionTime' => 'getStageActionTime',
             'agentVersion' => 'getAgentVersion',
-            'hasTc' => 'getHasTc'
+            'hasTc' => 'getHasTc',
+            'startType' => 'getStartType'
     ];
 
     /**
@@ -544,6 +554,7 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
         $this->container['stageActionTime'] = isset($data['stageActionTime']) ? $data['stageActionTime'] : null;
         $this->container['agentVersion'] = isset($data['agentVersion']) ? $data['agentVersion'] : null;
         $this->container['hasTc'] = isset($data['hasTc']) ? $data['hasTc'] : null;
+        $this->container['startType'] = isset($data['startType']) ? $data['startType'] : null;
     }
 
     /**
@@ -679,6 +690,12 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['agentVersion']) && (mb_strlen($this->container['agentVersion']) < 0)) {
                 $invalidProperties[] = "invalid value for 'agentVersion', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startType']) && (mb_strlen($this->container['startType']) > 255)) {
+                $invalidProperties[] = "invalid value for 'startType', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['startType']) && (mb_strlen($this->container['startType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'startType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1387,6 +1404,30 @@ class ShowServerResponse implements ModelInterface, ArrayAccess
     public function setHasTc($hasTc)
     {
         $this->container['hasTc'] = $hasTc;
+        return $this;
+    }
+
+    /**
+    * Gets startType
+    *  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
+    *
+    * @return string|null
+    */
+    public function getStartType()
+    {
+        return $this->container['startType'];
+    }
+
+    /**
+    * Sets startType
+    *
+    * @param string|null $startType 启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
+    *
+    * @return $this
+    */
+    public function setStartType($startType)
+    {
+        $this->container['startType'] = $startType;
         return $this;
     }
 

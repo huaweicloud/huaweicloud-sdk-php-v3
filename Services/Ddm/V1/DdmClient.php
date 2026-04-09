@@ -1318,6 +1318,71 @@ class DdmClient extends Client
     }
 
     /**
+     * 创建账号
+     *
+     * 账号用于连接和管理逻辑库。一个DDM账号可以关联多个逻辑库。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDdmUser($request)
+    {
+        return $this->createDdmUserWithHttpInfo($request);
+    }
+
+    public function createDdmUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\CreateDdmUserResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\CreateDdmUserRequest');
+    }
+
+    /**
      * 创建组
      *
      * 创建组
@@ -1772,6 +1837,71 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\DeleteDdmInstanceResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\DeleteDdmInstanceRequest');
+    }
+
+    /**
+     * 删除账号
+     *
+     * 删除账号。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDdmUser($request)
+    {
+        return $this->deleteDdmUserWithHttpInfo($request);
+    }
+
+    public function deleteDdmUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/users/{username}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['username'] !== null) {
+            $pathParams['username'] = $localVarParams['username'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\DeleteDdmUserResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\DeleteDdmUserRequest');
     }
 
     /**
@@ -2842,6 +2972,74 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListDdmFlavorsResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListDdmFlavorsRequest');
+    }
+
+    /**
+     * 查询账号列表
+     *
+     * 查询账号列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDdmUsers($request)
+    {
+        return $this->listDdmUsersWithHttpInfo($request);
+    }
+
+    public function listDdmUsersWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ListDdmUsersResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ListDdmUsersRequest');
     }
 
     /**
@@ -4007,6 +4205,74 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ResetAdministratorResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ResetAdministratorRequest');
+    }
+
+    /**
+     * 重置账号密码
+     *
+     * 重置现有账号的密码。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetDdmUserPassword($request)
+    {
+        return $this->resetDdmUserPasswordWithHttpInfo($request);
+    }
+
+    public function resetDdmUserPasswordWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/users/{username}/password';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['username'] !== null) {
+            $pathParams['username'] = $localVarParams['username'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ResetDdmUserPasswordResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ResetDdmUserPasswordRequest');
     }
 
     /**
@@ -6259,6 +6525,74 @@ class DdmClient extends Client
     }
 
     /**
+     * 修改账号
+     *
+     * 修改现有DDM账号的权限或者与逻辑库的关联关系。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDdmUser($request)
+    {
+        return $this->updateDdmUserWithHttpInfo($request);
+    }
+
+    public function updateDdmUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/users/{username}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['username'] !== null) {
+            $pathParams['username'] = $localVarParams['username'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\UpdateDdmUserResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\UpdateDdmUserRequest');
+    }
+
+    /**
      * 修改DDM实例名称
      *
      * 修改DDM实例名称。
@@ -7110,6 +7444,72 @@ class DdmClient extends Client
     }
 
     /**
+     * 移动TMLOG文件
+     *
+     * 移动TMLOG文件
+     * 将当前的TMLOG文件压缩移动到备份目录下
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function moveTmlogFiles($request)
+    {
+        return $this->moveTmlogFilesWithHttpInfo($request);
+    }
+
+    public function moveTmlogFilesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/tmlogs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\MoveTmlogFilesResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\MoveTmlogFilesRequest');
+    }
+
+    /**
      * 更新参数组V3
      *
      * 更新参数组V3
@@ -7175,6 +7575,71 @@ class DdmClient extends Client
     }
 
     /**
+     * 设置实例只读状态V3
+     *
+     * 设置实例只读状态V3
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setReadOnlyStatus($request)
+    {
+        return $this->setReadOnlyStatusWithHttpInfo($request);
+    }
+
+    public function setReadOnlyStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/readonly-status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\SetReadOnlyStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\SetReadOnlyStatusRequest');
+    }
+
+    /**
      * 查询实例详情V3
      *
      * 查询实例详情V3
@@ -7234,6 +7699,75 @@ class DdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowDdmDetailResponse',
             $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowDdmDetailRequest');
+    }
+
+    /**
+     * 查询TMLOG信息
+     *
+     * 查询TMLOG信息
+     * TMLOG记录XA事务信息，用以支持事务恢复
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTmlogInfos($request)
+    {
+        return $this->showTmlogInfosWithHttpInfo($request);
+    }
+
+    public function showTmlogInfosWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/tmlogs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowTmlogInfosResponse',
+            $requestType='\HuaweiCloud\SDK\Ddm\V1\Model\ShowTmlogInfosRequest');
     }
 
     /**

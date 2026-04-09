@@ -22,6 +22,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sharedConnId  共享连接ID
     * expiredTime  过期时间
+    * timezone  时区
     * users  用户
     *
     * @var string[]
@@ -29,6 +30,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'sharedConnId' => 'string',
             'expiredTime' => 'string',
+            'timezone' => 'string',
             'users' => '\HuaweiCloud\SDK\Das\V3\Model\ShareConnUserInfo[]'
     ];
 
@@ -36,6 +38,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * sharedConnId  共享连接ID
     * expiredTime  过期时间
+    * timezone  时区
     * users  用户
     *
     * @var string[]
@@ -43,6 +46,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'sharedConnId' => null,
         'expiredTime' => null,
+        'timezone' => null,
         'users' => null
     ];
 
@@ -71,6 +75,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sharedConnId  共享连接ID
     * expiredTime  过期时间
+    * timezone  时区
     * users  用户
     *
     * @var string[]
@@ -78,6 +83,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'sharedConnId' => 'shared_conn_id',
             'expiredTime' => 'expired_time',
+            'timezone' => 'timezone',
             'users' => 'users'
     ];
 
@@ -85,6 +91,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * sharedConnId  共享连接ID
     * expiredTime  过期时间
+    * timezone  时区
     * users  用户
     *
     * @var string[]
@@ -92,6 +99,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'sharedConnId' => 'setSharedConnId',
             'expiredTime' => 'setExpiredTime',
+            'timezone' => 'setTimezone',
             'users' => 'setUsers'
     ];
 
@@ -99,6 +107,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * sharedConnId  共享连接ID
     * expiredTime  过期时间
+    * timezone  时区
     * users  用户
     *
     * @var string[]
@@ -106,6 +115,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'sharedConnId' => 'getSharedConnId',
             'expiredTime' => 'getExpiredTime',
+            'timezone' => 'getTimezone',
             'users' => 'getUsers'
     ];
 
@@ -169,6 +179,7 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['sharedConnId'] = isset($data['sharedConnId']) ? $data['sharedConnId'] : null;
         $this->container['expiredTime'] = isset($data['expiredTime']) ? $data['expiredTime'] : null;
+        $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
     }
 
@@ -245,6 +256,30 @@ class CreateShareConnectionsRequestBody implements ModelInterface, ArrayAccess
     public function setExpiredTime($expiredTime)
     {
         $this->container['expiredTime'] = $expiredTime;
+        return $this;
+    }
+
+    /**
+    * Gets timezone
+    *  时区
+    *
+    * @return string|null
+    */
+    public function getTimezone()
+    {
+        return $this->container['timezone'];
+    }
+
+    /**
+    * Sets timezone
+    *
+    * @param string|null $timezone 时区
+    *
+    * @return $this
+    */
+    public function setTimezone($timezone)
+    {
+        $this->container['timezone'] = $timezone;
         return $this;
     }
 

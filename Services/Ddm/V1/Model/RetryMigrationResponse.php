@@ -21,7 +21,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务id
+    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务id
+    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务id
+    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务id
+    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务id
+    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -159,6 +159,12 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'jobId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 8)) {
+                $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 8.";
+            }
         return $invalidProperties;
     }
 
@@ -175,7 +181,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务id
+    *  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @return string|null
     */
@@ -187,7 +193,7 @@ class RetryMigrationResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务id
+    * @param string|null $jobId **参数解释**：  工作流ID。  **取值范围**：  不涉及。
     *
     * @return $this
     */

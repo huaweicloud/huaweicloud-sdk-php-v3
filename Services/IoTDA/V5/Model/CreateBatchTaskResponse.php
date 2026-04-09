@@ -25,6 +25,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
     * taskName  批量任务名称。
     * taskType  批量任务类型，取值范围：firmwareUpgrade，softwareUpgrade，createDevices，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows。 - softwareUpgrade: 软件升级任务 - firmwareUpgrade: 固件升级任务 - createDevices: 批量创建设备任务 - deleteDevices: 批量删除设备任务 - freezeDevices: 批量冻结设备任务 - unfreezeDevices: 批量解冻设备任务 - createCommands: 批量创建同步命令任务 - createAsyncCommands: 批量创建异步命令任务 - createMessages: 批量创建消息任务 - updateDeviceShadows: 批量配置设备影子任务 - updateDevices：批量更新设备任务
     * taskMode  **参数说明**：批量任务的模式，当前只支持网关模式，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，若升级的设备为某个网关的子设备，则平台下发获取版本信息通知和平台下发升级通知将携带task_id（软固件升级批量任务的任务ID）和sub_device_count（批量任务中网关设备包含的升级子设备数量）字段。 **取值范围**：GATEWAY: 网关模式。
+    * needConfirm  **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
     * taskExtInfo  **参数说明**：批量任务额外扩展信息，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，平台下发获取版本信息通知和平台下发升级通知将携带该字段。 **取值范围**：最长不超过512个字符。
     * targets  执行批量任务的目标，当task_type为firmwareUpgrade，softwareUpgrade，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows，此处填写device_id列表。
     * targetsFilter  任务目标筛选参数。Json格式，里面是一个个键值对，（K,V）格式标识筛选targets需要的参数，目前支持的K有group_ids（V填写group_id数组，eg:[\"e495cf17-ff79-4294-8f64-4d367919d665\"]，任务则会筛选出来符合该群组条件的设备作为目标）
@@ -42,6 +43,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
             'taskName' => 'string',
             'taskType' => 'string',
             'taskMode' => 'string',
+            'needConfirm' => 'bool',
             'taskExtInfo' => 'object',
             'targets' => 'string[]',
             'targetsFilter' => 'map[string,object]',
@@ -59,6 +61,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
     * taskName  批量任务名称。
     * taskType  批量任务类型，取值范围：firmwareUpgrade，softwareUpgrade，createDevices，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows。 - softwareUpgrade: 软件升级任务 - firmwareUpgrade: 固件升级任务 - createDevices: 批量创建设备任务 - deleteDevices: 批量删除设备任务 - freezeDevices: 批量冻结设备任务 - unfreezeDevices: 批量解冻设备任务 - createCommands: 批量创建同步命令任务 - createAsyncCommands: 批量创建异步命令任务 - createMessages: 批量创建消息任务 - updateDeviceShadows: 批量配置设备影子任务 - updateDevices：批量更新设备任务
     * taskMode  **参数说明**：批量任务的模式，当前只支持网关模式，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，若升级的设备为某个网关的子设备，则平台下发获取版本信息通知和平台下发升级通知将携带task_id（软固件升级批量任务的任务ID）和sub_device_count（批量任务中网关设备包含的升级子设备数量）字段。 **取值范围**：GATEWAY: 网关模式。
+    * needConfirm  **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
     * taskExtInfo  **参数说明**：批量任务额外扩展信息，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，平台下发获取版本信息通知和平台下发升级通知将携带该字段。 **取值范围**：最长不超过512个字符。
     * targets  执行批量任务的目标，当task_type为firmwareUpgrade，softwareUpgrade，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows，此处填写device_id列表。
     * targetsFilter  任务目标筛选参数。Json格式，里面是一个个键值对，（K,V）格式标识筛选targets需要的参数，目前支持的K有group_ids（V填写group_id数组，eg:[\"e495cf17-ff79-4294-8f64-4d367919d665\"]，任务则会筛选出来符合该群组条件的设备作为目标）
@@ -76,6 +79,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
         'taskName' => null,
         'taskType' => null,
         'taskMode' => null,
+        'needConfirm' => null,
         'taskExtInfo' => null,
         'targets' => null,
         'targetsFilter' => null,
@@ -114,6 +118,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
     * taskName  批量任务名称。
     * taskType  批量任务类型，取值范围：firmwareUpgrade，softwareUpgrade，createDevices，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows。 - softwareUpgrade: 软件升级任务 - firmwareUpgrade: 固件升级任务 - createDevices: 批量创建设备任务 - deleteDevices: 批量删除设备任务 - freezeDevices: 批量冻结设备任务 - unfreezeDevices: 批量解冻设备任务 - createCommands: 批量创建同步命令任务 - createAsyncCommands: 批量创建异步命令任务 - createMessages: 批量创建消息任务 - updateDeviceShadows: 批量配置设备影子任务 - updateDevices：批量更新设备任务
     * taskMode  **参数说明**：批量任务的模式，当前只支持网关模式，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，若升级的设备为某个网关的子设备，则平台下发获取版本信息通知和平台下发升级通知将携带task_id（软固件升级批量任务的任务ID）和sub_device_count（批量任务中网关设备包含的升级子设备数量）字段。 **取值范围**：GATEWAY: 网关模式。
+    * needConfirm  **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
     * taskExtInfo  **参数说明**：批量任务额外扩展信息，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，平台下发获取版本信息通知和平台下发升级通知将携带该字段。 **取值范围**：最长不超过512个字符。
     * targets  执行批量任务的目标，当task_type为firmwareUpgrade，softwareUpgrade，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows，此处填写device_id列表。
     * targetsFilter  任务目标筛选参数。Json格式，里面是一个个键值对，（K,V）格式标识筛选targets需要的参数，目前支持的K有group_ids（V填写group_id数组，eg:[\"e495cf17-ff79-4294-8f64-4d367919d665\"]，任务则会筛选出来符合该群组条件的设备作为目标）
@@ -131,6 +136,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
             'taskName' => 'task_name',
             'taskType' => 'task_type',
             'taskMode' => 'task_mode',
+            'needConfirm' => 'need_confirm',
             'taskExtInfo' => 'task_ext_info',
             'targets' => 'targets',
             'targetsFilter' => 'targets_filter',
@@ -148,6 +154,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
     * taskName  批量任务名称。
     * taskType  批量任务类型，取值范围：firmwareUpgrade，softwareUpgrade，createDevices，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows。 - softwareUpgrade: 软件升级任务 - firmwareUpgrade: 固件升级任务 - createDevices: 批量创建设备任务 - deleteDevices: 批量删除设备任务 - freezeDevices: 批量冻结设备任务 - unfreezeDevices: 批量解冻设备任务 - createCommands: 批量创建同步命令任务 - createAsyncCommands: 批量创建异步命令任务 - createMessages: 批量创建消息任务 - updateDeviceShadows: 批量配置设备影子任务 - updateDevices：批量更新设备任务
     * taskMode  **参数说明**：批量任务的模式，当前只支持网关模式，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，若升级的设备为某个网关的子设备，则平台下发获取版本信息通知和平台下发升级通知将携带task_id（软固件升级批量任务的任务ID）和sub_device_count（批量任务中网关设备包含的升级子设备数量）字段。 **取值范围**：GATEWAY: 网关模式。
+    * needConfirm  **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
     * taskExtInfo  **参数说明**：批量任务额外扩展信息，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，平台下发获取版本信息通知和平台下发升级通知将携带该字段。 **取值范围**：最长不超过512个字符。
     * targets  执行批量任务的目标，当task_type为firmwareUpgrade，softwareUpgrade，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows，此处填写device_id列表。
     * targetsFilter  任务目标筛选参数。Json格式，里面是一个个键值对，（K,V）格式标识筛选targets需要的参数，目前支持的K有group_ids（V填写group_id数组，eg:[\"e495cf17-ff79-4294-8f64-4d367919d665\"]，任务则会筛选出来符合该群组条件的设备作为目标）
@@ -165,6 +172,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
             'taskName' => 'setTaskName',
             'taskType' => 'setTaskType',
             'taskMode' => 'setTaskMode',
+            'needConfirm' => 'setNeedConfirm',
             'taskExtInfo' => 'setTaskExtInfo',
             'targets' => 'setTargets',
             'targetsFilter' => 'setTargetsFilter',
@@ -182,6 +190,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
     * taskName  批量任务名称。
     * taskType  批量任务类型，取值范围：firmwareUpgrade，softwareUpgrade，createDevices，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows。 - softwareUpgrade: 软件升级任务 - firmwareUpgrade: 固件升级任务 - createDevices: 批量创建设备任务 - deleteDevices: 批量删除设备任务 - freezeDevices: 批量冻结设备任务 - unfreezeDevices: 批量解冻设备任务 - createCommands: 批量创建同步命令任务 - createAsyncCommands: 批量创建异步命令任务 - createMessages: 批量创建消息任务 - updateDeviceShadows: 批量配置设备影子任务 - updateDevices：批量更新设备任务
     * taskMode  **参数说明**：批量任务的模式，当前只支持网关模式，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，若升级的设备为某个网关的子设备，则平台下发获取版本信息通知和平台下发升级通知将携带task_id（软固件升级批量任务的任务ID）和sub_device_count（批量任务中网关设备包含的升级子设备数量）字段。 **取值范围**：GATEWAY: 网关模式。
+    * needConfirm  **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
     * taskExtInfo  **参数说明**：批量任务额外扩展信息，当task_type为firmwareUpgrade，softwareUpgrade支持该参数。软固件升级的场景下，平台下发获取版本信息通知和平台下发升级通知将携带该字段。 **取值范围**：最长不超过512个字符。
     * targets  执行批量任务的目标，当task_type为firmwareUpgrade，softwareUpgrade，deleteDevices，freezeDevices，unfreezeDevices，createCommands，createAsyncCommands，createMessages，updateDeviceShadows，此处填写device_id列表。
     * targetsFilter  任务目标筛选参数。Json格式，里面是一个个键值对，（K,V）格式标识筛选targets需要的参数，目前支持的K有group_ids（V填写group_id数组，eg:[\"e495cf17-ff79-4294-8f64-4d367919d665\"]，任务则会筛选出来符合该群组条件的设备作为目标）
@@ -199,6 +208,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
             'taskName' => 'getTaskName',
             'taskType' => 'getTaskType',
             'taskMode' => 'getTaskMode',
+            'needConfirm' => 'getNeedConfirm',
             'taskExtInfo' => 'getTaskExtInfo',
             'targets' => 'getTargets',
             'targetsFilter' => 'getTargetsFilter',
@@ -272,6 +282,7 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
         $this->container['taskName'] = isset($data['taskName']) ? $data['taskName'] : null;
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['taskMode'] = isset($data['taskMode']) ? $data['taskMode'] : null;
+        $this->container['needConfirm'] = isset($data['needConfirm']) ? $data['needConfirm'] : null;
         $this->container['taskExtInfo'] = isset($data['taskExtInfo']) ? $data['taskExtInfo'] : null;
         $this->container['targets'] = isset($data['targets']) ? $data['targets'] : null;
         $this->container['targetsFilter'] = isset($data['targetsFilter']) ? $data['targetsFilter'] : null;
@@ -398,6 +409,30 @@ class CreateBatchTaskResponse implements ModelInterface, ArrayAccess
     public function setTaskMode($taskMode)
     {
         $this->container['taskMode'] = $taskMode;
+        return $this;
+    }
+
+    /**
+    * Gets needConfirm
+    *  **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
+    *
+    * @return bool|null
+    */
+    public function getNeedConfirm()
+    {
+        return $this->container['needConfirm'];
+    }
+
+    /**
+    * Sets needConfirm
+    *
+    * @param bool|null $needConfirm **参数说明**：当需要自主控制该任务时设置此参数，当task_type为firmwareUpgrade，softwareUpgrade,moduleUpgrade支持该参数。软固件升级的场景下，当need_confirm为true时，任务分发后所有子任务一直为waitting状态，需要调确认接口后才变为processing状态，任务开始分发，不设置或者设置为false时子任务自动分发。 **取值范围**：true: 需要确认才分发子任务，false: 不需要确认自动分发子任务。
+    *
+    * @return $this
+    */
+    public function setNeedConfirm($needConfirm)
+    {
+        $this->container['needConfirm'] = $needConfirm;
         return $this;
     }
 

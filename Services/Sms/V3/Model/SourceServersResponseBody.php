@@ -43,6 +43,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'string',
             'stateActionTime' => 'int',
             'isConsistencyResultExist' => 'bool',
-            'hasTc' => 'bool'
+            'hasTc' => 'bool',
+            'startType' => 'string'
     ];
 
     /**
@@ -97,6 +99,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
         'migrationCycle' => null,
         'stateActionTime' => 'int64',
         'isConsistencyResultExist' => null,
-        'hasTc' => null
+        'hasTc' => null,
+        'startType' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'migration_cycle',
             'stateActionTime' => 'state_action_time',
             'isConsistencyResultExist' => 'is_consistency_result_exist',
-            'hasTc' => 'has_tc'
+            'hasTc' => 'has_tc',
+            'startType' => 'start_type'
     ];
 
     /**
@@ -226,6 +232,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'setMigrationCycle',
             'stateActionTime' => 'setStateActionTime',
             'isConsistencyResultExist' => 'setIsConsistencyResultExist',
-            'hasTc' => 'setHasTc'
+            'hasTc' => 'setHasTc',
+            'startType' => 'setStartType'
     ];
 
     /**
@@ -280,6 +288,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     * stateActionTime  源端状态（state）上次发生变化的时间
     * isConsistencyResultExist  是否有一致性校验结果
     * hasTc  是否安装tc组件，Linux系统此参数为必选
+    * startType  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'getMigrationCycle',
             'stateActionTime' => 'getStateActionTime',
             'isConsistencyResultExist' => 'getIsConsistencyResultExist',
-            'hasTc' => 'getHasTc'
+            'hasTc' => 'getHasTc',
+            'startType' => 'getStartType'
     ];
 
     /**
@@ -477,6 +487,7 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
         $this->container['stateActionTime'] = isset($data['stateActionTime']) ? $data['stateActionTime'] : null;
         $this->container['isConsistencyResultExist'] = isset($data['isConsistencyResultExist']) ? $data['isConsistencyResultExist'] : null;
         $this->container['hasTc'] = isset($data['hasTc']) ? $data['hasTc'] : null;
+        $this->container['startType'] = isset($data['startType']) ? $data['startType'] : null;
     }
 
     /**
@@ -606,6 +617,12 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['stateActionTime']) && ($this->container['stateActionTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'stateActionTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['startType']) && (mb_strlen($this->container['startType']) > 255)) {
+                $invalidProperties[] = "invalid value for 'startType', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['startType']) && (mb_strlen($this->container['startType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'startType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1170,6 +1187,30 @@ class SourceServersResponseBody implements ModelInterface, ArrayAccess
     public function setHasTc($hasTc)
     {
         $this->container['hasTc'] = $hasTc;
+        return $this;
+    }
+
+    /**
+    * Gets startType
+    *  启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
+    *
+    * @return string|null
+    */
+    public function getStartType()
+    {
+        return $this->container['startType'];
+    }
+
+    /**
+    * Sets startType
+    *
+    * @param string|null $startType 启动方式 可以取值MANUAL、AUTO或者空，不进行校验。 默认值取值MANUAL，其余则表示从MGC平台启动
+    *
+    * @return $this
+    */
+    public function setStartType($startType)
+    {
+        $this->container['startType'] = $startType;
         return $this;
     }
 
