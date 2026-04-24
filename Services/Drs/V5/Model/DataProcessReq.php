@@ -158,6 +158,9 @@ class DataProcessReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['dataProcessInfo'] === null) {
+            $invalidProperties[] = "'dataProcessInfo' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class DataProcessReq implements ModelInterface, ArrayAccess
     * Gets dataProcessInfo
     *  指定任务数据加工规则请求体
     *
-    * @return \HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[]|null
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[]
     */
     public function getDataProcessInfo()
     {
@@ -186,7 +189,7 @@ class DataProcessReq implements ModelInterface, ArrayAccess
     /**
     * Sets dataProcessInfo
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[]|null $dataProcessInfo 指定任务数据加工规则请求体
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[] $dataProcessInfo 指定任务数据加工规则请求体
     *
     * @return $this
     */

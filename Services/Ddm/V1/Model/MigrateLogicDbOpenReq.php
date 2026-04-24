@@ -217,15 +217,15 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['switchRouteEndTime']) && (mb_strlen($this->container['switchRouteEndTime']) < 1)) {
                 $invalidProperties[] = "invalid value for 'switchRouteEndTime', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['newShardNumber']) && (mb_strlen($this->container['newShardNumber']) > 2147483647)) {
+        if ($this->container['newShardNumber'] === null) {
+            $invalidProperties[] = "'newShardNumber' can't be null";
+        }
+            if ((mb_strlen($this->container['newShardNumber']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'newShardNumber', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['newShardNumber']) && (mb_strlen($this->container['newShardNumber']) < 1)) {
+            if ((mb_strlen($this->container['newShardNumber']) < 1)) {
                 $invalidProperties[] = "invalid value for 'newShardNumber', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['isExclusive'] === null) {
-            $invalidProperties[] = "'isExclusive' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -316,7 +316,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     * Gets newShardNumber
     *  新分片数。
     *
-    * @return string|null
+    * @return string
     */
     public function getNewShardNumber()
     {
@@ -326,7 +326,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     /**
     * Sets newShardNumber
     *
-    * @param string|null $newShardNumber 新分片数。
+    * @param string $newShardNumber 新分片数。
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     * Gets isExclusive
     *  是否独占。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getIsExclusive()
     {
@@ -350,7 +350,7 @@ class MigrateLogicDbOpenReq implements ModelInterface, ArrayAccess
     /**
     * Sets isExclusive
     *
-    * @param bool $isExclusive 是否独占。
+    * @param bool|null $isExclusive 是否独占。
     *
     * @return $this
     */

@@ -20,6 +20,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * objectName  对象名
     * sourceDbName  源数据库库名。
     * sourceSchemaName  源数据库模式名。
     * sourceTableName  源数据库表名。
@@ -31,6 +32,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'objectName' => 'string',
             'sourceDbName' => 'string',
             'sourceSchemaName' => 'string',
             'sourceTableName' => 'string',
@@ -42,6 +44,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * objectName  对象名
     * sourceDbName  源数据库库名。
     * sourceSchemaName  源数据库模式名。
     * sourceTableName  源数据库表名。
@@ -53,6 +56,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'objectName' => null,
         'sourceDbName' => null,
         'sourceSchemaName' => null,
         'sourceTableName' => null,
@@ -85,6 +89,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * objectName  对象名
     * sourceDbName  源数据库库名。
     * sourceSchemaName  源数据库模式名。
     * sourceTableName  源数据库表名。
@@ -96,6 +101,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'objectName' => 'object_name',
             'sourceDbName' => 'source_db_name',
             'sourceSchemaName' => 'source_schema_name',
             'sourceTableName' => 'source_table_name',
@@ -107,6 +113,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * objectName  对象名
     * sourceDbName  源数据库库名。
     * sourceSchemaName  源数据库模式名。
     * sourceTableName  源数据库表名。
@@ -118,6 +125,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'objectName' => 'setObjectName',
             'sourceDbName' => 'setSourceDbName',
             'sourceSchemaName' => 'setSourceSchemaName',
             'sourceTableName' => 'setSourceTableName',
@@ -129,6 +137,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * objectName  对象名
     * sourceDbName  源数据库库名。
     * sourceSchemaName  源数据库模式名。
     * sourceTableName  源数据库表名。
@@ -140,6 +149,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'objectName' => 'getObjectName',
             'sourceDbName' => 'getSourceDbName',
             'sourceSchemaName' => 'getSourceSchemaName',
             'sourceTableName' => 'getSourceTableName',
@@ -207,6 +217,7 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['objectName'] = isset($data['objectName']) ? $data['objectName'] : null;
         $this->container['sourceDbName'] = isset($data['sourceDbName']) ? $data['sourceDbName'] : null;
         $this->container['sourceSchemaName'] = isset($data['sourceSchemaName']) ? $data['sourceSchemaName'] : null;
         $this->container['sourceTableName'] = isset($data['sourceTableName']) ? $data['sourceTableName'] : null;
@@ -236,6 +247,30 @@ class DbObjectInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets objectName
+    *  对象名
+    *
+    * @return string|null
+    */
+    public function getObjectName()
+    {
+        return $this->container['objectName'];
+    }
+
+    /**
+    * Sets objectName
+    *
+    * @param string|null $objectName 对象名
+    *
+    * @return $this
+    */
+    public function setObjectName($objectName)
+    {
+        $this->container['objectName'] = $objectName;
+        return $this;
     }
 
     /**

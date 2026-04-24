@@ -30,7 +30,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'kind' => 'string',
             'apiVersion' => 'string',
-            'items' => '\HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow'
+            'items' => '\HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow[]'
     ];
 
     /**
@@ -253,7 +253,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     * Gets items
     *  items
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow[]|null
     */
     public function getItems()
     {
@@ -263,7 +263,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow|null $items items
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow[]|null $items items
     *
     * @return $this
     */

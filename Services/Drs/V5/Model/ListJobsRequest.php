@@ -29,7 +29,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 缺省值：\"\"，表示查询所有企业项目任务。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
-    * sortKey  返回结果按该关键字排序，默认为“create_time”。
+    * sortKey  返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     * instanceIds  数据库实例ID列表，最多支持10个
     * instanceIp  数据库实例IP
@@ -63,7 +63,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 缺省值：\"\"，表示查询所有企业项目任务。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
-    * sortKey  返回结果按该关键字排序，默认为“create_time”。
+    * sortKey  返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     * instanceIds  数据库实例ID列表，最多支持10个
     * instanceIp  数据库实例IP
@@ -118,7 +118,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 缺省值：\"\"，表示查询所有企业项目任务。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
-    * sortKey  返回结果按该关键字排序，默认为“create_time”。
+    * sortKey  返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     * instanceIds  数据库实例ID列表，最多支持10个
     * instanceIp  数据库实例IP
@@ -152,7 +152,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 缺省值：\"\"，表示查询所有企业项目任务。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
-    * sortKey  返回结果按该关键字排序，默认为“create_time”。
+    * sortKey  返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     * instanceIds  数据库实例ID列表，最多支持10个
     * instanceIp  数据库实例IP
@@ -186,7 +186,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目ID。 缺省值：\"\"，表示查询所有企业项目任务。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
-    * sortKey  返回结果按该关键字排序，默认为“create_time”。
+    * sortKey  返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     * sortDir  降序或升序（分别对应desc和asc，默认为“desc”）。
     * instanceIds  数据库实例ID列表，最多支持10个
     * instanceIp  数据库实例IP
@@ -282,6 +282,12 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     const NET_TYPE_EIP = 'eip';
     const NET_TYPE_VPC = 'vpc';
     const NET_TYPE_VPN = 'vpn';
+    const SORT_KEY_NAME = 'name';
+    const SORT_KEY_STATUS = 'status';
+    const SORT_KEY_CREATE_TIME = 'create_time';
+    const SORT_KEY_NET_TYPE = 'net_type';
+    const SORT_KEY_JOB_DIRECTION = 'job_direction';
+    const SORT_KEY_PAY_MODE = 'pay_mode';
     
 
     /**
@@ -372,6 +378,23 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSortKeyAllowableValues()
+    {
+        return [
+            self::SORT_KEY_NAME,
+            self::SORT_KEY_STATUS,
+            self::SORT_KEY_CREATE_TIME,
+            self::SORT_KEY_NET_TYPE,
+            self::SORT_KEY_JOB_DIRECTION,
+            self::SORT_KEY_PAY_MODE,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -450,6 +473,14 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['netType']) && !in_array($this->container['netType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'netType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getSortKeyAllowableValues();
+                if (!is_null($this->container['sortKey']) && !in_array($this->container['sortKey'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sortKey', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -686,7 +717,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  返回结果按该关键字排序，默认为“create_time”。
+    *  返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     *
     * @return string|null
     */
@@ -698,7 +729,7 @@ class ListJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 返回结果按该关键字排序，默认为“create_time”。
+    * @param string|null $sortKey 返回结果按该关键字排序，默认为“create_time”。 当前支持排序的关键字： - name - status - create_time - net_type - job_direction - pay_mode
     *
     * @return $this
     */

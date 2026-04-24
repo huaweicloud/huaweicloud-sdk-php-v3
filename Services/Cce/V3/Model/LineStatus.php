@@ -29,7 +29,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'startPoint' => '\HuaweiCloud\SDK\Cce\V3\Model\Point',
             'endPoint' => '\HuaweiCloud\SDK\Cce\V3\Model\Point',
-            'critical' => 'string'
+            'critical' => 'bool'
     ];
 
     /**
@@ -246,7 +246,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Gets critical
     *  表示是否为关键线路（关键线路未执行无法取消升级流程）
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getCritical()
     {
@@ -256,7 +256,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     /**
     * Sets critical
     *
-    * @param string|null $critical 表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * @param bool|null $critical 表示是否为关键线路（关键线路未执行无法取消升级流程）
     *
     * @return $this
     */

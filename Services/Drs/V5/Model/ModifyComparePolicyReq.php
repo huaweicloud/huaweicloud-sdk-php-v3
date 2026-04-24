@@ -189,7 +189,22 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const COMPARE_POLICY_NORMAL = 'normal';
+    const COMPARE_POLICY_MANY_TO_ONE = 'manyToOne';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getComparePolicyAllowableValues()
+    {
+        return [
+            self::COMPARE_POLICY_NORMAL,
+            self::COMPARE_POLICY_MANY_TO_ONE,
+        ];
+    }
 
 
     /**
@@ -227,6 +242,14 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
         }
+            $allowedValues = $this->getComparePolicyAllowableValues();
+                if (!is_null($this->container['comparePolicy']) && !in_array($this->container['comparePolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'comparePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 

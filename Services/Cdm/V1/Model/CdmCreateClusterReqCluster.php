@@ -257,6 +257,12 @@ class CdmCreateClusterReqCluster implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['vpcId'] === null) {
+            $invalidProperties[] = "'vpcId' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -419,7 +425,7 @@ class CdmCreateClusterReqCluster implements ModelInterface, ArrayAccess
     * Gets vpcId
     *  指定虚拟私有云ID，用于集群网络配置
     *
-    * @return string|null
+    * @return string
     */
     public function getVpcId()
     {
@@ -429,7 +435,7 @@ class CdmCreateClusterReqCluster implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 指定虚拟私有云ID，用于集群网络配置
+    * @param string $vpcId 指定虚拟私有云ID，用于集群网络配置
     *
     * @return $this
     */
@@ -443,7 +449,7 @@ class CdmCreateClusterReqCluster implements ModelInterface, ArrayAccess
     * Gets name
     *  集群名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -453,7 +459,7 @@ class CdmCreateClusterReqCluster implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 集群名称
+    * @param string $name 集群名称
     *
     * @return $this
     */

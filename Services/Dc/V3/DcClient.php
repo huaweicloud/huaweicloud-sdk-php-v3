@@ -2870,9 +2870,6 @@ class DcClient extends Client
         if ($localVarParams['pageReverse'] !== null) {
             $queryParams['page_reverse'] = $localVarParams['pageReverse'];
         }
-        if ($localVarParams['vifPeerId'] !== null) {
-            $pathParams['vif_peer_id'] = $localVarParams['vifPeerId'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json; charset=utf-8']

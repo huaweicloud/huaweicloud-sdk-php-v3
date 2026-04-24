@@ -1,3 +1,104 @@
+# 3.1.188 2026-04-24
+
+### HuaweiCloud SDK DataArtsStudio
+
+- _API Version_
+  - V1
+- _Features_
+  - Support the following APIs:
+    - `ListFactorySearchBaselineInstances`
+    - `ListSearchFactoryEvents`
+    - `ListSearchFactoryBaselines`
+    - `CreateFactoryBaseline`
+    - `ListFactoryWorkspacesApproval`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowInstanceResult**
+    - changes of request param
+      - `+ limit`
+      - `+ offset`
+
+### HuaweiCloud SDK DC
+
+- _API Version_
+  - V3
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListVifPeerDetections**
+    - changes of request param
+      - `- vif_peer_id`
+
+### HuaweiCloud SDK DDM
+
+- _API Version_
+  - V1
+- _Features_
+  - Support the APIs `UpdateDdmInstanceName`, `UpdateDdmInstanceSecurityGroup`, `RebuildDdmConfig`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK DRS
+
+- _API Version_
+  - V5
+- _Features_
+  - Support the following APIs:
+    - `ShowSubscriptionDetail`
+    - `DeleteSubscription`
+    - `ShowCompareUsersDetail`
+    - `ShowSmnTopicInfo`
+    - `ShowChildNum`
+    - `CreateSubscription`
+    - `UpdateSubscriptionInfo`
+    - `ShowReplayReportExportStatus`
+    - `ExportReplayReport`
+    - `ListSupportLinks`
+    - `ListExtraColumns`
+    - `PauseCompareJobs`
+    - `RestartCompareJobs`
+- _Bug Fix_
+  - None
+- _Change_
+  - **UpdateComparePolicy**
+    - changes of request param
+      - `+ compare_policy: enum value [normal,manyToOne]`
+  - **ShowObjectMapping**
+    - changes of response param
+      - `+ object_mapping_list.object_name`
+  - **ListJobs**
+    - changes of request param
+      - `+ sort_key: enum value [name,status,create_time,net_type,job_direction,pay_mode]`
+
+### HuaweiCloud SDK GaussDBforopenGauss
+
+- _API Version_
+  - V3
+- _Features_
+  - Support the APIs `ListDNatInfo`, `BindDNat`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK IAM
+
+- _API Version_
+  - V3
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **UpdateAgency**
+    - changes of response param
+      - `* agency.duration: string -> object`
+
 # 3.1.187 2026-04-09
 
 ### HuaweiCloud SDK Cloudtest

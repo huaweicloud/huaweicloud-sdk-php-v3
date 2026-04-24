@@ -1391,6 +1391,71 @@ class DrsClient extends Client
     }
 
     /**
+     * 创建订阅任务
+     *
+     * 创建订阅任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSubscription($request)
+    {
+        return $this->createSubscriptionWithHttpInfo($request);
+    }
+
+    public function createSubscriptionWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/subscription';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\CreateSubscriptionResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\CreateSubscriptionRequest');
+    }
+
+    /**
      * 删除对象的列信息（列映射、列过滤）
      *
      * 删除对象的列信息（列映射、列过滤）
@@ -1716,6 +1781,71 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\DeleteReplicationJobResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\DeleteReplicationJobRequest');
+    }
+
+    /**
+     * 删除订阅任务
+     *
+     * 删除订阅任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSubscription($request)
+    {
+        return $this->deleteSubscriptionWithHttpInfo($request);
+    }
+
+    public function deleteSubscriptionWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/subscriptions/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\DeleteSubscriptionResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\DeleteSubscriptionRequest');
     }
 
     /**
@@ -2180,6 +2310,74 @@ class DrsClient extends Client
     }
 
     /**
+     * 导出流量回放任务SQL报告文件
+     *
+     * 导出流量回放任务SQL报告文件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportReplayReport($request)
+    {
+        return $this->exportReplayReportWithHttpInfo($request);
+    }
+
+    public function exportReplayReportWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/export-replay-sql';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ExportReplayReportResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ExportReplayReportRequest');
+    }
+
+    /**
      * 批量导入任务
      *
      * 批量导入任务
@@ -2582,6 +2780,80 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ListDbObjectsResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ListDbObjectsRequest');
+    }
+
+    /**
+     * 查询数据加工对象的附加列信息
+     *
+     * 查询数据加工对象的附加列信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listExtraColumns($request)
+    {
+        return $this->listExtraColumnsWithHttpInfo($request);
+    }
+
+    public function listExtraColumnsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/extra-column-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['isOnlyShowSent'] !== null) {
+            $queryParams['is_only_show_sent'] = $localVarParams['isOnlyShowSent'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ListExtraColumnsResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ListExtraColumnsRequest');
     }
 
     /**
@@ -3363,6 +3635,77 @@ class DrsClient extends Client
     }
 
     /**
+     * 查询可用链路信息
+     *
+     * 根据参数不同，可查询实时迁移、实时同步、实时灾备等可用链路信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSupportLinks($request)
+    {
+        return $this->listSupportLinksWithHttpInfo($request);
+    }
+
+    public function listSupportLinksWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/support-links';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobType'] !== null) {
+            $queryParams['job_type'] = $localVarParams['jobType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ListSupportLinksResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ListSupportLinksRequest');
+    }
+
+    /**
      * 查询项目标签
      *
      * 查询租户在指定Project中实例类型的所有资源标签集合。
@@ -3774,6 +4117,142 @@ class DrsClient extends Client
     }
 
     /**
+     * 暂停对比任务
+     *
+     * 暂停对比任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function pauseCompareJobs($request)
+    {
+        return $this->pauseCompareJobsWithHttpInfo($request);
+    }
+
+    public function pauseCompareJobsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/compare/pause';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\PauseCompareJobsResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\PauseCompareJobsRequest');
+    }
+
+    /**
+     * 继续对比任务
+     *
+     * 继续对比任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restartCompareJobs($request)
+    {
+        return $this->restartCompareJobsWithHttpInfo($request);
+    }
+
+    public function restartCompareJobsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/compare/restart';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\RestartCompareJobsResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\RestartCompareJobsRequest');
+    }
+
+    /**
      * 获取指定任务操作信息
      *
      * 获取指定任务允许、不允许、当前操作信息。
@@ -3901,6 +4380,77 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowAgencyInfoResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowAgencyInfoRequest');
+    }
+
+    /**
+     * 查询子任务数量
+     *
+     * 根据ddm/gaussv5数据库的分片个数计算对应子任务数量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showChildNum($request)
+    {
+        return $this->showChildNumWithHttpInfo($request);
+    }
+
+    public function showChildNumWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/child-count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $queryParams['region'] = $localVarParams['region'];
+        }
+        if ($localVarParams['dbType'] !== null) {
+            $queryParams['db_type'] = $localVarParams['dbType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowChildNumResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowChildNumRequest');
     }
 
     /**
@@ -4179,6 +4729,80 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowCompareProgressResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowCompareProgressRequest');
+    }
+
+    /**
+     * 查询用户对比详情
+     *
+     * 查询用户对比详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCompareUsersDetail($request)
+    {
+        return $this->showCompareUsersDetailWithHttpInfo($request);
+    }
+
+    public function showCompareUsersDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/compare/users/{compare_job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['compareJobId'] !== null) {
+            $pathParams['compare_job_id'] = $localVarParams['compareJobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowCompareUsersDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowCompareUsersDetailRequest');
     }
 
     /**
@@ -5750,6 +6374,74 @@ class DrsClient extends Client
     }
 
     /**
+     * 查询流量回放任务的报告文件导出状态
+     *
+     * 查询流量回放任务的报告文件导出状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showReplayReportExportStatus($request)
+    {
+        return $this->showReplayReportExportStatusWithHttpInfo($request);
+    }
+
+    public function showReplayReportExportStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/sql-export-status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['fileType'] !== null) {
+            $queryParams['file_type'] = $localVarParams['fileType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowReplayReportExportStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowReplayReportExportStatusRequest');
+    }
+
+    /**
      * 查询录制回放结果
      *
      * 获取录制回放结果数据，包括：回放基于时间维度统计信息，异常SQL及统计结果、慢SQL及统计结果
@@ -5910,6 +6602,133 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowReplicationJobResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowReplicationJobRequest');
+    }
+
+    /**
+     * SMN主题查询
+     *
+     * SMN主题查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSmnTopicInfo($request)
+    {
+        return $this->showSmnTopicInfoWithHttpInfo($request);
+    }
+
+    public function showSmnTopicInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/smn/topic-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowSmnTopicInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowSmnTopicInfoRequest');
+    }
+
+    /**
+     * 查询订阅任务详情
+     *
+     * 查询订阅任务详情，可以根据企业项目和任务ID查询各订阅任务详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSubscriptionDetail($request)
+    {
+        return $this->showSubscriptionDetailWithHttpInfo($request);
+    }
+
+    public function showSubscriptionDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/subscriptions/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ShowSubscriptionDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ShowSubscriptionDetailRequest');
     }
 
     /**
@@ -6936,6 +7755,74 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\UpdateStartPositionResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\UpdateStartPositionRequest');
+    }
+
+    /**
+     * 修改订阅任务的信息
+     *
+     * 修改订阅任务的信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSubscriptionInfo($request)
+    {
+        return $this->updateSubscriptionInfoWithHttpInfo($request);
+    }
+
+    public function updateSubscriptionInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/subscriptions/{job_id}/info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\UpdateSubscriptionInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\UpdateSubscriptionInfoRequest');
     }
 
     /**

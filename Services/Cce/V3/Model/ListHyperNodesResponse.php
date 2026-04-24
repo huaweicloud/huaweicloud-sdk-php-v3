@@ -21,22 +21,22 @@ class ListHyperNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hyperNodeList  hyperNodeList
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'hyperNodeList' => '\HuaweiCloud\SDK\Cce\V3\Model\HyperNode[]'
+            'body' => '\HuaweiCloud\SDK\Cce\V3\Model\HyperNode[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hyperNodeList  hyperNodeList
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'hyperNodeList' => null
+        'body' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ListHyperNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hyperNodeList  hyperNodeList
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'hyperNodeList' => 'hyperNodeList'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hyperNodeList  hyperNodeList
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'hyperNodeList' => 'setHyperNodeList'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hyperNodeList  hyperNodeList
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'hyperNodeList' => 'getHyperNodeList'
+            'body' => 'getBody'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ListHyperNodesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['hyperNodeList'] = isset($data['hyperNodeList']) ? $data['hyperNodeList'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ListHyperNodesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets hyperNodeList
-    *  hyperNodeList
+    * Gets body
+    *  body
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\HyperNode[]|null
     */
-    public function getHyperNodeList()
+    public function getBody()
     {
-        return $this->container['hyperNodeList'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets hyperNodeList
+    * Sets body
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\HyperNode[]|null $hyperNodeList hyperNodeList
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\HyperNode[]|null $body body
     *
     * @return $this
     */
-    public function setHyperNodeList($hyperNodeList)
+    public function setBody($body)
     {
-        $this->container['hyperNodeList'] = $hyperNodeList;
+        $this->container['body'] = $body;
         return $this;
     }
 

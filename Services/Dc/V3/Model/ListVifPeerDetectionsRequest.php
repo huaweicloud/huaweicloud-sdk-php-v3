@@ -26,7 +26,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * offset  分页偏移量
     * pageReverse  分页参数
-    * vifPeerId  虚拟接口对等体ID
     *
     * @var string[]
     */
@@ -36,8 +35,7 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'string',
             'sortDir' => 'string[]',
             'offset' => 'int',
-            'pageReverse' => 'bool',
-            'vifPeerId' => 'string'
+            'pageReverse' => 'bool'
     ];
 
     /**
@@ -48,7 +46,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * offset  分页偏移量
     * pageReverse  分页参数
-    * vifPeerId  虚拟接口对等体ID
     *
     * @var string[]
     */
@@ -58,8 +55,7 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
         'sortKey' => null,
         'sortDir' => null,
         'offset' => 'int32',
-        'pageReverse' => null,
-        'vifPeerId' => null
+        'pageReverse' => null
     ];
 
     /**
@@ -91,7 +87,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * offset  分页偏移量
     * pageReverse  分页参数
-    * vifPeerId  虚拟接口对等体ID
     *
     * @var string[]
     */
@@ -101,8 +96,7 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'offset' => 'offset',
-            'pageReverse' => 'page_reverse',
-            'vifPeerId' => 'vif_peer_id'
+            'pageReverse' => 'page_reverse'
     ];
 
     /**
@@ -113,7 +107,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * offset  分页偏移量
     * pageReverse  分页参数
-    * vifPeerId  虚拟接口对等体ID
     *
     * @var string[]
     */
@@ -123,8 +116,7 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'offset' => 'setOffset',
-            'pageReverse' => 'setPageReverse',
-            'vifPeerId' => 'setVifPeerId'
+            'pageReverse' => 'setPageReverse'
     ];
 
     /**
@@ -135,7 +127,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
     * sortDir  返回结果按照升序(asc)或降序(desc)排列，默认为asc
     * offset  分页偏移量
     * pageReverse  分页参数
-    * vifPeerId  虚拟接口对等体ID
     *
     * @var string[]
     */
@@ -145,8 +136,7 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'offset' => 'getOffset',
-            'pageReverse' => 'getPageReverse',
-            'vifPeerId' => 'getVifPeerId'
+            'pageReverse' => 'getPageReverse'
     ];
 
     /**
@@ -228,7 +218,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['pageReverse'] = isset($data['pageReverse']) ? $data['pageReverse'] : null;
-        $this->container['vifPeerId'] = isset($data['vifPeerId']) ? $data['vifPeerId'] : null;
     }
 
     /**
@@ -262,18 +251,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
-            }
-        if ($this->container['vifPeerId'] === null) {
-            $invalidProperties[] = "'vifPeerId' can't be null";
-        }
-            if ((mb_strlen($this->container['vifPeerId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'vifPeerId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['vifPeerId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'vifPeerId', the character length must be bigger than or equal to 36.";
-            }
-            if (!preg_match("/0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['vifPeerId'])) {
-                $invalidProperties[] = "invalid value for 'vifPeerId', must be conform to the pattern /0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -430,30 +407,6 @@ class ListVifPeerDetectionsRequest implements ModelInterface, ArrayAccess
     public function setPageReverse($pageReverse)
     {
         $this->container['pageReverse'] = $pageReverse;
-        return $this;
-    }
-
-    /**
-    * Gets vifPeerId
-    *  虚拟接口对等体ID
-    *
-    * @return string
-    */
-    public function getVifPeerId()
-    {
-        return $this->container['vifPeerId'];
-    }
-
-    /**
-    * Sets vifPeerId
-    *
-    * @param string $vifPeerId 虚拟接口对等体ID
-    *
-    * @return $this
-    */
-    public function setVifPeerId($vifPeerId)
-    {
-        $this->container['vifPeerId'] = $vifPeerId;
         return $this;
     }
 

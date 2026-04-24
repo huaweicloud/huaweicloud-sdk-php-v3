@@ -22,24 +22,32 @@ class ShowInstanceResultRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  projectId
     * workspace  DataArts Studio工作空间ID
+    * limit  每页的记录数，取值范围为0~100。
+    * offset  分页偏移量，最小值为0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'workspace' => 'string'
+            'workspace' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  projectId
     * workspace  DataArts Studio工作空间ID
+    * limit  每页的记录数，取值范围为0~100。
+    * offset  分页偏移量，最小值为0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'workspace' => null
+        'workspace' => null,
+        'limit' => 'int64',
+        'offset' => 'int64'
     ];
 
     /**
@@ -67,36 +75,48 @@ class ShowInstanceResultRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  projectId
     * workspace  DataArts Studio工作空间ID
+    * limit  每页的记录数，取值范围为0~100。
+    * offset  分页偏移量，最小值为0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
-            'workspace' => 'workspace'
+            'workspace' => 'workspace',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  projectId
     * workspace  DataArts Studio工作空间ID
+    * limit  每页的记录数，取值范围为0~100。
+    * offset  分页偏移量，最小值为0。
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'workspace' => 'setWorkspace'
+            'workspace' => 'setWorkspace',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  projectId
     * workspace  DataArts Studio工作空间ID
+    * limit  每页的记录数，取值范围为0~100。
+    * offset  分页偏移量，最小值为0。
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'workspace' => 'getWorkspace'
+            'workspace' => 'getWorkspace',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ShowInstanceResultRequest implements ModelInterface, ArrayAccess
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -175,6 +197,15 @@ class ShowInstanceResultRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -234,6 +265,54 @@ class ShowInstanceResultRequest implements ModelInterface, ArrayAccess
     public function setWorkspace($workspace)
     {
         $this->container['workspace'] = $workspace;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页的记录数，取值范围为0~100。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页的记录数，取值范围为0~100。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页偏移量，最小值为0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页偏移量，最小值为0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

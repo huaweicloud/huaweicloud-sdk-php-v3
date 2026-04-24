@@ -35,7 +35,7 @@ class AgencyUpdateResult implements ModelInterface, ArrayAccess
             'createTime' => 'string',
             'description' => 'string',
             'domainId' => 'string',
-            'duration' => 'string',
+            'duration' => 'object',
             'expireTime' => 'string',
             'id' => 'string',
             'name' => 'string',
@@ -343,7 +343,7 @@ class AgencyUpdateResult implements ModelInterface, ArrayAccess
     * Gets duration
     *  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为24表示委托的期限为一天，或为24小时。
     *
-    * @return string
+    * @return object
     */
     public function getDuration()
     {
@@ -353,7 +353,7 @@ class AgencyUpdateResult implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param string $duration 委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为24表示委托的期限为一天，或为24小时。
+    * @param object $duration 委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为24表示委托的期限为一天，或为24小时。
     *
     * @return $this
     */
