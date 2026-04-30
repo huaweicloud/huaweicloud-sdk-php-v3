@@ -20,26 +20,22 @@ class AuthObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * auth  auth
-    * scope  scope
+    * appId  appId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'auth' => '\HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectAuth',
-            'scope' => '\HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectScope'
+            'appId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * auth  auth
-    * scope  scope
+    * appId  appId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'auth' => null,
-        'scope' => null
+        'appId' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class AuthObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * auth  auth
-    * scope  scope
+    * appId  appId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'auth' => 'auth',
-            'scope' => 'scope'
+            'appId' => 'app_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * auth  auth
-    * scope  scope
+    * appId  appId
     *
     * @var string[]
     */
     protected static $setters = [
-            'auth' => 'setAuth',
-            'scope' => 'setScope'
+            'appId' => 'setAppId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * auth  auth
-    * scope  scope
+    * appId  appId
     *
     * @var string[]
     */
     protected static $getters = [
-            'auth' => 'getAuth',
-            'scope' => 'getScope'
+            'appId' => 'getAppId'
     ];
 
     /**
@@ -157,8 +147,7 @@ class AuthObject implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['auth'] = isset($data['auth']) ? $data['auth'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
     }
 
     /**
@@ -184,50 +173,26 @@ class AuthObject implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets auth
-    *  auth
+    * Gets appId
+    *  appId
     *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectAuth|null
+    * @return string|null
     */
-    public function getAuth()
+    public function getAppId()
     {
-        return $this->container['auth'];
+        return $this->container['appId'];
     }
 
     /**
-    * Sets auth
+    * Sets appId
     *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectAuth|null $auth auth
+    * @param string|null $appId appId
     *
     * @return $this
     */
-    public function setAuth($auth)
+    public function setAppId($appId)
     {
-        $this->container['auth'] = $auth;
-        return $this;
-    }
-
-    /**
-    * Gets scope
-    *  scope
-    *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectScope|null
-    */
-    public function getScope()
-    {
-        return $this->container['scope'];
-    }
-
-    /**
-    * Sets scope
-    *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectScope|null $scope scope
-    *
-    * @return $this
-    */
-    public function setScope($scope)
-    {
-        $this->container['scope'] = $scope;
+        $this->container['appId'] = $appId;
         return $this;
     }
 

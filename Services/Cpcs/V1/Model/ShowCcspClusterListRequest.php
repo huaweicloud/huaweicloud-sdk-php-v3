@@ -20,8 +20,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * name  集群名称
     * serviceType  集群所属的服务类型： - **ENCRYPT_DECRYPT** : 加解密服务； - **SIGN_VERIFY** : 签名验签服务； - **KMS** : 密钥管理服务； - **TIMESTAMP** : 时间戳服务； - **COLLA_SIGN** : 协同签名服务； - **OTP** : 动态令牌服务； - **DB_ENCRYPT** : 数据库加密服务； - **FILE_ENCRYPT** : 文件加密服务 - **TIMESTAMP** : 时间戳服务； - **DIGIT_SEAL** : 电子签章服务； - **SSL_VPN** : ssl vpn服务；
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 集群的创建时间（默认）
@@ -30,8 +30,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pageSize' => 'int',
-            'pageNum' => 'int',
+            'limit' => 'int',
+            'offset' => 'int',
             'name' => 'string',
             'serviceType' => 'string',
             'sortKey' => 'string',
@@ -40,8 +40,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * name  集群名称
     * serviceType  集群所属的服务类型： - **ENCRYPT_DECRYPT** : 加解密服务； - **SIGN_VERIFY** : 签名验签服务； - **KMS** : 密钥管理服务； - **TIMESTAMP** : 时间戳服务； - **COLLA_SIGN** : 协同签名服务； - **OTP** : 动态令牌服务； - **DB_ENCRYPT** : 数据库加密服务； - **FILE_ENCRYPT** : 文件加密服务 - **TIMESTAMP** : 时间戳服务； - **DIGIT_SEAL** : 电子签章服务； - **SSL_VPN** : ssl vpn服务；
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 集群的创建时间（默认）
@@ -50,8 +50,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pageSize' => 'int32',
-        'pageNum' => 'int32',
+        'limit' => 'int32',
+        'offset' => 'int32',
         'name' => null,
         'serviceType' => null,
         'sortKey' => null,
@@ -81,8 +81,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * name  集群名称
     * serviceType  集群所属的服务类型： - **ENCRYPT_DECRYPT** : 加解密服务； - **SIGN_VERIFY** : 签名验签服务； - **KMS** : 密钥管理服务； - **TIMESTAMP** : 时间戳服务； - **COLLA_SIGN** : 协同签名服务； - **OTP** : 动态令牌服务； - **DB_ENCRYPT** : 数据库加密服务； - **FILE_ENCRYPT** : 文件加密服务 - **TIMESTAMP** : 时间戳服务； - **DIGIT_SEAL** : 电子签章服务； - **SSL_VPN** : ssl vpn服务；
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 集群的创建时间（默认）
@@ -91,8 +91,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'pageSize' => 'page_size',
-            'pageNum' => 'page_num',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'name' => 'name',
             'serviceType' => 'service_type',
             'sortKey' => 'sort_key',
@@ -101,8 +101,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * name  集群名称
     * serviceType  集群所属的服务类型： - **ENCRYPT_DECRYPT** : 加解密服务； - **SIGN_VERIFY** : 签名验签服务； - **KMS** : 密钥管理服务； - **TIMESTAMP** : 时间戳服务； - **COLLA_SIGN** : 协同签名服务； - **OTP** : 动态令牌服务； - **DB_ENCRYPT** : 数据库加密服务； - **FILE_ENCRYPT** : 文件加密服务 - **TIMESTAMP** : 时间戳服务； - **DIGIT_SEAL** : 电子签章服务； - **SSL_VPN** : ssl vpn服务；
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 集群的创建时间（默认）
@@ -111,8 +111,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'pageSize' => 'setPageSize',
-            'pageNum' => 'setPageNum',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'name' => 'setName',
             'serviceType' => 'setServiceType',
             'sortKey' => 'setSortKey',
@@ -121,8 +121,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * name  集群名称
     * serviceType  集群所属的服务类型： - **ENCRYPT_DECRYPT** : 加解密服务； - **SIGN_VERIFY** : 签名验签服务； - **KMS** : 密钥管理服务； - **TIMESTAMP** : 时间戳服务； - **COLLA_SIGN** : 协同签名服务； - **OTP** : 动态令牌服务； - **DB_ENCRYPT** : 数据库加密服务； - **FILE_ENCRYPT** : 文件加密服务 - **TIMESTAMP** : 时间戳服务； - **DIGIT_SEAL** : 电子签章服务； - **SSL_VPN** : ssl vpn服务；
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 集群的创建时间（默认）
@@ -131,8 +131,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'pageSize' => 'getPageSize',
-            'pageNum' => 'getPageNum',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'name' => 'getName',
             'serviceType' => 'getServiceType',
             'sortKey' => 'getSortKey',
@@ -197,8 +197,8 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
-        $this->container['pageNum'] = isset($data['pageNum']) ? $data['pageNum'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
@@ -213,14 +213,14 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'pageSize', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }
-            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] < 0)) {
-                $invalidProperties[] = "invalid value for 'pageSize', must be bigger than or equal to 0.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['pageNum']) && ($this->container['pageNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'pageNum', must be bigger than or equal to 0.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -237,50 +237,50 @@ class ShowCcspClusterListRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pageSize
+    * Gets limit
     *  指定查询返回记录条数，默认值10
     *
     * @return int|null
     */
-    public function getPageSize()
+    public function getLimit()
     {
-        return $this->container['pageSize'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets pageSize
+    * Sets limit
     *
-    * @param int|null $pageSize 指定查询返回记录条数，默认值10
+    * @param int|null $limit 指定查询返回记录条数，默认值10
     *
     * @return $this
     */
-    public function setPageSize($pageSize)
+    public function setLimit($limit)
     {
-        $this->container['pageSize'] = $pageSize;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
     /**
-    * Gets pageNum
-    *  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * Gets offset
+    *  索引位置，从offset指定的下一条数据开始查询默认值为0
     *
     * @return int|null
     */
-    public function getPageNum()
+    public function getOffset()
     {
-        return $this->container['pageNum'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets pageNum
+    * Sets offset
     *
-    * @param int|null $pageNum 索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * @param int|null $offset 索引位置，从offset指定的下一条数据开始查询默认值为0
     *
     * @return $this
     */
-    public function setPageNum($pageNum)
+    public function setOffset($offset)
     {
-        $this->container['pageNum'] = $pageNum;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

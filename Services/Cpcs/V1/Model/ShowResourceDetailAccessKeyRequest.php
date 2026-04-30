@@ -25,8 +25,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
     * serviceType  密码服务类型，默认空字符串，默认查询所有密码服务类型
     * algorithmType  算法类型，默认空字符串，0：国密，1：国际
     * certificateType  证书类型，默认空字符串，0：根证书，1：业务证书
-    * pageSize  页面大小，不超过1500
-    * pageNum  页数，默认1
+    * limit  页面大小，不超过1500
+    * offset  页数，默认1
     * from  查询起始时间戳，毫秒级时间戳，默认为0，默认从三天前查询
     * to  查询终止时间戳，毫秒级时间戳，默认为0，默认查询到当前时间
     *
@@ -38,8 +38,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
             'serviceType' => 'string',
             'algorithmType' => 'string',
             'certificateType' => 'string',
-            'pageSize' => 'int',
-            'pageNum' => 'int',
+            'limit' => 'int',
+            'offset' => 'int',
             'from' => 'int',
             'to' => 'string'
     ];
@@ -51,8 +51,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
     * serviceType  密码服务类型，默认空字符串，默认查询所有密码服务类型
     * algorithmType  算法类型，默认空字符串，0：国密，1：国际
     * certificateType  证书类型，默认空字符串，0：根证书，1：业务证书
-    * pageSize  页面大小，不超过1500
-    * pageNum  页数，默认1
+    * limit  页面大小，不超过1500
+    * offset  页数，默认1
     * from  查询起始时间戳，毫秒级时间戳，默认为0，默认从三天前查询
     * to  查询终止时间戳，毫秒级时间戳，默认为0，默认查询到当前时间
     *
@@ -64,8 +64,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
         'serviceType' => null,
         'algorithmType' => null,
         'certificateType' => null,
-        'pageSize' => 'int32',
-        'pageNum' => 'int32',
+        'limit' => 'int32',
+        'offset' => 'int32',
         'from' => 'int64',
         'to' => null
     ];
@@ -98,8 +98,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
     * serviceType  密码服务类型，默认空字符串，默认查询所有密码服务类型
     * algorithmType  算法类型，默认空字符串，0：国密，1：国际
     * certificateType  证书类型，默认空字符串，0：根证书，1：业务证书
-    * pageSize  页面大小，不超过1500
-    * pageNum  页数，默认1
+    * limit  页面大小，不超过1500
+    * offset  页数，默认1
     * from  查询起始时间戳，毫秒级时间戳，默认为0，默认从三天前查询
     * to  查询终止时间戳，毫秒级时间戳，默认为0，默认查询到当前时间
     *
@@ -111,8 +111,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
             'serviceType' => 'service_type',
             'algorithmType' => 'algorithm_type',
             'certificateType' => 'certificate_type',
-            'pageSize' => 'page_size',
-            'pageNum' => 'page_num',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'from' => 'from',
             'to' => 'to'
     ];
@@ -124,8 +124,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
     * serviceType  密码服务类型，默认空字符串，默认查询所有密码服务类型
     * algorithmType  算法类型，默认空字符串，0：国密，1：国际
     * certificateType  证书类型，默认空字符串，0：根证书，1：业务证书
-    * pageSize  页面大小，不超过1500
-    * pageNum  页数，默认1
+    * limit  页面大小，不超过1500
+    * offset  页数，默认1
     * from  查询起始时间戳，毫秒级时间戳，默认为0，默认从三天前查询
     * to  查询终止时间戳，毫秒级时间戳，默认为0，默认查询到当前时间
     *
@@ -137,8 +137,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
             'serviceType' => 'setServiceType',
             'algorithmType' => 'setAlgorithmType',
             'certificateType' => 'setCertificateType',
-            'pageSize' => 'setPageSize',
-            'pageNum' => 'setPageNum',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'from' => 'setFrom',
             'to' => 'setTo'
     ];
@@ -150,8 +150,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
     * serviceType  密码服务类型，默认空字符串，默认查询所有密码服务类型
     * algorithmType  算法类型，默认空字符串，0：国密，1：国际
     * certificateType  证书类型，默认空字符串，0：根证书，1：业务证书
-    * pageSize  页面大小，不超过1500
-    * pageNum  页数，默认1
+    * limit  页面大小，不超过1500
+    * offset  页数，默认1
     * from  查询起始时间戳，毫秒级时间戳，默认为0，默认从三天前查询
     * to  查询终止时间戳，毫秒级时间戳，默认为0，默认查询到当前时间
     *
@@ -163,8 +163,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
             'serviceType' => 'getServiceType',
             'algorithmType' => 'getAlgorithmType',
             'certificateType' => 'getCertificateType',
-            'pageSize' => 'getPageSize',
-            'pageNum' => 'getPageNum',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'from' => 'getFrom',
             'to' => 'getTo'
     ];
@@ -232,8 +232,8 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['algorithmType'] = isset($data['algorithmType']) ? $data['algorithmType'] : null;
         $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
-        $this->container['pageNum'] = isset($data['pageNum']) ? $data['pageNum'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['from'] = isset($data['from']) ? $data['from'] : null;
         $this->container['to'] = isset($data['to']) ? $data['to'] : null;
     }
@@ -381,50 +381,50 @@ class ShowResourceDetailAccessKeyRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pageSize
+    * Gets limit
     *  页面大小，不超过1500
     *
     * @return int|null
     */
-    public function getPageSize()
+    public function getLimit()
     {
-        return $this->container['pageSize'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets pageSize
+    * Sets limit
     *
-    * @param int|null $pageSize 页面大小，不超过1500
+    * @param int|null $limit 页面大小，不超过1500
     *
     * @return $this
     */
-    public function setPageSize($pageSize)
+    public function setLimit($limit)
     {
-        $this->container['pageSize'] = $pageSize;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
     /**
-    * Gets pageNum
+    * Gets offset
     *  页数，默认1
     *
     * @return int|null
     */
-    public function getPageNum()
+    public function getOffset()
     {
-        return $this->container['pageNum'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets pageNum
+    * Sets offset
     *
-    * @param int|null $pageNum 页数，默认1
+    * @param int|null $offset 页数，默认1
     *
     * @return $this
     */
-    public function setPageNum($pageNum)
+    public function setOffset($offset)
     {
-        $this->container['pageNum'] = $pageNum;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

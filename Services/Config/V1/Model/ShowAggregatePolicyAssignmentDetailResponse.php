@@ -21,27 +21,29 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyAssignmentType  规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    * aggregatorName  聚合器规则的聚合器名称
+    * policyAssignmentType  规则所有方
     * id  规则ID
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
     * policyFilterV2  policyFilterV2
-    * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    * period  触发周期
     * state  规则状态
     * created  规则创建时间
     * updated  规则更新时间
     * policyDefinitionId  规则的策略ID
     * customPolicy  customPolicy
     * parameters  规则参数
-    * tags  tags
+    * tags  标签列表
     * createdBy  规则的创建者
     * targetType  合规规则修正方式。
-    * targetId  修正执行的目标id。
+    * targetId  修正执行的目标urn。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'aggregatorName' => 'string',
             'policyAssignmentType' => 'string',
             'id' => 'string',
             'name' => 'string',
@@ -63,27 +65,29 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyAssignmentType  规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    * aggregatorName  聚合器规则的聚合器名称
+    * policyAssignmentType  规则所有方
     * id  规则ID
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
     * policyFilterV2  policyFilterV2
-    * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    * period  触发周期
     * state  规则状态
     * created  规则创建时间
     * updated  规则更新时间
     * policyDefinitionId  规则的策略ID
     * customPolicy  customPolicy
     * parameters  规则参数
-    * tags  tags
+    * tags  标签列表
     * createdBy  规则的创建者
     * targetType  合规规则修正方式。
-    * targetId  修正执行的目标id。
+    * targetId  修正执行的目标urn。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'aggregatorName' => null,
         'policyAssignmentType' => null,
         'id' => null,
         'name' => null,
@@ -126,27 +130,29 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyAssignmentType  规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    * aggregatorName  聚合器规则的聚合器名称
+    * policyAssignmentType  规则所有方
     * id  规则ID
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
     * policyFilterV2  policyFilterV2
-    * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    * period  触发周期
     * state  规则状态
     * created  规则创建时间
     * updated  规则更新时间
     * policyDefinitionId  规则的策略ID
     * customPolicy  customPolicy
     * parameters  规则参数
-    * tags  tags
+    * tags  标签列表
     * createdBy  规则的创建者
     * targetType  合规规则修正方式。
-    * targetId  修正执行的目标id。
+    * targetId  修正执行的目标urn。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'aggregatorName' => 'aggregator_name',
             'policyAssignmentType' => 'policy_assignment_type',
             'id' => 'id',
             'name' => 'name',
@@ -168,27 +174,29 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyAssignmentType  规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    * aggregatorName  聚合器规则的聚合器名称
+    * policyAssignmentType  规则所有方
     * id  规则ID
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
     * policyFilterV2  policyFilterV2
-    * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    * period  触发周期
     * state  规则状态
     * created  规则创建时间
     * updated  规则更新时间
     * policyDefinitionId  规则的策略ID
     * customPolicy  customPolicy
     * parameters  规则参数
-    * tags  tags
+    * tags  标签列表
     * createdBy  规则的创建者
     * targetType  合规规则修正方式。
-    * targetId  修正执行的目标id。
+    * targetId  修正执行的目标urn。
     *
     * @var string[]
     */
     protected static $setters = [
+            'aggregatorName' => 'setAggregatorName',
             'policyAssignmentType' => 'setPolicyAssignmentType',
             'id' => 'setId',
             'name' => 'setName',
@@ -210,27 +218,29 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyAssignmentType  规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    * aggregatorName  聚合器规则的聚合器名称
+    * policyAssignmentType  规则所有方
     * id  规则ID
     * name  规则名字
     * description  规则描述
     * policyFilter  policyFilter
     * policyFilterV2  policyFilterV2
-    * period  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    * period  触发周期
     * state  规则状态
     * created  规则创建时间
     * updated  规则更新时间
     * policyDefinitionId  规则的策略ID
     * customPolicy  customPolicy
     * parameters  规则参数
-    * tags  tags
+    * tags  标签列表
     * createdBy  规则的创建者
     * targetType  合规规则修正方式。
-    * targetId  修正执行的目标id。
+    * targetId  修正执行的目标urn。
     *
     * @var string[]
     */
     protected static $getters = [
+            'aggregatorName' => 'getAggregatorName',
             'policyAssignmentType' => 'getPolicyAssignmentType',
             'id' => 'getId',
             'name' => 'getName',
@@ -323,6 +333,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     */
     public function __construct(array $data = null)
     {
+        $this->container['aggregatorName'] = isset($data['aggregatorName']) ? $data['aggregatorName'] : null;
         $this->container['policyAssignmentType'] = isset($data['policyAssignmentType']) ? $data['policyAssignmentType'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -373,8 +384,32 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     }
 
     /**
+    * Gets aggregatorName
+    *  聚合器规则的聚合器名称
+    *
+    * @return string|null
+    */
+    public function getAggregatorName()
+    {
+        return $this->container['aggregatorName'];
+    }
+
+    /**
+    * Sets aggregatorName
+    *
+    * @param string|null $aggregatorName 聚合器规则的聚合器名称
+    *
+    * @return $this
+    */
+    public function setAggregatorName($aggregatorName)
+    {
+        $this->container['aggregatorName'] = $aggregatorName;
+        return $this;
+    }
+
+    /**
     * Gets policyAssignmentType
-    *  规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    *  规则所有方
     *
     * @return string|null
     */
@@ -386,7 +421,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     /**
     * Sets policyAssignmentType
     *
-    * @param string|null $policyAssignmentType 规则类型，包括预定义合规规则(builtin)和用户自定义合规规则(custom)
+    * @param string|null $policyAssignmentType 规则所有方
     *
     * @return $this
     */
@@ -518,7 +553,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Gets period
-    *  触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    *  触发周期
     *
     * @return string|null
     */
@@ -530,7 +565,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     /**
     * Sets period
     *
-    * @param string|null $period 触发周期值，可选值：One_Hour, Three_Hours, Six_Hours, Twelve_Hours, TwentyFour_Hours
+    * @param string|null $period 触发周期
     *
     * @return $this
     */
@@ -686,7 +721,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Gets tags
-    *  tags
+    *  标签列表
     *
     * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null
     */
@@ -698,7 +733,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags tags
+    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags 标签列表
     *
     * @return $this
     */
@@ -758,7 +793,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
 
     /**
     * Gets targetId
-    *  修正执行的目标id。
+    *  修正执行的目标urn。
     *
     * @return string|null
     */
@@ -770,7 +805,7 @@ class ShowAggregatePolicyAssignmentDetailResponse implements ModelInterface, Arr
     /**
     * Sets targetId
     *
-    * @param string|null $targetId 修正执行的目标id。
+    * @param string|null $targetId 修正执行的目标urn。
     *
     * @return $this
     */

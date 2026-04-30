@@ -1201,11 +1201,11 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['imageName'] !== null) {
             $queryParams['image_name'] = $localVarParams['imageName'];
@@ -1414,11 +1414,11 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['keyName'] !== null) {
             $queryParams['key_name'] = $localVarParams['keyName'];
@@ -1494,11 +1494,11 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
@@ -1580,11 +1580,11 @@ class CpcsAsyncClient extends Client
         if ($localVarParams['appId'] !== null) {
             $queryParams['app_id'] = $localVarParams['appId'];
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['sortKey'] !== null) {
             $queryParams['sort_key'] = $localVarParams['sortKey'];
@@ -1654,11 +1654,11 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
@@ -1855,11 +1855,11 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
@@ -1935,14 +1935,14 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['name'] !== null) {
             $queryParams['name'] = $localVarParams['name'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['sortKey'] !== null) {
             $queryParams['sort_key'] = $localVarParams['sortKey'];
@@ -2021,11 +2021,11 @@ class CpcsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['appName'] !== null) {
             $queryParams['app_name'] = $localVarParams['appName'];
@@ -2182,11 +2182,11 @@ class CpcsAsyncClient extends Client
         if ($localVarParams['certificateType'] !== null) {
             $queryParams['certificate_type'] = $localVarParams['certificateType'];
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['from'] !== null) {
             $queryParams['from'] = $localVarParams['from'];
@@ -2271,11 +2271,11 @@ class CpcsAsyncClient extends Client
         if ($localVarParams['certificateType'] !== null) {
             $queryParams['certificate_type'] = $localVarParams['certificateType'];
         }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
-        if ($localVarParams['pageNum'] !== null) {
-            $queryParams['page_num'] = $localVarParams['pageNum'];
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['from'] !== null) {
             $queryParams['from'] = $localVarParams['from'];
@@ -2563,7 +2563,7 @@ class CpcsAsyncClient extends Client
     /**
      * 获取资源总量统计信息
      *
-     * 获取CPCS中\\资源总量统计信息
+     * 获取CPCS中资源总量统计信息
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

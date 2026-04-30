@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuthObjectScopeCluster implements ModelInterface, ArrayAccess
+class SwitchTokenResponseTokenUserDomain implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class AuthObjectScopeCluster implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'authObject_scope_cluster';
+    protected static $openAPIModelName = 'SwitchTokenResponse_token_user_domain';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  集群id
-    * name  集群名称
+    * name  主账号名称
+    * id  主账号ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  集群id
-    * name  集群名称
+    * name  主账号名称
+    * id  主账号ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null
+        'name' => null,
+        'id' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class AuthObjectScopeCluster implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  集群id
-    * name  集群名称
+    * name  主账号名称
+    * id  主账号ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'name' => 'name'
+            'name' => 'name',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  集群id
-    * name  集群名称
+    * name  主账号名称
+    * id  主账号ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'name' => 'setName'
+            'name' => 'setName',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  集群id
-    * name  集群名称
+    * name  主账号名称
+    * id  主账号ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'name' => 'getName'
+            'name' => 'getName',
+            'id' => 'getId'
     ];
 
     /**
@@ -157,8 +157,8 @@ class AuthObjectScopeCluster implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -184,32 +184,8 @@ class AuthObjectScopeCluster implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  集群id
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 集群id
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
     * Gets name
-    *  集群名称
+    *  主账号名称
     *
     * @return string|null
     */
@@ -221,13 +197,37 @@ class AuthObjectScopeCluster implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 集群名称
+    * @param string|null $name 主账号名称
     *
     * @return $this
     */
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  主账号ID
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 主账号ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

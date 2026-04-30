@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuthObjectAuth implements ModelInterface, ArrayAccess
+class SwitchTokenResponseTokenRoles implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class AuthObjectAuth implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'authObject_auth';
+    protected static $openAPIModelName = 'SwitchTokenResponse_token_roles';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessKey  accessKey
+    * name  角色名称
+    * id  角色ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'accessKey' => '\HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectAuthAccessKey'
+            'name' => 'string',
+            'id' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessKey  accessKey
+    * name  角色名称
+    * id  角色ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'accessKey' => null
+        'name' => null,
+        'id' => 'int32'
     ];
 
     /**
@@ -61,32 +65,38 @@ class AuthObjectAuth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessKey  accessKey
+    * name  角色名称
+    * id  角色ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'accessKey' => 'accessKey'
+            'name' => 'name',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessKey  accessKey
+    * name  角色名称
+    * id  角色ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'accessKey' => 'setAccessKey'
+            'name' => 'setName',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessKey  accessKey
+    * name  角色名称
+    * id  角色ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'accessKey' => 'getAccessKey'
+            'name' => 'getName',
+            'id' => 'getId'
     ];
 
     /**
@@ -147,7 +157,8 @@ class AuthObjectAuth implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['accessKey'] = isset($data['accessKey']) ? $data['accessKey'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -173,26 +184,50 @@ class AuthObjectAuth implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets accessKey
-    *  accessKey
+    * Gets name
+    *  角色名称
     *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectAuthAccessKey|null
+    * @return string|null
     */
-    public function getAccessKey()
+    public function getName()
     {
-        return $this->container['accessKey'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets accessKey
+    * Sets name
     *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectAuthAccessKey|null $accessKey accessKey
+    * @param string|null $name 角色名称
     *
     * @return $this
     */
-    public function setAccessKey($accessKey)
+    public function setName($name)
     {
-        $this->container['accessKey'] = $accessKey;
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  角色ID
+    *
+    * @return int|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param int|null $id 角色ID
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

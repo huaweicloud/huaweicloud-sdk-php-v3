@@ -20,32 +20,32 @@ class ShowAuditLogRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * startTime  开始时间
     * endTime  结束时间
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pageSize' => 'int',
-            'pageNum' => 'int',
+            'limit' => 'int',
+            'offset' => 'int',
             'startTime' => 'int',
             'endTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * startTime  开始时间
     * endTime  结束时间
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pageSize' => 'int32',
-        'pageNum' => 'int32',
+        'limit' => 'int32',
+        'offset' => 'int32',
         'startTime' => 'int64',
         'endTime' => 'int64'
     ];
@@ -73,48 +73,48 @@ class ShowAuditLogRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * startTime  开始时间
     * endTime  结束时间
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'pageSize' => 'page_size',
-            'pageNum' => 'page_num',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * startTime  开始时间
     * endTime  结束时间
     *
     * @var string[]
     */
     protected static $setters = [
-            'pageSize' => 'setPageSize',
-            'pageNum' => 'setPageNum',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * startTime  开始时间
     * endTime  结束时间
     *
     * @var string[]
     */
     protected static $getters = [
-            'pageSize' => 'getPageSize',
-            'pageNum' => 'getPageNum',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
     ];
@@ -177,8 +177,8 @@ class ShowAuditLogRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
-        $this->container['pageNum'] = isset($data['pageNum']) ? $data['pageNum'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
@@ -206,50 +206,50 @@ class ShowAuditLogRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pageSize
+    * Gets limit
     *  指定查询返回记录条数，默认值10
     *
     * @return int|null
     */
-    public function getPageSize()
+    public function getLimit()
     {
-        return $this->container['pageSize'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets pageSize
+    * Sets limit
     *
-    * @param int|null $pageSize 指定查询返回记录条数，默认值10
+    * @param int|null $limit 指定查询返回记录条数，默认值10
     *
     * @return $this
     */
-    public function setPageSize($pageSize)
+    public function setLimit($limit)
     {
-        $this->container['pageSize'] = $pageSize;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
     /**
-    * Gets pageNum
-    *  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * Gets offset
+    *  索引位置，从offset指定的下一条数据开始查询默认值为0
     *
     * @return int|null
     */
-    public function getPageNum()
+    public function getOffset()
     {
-        return $this->container['pageNum'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets pageNum
+    * Sets offset
     *
-    * @param int|null $pageNum 索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * @param int|null $offset 索引位置，从offset指定的下一条数据开始查询默认值为0
     *
     * @return $this
     */
-    public function setPageNum($pageNum)
+    public function setOffset($offset)
     {
-        $this->container['pageNum'] = $pageNum;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

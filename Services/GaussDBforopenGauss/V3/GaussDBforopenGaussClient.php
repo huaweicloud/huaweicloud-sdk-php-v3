@@ -13383,7 +13383,7 @@ class GaussDBforopenGaussClient extends Client
 
     public function switchLoggerReplicaWithHttpInfo($request)
     {
-        $resourcePath = '/v3/{project_id}/instance/{instance_id}/switch-logger-replica';
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/switch-logger-replica';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

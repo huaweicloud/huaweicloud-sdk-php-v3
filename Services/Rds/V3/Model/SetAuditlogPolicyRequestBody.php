@@ -20,30 +20,34 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * keepDays  审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
-    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
+    * databases  仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'keepDays' => 'int',
             'reserveAuditlogs' => 'bool',
-            'auditTypes' => 'string[]'
+            'auditTypes' => 'string[]',
+            'databases' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * keepDays  审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
-    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
+    * databases  仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'keepDays' => null,
         'reserveAuditlogs' => null,
-        'auditTypes' => null
+        'auditTypes' => null,
+        'databases' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * keepDays  审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
-    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
+    * databases  仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'keepDays' => 'keep_days',
             'reserveAuditlogs' => 'reserve_auditlogs',
-            'auditTypes' => 'audit_types'
+            'auditTypes' => 'audit_types',
+            'databases' => 'databases'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * keepDays  审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
-    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
+    * databases  仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
     *
     * @var string[]
     */
     protected static $setters = [
             'keepDays' => 'setKeepDays',
             'reserveAuditlogs' => 'setReserveAuditlogs',
-            'auditTypes' => 'setAuditTypes'
+            'auditTypes' => 'setAuditTypes',
+            'databases' => 'setDatabases'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keepDays  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * keepDays  审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     * reserveAuditlogs  仅关闭审计日志策略时有效。  - true（默认），表示关闭审计日志策略的同时，延迟删除已有的历史审计日志。 - false，表示关闭审计日志策略的同时，删除已有的历史审计日志。
-    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * auditTypes  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
+    * databases  仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
     *
     * @var string[]
     */
     protected static $getters = [
             'keepDays' => 'getKeepDays',
             'reserveAuditlogs' => 'getReserveAuditlogs',
-            'auditTypes' => 'getAuditTypes'
+            'auditTypes' => 'getAuditTypes',
+            'databases' => 'getDatabases'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
         $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
         $this->container['reserveAuditlogs'] = isset($data['reserveAuditlogs']) ? $data['reserveAuditlogs'] : null;
         $this->container['auditTypes'] = isset($data['auditTypes']) ? $data['auditTypes'] : null;
+        $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
     }
 
     /**
@@ -199,7 +210,7 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDays
-    *  审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    *  审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     *
     * @return int
     */
@@ -211,7 +222,7 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keepDays
     *
-    * @param int $keepDays 审计日志保存天数，取值范围0~732。0表示关闭审计日志策略。
+    * @param int $keepDays 审计日志保存天数，取值范围0~3660。0表示关闭审计日志策略。
     *
     * @return $this
     */
@@ -247,7 +258,7 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets auditTypes
-    *  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    *  审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
     *
     * @return string[]|null
     */
@@ -259,13 +270,37 @@ class SetAuditlogPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets auditTypes
     *
-    * @param string[]|null $auditTypes 审计记录的操作类型，动态范围。空表示不过滤任何操作类型。
+    * @param string[]|null $auditTypes 审计记录的操作类型，动态范围。空表示不过滤任何操作类型。该参数仅针对RDS for MySQL实例。
     *
     * @return $this
     */
     public function setAuditTypes($auditTypes)
     {
         $this->container['auditTypes'] = $auditTypes;
+        return $this;
+    }
+
+    /**
+    * Gets databases
+    *  仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
+    *
+    * @return string[]|null
+    */
+    public function getDatabases()
+    {
+        return $this->container['databases'];
+    }
+
+    /**
+    * Sets databases
+    *
+    * @param string[]|null $databases 仅打开审计日志策略时有效。内容为打开审计日志时需自动安装pg_audit插件的数据库名称。空表示不自动安装。该参数仅针对RDS for PostgreSQL实例。
+    *
+    * @return $this
+    */
+    public function setDatabases($databases)
+    {
+        $this->container['databases'] = $databases;
         return $this;
     }
 

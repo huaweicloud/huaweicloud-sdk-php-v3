@@ -27,7 +27,7 @@ class OutputRespOutputResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'value' => 'string'
+            'value' => 'object'
     ];
 
     /**
@@ -211,7 +211,7 @@ class OutputRespOutputResult implements ModelInterface, ArrayAccess
     * Gets value
     *  **参数解释**： 步骤输出value值。 **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return object|null
     */
     public function getValue()
     {
@@ -221,7 +221,7 @@ class OutputRespOutputResult implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value **参数解释**： 步骤输出value值。 **取值范围**： 不涉及。
+    * @param object|null $value **参数解释**： 步骤输出value值。 **取值范围**： 不涉及。
     *
     * @return $this
     */

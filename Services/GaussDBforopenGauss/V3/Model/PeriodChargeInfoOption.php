@@ -206,6 +206,9 @@ class PeriodChargeInfoOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['periodType'] === null) {
+            $invalidProperties[] = "'periodType' can't be null";
+        }
             $allowedValues = $this->getPeriodTypeAllowableValues();
                 if (!is_null($this->container['periodType']) && !in_array($this->container['periodType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -214,6 +217,9 @@ class PeriodChargeInfoOption implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['periodNum'] === null) {
+            $invalidProperties[] = "'periodNum' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -232,7 +238,7 @@ class PeriodChargeInfoOption implements ModelInterface, ArrayAccess
     * Gets periodType
     *  **参数解释**: 周期单位类型。 **约束限制**: 不涉及。 **取值范围**: - year：包年。 - month：包月。  **默认取值**: 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getPeriodType()
     {
@@ -242,7 +248,7 @@ class PeriodChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType **参数解释**: 周期单位类型。 **约束限制**: 不涉及。 **取值范围**: - year：包年。 - month：包月。  **默认取值**: 不涉及。
+    * @param string $periodType **参数解释**: 周期单位类型。 **约束限制**: 不涉及。 **取值范围**: - year：包年。 - month：包月。  **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -256,7 +262,7 @@ class PeriodChargeInfoOption implements ModelInterface, ArrayAccess
     * Gets periodNum
     *  **参数解释**: 周期单位数量。 **约束限制**: 不涉及。 **取值范围**: - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。  当传入浮点型时，会自动截取为整型。 **默认取值**: 不涉及。
     *
-    * @return int|null
+    * @return int
     */
     public function getPeriodNum()
     {
@@ -266,7 +272,7 @@ class PeriodChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum **参数解释**: 周期单位数量。 **约束限制**: 不涉及。 **取值范围**: - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。  当传入浮点型时，会自动截取为整型。 **默认取值**: 不涉及。
+    * @param int $periodNum **参数解释**: 周期单位数量。 **约束限制**: 不涉及。 **取值范围**: - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3。  当传入浮点型时，会自动截取为整型。 **默认取值**: 不涉及。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     * value  过滤器值
     *
     * @var string[]
@@ -32,7 +32,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     * value  过滤器值
     *
     * @var string[]
@@ -65,7 +65,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     * value  过滤器值
     *
     * @var string[]
@@ -77,7 +77,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     * value  过滤器值
     *
     * @var string[]
@@ -89,7 +89,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * key  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     * value  过滤器值
     *
     * @var string[]
@@ -197,7 +197,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    *  维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class FilterFactor implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本单元
+    * @param string $key 维度分组条件。CLOUD_SERVICE_TYPE：产品类型ASSOCIATED_ACCOUNT：关联账号REGION_CODE：区域RES_SPEC_CODE：规格编码USAGE_TYPE：使用量类型ENTERPRISE_PROJECT_ID：企业项目RESOURCE_ID：资源CHARGING_MODE：计费模式BILL_TYPE：账单类型RESOURCE_TYPE：产品AZ_CODE：可用区BE_ID：运营实体（beid）PAYER_ACCOUNT_ID：交易账号RESOURCE_TAG：成本标签COST_UNIT：成本分组
     *
     * @return $this
     */

@@ -26,9 +26,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
     * clusterType  集群类型
     * operation  操作
     * time  时间
-    * operateStatus  操作状态
-    * operateMessage  操作结果消息
-    * auditStatus  审计状态
+    * status  操作状态
+    * failureMessage  操作失败消息
+    * verification  操作验证信息
     *
     * @var string[]
     */
@@ -39,9 +39,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
             'clusterType' => 'string',
             'operation' => 'string',
             'time' => 'int',
-            'operateStatus' => 'int',
-            'operateMessage' => 'string',
-            'auditStatus' => 'int'
+            'status' => 'string',
+            'failureMessage' => 'string',
+            'verification' => 'string'
     ];
 
     /**
@@ -52,9 +52,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
     * clusterType  集群类型
     * operation  操作
     * time  时间
-    * operateStatus  操作状态
-    * operateMessage  操作结果消息
-    * auditStatus  审计状态
+    * status  操作状态
+    * failureMessage  操作失败消息
+    * verification  操作验证信息
     *
     * @var string[]
     */
@@ -65,9 +65,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
         'clusterType' => null,
         'operation' => null,
         'time' => 'int64',
-        'operateStatus' => 'int32',
-        'operateMessage' => null,
-        'auditStatus' => 'int32'
+        'status' => null,
+        'failureMessage' => null,
+        'verification' => null
     ];
 
     /**
@@ -99,9 +99,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
     * clusterType  集群类型
     * operation  操作
     * time  时间
-    * operateStatus  操作状态
-    * operateMessage  操作结果消息
-    * auditStatus  审计状态
+    * status  操作状态
+    * failureMessage  操作失败消息
+    * verification  操作验证信息
     *
     * @var string[]
     */
@@ -112,9 +112,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
             'clusterType' => 'cluster_type',
             'operation' => 'operation',
             'time' => 'time',
-            'operateStatus' => 'operate_status',
-            'operateMessage' => 'operate_message',
-            'auditStatus' => 'audit_status'
+            'status' => 'status',
+            'failureMessage' => 'failure_message',
+            'verification' => 'verification'
     ];
 
     /**
@@ -125,9 +125,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
     * clusterType  集群类型
     * operation  操作
     * time  时间
-    * operateStatus  操作状态
-    * operateMessage  操作结果消息
-    * auditStatus  审计状态
+    * status  操作状态
+    * failureMessage  操作失败消息
+    * verification  操作验证信息
     *
     * @var string[]
     */
@@ -138,9 +138,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
             'clusterType' => 'setClusterType',
             'operation' => 'setOperation',
             'time' => 'setTime',
-            'operateStatus' => 'setOperateStatus',
-            'operateMessage' => 'setOperateMessage',
-            'auditStatus' => 'setAuditStatus'
+            'status' => 'setStatus',
+            'failureMessage' => 'setFailureMessage',
+            'verification' => 'setVerification'
     ];
 
     /**
@@ -151,9 +151,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
     * clusterType  集群类型
     * operation  操作
     * time  时间
-    * operateStatus  操作状态
-    * operateMessage  操作结果消息
-    * auditStatus  审计状态
+    * status  操作状态
+    * failureMessage  操作失败消息
+    * verification  操作验证信息
     *
     * @var string[]
     */
@@ -164,9 +164,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
             'clusterType' => 'getClusterType',
             'operation' => 'getOperation',
             'time' => 'getTime',
-            'operateStatus' => 'getOperateStatus',
-            'operateMessage' => 'getOperateMessage',
-            'auditStatus' => 'getAuditStatus'
+            'status' => 'getStatus',
+            'failureMessage' => 'getFailureMessage',
+            'verification' => 'getVerification'
     ];
 
     /**
@@ -233,9 +233,9 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
-        $this->container['operateStatus'] = isset($data['operateStatus']) ? $data['operateStatus'] : null;
-        $this->container['operateMessage'] = isset($data['operateMessage']) ? $data['operateMessage'] : null;
-        $this->container['auditStatus'] = isset($data['auditStatus']) ? $data['auditStatus'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['failureMessage'] = isset($data['failureMessage']) ? $data['failureMessage'] : null;
+        $this->container['verification'] = isset($data['verification']) ? $data['verification'] : null;
     }
 
     /**
@@ -405,74 +405,74 @@ class ShowAuditLogResponseBodyAuditRecords implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets operateStatus
+    * Gets status
     *  操作状态
-    *
-    * @return int|null
-    */
-    public function getOperateStatus()
-    {
-        return $this->container['operateStatus'];
-    }
-
-    /**
-    * Sets operateStatus
-    *
-    * @param int|null $operateStatus 操作状态
-    *
-    * @return $this
-    */
-    public function setOperateStatus($operateStatus)
-    {
-        $this->container['operateStatus'] = $operateStatus;
-        return $this;
-    }
-
-    /**
-    * Gets operateMessage
-    *  操作结果消息
     *
     * @return string|null
     */
-    public function getOperateMessage()
+    public function getStatus()
     {
-        return $this->container['operateMessage'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets operateMessage
+    * Sets status
     *
-    * @param string|null $operateMessage 操作结果消息
+    * @param string|null $status 操作状态
     *
     * @return $this
     */
-    public function setOperateMessage($operateMessage)
+    public function setStatus($status)
     {
-        $this->container['operateMessage'] = $operateMessage;
+        $this->container['status'] = $status;
         return $this;
     }
 
     /**
-    * Gets auditStatus
-    *  审计状态
+    * Gets failureMessage
+    *  操作失败消息
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getAuditStatus()
+    public function getFailureMessage()
     {
-        return $this->container['auditStatus'];
+        return $this->container['failureMessage'];
     }
 
     /**
-    * Sets auditStatus
+    * Sets failureMessage
     *
-    * @param int|null $auditStatus 审计状态
+    * @param string|null $failureMessage 操作失败消息
     *
     * @return $this
     */
-    public function setAuditStatus($auditStatus)
+    public function setFailureMessage($failureMessage)
     {
-        $this->container['auditStatus'] = $auditStatus;
+        $this->container['failureMessage'] = $failureMessage;
+        return $this;
+    }
+
+    /**
+    * Gets verification
+    *  操作验证信息
+    *
+    * @return string|null
+    */
+    public function getVerification()
+    {
+        return $this->container['verification'];
+    }
+
+    /**
+    * Sets verification
+    *
+    * @param string|null $verification 操作验证信息
+    *
+    * @return $this
+    */
+    public function setVerification($verification)
+    {
+        $this->container['verification'] = $verification;
         return $this;
     }
 

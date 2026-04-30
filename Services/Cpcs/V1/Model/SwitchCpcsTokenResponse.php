@@ -21,41 +21,25 @@ class SwitchCpcsTokenResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roles  角色列表
-    * ak  ak
-    * expiredAt  过期时间
-    * issuedAt  签发时间
-    * user  user
+    * token  token
     * xCpcsToken  xCpcsToken
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'roles' => 'string[]',
-            'ak' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseAk',
-            'expiredAt' => 'string',
-            'issuedAt' => 'string',
-            'user' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseUser',
+            'token' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseToken',
             'xCpcsToken' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roles  角色列表
-    * ak  ak
-    * expiredAt  过期时间
-    * issuedAt  签发时间
-    * user  user
+    * token  token
     * xCpcsToken  xCpcsToken
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'roles' => null,
-        'ak' => null,
-        'expiredAt' => null,
-        'issuedAt' => null,
-        'user' => null,
+        'token' => null,
         'xCpcsToken' => null
     ];
 
@@ -82,61 +66,37 @@ class SwitchCpcsTokenResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roles  角色列表
-    * ak  ak
-    * expiredAt  过期时间
-    * issuedAt  签发时间
-    * user  user
+    * token  token
     * xCpcsToken  xCpcsToken
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'roles' => 'roles',
-            'ak' => 'ak',
-            'expiredAt' => 'expired_at',
-            'issuedAt' => 'issued_at',
-            'user' => 'user',
+            'token' => 'token',
             'xCpcsToken' => 'X-CPCS-Token'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roles  角色列表
-    * ak  ak
-    * expiredAt  过期时间
-    * issuedAt  签发时间
-    * user  user
+    * token  token
     * xCpcsToken  xCpcsToken
     *
     * @var string[]
     */
     protected static $setters = [
-            'roles' => 'setRoles',
-            'ak' => 'setAk',
-            'expiredAt' => 'setExpiredAt',
-            'issuedAt' => 'setIssuedAt',
-            'user' => 'setUser',
+            'token' => 'setToken',
             'xCpcsToken' => 'setXCpcsToken'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roles  角色列表
-    * ak  ak
-    * expiredAt  过期时间
-    * issuedAt  签发时间
-    * user  user
+    * token  token
     * xCpcsToken  xCpcsToken
     *
     * @var string[]
     */
     protected static $getters = [
-            'roles' => 'getRoles',
-            'ak' => 'getAk',
-            'expiredAt' => 'getExpiredAt',
-            'issuedAt' => 'getIssuedAt',
-            'user' => 'getUser',
+            'token' => 'getToken',
             'xCpcsToken' => 'getXCpcsToken'
     ];
 
@@ -198,11 +158,7 @@ class SwitchCpcsTokenResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
-        $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
-        $this->container['expiredAt'] = isset($data['expiredAt']) ? $data['expiredAt'] : null;
-        $this->container['issuedAt'] = isset($data['issuedAt']) ? $data['issuedAt'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
         $this->container['xCpcsToken'] = isset($data['xCpcsToken']) ? $data['xCpcsToken'] : null;
     }
 
@@ -229,122 +185,26 @@ class SwitchCpcsTokenResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets roles
-    *  角色列表
+    * Gets token
+    *  token
     *
-    * @return string[]|null
+    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseToken|null
     */
-    public function getRoles()
+    public function getToken()
     {
-        return $this->container['roles'];
+        return $this->container['token'];
     }
 
     /**
-    * Sets roles
+    * Sets token
     *
-    * @param string[]|null $roles 角色列表
+    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseToken|null $token token
     *
     * @return $this
     */
-    public function setRoles($roles)
+    public function setToken($token)
     {
-        $this->container['roles'] = $roles;
-        return $this;
-    }
-
-    /**
-    * Gets ak
-    *  ak
-    *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseAk|null
-    */
-    public function getAk()
-    {
-        return $this->container['ak'];
-    }
-
-    /**
-    * Sets ak
-    *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseAk|null $ak ak
-    *
-    * @return $this
-    */
-    public function setAk($ak)
-    {
-        $this->container['ak'] = $ak;
-        return $this;
-    }
-
-    /**
-    * Gets expiredAt
-    *  过期时间
-    *
-    * @return string|null
-    */
-    public function getExpiredAt()
-    {
-        return $this->container['expiredAt'];
-    }
-
-    /**
-    * Sets expiredAt
-    *
-    * @param string|null $expiredAt 过期时间
-    *
-    * @return $this
-    */
-    public function setExpiredAt($expiredAt)
-    {
-        $this->container['expiredAt'] = $expiredAt;
-        return $this;
-    }
-
-    /**
-    * Gets issuedAt
-    *  签发时间
-    *
-    * @return string|null
-    */
-    public function getIssuedAt()
-    {
-        return $this->container['issuedAt'];
-    }
-
-    /**
-    * Sets issuedAt
-    *
-    * @param string|null $issuedAt 签发时间
-    *
-    * @return $this
-    */
-    public function setIssuedAt($issuedAt)
-    {
-        $this->container['issuedAt'] = $issuedAt;
-        return $this;
-    }
-
-    /**
-    * Gets user
-    *  user
-    *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseUser|null
-    */
-    public function getUser()
-    {
-        return $this->container['user'];
-    }
-
-    /**
-    * Sets user
-    *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseUser|null $user user
-    *
-    * @return $this
-    */
-    public function setUser($user)
-    {
-        $this->container['user'] = $user;
+        $this->container['token'] = $token;
         return $this;
     }
 

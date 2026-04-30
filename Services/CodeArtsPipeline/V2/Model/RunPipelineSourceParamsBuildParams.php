@@ -33,6 +33,8 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
     * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
+    * virtualMergeBranch  **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    * virtualMergeCommitId  **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -49,7 +51,9 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
             'codehubId' => 'string',
             'sourceCodehubId' => 'string',
             'sourceCodehubUrl' => 'string',
-            'sourceCodehubHttpUrl' => 'string'
+            'sourceCodehubHttpUrl' => 'string',
+            'virtualMergeBranch' => 'string',
+            'virtualMergeCommitId' => 'string'
     ];
 
     /**
@@ -67,6 +71,8 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
     * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
+    * virtualMergeBranch  **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    * virtualMergeCommitId  **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
         'codehubId' => null,
         'sourceCodehubId' => null,
         'sourceCodehubUrl' => null,
-        'sourceCodehubHttpUrl' => null
+        'sourceCodehubHttpUrl' => null,
+        'virtualMergeBranch' => null,
+        'virtualMergeCommitId' => null
     ];
 
     /**
@@ -122,6 +130,8 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
     * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
+    * virtualMergeBranch  **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    * virtualMergeCommitId  **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -138,7 +148,9 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
             'codehubId' => 'codehub_id',
             'sourceCodehubId' => 'source_codehub_id',
             'sourceCodehubUrl' => 'source_codehub_url',
-            'sourceCodehubHttpUrl' => 'source_codehub_http_url'
+            'sourceCodehubHttpUrl' => 'source_codehub_http_url',
+            'virtualMergeBranch' => 'virtual_merge_branch',
+            'virtualMergeCommitId' => 'virtual_merge_commitId'
     ];
 
     /**
@@ -156,6 +168,8 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
     * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
+    * virtualMergeBranch  **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    * virtualMergeCommitId  **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -172,7 +186,9 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
             'codehubId' => 'setCodehubId',
             'sourceCodehubId' => 'setSourceCodehubId',
             'sourceCodehubUrl' => 'setSourceCodehubUrl',
-            'sourceCodehubHttpUrl' => 'setSourceCodehubHttpUrl'
+            'sourceCodehubHttpUrl' => 'setSourceCodehubHttpUrl',
+            'virtualMergeBranch' => 'setVirtualMergeBranch',
+            'virtualMergeCommitId' => 'setVirtualMergeCommitId'
     ];
 
     /**
@@ -190,6 +206,8 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
     * sourceCodehubId  **参数解释**： 源Repo代码仓ID。 **取值范围**： 不涉及。
     * sourceCodehubUrl  **参数解释**： 源Repo代码仓地址。 **取值范围**： 不涉及。
     * sourceCodehubHttpUrl  **参数解释**： 源Repo代码仓http地址。 **取值范围**： 不涉及。
+    * virtualMergeBranch  **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    * virtualMergeCommitId  **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
             'codehubId' => 'getCodehubId',
             'sourceCodehubId' => 'getSourceCodehubId',
             'sourceCodehubUrl' => 'getSourceCodehubUrl',
-            'sourceCodehubHttpUrl' => 'getSourceCodehubHttpUrl'
+            'sourceCodehubHttpUrl' => 'getSourceCodehubHttpUrl',
+            'virtualMergeBranch' => 'getVirtualMergeBranch',
+            'virtualMergeCommitId' => 'getVirtualMergeCommitId'
     ];
 
     /**
@@ -280,6 +300,8 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
         $this->container['sourceCodehubId'] = isset($data['sourceCodehubId']) ? $data['sourceCodehubId'] : null;
         $this->container['sourceCodehubUrl'] = isset($data['sourceCodehubUrl']) ? $data['sourceCodehubUrl'] : null;
         $this->container['sourceCodehubHttpUrl'] = isset($data['sourceCodehubHttpUrl']) ? $data['sourceCodehubHttpUrl'] : null;
+        $this->container['virtualMergeBranch'] = isset($data['virtualMergeBranch']) ? $data['virtualMergeBranch'] : null;
+        $this->container['virtualMergeCommitId'] = isset($data['virtualMergeCommitId']) ? $data['virtualMergeCommitId'] : null;
     }
 
     /**
@@ -613,6 +635,54 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
     public function setSourceCodehubHttpUrl($sourceCodehubHttpUrl)
     {
         $this->container['sourceCodehubHttpUrl'] = $sourceCodehubHttpUrl;
+        return $this;
+    }
+
+    /**
+    * Gets virtualMergeBranch
+    *  **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getVirtualMergeBranch()
+    {
+        return $this->container['virtualMergeBranch'];
+    }
+
+    /**
+    * Sets virtualMergeBranch
+    *
+    * @param string|null $virtualMergeBranch **参数解释**： 预合并分支。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setVirtualMergeBranch($virtualMergeBranch)
+    {
+        $this->container['virtualMergeBranch'] = $virtualMergeBranch;
+        return $this;
+    }
+
+    /**
+    * Gets virtualMergeCommitId
+    *  **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getVirtualMergeCommitId()
+    {
+        return $this->container['virtualMergeCommitId'];
+    }
+
+    /**
+    * Sets virtualMergeCommitId
+    *
+    * @param string|null $virtualMergeCommitId **参数解释**： 预合并提交ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setVirtualMergeCommitId($virtualMergeCommitId)
+    {
+        $this->container['virtualMergeCommitId'] = $virtualMergeCommitId;
         return $this;
     }
 

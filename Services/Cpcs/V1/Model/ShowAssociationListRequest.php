@@ -22,8 +22,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  密码集群ID
     * appId  应用ID
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 应用的创建时间（默认）
     * sortDir  排序方向，支持以下值： - **DESC** : 降序（默认） - **ASC** : 升序
     *
@@ -32,8 +32,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'clusterId' => 'string',
             'appId' => 'string',
-            'pageSize' => 'int',
-            'pageNum' => 'int',
+            'limit' => 'int',
+            'offset' => 'int',
             'sortKey' => 'string',
             'sortDir' => 'string'
     ];
@@ -42,8 +42,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  密码集群ID
     * appId  应用ID
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 应用的创建时间（默认）
     * sortDir  排序方向，支持以下值： - **DESC** : 降序（默认） - **ASC** : 升序
     *
@@ -52,8 +52,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'clusterId' => null,
         'appId' => null,
-        'pageSize' => 'int32',
-        'pageNum' => 'int32',
+        'limit' => 'int32',
+        'offset' => 'int32',
         'sortKey' => null,
         'sortDir' => null
     ];
@@ -83,8 +83,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  密码集群ID
     * appId  应用ID
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 应用的创建时间（默认）
     * sortDir  排序方向，支持以下值： - **DESC** : 降序（默认） - **ASC** : 升序
     *
@@ -93,8 +93,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
             'appId' => 'app_id',
-            'pageSize' => 'page_size',
-            'pageNum' => 'page_num',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir'
     ];
@@ -103,8 +103,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  密码集群ID
     * appId  应用ID
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 应用的创建时间（默认）
     * sortDir  排序方向，支持以下值： - **DESC** : 降序（默认） - **ASC** : 升序
     *
@@ -113,8 +113,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'clusterId' => 'setClusterId',
             'appId' => 'setAppId',
-            'pageSize' => 'setPageSize',
-            'pageNum' => 'setPageNum',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir'
     ];
@@ -123,8 +123,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  密码集群ID
     * appId  应用ID
-    * pageSize  指定查询返回记录条数，默认值10
-    * pageNum  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * limit  指定查询返回记录条数，默认值10
+    * offset  索引位置，从offset指定的下一条数据开始查询默认值为0
     * sortKey  排序属性，目前支持以下属性： - **create_time** : 应用的创建时间（默认）
     * sortDir  排序方向，支持以下值： - **DESC** : 降序（默认） - **ASC** : 升序
     *
@@ -133,8 +133,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'clusterId' => 'getClusterId',
             'appId' => 'getAppId',
-            'pageSize' => 'getPageSize',
-            'pageNum' => 'getPageNum',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir'
     ];
@@ -199,8 +199,8 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
-        $this->container['pageSize'] = isset($data['pageSize']) ? $data['pageSize'] : null;
-        $this->container['pageNum'] = isset($data['pageNum']) ? $data['pageNum'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
@@ -225,14 +225,14 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) < 32)) {
                 $invalidProperties[] = "invalid value for 'appId', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] > 1000)) {
-                $invalidProperties[] = "invalid value for 'pageSize', must be smaller than or equal to 1000.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }
-            if (!is_null($this->container['pageSize']) && ($this->container['pageSize'] < 0)) {
-                $invalidProperties[] = "invalid value for 'pageSize', must be bigger than or equal to 0.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['pageNum']) && ($this->container['pageNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'pageNum', must be bigger than or equal to 0.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -297,50 +297,50 @@ class ShowAssociationListRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pageSize
+    * Gets limit
     *  指定查询返回记录条数，默认值10
     *
     * @return int|null
     */
-    public function getPageSize()
+    public function getLimit()
     {
-        return $this->container['pageSize'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets pageSize
+    * Sets limit
     *
-    * @param int|null $pageSize 指定查询返回记录条数，默认值10
+    * @param int|null $limit 指定查询返回记录条数，默认值10
     *
     * @return $this
     */
-    public function setPageSize($pageSize)
+    public function setLimit($limit)
     {
-        $this->container['pageSize'] = $pageSize;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
     /**
-    * Gets pageNum
-    *  索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * Gets offset
+    *  索引位置，从offset指定的下一条数据开始查询默认值为0
     *
     * @return int|null
     */
-    public function getPageNum()
+    public function getOffset()
     {
-        return $this->container['pageNum'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets pageNum
+    * Sets offset
     *
-    * @param int|null $pageNum 索引位置，从page_num指定的下一条数据开始查询默认值为0
+    * @param int|null $offset 索引位置，从offset指定的下一条数据开始查询默认值为0
     *
     * @return $this
     */
-    public function setPageNum($pageNum)
+    public function setOffset($offset)
     {
-        $this->container['pageNum'] = $pageNum;
+        $this->container['offset'] = $offset;
         return $this;
     }
 

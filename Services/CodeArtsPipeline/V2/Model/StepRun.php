@@ -35,6 +35,7 @@ class StepRun implements ModelInterface, ArrayAccess
     * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建编号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class StepRun implements ModelInterface, ArrayAccess
             'status' => 'string',
             'message' => 'string',
             'startTime' => 'int',
-            'endTime' => 'int'
+            'endTime' => 'int',
+            'dailyBuildNumber' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class StepRun implements ModelInterface, ArrayAccess
     * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建编号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class StepRun implements ModelInterface, ArrayAccess
         'status' => null,
         'message' => null,
         'startTime' => 'int64',
-        'endTime' => 'int64'
+        'endTime' => 'int64',
+        'dailyBuildNumber' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class StepRun implements ModelInterface, ArrayAccess
     * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建编号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class StepRun implements ModelInterface, ArrayAccess
             'status' => 'status',
             'message' => 'message',
             'startTime' => 'start_time',
-            'endTime' => 'end_time'
+            'endTime' => 'end_time',
+            'dailyBuildNumber' => 'daily_build_number'
     ];
 
     /**
@@ -170,6 +176,7 @@ class StepRun implements ModelInterface, ArrayAccess
     * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建编号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class StepRun implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'message' => 'setMessage',
             'startTime' => 'setStartTime',
-            'endTime' => 'setEndTime'
+            'endTime' => 'setEndTime',
+            'dailyBuildNumber' => 'setDailyBuildNumber'
     ];
 
     /**
@@ -208,6 +216,7 @@ class StepRun implements ModelInterface, ArrayAccess
     * message  **参数解释**： 错误消息。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 步骤开始时间。 **取值范围**： 不涉及。
     * endTime  **参数解释**： 步骤结束时间。 **取值范围**： 不涉及。
+    * dailyBuildNumber  **参数解释**： 构建编号。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class StepRun implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'message' => 'getMessage',
             'startTime' => 'getStartTime',
-            'endTime' => 'getEndTime'
+            'endTime' => 'getEndTime',
+            'dailyBuildNumber' => 'getDailyBuildNumber'
     ];
 
     /**
@@ -302,6 +312,7 @@ class StepRun implements ModelInterface, ArrayAccess
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['dailyBuildNumber'] = isset($data['dailyBuildNumber']) ? $data['dailyBuildNumber'] : null;
     }
 
     /**
@@ -683,6 +694,30 @@ class StepRun implements ModelInterface, ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets dailyBuildNumber
+    *  **参数解释**： 构建编号。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDailyBuildNumber()
+    {
+        return $this->container['dailyBuildNumber'];
+    }
+
+    /**
+    * Sets dailyBuildNumber
+    *
+    * @param string|null $dailyBuildNumber **参数解释**： 构建编号。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDailyBuildNumber($dailyBuildNumber)
+    {
+        $this->container['dailyBuildNumber'] = $dailyBuildNumber;
         return $this;
     }
 

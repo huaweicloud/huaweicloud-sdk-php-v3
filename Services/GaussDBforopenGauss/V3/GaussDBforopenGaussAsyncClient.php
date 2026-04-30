@@ -13961,7 +13961,7 @@ class GaussDBforopenGaussAsyncClient extends Client
     
     public function switchLoggerReplicaAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/instance/{instance_id}/switch-logger-replica';
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/switch-logger-replica';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

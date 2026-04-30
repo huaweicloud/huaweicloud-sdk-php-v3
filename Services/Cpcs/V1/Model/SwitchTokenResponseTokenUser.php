@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuthObjectAuthAccessKey implements ModelInterface, ArrayAccess
+class SwitchTokenResponseTokenUser implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class AuthObjectAuthAccessKey implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'authObject_auth_accessKey';
+    protected static $openAPIModelName = 'SwitchTokenResponse_token_user';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ak id
-    * secret  sk id
+    * domain  domain
+    * name  用户名称
+    * id  用户ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'secret' => 'string'
+            'domain' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenUserDomain',
+            'name' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ak id
-    * secret  sk id
+    * domain  domain
+    * name  用户名称
+    * id  用户ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'secret' => null
+        'domain' => null,
+        'name' => null,
+        'id' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class AuthObjectAuthAccessKey implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ak id
-    * secret  sk id
+    * domain  domain
+    * name  用户名称
+    * id  用户ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'secret' => 'secret'
+            'domain' => 'domain',
+            'name' => 'name',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ak id
-    * secret  sk id
+    * domain  domain
+    * name  用户名称
+    * id  用户ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'secret' => 'setSecret'
+            'domain' => 'setDomain',
+            'name' => 'setName',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ak id
-    * secret  sk id
+    * domain  domain
+    * name  用户名称
+    * id  用户ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'secret' => 'getSecret'
+            'domain' => 'getDomain',
+            'name' => 'getName',
+            'id' => 'getId'
     ];
 
     /**
@@ -157,8 +167,9 @@ class AuthObjectAuthAccessKey implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['secret'] = isset($data['secret']) ? $data['secret'] : null;
     }
 
     /**
@@ -184,8 +195,56 @@ class AuthObjectAuthAccessKey implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets domain
+    *  domain
+    *
+    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenUserDomain|null
+    */
+    public function getDomain()
+    {
+        return $this->container['domain'];
+    }
+
+    /**
+    * Sets domain
+    *
+    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenUserDomain|null $domain domain
+    *
+    * @return $this
+    */
+    public function setDomain($domain)
+    {
+        $this->container['domain'] = $domain;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  用户名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 用户名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
     * Gets id
-    *  ak id
+    *  用户ID
     *
     * @return string|null
     */
@@ -197,37 +256,13 @@ class AuthObjectAuthAccessKey implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ak id
+    * @param string|null $id 用户ID
     *
     * @return $this
     */
     public function setId($id)
     {
         $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets secret
-    *  sk id
-    *
-    * @return string|null
-    */
-    public function getSecret()
-    {
-        return $this->container['secret'];
-    }
-
-    /**
-    * Sets secret
-    *
-    * @param string|null $secret sk id
-    *
-    * @return $this
-    */
-    public function setSecret($secret)
-    {
-        $this->container['secret'] = $secret;
         return $this;
     }
 

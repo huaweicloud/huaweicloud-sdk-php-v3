@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuthObjectScope implements ModelInterface, ArrayAccess
+class SwitchTokenResponseTokenApp implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,34 @@ class AuthObjectScope implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'authObject_scope';
+    protected static $openAPIModelName = 'SwitchTokenResponse_token_app';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cluster  cluster
+    * appName  应用名称
+    * appId  应用ID
+    * status  应用状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'cluster' => '\HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectScopeCluster'
+            'appName' => 'string',
+            'appId' => 'string',
+            'status' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cluster  cluster
+    * appName  应用名称
+    * appId  应用ID
+    * status  应用状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'cluster' => null
+        'appName' => null,
+        'appId' => null,
+        'status' => 'int32'
     ];
 
     /**
@@ -61,32 +69,44 @@ class AuthObjectScope implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cluster  cluster
+    * appName  应用名称
+    * appId  应用ID
+    * status  应用状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'cluster' => 'cluster'
+            'appName' => 'appName',
+            'appId' => 'appId',
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cluster  cluster
+    * appName  应用名称
+    * appId  应用ID
+    * status  应用状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'cluster' => 'setCluster'
+            'appName' => 'setAppName',
+            'appId' => 'setAppId',
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cluster  cluster
+    * appName  应用名称
+    * appId  应用ID
+    * status  应用状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'cluster' => 'getCluster'
+            'appName' => 'getAppName',
+            'appId' => 'getAppId',
+            'status' => 'getStatus'
     ];
 
     /**
@@ -147,7 +167,9 @@ class AuthObjectScope implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['cluster'] = isset($data['cluster']) ? $data['cluster'] : null;
+        $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
+        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -173,26 +195,74 @@ class AuthObjectScope implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets cluster
-    *  cluster
+    * Gets appName
+    *  应用名称
     *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectScopeCluster|null
+    * @return string|null
     */
-    public function getCluster()
+    public function getAppName()
     {
-        return $this->container['cluster'];
+        return $this->container['appName'];
     }
 
     /**
-    * Sets cluster
+    * Sets appName
     *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\AuthObjectScopeCluster|null $cluster cluster
+    * @param string|null $appName 应用名称
     *
     * @return $this
     */
-    public function setCluster($cluster)
+    public function setAppName($appName)
     {
-        $this->container['cluster'] = $cluster;
+        $this->container['appName'] = $appName;
+        return $this;
+    }
+
+    /**
+    * Gets appId
+    *  应用ID
+    *
+    * @return string|null
+    */
+    public function getAppId()
+    {
+        return $this->container['appId'];
+    }
+
+    /**
+    * Sets appId
+    *
+    * @param string|null $appId 应用ID
+    *
+    * @return $this
+    */
+    public function setAppId($appId)
+    {
+        $this->container['appId'] = $appId;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  应用状态
+    *
+    * @return int|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param int|null $status 应用状态
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

@@ -21,21 +21,25 @@ class AutoRenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * autoRenewTimes  |参数名称：自动续费次数| |参数的约束及描述：该参数非必填，范围限制：0-99，0代表不限制次数。 首次开通自动续费，此参数不携带或携带值为null时，默认为不限制次数 已开通自动续费，重置自动续费次数时此参数必填，否则不做处理，不进行修改|
+    * periodType  |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'autoRenewTimes' => 'int'
+            'autoRenewTimes' => 'int',
+            'periodType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * autoRenewTimes  |参数名称：自动续费次数| |参数的约束及描述：该参数非必填，范围限制：0-99，0代表不限制次数。 首次开通自动续费，此参数不携带或携带值为null时，默认为不限制次数 已开通自动续费，重置自动续费次数时此参数必填，否则不做处理，不进行修改|
+    * periodType  |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'autoRenewTimes' => 'int32'
+        'autoRenewTimes' => 'int32',
+        'periodType' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AutoRenewalResourcesReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * autoRenewTimes  |参数名称：自动续费次数| |参数的约束及描述：该参数非必填，范围限制：0-99，0代表不限制次数。 首次开通自动续费，此参数不携带或携带值为null时，默认为不限制次数 已开通自动续费，重置自动续费次数时此参数必填，否则不做处理，不进行修改|
+    * periodType  |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'autoRenewTimes' => 'auto_renew_times'
+            'autoRenewTimes' => 'auto_renew_times',
+            'periodType' => 'period_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * autoRenewTimes  |参数名称：自动续费次数| |参数的约束及描述：该参数非必填，范围限制：0-99，0代表不限制次数。 首次开通自动续费，此参数不携带或携带值为null时，默认为不限制次数 已开通自动续费，重置自动续费次数时此参数必填，否则不做处理，不进行修改|
+    * periodType  |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
     *
     * @var string[]
     */
     protected static $setters = [
-            'autoRenewTimes' => 'setAutoRenewTimes'
+            'autoRenewTimes' => 'setAutoRenewTimes',
+            'periodType' => 'setPeriodType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * autoRenewTimes  |参数名称：自动续费次数| |参数的约束及描述：该参数非必填，范围限制：0-99，0代表不限制次数。 首次开通自动续费，此参数不携带或携带值为null时，默认为不限制次数 已开通自动续费，重置自动续费次数时此参数必填，否则不做处理，不进行修改|
+    * periodType  |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
     *
     * @var string[]
     */
     protected static $getters = [
-            'autoRenewTimes' => 'getAutoRenewTimes'
+            'autoRenewTimes' => 'getAutoRenewTimes',
+            'periodType' => 'getPeriodType'
     ];
 
     /**
@@ -129,7 +139,22 @@ class AutoRenewalResourcesReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const PERIOD_TYPE_MONTH = 'MONTH';
+    const PERIOD_TYPE_YEAR = 'YEAR';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPeriodTypeAllowableValues()
+    {
+        return [
+            self::PERIOD_TYPE_MONTH,
+            self::PERIOD_TYPE_YEAR,
+        ];
+    }
 
 
     /**
@@ -148,6 +173,7 @@ class AutoRenewalResourcesReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['autoRenewTimes'] = isset($data['autoRenewTimes']) ? $data['autoRenewTimes'] : null;
+        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
     }
 
     /**
@@ -164,6 +190,14 @@ class AutoRenewalResourcesReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['autoRenewTimes']) && ($this->container['autoRenewTimes'] < 0)) {
                 $invalidProperties[] = "invalid value for 'autoRenewTimes', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getPeriodTypeAllowableValues();
+                if (!is_null($this->container['periodType']) && !in_array($this->container['periodType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'periodType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -199,6 +233,30 @@ class AutoRenewalResourcesReq implements ModelInterface, ArrayAccess
     public function setAutoRenewTimes($autoRenewTimes)
     {
         $this->container['autoRenewTimes'] = $autoRenewTimes;
+        return $this;
+    }
+
+    /**
+    * Gets periodType
+    *  |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
+    *
+    * @return string|null
+    */
+    public function getPeriodType()
+    {
+        return $this->container['periodType'];
+    }
+
+    /**
+    * Sets periodType
+    *
+    * @param string|null $periodType |参数名称：自动续费的周期类型| |参数的约束及描述：该参数非必填，自动续费的周期类型，支持枚举| |MONTH：包月，YEAR：包年。此参数不携带或携带值为null时，按照如下规则处理。购买时，未设置自动续费功能，默认与设置资源的最后一个订单的订购周期类型一致。|
+    *
+    * @return $this
+    */
+    public function setPeriodType($periodType)
+    {
+        $this->container['periodType'] = $periodType;
         return $this;
     }
 

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SwitchTokenResponseUser implements ModelInterface, ArrayAccess
+class SwitchTokenResponseToken implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,42 @@ class SwitchTokenResponseUser implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SwitchTokenResponse_user';
+    protected static $openAPIModelName = 'SwitchTokenResponse_token';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domain  domain
-    * name  用户名称
-    * id  用户id
+    * app  app
+    * expiresAt  过期时间
+    * roles  角色列表
+    * issuedAt  签发时间
+    * user  user
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'domain' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseUserDomain',
-            'name' => 'string',
-            'id' => 'string'
+            'app' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenApp',
+            'expiresAt' => 'string',
+            'roles' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenRoles[]',
+            'issuedAt' => 'string',
+            'user' => '\HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenUser'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domain  domain
-    * name  用户名称
-    * id  用户id
+    * app  app
+    * expiresAt  过期时间
+    * roles  角色列表
+    * issuedAt  签发时间
+    * user  user
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'domain' => null,
-        'name' => null,
-        'id' => null
+        'app' => null,
+        'expiresAt' => null,
+        'roles' => null,
+        'issuedAt' => null,
+        'user' => null
     ];
 
     /**
@@ -69,44 +77,56 @@ class SwitchTokenResponseUser implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domain  domain
-    * name  用户名称
-    * id  用户id
+    * app  app
+    * expiresAt  过期时间
+    * roles  角色列表
+    * issuedAt  签发时间
+    * user  user
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'domain' => 'domain',
-            'name' => 'name',
-            'id' => 'id'
+            'app' => 'app',
+            'expiresAt' => 'expires_at',
+            'roles' => 'roles',
+            'issuedAt' => 'issued_at',
+            'user' => 'user'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domain  domain
-    * name  用户名称
-    * id  用户id
+    * app  app
+    * expiresAt  过期时间
+    * roles  角色列表
+    * issuedAt  签发时间
+    * user  user
     *
     * @var string[]
     */
     protected static $setters = [
-            'domain' => 'setDomain',
-            'name' => 'setName',
-            'id' => 'setId'
+            'app' => 'setApp',
+            'expiresAt' => 'setExpiresAt',
+            'roles' => 'setRoles',
+            'issuedAt' => 'setIssuedAt',
+            'user' => 'setUser'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domain  domain
-    * name  用户名称
-    * id  用户id
+    * app  app
+    * expiresAt  过期时间
+    * roles  角色列表
+    * issuedAt  签发时间
+    * user  user
     *
     * @var string[]
     */
     protected static $getters = [
-            'domain' => 'getDomain',
-            'name' => 'getName',
-            'id' => 'getId'
+            'app' => 'getApp',
+            'expiresAt' => 'getExpiresAt',
+            'roles' => 'getRoles',
+            'issuedAt' => 'getIssuedAt',
+            'user' => 'getUser'
     ];
 
     /**
@@ -167,9 +187,11 @@ class SwitchTokenResponseUser implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['expiresAt'] = isset($data['expiresAt']) ? $data['expiresAt'] : null;
+        $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['issuedAt'] = isset($data['issuedAt']) ? $data['issuedAt'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -195,74 +217,122 @@ class SwitchTokenResponseUser implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets domain
-    *  domain
+    * Gets app
+    *  app
     *
-    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseUserDomain|null
+    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenApp|null
     */
-    public function getDomain()
+    public function getApp()
     {
-        return $this->container['domain'];
+        return $this->container['app'];
     }
 
     /**
-    * Sets domain
+    * Sets app
     *
-    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseUserDomain|null $domain domain
+    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenApp|null $app app
     *
     * @return $this
     */
-    public function setDomain($domain)
+    public function setApp($app)
     {
-        $this->container['domain'] = $domain;
+        $this->container['app'] = $app;
         return $this;
     }
 
     /**
-    * Gets name
-    *  用户名称
+    * Gets expiresAt
+    *  过期时间
     *
     * @return string|null
     */
-    public function getName()
+    public function getExpiresAt()
     {
-        return $this->container['name'];
+        return $this->container['expiresAt'];
     }
 
     /**
-    * Sets name
+    * Sets expiresAt
     *
-    * @param string|null $name 用户名称
+    * @param string|null $expiresAt 过期时间
     *
     * @return $this
     */
-    public function setName($name)
+    public function setExpiresAt($expiresAt)
     {
-        $this->container['name'] = $name;
+        $this->container['expiresAt'] = $expiresAt;
         return $this;
     }
 
     /**
-    * Gets id
-    *  用户id
+    * Gets roles
+    *  角色列表
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenRoles[]|null
     */
-    public function getId()
+    public function getRoles()
     {
-        return $this->container['id'];
+        return $this->container['roles'];
     }
 
     /**
-    * Sets id
+    * Sets roles
     *
-    * @param string|null $id 用户id
+    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenRoles[]|null $roles 角色列表
     *
     * @return $this
     */
-    public function setId($id)
+    public function setRoles($roles)
     {
-        $this->container['id'] = $id;
+        $this->container['roles'] = $roles;
+        return $this;
+    }
+
+    /**
+    * Gets issuedAt
+    *  签发时间
+    *
+    * @return string|null
+    */
+    public function getIssuedAt()
+    {
+        return $this->container['issuedAt'];
+    }
+
+    /**
+    * Sets issuedAt
+    *
+    * @param string|null $issuedAt 签发时间
+    *
+    * @return $this
+    */
+    public function setIssuedAt($issuedAt)
+    {
+        $this->container['issuedAt'] = $issuedAt;
+        return $this;
+    }
+
+    /**
+    * Gets user
+    *  user
+    *
+    * @return \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenUser|null
+    */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+    * Sets user
+    *
+    * @param \HuaweiCloud\SDK\Cpcs\V1\Model\SwitchTokenResponseTokenUser|null $user user
+    *
+    * @return $this
+    */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
         return $this;
     }
 
