@@ -25,7 +25,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
     * cronjobName  job名称
     * namespaceName  命名空间名称
     * clusterName  所属集群名称
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
     * cronjobName  job名称
     * namespaceName  命名空间名称
     * clusterName  所属集群名称
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
     * cronjobName  job名称
     * namespaceName  命名空间名称
     * clusterName  所属集群名称
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
     * cronjobName  job名称
     * namespaceName  命名空间名称
     * clusterName  所属集群名称
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
     * cronjobName  job名称
     * namespaceName  命名空间名称
     * clusterName  所属集群名称
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -400,7 +400,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int
     */
@@ -412,7 +412,7 @@ class ListK8sCronJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * @param int $limit **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */

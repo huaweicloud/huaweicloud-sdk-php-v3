@@ -20,7 +20,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
@@ -60,7 +60,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
@@ -121,7 +121,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
@@ -161,7 +161,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
@@ -201,7 +201,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareType  **参数解释**： 病毒类型 **取值范围**： Trojan（木马）、Virus（病毒）、Worm（蠕虫）等
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * severity  **参数解释**: 威胁等级 **取值范围**: 包含如下:   - Low：低危   - Medium：中危   - High：高危   - Critical：致命
@@ -378,7 +378,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultId
-    *  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    *  病毒查杀结果ID
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class AntiVirusResultResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resultId
     *
-    * @param string|null $resultId **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * @param string|null $resultId 病毒查杀结果ID
     *
     * @return $this
     */

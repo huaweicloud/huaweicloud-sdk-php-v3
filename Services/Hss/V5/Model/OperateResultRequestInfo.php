@@ -21,7 +21,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
@@ -43,7 +43,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
@@ -86,7 +86,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
@@ -108,7 +108,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
@@ -130,7 +130,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * eventType  **参数解释**: 病毒查杀结果对应的事件类型标识 **取值范围**: 0-10（具体含义：0=文件病毒事件、1=内存病毒事件...，详见产品错误码/枚举文档）
     * occurTime  **参数解释**： 发生时间，毫秒 **取值范围**： 最小值0，最大值9223372036854775807，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
@@ -309,7 +309,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultId
-    *  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    *  病毒查杀结果ID
     *
     * @return string
     */
@@ -321,7 +321,7 @@ class OperateResultRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resultId
     *
-    * @param string $resultId **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * @param string $resultId 病毒查杀结果ID
     *
     * @return $this
     */

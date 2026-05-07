@@ -20,14 +20,14 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  **参数解释**： 文件属性 **取值范围**： 字符长度0-64位
     * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
-    * fileCtime  **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    * fileCtime  文件创建时间
     * fileMtime  **参数解释**： 文件更新时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * updateTime  更新时间，毫秒
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
@@ -50,14 +50,14 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  **参数解释**： 文件属性 **取值范围**： 字符长度0-64位
     * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
-    * fileCtime  **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    * fileCtime  文件创建时间
     * fileMtime  **参数解释**： 文件更新时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * updateTime  更新时间，毫秒
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
@@ -101,14 +101,14 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  **参数解释**： 文件属性 **取值范围**： 字符长度0-64位
     * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
-    * fileCtime  **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    * fileCtime  文件创建时间
     * fileMtime  **参数解释**： 文件更新时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * updateTime  更新时间，毫秒
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
@@ -131,14 +131,14 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  **参数解释**： 文件属性 **取值范围**： 字符长度0-64位
     * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
-    * fileCtime  **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    * fileCtime  文件创建时间
     * fileMtime  **参数解释**： 文件更新时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * updateTime  更新时间，毫秒
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
@@ -161,14 +161,14 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resultId  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * resultId  病毒查杀结果ID
     * malwareName  **参数解释**： 病毒名称 **取值范围**： 字符长度1-128位
     * filePath  **参数解释**： 文件路径 **取值范围**： 字符长度1-256位
     * fileHash  **参数解释**： 文件哈希 **取值范围**： 字符长度1-256位
     * fileSize  **参数解释**: 文件大小 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     * fileOwner  **参数解释**： 文件属性 **取值范围**： 字符长度0-64位
     * fileAttr  **参数解释**： 文件的系统属性（如读写权限、隐藏属性、执行权限等） **取值范围**： 字符长度1-256位
-    * fileCtime  **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    * fileCtime  文件创建时间
     * fileMtime  **参数解释**： 文件更新时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
     * updateTime  更新时间，毫秒
     * agentId  **参数解释**: 主机上安装的杀毒Agent的唯一标识ID，用于关联主机与杀毒服务 **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
@@ -329,7 +329,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultId
-    *  **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    *  病毒查杀结果ID
     *
     * @return string|null
     */
@@ -341,7 +341,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resultId
     *
-    * @param string|null $resultId **参数解释**： 病毒查杀结果ID **取值范围**： 字符长度1-64位
+    * @param string|null $resultId 病毒查杀结果ID
     *
     * @return $this
     */
@@ -497,7 +497,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileCtime
-    *  **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    *  文件创建时间
     *
     * @return int|null
     */
@@ -509,7 +509,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileCtime
     *
-    * @param int|null $fileCtime **参数解释**： 文件创建时间 **取值范围**： 非负长整数，时间格式：毫秒级时间戳（UTC时区，从1970-01-01 00:00:00开始计算），单位：ms
+    * @param int|null $fileCtime 文件创建时间
     *
     * @return $this
     */

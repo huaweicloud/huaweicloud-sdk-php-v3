@@ -36,6 +36,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -57,6 +58,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'assetValue' => 'string',
             'groupName' => 'string',
+            'nodeType' => 'string',
             'body' => '\HuaweiCloud\SDK\Hss\V5\Model\ExportVulRequestBody'
     ];
 
@@ -78,6 +80,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -99,6 +102,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'assetValue' => null,
         'groupName' => null,
+        'nodeType' => null,
         'body' => null
     ];
 
@@ -141,6 +145,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -162,6 +167,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'assetValue' => 'asset_value',
             'groupName' => 'group_name',
+            'nodeType' => 'node_type',
             'body' => 'body'
     ];
 
@@ -183,6 +189,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -204,6 +211,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'assetValue' => 'setAssetValue',
             'groupName' => 'setGroupName',
+            'nodeType' => 'setNodeType',
             'body' => 'setBody'
     ];
 
@@ -225,6 +233,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     * status  漏洞状态，包含如下：   - vul_status_unfix：未处理   - vul_status_ignored：已忽略   - vul_status_verified：验证中   - vul_status_fixing：修复中   - vul_status_fixed：修复成功   - vul_status_reboot：修复成功待重启   - vul_status_failed：修复失败   - vul_status_fix_after_reboot：请重启主机再次修复
     * assetValue  资产重要性 important common test
     * groupName  服务器组名称
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     * body  body
     *
     * @var string[]
@@ -246,6 +255,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'assetValue' => 'getAssetValue',
             'groupName' => 'getGroupName',
+            'nodeType' => 'getNodeType',
             'body' => 'getBody'
     ];
 
@@ -323,6 +333,7 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -438,6 +449,15 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nodeType']) && !preg_match("/^cce|not_cce$/", $this->container['nodeType'])) {
+                $invalidProperties[] = "invalid value for 'nodeType', must be conform to the pattern /^cce|not_cce$/.";
             }
         return $invalidProperties;
     }
@@ -834,6 +854,30 @@ class ExportVulsRequest implements ModelInterface, ArrayAccess
     public function setGroupName($groupName)
     {
         $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
+    * Gets nodeType
+    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string|null $nodeType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
         return $this;
     }
 

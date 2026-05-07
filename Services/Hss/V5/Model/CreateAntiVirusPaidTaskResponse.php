@@ -21,20 +21,34 @@ class CreateAntiVirusPaidTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    * result  **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    * failReasons  **参数解释** 主机结果列表 **取值范围** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'taskId' => 'string',
+            'policyId' => 'string',
+            'result' => 'bool',
+            'failReasons' => '\HuaweiCloud\SDK\Hss\V5\Model\FailReasons[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    * result  **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    * failReasons  **参数解释** 主机结果列表 **取值范围** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'taskId' => null,
+        'policyId' => null,
+        'result' => null,
+        'failReasons' => null
     ];
 
     /**
@@ -60,29 +74,50 @@ class CreateAntiVirusPaidTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    * result  **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    * failReasons  **参数解释** 主机结果列表 **取值范围** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'taskId' => 'task_id',
+            'policyId' => 'policy_id',
+            'result' => 'result',
+            'failReasons' => 'fail_reasons'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    * result  **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    * failReasons  **参数解释** 主机结果列表 **取值范围** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
+            'taskId' => 'setTaskId',
+            'policyId' => 'setPolicyId',
+            'result' => 'setResult',
+            'failReasons' => 'setFailReasons'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * taskId  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    * policyId  **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    * result  **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    * failReasons  **参数解释** 主机结果列表 **取值范围** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
+            'taskId' => 'getTaskId',
+            'policyId' => 'getPolicyId',
+            'result' => 'getResult',
+            'failReasons' => 'getFailReasons'
     ];
 
     /**
@@ -143,6 +178,10 @@ class CreateAntiVirusPaidTaskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['failReasons'] = isset($data['failReasons']) ? $data['failReasons'] : null;
     }
 
     /**
@@ -153,6 +192,12 @@ class CreateAntiVirusPaidTaskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['policyId']) && (mb_strlen($this->container['policyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'policyId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -165,6 +210,102 @@ class CreateAntiVirusPaidTaskResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets taskId
+    *  **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    *
+    * @return string|null
+    */
+    public function getTaskId()
+    {
+        return $this->container['taskId'];
+    }
+
+    /**
+    * Sets taskId
+    *
+    * @param string|null $taskId **参数解释**： 任务ID **取值范围**: 字符长度1-64位
+    *
+    * @return $this
+    */
+    public function setTaskId($taskId)
+    {
+        $this->container['taskId'] = $taskId;
+        return $this;
+    }
+
+    /**
+    * Gets policyId
+    *  **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    *
+    * @return string|null
+    */
+    public function getPolicyId()
+    {
+        return $this->container['policyId'];
+    }
+
+    /**
+    * Sets policyId
+    *
+    * @param string|null $policyId **参数解释**: 策略ID **取值范围**: 字符长度1-64位
+    *
+    * @return $this
+    */
+    public function setPolicyId($policyId)
+    {
+        $this->container['policyId'] = $policyId;
+        return $this;
+    }
+
+    /**
+    * Gets result
+    *  **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    *
+    * @return bool|null
+    */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+    * Sets result
+    *
+    * @param bool|null $result **参数解释** 是否全部成功 **取值范围** true: 是 false: 否
+    *
+    * @return $this
+    */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
+        return $this;
+    }
+
+    /**
+    * Gets failReasons
+    *  **参数解释** 主机结果列表 **取值范围** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\FailReasons[]|null
+    */
+    public function getFailReasons()
+    {
+        return $this->container['failReasons'];
+    }
+
+    /**
+    * Sets failReasons
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\FailReasons[]|null $failReasons **参数解释** 主机结果列表 **取值范围** 不涉及
+    *
+    * @return $this
+    */
+    public function setFailReasons($failReasons)
+    {
+        $this->container['failReasons'] = $failReasons;
+        return $this;
     }
 
     /**

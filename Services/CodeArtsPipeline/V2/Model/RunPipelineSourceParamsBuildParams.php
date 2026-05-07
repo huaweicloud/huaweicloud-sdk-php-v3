@@ -150,7 +150,7 @@ class RunPipelineSourceParamsBuildParams implements ModelInterface, ArrayAccess
             'sourceCodehubUrl' => 'source_codehub_url',
             'sourceCodehubHttpUrl' => 'source_codehub_http_url',
             'virtualMergeBranch' => 'virtual_merge_branch',
-            'virtualMergeCommitId' => 'virtual_merge_commitId'
+            'virtualMergeCommitId' => 'virtual_merge_commit_id'
     ];
 
     /**

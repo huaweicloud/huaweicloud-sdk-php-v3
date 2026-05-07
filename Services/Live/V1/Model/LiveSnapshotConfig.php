@@ -25,6 +25,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * authKey  回调鉴权密钥值  长度范围：[32-128]  若需要使用回调鉴权功能，请配置鉴权密钥，否则，留空即可。
     * timeInterval  截图频率  取值范围：[5-3600]  单位：秒
     * objectWriteMode  在OBS桶存储截图的方式：  - 0：实时截图，以时间戳命名截图文件，保存所有截图文件到OBS桶。例：snapshot/{domain}/{app_name}/{stream_name}/{UnixTimestamp}.jpg  - 1：覆盖截图，只保存最新的截图文件，新的截图会覆盖原来的截图文件。例：snapshot/{domain}/{app_name}/{stream_name}.jpg
+    * snapshotMode  **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
@@ -40,6 +41,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'authKey' => 'string',
             'timeInterval' => 'int',
             'objectWriteMode' => 'int',
+            'snapshotMode' => 'string',
             'obsLocation' => '\HuaweiCloud\SDK\Live\V1\Model\ObsFileAddr',
             'callBackEnable' => 'string',
             'callBackUrl' => 'string',
@@ -55,6 +57,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * authKey  回调鉴权密钥值  长度范围：[32-128]  若需要使用回调鉴权功能，请配置鉴权密钥，否则，留空即可。
     * timeInterval  截图频率  取值范围：[5-3600]  单位：秒
     * objectWriteMode  在OBS桶存储截图的方式：  - 0：实时截图，以时间戳命名截图文件，保存所有截图文件到OBS桶。例：snapshot/{domain}/{app_name}/{stream_name}/{UnixTimestamp}.jpg  - 1：覆盖截图，只保存最新的截图文件，新的截图会覆盖原来的截图文件。例：snapshot/{domain}/{app_name}/{stream_name}.jpg
+    * snapshotMode  **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
@@ -70,6 +73,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         'authKey' => null,
         'timeInterval' => null,
         'objectWriteMode' => null,
+        'snapshotMode' => null,
         'obsLocation' => null,
         'callBackEnable' => null,
         'callBackUrl' => null,
@@ -106,6 +110,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * authKey  回调鉴权密钥值  长度范围：[32-128]  若需要使用回调鉴权功能，请配置鉴权密钥，否则，留空即可。
     * timeInterval  截图频率  取值范围：[5-3600]  单位：秒
     * objectWriteMode  在OBS桶存储截图的方式：  - 0：实时截图，以时间戳命名截图文件，保存所有截图文件到OBS桶。例：snapshot/{domain}/{app_name}/{stream_name}/{UnixTimestamp}.jpg  - 1：覆盖截图，只保存最新的截图文件，新的截图会覆盖原来的截图文件。例：snapshot/{domain}/{app_name}/{stream_name}.jpg
+    * snapshotMode  **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
@@ -121,6 +126,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'authKey' => 'auth_key',
             'timeInterval' => 'time_interval',
             'objectWriteMode' => 'object_write_mode',
+            'snapshotMode' => 'snapshot_mode',
             'obsLocation' => 'obs_location',
             'callBackEnable' => 'call_back_enable',
             'callBackUrl' => 'call_back_url',
@@ -136,6 +142,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * authKey  回调鉴权密钥值  长度范围：[32-128]  若需要使用回调鉴权功能，请配置鉴权密钥，否则，留空即可。
     * timeInterval  截图频率  取值范围：[5-3600]  单位：秒
     * objectWriteMode  在OBS桶存储截图的方式：  - 0：实时截图，以时间戳命名截图文件，保存所有截图文件到OBS桶。例：snapshot/{domain}/{app_name}/{stream_name}/{UnixTimestamp}.jpg  - 1：覆盖截图，只保存最新的截图文件，新的截图会覆盖原来的截图文件。例：snapshot/{domain}/{app_name}/{stream_name}.jpg
+    * snapshotMode  **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
@@ -151,6 +158,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'authKey' => 'setAuthKey',
             'timeInterval' => 'setTimeInterval',
             'objectWriteMode' => 'setObjectWriteMode',
+            'snapshotMode' => 'setSnapshotMode',
             'obsLocation' => 'setObsLocation',
             'callBackEnable' => 'setCallBackEnable',
             'callBackUrl' => 'setCallBackUrl',
@@ -166,6 +174,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     * authKey  回调鉴权密钥值  长度范围：[32-128]  若需要使用回调鉴权功能，请配置鉴权密钥，否则，留空即可。
     * timeInterval  截图频率  取值范围：[5-3600]  单位：秒
     * objectWriteMode  在OBS桶存储截图的方式：  - 0：实时截图，以时间戳命名截图文件，保存所有截图文件到OBS桶。例：snapshot/{domain}/{app_name}/{stream_name}/{UnixTimestamp}.jpg  - 1：覆盖截图，只保存最新的截图文件，新的截图会覆盖原来的截图文件。例：snapshot/{domain}/{app_name}/{stream_name}.jpg
+    * snapshotMode  **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
     * obsLocation  obsLocation
     * callBackEnable  是否启用回调通知 - on：启用。 - off：不启用。
     * callBackUrl  通知服务器地址，必须是合法的URL且携带协议，协议支持http和https。截图完成后直播服务会向此地址推送截图状态信息。
@@ -181,6 +190,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
             'authKey' => 'getAuthKey',
             'timeInterval' => 'getTimeInterval',
             'objectWriteMode' => 'getObjectWriteMode',
+            'snapshotMode' => 'getSnapshotMode',
             'obsLocation' => 'getObsLocation',
             'callBackEnable' => 'getCallBackEnable',
             'callBackUrl' => 'getCallBackUrl',
@@ -229,11 +239,28 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SNAPSHOT_MODE_KEYFRAME = 'keyframe';
+    const SNAPSHOT_MODE_NOKEYFRAME = 'nokeyframe';
+    const SNAPSHOT_MODE_RANDOM = 'random';
     const CALL_BACK_ENABLE_ON = 'on';
     const CALL_BACK_ENABLE_OFF = 'off';
     const IMAGE_ACCESS_PROTOCOL_HTTP = 'http';
     const IMAGE_ACCESS_PROTOCOL_HTTPS = 'https';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSnapshotModeAllowableValues()
+    {
+        return [
+            self::SNAPSHOT_MODE_KEYFRAME,
+            self::SNAPSHOT_MODE_NOKEYFRAME,
+            self::SNAPSHOT_MODE_RANDOM,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -282,6 +309,7 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         $this->container['authKey'] = isset($data['authKey']) ? $data['authKey'] : null;
         $this->container['timeInterval'] = isset($data['timeInterval']) ? $data['timeInterval'] : null;
         $this->container['objectWriteMode'] = isset($data['objectWriteMode']) ? $data['objectWriteMode'] : null;
+        $this->container['snapshotMode'] = isset($data['snapshotMode']) ? $data['snapshotMode'] : null;
         $this->container['obsLocation'] = isset($data['obsLocation']) ? $data['obsLocation'] : null;
         $this->container['callBackEnable'] = isset($data['callBackEnable']) ? $data['callBackEnable'] : null;
         $this->container['callBackUrl'] = isset($data['callBackUrl']) ? $data['callBackUrl'] : null;
@@ -328,6 +356,14 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
         if ($this->container['objectWriteMode'] === null) {
             $invalidProperties[] = "'objectWriteMode' can't be null";
         }
+            $allowedValues = $this->getSnapshotModeAllowableValues();
+                if (!is_null($this->container['snapshotMode']) && !in_array($this->container['snapshotMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'snapshotMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['obsLocation'] === null) {
             $invalidProperties[] = "'obsLocation' can't be null";
         }
@@ -484,6 +520,30 @@ class LiveSnapshotConfig implements ModelInterface, ArrayAccess
     public function setObjectWriteMode($objectWriteMode)
     {
         $this->container['objectWriteMode'] = $objectWriteMode;
+        return $this;
+    }
+
+    /**
+    * Gets snapshotMode
+    *  **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
+    *
+    * @return string|null
+    */
+    public function getSnapshotMode()
+    {
+        return $this->container['snapshotMode'];
+    }
+
+    /**
+    * Sets snapshotMode
+    *
+    * @param string|null $snapshotMode **参数解释**： 截图模式 **约束限制**： 不涉及 **取值范围**：   - keyframe：I帧截图只选取、保存符合要求的I帧。   - nokeyframe：非I帧截图只选取、保存符合要求的非I帧。   - random：随机截图交替选取、保存符合要求的I帧及非I帧。 **默认取值**： keyframe
+    *
+    * @return $this
+    */
+    public function setSnapshotMode($snapshotMode)
+    {
+        $this->container['snapshotMode'] = $snapshotMode;
         return $this;
     }
 

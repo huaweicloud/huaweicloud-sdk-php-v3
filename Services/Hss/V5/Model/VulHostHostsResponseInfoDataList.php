@@ -37,6 +37,7 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机配额 **取值范围**: - unhandled：待处理 - handled：已处理
     * vulNumWithRepairPriorityList  **参数解释**: 各个漏洞修复优先级下的漏洞数量
     * vulIdsInfo  vulIdsInfo
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
             'version' => 'string',
             'handleStatus' => 'string',
             'vulNumWithRepairPriorityList' => '\HuaweiCloud\SDK\Hss\V5\Model\VulHostHostsResponseInfoVulNumWithRepairPriorityList[]',
-            'vulIdsInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\VulHostHostsResponseInfoVulIdsInfo'
+            'vulIdsInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\VulHostHostsResponseInfoVulIdsInfo',
+            'nodeType' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机配额 **取值范围**: - unhandled：待处理 - handled：已处理
     * vulNumWithRepairPriorityList  **参数解释**: 各个漏洞修复优先级下的漏洞数量
     * vulIdsInfo  vulIdsInfo
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
         'version' => null,
         'handleStatus' => null,
         'vulNumWithRepairPriorityList' => null,
-        'vulIdsInfo' => null
+        'vulIdsInfo' => null,
+        'nodeType' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机配额 **取值范围**: - unhandled：待处理 - handled：已处理
     * vulNumWithRepairPriorityList  **参数解释**: 各个漏洞修复优先级下的漏洞数量
     * vulIdsInfo  vulIdsInfo
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
             'version' => 'version',
             'handleStatus' => 'handle_status',
             'vulNumWithRepairPriorityList' => 'vul_num_with_repair_priority_list',
-            'vulIdsInfo' => 'vul_ids_info'
+            'vulIdsInfo' => 'vul_ids_info',
+            'nodeType' => 'node_type'
     ];
 
     /**
@@ -184,6 +190,7 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机配额 **取值范围**: - unhandled：待处理 - handled：已处理
     * vulNumWithRepairPriorityList  **参数解释**: 各个漏洞修复优先级下的漏洞数量
     * vulIdsInfo  vulIdsInfo
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
             'version' => 'setVersion',
             'handleStatus' => 'setHandleStatus',
             'vulNumWithRepairPriorityList' => 'setVulNumWithRepairPriorityList',
-            'vulIdsInfo' => 'setVulIdsInfo'
+            'vulIdsInfo' => 'setVulIdsInfo',
+            'nodeType' => 'setNodeType'
     ];
 
     /**
@@ -226,6 +234,7 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
     * handleStatus  **参数解释**: 主机配额 **取值范围**: - unhandled：待处理 - handled：已处理
     * vulNumWithRepairPriorityList  **参数解释**: 各个漏洞修复优先级下的漏洞数量
     * vulIdsInfo  vulIdsInfo
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
             'version' => 'getVersion',
             'handleStatus' => 'getHandleStatus',
             'vulNumWithRepairPriorityList' => 'getVulNumWithRepairPriorityList',
-            'vulIdsInfo' => 'getVulIdsInfo'
+            'vulIdsInfo' => 'getVulIdsInfo',
+            'nodeType' => 'getNodeType'
     ];
 
     /**
@@ -324,6 +334,7 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
         $this->container['handleStatus'] = isset($data['handleStatus']) ? $data['handleStatus'] : null;
         $this->container['vulNumWithRepairPriorityList'] = isset($data['vulNumWithRepairPriorityList']) ? $data['vulNumWithRepairPriorityList'] : null;
         $this->container['vulIdsInfo'] = isset($data['vulIdsInfo']) ? $data['vulIdsInfo'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
     }
 
     /**
@@ -405,6 +416,12 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -825,6 +842,30 @@ class VulHostHostsResponseInfoDataList implements ModelInterface, ArrayAccess
     public function setVulIdsInfo($vulIdsInfo)
     {
         $this->container['vulIdsInfo'] = $vulIdsInfo;
+        return $this;
+    }
+
+    /**
+    * Gets nodeType
+    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string|null $nodeType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
         return $this;
     }
 

@@ -46,7 +46,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * podName  **参数解释**： pod name **取值范围**： 字符长度1-64位
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
-    * clusterName  集群名称
+    * clusterName  **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
@@ -116,7 +116,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * podName  **参数解释**： pod name **取值范围**： 字符长度1-64位
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
-    * clusterName  集群名称
+    * clusterName  **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
@@ -207,7 +207,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * podName  **参数解释**： pod name **取值范围**： 字符长度1-64位
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
-    * clusterName  集群名称
+    * clusterName  **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
@@ -277,7 +277,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * podName  **参数解释**： pod name **取值范围**： 字符长度1-64位
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
-    * clusterName  集群名称
+    * clusterName  **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
@@ -347,7 +347,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     * podName  **参数解释**： pod name **取值范围**： 字符长度1-64位
     * namespace  **参数解释**： 名称空间 **取值范围**： 字符长度1-64位
     * clusterId  集群ID
-    * clusterName  集群名称
+    * clusterName  **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     * assetValue  **参数解释**： 资产重要性。 **取值范围**： - important ：重要资产。 - common ：一般资产。 - test ：测试资产。
     * containerStatus  容器状态
     * osVersion  **参数解释**： 系统版本号 **取值范围**： 字符长度0-64位
@@ -634,6 +634,12 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['namespace']) && !preg_match("/^.*$/", $this->container['namespace'])) {
                 $invalidProperties[] = "invalid value for 'namespace', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'clusterName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'clusterName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
@@ -1293,7 +1299,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1305,7 +1311,7 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释**: 集群名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
     *
     * @return $this
     */

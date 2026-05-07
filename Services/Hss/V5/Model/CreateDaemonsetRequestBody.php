@@ -24,6 +24,7 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * autoUpgrade  开启agent自动升级
     * runtimeInfo  容器运行时配置
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'clusterName' => 'string',
             'autoUpgrade' => 'bool',
             'runtimeInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\RuntimeRequestBody[]',
-            'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo'
+            'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo',
+            'resourceInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyResourceInfo'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * autoUpgrade  开启agent自动升级
     * runtimeInfo  容器运行时配置
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
         'clusterName' => null,
         'autoUpgrade' => null,
         'runtimeInfo' => null,
-        'scheduleInfo' => null
+        'scheduleInfo' => null,
+        'resourceInfo' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * autoUpgrade  开启agent自动升级
     * runtimeInfo  容器运行时配置
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'clusterName' => 'cluster_name',
             'autoUpgrade' => 'auto_upgrade',
             'runtimeInfo' => 'runtime_info',
-            'scheduleInfo' => 'schedule_info'
+            'scheduleInfo' => 'schedule_info',
+            'resourceInfo' => 'resource_info'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * autoUpgrade  开启agent自动升级
     * runtimeInfo  容器运行时配置
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'clusterName' => 'setClusterName',
             'autoUpgrade' => 'setAutoUpgrade',
             'runtimeInfo' => 'setRuntimeInfo',
-            'scheduleInfo' => 'setScheduleInfo'
+            'scheduleInfo' => 'setScheduleInfo',
+            'resourceInfo' => 'setResourceInfo'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * autoUpgrade  开启agent自动升级
     * runtimeInfo  容器运行时配置
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'clusterName' => 'getClusterName',
             'autoUpgrade' => 'getAutoUpgrade',
             'runtimeInfo' => 'getRuntimeInfo',
-            'scheduleInfo' => 'getScheduleInfo'
+            'scheduleInfo' => 'getScheduleInfo',
+            'resourceInfo' => 'getResourceInfo'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
         $this->container['autoUpgrade'] = isset($data['autoUpgrade']) ? $data['autoUpgrade'] : null;
         $this->container['runtimeInfo'] = isset($data['runtimeInfo']) ? $data['runtimeInfo'] : null;
         $this->container['scheduleInfo'] = isset($data['scheduleInfo']) ? $data['scheduleInfo'] : null;
+        $this->container['resourceInfo'] = isset($data['resourceInfo']) ? $data['resourceInfo'] : null;
     }
 
     /**
@@ -307,6 +318,30 @@ class CreateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     public function setScheduleInfo($scheduleInfo)
     {
         $this->container['scheduleInfo'] = $scheduleInfo;
+        return $this;
+    }
+
+    /**
+    * Gets resourceInfo
+    *  resourceInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyResourceInfo|null
+    */
+    public function getResourceInfo()
+    {
+        return $this->container['resourceInfo'];
+    }
+
+    /**
+    * Sets resourceInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyResourceInfo|null $resourceInfo resourceInfo
+    *
+    * @return $this
+    */
+    public function setResourceInfo($resourceInfo)
+    {
+        $this->container['resourceInfo'] = $resourceInfo;
         return $this;
     }
 

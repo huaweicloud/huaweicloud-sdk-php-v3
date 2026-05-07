@@ -373,9 +373,6 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
         if ($this->container['recordSettings'] === null) {
             $invalidProperties[] = "'recordSettings' can't be null";
         }
-        if ($this->container['endpoints'] === null) {
-            $invalidProperties[] = "'endpoints' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -634,7 +631,7 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * Gets endpoints
     *  频道出流信息
     *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\EndpointItem[]
+    * @return \HuaweiCloud\SDK\Live\V1\Model\EndpointItem[]|null
     */
     public function getEndpoints()
     {
@@ -644,7 +641,7 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets endpoints
     *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\EndpointItem[] $endpoints 频道出流信息
+    * @param \HuaweiCloud\SDK\Live\V1\Model\EndpointItem[]|null $endpoints 频道出流信息
     *
     * @return $this
     */

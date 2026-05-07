@@ -23,7 +23,7 @@ class Resources implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
     * images  **参数解释**： 镜像 **取值范围**： 不涉及
-    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Resources implements ModelInterface, ArrayAccess
             'clusterId' => 'string',
             'clusterName' => 'string',
             'images' => 'string',
-            'labels' => 'string',
+            'labels' => 'string[]',
             'namespace' => 'string'
     ];
 
@@ -41,7 +41,7 @@ class Resources implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
     * images  **参数解释**： 镜像 **取值范围**： 不涉及
-    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
@@ -80,7 +80,7 @@ class Resources implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
     * images  **参数解释**： 镜像 **取值范围**： 不涉及
-    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
@@ -98,7 +98,7 @@ class Resources implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
     * images  **参数解释**： 镜像 **取值范围**： 不涉及
-    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
@@ -116,7 +116,7 @@ class Resources implements ModelInterface, ArrayAccess
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
     * images  **参数解释**： 镜像 **取值范围**： 不涉及
-    * labels  **参数解释**： 标签 **取值范围**： 不涉及
+    * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
     * @var string[]
@@ -220,12 +220,6 @@ class Resources implements ModelInterface, ArrayAccess
             if (!is_null($this->container['images']) && (mb_strlen($this->container['images']) < 1)) {
                 $invalidProperties[] = "invalid value for 'images', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['labels']) && (mb_strlen($this->container['labels']) > 256)) {
-                $invalidProperties[] = "invalid value for 'labels', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['labels']) && (mb_strlen($this->container['labels']) < 1)) {
-                $invalidProperties[] = "invalid value for 'labels', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 256)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 256.";
             }
@@ -320,9 +314,9 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  **参数解释**： 标签 **取值范围**： 不涉及
+    *  **参数解释**： 标签列表 **取值范围**： 不涉及
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getLabels()
     {
@@ -332,7 +326,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param string|null $labels **参数解释**： 标签 **取值范围**： 不涉及
+    * @param string[]|null $labels **参数解释**： 标签列表 **取值范围**： 不涉及
     *
     * @return $this
     */

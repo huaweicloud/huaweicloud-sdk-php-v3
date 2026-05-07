@@ -72,6 +72,16 @@ class Host implements ModelInterface, ArrayAccess
     * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
+    * containerType  是否存在容器环境。   -0: 否   -1: 是
+    * ransomProtectionStatus  **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    * wtpProtectStatus  **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    * twoFactorAuth  **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    * dataCenterTag  **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    * serviceProviderName  **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    * nodeRuntimeInfo  节点运行时信息，incluster请求参数不为空时返回该字段
+    * mode  **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    * cpuLimit  **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    * memLimit  **参数解释** 内存最大值 **取值范围** 字符长度0-32位
     *
     * @var string[]
     */
@@ -127,7 +137,17 @@ class Host implements ModelInterface, ArrayAccess
             'vpcId' => 'string',
             'commonLoginAreaCodes' => 'int[]',
             'clusterName' => 'string',
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'containerType' => 'int',
+            'ransomProtectionStatus' => 'string',
+            'wtpProtectStatus' => 'string',
+            'twoFactorAuth' => 'bool',
+            'dataCenterTag' => 'string',
+            'serviceProviderName' => 'string',
+            'nodeRuntimeInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\RuntimeServiceInfo[]',
+            'mode' => 'string',
+            'cpuLimit' => 'string',
+            'memLimit' => 'string'
     ];
 
     /**
@@ -184,6 +204,16 @@ class Host implements ModelInterface, ArrayAccess
     * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
+    * containerType  是否存在容器环境。   -0: 否   -1: 是
+    * ransomProtectionStatus  **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    * wtpProtectStatus  **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    * twoFactorAuth  **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    * dataCenterTag  **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    * serviceProviderName  **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    * nodeRuntimeInfo  节点运行时信息，incluster请求参数不为空时返回该字段
+    * mode  **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    * cpuLimit  **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    * memLimit  **参数解释** 内存最大值 **取值范围** 字符长度0-32位
     *
     * @var string[]
     */
@@ -239,7 +269,17 @@ class Host implements ModelInterface, ArrayAccess
         'vpcId' => null,
         'commonLoginAreaCodes' => 'int32',
         'clusterName' => null,
-        'clusterId' => null
+        'clusterId' => null,
+        'containerType' => null,
+        'ransomProtectionStatus' => null,
+        'wtpProtectStatus' => null,
+        'twoFactorAuth' => null,
+        'dataCenterTag' => null,
+        'serviceProviderName' => null,
+        'nodeRuntimeInfo' => null,
+        'mode' => null,
+        'cpuLimit' => null,
+        'memLimit' => null
     ];
 
     /**
@@ -317,6 +357,16 @@ class Host implements ModelInterface, ArrayAccess
     * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
+    * containerType  是否存在容器环境。   -0: 否   -1: 是
+    * ransomProtectionStatus  **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    * wtpProtectStatus  **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    * twoFactorAuth  **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    * dataCenterTag  **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    * serviceProviderName  **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    * nodeRuntimeInfo  节点运行时信息，incluster请求参数不为空时返回该字段
+    * mode  **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    * cpuLimit  **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    * memLimit  **参数解释** 内存最大值 **取值范围** 字符长度0-32位
     *
     * @var string[]
     */
@@ -372,7 +422,17 @@ class Host implements ModelInterface, ArrayAccess
             'vpcId' => 'vpc_id',
             'commonLoginAreaCodes' => 'common_login_area_codes',
             'clusterName' => 'cluster_name',
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'containerType' => 'container_type',
+            'ransomProtectionStatus' => 'ransom_protection_status',
+            'wtpProtectStatus' => 'wtp_protect_status',
+            'twoFactorAuth' => 'two_factor_auth',
+            'dataCenterTag' => 'data_center_tag',
+            'serviceProviderName' => 'service_provider_name',
+            'nodeRuntimeInfo' => 'node_runtime_info',
+            'mode' => 'mode',
+            'cpuLimit' => 'cpu_limit',
+            'memLimit' => 'mem_limit'
     ];
 
     /**
@@ -429,6 +489,16 @@ class Host implements ModelInterface, ArrayAccess
     * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
+    * containerType  是否存在容器环境。   -0: 否   -1: 是
+    * ransomProtectionStatus  **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    * wtpProtectStatus  **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    * twoFactorAuth  **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    * dataCenterTag  **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    * serviceProviderName  **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    * nodeRuntimeInfo  节点运行时信息，incluster请求参数不为空时返回该字段
+    * mode  **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    * cpuLimit  **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    * memLimit  **参数解释** 内存最大值 **取值范围** 字符长度0-32位
     *
     * @var string[]
     */
@@ -484,7 +554,17 @@ class Host implements ModelInterface, ArrayAccess
             'vpcId' => 'setVpcId',
             'commonLoginAreaCodes' => 'setCommonLoginAreaCodes',
             'clusterName' => 'setClusterName',
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'containerType' => 'setContainerType',
+            'ransomProtectionStatus' => 'setRansomProtectionStatus',
+            'wtpProtectStatus' => 'setWtpProtectStatus',
+            'twoFactorAuth' => 'setTwoFactorAuth',
+            'dataCenterTag' => 'setDataCenterTag',
+            'serviceProviderName' => 'setServiceProviderName',
+            'nodeRuntimeInfo' => 'setNodeRuntimeInfo',
+            'mode' => 'setMode',
+            'cpuLimit' => 'setCpuLimit',
+            'memLimit' => 'setMemLimit'
     ];
 
     /**
@@ -541,6 +621,16 @@ class Host implements ModelInterface, ArrayAccess
     * commonLoginAreaCodes  **参数解释**： 后台识别服务器常用登录地编号 **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 字符长度1-128位
     * clusterId  **参数解释**： 集群id **取值范围**： 字符长度1-128位
+    * containerType  是否存在容器环境。   -0: 否   -1: 是
+    * ransomProtectionStatus  **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    * wtpProtectStatus  **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    * twoFactorAuth  **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    * dataCenterTag  **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    * serviceProviderName  **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    * nodeRuntimeInfo  节点运行时信息，incluster请求参数不为空时返回该字段
+    * mode  **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    * cpuLimit  **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    * memLimit  **参数解释** 内存最大值 **取值范围** 字符长度0-32位
     *
     * @var string[]
     */
@@ -596,7 +686,17 @@ class Host implements ModelInterface, ArrayAccess
             'vpcId' => 'getVpcId',
             'commonLoginAreaCodes' => 'getCommonLoginAreaCodes',
             'clusterName' => 'getClusterName',
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'containerType' => 'getContainerType',
+            'ransomProtectionStatus' => 'getRansomProtectionStatus',
+            'wtpProtectStatus' => 'getWtpProtectStatus',
+            'twoFactorAuth' => 'getTwoFactorAuth',
+            'dataCenterTag' => 'getDataCenterTag',
+            'serviceProviderName' => 'getServiceProviderName',
+            'nodeRuntimeInfo' => 'getNodeRuntimeInfo',
+            'mode' => 'getMode',
+            'cpuLimit' => 'getCpuLimit',
+            'memLimit' => 'getMemLimit'
     ];
 
     /**
@@ -726,6 +826,16 @@ class Host implements ModelInterface, ArrayAccess
         $this->container['commonLoginAreaCodes'] = isset($data['commonLoginAreaCodes']) ? $data['commonLoginAreaCodes'] : null;
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['containerType'] = isset($data['containerType']) ? $data['containerType'] : null;
+        $this->container['ransomProtectionStatus'] = isset($data['ransomProtectionStatus']) ? $data['ransomProtectionStatus'] : null;
+        $this->container['wtpProtectStatus'] = isset($data['wtpProtectStatus']) ? $data['wtpProtectStatus'] : null;
+        $this->container['twoFactorAuth'] = isset($data['twoFactorAuth']) ? $data['twoFactorAuth'] : null;
+        $this->container['dataCenterTag'] = isset($data['dataCenterTag']) ? $data['dataCenterTag'] : null;
+        $this->container['serviceProviderName'] = isset($data['serviceProviderName']) ? $data['serviceProviderName'] : null;
+        $this->container['nodeRuntimeInfo'] = isset($data['nodeRuntimeInfo']) ? $data['nodeRuntimeInfo'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['cpuLimit'] = isset($data['cpuLimit']) ? $data['cpuLimit'] : null;
+        $this->container['memLimit'] = isset($data['memLimit']) ? $data['memLimit'] : null;
     }
 
     /**
@@ -1013,6 +1123,54 @@ class Host implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'clusterId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['containerType']) && ($this->container['containerType'] > 1)) {
+                $invalidProperties[] = "invalid value for 'containerType', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['containerType']) && ($this->container['containerType'] < 0)) {
+                $invalidProperties[] = "invalid value for 'containerType', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['ransomProtectionStatus']) && (mb_strlen($this->container['ransomProtectionStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'ransomProtectionStatus', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['ransomProtectionStatus']) && (mb_strlen($this->container['ransomProtectionStatus']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ransomProtectionStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['wtpProtectStatus']) && (mb_strlen($this->container['wtpProtectStatus']) > 32)) {
+                $invalidProperties[] = "invalid value for 'wtpProtectStatus', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['wtpProtectStatus']) && (mb_strlen($this->container['wtpProtectStatus']) < 0)) {
+                $invalidProperties[] = "invalid value for 'wtpProtectStatus', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['dataCenterTag']) && (mb_strlen($this->container['dataCenterTag']) > 128)) {
+                $invalidProperties[] = "invalid value for 'dataCenterTag', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['dataCenterTag']) && (mb_strlen($this->container['dataCenterTag']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dataCenterTag', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['serviceProviderName']) && (mb_strlen($this->container['serviceProviderName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'serviceProviderName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['serviceProviderName']) && (mb_strlen($this->container['serviceProviderName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'serviceProviderName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['mode']) && (mb_strlen($this->container['mode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'mode', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['cpuLimit']) && (mb_strlen($this->container['cpuLimit']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cpuLimit', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['cpuLimit']) && (mb_strlen($this->container['cpuLimit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'cpuLimit', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['memLimit']) && (mb_strlen($this->container['memLimit']) > 32)) {
+                $invalidProperties[] = "invalid value for 'memLimit', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['memLimit']) && (mb_strlen($this->container['memLimit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'memLimit', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -2273,6 +2431,246 @@ class Host implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets containerType
+    *  是否存在容器环境。   -0: 否   -1: 是
+    *
+    * @return int|null
+    */
+    public function getContainerType()
+    {
+        return $this->container['containerType'];
+    }
+
+    /**
+    * Sets containerType
+    *
+    * @param int|null $containerType 是否存在容器环境。   -0: 否   -1: 是
+    *
+    * @return $this
+    */
+    public function setContainerType($containerType)
+    {
+        $this->container['containerType'] = $containerType;
+        return $this;
+    }
+
+    /**
+    * Gets ransomProtectionStatus
+    *  **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    *
+    * @return string|null
+    */
+    public function getRansomProtectionStatus()
+    {
+        return $this->container['ransomProtectionStatus'];
+    }
+
+    /**
+    * Sets ransomProtectionStatus
+    *
+    * @param string|null $ransomProtectionStatus **参数解释**：  勒索病毒防护状态  **取值范围**：    - closed ：未开启。    - opened ：防护中。    - opening ：开启中。    - closing ：关闭中。    - protect_failed：防护失败。    - protect_degraded：防护降级。
+    *
+    * @return $this
+    */
+    public function setRansomProtectionStatus($ransomProtectionStatus)
+    {
+        $this->container['ransomProtectionStatus'] = $ransomProtectionStatus;
+        return $this;
+    }
+
+    /**
+    * Gets wtpProtectStatus
+    *  **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    *
+    * @return string|null
+    */
+    public function getWtpProtectStatus()
+    {
+        return $this->container['wtpProtectStatus'];
+    }
+
+    /**
+    * Sets wtpProtectStatus
+    *
+    * @param string|null $wtpProtectStatus **参数解释**： 网页防篡改防护状态 **取值范围**：   - closed：未开启   - opened：防护中   - opening：开启中   - closing：关闭中   - open_failed：防护失败   - partial_protection：部分防护   - protection_pause：防护暂停
+    *
+    * @return $this
+    */
+    public function setWtpProtectStatus($wtpProtectStatus)
+    {
+        $this->container['wtpProtectStatus'] = $wtpProtectStatus;
+        return $this;
+    }
+
+    /**
+    * Gets twoFactorAuth
+    *  **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    *
+    * @return bool|null
+    */
+    public function getTwoFactorAuth()
+    {
+        return $this->container['twoFactorAuth'];
+    }
+
+    /**
+    * Sets twoFactorAuth
+    *
+    * @param bool|null $twoFactorAuth **参数解释**： 双因子认证是否开启 **取值范围**：   - true：是。   - false：否。
+    *
+    * @return $this
+    */
+    public function setTwoFactorAuth($twoFactorAuth)
+    {
+        $this->container['twoFactorAuth'] = $twoFactorAuth;
+        return $this;
+    }
+
+    /**
+    * Gets dataCenterTag
+    *  **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    *
+    * @return string|null
+    */
+    public function getDataCenterTag()
+    {
+        return $this->container['dataCenterTag'];
+    }
+
+    /**
+    * Sets dataCenterTag
+    *
+    * @param string|null $dataCenterTag **参数解释** 数据中心标识 **取值范围**   字符长度0-128
+    *
+    * @return $this
+    */
+    public function setDataCenterTag($dataCenterTag)
+    {
+        $this->container['dataCenterTag'] = $dataCenterTag;
+        return $this;
+    }
+
+    /**
+    * Gets serviceProviderName
+    *  **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    *
+    * @return string|null
+    */
+    public function getServiceProviderName()
+    {
+        return $this->container['serviceProviderName'];
+    }
+
+    /**
+    * Sets serviceProviderName
+    *
+    * @param string|null $serviceProviderName **参数解释** 服务商名称 **取值范围**   字符长度0-128
+    *
+    * @return $this
+    */
+    public function setServiceProviderName($serviceProviderName)
+    {
+        $this->container['serviceProviderName'] = $serviceProviderName;
+        return $this;
+    }
+
+    /**
+    * Gets nodeRuntimeInfo
+    *  节点运行时信息，incluster请求参数不为空时返回该字段
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\RuntimeServiceInfo[]|null
+    */
+    public function getNodeRuntimeInfo()
+    {
+        return $this->container['nodeRuntimeInfo'];
+    }
+
+    /**
+    * Sets nodeRuntimeInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\RuntimeServiceInfo[]|null $nodeRuntimeInfo 节点运行时信息，incluster请求参数不为空时返回该字段
+    *
+    * @return $this
+    */
+    public function setNodeRuntimeInfo($nodeRuntimeInfo)
+    {
+        $this->container['nodeRuntimeInfo'] = $nodeRuntimeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode **参数解释** 资源限制类型：默认规则or自定义or自适应 **取值范围** 取值0-32
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets cpuLimit
+    *  **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    *
+    * @return string|null
+    */
+    public function getCpuLimit()
+    {
+        return $this->container['cpuLimit'];
+    }
+
+    /**
+    * Sets cpuLimit
+    *
+    * @param string|null $cpuLimit **参数解释** cpu最大值 **取值范围** 字符长度0-32位
+    *
+    * @return $this
+    */
+    public function setCpuLimit($cpuLimit)
+    {
+        $this->container['cpuLimit'] = $cpuLimit;
+        return $this;
+    }
+
+    /**
+    * Gets memLimit
+    *  **参数解释** 内存最大值 **取值范围** 字符长度0-32位
+    *
+    * @return string|null
+    */
+    public function getMemLimit()
+    {
+        return $this->container['memLimit'];
+    }
+
+    /**
+    * Sets memLimit
+    *
+    * @param string|null $memLimit **参数解释** 内存最大值 **取值范围** 字符长度0-32位
+    *
+    * @return $this
+    */
+    public function setMemLimit($memLimit)
+    {
+        $this->container['memLimit'] = $memLimit;
         return $this;
     }
 

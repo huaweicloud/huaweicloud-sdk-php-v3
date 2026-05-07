@@ -40,6 +40,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     * containerName  **参数解释**: 容器名称（容器场景生效） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * minScanTime  **参数解释**： 扫描任务开始时间的最小值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
     * maxScanTime  **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'isContainer' => 'bool',
             'containerName' => 'string',
             'minScanTime' => 'int',
-            'maxScanTime' => 'int'
+            'maxScanTime' => 'int',
+            'nodeType' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     * containerName  **参数解释**: 容器名称（容器场景生效） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * minScanTime  **参数解释**： 扫描任务开始时间的最小值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
     * maxScanTime  **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
         'isContainer' => null,
         'containerName' => null,
         'minScanTime' => 'int64',
-        'maxScanTime' => 'int64'
+        'maxScanTime' => 'int64',
+        'nodeType' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     * containerName  **参数解释**: 容器名称（容器场景生效） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * minScanTime  **参数解释**： 扫描任务开始时间的最小值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
     * maxScanTime  **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'isContainer' => 'is_container',
             'containerName' => 'container_name',
             'minScanTime' => 'min_scan_time',
-            'maxScanTime' => 'max_scan_time'
+            'maxScanTime' => 'max_scan_time',
+            'nodeType' => 'node_type'
     ];
 
     /**
@@ -205,6 +211,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     * containerName  **参数解释**: 容器名称（容器场景生效） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * minScanTime  **参数解释**： 扫描任务开始时间的最小值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
     * maxScanTime  **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'isContainer' => 'setIsContainer',
             'containerName' => 'setContainerName',
             'minScanTime' => 'setMinScanTime',
-            'maxScanTime' => 'setMaxScanTime'
+            'maxScanTime' => 'setMaxScanTime',
+            'nodeType' => 'setNodeType'
     ];
 
     /**
@@ -253,6 +261,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     * containerName  **参数解释**: 容器名称（容器场景生效） **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * minScanTime  **参数解释**： 扫描任务开始时间的最小值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
     * maxScanTime  **参数解释**： 扫描任务开始时间的最大值（容器场景生效） **约束限制**: 不涉及 **取值范围**： 最小值0，最大值2^63-1 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             'isContainer' => 'getIsContainer',
             'containerName' => 'getContainerName',
             'minScanTime' => 'getMinScanTime',
-            'maxScanTime' => 'getMaxScanTime'
+            'maxScanTime' => 'getMaxScanTime',
+            'nodeType' => 'getNodeType'
     ];
 
     /**
@@ -357,6 +367,7 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
         $this->container['containerName'] = isset($data['containerName']) ? $data['containerName'] : null;
         $this->container['minScanTime'] = isset($data['minScanTime']) ? $data['minScanTime'] : null;
         $this->container['maxScanTime'] = isset($data['maxScanTime']) ? $data['maxScanTime'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
     }
 
     /**
@@ -519,6 +530,15 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['maxScanTime']) && ($this->container['maxScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'maxScanTime', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nodeType']) && !preg_match("/^cce|not_cce$/", $this->container['nodeType'])) {
+                $invalidProperties[] = "invalid value for 'nodeType', must be conform to the pattern /^cce|not_cce$/.";
             }
         return $invalidProperties;
     }
@@ -1011,6 +1031,30 @@ class ListVulHostsRequest implements ModelInterface, ArrayAccess
     public function setMaxScanTime($maxScanTime)
     {
         $this->container['maxScanTime'] = $maxScanTime;
+        return $this;
+    }
+
+    /**
+    * Gets nodeType
+    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string|null $nodeType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
         return $this;
     }
 

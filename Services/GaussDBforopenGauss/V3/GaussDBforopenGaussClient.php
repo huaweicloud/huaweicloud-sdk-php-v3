@@ -8727,6 +8727,74 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
+     * 查询引擎的升级路径
+     *
+     * 查询引擎的升级路径
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUpgradePaths($request)
+    {
+        return $this->listUpgradePathsWithHttpInfo($request);
+    }
+
+    public function listUpgradePathsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/upgrade-paths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['sourceVersion'] !== null) {
+            $queryParams['source_version'] = $localVarParams['sourceVersion'];
+        }
+        if ($localVarParams['targetVersion'] !== null) {
+            $queryParams['target_version'] = $localVarParams['targetVersion'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListUpgradePathsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListUpgradePathsRequest');
+    }
+
+    /**
      * 查询等待事件列表
      *
      * 查询数据库实例节点的等待事件列表。

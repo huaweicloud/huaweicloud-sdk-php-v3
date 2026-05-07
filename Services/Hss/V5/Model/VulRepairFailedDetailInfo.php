@@ -22,7 +22,8 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * software  **参数解释**: 软件名称 **取值范围**: 字符长度1-512位
     * reason  **参数解释**: 漏洞修复失败原因详情 **取值范围**: 字符长度0-65535位
-    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescription  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     * reasonSolution  **参数解释**: 解决方式说明 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -30,6 +31,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'software' => 'string',
             'reason' => 'string',
+            'reasonDescription' => 'string',
             'reasonDescribtion' => 'string',
             'reasonSolution' => 'string'
     ];
@@ -38,7 +40,8 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * software  **参数解释**: 软件名称 **取值范围**: 字符长度1-512位
     * reason  **参数解释**: 漏洞修复失败原因详情 **取值范围**: 字符长度0-65535位
-    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescription  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     * reasonSolution  **参数解释**: 解决方式说明 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -46,6 +49,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'software' => null,
         'reason' => null,
+        'reasonDescription' => null,
         'reasonDescribtion' => null,
         'reasonSolution' => null
     ];
@@ -75,7 +79,8 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * software  **参数解释**: 软件名称 **取值范围**: 字符长度1-512位
     * reason  **参数解释**: 漏洞修复失败原因详情 **取值范围**: 字符长度0-65535位
-    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescription  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     * reasonSolution  **参数解释**: 解决方式说明 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -83,6 +88,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'software' => 'software',
             'reason' => 'reason',
+            'reasonDescription' => 'reason_description',
             'reasonDescribtion' => 'reason_describtion',
             'reasonSolution' => 'reason_solution'
     ];
@@ -91,7 +97,8 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * software  **参数解释**: 软件名称 **取值范围**: 字符长度1-512位
     * reason  **参数解释**: 漏洞修复失败原因详情 **取值范围**: 字符长度0-65535位
-    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescription  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     * reasonSolution  **参数解释**: 解决方式说明 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -99,6 +106,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'software' => 'setSoftware',
             'reason' => 'setReason',
+            'reasonDescription' => 'setReasonDescription',
             'reasonDescribtion' => 'setReasonDescribtion',
             'reasonSolution' => 'setReasonSolution'
     ];
@@ -107,7 +115,8 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * software  **参数解释**: 软件名称 **取值范围**: 字符长度1-512位
     * reason  **参数解释**: 漏洞修复失败原因详情 **取值范围**: 字符长度0-65535位
-    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescription  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * reasonDescribtion  **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     * reasonSolution  **参数解释**: 解决方式说明 **取值范围**: 字符长度0-65535位
     *
     * @var string[]
@@ -115,6 +124,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'software' => 'getSoftware',
             'reason' => 'getReason',
+            'reasonDescription' => 'getReasonDescription',
             'reasonDescribtion' => 'getReasonDescribtion',
             'reasonSolution' => 'getReasonSolution'
     ];
@@ -179,6 +189,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     {
         $this->container['software'] = isset($data['software']) ? $data['software'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['reasonDescription'] = isset($data['reasonDescription']) ? $data['reasonDescription'] : null;
         $this->container['reasonDescribtion'] = isset($data['reasonDescribtion']) ? $data['reasonDescribtion'] : null;
         $this->container['reasonSolution'] = isset($data['reasonSolution']) ? $data['reasonSolution'] : null;
     }
@@ -202,6 +213,12 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['reasonDescription']) && (mb_strlen($this->container['reasonDescription']) > 256)) {
+                $invalidProperties[] = "invalid value for 'reasonDescription', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['reasonDescription']) && (mb_strlen($this->container['reasonDescription']) < 0)) {
+                $invalidProperties[] = "invalid value for 'reasonDescription', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['reasonDescribtion']) && (mb_strlen($this->container['reasonDescribtion']) > 256)) {
                 $invalidProperties[] = "invalid value for 'reasonDescribtion', the character length must be smaller than or equal to 256.";
@@ -278,8 +295,32 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets reasonDescribtion
+    * Gets reasonDescription
     *  **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    *
+    * @return string|null
+    */
+    public function getReasonDescription()
+    {
+        return $this->container['reasonDescription'];
+    }
+
+    /**
+    * Sets reasonDescription
+    *
+    * @param string|null $reasonDescription **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    *
+    * @return $this
+    */
+    public function setReasonDescription($reasonDescription)
+    {
+        $this->container['reasonDescription'] = $reasonDescription;
+        return $this;
+    }
+
+    /**
+    * Gets reasonDescribtion
+    *  **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     *
     * @return string|null
     */
@@ -291,7 +332,7 @@ class VulRepairFailedDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets reasonDescribtion
     *
-    * @param string|null $reasonDescribtion **参数解释**: 漏洞修复失败原因解释说明 **取值范围**: 字符长度0-256位
+    * @param string|null $reasonDescribtion **参数解释**: 漏洞修复失败原因解释说明，已废弃 **取值范围**: 字符长度0-256位
     *
     * @return $this
     */

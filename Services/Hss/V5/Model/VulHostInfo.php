@@ -51,6 +51,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -85,7 +86,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'backupName' => 'string',
             'agentStatus' => 'string',
             'disabledOperateTypes' => '\HuaweiCloud\SDK\Hss\V5\Model\HostVulInfoDisabledOperateTypes[]',
-            'repairPriority' => 'string'
+            'repairPriority' => 'string',
+            'nodeType' => 'string'
     ];
 
     /**
@@ -121,6 +123,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -155,7 +158,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         'backupName' => null,
         'agentStatus' => null,
         'disabledOperateTypes' => null,
-        'repairPriority' => null
+        'repairPriority' => null,
+        'nodeType' => null
     ];
 
     /**
@@ -212,6 +216,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -246,7 +251,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'backupName' => 'backup_name',
             'agentStatus' => 'agent_status',
             'disabledOperateTypes' => 'disabled_operate_types',
-            'repairPriority' => 'repair_priority'
+            'repairPriority' => 'repair_priority',
+            'nodeType' => 'node_type'
     ];
 
     /**
@@ -282,6 +288,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -316,7 +323,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'backupName' => 'setBackupName',
             'agentStatus' => 'setAgentStatus',
             'disabledOperateTypes' => 'setDisabledOperateTypes',
-            'repairPriority' => 'setRepairPriority'
+            'repairPriority' => 'setRepairPriority',
+            'nodeType' => 'setNodeType'
     ];
 
     /**
@@ -352,6 +360,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **取值范围**: - installed：已安装。 - not_installed：未安装。 - online：在线。 - offline：离线。 - install_failed：安装失败。 - installing：安装中。
     * disabledOperateTypes  **参数解释**: 漏洞在当前主机上不可进行的操作类型列表 **取值范围**: 最小值1，最大值10000
     * repairPriority  **参数解释**: 修复优先级 **取值范围**: - Critical : 紧急 - High     : 高 - Medium   : 中 - Low      : 低
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -386,7 +395,8 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             'backupName' => 'getBackupName',
             'agentStatus' => 'getAgentStatus',
             'disabledOperateTypes' => 'getDisabledOperateTypes',
-            'repairPriority' => 'getRepairPriority'
+            'repairPriority' => 'getRepairPriority',
+            'nodeType' => 'getNodeType'
     ];
 
     /**
@@ -478,6 +488,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['disabledOperateTypes'] = isset($data['disabledOperateTypes']) ? $data['disabledOperateTypes'] : null;
         $this->container['repairPriority'] = isset($data['repairPriority']) ? $data['repairPriority'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
     }
 
     /**
@@ -649,6 +660,12 @@ class VulHostInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['repairPriority']) && (mb_strlen($this->container['repairPriority']) < 1)) {
                 $invalidProperties[] = "invalid value for 'repairPriority', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) > 128)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1405,6 +1422,30 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     public function setRepairPriority($repairPriority)
     {
         $this->container['repairPriority'] = $repairPriority;
+        return $this;
+    }
+
+    /**
+    * Gets nodeType
+    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string|null $nodeType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
         return $this;
     }
 

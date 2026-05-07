@@ -36,6 +36,7 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
     * clusterLogStatus  **参数解释**： 集群日志的接入状态 **约束限制**： 不涉及 **取值范围**： - success：接入成功。 - partial_success：部分接入。  **默认取值**： 不涉及
     * invokedService  **参数解释**： 调用服务，标识cce免费体检报告 **约束限制**： 不涉及 **取值范围**： - hss：hss服务。 - cce：cce服务。  **默认取值**： 不涉及
     * registryInfo  registryInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
             'failedMessage' => 'string',
             'clusterLogStatus' => 'string',
             'invokedService' => 'string',
-            'registryInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseRegistryInfo'
+            'registryInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseRegistryInfo',
+            'resourceInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseResourceInfo'
     ];
 
     /**
@@ -76,6 +78,7 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
     * clusterLogStatus  **参数解释**： 集群日志的接入状态 **约束限制**： 不涉及 **取值范围**： - success：接入成功。 - partial_success：部分接入。  **默认取值**： 不涉及
     * invokedService  **参数解释**： 调用服务，标识cce免费体检报告 **约束限制**： 不涉及 **取值范围**： - hss：hss服务。 - cce：cce服务。  **默认取值**： 不涉及
     * registryInfo  registryInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
         'failedMessage' => null,
         'clusterLogStatus' => null,
         'invokedService' => null,
-        'registryInfo' => null
+        'registryInfo' => null,
+        'resourceInfo' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
     * clusterLogStatus  **参数解释**： 集群日志的接入状态 **约束限制**： 不涉及 **取值范围**： - success：接入成功。 - partial_success：部分接入。  **默认取值**： 不涉及
     * invokedService  **参数解释**： 调用服务，标识cce免费体检报告 **约束限制**： 不涉及 **取值范围**： - hss：hss服务。 - cce：cce服务。  **默认取值**： 不涉及
     * registryInfo  registryInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
             'failedMessage' => 'failed_message',
             'clusterLogStatus' => 'cluster_log_status',
             'invokedService' => 'invoked_service',
-            'registryInfo' => 'registry_info'
+            'registryInfo' => 'registry_info',
+            'resourceInfo' => 'resource_info'
     ];
 
     /**
@@ -177,6 +183,7 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
     * clusterLogStatus  **参数解释**： 集群日志的接入状态 **约束限制**： 不涉及 **取值范围**： - success：接入成功。 - partial_success：部分接入。  **默认取值**： 不涉及
     * invokedService  **参数解释**： 调用服务，标识cce免费体检报告 **约束限制**： 不涉及 **取值范围**： - hss：hss服务。 - cce：cce服务。  **默认取值**： 不涉及
     * registryInfo  registryInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
             'failedMessage' => 'setFailedMessage',
             'clusterLogStatus' => 'setClusterLogStatus',
             'invokedService' => 'setInvokedService',
-            'registryInfo' => 'setRegistryInfo'
+            'registryInfo' => 'setRegistryInfo',
+            'resourceInfo' => 'setResourceInfo'
     ];
 
     /**
@@ -217,6 +225,7 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
     * clusterLogStatus  **参数解释**： 集群日志的接入状态 **约束限制**： 不涉及 **取值范围**： - success：接入成功。 - partial_success：部分接入。  **默认取值**： 不涉及
     * invokedService  **参数解释**： 调用服务，标识cce免费体检报告 **约束限制**： 不涉及 **取值范围**： - hss：hss服务。 - cce：cce服务。  **默认取值**： 不涉及
     * registryInfo  registryInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
             'failedMessage' => 'getFailedMessage',
             'clusterLogStatus' => 'getClusterLogStatus',
             'invokedService' => 'getInvokedService',
-            'registryInfo' => 'getRegistryInfo'
+            'registryInfo' => 'getRegistryInfo',
+            'resourceInfo' => 'getResourceInfo'
     ];
 
     /**
@@ -313,6 +323,7 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
         $this->container['clusterLogStatus'] = isset($data['clusterLogStatus']) ? $data['clusterLogStatus'] : null;
         $this->container['invokedService'] = isset($data['invokedService']) ? $data['invokedService'] : null;
         $this->container['registryInfo'] = isset($data['registryInfo']) ? $data['registryInfo'] : null;
+        $this->container['resourceInfo'] = isset($data['resourceInfo']) ? $data['resourceInfo'] : null;
     }
 
     /**
@@ -793,6 +804,30 @@ class ClusterInfoResponse implements ModelInterface, ArrayAccess
     public function setRegistryInfo($registryInfo)
     {
         $this->container['registryInfo'] = $registryInfo;
+        return $this;
+    }
+
+    /**
+    * Gets resourceInfo
+    *  resourceInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseResourceInfo|null
+    */
+    public function getResourceInfo()
+    {
+        return $this->container['resourceInfo'];
+    }
+
+    /**
+    * Sets resourceInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ClusterInfoResponseResourceInfo|null $resourceInfo resourceInfo
+    *
+    * @return $this
+    */
+    public function setResourceInfo($resourceInfo)
+    {
+        $this->container['resourceInfo'] = $resourceInfo;
         return $this;
     }
 

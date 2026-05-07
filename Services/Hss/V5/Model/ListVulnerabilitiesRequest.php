@@ -33,6 +33,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释**: 漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     * assetValue  **参数解释**: 存在漏洞主机的资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**: 不涉及
     * groupName  **参数解释**: 存在漏洞主机的所属服务器组 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'labelList' => 'string',
             'status' => 'string',
             'assetValue' => 'string',
-            'groupName' => 'string'
+            'groupName' => 'string',
+            'nodeType' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释**: 漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     * assetValue  **参数解释**: 存在漏洞主机的资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**: 不涉及
     * groupName  **参数解释**: 存在漏洞主机的所属服务器组 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
         'labelList' => null,
         'status' => null,
         'assetValue' => null,
-        'groupName' => null
+        'groupName' => null,
+        'nodeType' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释**: 漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     * assetValue  **参数解释**: 存在漏洞主机的资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**: 不涉及
     * groupName  **参数解释**: 存在漏洞主机的所属服务器组 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'labelList' => 'label_list',
             'status' => 'status',
             'assetValue' => 'asset_value',
-            'groupName' => 'group_name'
+            'groupName' => 'group_name',
+            'nodeType' => 'node_type'
     ];
 
     /**
@@ -156,6 +162,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释**: 漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     * assetValue  **参数解释**: 存在漏洞主机的资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**: 不涉及
     * groupName  **参数解释**: 存在漏洞主机的所属服务器组 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'labelList' => 'setLabelList',
             'status' => 'setStatus',
             'assetValue' => 'setAssetValue',
-            'groupName' => 'setGroupName'
+            'groupName' => 'setGroupName',
+            'nodeType' => 'setNodeType'
     ];
 
     /**
@@ -190,6 +198,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释**: 漏洞状态 **约束限制**: 不涉及 **取值范围**: - vul_status_unfix：未处理 - vul_status_ignored：已忽略 - vul_status_verified：验证中 - vul_status_fixing：修复中 - vul_status_fixed：修复成功 - vul_status_reboot：修复成功待重启 - vul_status_failed：修复失败 - vul_status_fix_after_reboot：请重启主机再次修复  **默认取值**: 不涉及
     * assetValue  **参数解释**: 存在漏洞主机的资产重要性 **约束限制**: 不涉及 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**: 不涉及
     * groupName  **参数解释**: 存在漏洞主机的所属服务器组 **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
+    * nodeType  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             'labelList' => 'getLabelList',
             'status' => 'getStatus',
             'assetValue' => 'getAssetValue',
-            'groupName' => 'getGroupName'
+            'groupName' => 'getGroupName',
+            'nodeType' => 'getNodeType'
     ];
 
     /**
@@ -280,6 +290,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['assetValue'] = isset($data['assetValue']) ? $data['assetValue'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
     }
 
     /**
@@ -370,6 +381,15 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['groupName']) && (mb_strlen($this->container['groupName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nodeType']) && (mb_strlen($this->container['nodeType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nodeType']) && !preg_match("/^cce|not_cce$/", $this->container['nodeType'])) {
+                $invalidProperties[] = "invalid value for 'nodeType', must be conform to the pattern /^cce|not_cce$/.";
             }
         return $invalidProperties;
     }
@@ -694,6 +714,30 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     public function setGroupName($groupName)
     {
         $this->container['groupName'] = $groupName;
+        return $this;
+    }
+
+    /**
+    * Gets nodeType
+    *  **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string|null $nodeType **参数解释**: 节点类型 **约束限制**: 不涉及 **取值范围**: - cce：cce节点 - not_cce：非cce节点 字符长度0-256位 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
         return $this;
     }
 

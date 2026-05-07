@@ -25,12 +25,12 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * fileName  文件名称
-    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * filePath  文件路径
     * changeType  变更类型，包含如下:   - \"all\" : 全部   - \"registry\" : 注册表   - \"file\" : 文件
     * changeCategory  变更类别，包含如下:   - \"all\" : 全部   - \"modify\" : 修改   - \"add\" : 新增   - \"delete\" : 删除
     * status  状态，包含如下:   - \"all\" : 全部   - \"trust\" : 可信   - \"untrust\" : 不可信   - \"unknown\" : 未知
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -55,12 +55,12 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * fileName  文件名称
-    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * filePath  文件路径
     * changeType  变更类型，包含如下:   - \"all\" : 全部   - \"registry\" : 注册表   - \"file\" : 文件
     * changeCategory  变更类别，包含如下:   - \"all\" : 全部   - \"modify\" : 修改   - \"add\" : 新增   - \"delete\" : 删除
     * status  状态，包含如下:   - \"all\" : 全部   - \"trust\" : 可信   - \"untrust\" : 不可信   - \"unknown\" : 未知
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -106,12 +106,12 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * fileName  文件名称
-    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * filePath  文件路径
     * changeType  变更类型，包含如下:   - \"all\" : 全部   - \"registry\" : 注册表   - \"file\" : 文件
     * changeCategory  变更类别，包含如下:   - \"all\" : 全部   - \"modify\" : 修改   - \"add\" : 新增   - \"delete\" : 删除
     * status  状态，包含如下:   - \"all\" : 全部   - \"trust\" : 可信   - \"untrust\" : 不可信   - \"unknown\" : 未知
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -136,12 +136,12 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * fileName  文件名称
-    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * filePath  文件路径
     * changeType  变更类型，包含如下:   - \"all\" : 全部   - \"registry\" : 注册表   - \"file\" : 文件
     * changeCategory  变更类别，包含如下:   - \"all\" : 全部   - \"modify\" : 修改   - \"add\" : 新增   - \"delete\" : 删除
     * status  状态，包含如下:   - \"all\" : 全部   - \"trust\" : 可信   - \"untrust\" : 不可信   - \"unknown\" : 未知
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -166,12 +166,12 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * hostId  **参数解释**: 服务器ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
     * fileName  文件名称
-    * filePath  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * filePath  文件路径
     * changeType  变更类型，包含如下:   - \"all\" : 全部   - \"registry\" : 注册表   - \"file\" : 文件
     * changeCategory  变更类别，包含如下:   - \"all\" : 全部   - \"modify\" : 修改   - \"add\" : 新增   - \"delete\" : 删除
     * status  状态，包含如下:   - \"all\" : 全部   - \"trust\" : 可信   - \"untrust\" : 不可信   - \"unknown\" : 未知
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
-    * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @var string[]
     */
@@ -491,7 +491,7 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    *  文件路径
     *
     * @return string|null
     */
@@ -503,7 +503,7 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath **参数解释**： 文件路径 **约束限制**： 不涉及 **取值范围**： 字符数1-512位 **默认取值**： 不涉及
+    * @param string|null $filePath 文件路径
     *
     * @return $this
     */
@@ -611,7 +611,7 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    *  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return int
     */
@@ -623,7 +623,7 @@ class ListFileHostEventDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
+    * @param int $limit **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     *
     * @return $this
     */

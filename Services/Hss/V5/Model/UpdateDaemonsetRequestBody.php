@@ -29,6 +29,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * chargingMode  付费模式，cce集成防护调用场景使用:   - on_demand:按需   - free_security_check:免费安全体检
     * cceProtectionType  cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护   - node_level:节点级别防护
     * preferPacketCycle  优先使用包周期配额，cce集成防护调用场景使用，默认false
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'invokedService' => 'string',
             'chargingMode' => 'string',
             'cceProtectionType' => 'string',
-            'preferPacketCycle' => 'bool'
+            'preferPacketCycle' => 'bool',
+            'resourceInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyResourceInfo'
     ];
 
     /**
@@ -55,6 +57,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * chargingMode  付费模式，cce集成防护调用场景使用:   - on_demand:按需   - free_security_check:免费安全体检
     * cceProtectionType  cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护   - node_level:节点级别防护
     * preferPacketCycle  优先使用包周期配额，cce集成防护调用场景使用，默认false
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
         'invokedService' => null,
         'chargingMode' => null,
         'cceProtectionType' => null,
-        'preferPacketCycle' => null
+        'preferPacketCycle' => null,
+        'resourceInfo' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * chargingMode  付费模式，cce集成防护调用场景使用:   - on_demand:按需   - free_security_check:免费安全体检
     * cceProtectionType  cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护   - node_level:节点级别防护
     * preferPacketCycle  优先使用包周期配额，cce集成防护调用场景使用，默认false
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'invokedService' => 'invoked_service',
             'chargingMode' => 'charging_mode',
             'cceProtectionType' => 'cce_protection_type',
-            'preferPacketCycle' => 'prefer_packet_cycle'
+            'preferPacketCycle' => 'prefer_packet_cycle',
+            'resourceInfo' => 'resource_info'
     ];
 
     /**
@@ -128,6 +134,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * chargingMode  付费模式，cce集成防护调用场景使用:   - on_demand:按需   - free_security_check:免费安全体检
     * cceProtectionType  cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护   - node_level:节点级别防护
     * preferPacketCycle  优先使用包周期配额，cce集成防护调用场景使用，默认false
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'invokedService' => 'setInvokedService',
             'chargingMode' => 'setChargingMode',
             'cceProtectionType' => 'setCceProtectionType',
-            'preferPacketCycle' => 'setPreferPacketCycle'
+            'preferPacketCycle' => 'setPreferPacketCycle',
+            'resourceInfo' => 'setResourceInfo'
     ];
 
     /**
@@ -154,6 +162,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     * chargingMode  付费模式，cce集成防护调用场景使用:   - on_demand:按需   - free_security_check:免费安全体检
     * cceProtectionType  cce防护类型，cce集成防护调用场景使用:   - cluster_level:集群级别防护   - node_level:节点级别防护
     * preferPacketCycle  优先使用包周期配额，cce集成防护调用场景使用，默认false
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
             'invokedService' => 'getInvokedService',
             'chargingMode' => 'getChargingMode',
             'cceProtectionType' => 'getCceProtectionType',
-            'preferPacketCycle' => 'getPreferPacketCycle'
+            'preferPacketCycle' => 'getPreferPacketCycle',
+            'resourceInfo' => 'getResourceInfo'
     ];
 
     /**
@@ -266,6 +276,7 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['cceProtectionType'] = isset($data['cceProtectionType']) ? $data['cceProtectionType'] : null;
         $this->container['preferPacketCycle'] = isset($data['preferPacketCycle']) ? $data['preferPacketCycle'] : null;
+        $this->container['resourceInfo'] = isset($data['resourceInfo']) ? $data['resourceInfo'] : null;
     }
 
     /**
@@ -546,6 +557,30 @@ class UpdateDaemonsetRequestBody implements ModelInterface, ArrayAccess
     public function setPreferPacketCycle($preferPacketCycle)
     {
         $this->container['preferPacketCycle'] = $preferPacketCycle;
+        return $this;
+    }
+
+    /**
+    * Gets resourceInfo
+    *  resourceInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyResourceInfo|null
+    */
+    public function getResourceInfo()
+    {
+        return $this->container['resourceInfo'];
+    }
+
+    /**
+    * Sets resourceInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyResourceInfo|null $resourceInfo resourceInfo
+    *
+    * @return $this
+    */
+    public function setResourceInfo($resourceInfo)
+    {
+        $this->container['resourceInfo'] = $resourceInfo;
         return $this;
     }
 

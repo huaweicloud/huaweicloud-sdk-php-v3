@@ -28,6 +28,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     * dsInfo  dsInfo
     * installedStatus  **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partially_success：部分安装成功。 - upgrade_success：升级成功。 - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
             'clusterStatus' => 'string',
             'dsInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoDsInfo',
             'installedStatus' => 'string',
-            'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo'
+            'scheduleInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\CreateDaemonsetRequestBodyScheduleInfo',
+            'resourceInfo' => '\HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoResourceInfo'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     * dsInfo  dsInfo
     * installedStatus  **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partially_success：部分安装成功。 - upgrade_success：升级成功。 - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
         'clusterStatus' => null,
         'dsInfo' => null,
         'installedStatus' => null,
-        'scheduleInfo' => null
+        'scheduleInfo' => null,
+        'resourceInfo' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     * dsInfo  dsInfo
     * installedStatus  **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partially_success：部分安装成功。 - upgrade_success：升级成功。 - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
             'clusterStatus' => 'cluster_status',
             'dsInfo' => 'ds_info',
             'installedStatus' => 'installed_status',
-            'scheduleInfo' => 'schedule_info'
+            'scheduleInfo' => 'schedule_info',
+            'resourceInfo' => 'resource_info'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     * dsInfo  dsInfo
     * installedStatus  **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partially_success：部分安装成功。 - upgrade_success：升级成功。 - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
             'clusterStatus' => 'setClusterStatus',
             'dsInfo' => 'setDsInfo',
             'installedStatus' => 'setInstalledStatus',
-            'scheduleInfo' => 'setScheduleInfo'
+            'scheduleInfo' => 'setScheduleInfo',
+            'resourceInfo' => 'setResourceInfo'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     * dsInfo  dsInfo
     * installedStatus  **参数解释**: 集群ds安装状态 **约束限制**: 不涉及 **取值范围**: 包含如下： - installing：安装中。 - install_success：安装成功。 - install_failed：安装失败。 - partially_success：部分安装成功。 - upgrade_success：升级成功。 - upgrade_failed：升级失败。 - upgrading：升级中。 - none：未安装。  **默认取值**: 不涉及
     * scheduleInfo  scheduleInfo
+    * resourceInfo  resourceInfo
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
             'clusterStatus' => 'getClusterStatus',
             'dsInfo' => 'getDsInfo',
             'installedStatus' => 'getInstalledStatus',
-            'scheduleInfo' => 'getScheduleInfo'
+            'scheduleInfo' => 'getScheduleInfo',
+            'resourceInfo' => 'getResourceInfo'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
         $this->container['dsInfo'] = isset($data['dsInfo']) ? $data['dsInfo'] : null;
         $this->container['installedStatus'] = isset($data['installedStatus']) ? $data['installedStatus'] : null;
         $this->container['scheduleInfo'] = isset($data['scheduleInfo']) ? $data['scheduleInfo'] : null;
+        $this->container['resourceInfo'] = isset($data['resourceInfo']) ? $data['resourceInfo'] : null;
     }
 
     /**
@@ -428,6 +439,30 @@ class ShowAgentDaemonsetDetailInfoResponse implements ModelInterface, ArrayAcces
     public function setScheduleInfo($scheduleInfo)
     {
         $this->container['scheduleInfo'] = $scheduleInfo;
+        return $this;
+    }
+
+    /**
+    * Gets resourceInfo
+    *  resourceInfo
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoResourceInfo|null
+    */
+    public function getResourceInfo()
+    {
+        return $this->container['resourceInfo'];
+    }
+
+    /**
+    * Sets resourceInfo
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\DaemonsetYamlResponseInfoResourceInfo|null $resourceInfo resourceInfo
+    *
+    * @return $this
+    */
+    public function setResourceInfo($resourceInfo)
+    {
+        $this->container['resourceInfo'] = $resourceInfo;
         return $this;
     }
 

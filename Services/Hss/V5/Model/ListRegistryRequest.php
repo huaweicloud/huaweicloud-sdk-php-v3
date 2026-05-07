@@ -271,9 +271,6 @@ class ListRegistryRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['registryId']) && (mb_strlen($this->container['registryId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'registryId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['registryId']) && !preg_match("/^[a-z0-9-]*$/", $this->container['registryId'])) {
-                $invalidProperties[] = "invalid value for 'registryId', must be conform to the pattern /^[a-z0-9-]*$/.";
-            }
             if (!is_null($this->container['registryType']) && (mb_strlen($this->container['registryType']) > 32768)) {
                 $invalidProperties[] = "invalid value for 'registryType', the character length must be smaller than or equal to 32768.";
             }

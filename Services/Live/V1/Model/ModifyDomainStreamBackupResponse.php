@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Hss\V5\Model;
+namespace HuaweiCloud\SDK\Live\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowWindosVulDetailResponse implements ModelInterface, ArrayAccess
+class ModifyDomainStreamBackupResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,30 @@ class ShowWindosVulDetailResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowWindosVulDetailResponse';
+    protected static $openAPIModelName = 'ModifyDomainStreamBackupResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * publishDomain  **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
+    * streamBackupEnable  **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalNum' => 'int',
-            'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\WindowsVulDetailInfo[]'
+            'publishDomain' => 'string',
+            'streamBackupEnable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * publishDomain  **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
+    * streamBackupEnable  **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalNum' => 'int32',
-        'dataList' => null
+        'publishDomain' => null,
+        'streamBackupEnable' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class ShowWindosVulDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * publishDomain  **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
+    * streamBackupEnable  **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalNum' => 'total_num',
-            'dataList' => 'data_list'
+            'publishDomain' => 'publish_domain',
+            'streamBackupEnable' => 'stream_backup_enable'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * publishDomain  **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
+    * streamBackupEnable  **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalNum' => 'setTotalNum',
-            'dataList' => 'setDataList'
+            'publishDomain' => 'setPublishDomain',
+            'streamBackupEnable' => 'setStreamBackupEnable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
-    * dataList  **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * publishDomain  **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
+    * streamBackupEnable  **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalNum' => 'getTotalNum',
-            'dataList' => 'getDataList'
+            'publishDomain' => 'getPublishDomain',
+            'streamBackupEnable' => 'getStreamBackupEnable'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ShowWindosVulDetailResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
-        $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
+        $this->container['publishDomain'] = isset($data['publishDomain']) ? $data['publishDomain'] : null;
+        $this->container['streamBackupEnable'] = isset($data['streamBackupEnable']) ? $data['streamBackupEnable'] : null;
     }
 
     /**
@@ -170,11 +170,11 @@ class ShowWindosVulDetailResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['publishDomain']) && (mb_strlen($this->container['publishDomain']) > 255)) {
+                $invalidProperties[] = "invalid value for 'publishDomain', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
+            if (!is_null($this->container['publishDomain']) && (mb_strlen($this->container['publishDomain']) < 1)) {
+                $invalidProperties[] = "invalid value for 'publishDomain', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -191,50 +191,50 @@ class ShowWindosVulDetailResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets totalNum
-    *  **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
+    * Gets publishDomain
+    *  **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getTotalNum()
+    public function getPublishDomain()
     {
-        return $this->container['totalNum'];
+        return $this->container['publishDomain'];
     }
 
     /**
-    * Sets totalNum
+    * Sets publishDomain
     *
-    * @param int|null $totalNum **参数解释**: 数据总条数 **取值范围**: 最小值0，最大值2147483647
+    * @param string|null $publishDomain **参数解释**： 直播推流域名 **约束限制**： 不涉及 **取值范围**： 字符长度为[1-255]位 **默认取值**： 不涉及
     *
     * @return $this
     */
-    public function setTotalNum($totalNum)
+    public function setPublishDomain($publishDomain)
     {
-        $this->container['totalNum'] = $totalNum;
+        $this->container['publishDomain'] = $publishDomain;
         return $this;
     }
 
     /**
-    * Gets dataList
-    *  **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * Gets streamBackupEnable
+    *  **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\WindowsVulDetailInfo[]|null
+    * @return bool|null
     */
-    public function getDataList()
+    public function getStreamBackupEnable()
     {
-        return $this->container['dataList'];
+        return $this->container['streamBackupEnable'];
     }
 
     /**
-    * Sets dataList
+    * Sets streamBackupEnable
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\WindowsVulDetailInfo[]|null $dataList **参数解释**: 软件漏洞cve列表 **取值范围**: 不涉及
+    * @param bool|null $streamBackupEnable **参数解释**： 主备流开关 **约束限制**： 不涉及 **取值范围**： - true： 开启主备流功能 - false：关闭主备流功能 **默认取值**： false
     *
     * @return $this
     */
-    public function setDataList($dataList)
+    public function setStreamBackupEnable($streamBackupEnable)
     {
-        $this->container['dataList'] = $dataList;
+        $this->container['streamBackupEnable'] = $streamBackupEnable;
         return $this;
     }
 
