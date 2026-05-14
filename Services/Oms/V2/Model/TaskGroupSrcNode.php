@@ -23,6 +23,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
@@ -37,6 +39,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
             'ak' => 'string',
             'sk' => 'string',
             'connectionString' => 'string',
+            'cryptoType' => 'string',
+            'kmsKeyId' => 'string',
             'jsonAuthFile' => 'string',
             'appId' => 'string',
             'region' => 'string',
@@ -51,6 +55,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
@@ -65,6 +71,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
         'ak' => null,
         'sk' => null,
         'connectionString' => null,
+        'cryptoType' => null,
+        'kmsKeyId' => null,
         'jsonAuthFile' => null,
         'appId' => null,
         'region' => null,
@@ -100,6 +108,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
@@ -114,6 +124,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
             'ak' => 'ak',
             'sk' => 'sk',
             'connectionString' => 'connection_string',
+            'cryptoType' => 'crypto_type',
+            'kmsKeyId' => 'kms_key_id',
             'jsonAuthFile' => 'json_auth_file',
             'appId' => 'app_id',
             'region' => 'region',
@@ -128,6 +140,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
@@ -142,6 +156,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
             'ak' => 'setAk',
             'sk' => 'setSk',
             'connectionString' => 'setConnectionString',
+            'cryptoType' => 'setCryptoType',
+            'kmsKeyId' => 'setKmsKeyId',
             'jsonAuthFile' => 'setJsonAuthFile',
             'appId' => 'setAppId',
             'region' => 'setRegion',
@@ -156,6 +172,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     * ak  源端桶的AK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * sk  源端桶的SK（最大长度100个字符），task_type为非url_list时，本参数为必选。
     * connectionString  连接字符串，用于微软云Blob鉴权
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * jsonAuthFile  用于谷歌云Cloud Storage鉴权
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
     * region  源端桶所处的区域，task_type为非URL_LIST时，本参数为必选。
@@ -170,6 +188,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
             'ak' => 'getAk',
             'sk' => 'getSk',
             'connectionString' => 'getConnectionString',
+            'cryptoType' => 'getCryptoType',
+            'kmsKeyId' => 'getKmsKeyId',
             'jsonAuthFile' => 'getJsonAuthFile',
             'appId' => 'getAppId',
             'region' => 'getRegion',
@@ -219,7 +239,22 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CRYPTO_TYPE__DEFAULT = 'DEFAULT';
+    const CRYPTO_TYPE_KMS = 'KMS';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCryptoTypeAllowableValues()
+    {
+        return [
+            self::CRYPTO_TYPE__DEFAULT,
+            self::CRYPTO_TYPE_KMS,
+        ];
+    }
 
 
     /**
@@ -240,6 +275,8 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
         $this->container['connectionString'] = isset($data['connectionString']) ? $data['connectionString'] : null;
+        $this->container['cryptoType'] = isset($data['cryptoType']) ? $data['cryptoType'] : null;
+        $this->container['kmsKeyId'] = isset($data['kmsKeyId']) ? $data['kmsKeyId'] : null;
         $this->container['jsonAuthFile'] = isset($data['jsonAuthFile']) ? $data['jsonAuthFile'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
@@ -280,6 +317,29 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['connectionString']) && (mb_strlen($this->container['connectionString']) < 0)) {
                 $invalidProperties[] = "invalid value for 'connectionString', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getCryptoTypeAllowableValues();
+                if (!is_null($this->container['cryptoType']) && !in_array($this->container['cryptoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'cryptoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['kmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
             if (!is_null($this->container['jsonAuthFile']) && (mb_strlen($this->container['jsonAuthFile']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'jsonAuthFile', the character length must be smaller than or equal to 65535.";
@@ -406,6 +466,54 @@ class TaskGroupSrcNode implements ModelInterface, ArrayAccess
     public function setConnectionString($connectionString)
     {
         $this->container['connectionString'] = $connectionString;
+        return $this;
+    }
+
+    /**
+    * Gets cryptoType
+    *  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return string|null
+    */
+    public function getCryptoType()
+    {
+        return $this->container['cryptoType'];
+    }
+
+    /**
+    * Sets cryptoType
+    *
+    * @param string|null $cryptoType 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return $this
+    */
+    public function setCryptoType($cryptoType)
+    {
+        $this->container['cryptoType'] = $cryptoType;
+        return $this;
+    }
+
+    /**
+    * Gets kmsKeyId
+    *  KMS密钥ID，36个字符
+    *
+    * @return string|null
+    */
+    public function getKmsKeyId()
+    {
+        return $this->container['kmsKeyId'];
+    }
+
+    /**
+    * Sets kmsKeyId
+    *
+    * @param string|null $kmsKeyId KMS密钥ID，36个字符
+    *
+    * @return $this
+    */
+    public function setKmsKeyId($kmsKeyId)
+    {
+        $this->container['kmsKeyId'] = $kmsKeyId;
         return $this;
     }
 

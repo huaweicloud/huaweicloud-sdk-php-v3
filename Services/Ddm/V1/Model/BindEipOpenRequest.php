@@ -169,16 +169,22 @@ class BindEipOpenRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 2147483647)) {
+        if ($this->container['publicIp'] === null) {
+            $invalidProperties[] = "'publicIp' can't be null";
+        }
+            if ((mb_strlen($this->container['publicIp']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 1)) {
+            if ((mb_strlen($this->container['publicIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['publicIpId']) && (mb_strlen($this->container['publicIpId']) > 2147483647)) {
+        if ($this->container['publicIpId'] === null) {
+            $invalidProperties[] = "'publicIpId' can't be null";
+        }
+            if ((mb_strlen($this->container['publicIpId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'publicIpId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['publicIpId']) && (mb_strlen($this->container['publicIpId']) < 1)) {
+            if ((mb_strlen($this->container['publicIpId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'publicIpId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -199,7 +205,7 @@ class BindEipOpenRequest implements ModelInterface, ArrayAccess
     * Gets publicIp
     *  公共ip。
     *
-    * @return string|null
+    * @return string
     */
     public function getPublicIp()
     {
@@ -209,7 +215,7 @@ class BindEipOpenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 公共ip。
+    * @param string $publicIp 公共ip。
     *
     * @return $this
     */
@@ -223,7 +229,7 @@ class BindEipOpenRequest implements ModelInterface, ArrayAccess
     * Gets publicIpId
     *  公共ip id。
     *
-    * @return string|null
+    * @return string
     */
     public function getPublicIpId()
     {
@@ -233,7 +239,7 @@ class BindEipOpenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpId
     *
-    * @param string|null $publicIpId 公共ip id。
+    * @param string $publicIpId 公共ip id。
     *
     * @return $this
     */

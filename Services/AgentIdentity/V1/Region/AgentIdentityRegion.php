@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class AgentIdentityRegion {
 
-    public static $REGION = array("https://agent-identity-open.cn-southwest-2.myhuaweicloud.com"=>"ap-southeast-4",);
+    public static $REGION = array("https://agent-identity.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2",);
 
     public static function valueOf($regionId)
     {

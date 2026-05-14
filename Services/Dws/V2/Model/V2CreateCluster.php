@@ -34,7 +34,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -84,7 +84,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -155,7 +155,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -205,7 +205,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -255,7 +255,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**： 指定子网ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 指定安全组ID，用于集群网络配置。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * masterKeyId  **参数解释**： KMS密钥ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * cryptAlgorithm  **参数解释**： KMS加密算法。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -763,7 +763,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -775,7 +775,7 @@ class V2CreateCluster implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $datastoreVersion **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -22,21 +22,25 @@ class ModifySubtitleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * assetId  媒资ID。
+    * thumbnailTaskId  截图任务id，仅支持多截图场景会返回。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'assetId' => 'string'
+            'assetId' => 'string',
+            'thumbnailTaskId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * assetId  媒资ID。
+    * thumbnailTaskId  截图任务id，仅支持多截图场景会返回。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'assetId' => null
+        'assetId' => null,
+        'thumbnailTaskId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ModifySubtitleResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * assetId  媒资ID。
+    * thumbnailTaskId  截图任务id，仅支持多截图场景会返回。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'assetId' => 'asset_id'
+            'assetId' => 'asset_id',
+            'thumbnailTaskId' => 'thumbnail_task_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  媒资ID。
+    * thumbnailTaskId  截图任务id，仅支持多截图场景会返回。
     *
     * @var string[]
     */
     protected static $setters = [
-            'assetId' => 'setAssetId'
+            'assetId' => 'setAssetId',
+            'thumbnailTaskId' => 'setThumbnailTaskId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  媒资ID。
+    * thumbnailTaskId  截图任务id，仅支持多截图场景会返回。
     *
     * @var string[]
     */
     protected static $getters = [
-            'assetId' => 'getAssetId'
+            'assetId' => 'getAssetId',
+            'thumbnailTaskId' => 'getThumbnailTaskId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ModifySubtitleResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['thumbnailTaskId'] = isset($data['thumbnailTaskId']) ? $data['thumbnailTaskId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ModifySubtitleResponse implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets thumbnailTaskId
+    *  截图任务id，仅支持多截图场景会返回。
+    *
+    * @return string|null
+    */
+    public function getThumbnailTaskId()
+    {
+        return $this->container['thumbnailTaskId'];
+    }
+
+    /**
+    * Sets thumbnailTaskId
+    *
+    * @param string|null $thumbnailTaskId 截图任务id，仅支持多截图场景会返回。
+    *
+    * @return $this
+    */
+    public function setThumbnailTaskId($thumbnailTaskId)
+    {
+        $this->container['thumbnailTaskId'] = $thumbnailTaskId;
         return $this;
     }
 

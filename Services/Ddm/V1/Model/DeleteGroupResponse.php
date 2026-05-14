@@ -21,22 +21,26 @@ class DeleteGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    * jobId  任务ID，仅创建按需实例时会返回该参数。
+    * orderId  订单号，创建包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'orderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    * jobId  任务ID，仅创建按需实例时会返回该参数。
+    * orderId  订单号，创建包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'orderId' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class DeleteGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    * jobId  任务ID，仅创建按需实例时会返回该参数。
+    * orderId  订单号，创建包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'orderId' => 'order_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    * jobId  任务ID，仅创建按需实例时会返回该参数。
+    * orderId  订单号，创建包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'orderId' => 'setOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    * jobId  任务ID，仅创建按需实例时会返回该参数。
+    * orderId  订单号，创建包年包月时返回该参数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class DeleteGroupResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -159,12 +170,6 @@ class DeleteGroupResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'jobId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 8)) {
-                $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 8.";
-            }
         return $invalidProperties;
     }
 
@@ -181,7 +186,7 @@ class DeleteGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    *  任务ID，仅创建按需实例时会返回该参数。
     *
     * @return string|null
     */
@@ -193,13 +198,37 @@ class DeleteGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId **参数解释**：  工作流ID。  **取值范围**：  不涉及。
+    * @param string|null $jobId 任务ID，仅创建按需实例时会返回该参数。
     *
     * @return $this
     */
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  订单号，创建包年包月时返回该参数。
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单号，创建包年包月时返回该参数。
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 

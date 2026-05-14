@@ -21,6 +21,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * instanceId  DDM实例ID。
     * jobId  任务ID，仅创建按需实例时会返回该参数。
     * groupId  组ID，仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
@@ -28,6 +29,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'instanceId' => 'string',
             'jobId' => 'string',
             'groupId' => 'string',
             'orderId' => 'string'
@@ -35,6 +37,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * instanceId  DDM实例ID。
     * jobId  任务ID，仅创建按需实例时会返回该参数。
     * groupId  组ID，仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
@@ -42,6 +45,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'instanceId' => null,
         'jobId' => null,
         'groupId' => null,
         'orderId' => null
@@ -70,6 +74,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * instanceId  DDM实例ID。
     * jobId  任务ID，仅创建按需实例时会返回该参数。
     * groupId  组ID，仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
@@ -77,6 +82,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'instanceId' => 'instance_id',
             'jobId' => 'job_id',
             'groupId' => 'group_id',
             'orderId' => 'order_id'
@@ -84,6 +90,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * instanceId  DDM实例ID。
     * jobId  任务ID，仅创建按需实例时会返回该参数。
     * groupId  组ID，仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
@@ -91,6 +98,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'instanceId' => 'setInstanceId',
             'jobId' => 'setJobId',
             'groupId' => 'setGroupId',
             'orderId' => 'setOrderId'
@@ -98,6 +106,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * instanceId  DDM实例ID。
     * jobId  任务ID，仅创建按需实例时会返回该参数。
     * groupId  组ID，仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
@@ -105,6 +114,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'instanceId' => 'getInstanceId',
             'jobId' => 'getJobId',
             'groupId' => 'getGroupId',
             'orderId' => 'getOrderId'
@@ -168,6 +178,7 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
@@ -193,6 +204,30 @@ class CreateGroupResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets instanceId
+    *  DDM实例ID。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId DDM实例ID。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
     }
 
     /**

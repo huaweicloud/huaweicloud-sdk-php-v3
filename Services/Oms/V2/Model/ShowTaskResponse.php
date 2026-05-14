@@ -26,7 +26,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * description  任务描述，没有设置时为空字符串。
     * dstNode  dstNode
     * enableFailedObjectRecording  是否记录失败对象。开启后，如果有迁移失败对象，会在目的端存储失败对象信息。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
     * errorReason  errorReason
@@ -69,7 +68,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'dstNode' => '\HuaweiCloud\SDK\Oms\V2\Model\DstNodeResp',
             'enableFailedObjectRecording' => 'bool',
-            'enableKms' => 'bool',
             'enableMetadataMigration' => 'bool',
             'enableRestore' => 'bool',
             'errorReason' => '\HuaweiCloud\SDK\Oms\V2\Model\ErrorReasonResp',
@@ -112,7 +110,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * description  任务描述，没有设置时为空字符串。
     * dstNode  dstNode
     * enableFailedObjectRecording  是否记录失败对象。开启后，如果有迁移失败对象，会在目的端存储失败对象信息。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
     * errorReason  errorReason
@@ -155,7 +152,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'dstNode' => null,
         'enableFailedObjectRecording' => null,
-        'enableKms' => null,
         'enableMetadataMigration' => null,
         'enableRestore' => null,
         'errorReason' => null,
@@ -219,7 +215,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * description  任务描述，没有设置时为空字符串。
     * dstNode  dstNode
     * enableFailedObjectRecording  是否记录失败对象。开启后，如果有迁移失败对象，会在目的端存储失败对象信息。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
     * errorReason  errorReason
@@ -262,7 +257,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'dstNode' => 'dst_node',
             'enableFailedObjectRecording' => 'enable_failed_object_recording',
-            'enableKms' => 'enable_kms',
             'enableMetadataMigration' => 'enable_metadata_migration',
             'enableRestore' => 'enable_restore',
             'errorReason' => 'error_reason',
@@ -305,7 +299,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * description  任务描述，没有设置时为空字符串。
     * dstNode  dstNode
     * enableFailedObjectRecording  是否记录失败对象。开启后，如果有迁移失败对象，会在目的端存储失败对象信息。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
     * errorReason  errorReason
@@ -348,7 +341,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'dstNode' => 'setDstNode',
             'enableFailedObjectRecording' => 'setEnableFailedObjectRecording',
-            'enableKms' => 'setEnableKms',
             'enableMetadataMigration' => 'setEnableMetadataMigration',
             'enableRestore' => 'setEnableRestore',
             'errorReason' => 'setErrorReason',
@@ -391,7 +383,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * description  任务描述，没有设置时为空字符串。
     * dstNode  dstNode
     * enableFailedObjectRecording  是否记录失败对象。开启后，如果有迁移失败对象，会在目的端存储失败对象信息。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
     * errorReason  errorReason
@@ -434,7 +425,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'dstNode' => 'getDstNode',
             'enableFailedObjectRecording' => 'getEnableFailedObjectRecording',
-            'enableKms' => 'getEnableKms',
             'enableMetadataMigration' => 'getEnableMetadataMigration',
             'enableRestore' => 'getEnableRestore',
             'errorReason' => 'getErrorReason',
@@ -643,7 +633,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['dstNode'] = isset($data['dstNode']) ? $data['dstNode'] : null;
         $this->container['enableFailedObjectRecording'] = isset($data['enableFailedObjectRecording']) ? $data['enableFailedObjectRecording'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
         $this->container['errorReason'] = isset($data['errorReason']) ? $data['errorReason'] : null;
@@ -992,30 +981,6 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setEnableFailedObjectRecording($enableFailedObjectRecording)
     {
         $this->container['enableFailedObjectRecording'] = $enableFailedObjectRecording;
-        return $this;
-    }
-
-    /**
-    * Gets enableKms
-    *  存储入OBS时是否使用KMS加密。
-    *
-    * @return bool|null
-    */
-    public function getEnableKms()
-    {
-        return $this->container['enableKms'];
-    }
-
-    /**
-    * Sets enableKms
-    *
-    * @param bool|null $enableKms 存储入OBS时是否使用KMS加密。
-    *
-    * @return $this
-    */
-    public function setEnableKms($enableKms)
-    {
-        $this->container['enableKms'] = $enableKms;
         return $this;
     }
 

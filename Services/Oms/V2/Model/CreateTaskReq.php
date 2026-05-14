@@ -23,7 +23,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
     * taskType  任务类型，默认为object。  list：对象列表迁移 url_list：URL列表迁移 object：文件/文件夹迁移，默认 prefix：对象前缀迁移
     * srcNode  srcNode
     * dstNode  dstNode
-    * enableKms  是否开启KMS加密，默认不开启。
     * description  任务描述，不能超过255个字符，且不能包含^<>&\"'等特殊字符。
     * migrateSince  以时间戳方式表示的迁移指定时间（单位：秒），表示仅迁移在指定时间之后修改的源端待迁移对象。默认不设置迁移指定时间。
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
@@ -44,7 +43,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
             'taskType' => 'string',
             'srcNode' => '\HuaweiCloud\SDK\Oms\V2\Model\SrcNodeReq',
             'dstNode' => '\HuaweiCloud\SDK\Oms\V2\Model\DstNodeReq',
-            'enableKms' => 'bool',
             'description' => 'string',
             'migrateSince' => 'int',
             'bandwidthPolicy' => '\HuaweiCloud\SDK\Oms\V2\Model\BandwidthPolicyDto[]',
@@ -65,7 +63,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
     * taskType  任务类型，默认为object。  list：对象列表迁移 url_list：URL列表迁移 object：文件/文件夹迁移，默认 prefix：对象前缀迁移
     * srcNode  srcNode
     * dstNode  dstNode
-    * enableKms  是否开启KMS加密，默认不开启。
     * description  任务描述，不能超过255个字符，且不能包含^<>&\"'等特殊字符。
     * migrateSince  以时间戳方式表示的迁移指定时间（单位：秒），表示仅迁移在指定时间之后修改的源端待迁移对象。默认不设置迁移指定时间。
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
@@ -86,7 +83,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
         'taskType' => null,
         'srcNode' => null,
         'dstNode' => null,
-        'enableKms' => null,
         'description' => null,
         'migrateSince' => 'int64',
         'bandwidthPolicy' => null,
@@ -128,7 +124,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
     * taskType  任务类型，默认为object。  list：对象列表迁移 url_list：URL列表迁移 object：文件/文件夹迁移，默认 prefix：对象前缀迁移
     * srcNode  srcNode
     * dstNode  dstNode
-    * enableKms  是否开启KMS加密，默认不开启。
     * description  任务描述，不能超过255个字符，且不能包含^<>&\"'等特殊字符。
     * migrateSince  以时间戳方式表示的迁移指定时间（单位：秒），表示仅迁移在指定时间之后修改的源端待迁移对象。默认不设置迁移指定时间。
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
@@ -149,7 +144,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
             'taskType' => 'task_type',
             'srcNode' => 'src_node',
             'dstNode' => 'dst_node',
-            'enableKms' => 'enable_kms',
             'description' => 'description',
             'migrateSince' => 'migrate_since',
             'bandwidthPolicy' => 'bandwidth_policy',
@@ -170,7 +164,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
     * taskType  任务类型，默认为object。  list：对象列表迁移 url_list：URL列表迁移 object：文件/文件夹迁移，默认 prefix：对象前缀迁移
     * srcNode  srcNode
     * dstNode  dstNode
-    * enableKms  是否开启KMS加密，默认不开启。
     * description  任务描述，不能超过255个字符，且不能包含^<>&\"'等特殊字符。
     * migrateSince  以时间戳方式表示的迁移指定时间（单位：秒），表示仅迁移在指定时间之后修改的源端待迁移对象。默认不设置迁移指定时间。
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
@@ -191,7 +184,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
             'taskType' => 'setTaskType',
             'srcNode' => 'setSrcNode',
             'dstNode' => 'setDstNode',
-            'enableKms' => 'setEnableKms',
             'description' => 'setDescription',
             'migrateSince' => 'setMigrateSince',
             'bandwidthPolicy' => 'setBandwidthPolicy',
@@ -212,7 +204,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
     * taskType  任务类型，默认为object。  list：对象列表迁移 url_list：URL列表迁移 object：文件/文件夹迁移，默认 prefix：对象前缀迁移
     * srcNode  srcNode
     * dstNode  dstNode
-    * enableKms  是否开启KMS加密，默认不开启。
     * description  任务描述，不能超过255个字符，且不能包含^<>&\"'等特殊字符。
     * migrateSince  以时间戳方式表示的迁移指定时间（单位：秒），表示仅迁移在指定时间之后修改的源端待迁移对象。默认不设置迁移指定时间。
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
@@ -233,7 +224,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
             'taskType' => 'getTaskType',
             'srcNode' => 'getSrcNode',
             'dstNode' => 'getDstNode',
-            'enableKms' => 'getEnableKms',
             'description' => 'getDescription',
             'migrateSince' => 'getMigrateSince',
             'bandwidthPolicy' => 'getBandwidthPolicy',
@@ -403,7 +393,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['srcNode'] = isset($data['srcNode']) ? $data['srcNode'] : null;
         $this->container['dstNode'] = isset($data['dstNode']) ? $data['dstNode'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['migrateSince'] = isset($data['migrateSince']) ? $data['migrateSince'] : null;
         $this->container['bandwidthPolicy'] = isset($data['bandwidthPolicy']) ? $data['bandwidthPolicy'] : null;
@@ -577,30 +566,6 @@ class CreateTaskReq implements ModelInterface, ArrayAccess
     public function setDstNode($dstNode)
     {
         $this->container['dstNode'] = $dstNode;
-        return $this;
-    }
-
-    /**
-    * Gets enableKms
-    *  是否开启KMS加密，默认不开启。
-    *
-    * @return bool|null
-    */
-    public function getEnableKms()
-    {
-        return $this->container['enableKms'];
-    }
-
-    /**
-    * Sets enableKms
-    *
-    * @param bool|null $enableKms 是否开启KMS加密，默认不开启。
-    *
-    * @return $this
-    */
-    public function setEnableKms($enableKms)
-    {
-        $this->container['enableKms'] = $enableKms;
         return $this;
     }
 

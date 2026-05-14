@@ -38,8 +38,8 @@ class Snapshots implements ModelInterface, ArrayAccess
     * dbUser  **参数解释**： 数据库用户名。 **取值范围**： 不涉及。
     * progress  **参数解释**： 进度。 **取值范围**： 不涉及。
     * backupKey  **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
     * totalBackupSize  **参数解释**： 总备份文件大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -110,8 +110,8 @@ class Snapshots implements ModelInterface, ArrayAccess
     * dbUser  **参数解释**： 数据库用户名。 **取值范围**： 不涉及。
     * progress  **参数解释**： 进度。 **取值范围**： 不涉及。
     * backupKey  **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
     * totalBackupSize  **参数解释**： 总备份文件大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -203,8 +203,8 @@ class Snapshots implements ModelInterface, ArrayAccess
     * dbUser  **参数解释**： 数据库用户名。 **取值范围**： 不涉及。
     * progress  **参数解释**： 进度。 **取值范围**： 不涉及。
     * backupKey  **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
     * totalBackupSize  **参数解释**： 总备份文件大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -275,8 +275,8 @@ class Snapshots implements ModelInterface, ArrayAccess
     * dbUser  **参数解释**： 数据库用户名。 **取值范围**： 不涉及。
     * progress  **参数解释**： 进度。 **取值范围**： 不涉及。
     * backupKey  **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
     * totalBackupSize  **参数解释**： 总备份文件大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -347,8 +347,8 @@ class Snapshots implements ModelInterface, ArrayAccess
     * dbUser  **参数解释**： 数据库用户名。 **取值范围**： 不涉及。
     * progress  **参数解释**： 进度。 **取值范围**： 不涉及。
     * backupKey  **参数解释**： 备份产生的Key。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： 不涉及。
     * totalBackupSize  **参数解释**： 总备份文件大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -1020,7 +1020,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets priorBackupKey
-    *  **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    *  **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1032,7 +1032,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets priorBackupKey
     *
-    * @param string|null $priorBackupKey **参数解释**： 增量快照使用前一个快照的BackupKey。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
+    * @param string|null $priorBackupKey **参数解释**： 增量快照使用前一个快照的backup_key。当取值为FULL时表示这是一个全量快照。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -1044,7 +1044,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseBackupKey
-    *  **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    *  **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1056,7 +1056,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets baseBackupKey
     *
-    * @param string|null $baseBackupKey **参数解释**： 对应全量快照的BackupKey。 **取值范围**： 不涉及。
+    * @param string|null $baseBackupKey **参数解释**： 对应全量快照的backup_key。 **取值范围**： 不涉及。
     *
     * @return $this
     */

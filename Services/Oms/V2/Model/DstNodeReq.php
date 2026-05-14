@@ -26,6 +26,8 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     * bucket  目的端桶的名称。
     * savePrefix  目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class DstNodeReq implements ModelInterface, ArrayAccess
             'securityToken' => 'string',
             'bucket' => 'string',
             'savePrefix' => 'string',
-            'region' => 'string'
+            'region' => 'string',
+            'cryptoType' => 'string',
+            'kmsKeyId' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     * bucket  目的端桶的名称。
     * savePrefix  目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class DstNodeReq implements ModelInterface, ArrayAccess
         'securityToken' => null,
         'bucket' => null,
         'savePrefix' => null,
-        'region' => null
+        'region' => null,
+        'cryptoType' => null,
+        'kmsKeyId' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     * bucket  目的端桶的名称。
     * savePrefix  目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class DstNodeReq implements ModelInterface, ArrayAccess
             'securityToken' => 'security_token',
             'bucket' => 'bucket',
             'savePrefix' => 'save_prefix',
-            'region' => 'region'
+            'region' => 'region',
+            'cryptoType' => 'crypto_type',
+            'kmsKeyId' => 'kms_key_id'
     ];
 
     /**
@@ -107,6 +119,8 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     * bucket  目的端桶的名称。
     * savePrefix  目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class DstNodeReq implements ModelInterface, ArrayAccess
             'securityToken' => 'setSecurityToken',
             'bucket' => 'setBucket',
             'savePrefix' => 'setSavePrefix',
-            'region' => 'setRegion'
+            'region' => 'setRegion',
+            'cryptoType' => 'setCryptoType',
+            'kmsKeyId' => 'setKmsKeyId'
     ];
 
     /**
@@ -127,6 +143,8 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     * bucket  目的端桶的名称。
     * savePrefix  目的端桶内路径前缀（拼接在对象key前面,组成新的key,拼接后不能超过1024个字符）。
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class DstNodeReq implements ModelInterface, ArrayAccess
             'securityToken' => 'getSecurityToken',
             'bucket' => 'getBucket',
             'savePrefix' => 'getSavePrefix',
-            'region' => 'getRegion'
+            'region' => 'getRegion',
+            'cryptoType' => 'getCryptoType',
+            'kmsKeyId' => 'getKmsKeyId'
     ];
 
     /**
@@ -179,7 +199,22 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CRYPTO_TYPE__DEFAULT = 'DEFAULT';
+    const CRYPTO_TYPE_KMS = 'KMS';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCryptoTypeAllowableValues()
+    {
+        return [
+            self::CRYPTO_TYPE__DEFAULT,
+            self::CRYPTO_TYPE_KMS,
+        ];
+    }
 
 
     /**
@@ -203,6 +238,8 @@ class DstNodeReq implements ModelInterface, ArrayAccess
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['savePrefix'] = isset($data['savePrefix']) ? $data['savePrefix'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['cryptoType'] = isset($data['cryptoType']) ? $data['cryptoType'] : null;
+        $this->container['kmsKeyId'] = isset($data['kmsKeyId']) ? $data['kmsKeyId'] : null;
     }
 
     /**
@@ -275,6 +312,29 @@ class DstNodeReq implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['region'])) {
                 $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            $allowedValues = $this->getCryptoTypeAllowableValues();
+                if (!is_null($this->container['cryptoType']) && !in_array($this->container['cryptoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'cryptoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['kmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         return $invalidProperties;
     }
@@ -431,6 +491,54 @@ class DstNodeReq implements ModelInterface, ArrayAccess
     public function setRegion($region)
     {
         $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets cryptoType
+    *  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return string|null
+    */
+    public function getCryptoType()
+    {
+        return $this->container['cryptoType'];
+    }
+
+    /**
+    * Sets cryptoType
+    *
+    * @param string|null $cryptoType 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return $this
+    */
+    public function setCryptoType($cryptoType)
+    {
+        $this->container['cryptoType'] = $cryptoType;
+        return $this;
+    }
+
+    /**
+    * Gets kmsKeyId
+    *  KMS密钥ID，36个字符
+    *
+    * @return string|null
+    */
+    public function getKmsKeyId()
+    {
+        return $this->container['kmsKeyId'];
+    }
+
+    /**
+    * Sets kmsKeyId
+    *
+    * @param string|null $kmsKeyId KMS密钥ID，36个字符
+    *
+    * @return $this
+    */
+    public function setKmsKeyId($kmsKeyId)
+    {
+        $this->container['kmsKeyId'] = $kmsKeyId;
         return $this;
     }
 

@@ -192,6 +192,9 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['values'] === null) {
+            $invalidProperties[] = "'values' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -258,7 +261,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
     * Gets values
     *  参数值。
     *
-    * @return object|null
+    * @return object
     */
     public function getValues()
     {
@@ -268,7 +271,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param object|null $values 参数值。
+    * @param object $values 参数值。
     *
     * @return $this
     */

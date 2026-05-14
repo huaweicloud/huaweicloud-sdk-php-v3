@@ -175,10 +175,13 @@ class ModifyElbVipOpenReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['newIp']) && (mb_strlen($this->container['newIp']) > 2147483647)) {
+        if ($this->container['newIp'] === null) {
+            $invalidProperties[] = "'newIp' can't be null";
+        }
+            if ((mb_strlen($this->container['newIp']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'newIp', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['newIp']) && (mb_strlen($this->container['newIp']) < 1)) {
+            if ((mb_strlen($this->container['newIp']) < 1)) {
                 $invalidProperties[] = "invalid value for 'newIp', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -223,7 +226,7 @@ class ModifyElbVipOpenReq implements ModelInterface, ArrayAccess
     * Gets newIp
     *  新ip。
     *
-    * @return string|null
+    * @return string
     */
     public function getNewIp()
     {
@@ -233,7 +236,7 @@ class ModifyElbVipOpenReq implements ModelInterface, ArrayAccess
     /**
     * Sets newIp
     *
-    * @param string|null $newIp 新ip。
+    * @param string $newIp 新ip。
     *
     * @return $this
     */

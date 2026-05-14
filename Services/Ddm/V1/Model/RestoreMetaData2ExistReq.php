@@ -169,6 +169,12 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['source'] === null) {
+            $invalidProperties[] = "'source' can't be null";
+        }
+        if ($this->container['target'] === null) {
+            $invalidProperties[] = "'target' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +193,7 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     * Gets source
     *  metadata恢复源。
     *
-    * @return object|null
+    * @return object
     */
     public function getSource()
     {
@@ -197,7 +203,7 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param object|null $source metadata恢复源。
+    * @param object $source metadata恢复源。
     *
     * @return $this
     */
@@ -211,7 +217,7 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     * Gets target
     *  metadata恢复目标。
     *
-    * @return object|null
+    * @return object
     */
     public function getTarget()
     {
@@ -221,7 +227,7 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets target
     *
-    * @param object|null $target metadata恢复目标。
+    * @param object $target metadata恢复目标。
     *
     * @return $this
     */

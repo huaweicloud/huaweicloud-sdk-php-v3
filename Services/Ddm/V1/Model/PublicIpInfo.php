@@ -27,6 +27,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     * bindingEntityId  绑定弹性公网IP的实体ID。
     * bindingEntityName  绑定弹性公网IP的实体名称。
     * bindingEntityType  绑定弹性公网IP的实体类型（目前只支持绑定node）。
+    * groupId  绑定弹性公网IP的组ID。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'string',
             'bindingEntityId' => 'string',
             'bindingEntityName' => 'string',
-            'bindingEntityType' => 'string'
+            'bindingEntityType' => 'string',
+            'groupId' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     * bindingEntityId  绑定弹性公网IP的实体ID。
     * bindingEntityName  绑定弹性公网IP的实体名称。
     * bindingEntityType  绑定弹性公网IP的实体类型（目前只支持绑定node）。
+    * groupId  绑定弹性公网IP的组ID。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
         'privateIp' => null,
         'bindingEntityId' => null,
         'bindingEntityName' => null,
-        'bindingEntityType' => null
+        'bindingEntityType' => null,
+        'groupId' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     * bindingEntityId  绑定弹性公网IP的实体ID。
     * bindingEntityName  绑定弹性公网IP的实体名称。
     * bindingEntityType  绑定弹性公网IP的实体类型（目前只支持绑定node）。
+    * groupId  绑定弹性公网IP的组ID。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'private_ip',
             'bindingEntityId' => 'binding_entity_id',
             'bindingEntityName' => 'binding_entity_name',
-            'bindingEntityType' => 'binding_entity_type'
+            'bindingEntityType' => 'binding_entity_type',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -114,6 +120,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     * bindingEntityId  绑定弹性公网IP的实体ID。
     * bindingEntityName  绑定弹性公网IP的实体名称。
     * bindingEntityType  绑定弹性公网IP的实体类型（目前只支持绑定node）。
+    * groupId  绑定弹性公网IP的组ID。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'setPrivateIp',
             'bindingEntityId' => 'setBindingEntityId',
             'bindingEntityName' => 'setBindingEntityName',
-            'bindingEntityType' => 'setBindingEntityType'
+            'bindingEntityType' => 'setBindingEntityType',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -136,6 +144,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     * bindingEntityId  绑定弹性公网IP的实体ID。
     * bindingEntityName  绑定弹性公网IP的实体名称。
     * bindingEntityType  绑定弹性公网IP的实体类型（目前只支持绑定node）。
+    * groupId  绑定弹性公网IP的组ID。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
             'privateIp' => 'getPrivateIp',
             'bindingEntityId' => 'getBindingEntityId',
             'bindingEntityName' => 'getBindingEntityName',
-            'bindingEntityType' => 'getBindingEntityType'
+            'bindingEntityType' => 'getBindingEntityType',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -244,6 +254,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
         $this->container['bindingEntityId'] = isset($data['bindingEntityId']) ? $data['bindingEntityId'] : null;
         $this->container['bindingEntityName'] = isset($data['bindingEntityName']) ? $data['bindingEntityName'] : null;
         $this->container['bindingEntityType'] = isset($data['bindingEntityType']) ? $data['bindingEntityType'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -270,6 +281,12 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -449,6 +466,30 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     public function setBindingEntityType($bindingEntityType)
     {
         $this->container['bindingEntityType'] = $bindingEntityType;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  绑定弹性公网IP的组ID。
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 绑定弹性公网IP的组ID。
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

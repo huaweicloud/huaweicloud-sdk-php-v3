@@ -26,7 +26,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * enableKms  是否开启KMS加密，默认不开启。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -46,7 +45,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'bool',
             'enableFailedObjectRecording' => 'bool',
             'enableRestore' => 'bool',
-            'enableKms' => 'bool',
             'taskType' => 'string',
             'bandwidthPolicy' => '\HuaweiCloud\SDK\Oms\V2\Model\BandwidthPolicyDto[]',
             'smnConfig' => '\HuaweiCloud\SDK\Oms\V2\Model\SmnConfig',
@@ -66,7 +64,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * enableKms  是否开启KMS加密，默认不开启。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -86,7 +83,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
         'enableMetadataMigration' => null,
         'enableFailedObjectRecording' => null,
         'enableRestore' => null,
-        'enableKms' => null,
         'taskType' => null,
         'bandwidthPolicy' => null,
         'smnConfig' => null,
@@ -127,7 +123,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * enableKms  是否开启KMS加密，默认不开启。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -147,7 +142,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'enable_metadata_migration',
             'enableFailedObjectRecording' => 'enable_failed_object_recording',
             'enableRestore' => 'enable_restore',
-            'enableKms' => 'enable_kms',
             'taskType' => 'task_type',
             'bandwidthPolicy' => 'bandwidth_policy',
             'smnConfig' => 'smn_config',
@@ -167,7 +161,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * enableKms  是否开启KMS加密，默认不开启。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -187,7 +180,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'setEnableMetadataMigration',
             'enableFailedObjectRecording' => 'setEnableFailedObjectRecording',
             'enableRestore' => 'setEnableRestore',
-            'enableKms' => 'setEnableKms',
             'taskType' => 'setTaskType',
             'bandwidthPolicy' => 'setBandwidthPolicy',
             'smnConfig' => 'setSmnConfig',
@@ -207,7 +199,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
-    * enableKms  是否开启KMS加密，默认不开启。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -227,7 +218,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'getEnableMetadataMigration',
             'enableFailedObjectRecording' => 'getEnableFailedObjectRecording',
             'enableRestore' => 'getEnableRestore',
-            'enableKms' => 'getEnableKms',
             'taskType' => 'getTaskType',
             'bandwidthPolicy' => 'getBandwidthPolicy',
             'smnConfig' => 'getSmnConfig',
@@ -377,7 +367,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
         $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
         $this->container['enableFailedObjectRecording'] = isset($data['enableFailedObjectRecording']) ? $data['enableFailedObjectRecording'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['bandwidthPolicy'] = isset($data['bandwidthPolicy']) ? $data['bandwidthPolicy'] : null;
         $this->container['smnConfig'] = isset($data['smnConfig']) ? $data['smnConfig'] : null;
@@ -411,9 +400,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
             }
         if ($this->container['dstNode'] === null) {
             $invalidProperties[] = "'dstNode' can't be null";
-        }
-        if ($this->container['enableKms'] === null) {
-            $invalidProperties[] = "'enableKms' can't be null";
         }
             $allowedValues = $this->getTaskTypeAllowableValues();
                 if (!is_null($this->container['taskType']) && !in_array($this->container['taskType'], $allowedValues, true)) {
@@ -614,30 +600,6 @@ class CreateTaskGroupReq implements ModelInterface, ArrayAccess
     public function setEnableRestore($enableRestore)
     {
         $this->container['enableRestore'] = $enableRestore;
-        return $this;
-    }
-
-    /**
-    * Gets enableKms
-    *  是否开启KMS加密，默认不开启。
-    *
-    * @return bool
-    */
-    public function getEnableKms()
-    {
-        return $this->container['enableKms'];
-    }
-
-    /**
-    * Sets enableKms
-    *
-    * @param bool $enableKms 是否开启KMS加密，默认不开启。
-    *
-    * @return $this
-    */
-    public function setEnableKms($enableKms)
-    {
-        $this->container['enableKms'] = $enableKms;
         return $this;
     }
 

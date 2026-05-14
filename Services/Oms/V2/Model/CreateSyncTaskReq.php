@@ -25,13 +25,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * srcBucket  源端桶名
     * srcAk  源端桶的AK（最大长度100个字符）。
     * srcSk  源端桶的SK（最大长度100个字符）。
+    * srcCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * srcKmsKeyId  KMS密钥ID，36个字符
     * dstAk  目的端桶的AK（最大长度100个字符）。
     * dstSk  目的端桶的SK（最大长度100个字符）。
+    * dstCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * dstKmsKeyId  KMS密钥ID，36个字符
     * dstRegion  目的端region
     * dstBucket  目的端桶名
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
@@ -46,13 +49,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'srcBucket' => 'string',
             'srcAk' => 'string',
             'srcSk' => 'string',
+            'srcCryptoType' => 'string',
+            'srcKmsKeyId' => 'string',
             'dstAk' => 'string',
             'dstSk' => 'string',
+            'dstCryptoType' => 'string',
+            'dstKmsKeyId' => 'string',
             'dstRegion' => 'string',
             'dstBucket' => 'string',
             'description' => 'string',
             'enableMetadataMigration' => 'bool',
-            'enableKms' => 'bool',
             'enableRestore' => 'bool',
             'dstStoragePolicy' => 'string',
             'appId' => 'string',
@@ -67,13 +73,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * srcBucket  源端桶名
     * srcAk  源端桶的AK（最大长度100个字符）。
     * srcSk  源端桶的SK（最大长度100个字符）。
+    * srcCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * srcKmsKeyId  KMS密钥ID，36个字符
     * dstAk  目的端桶的AK（最大长度100个字符）。
     * dstSk  目的端桶的SK（最大长度100个字符）。
+    * dstCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * dstKmsKeyId  KMS密钥ID，36个字符
     * dstRegion  目的端region
     * dstBucket  目的端桶名
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
@@ -88,13 +97,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
         'srcBucket' => null,
         'srcAk' => null,
         'srcSk' => null,
+        'srcCryptoType' => null,
+        'srcKmsKeyId' => null,
         'dstAk' => null,
         'dstSk' => null,
+        'dstCryptoType' => null,
+        'dstKmsKeyId' => null,
         'dstRegion' => null,
         'dstBucket' => null,
         'description' => null,
         'enableMetadataMigration' => null,
-        'enableKms' => null,
         'enableRestore' => null,
         'dstStoragePolicy' => null,
         'appId' => null,
@@ -130,13 +142,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * srcBucket  源端桶名
     * srcAk  源端桶的AK（最大长度100个字符）。
     * srcSk  源端桶的SK（最大长度100个字符）。
+    * srcCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * srcKmsKeyId  KMS密钥ID，36个字符
     * dstAk  目的端桶的AK（最大长度100个字符）。
     * dstSk  目的端桶的SK（最大长度100个字符）。
+    * dstCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * dstKmsKeyId  KMS密钥ID，36个字符
     * dstRegion  目的端region
     * dstBucket  目的端桶名
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
@@ -151,13 +166,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'srcBucket' => 'src_bucket',
             'srcAk' => 'src_ak',
             'srcSk' => 'src_sk',
+            'srcCryptoType' => 'src_crypto_type',
+            'srcKmsKeyId' => 'src_kms_key_id',
             'dstAk' => 'dst_ak',
             'dstSk' => 'dst_sk',
+            'dstCryptoType' => 'dst_crypto_type',
+            'dstKmsKeyId' => 'dst_kms_key_id',
             'dstRegion' => 'dst_region',
             'dstBucket' => 'dst_bucket',
             'description' => 'description',
             'enableMetadataMigration' => 'enable_metadata_migration',
-            'enableKms' => 'enable_kms',
             'enableRestore' => 'enable_restore',
             'dstStoragePolicy' => 'dst_storage_policy',
             'appId' => 'app_id',
@@ -172,13 +190,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * srcBucket  源端桶名
     * srcAk  源端桶的AK（最大长度100个字符）。
     * srcSk  源端桶的SK（最大长度100个字符）。
+    * srcCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * srcKmsKeyId  KMS密钥ID，36个字符
     * dstAk  目的端桶的AK（最大长度100个字符）。
     * dstSk  目的端桶的SK（最大长度100个字符）。
+    * dstCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * dstKmsKeyId  KMS密钥ID，36个字符
     * dstRegion  目的端region
     * dstBucket  目的端桶名
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
@@ -193,13 +214,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'srcBucket' => 'setSrcBucket',
             'srcAk' => 'setSrcAk',
             'srcSk' => 'setSrcSk',
+            'srcCryptoType' => 'setSrcCryptoType',
+            'srcKmsKeyId' => 'setSrcKmsKeyId',
             'dstAk' => 'setDstAk',
             'dstSk' => 'setDstSk',
+            'dstCryptoType' => 'setDstCryptoType',
+            'dstKmsKeyId' => 'setDstKmsKeyId',
             'dstRegion' => 'setDstRegion',
             'dstBucket' => 'setDstBucket',
             'description' => 'setDescription',
             'enableMetadataMigration' => 'setEnableMetadataMigration',
-            'enableKms' => 'setEnableKms',
             'enableRestore' => 'setEnableRestore',
             'dstStoragePolicy' => 'setDstStoragePolicy',
             'appId' => 'setAppId',
@@ -214,13 +238,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     * srcBucket  源端桶名
     * srcAk  源端桶的AK（最大长度100个字符）。
     * srcSk  源端桶的SK（最大长度100个字符）。
+    * srcCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * srcKmsKeyId  KMS密钥ID，36个字符
     * dstAk  目的端桶的AK（最大长度100个字符）。
     * dstSk  目的端桶的SK（最大长度100个字符）。
+    * dstCryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * dstKmsKeyId  KMS密钥ID，36个字符
     * dstRegion  目的端region
     * dstBucket  目的端桶名
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableRestore  是否自动解冻归档数据，默认否。  开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * appId  腾讯云APPID，当源端为腾讯云时，需要填写此参数，您可以在腾讯云控制台账号信息页面获取。
@@ -235,13 +262,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             'srcBucket' => 'getSrcBucket',
             'srcAk' => 'getSrcAk',
             'srcSk' => 'getSrcSk',
+            'srcCryptoType' => 'getSrcCryptoType',
+            'srcKmsKeyId' => 'getSrcKmsKeyId',
             'dstAk' => 'getDstAk',
             'dstSk' => 'getDstSk',
+            'dstCryptoType' => 'getDstCryptoType',
+            'dstKmsKeyId' => 'getDstKmsKeyId',
             'dstRegion' => 'getDstRegion',
             'dstBucket' => 'getDstBucket',
             'description' => 'getDescription',
             'enableMetadataMigration' => 'getEnableMetadataMigration',
-            'enableKms' => 'getEnableKms',
             'enableRestore' => 'getEnableRestore',
             'dstStoragePolicy' => 'getDstStoragePolicy',
             'appId' => 'getAppId',
@@ -289,6 +319,10 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SRC_CRYPTO_TYPE__DEFAULT = 'DEFAULT';
+    const SRC_CRYPTO_TYPE_KMS = 'KMS';
+    const DST_CRYPTO_TYPE__DEFAULT = 'DEFAULT';
+    const DST_CRYPTO_TYPE_KMS = 'KMS';
     const DST_STORAGE_POLICY_STANDARD = 'STANDARD';
     const DST_STORAGE_POLICY_IA = 'IA';
     const DST_STORAGE_POLICY_ARCHIVE = 'ARCHIVE';
@@ -298,6 +332,32 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     const CONSISTENCY_CHECK_CRC64 = 'crc64';
     const CONSISTENCY_CHECK_TRANSMISSION = 'transmission';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSrcCryptoTypeAllowableValues()
+    {
+        return [
+            self::SRC_CRYPTO_TYPE__DEFAULT,
+            self::SRC_CRYPTO_TYPE_KMS,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDstCryptoTypeAllowableValues()
+    {
+        return [
+            self::DST_CRYPTO_TYPE__DEFAULT,
+            self::DST_CRYPTO_TYPE_KMS,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -350,13 +410,16 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
         $this->container['srcBucket'] = isset($data['srcBucket']) ? $data['srcBucket'] : null;
         $this->container['srcAk'] = isset($data['srcAk']) ? $data['srcAk'] : null;
         $this->container['srcSk'] = isset($data['srcSk']) ? $data['srcSk'] : null;
+        $this->container['srcCryptoType'] = isset($data['srcCryptoType']) ? $data['srcCryptoType'] : null;
+        $this->container['srcKmsKeyId'] = isset($data['srcKmsKeyId']) ? $data['srcKmsKeyId'] : null;
         $this->container['dstAk'] = isset($data['dstAk']) ? $data['dstAk'] : null;
         $this->container['dstSk'] = isset($data['dstSk']) ? $data['dstSk'] : null;
+        $this->container['dstCryptoType'] = isset($data['dstCryptoType']) ? $data['dstCryptoType'] : null;
+        $this->container['dstKmsKeyId'] = isset($data['dstKmsKeyId']) ? $data['dstKmsKeyId'] : null;
         $this->container['dstRegion'] = isset($data['dstRegion']) ? $data['dstRegion'] : null;
         $this->container['dstBucket'] = isset($data['dstBucket']) ? $data['dstBucket'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
         $this->container['dstStoragePolicy'] = isset($data['dstStoragePolicy']) ? $data['dstStoragePolicy'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
@@ -423,6 +486,29 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             if (!preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['srcSk'])) {
                 $invalidProperties[] = "invalid value for 'srcSk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
             }
+            $allowedValues = $this->getSrcCryptoTypeAllowableValues();
+                if (!is_null($this->container['srcCryptoType']) && !in_array($this->container['srcCryptoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'srcCryptoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['srcCryptoType']) && (mb_strlen($this->container['srcCryptoType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'srcCryptoType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['srcCryptoType']) && (mb_strlen($this->container['srcCryptoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'srcCryptoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['srcKmsKeyId']) && (mb_strlen($this->container['srcKmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'srcKmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['srcKmsKeyId']) && (mb_strlen($this->container['srcKmsKeyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'srcKmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['srcKmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['srcKmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'srcKmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            }
         if ($this->container['dstAk'] === null) {
             $invalidProperties[] = "'dstAk' can't be null";
         }
@@ -446,6 +532,29 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['dstSk'])) {
                 $invalidProperties[] = "invalid value for 'dstSk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            $allowedValues = $this->getDstCryptoTypeAllowableValues();
+                if (!is_null($this->container['dstCryptoType']) && !in_array($this->container['dstCryptoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'dstCryptoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['dstCryptoType']) && (mb_strlen($this->container['dstCryptoType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'dstCryptoType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['dstCryptoType']) && (mb_strlen($this->container['dstCryptoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dstCryptoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dstKmsKeyId']) && (mb_strlen($this->container['dstKmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'dstKmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['dstKmsKeyId']) && (mb_strlen($this->container['dstKmsKeyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'dstKmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['dstKmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['dstKmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'dstKmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         if ($this->container['dstRegion'] === null) {
             $invalidProperties[] = "'dstRegion' can't be null";
@@ -646,6 +755,54 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets srcCryptoType
+    *  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return string|null
+    */
+    public function getSrcCryptoType()
+    {
+        return $this->container['srcCryptoType'];
+    }
+
+    /**
+    * Sets srcCryptoType
+    *
+    * @param string|null $srcCryptoType 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return $this
+    */
+    public function setSrcCryptoType($srcCryptoType)
+    {
+        $this->container['srcCryptoType'] = $srcCryptoType;
+        return $this;
+    }
+
+    /**
+    * Gets srcKmsKeyId
+    *  KMS密钥ID，36个字符
+    *
+    * @return string|null
+    */
+    public function getSrcKmsKeyId()
+    {
+        return $this->container['srcKmsKeyId'];
+    }
+
+    /**
+    * Sets srcKmsKeyId
+    *
+    * @param string|null $srcKmsKeyId KMS密钥ID，36个字符
+    *
+    * @return $this
+    */
+    public function setSrcKmsKeyId($srcKmsKeyId)
+    {
+        $this->container['srcKmsKeyId'] = $srcKmsKeyId;
+        return $this;
+    }
+
+    /**
     * Gets dstAk
     *  目的端桶的AK（最大长度100个字符）。
     *
@@ -690,6 +847,54 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     public function setDstSk($dstSk)
     {
         $this->container['dstSk'] = $dstSk;
+        return $this;
+    }
+
+    /**
+    * Gets dstCryptoType
+    *  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return string|null
+    */
+    public function getDstCryptoType()
+    {
+        return $this->container['dstCryptoType'];
+    }
+
+    /**
+    * Sets dstCryptoType
+    *
+    * @param string|null $dstCryptoType 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return $this
+    */
+    public function setDstCryptoType($dstCryptoType)
+    {
+        $this->container['dstCryptoType'] = $dstCryptoType;
+        return $this;
+    }
+
+    /**
+    * Gets dstKmsKeyId
+    *  KMS密钥ID，36个字符
+    *
+    * @return string|null
+    */
+    public function getDstKmsKeyId()
+    {
+        return $this->container['dstKmsKeyId'];
+    }
+
+    /**
+    * Sets dstKmsKeyId
+    *
+    * @param string|null $dstKmsKeyId KMS密钥ID，36个字符
+    *
+    * @return $this
+    */
+    public function setDstKmsKeyId($dstKmsKeyId)
+    {
+        $this->container['dstKmsKeyId'] = $dstKmsKeyId;
         return $this;
     }
 
@@ -786,30 +991,6 @@ class CreateSyncTaskReq implements ModelInterface, ArrayAccess
     public function setEnableMetadataMigration($enableMetadataMigration)
     {
         $this->container['enableMetadataMigration'] = $enableMetadataMigration;
-        return $this;
-    }
-
-    /**
-    * Gets enableKms
-    *  是否开启KMS加密，默认不开启。
-    *
-    * @return bool|null
-    */
-    public function getEnableKms()
-    {
-        return $this->container['enableKms'];
-    }
-
-    /**
-    * Sets enableKms
-    *
-    * @param bool|null $enableKms 是否开启KMS加密，默认不开启。
-    *
-    * @return $this
-    */
-    public function setEnableKms($enableKms)
-    {
-        $this->container['enableKms'] = $enableKms;
         return $this;
     }
 

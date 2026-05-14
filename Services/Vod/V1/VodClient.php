@@ -489,6 +489,71 @@ class VodClient extends Client
     }
 
     /**
+     * 创建编辑任务
+     *
+     * 创建编辑任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAssetEditTask($request)
+    {
+        return $this->createAssetEditTaskWithHttpInfo($request);
+    }
+
+    public function createAssetEditTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/editing/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetEditTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\CreateAssetEditTaskRequest');
+    }
+
+    /**
      * 媒资处理
      *
      * 实现视频转码、截图、加密等处理。既可以同时启动多种操作，也可以只启动一种操作。
@@ -1535,6 +1600,71 @@ class VodClient extends Client
     }
 
     /**
+     * 取消编辑任务
+     *
+     * 取消编辑任务，仅支持取消等待中的任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAssetEditTask($request)
+    {
+        return $this->deleteAssetEditTaskWithHttpInfo($request);
+    }
+
+    public function deleteAssetEditTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/editing/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteAssetEditTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteAssetEditTaskRequest');
+    }
+
+    /**
      * 删除媒资
      *
      * 删除媒资。
@@ -2211,6 +2341,77 @@ class VodClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetDailySummaryLogResponse',
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetDailySummaryLogRequest');
+    }
+
+    /**
+     * 查询编辑任务
+     *
+     * 查询编辑任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAssetEditTask($request)
+    {
+        return $this->listAssetEditTaskWithHttpInfo($request);
+    }
+
+    public function listAssetEditTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/editing/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $queryParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetEditTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ListAssetEditTaskRequest');
     }
 
     /**

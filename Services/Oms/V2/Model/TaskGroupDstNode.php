@@ -22,6 +22,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * ak  目的端桶的AK（最大长度100个字符）。
     * sk  目的端桶的SK（最大长度100个字符）。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
     * bucket  目的端的桶名称
     * cloudType  华为云目的端信息，默认为HEC
@@ -32,6 +34,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'ak' => 'string',
             'sk' => 'string',
+            'cryptoType' => 'string',
+            'kmsKeyId' => 'string',
             'region' => 'string',
             'bucket' => 'string',
             'cloudType' => 'string',
@@ -42,6 +46,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * ak  目的端桶的AK（最大长度100个字符）。
     * sk  目的端桶的SK（最大长度100个字符）。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
     * bucket  目的端的桶名称
     * cloudType  华为云目的端信息，默认为HEC
@@ -52,6 +58,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'ak' => null,
         'sk' => null,
+        'cryptoType' => null,
+        'kmsKeyId' => null,
         'region' => null,
         'bucket' => null,
         'cloudType' => null,
@@ -83,6 +91,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     * and the value is the original name
     * ak  目的端桶的AK（最大长度100个字符）。
     * sk  目的端桶的SK（最大长度100个字符）。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
     * bucket  目的端的桶名称
     * cloudType  华为云目的端信息，默认为HEC
@@ -93,6 +103,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'ak' => 'ak',
             'sk' => 'sk',
+            'cryptoType' => 'crypto_type',
+            'kmsKeyId' => 'kms_key_id',
             'region' => 'region',
             'bucket' => 'bucket',
             'cloudType' => 'cloud_type',
@@ -103,6 +115,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * ak  目的端桶的AK（最大长度100个字符）。
     * sk  目的端桶的SK（最大长度100个字符）。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
     * bucket  目的端的桶名称
     * cloudType  华为云目的端信息，默认为HEC
@@ -113,6 +127,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     protected static $setters = [
             'ak' => 'setAk',
             'sk' => 'setSk',
+            'cryptoType' => 'setCryptoType',
+            'kmsKeyId' => 'setKmsKeyId',
             'region' => 'setRegion',
             'bucket' => 'setBucket',
             'cloudType' => 'setCloudType',
@@ -123,6 +139,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * ak  目的端桶的AK（最大长度100个字符）。
     * sk  目的端桶的SK（最大长度100个字符）。
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     * region  目的端桶所处的区域。  请与Endpoint对应的区域保持一致。
     * bucket  目的端的桶名称
     * cloudType  华为云目的端信息，默认为HEC
@@ -133,6 +151,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     protected static $getters = [
             'ak' => 'getAk',
             'sk' => 'getSk',
+            'cryptoType' => 'getCryptoType',
+            'kmsKeyId' => 'getKmsKeyId',
             'region' => 'getRegion',
             'bucket' => 'getBucket',
             'cloudType' => 'getCloudType',
@@ -179,7 +199,22 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CRYPTO_TYPE__DEFAULT = 'DEFAULT';
+    const CRYPTO_TYPE_KMS = 'KMS';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCryptoTypeAllowableValues()
+    {
+        return [
+            self::CRYPTO_TYPE__DEFAULT,
+            self::CRYPTO_TYPE_KMS,
+        ];
+    }
 
 
     /**
@@ -199,6 +234,8 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     {
         $this->container['ak'] = isset($data['ak']) ? $data['ak'] : null;
         $this->container['sk'] = isset($data['sk']) ? $data['sk'] : null;
+        $this->container['cryptoType'] = isset($data['cryptoType']) ? $data['cryptoType'] : null;
+        $this->container['kmsKeyId'] = isset($data['kmsKeyId']) ? $data['kmsKeyId'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
@@ -236,6 +273,29 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sk'])) {
                 $invalidProperties[] = "invalid value for 'sk', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            $allowedValues = $this->getCryptoTypeAllowableValues();
+                if (!is_null($this->container['cryptoType']) && !in_array($this->container['cryptoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'cryptoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['kmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         if ($this->container['region'] === null) {
             $invalidProperties[] = "'region' can't be null";
@@ -335,6 +395,54 @@ class TaskGroupDstNode implements ModelInterface, ArrayAccess
     public function setSk($sk)
     {
         $this->container['sk'] = $sk;
+        return $this;
+    }
+
+    /**
+    * Gets cryptoType
+    *  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return string|null
+    */
+    public function getCryptoType()
+    {
+        return $this->container['cryptoType'];
+    }
+
+    /**
+    * Sets cryptoType
+    *
+    * @param string|null $cryptoType 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return $this
+    */
+    public function setCryptoType($cryptoType)
+    {
+        $this->container['cryptoType'] = $cryptoType;
+        return $this;
+    }
+
+    /**
+    * Gets kmsKeyId
+    *  KMS密钥ID，36个字符
+    *
+    * @return string|null
+    */
+    public function getKmsKeyId()
+    {
+        return $this->container['kmsKeyId'];
+    }
+
+    /**
+    * Sets kmsKeyId
+    *
+    * @param string|null $kmsKeyId KMS密钥ID，36个字符
+    *
+    * @return $this
+    */
+    public function setKmsKeyId($kmsKeyId)
+    {
+        $this->container['kmsKeyId'] = $kmsKeyId;
         return $this;
     }
 

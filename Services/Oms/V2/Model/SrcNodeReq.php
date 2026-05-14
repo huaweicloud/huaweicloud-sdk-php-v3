@@ -31,6 +31,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称（以“/”结尾的字符串代表待迁移的文件夹，非“/”结尾的字符串代表待迁移的文件。）； 任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * listFile  listFile
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -45,7 +47,9 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'appId' => 'string',
             'bucket' => 'string',
             'objectKey' => 'string[]',
-            'listFile' => '\HuaweiCloud\SDK\Oms\V2\Model\ListFile'
+            'listFile' => '\HuaweiCloud\SDK\Oms\V2\Model\ListFile',
+            'cryptoType' => 'string',
+            'kmsKeyId' => 'string'
     ];
 
     /**
@@ -61,6 +65,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称（以“/”结尾的字符串代表待迁移的文件夹，非“/”结尾的字符串代表待迁移的文件。）； 任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * listFile  listFile
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -75,7 +81,9 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
         'appId' => null,
         'bucket' => null,
         'objectKey' => null,
-        'listFile' => null
+        'listFile' => null,
+        'cryptoType' => null,
+        'kmsKeyId' => null
     ];
 
     /**
@@ -112,6 +120,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称（以“/”结尾的字符串代表待迁移的文件夹，非“/”结尾的字符串代表待迁移的文件。）； 任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * listFile  listFile
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -126,7 +136,9 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'appId' => 'app_id',
             'bucket' => 'bucket',
             'objectKey' => 'object_key',
-            'listFile' => 'list_file'
+            'listFile' => 'list_file',
+            'cryptoType' => 'crypto_type',
+            'kmsKeyId' => 'kms_key_id'
     ];
 
     /**
@@ -142,6 +154,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称（以“/”结尾的字符串代表待迁移的文件夹，非“/”结尾的字符串代表待迁移的文件。）； 任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * listFile  listFile
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -156,7 +170,9 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'appId' => 'setAppId',
             'bucket' => 'setBucket',
             'objectKey' => 'setObjectKey',
-            'listFile' => 'setListFile'
+            'listFile' => 'setListFile',
+            'cryptoType' => 'setCryptoType',
+            'kmsKeyId' => 'setKmsKeyId'
     ];
 
     /**
@@ -172,6 +188,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     * bucket  源端桶的名称，task_type为非url_list时，本参数为必选。
     * objectKey  任务类型为对象迁移任务时，表示待迁移对象名称（以“/”结尾的字符串代表待迁移的文件夹，非“/”结尾的字符串代表待迁移的文件。）； 任务类型为前缀迁移任务时，表示待迁移前缀。 整桶迁移时，此参数设置为[\"\"]。
     * listFile  listFile
+    * cryptoType  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    * kmsKeyId  KMS密钥ID，36个字符
     *
     * @var string[]
     */
@@ -186,7 +204,9 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             'appId' => 'getAppId',
             'bucket' => 'getBucket',
             'objectKey' => 'getObjectKey',
-            'listFile' => 'getListFile'
+            'listFile' => 'getListFile',
+            'cryptoType' => 'getCryptoType',
+            'kmsKeyId' => 'getKmsKeyId'
     ];
 
     /**
@@ -229,7 +249,22 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CRYPTO_TYPE__DEFAULT = 'DEFAULT';
+    const CRYPTO_TYPE_KMS = 'KMS';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCryptoTypeAllowableValues()
+    {
+        return [
+            self::CRYPTO_TYPE__DEFAULT,
+            self::CRYPTO_TYPE_KMS,
+        ];
+    }
 
 
     /**
@@ -258,6 +293,8 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['objectKey'] = isset($data['objectKey']) ? $data['objectKey'] : null;
         $this->container['listFile'] = isset($data['listFile']) ? $data['listFile'] : null;
+        $this->container['cryptoType'] = isset($data['cryptoType']) ? $data['cryptoType'] : null;
+        $this->container['kmsKeyId'] = isset($data['kmsKeyId']) ? $data['kmsKeyId'] : null;
     }
 
     /**
@@ -336,6 +373,29 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['bucket']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['bucket'])) {
                 $invalidProperties[] = "invalid value for 'bucket', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
+            $allowedValues = $this->getCryptoTypeAllowableValues();
+                if (!is_null($this->container['cryptoType']) && !in_array($this->container['cryptoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'cryptoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['cryptoType']) && (mb_strlen($this->container['cryptoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'cryptoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['kmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         return $invalidProperties;
     }
@@ -612,6 +672,54 @@ class SrcNodeReq implements ModelInterface, ArrayAccess
     public function setListFile($listFile)
     {
         $this->container['listFile'] = $listFile;
+        return $this;
+    }
+
+    /**
+    * Gets cryptoType
+    *  加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return string|null
+    */
+    public function getCryptoType()
+    {
+        return $this->container['cryptoType'];
+    }
+
+    /**
+    * Sets cryptoType
+    *
+    * @param string|null $cryptoType 加解密类型，默认为DEFAULT，可选类型为DEFAULT、KMS
+    *
+    * @return $this
+    */
+    public function setCryptoType($cryptoType)
+    {
+        $this->container['cryptoType'] = $cryptoType;
+        return $this;
+    }
+
+    /**
+    * Gets kmsKeyId
+    *  KMS密钥ID，36个字符
+    *
+    * @return string|null
+    */
+    public function getKmsKeyId()
+    {
+        return $this->container['kmsKeyId'];
+    }
+
+    /**
+    * Sets kmsKeyId
+    *
+    * @param string|null $kmsKeyId KMS密钥ID，36个字符
+    *
+    * @return $this
+    */
+    public function setKmsKeyId($kmsKeyId)
+    {
+        $this->container['kmsKeyId'] = $kmsKeyId;
         return $this;
     }
 

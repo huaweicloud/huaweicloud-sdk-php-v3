@@ -2241,8 +2241,8 @@ class DwsClient extends Client
     /**
      * 删除集群
      *
-     * 删除集群v2接口。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
-     * 删除集群建议优先使用“删除DWS集群”接口，覆盖此接口所有参数及功能。
+     * 删除集群（旧接口）。集群删除后将释放此集群的所有资源，包括客户数据。为了安全起见，请在删除集群前为这个集群创建快照。
+     * 删除集群建议优先使用另一个新接口，覆盖此接口所有参数及功能。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12794,6 +12794,74 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateMaintenanceWindowResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateMaintenanceWindowRequest');
+    }
+
+    /**
+     * 更新资源池基础信息
+     *
+     * 更新资源池基础信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateQueueBaseInfo($request)
+    {
+        return $this->updateQueueBaseInfoWithHttpInfo($request);
+    }
+
+    public function updateQueueBaseInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/workload/queues/{queue_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateQueueBaseInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\UpdateQueueBaseInfoRequest');
     }
 
     /**

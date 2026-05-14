@@ -30,7 +30,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     * dstRegion  目的端region
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * status  同步任务状态 SYNCHRONIZING：同步中 STOPPED：已停止
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
@@ -52,7 +51,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
             'dstRegion' => 'string',
             'description' => 'string',
             'status' => 'string',
-            'enableKms' => 'bool',
             'enableMetadataMigration' => 'bool',
             'enableRestore' => 'bool',
             'appId' => 'string',
@@ -74,7 +72,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     * dstRegion  目的端region
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * status  同步任务状态 SYNCHRONIZING：同步中 STOPPED：已停止
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
@@ -96,7 +93,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
         'dstRegion' => null,
         'description' => null,
         'status' => null,
-        'enableKms' => null,
         'enableMetadataMigration' => null,
         'enableRestore' => null,
         'appId' => null,
@@ -139,7 +135,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     * dstRegion  目的端region
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * status  同步任务状态 SYNCHRONIZING：同步中 STOPPED：已停止
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
@@ -161,7 +156,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
             'dstRegion' => 'dst_region',
             'description' => 'description',
             'status' => 'status',
-            'enableKms' => 'enable_kms',
             'enableMetadataMigration' => 'enable_metadata_migration',
             'enableRestore' => 'enable_restore',
             'appId' => 'app_id',
@@ -183,7 +177,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     * dstRegion  目的端region
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * status  同步任务状态 SYNCHRONIZING：同步中 STOPPED：已停止
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
@@ -205,7 +198,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
             'dstRegion' => 'setDstRegion',
             'description' => 'setDescription',
             'status' => 'setStatus',
-            'enableKms' => 'setEnableKms',
             'enableMetadataMigration' => 'setEnableMetadataMigration',
             'enableRestore' => 'setEnableRestore',
             'appId' => 'setAppId',
@@ -227,7 +219,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     * dstRegion  目的端region
     * description  任务描述，不能超过255个字符，且不能包含<>()\"'&等特殊字符。
     * status  同步任务状态 SYNCHRONIZING：同步中 STOPPED：已停止
-    * enableKms  是否开启KMS加密，默认不开启。
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableRestore  是否自动解冻归档数据，默认否。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移。
     * appId  腾讯云APPID，当源端为腾讯云时，会返回此参数。
@@ -249,7 +240,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
             'dstRegion' => 'getDstRegion',
             'description' => 'getDescription',
             'status' => 'getStatus',
-            'enableKms' => 'getEnableKms',
             'enableMetadataMigration' => 'getEnableMetadataMigration',
             'enableRestore' => 'getEnableRestore',
             'appId' => 'getAppId',
@@ -430,7 +420,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
         $this->container['dstRegion'] = isset($data['dstRegion']) ? $data['dstRegion'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
@@ -820,30 +809,6 @@ class SyncTaskInfo implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets enableKms
-    *  是否开启KMS加密，默认不开启。
-    *
-    * @return bool|null
-    */
-    public function getEnableKms()
-    {
-        return $this->container['enableKms'];
-    }
-
-    /**
-    * Sets enableKms
-    *
-    * @param bool|null $enableKms 是否开启KMS加密，默认不开启。
-    *
-    * @return $this
-    */
-    public function setEnableKms($enableKms)
-    {
-        $this->container['enableKms'] = $enableKms;
         return $this;
     }
 

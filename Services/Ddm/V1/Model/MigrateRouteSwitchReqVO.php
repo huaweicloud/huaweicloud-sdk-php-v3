@@ -20,7 +20,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * iamAccount  iamAccount
     * projectId  项目id。
     * instanceId  实例id。
     * taskId  任务id。
@@ -32,7 +31,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'iamAccount' => '\HuaweiCloud\SDK\Ddm\V1\Model\IamAccount',
             'projectId' => 'string',
             'instanceId' => 'string',
             'taskId' => 'string',
@@ -44,7 +42,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * iamAccount  iamAccount
     * projectId  项目id。
     * instanceId  实例id。
     * taskId  任务id。
@@ -56,7 +53,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'iamAccount' => null,
         'projectId' => null,
         'instanceId' => null,
         'taskId' => null,
@@ -89,7 +85,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * iamAccount  iamAccount
     * projectId  项目id。
     * instanceId  实例id。
     * taskId  任务id。
@@ -101,7 +96,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'iamAccount' => 'iam_account',
             'projectId' => 'project_id',
             'instanceId' => 'instance_id',
             'taskId' => 'task_id',
@@ -113,7 +107,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * iamAccount  iamAccount
     * projectId  项目id。
     * instanceId  实例id。
     * taskId  任务id。
@@ -125,7 +118,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'iamAccount' => 'setIamAccount',
             'projectId' => 'setProjectId',
             'instanceId' => 'setInstanceId',
             'taskId' => 'setTaskId',
@@ -137,7 +129,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * iamAccount  iamAccount
     * projectId  项目id。
     * instanceId  实例id。
     * taskId  任务id。
@@ -149,7 +140,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'iamAccount' => 'getIamAccount',
             'projectId' => 'getProjectId',
             'instanceId' => 'getInstanceId',
             'taskId' => 'getTaskId',
@@ -217,7 +207,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['iamAccount'] = isset($data['iamAccount']) ? $data['iamAccount'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
@@ -283,30 +272,6 @@ class MigrateRouteSwitchReqVO implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets iamAccount
-    *  iamAccount
-    *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\IamAccount|null
-    */
-    public function getIamAccount()
-    {
-        return $this->container['iamAccount'];
-    }
-
-    /**
-    * Sets iamAccount
-    *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\IamAccount|null $iamAccount iamAccount
-    *
-    * @return $this
-    */
-    public function setIamAccount($iamAccount)
-    {
-        $this->container['iamAccount'] = $iamAccount;
-        return $this;
     }
 
     /**

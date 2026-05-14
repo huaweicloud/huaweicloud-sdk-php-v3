@@ -37,9 +37,9 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
     * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
-    * backupKey  **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -109,9 +109,9 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
     * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
-    * backupKey  **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -202,9 +202,9 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
     * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
-    * backupKey  **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -274,9 +274,9 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
     * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
-    * backupKey  **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -346,9 +346,9 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * bakPeriod  **参数解释**： 快照策略。 **取值范围**： 不涉及。
     * dbUser  **参数解释**： 数据库用户。 **取值范围**： 不涉及。
     * progress  **参数解释**： 快照进度。 **取值范围**： 不涉及。
-    * backupKey  **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
-    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
-    * baseBackupKey  **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
+    * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
+    * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
@@ -950,7 +950,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupKey
-    *  **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
+    *  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -962,7 +962,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupKey
     *
-    * @param string|null $backupKey **参数解释**： 快照BakcupKey。 **取值范围**： 不涉及。
+    * @param string|null $backupKey **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -974,7 +974,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets priorBackupKey
-    *  **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
+    *  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -986,7 +986,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets priorBackupKey
     *
-    * @param string|null $priorBackupKey **参数解释**： 增量快照，使用的前一个快照BakcupKey。 **取值范围**： 不涉及。
+    * @param string|null $priorBackupKey **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -998,7 +998,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets baseBackupKey
-    *  **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    *  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1010,7 +1010,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets baseBackupKey
     *
-    * @param string|null $baseBackupKey **参数解释**： 对应全量快照BakcupKey。 **取值范围**： 不涉及。
+    * @param string|null $baseBackupKey **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
     *
     * @return $this
     */

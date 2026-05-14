@@ -30,7 +30,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -72,7 +71,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'bool',
             'enableFailedObjectRecording' => 'bool',
             'enableRestore' => 'bool',
-            'enableKms' => 'bool',
             'taskType' => 'string',
             'bandwidthPolicy' => '\HuaweiCloud\SDK\Oms\V2\Model\BandwidthPolicyDto[]',
             'smnConfig' => '\HuaweiCloud\SDK\Oms\V2\Model\SmnInfo',
@@ -114,7 +112,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -156,7 +153,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
         'enableMetadataMigration' => null,
         'enableFailedObjectRecording' => null,
         'enableRestore' => null,
-        'enableKms' => null,
         'taskType' => null,
         'bandwidthPolicy' => null,
         'smnConfig' => null,
@@ -219,7 +215,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -261,7 +256,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'enable_metadata_migration',
             'enableFailedObjectRecording' => 'enable_failed_object_recording',
             'enableRestore' => 'enable_restore',
-            'enableKms' => 'enable_kms',
             'taskType' => 'task_type',
             'bandwidthPolicy' => 'bandwidth_policy',
             'smnConfig' => 'smn_config',
@@ -303,7 +297,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -345,7 +338,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'setEnableMetadataMigration',
             'enableFailedObjectRecording' => 'setEnableFailedObjectRecording',
             'enableRestore' => 'setEnableRestore',
-            'enableKms' => 'setEnableKms',
             'taskType' => 'setTaskType',
             'bandwidthPolicy' => 'setBandwidthPolicy',
             'smnConfig' => 'setSmnConfig',
@@ -387,7 +379,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
     * enableMetadataMigration  是否启用元数据迁移，默认否。不启用时，为保证迁移任务正常运行，仍将为您迁移ContentType元数据。
     * enableFailedObjectRecording  是否开启记录失败对象
     * enableRestore  是否自动解冻归档数据，（由于对象存储解冻需要源端存储等待一定时间，开启自动解冻会对迁移速度有较大影响，建议先完成归档存储数据解冻后再启动迁移）。 开启后，如果遇到归档类型数据，会自动解冻再进行迁移；关闭后，如果遇到归档类型的对象直接跳过相应对象，系统默认对象迁移失败并记录相关信息到失败对象列表中。
-    * enableKms  存储入OBS时是否使用KMS加密。
     * taskType  任务类型，默认为PREFIX。 LIST：对象列表迁移 URL_LIST：URL列表迁移， PREFIX：对象前缀迁移
     * bandwidthPolicy  配置流量控制策略。数组中一个元素对应一个时段的最大带宽，最多允许5个时段，且时段不能重叠。
     * smnConfig  smnConfig
@@ -429,7 +420,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
             'enableMetadataMigration' => 'getEnableMetadataMigration',
             'enableFailedObjectRecording' => 'getEnableFailedObjectRecording',
             'enableRestore' => 'getEnableRestore',
-            'enableKms' => 'getEnableKms',
             'taskType' => 'getTaskType',
             'bandwidthPolicy' => 'getBandwidthPolicy',
             'smnConfig' => 'getSmnConfig',
@@ -601,7 +591,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
         $this->container['enableMetadataMigration'] = isset($data['enableMetadataMigration']) ? $data['enableMetadataMigration'] : null;
         $this->container['enableFailedObjectRecording'] = isset($data['enableFailedObjectRecording']) ? $data['enableFailedObjectRecording'] : null;
         $this->container['enableRestore'] = isset($data['enableRestore']) ? $data['enableRestore'] : null;
-        $this->container['enableKms'] = isset($data['enableKms']) ? $data['enableKms'] : null;
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
         $this->container['bandwidthPolicy'] = isset($data['bandwidthPolicy']) ? $data['bandwidthPolicy'] : null;
         $this->container['smnConfig'] = isset($data['smnConfig']) ? $data['smnConfig'] : null;
@@ -1040,30 +1029,6 @@ class ShowTaskGroupResponse implements ModelInterface, ArrayAccess
     public function setEnableRestore($enableRestore)
     {
         $this->container['enableRestore'] = $enableRestore;
-        return $this;
-    }
-
-    /**
-    * Gets enableKms
-    *  存储入OBS时是否使用KMS加密。
-    *
-    * @return bool|null
-    */
-    public function getEnableKms()
-    {
-        return $this->container['enableKms'];
-    }
-
-    /**
-    * Sets enableKms
-    *
-    * @param bool|null $enableKms 存储入OBS时是否使用KMS加密。
-    *
-    * @return $this
-    */
-    public function setEnableKms($enableKms)
-    {
-        $this->container['enableKms'] = $enableKms;
         return $this;
     }
 

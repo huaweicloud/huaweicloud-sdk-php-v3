@@ -25,7 +25,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
@@ -73,7 +73,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
@@ -142,7 +142,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
@@ -190,7 +190,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
@@ -238,7 +238,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     * availabilityZones  **参数解释**： 可用区列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * numNode  **参数解释**： 实例节点个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * securityGroupId  **参数解释**： 安全组ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
-    * datastoreVersion  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * datastoreVersion  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     * vpcId  **参数解释**： 集群虚拟私有云ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * subnetId  **参数解释**： 集群子网ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicIp  publicIp
@@ -521,7 +521,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *  **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -533,7 +533,7 @@ class ClusterCheckBody implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion **参数解释**： 集群版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $datastoreVersion **参数解释**： 集群版本。选择的版本必须是该规格支持的版本。 **约束限制**： 不涉及。 **取值范围**： 支持的版本范围可以通过 [查询规格信息](ListNodeTypes.xml) 接口查询规格支持的版本进而确定。 **默认取值**： 不涉及。
     *
     * @return $this
     */

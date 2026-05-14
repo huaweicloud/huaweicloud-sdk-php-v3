@@ -24,7 +24,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * dnInstance  关联的后端DN信息。
     * instanceId  实例id。
     * projectId  项目id。
-    * iamAccount  iamAccount
     *
     * @var string[]
     */
@@ -32,8 +31,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
             'compressedDatabasesInfo' => 'string',
             'dnInstance' => '\HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[]',
             'instanceId' => 'string',
-            'projectId' => 'string',
-            'iamAccount' => '\HuaweiCloud\SDK\Ddm\V1\Model\IamAccount'
+            'projectId' => 'string'
     ];
 
     /**
@@ -42,7 +40,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * dnInstance  关联的后端DN信息。
     * instanceId  实例id。
     * projectId  项目id。
-    * iamAccount  iamAccount
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
         'compressedDatabasesInfo' => null,
         'dnInstance' => null,
         'instanceId' => null,
-        'projectId' => null,
-        'iamAccount' => null
+        'projectId' => null
     ];
 
     /**
@@ -81,7 +77,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * dnInstance  关联的后端DN信息。
     * instanceId  实例id。
     * projectId  项目id。
-    * iamAccount  iamAccount
     *
     * @var string[]
     */
@@ -89,8 +84,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
             'compressedDatabasesInfo' => 'compressed_databases_info',
             'dnInstance' => 'dn_instance',
             'instanceId' => 'instance_id',
-            'projectId' => 'project_id',
-            'iamAccount' => 'iam_account'
+            'projectId' => 'project_id'
     ];
 
     /**
@@ -99,7 +93,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * dnInstance  关联的后端DN信息。
     * instanceId  实例id。
     * projectId  项目id。
-    * iamAccount  iamAccount
     *
     * @var string[]
     */
@@ -107,8 +100,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
             'compressedDatabasesInfo' => 'setCompressedDatabasesInfo',
             'dnInstance' => 'setDnInstance',
             'instanceId' => 'setInstanceId',
-            'projectId' => 'setProjectId',
-            'iamAccount' => 'setIamAccount'
+            'projectId' => 'setProjectId'
     ];
 
     /**
@@ -117,7 +109,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * dnInstance  关联的后端DN信息。
     * instanceId  实例id。
     * projectId  项目id。
-    * iamAccount  iamAccount
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
             'compressedDatabasesInfo' => 'getCompressedDatabasesInfo',
             'dnInstance' => 'getDnInstance',
             'instanceId' => 'getInstanceId',
-            'projectId' => 'getProjectId',
-            'iamAccount' => 'getIamAccount'
+            'projectId' => 'getProjectId'
     ];
 
     /**
@@ -191,7 +181,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
         $this->container['dnInstance'] = isset($data['dnInstance']) ? $data['dnInstance'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['iamAccount'] = isset($data['iamAccount']) ? $data['iamAccount'] : null;
     }
 
     /**
@@ -327,30 +316,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
-        return $this;
-    }
-
-    /**
-    * Gets iamAccount
-    *  iamAccount
-    *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\IamAccount|null
-    */
-    public function getIamAccount()
-    {
-        return $this->container['iamAccount'];
-    }
-
-    /**
-    * Sets iamAccount
-    *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\IamAccount|null $iamAccount iamAccount
-    *
-    * @return $this
-    */
-    public function setIamAccount($iamAccount)
-    {
-        $this->container['iamAccount'] = $iamAccount;
         return $this;
     }
 
