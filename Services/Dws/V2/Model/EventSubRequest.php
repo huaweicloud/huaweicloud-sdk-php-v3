@@ -24,7 +24,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
-    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
@@ -54,7 +54,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
-    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
@@ -105,7 +105,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
-    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
@@ -135,7 +135,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
-    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
@@ -165,7 +165,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     * sourceType  **参数解释**： 事件源类型。 **取值范围**： - cluster：集群。 - backup：快照。 - disaster-recovery：容灾。 - data.migration：数据迁移。 - dws.ingestion：DwsIngestion。
     * sourceId  **参数解释**： 事件源ID。 **取值范围**： 不涉及。
     * category  **参数解释**： 事件类别。 **取值范围**： 支持management、monitor、security、system alarm。
-    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * severity  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     * tag  **参数解释**： 事件标签。 **取值范围**： 不涉及。
     * enable  **参数解释**： 是否开启订阅。 **取值范围**： 1为开启，0为关闭。
     * notificationTarget  **参数解释**： 消息通知地址。 **取值范围**： 不涉及。
@@ -392,7 +392,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    *  **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class EventSubRequest implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity **参数解释**： 事件级别。 **取值范围**： 支持normal、warning。
+    * @param string|null $severity **参数解释**： 事件级别。 **取值范围**： 支持normal、warning，可同时包含多值。
     *
     * @return $this
     */

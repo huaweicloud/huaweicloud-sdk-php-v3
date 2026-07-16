@@ -28,6 +28,8 @@ class NodeItem implements ModelInterface, ArrayAccess
     * publicIp  绑定的外网IP。该参数值为\"\"。该参数仅针对集群实例的mongos节点、副本集实例的主节点和备节点、以及单节点实例有效。
     * specCode  资源规格编码。
     * availabilityZone  可用区。
+    * natGatewayId  **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    * externalServicePort  **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class NodeItem implements ModelInterface, ArrayAccess
             'privateIp' => 'string',
             'publicIp' => 'string',
             'specCode' => 'string',
-            'availabilityZone' => 'string'
+            'availabilityZone' => 'string',
+            'natGatewayId' => 'string',
+            'externalServicePort' => 'int'
     ];
 
     /**
@@ -52,6 +56,8 @@ class NodeItem implements ModelInterface, ArrayAccess
     * publicIp  绑定的外网IP。该参数值为\"\"。该参数仅针对集群实例的mongos节点、副本集实例的主节点和备节点、以及单节点实例有效。
     * specCode  资源规格编码。
     * availabilityZone  可用区。
+    * natGatewayId  **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    * externalServicePort  **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class NodeItem implements ModelInterface, ArrayAccess
         'privateIp' => null,
         'publicIp' => null,
         'specCode' => null,
-        'availabilityZone' => null
+        'availabilityZone' => null,
+        'natGatewayId' => null,
+        'externalServicePort' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class NodeItem implements ModelInterface, ArrayAccess
     * publicIp  绑定的外网IP。该参数值为\"\"。该参数仅针对集群实例的mongos节点、副本集实例的主节点和备节点、以及单节点实例有效。
     * specCode  资源规格编码。
     * availabilityZone  可用区。
+    * natGatewayId  **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    * externalServicePort  **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class NodeItem implements ModelInterface, ArrayAccess
             'privateIp' => 'private_ip',
             'publicIp' => 'public_ip',
             'specCode' => 'spec_code',
-            'availabilityZone' => 'availability_zone'
+            'availabilityZone' => 'availability_zone',
+            'natGatewayId' => 'nat_gateway_id',
+            'externalServicePort' => 'external_service_port'
     ];
 
     /**
@@ -121,6 +133,8 @@ class NodeItem implements ModelInterface, ArrayAccess
     * publicIp  绑定的外网IP。该参数值为\"\"。该参数仅针对集群实例的mongos节点、副本集实例的主节点和备节点、以及单节点实例有效。
     * specCode  资源规格编码。
     * availabilityZone  可用区。
+    * natGatewayId  **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    * externalServicePort  **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class NodeItem implements ModelInterface, ArrayAccess
             'privateIp' => 'setPrivateIp',
             'publicIp' => 'setPublicIp',
             'specCode' => 'setSpecCode',
-            'availabilityZone' => 'setAvailabilityZone'
+            'availabilityZone' => 'setAvailabilityZone',
+            'natGatewayId' => 'setNatGatewayId',
+            'externalServicePort' => 'setExternalServicePort'
     ];
 
     /**
@@ -145,6 +161,8 @@ class NodeItem implements ModelInterface, ArrayAccess
     * publicIp  绑定的外网IP。该参数值为\"\"。该参数仅针对集群实例的mongos节点、副本集实例的主节点和备节点、以及单节点实例有效。
     * specCode  资源规格编码。
     * availabilityZone  可用区。
+    * natGatewayId  **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    * externalServicePort  **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class NodeItem implements ModelInterface, ArrayAccess
             'privateIp' => 'getPrivateIp',
             'publicIp' => 'getPublicIp',
             'specCode' => 'getSpecCode',
-            'availabilityZone' => 'getAvailabilityZone'
+            'availabilityZone' => 'getAvailabilityZone',
+            'natGatewayId' => 'getNatGatewayId',
+            'externalServicePort' => 'getExternalServicePort'
     ];
 
     /**
@@ -225,6 +245,8 @@ class NodeItem implements ModelInterface, ArrayAccess
         $this->container['publicIp'] = isset($data['publicIp']) ? $data['publicIp'] : null;
         $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
+        $this->container['natGatewayId'] = isset($data['natGatewayId']) ? $data['natGatewayId'] : null;
+        $this->container['externalServicePort'] = isset($data['externalServicePort']) ? $data['externalServicePort'] : null;
     }
 
     /**
@@ -462,6 +484,54 @@ class NodeItem implements ModelInterface, ArrayAccess
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
+        return $this;
+    }
+
+    /**
+    * Gets natGatewayId
+    *  **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNatGatewayId()
+    {
+        return $this->container['natGatewayId'];
+    }
+
+    /**
+    * Sets natGatewayId
+    *
+    * @param string|null $natGatewayId **参数解释：** 公网NAT网关实例的ID。可以调用“查询公网NAT网关列表”接口获取。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNatGatewayId($natGatewayId)
+    {
+        $this->container['natGatewayId'] = $natGatewayId;
+        return $this;
+    }
+
+    /**
+    * Gets externalServicePort
+    *  **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
+    *
+    * @return int|null
+    */
+    public function getExternalServicePort()
+    {
+        return $this->container['externalServicePort'];
+    }
+
+    /**
+    * Sets externalServicePort
+    *
+    * @param int|null $externalServicePort **参数解释：** 弹性公网IP对外提供服务的端口号。 **取值范围：** 1~65535。
+    *
+    * @return $this
+    */
+    public function setExternalServicePort($externalServicePort)
+    {
+        $this->container['externalServicePort'] = $externalServicePort;
         return $this;
     }
 

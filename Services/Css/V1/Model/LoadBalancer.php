@@ -23,7 +23,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * id  负载均衡器ID。
     * name  负载均衡器名称。
     * guaranteed  是否独享型负载均衡器。
-    * billingInfo  资源账单信息。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID，即虚拟私有云ID。
     * provisioningStatus  负载均衡器的配置状态。
@@ -39,7 +38,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'guaranteed' => 'string',
-            'billingInfo' => 'string',
             'description' => 'string',
             'vpcId' => 'string',
             'provisioningStatus' => 'string',
@@ -55,7 +53,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * id  负载均衡器ID。
     * name  负载均衡器名称。
     * guaranteed  是否独享型负载均衡器。
-    * billingInfo  资源账单信息。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID，即虚拟私有云ID。
     * provisioningStatus  负载均衡器的配置状态。
@@ -71,7 +68,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'guaranteed' => null,
-        'billingInfo' => null,
         'description' => null,
         'vpcId' => null,
         'provisioningStatus' => null,
@@ -108,7 +104,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * id  负载均衡器ID。
     * name  负载均衡器名称。
     * guaranteed  是否独享型负载均衡器。
-    * billingInfo  资源账单信息。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID，即虚拟私有云ID。
     * provisioningStatus  负载均衡器的配置状态。
@@ -124,7 +119,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'guaranteed' => 'guaranteed',
-            'billingInfo' => 'billing_info',
             'description' => 'description',
             'vpcId' => 'vpc_id',
             'provisioningStatus' => 'provisioning_status',
@@ -140,7 +134,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * id  负载均衡器ID。
     * name  负载均衡器名称。
     * guaranteed  是否独享型负载均衡器。
-    * billingInfo  资源账单信息。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID，即虚拟私有云ID。
     * provisioningStatus  负载均衡器的配置状态。
@@ -156,7 +149,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'guaranteed' => 'setGuaranteed',
-            'billingInfo' => 'setBillingInfo',
             'description' => 'setDescription',
             'vpcId' => 'setVpcId',
             'provisioningStatus' => 'setProvisioningStatus',
@@ -172,7 +164,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     * id  负载均衡器ID。
     * name  负载均衡器名称。
     * guaranteed  是否独享型负载均衡器。
-    * billingInfo  资源账单信息。
     * description  描述信息。
     * vpcId  负载均衡器所属VPC ID，即虚拟私有云ID。
     * provisioningStatus  负载均衡器的配置状态。
@@ -188,7 +179,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'guaranteed' => 'getGuaranteed',
-            'billingInfo' => 'getBillingInfo',
             'description' => 'getDescription',
             'vpcId' => 'getVpcId',
             'provisioningStatus' => 'getProvisioningStatus',
@@ -260,7 +250,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['guaranteed'] = isset($data['guaranteed']) ? $data['guaranteed'] : null;
-        $this->container['billingInfo'] = isset($data['billingInfo']) ? $data['billingInfo'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['provisioningStatus'] = isset($data['provisioningStatus']) ? $data['provisioningStatus'] : null;
@@ -362,30 +351,6 @@ class LoadBalancer implements ModelInterface, ArrayAccess
     public function setGuaranteed($guaranteed)
     {
         $this->container['guaranteed'] = $guaranteed;
-        return $this;
-    }
-
-    /**
-    * Gets billingInfo
-    *  资源账单信息。
-    *
-    * @return string|null
-    */
-    public function getBillingInfo()
-    {
-        return $this->container['billingInfo'];
-    }
-
-    /**
-    * Sets billingInfo
-    *
-    * @param string|null $billingInfo 资源账单信息。
-    *
-    * @return $this
-    */
-    public function setBillingInfo($billingInfo)
-    {
-        $this->container['billingInfo'] = $billingInfo;
         return $this;
     }
 

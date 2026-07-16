@@ -28,7 +28,7 @@ class JobItem implements ModelInterface, ArrayAccess
     * process  过程。
     * instanceName  实例名称。
     * instanceId  实例id。
-    * jobs  操作。
+    * operations  操作。
     * databaseName  逻辑库名称。
     * failReason  失败原因。
     *
@@ -43,7 +43,7 @@ class JobItem implements ModelInterface, ArrayAccess
             'process' => 'string',
             'instanceName' => 'string',
             'instanceId' => 'string',
-            'jobs' => 'string[]',
+            'operations' => 'string[]',
             'databaseName' => 'string',
             'failReason' => 'string'
     ];
@@ -58,7 +58,7 @@ class JobItem implements ModelInterface, ArrayAccess
     * process  过程。
     * instanceName  实例名称。
     * instanceId  实例id。
-    * jobs  操作。
+    * operations  操作。
     * databaseName  逻辑库名称。
     * failReason  失败原因。
     *
@@ -73,7 +73,7 @@ class JobItem implements ModelInterface, ArrayAccess
         'process' => null,
         'instanceName' => null,
         'instanceId' => null,
-        'jobs' => null,
+        'operations' => null,
         'databaseName' => null,
         'failReason' => null
     ];
@@ -109,7 +109,7 @@ class JobItem implements ModelInterface, ArrayAccess
     * process  过程。
     * instanceName  实例名称。
     * instanceId  实例id。
-    * jobs  操作。
+    * operations  操作。
     * databaseName  逻辑库名称。
     * failReason  失败原因。
     *
@@ -124,7 +124,7 @@ class JobItem implements ModelInterface, ArrayAccess
             'process' => 'process',
             'instanceName' => 'instance_name',
             'instanceId' => 'instance_id',
-            'jobs' => 'jobs',
+            'operations' => 'operations',
             'databaseName' => 'database_name',
             'failReason' => 'fail_reason'
     ];
@@ -139,7 +139,7 @@ class JobItem implements ModelInterface, ArrayAccess
     * process  过程。
     * instanceName  实例名称。
     * instanceId  实例id。
-    * jobs  操作。
+    * operations  操作。
     * databaseName  逻辑库名称。
     * failReason  失败原因。
     *
@@ -154,7 +154,7 @@ class JobItem implements ModelInterface, ArrayAccess
             'process' => 'setProcess',
             'instanceName' => 'setInstanceName',
             'instanceId' => 'setInstanceId',
-            'jobs' => 'setJobs',
+            'operations' => 'setOperations',
             'databaseName' => 'setDatabaseName',
             'failReason' => 'setFailReason'
     ];
@@ -169,7 +169,7 @@ class JobItem implements ModelInterface, ArrayAccess
     * process  过程。
     * instanceName  实例名称。
     * instanceId  实例id。
-    * jobs  操作。
+    * operations  操作。
     * databaseName  逻辑库名称。
     * failReason  失败原因。
     *
@@ -184,7 +184,7 @@ class JobItem implements ModelInterface, ArrayAccess
             'process' => 'getProcess',
             'instanceName' => 'getInstanceName',
             'instanceId' => 'getInstanceId',
-            'jobs' => 'getJobs',
+            'operations' => 'getOperations',
             'databaseName' => 'getDatabaseName',
             'failReason' => 'getFailReason'
     ];
@@ -255,7 +255,7 @@ class JobItem implements ModelInterface, ArrayAccess
         $this->container['process'] = isset($data['process']) ? $data['process'] : null;
         $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
+        $this->container['operations'] = isset($data['operations']) ? $data['operations'] : null;
         $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
     }
@@ -535,26 +535,26 @@ class JobItem implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets jobs
+    * Gets operations
     *  操作。
     *
     * @return string[]|null
     */
-    public function getJobs()
+    public function getOperations()
     {
-        return $this->container['jobs'];
+        return $this->container['operations'];
     }
 
     /**
-    * Sets jobs
+    * Sets operations
     *
-    * @param string[]|null $jobs 操作。
+    * @param string[]|null $operations 操作。
     *
     * @return $this
     */
-    public function setJobs($jobs)
+    public function setOperations($operations)
     {
-        $this->container['jobs'] = $jobs;
+        $this->container['operations'] = $operations;
         return $this;
     }
 

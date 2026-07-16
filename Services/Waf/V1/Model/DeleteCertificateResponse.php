@@ -23,48 +23,36 @@ class DeleteCertificateResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  证书ID
     * name  证书名
-    * content  证书文件，PEM编码
-    * key  证书私钥，PEM编码
     * expireTime  证书过期时间戳
-    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
-    * bindHost  证书关联的域名信息
+    * certType  证书类型
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'content' => 'string',
-            'key' => 'string',
             'expireTime' => 'int',
-            'expStatus' => 'int',
             'timestamp' => 'int',
-            'bindHost' => '\HuaweiCloud\SDK\Waf\V1\Model\BindHost[]'
+            'certType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  证书ID
     * name  证书名
-    * content  证书文件，PEM编码
-    * key  证书私钥，PEM编码
     * expireTime  证书过期时间戳
-    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
-    * bindHost  证书关联的域名信息
+    * certType  证书类型
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'content' => null,
-        'key' => null,
         'expireTime' => 'int64',
-        'expStatus' => null,
         'timestamp' => 'int64',
-        'bindHost' => null
+        'certType' => null
     ];
 
     /**
@@ -92,72 +80,54 @@ class DeleteCertificateResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  证书ID
     * name  证书名
-    * content  证书文件，PEM编码
-    * key  证书私钥，PEM编码
     * expireTime  证书过期时间戳
-    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
-    * bindHost  证书关联的域名信息
+    * certType  证书类型
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'content' => 'content',
-            'key' => 'key',
             'expireTime' => 'expire_time',
-            'expStatus' => 'exp_status',
             'timestamp' => 'timestamp',
-            'bindHost' => 'bind_host'
+            'certType' => 'cert_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  证书ID
     * name  证书名
-    * content  证书文件，PEM编码
-    * key  证书私钥，PEM编码
     * expireTime  证书过期时间戳
-    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
-    * bindHost  证书关联的域名信息
+    * certType  证书类型
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
-            'content' => 'setContent',
-            'key' => 'setKey',
             'expireTime' => 'setExpireTime',
-            'expStatus' => 'setExpStatus',
             'timestamp' => 'setTimestamp',
-            'bindHost' => 'setBindHost'
+            'certType' => 'setCertType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  证书ID
     * name  证书名
-    * content  证书文件，PEM编码
-    * key  证书私钥，PEM编码
     * expireTime  证书过期时间戳
-    * expStatus  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
     * timestamp  证书上传时间戳
-    * bindHost  证书关联的域名信息
+    * certType  证书类型
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
-            'content' => 'getContent',
-            'key' => 'getKey',
             'expireTime' => 'getExpireTime',
-            'expStatus' => 'getExpStatus',
             'timestamp' => 'getTimestamp',
-            'bindHost' => 'getBindHost'
+            'certType' => 'getCertType'
     ];
 
     /**
@@ -220,12 +190,9 @@ class DeleteCertificateResponse implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
-        $this->container['expStatus'] = isset($data['expStatus']) ? $data['expStatus'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
-        $this->container['bindHost'] = isset($data['bindHost']) ? $data['bindHost'] : null;
+        $this->container['certType'] = isset($data['certType']) ? $data['certType'] : null;
     }
 
     /**
@@ -299,54 +266,6 @@ class DeleteCertificateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets content
-    *  证书文件，PEM编码
-    *
-    * @return string|null
-    */
-    public function getContent()
-    {
-        return $this->container['content'];
-    }
-
-    /**
-    * Sets content
-    *
-    * @param string|null $content 证书文件，PEM编码
-    *
-    * @return $this
-    */
-    public function setContent($content)
-    {
-        $this->container['content'] = $content;
-        return $this;
-    }
-
-    /**
-    * Gets key
-    *  证书私钥，PEM编码
-    *
-    * @return string|null
-    */
-    public function getKey()
-    {
-        return $this->container['key'];
-    }
-
-    /**
-    * Sets key
-    *
-    * @param string|null $key 证书私钥，PEM编码
-    *
-    * @return $this
-    */
-    public function setKey($key)
-    {
-        $this->container['key'] = $key;
-        return $this;
-    }
-
-    /**
     * Gets expireTime
     *  证书过期时间戳
     *
@@ -367,30 +286,6 @@ class DeleteCertificateResponse implements ModelInterface, ArrayAccess
     public function setExpireTime($expireTime)
     {
         $this->container['expireTime'] = $expireTime;
-        return $this;
-    }
-
-    /**
-    * Gets expStatus
-    *  **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
-    *
-    * @return int|null
-    */
-    public function getExpStatus()
-    {
-        return $this->container['expStatus'];
-    }
-
-    /**
-    * Sets expStatus
-    *
-    * @param int|null $expStatus **参数解释：** 证书过期状态 **约束限制：** 不涉及 **取值范围：**  - 0:未过期  - 1:已过期  - 2:即将过期（证书将在一个月内过期）  **默认取值：** 不涉及
-    *
-    * @return $this
-    */
-    public function setExpStatus($expStatus)
-    {
-        $this->container['expStatus'] = $expStatus;
         return $this;
     }
 
@@ -419,26 +314,26 @@ class DeleteCertificateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets bindHost
-    *  证书关联的域名信息
+    * Gets certType
+    *  证书类型
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\BindHost[]|null
+    * @return string|null
     */
-    public function getBindHost()
+    public function getCertType()
     {
-        return $this->container['bindHost'];
+        return $this->container['certType'];
     }
 
     /**
-    * Sets bindHost
+    * Sets certType
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\BindHost[]|null $bindHost 证书关联的域名信息
+    * @param string|null $certType 证书类型
     *
     * @return $this
     */
-    public function setBindHost($bindHost)
+    public function setCertType($certType)
     {
-        $this->container['bindHost'] = $bindHost;
+        $this->container['certType'] = $certType;
         return $this;
     }
 

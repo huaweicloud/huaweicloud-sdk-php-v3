@@ -27,6 +27,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * quotaStatus  **参数解释**: 配额状态 **约束限制**: 不涉及 **取值范围**: 包含如下三种： - normal ： 正常 - expired ：过期 - freeze ：冻结 **默认取值**: 不涉及
     * usedStatus  **参数解释**: 使用状态 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - idle ：空闲的 - used ：使用中 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
     * resourceId  **参数解释** : HSS配额的资源ID **约束限制** : 不涉及 **取值范围** : 字符长度1-128位 **默认取值** : 不涉及
     * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
@@ -42,6 +43,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
             'quotaStatus' => 'string',
             'usedStatus' => 'string',
             'hostName' => 'string',
+            'hostIdList' => 'string[]',
             'resourceId' => 'string',
             'chargingMode' => 'string',
             'limit' => 'int',
@@ -57,6 +59,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * quotaStatus  **参数解释**: 配额状态 **约束限制**: 不涉及 **取值范围**: 包含如下三种： - normal ： 正常 - expired ：过期 - freeze ：冻结 **默认取值**: 不涉及
     * usedStatus  **参数解释**: 使用状态 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - idle ：空闲的 - used ：使用中 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
     * resourceId  **参数解释** : HSS配额的资源ID **约束限制** : 不涉及 **取值范围** : 字符长度1-128位 **默认取值** : 不涉及
     * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
@@ -72,6 +75,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
         'quotaStatus' => null,
         'usedStatus' => null,
         'hostName' => null,
+        'hostIdList' => null,
         'resourceId' => null,
         'chargingMode' => null,
         'limit' => 'int32',
@@ -108,6 +112,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * quotaStatus  **参数解释**: 配额状态 **约束限制**: 不涉及 **取值范围**: 包含如下三种： - normal ： 正常 - expired ：过期 - freeze ：冻结 **默认取值**: 不涉及
     * usedStatus  **参数解释**: 使用状态 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - idle ：空闲的 - used ：使用中 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
     * resourceId  **参数解释** : HSS配额的资源ID **约束限制** : 不涉及 **取值范围** : 字符长度1-128位 **默认取值** : 不涉及
     * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
@@ -123,6 +128,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
             'quotaStatus' => 'quota_status',
             'usedStatus' => 'used_status',
             'hostName' => 'host_name',
+            'hostIdList' => 'host_id_list',
             'resourceId' => 'resource_id',
             'chargingMode' => 'charging_mode',
             'limit' => 'limit',
@@ -138,6 +144,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * quotaStatus  **参数解释**: 配额状态 **约束限制**: 不涉及 **取值范围**: 包含如下三种： - normal ： 正常 - expired ：过期 - freeze ：冻结 **默认取值**: 不涉及
     * usedStatus  **参数解释**: 使用状态 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - idle ：空闲的 - used ：使用中 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
     * resourceId  **参数解释** : HSS配额的资源ID **约束限制** : 不涉及 **取值范围** : 字符长度1-128位 **默认取值** : 不涉及
     * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
@@ -153,6 +160,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
             'quotaStatus' => 'setQuotaStatus',
             'usedStatus' => 'setUsedStatus',
             'hostName' => 'setHostName',
+            'hostIdList' => 'setHostIdList',
             'resourceId' => 'setResourceId',
             'chargingMode' => 'setChargingMode',
             'limit' => 'setLimit',
@@ -168,6 +176,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * quotaStatus  **参数解释**: 配额状态 **约束限制**: 不涉及 **取值范围**: 包含如下三种： - normal ： 正常 - expired ：过期 - freeze ：冻结 **默认取值**: 不涉及
     * usedStatus  **参数解释**: 使用状态 **约束限制**: 不涉及 **取值范围**: 包含如下两种： - idle ：空闲的 - used ：使用中 **默认取值**: 不涉及
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
+    * hostIdList  **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
     * resourceId  **参数解释** : HSS配额的资源ID **约束限制** : 不涉及 **取值范围** : 字符长度1-128位 **默认取值** : 不涉及
     * chargingMode  **参数解释**： 收费模式 **约束限制**: 不涉及 **取值范围**: - packet_cycle ：包年/包月。 - on_demand ：按需。 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
@@ -183,6 +192,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
             'quotaStatus' => 'getQuotaStatus',
             'usedStatus' => 'getUsedStatus',
             'hostName' => 'getHostName',
+            'hostIdList' => 'getHostIdList',
             'resourceId' => 'getResourceId',
             'chargingMode' => 'getChargingMode',
             'limit' => 'getLimit',
@@ -254,6 +264,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
         $this->container['quotaStatus'] = isset($data['quotaStatus']) ? $data['quotaStatus'] : null;
         $this->container['usedStatus'] = isset($data['usedStatus']) ? $data['usedStatus'] : null;
         $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
+        $this->container['hostIdList'] = isset($data['hostIdList']) ? $data['hostIdList'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -522,6 +533,30 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     public function setHostName($hostName)
     {
         $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets hostIdList
+    *  **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getHostIdList()
+    {
+        return $this->container['hostIdList'];
+    }
+
+    /**
+    * Sets hostIdList
+    *
+    * @param string[]|null $hostIdList **参数解释**: 服务器ID列表 **约束限制**: 不涉及 **取值范围**: 单个服务器ID字符长度1-64位 批量查询服务器ID个数1-100个 采用逗号分割 **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setHostIdList($hostIdList)
+    {
+        $this->container['hostIdList'] = $hostIdList;
         return $this;
     }
 

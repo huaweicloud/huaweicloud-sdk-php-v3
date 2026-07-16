@@ -439,23 +439,10 @@ class Snapshots implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const BACKUP_KEY__20160823_035923 = '20160823_035923';
     const BACKUP_LEVEL_CLUSTER = 'cluster';
     const BACKUP_LEVEL_SCHEMA = 'schema';
     const BACKUP_LEVEL_TABLE = 'table';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getBackupKeyAllowableValues()
-    {
-        return [
-            self::BACKUP_KEY__20160823_035923,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -556,14 +543,6 @@ class Snapshots implements ModelInterface, ArrayAccess
         if ($this->container['clusterId'] === null) {
             $invalidProperties[] = "'clusterId' can't be null";
         }
-            $allowedValues = $this->getBackupKeyAllowableValues();
-                if (!is_null($this->container['backupKey']) && !in_array($this->container['backupKey'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'backupKey', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getBackupLevelAllowableValues();
                 if (!is_null($this->container['backupLevel']) && !in_array($this->container['backupLevel'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(

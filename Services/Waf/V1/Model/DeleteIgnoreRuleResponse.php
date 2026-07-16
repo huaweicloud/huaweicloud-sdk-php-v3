@@ -32,7 +32,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
-    * domains  防护域名或防护网站
+    * domain  防护域名或防护网站
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'string',
             'conditions' => '\HuaweiCloud\SDK\Waf\V1\Model\Condition[]',
             'advanced' => '\HuaweiCloud\SDK\Waf\V1\Model\IgnoreAdvanced',
-            'domains' => 'string[]'
+            'domain' => 'string[]'
     ];
 
     /**
@@ -64,7 +64,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
-    * domains  防护域名或防护网站
+    * domain  防护域名或防护网站
     *
     * @var string[]
     */
@@ -80,7 +80,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
         'urlLogic' => null,
         'conditions' => null,
         'advanced' => null,
-        'domains' => null
+        'domain' => null
     ];
 
     /**
@@ -117,7 +117,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
-    * domains  防护域名或防护网站
+    * domain  防护域名或防护网站
     *
     * @var string[]
     */
@@ -133,7 +133,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'url_logic',
             'conditions' => 'conditions',
             'advanced' => 'advanced',
-            'domains' => 'domains'
+            'domain' => 'domain'
     ];
 
     /**
@@ -149,7 +149,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
-    * domains  防护域名或防护网站
+    * domain  防护域名或防护网站
     *
     * @var string[]
     */
@@ -165,7 +165,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'setUrlLogic',
             'conditions' => 'setConditions',
             'advanced' => 'setAdvanced',
-            'domains' => 'setDomains'
+            'domain' => 'setDomain'
     ];
 
     /**
@@ -181,7 +181,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     * urlLogic  url匹配逻辑
     * conditions  条件
     * advanced  advanced
-    * domains  防护域名或防护网站
+    * domain  防护域名或防护网站
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
             'urlLogic' => 'getUrlLogic',
             'conditions' => 'getConditions',
             'advanced' => 'getAdvanced',
-            'domains' => 'getDomains'
+            'domain' => 'getDomain'
     ];
 
     /**
@@ -269,7 +269,7 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
         $this->container['urlLogic'] = isset($data['urlLogic']) ? $data['urlLogic'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
         $this->container['advanced'] = isset($data['advanced']) ? $data['advanced'] : null;
-        $this->container['domains'] = isset($data['domains']) ? $data['domains'] : null;
+        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
     }
 
     /**
@@ -559,26 +559,26 @@ class DeleteIgnoreRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets domains
+    * Gets domain
     *  防护域名或防护网站
     *
     * @return string[]|null
     */
-    public function getDomains()
+    public function getDomain()
     {
-        return $this->container['domains'];
+        return $this->container['domain'];
     }
 
     /**
-    * Sets domains
+    * Sets domain
     *
-    * @param string[]|null $domains 防护域名或防护网站
+    * @param string[]|null $domain 防护域名或防护网站
     *
     * @return $this
     */
-    public function setDomains($domains)
+    public function setDomain($domain)
     {
-        $this->container['domains'] = $domains;
+        $this->container['domain'] = $domain;
         return $this;
     }
 

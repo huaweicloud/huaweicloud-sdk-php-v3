@@ -26,7 +26,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
     * masterKeyId  **参数解释**： KMS密钥ID。 **取值范围**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **取值范围**： 不涉及。
     * lastRotateKeyTime  **参数解释**： 最后做密钥轮转的时间。 **取值范围**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @var string[]
     */
@@ -46,7 +46,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
     * masterKeyId  **参数解释**： KMS密钥ID。 **取值范围**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **取值范围**： 不涉及。
     * lastRotateKeyTime  **参数解释**： 最后做密钥轮转的时间。 **取值范围**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @var string[]
     */
@@ -87,7 +87,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
     * masterKeyId  **参数解释**： KMS密钥ID。 **取值范围**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **取值范围**： 不涉及。
     * lastRotateKeyTime  **参数解释**： 最后做密钥轮转的时间。 **取值范围**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @var string[]
     */
@@ -107,7 +107,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
     * masterKeyId  **参数解释**： KMS密钥ID。 **取值范围**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **取值范围**： 不涉及。
     * lastRotateKeyTime  **参数解释**： 最后做密钥轮转的时间。 **取值范围**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
     * masterKeyId  **参数解释**： KMS密钥ID。 **取值范围**： 不涉及。
     * masterKeyName  **参数解释**： KMS密钥名称。 **取值范围**： 不涉及。
     * lastRotateKeyTime  **参数解释**： 最后做密钥轮转的时间。 **取值范围**： 不涉及。
-    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    * cryptAlgorithm  **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cryptAlgorithm
-    *  **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    *  **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class ShowClusterEncryptInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cryptAlgorithm
     *
-    * @param string|null $cryptAlgorithm **参数解释**： 加密方式。 **取值范围**： 不涉及。
+    * @param string|null $cryptAlgorithm **参数解释**： 加密方式。 **取值范围**： generalCipher：scc国际加密算法 SMCompatible：scc国密算法 SMCompatibleL4：加密卡加密
     *
     * @return $this
     */

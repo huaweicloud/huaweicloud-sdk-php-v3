@@ -200,13 +200,10 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dashboardName']) && !preg_match("/^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/", $this->container['dashboardName'])) {
                 $invalidProperties[] = "invalid value for 'dashboardName', must be conform to the pattern /^([\\u4E00-\\u9FFF]|[a-z]|[A-Z]|[0-9]|_|-)+$/.";
             }
-        if ($this->container['rowWidgetNum'] === null) {
-            $invalidProperties[] = "'rowWidgetNum' can't be null";
-        }
-            if (($this->container['rowWidgetNum'] > 4)) {
+            if (!is_null($this->container['rowWidgetNum']) && ($this->container['rowWidgetNum'] > 4)) {
                 $invalidProperties[] = "invalid value for 'rowWidgetNum', must be smaller than or equal to 4.";
             }
-            if (($this->container['rowWidgetNum'] < 0)) {
+            if (!is_null($this->container['rowWidgetNum']) && ($this->container['rowWidgetNum'] < 0)) {
                 $invalidProperties[] = "invalid value for 'rowWidgetNum', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -275,7 +272,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
     * Gets rowWidgetNum
     *  **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     *
-    * @return int
+    * @return int|null
     */
     public function getRowWidgetNum()
     {
@@ -285,7 +282,7 @@ class UpdateDashboardRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets rowWidgetNum
     *
-    * @param int $rowWidgetNum **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
+    * @param int|null $rowWidgetNum **参数解释** 监控视图展示模式 **约束限制** 不涉及 **取值范围** - 0 自定义坐标 - 1 每行一个 - 2 每行两个 - 3 每行三个 - 4 每行四个 **默认取值** 不涉及
     *
     * @return $this
     */

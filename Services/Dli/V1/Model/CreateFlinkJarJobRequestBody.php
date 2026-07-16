@@ -47,6 +47,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
@@ -82,6 +83,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'int',
             'checkpointPath' => 'string',
             'runtimeConfig' => 'string',
+            'flinkLogConfig' => 'string',
             'executionAgencyUrn' => 'string',
             'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
             'resourceConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig',
@@ -117,6 +119,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
@@ -152,6 +155,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         'resumeMaxNum' => 'int32',
         'checkpointPath' => null,
         'runtimeConfig' => null,
+        'flinkLogConfig' => null,
         'executionAgencyUrn' => null,
         'tags' => null,
         'resourceConfig' => null,
@@ -208,6 +212,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
@@ -243,6 +248,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'resume_max_num',
             'checkpointPath' => 'checkpoint_path',
             'runtimeConfig' => 'runtime_config',
+            'flinkLogConfig' => 'flink_log_config',
             'executionAgencyUrn' => 'execution_agency_urn',
             'tags' => 'tags',
             'resourceConfig' => 'resource_config',
@@ -278,6 +284,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
@@ -313,6 +320,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'setResumeMaxNum',
             'checkpointPath' => 'setCheckpointPath',
             'runtimeConfig' => 'setRuntimeConfig',
+            'flinkLogConfig' => 'setFlinkLogConfig',
             'executionAgencyUrn' => 'setExecutionAgencyUrn',
             'tags' => 'setTags',
             'resourceConfig' => 'setResourceConfig',
@@ -348,6 +356,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * executionAgencyUrn  授权给DLI的委托名。Flink1.15版本时支持配置该参数。
     * tags  标签
     * resourceConfig  resourceConfig
@@ -383,6 +392,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'getResumeMaxNum',
             'checkpointPath' => 'getCheckpointPath',
             'runtimeConfig' => 'getRuntimeConfig',
+            'flinkLogConfig' => 'getFlinkLogConfig',
             'executionAgencyUrn' => 'getExecutionAgencyUrn',
             'tags' => 'getTags',
             'resourceConfig' => 'getResourceConfig',
@@ -474,6 +484,7 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
         $this->container['checkpointPath'] = isset($data['checkpointPath']) ? $data['checkpointPath'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
+        $this->container['flinkLogConfig'] = isset($data['flinkLogConfig']) ? $data['flinkLogConfig'] : null;
         $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['resourceConfig'] = isset($data['resourceConfig']) ? $data['resourceConfig'] : null;
@@ -1168,6 +1179,30 @@ class CreateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     public function setRuntimeConfig($runtimeConfig)
     {
         $this->container['runtimeConfig'] = $runtimeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets flinkLogConfig
+    *  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return string|null
+    */
+    public function getFlinkLogConfig()
+    {
+        return $this->container['flinkLogConfig'];
+    }
+
+    /**
+    * Sets flinkLogConfig
+    *
+    * @param string|null $flinkLogConfig Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return $this
+    */
+    public function setFlinkLogConfig($flinkLogConfig)
+    {
+        $this->container['flinkLogConfig'] = $flinkLogConfig;
         return $this;
     }
 

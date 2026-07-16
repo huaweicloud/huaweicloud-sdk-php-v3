@@ -24,7 +24,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
     * roleId  **参数解释：** 角色id。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleName  **参数解释：** 角色名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleNameCn  **参数解释：** 角色中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * resourcePermissions  **参数解释：** 资源权限对象。
+    * resourcePermissions  **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
     * roleId  **参数解释：** 角色id。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleName  **参数解释：** 角色名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleNameCn  **参数解释：** 角色中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * resourcePermissions  **参数解释：** 资源权限对象。
+    * resourcePermissions  **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
     * roleId  **参数解释：** 角色id。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleName  **参数解释：** 角色名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleNameCn  **参数解释：** 角色中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * resourcePermissions  **参数解释：** 资源权限对象。
+    * resourcePermissions  **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
     * roleId  **参数解释：** 角色id。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleName  **参数解释：** 角色名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleNameCn  **参数解释：** 角色中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * resourcePermissions  **参数解释：** 资源权限对象。
+    * resourcePermissions  **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
     * roleId  **参数解释：** 角色id。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleName  **参数解释：** 角色名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * roleNameCn  **参数解释：** 角色中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * resourcePermissions  **参数解释：** 资源权限对象。
+    * resourcePermissions  **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @var string[]
     */
@@ -338,7 +338,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourcePermissions
-    *  **参数解释：** 资源权限对象。
+    *  **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @return map[string,\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ResourcePermissionDto]|null
     */
@@ -350,7 +350,7 @@ class PermissionDto implements ModelInterface, ArrayAccess
     /**
     * Sets resourcePermissions
     *
-    * @param map[string,\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ResourcePermissionDto]|null $resourcePermissions **参数解释：** 资源权限对象。
+    * @param map[string,\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ResourcePermissionDto]|null $resourcePermissions **参数解释：** 资源权限对象。记录权限点的ID、名称、以及角色是否有该权限点权限等。
     *
     * @return $this
     */

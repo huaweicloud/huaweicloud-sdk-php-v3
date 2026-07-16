@@ -446,6 +446,9 @@ class RetryTaskGroupReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['sourceCdnAuthenticationKey']) && (mb_strlen($this->container['sourceCdnAuthenticationKey']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['sourceCdnAuthenticationKey']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sourceCdnAuthenticationKey'])) {
+                $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
+            }
             $allowedValues = $this->getSourceCdnCryptoTypeAllowableValues();
                 if (!is_null($this->container['sourceCdnCryptoType']) && !in_array($this->container['sourceCdnCryptoType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(

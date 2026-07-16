@@ -21,7 +21,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * decodedMessage  鉴权失败原因的明文。
+    * decodedMessage  **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * decodedMessage  鉴权失败原因的明文。
+    * decodedMessage  **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * decodedMessage  鉴权失败原因的明文。
+    * decodedMessage  **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * decodedMessage  鉴权失败原因的明文。
+    * decodedMessage  **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * decodedMessage  鉴权失败原因的明文。
+    * decodedMessage  **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets decodedMessage
-    *  鉴权失败原因的明文。
+    *  **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -193,7 +193,7 @@ class DecodeAuthorizationMessageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets decodedMessage
     *
-    * @param string|null $decodedMessage 鉴权失败原因的明文。
+    * @param string|null $decodedMessage **参数解释**： 鉴权失败原因的明文。  **取值范围**： 不涉及。
     *
     * @return $this
     */

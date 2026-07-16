@@ -20,7 +20,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  模板类型（helm，static）
+    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * require  是否为必安装插件
     * labels  模板所属分组
     * logoUrl  Logo图片地址
@@ -42,7 +42,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  模板类型（helm，static）
+    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * require  是否为必安装插件
     * labels  模板所属分组
     * logoUrl  Logo图片地址
@@ -85,7 +85,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  模板类型（helm，static）
+    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * require  是否为必安装插件
     * labels  模板所属分组
     * logoUrl  Logo图片地址
@@ -107,7 +107,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  模板类型（helm，static）
+    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * require  是否为必安装插件
     * labels  模板所属分组
     * logoUrl  Logo图片地址
@@ -129,7 +129,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  模板类型（helm，static）
+    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * require  是否为必安装插件
     * labels  模板所属分组
     * logoUrl  Logo图片地址
@@ -258,7 +258,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  模板类型（helm，static）
+    *  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 模板类型（helm，static）
+    * @param string $type **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     *
     * @return $this
     */

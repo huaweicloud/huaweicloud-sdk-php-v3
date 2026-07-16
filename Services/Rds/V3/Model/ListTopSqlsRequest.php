@@ -22,6 +22,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
     * xLanguage  语言。
+    * offset  offset
     * sortKey  排序字段: avg_cpu_time:平均CPU耗时 total_cpu_time：总CPU耗时 total_duration_time：总执行时间 avg_duration_time：平均执行时间 total_rows：总行数 avg_rows：平均行数 total_logical_reads：总逻辑读 avg_logical_reads：平均逻辑读
     * limit  TOP 数量，最大支持15个。
     * statement  搜索文本内容。
@@ -32,6 +33,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'instanceId' => 'string',
             'xLanguage' => 'string',
+            'offset' => 'int',
             'sortKey' => 'string',
             'limit' => 'int',
             'statement' => 'string',
@@ -42,6 +44,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
     * xLanguage  语言。
+    * offset  offset
     * sortKey  排序字段: avg_cpu_time:平均CPU耗时 total_cpu_time：总CPU耗时 total_duration_time：总执行时间 avg_duration_time：平均执行时间 total_rows：总行数 avg_rows：平均行数 total_logical_reads：总逻辑读 avg_logical_reads：平均逻辑读
     * limit  TOP 数量，最大支持15个。
     * statement  搜索文本内容。
@@ -52,6 +55,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'instanceId' => null,
         'xLanguage' => null,
+        'offset' => null,
         'sortKey' => null,
         'limit' => 'int32',
         'statement' => null,
@@ -83,6 +87,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  实例ID。
     * xLanguage  语言。
+    * offset  offset
     * sortKey  排序字段: avg_cpu_time:平均CPU耗时 total_cpu_time：总CPU耗时 total_duration_time：总执行时间 avg_duration_time：平均执行时间 total_rows：总行数 avg_rows：平均行数 total_logical_reads：总逻辑读 avg_logical_reads：平均逻辑读
     * limit  TOP 数量，最大支持15个。
     * statement  搜索文本内容。
@@ -93,6 +98,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'instanceId' => 'instance_id',
             'xLanguage' => 'X-Language',
+            'offset' => 'offset',
             'sortKey' => 'sort_key',
             'limit' => 'limit',
             'statement' => 'statement',
@@ -103,6 +109,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
     * xLanguage  语言。
+    * offset  offset
     * sortKey  排序字段: avg_cpu_time:平均CPU耗时 total_cpu_time：总CPU耗时 total_duration_time：总执行时间 avg_duration_time：平均执行时间 total_rows：总行数 avg_rows：平均行数 total_logical_reads：总逻辑读 avg_logical_reads：平均逻辑读
     * limit  TOP 数量，最大支持15个。
     * statement  搜索文本内容。
@@ -113,6 +120,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'instanceId' => 'setInstanceId',
             'xLanguage' => 'setXLanguage',
+            'offset' => 'setOffset',
             'sortKey' => 'setSortKey',
             'limit' => 'setLimit',
             'statement' => 'setStatement',
@@ -123,6 +131,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
     * xLanguage  语言。
+    * offset  offset
     * sortKey  排序字段: avg_cpu_time:平均CPU耗时 total_cpu_time：总CPU耗时 total_duration_time：总执行时间 avg_duration_time：平均执行时间 total_rows：总行数 avg_rows：平均行数 total_logical_reads：总逻辑读 avg_logical_reads：平均逻辑读
     * limit  TOP 数量，最大支持15个。
     * statement  搜索文本内容。
@@ -133,6 +142,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'instanceId' => 'getInstanceId',
             'xLanguage' => 'getXLanguage',
+            'offset' => 'getOffset',
             'sortKey' => 'getSortKey',
             'limit' => 'getLimit',
             'statement' => 'getStatement',
@@ -214,6 +224,7 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['statement'] = isset($data['statement']) ? $data['statement'] : null;
@@ -304,6 +315,30 @@ class ListTopSqlsRequest implements ModelInterface, ArrayAccess
     public function setXLanguage($xLanguage)
     {
         $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  offset
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset offset
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

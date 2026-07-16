@@ -21,22 +21,30 @@ class ListDomainIPsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ips  负载均衡器dns ip信息列表。
+    * ips  负载均衡器IP地址的域名解析配置列表。
+    * pageInfo  pageInfo
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ips' => '\HuaweiCloud\SDK\Elb\V3\Model\DnsIpResponse[]'
+            'ips' => '\HuaweiCloud\SDK\Elb\V3\Model\DnsIpResponse[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Elb\V3\Model\PageInfo',
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ips  负载均衡器dns ip信息列表。
+    * ips  负载均衡器IP地址的域名解析配置列表。
+    * pageInfo  pageInfo
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ips' => null
+        'ips' => null,
+        'pageInfo' => null,
+        'requestId' => null
     ];
 
     /**
@@ -62,32 +70,44 @@ class ListDomainIPsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ips  负载均衡器dns ip信息列表。
+    * ips  负载均衡器IP地址的域名解析配置列表。
+    * pageInfo  pageInfo
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'ips' => 'ips'
+            'ips' => 'ips',
+            'pageInfo' => 'page_info',
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ips  负载均衡器dns ip信息列表。
+    * ips  负载均衡器IP地址的域名解析配置列表。
+    * pageInfo  pageInfo
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $setters = [
-            'ips' => 'setIps'
+            'ips' => 'setIps',
+            'pageInfo' => 'setPageInfo',
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ips  负载均衡器dns ip信息列表。
+    * ips  负载均衡器IP地址的域名解析配置列表。
+    * pageInfo  pageInfo
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $getters = [
-            'ips' => 'getIps'
+            'ips' => 'getIps',
+            'pageInfo' => 'getPageInfo',
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -149,6 +169,8 @@ class ListDomainIPsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ips'] = isset($data['ips']) ? $data['ips'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -175,7 +197,7 @@ class ListDomainIPsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ips
-    *  负载均衡器dns ip信息列表。
+    *  负载均衡器IP地址的域名解析配置列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\DnsIpResponse[]|null
     */
@@ -187,13 +209,61 @@ class ListDomainIPsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ips
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\DnsIpResponse[]|null $ips 负载均衡器dns ip信息列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\DnsIpResponse[]|null $ips 负载均衡器IP地址的域名解析配置列表。
     *
     * @return $this
     */
     public function setIps($ips)
     {
         $this->container['ips'] = $ips;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
+        return $this;
+    }
+
+    /**
+    * Gets requestId
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 

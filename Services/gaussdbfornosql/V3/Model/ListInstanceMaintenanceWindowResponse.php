@@ -21,7 +21,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * maintenanceWindow  参数解释： 实例的可维护时间窗。
+    * maintenanceWindow  **参数解释：** 实例的可维护时间窗。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * maintenanceWindow  参数解释： 实例的可维护时间窗。
+    * maintenanceWindow  **参数解释：** 实例的可维护时间窗。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * maintenanceWindow  参数解释： 实例的可维护时间窗。
+    * maintenanceWindow  **参数解释：** 实例的可维护时间窗。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * maintenanceWindow  参数解释： 实例的可维护时间窗。
+    * maintenanceWindow  **参数解释：** 实例的可维护时间窗。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * maintenanceWindow  参数解释： 实例的可维护时间窗。
+    * maintenanceWindow  **参数解释：** 实例的可维护时间窗。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
 
     /**
     * Gets maintenanceWindow
-    *  参数解释： 实例的可维护时间窗。
+    *  **参数解释：** 实例的可维护时间窗。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ListInstanceMaintenanceWindowResponse implements ModelInterface, ArrayAcce
     /**
     * Sets maintenanceWindow
     *
-    * @param string|null $maintenanceWindow 参数解释： 实例的可维护时间窗。
+    * @param string|null $maintenanceWindow **参数解释：** 实例的可维护时间窗。
     *
     * @return $this
     */

@@ -201,6 +201,15 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['ipsIds'] === null) {
+            $invalidProperties[] = "'ipsIds' can't be null";
+        }
+        if ($this->container['objectId'] === null) {
+            $invalidProperties[] = "'objectId' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -227,7 +236,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     * Gets ipsIds
     *  ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getIpsIds()
     {
@@ -237,7 +246,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipsIds
     *
-    * @param string[]|null $ipsIds ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
+    * @param string[] $ipsIds ips的id列表，Ips规则id，为必填参数，可通过[获取ips规则列表]( ListIpsRules.xml)查询获得，通过返回值中的data.records.ips_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -251,7 +260,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     * Gets objectId
     *  防护对象id
     *
-    * @return string|null
+    * @return string
     */
     public function getObjectId()
     {
@@ -261,7 +270,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id
+    * @param string $objectId 防护对象id
     *
     * @return $this
     */
@@ -275,7 +284,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     * Gets status
     *  ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
-    * @return string|null
+    * @return string
     */
     public function getStatus()
     {
@@ -285,7 +294,7 @@ class IpsRuleChangeDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
+    * @param string $status ips规则状态，包含观察：OBSERVE、拦截：ENABLE、禁用：CLOSE、恢复默认：DEFAULT、全局恢复默认：ALL_DEFAULT
     *
     * @return $this
     */

@@ -169,12 +169,6 @@ class SecurityOptions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['secureBootEnabled'] === null) {
-            $invalidProperties[] = "'secureBootEnabled' can't be null";
-        }
-        if ($this->container['tpmEnabled'] === null) {
-            $invalidProperties[] = "'tpmEnabled' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class SecurityOptions implements ModelInterface, ArrayAccess
     * Gets secureBootEnabled
     *  是否支持安全启动 true:支持安全启动 false:不支持安全启动 默认值：false
     *
-    * @return bool
+    * @return bool|null
     */
     public function getSecureBootEnabled()
     {
@@ -203,7 +197,7 @@ class SecurityOptions implements ModelInterface, ArrayAccess
     /**
     * Sets secureBootEnabled
     *
-    * @param bool $secureBootEnabled 是否支持安全启动 true:支持安全启动 false:不支持安全启动 默认值：false
+    * @param bool|null $secureBootEnabled 是否支持安全启动 true:支持安全启动 false:不支持安全启动 默认值：false
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class SecurityOptions implements ModelInterface, ArrayAccess
     * Gets tpmEnabled
     *  是否支持vtpm启动 true:支持vtpm启动 false:不支持vtpm启动 默认值：false
     *
-    * @return bool
+    * @return bool|null
     */
     public function getTpmEnabled()
     {
@@ -227,7 +221,7 @@ class SecurityOptions implements ModelInterface, ArrayAccess
     /**
     * Sets tpmEnabled
     *
-    * @param bool $tpmEnabled 是否支持vtpm启动 true:支持vtpm启动 false:不支持vtpm启动 默认值：false
+    * @param bool|null $tpmEnabled 是否支持vtpm启动 true:支持vtpm启动 false:不支持vtpm启动 默认值：false
     *
     * @return $this
     */

@@ -24,13 +24,15 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'kind' => 'string',
             'apiVersion' => 'string',
-            'items' => '\HuaweiCloud\SDK\Cce\V3\Model\Node[]'
+            'items' => '\HuaweiCloud\SDK\Cce\V3\Model\Node[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePageInfo'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'kind' => null,
         'apiVersion' => null,
-        'items' => null
+        'items' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'kind' => 'kind',
             'apiVersion' => 'apiVersion',
-            'items' => 'items'
+            'items' => 'items',
+            'pageInfo' => 'pageInfo'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'kind' => 'setKind',
             'apiVersion' => 'setApiVersion',
-            'items' => 'setItems'
+            'items' => 'setItems',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     * kind  **参数解释**： API类型 **约束限制**： 固定值，不允许修改 **取值范围**： 不涉及 **默认取值**： List
     * apiVersion  **参数解释**： API版本 **约束限制**： 固定值,不允许修改 **取值范围**： 不涉及 **默认取值**： v3
     * items  **参数解释**： 节点对象列表，包含了当前集群下所有节点的详细信息。可通过items.metadata.name下的值来找到对应的节点。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'kind' => 'getKind',
             'apiVersion' => 'getApiVersion',
-            'items' => 'getItems'
+            'items' => 'getItems',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
         $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
         $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ListNodesResponse implements ModelInterface, ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

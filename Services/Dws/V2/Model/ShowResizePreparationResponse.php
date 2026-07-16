@@ -24,13 +24,15 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 扩容准备的状态。 **取值范围**： INIT：扩容准备初始化中； PREPARING：扩容准备进行中； FAIL：扩容准备失败； SUCCESS：扩容准备成功； WAIT_RETRY：等待扩容准备重试；
     * isSupport  **参数解释**： 是否支持扩容准备。 **取值范围**： true：支持扩容准备； false：不支持扩容准备；
     * progress  **参数解释**： 扩容准备进度。 **取值范围**： 不涉及
+    * instanceIds  **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
             'isSupport' => 'bool',
-            'progress' => 'string'
+            'progress' => 'string',
+            'instanceIds' => 'string[]'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 扩容准备的状态。 **取值范围**： INIT：扩容准备初始化中； PREPARING：扩容准备进行中； FAIL：扩容准备失败； SUCCESS：扩容准备成功； WAIT_RETRY：等待扩容准备重试；
     * isSupport  **参数解释**： 是否支持扩容准备。 **取值范围**： true：支持扩容准备； false：不支持扩容准备；
     * progress  **参数解释**： 扩容准备进度。 **取值范围**： 不涉及
+    * instanceIds  **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
         'isSupport' => null,
-        'progress' => null
+        'progress' => null,
+        'instanceIds' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 扩容准备的状态。 **取值范围**： INIT：扩容准备初始化中； PREPARING：扩容准备进行中； FAIL：扩容准备失败； SUCCESS：扩容准备成功； WAIT_RETRY：等待扩容准备重试；
     * isSupport  **参数解释**： 是否支持扩容准备。 **取值范围**： true：支持扩容准备； false：不支持扩容准备；
     * progress  **参数解释**： 扩容准备进度。 **取值范围**： 不涉及
+    * instanceIds  **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
             'isSupport' => 'is_support',
-            'progress' => 'progress'
+            'progress' => 'progress',
+            'instanceIds' => 'instance_ids'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 扩容准备的状态。 **取值范围**： INIT：扩容准备初始化中； PREPARING：扩容准备进行中； FAIL：扩容准备失败； SUCCESS：扩容准备成功； WAIT_RETRY：等待扩容准备重试；
     * isSupport  **参数解释**： 是否支持扩容准备。 **取值范围**： true：支持扩容准备； false：不支持扩容准备；
     * progress  **参数解释**： 扩容准备进度。 **取值范围**： 不涉及
+    * instanceIds  **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
             'isSupport' => 'setIsSupport',
-            'progress' => 'setProgress'
+            'progress' => 'setProgress',
+            'instanceIds' => 'setInstanceIds'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
     * status  **参数解释**： 扩容准备的状态。 **取值范围**： INIT：扩容准备初始化中； PREPARING：扩容准备进行中； FAIL：扩容准备失败； SUCCESS：扩容准备成功； WAIT_RETRY：等待扩容准备重试；
     * isSupport  **参数解释**： 是否支持扩容准备。 **取值范围**： true：支持扩容准备； false：不支持扩容准备；
     * progress  **参数解释**： 扩容准备进度。 **取值范围**： 不涉及
+    * instanceIds  **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
             'isSupport' => 'getIsSupport',
-            'progress' => 'getProgress'
+            'progress' => 'getProgress',
+            'instanceIds' => 'getInstanceIds'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['isSupport'] = isset($data['isSupport']) ? $data['isSupport'] : null;
         $this->container['progress'] = isset($data['progress']) ? $data['progress'] : null;
+        $this->container['instanceIds'] = isset($data['instanceIds']) ? $data['instanceIds'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ShowResizePreparationResponse implements ModelInterface, ArrayAccess
     public function setProgress($progress)
     {
         $this->container['progress'] = $progress;
+        return $this;
+    }
+
+    /**
+    * Gets instanceIds
+    *  **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getInstanceIds()
+    {
+        return $this->container['instanceIds'];
+    }
+
+    /**
+    * Sets instanceIds
+    *
+    * @param string[]|null $instanceIds **参数解释**： 扩容准备的节点ID; **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setInstanceIds($instanceIds)
+    {
+        $this->container['instanceIds'] = $instanceIds;
         return $this;
     }
 

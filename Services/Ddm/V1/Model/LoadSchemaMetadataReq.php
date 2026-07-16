@@ -22,32 +22,24 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * compressedDatabasesInfo  逻辑库信息。
     * dnInstance  关联的后端DN信息。
-    * instanceId  实例id。
-    * projectId  项目id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'compressedDatabasesInfo' => 'string',
-            'dnInstance' => '\HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[]',
-            'instanceId' => 'string',
-            'projectId' => 'string'
+            'dnInstance' => '\HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * compressedDatabasesInfo  逻辑库信息。
     * dnInstance  关联的后端DN信息。
-    * instanceId  实例id。
-    * projectId  项目id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'compressedDatabasesInfo' => null,
-        'dnInstance' => null,
-        'instanceId' => null,
-        'projectId' => null
+        'dnInstance' => null
     ];
 
     /**
@@ -75,48 +67,36 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * compressedDatabasesInfo  逻辑库信息。
     * dnInstance  关联的后端DN信息。
-    * instanceId  实例id。
-    * projectId  项目id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'compressedDatabasesInfo' => 'compressed_databases_info',
-            'dnInstance' => 'dn_instance',
-            'instanceId' => 'instance_id',
-            'projectId' => 'project_id'
+            'dnInstance' => 'dn_instance'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * compressedDatabasesInfo  逻辑库信息。
     * dnInstance  关联的后端DN信息。
-    * instanceId  实例id。
-    * projectId  项目id。
     *
     * @var string[]
     */
     protected static $setters = [
             'compressedDatabasesInfo' => 'setCompressedDatabasesInfo',
-            'dnInstance' => 'setDnInstance',
-            'instanceId' => 'setInstanceId',
-            'projectId' => 'setProjectId'
+            'dnInstance' => 'setDnInstance'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * compressedDatabasesInfo  逻辑库信息。
     * dnInstance  关联的后端DN信息。
-    * instanceId  实例id。
-    * projectId  项目id。
     *
     * @var string[]
     */
     protected static $getters = [
             'compressedDatabasesInfo' => 'getCompressedDatabasesInfo',
-            'dnInstance' => 'getDnInstance',
-            'instanceId' => 'getInstanceId',
-            'projectId' => 'getProjectId'
+            'dnInstance' => 'getDnInstance'
     ];
 
     /**
@@ -179,8 +159,6 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     {
         $this->container['compressedDatabasesInfo'] = isset($data['compressedDatabasesInfo']) ? $data['compressedDatabasesInfo'] : null;
         $this->container['dnInstance'] = isset($data['dnInstance']) ? $data['dnInstance'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
     }
 
     /**
@@ -191,24 +169,18 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['compressedDatabasesInfo']) && (mb_strlen($this->container['compressedDatabasesInfo']) > 2147483647)) {
+        if ($this->container['compressedDatabasesInfo'] === null) {
+            $invalidProperties[] = "'compressedDatabasesInfo' can't be null";
+        }
+            if ((mb_strlen($this->container['compressedDatabasesInfo']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'compressedDatabasesInfo', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['compressedDatabasesInfo']) && (mb_strlen($this->container['compressedDatabasesInfo']) < 1)) {
+            if ((mb_strlen($this->container['compressedDatabasesInfo']) < 1)) {
                 $invalidProperties[] = "invalid value for 'compressedDatabasesInfo', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
-            }
+        if ($this->container['dnInstance'] === null) {
+            $invalidProperties[] = "'dnInstance' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -227,7 +199,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * Gets compressedDatabasesInfo
     *  逻辑库信息。
     *
-    * @return string|null
+    * @return string
     */
     public function getCompressedDatabasesInfo()
     {
@@ -237,7 +209,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     /**
     * Sets compressedDatabasesInfo
     *
-    * @param string|null $compressedDatabasesInfo 逻辑库信息。
+    * @param string $compressedDatabasesInfo 逻辑库信息。
     *
     * @return $this
     */
@@ -251,7 +223,7 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     * Gets dnInstance
     *  关联的后端DN信息。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[]|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[]
     */
     public function getDnInstance()
     {
@@ -261,61 +233,13 @@ class LoadSchemaMetadataReq implements ModelInterface, ArrayAccess
     /**
     * Sets dnInstance
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[]|null $dnInstance 关联的后端DN信息。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DNInstance[] $dnInstance 关联的后端DN信息。
     *
     * @return $this
     */
     public function setDnInstance($dnInstance)
     {
         $this->container['dnInstance'] = $dnInstance;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  实例id。
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId 实例id。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  项目id。
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 项目id。
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
         return $this;
     }
 

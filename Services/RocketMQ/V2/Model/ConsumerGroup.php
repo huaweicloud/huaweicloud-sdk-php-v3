@@ -30,6 +30,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    * topicSubscriptionCount  **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'int',
             'permissions' => 'string[]',
             'consumeOrderly' => 'bool',
-            'groupOnline' => 'bool'
+            'groupOnline' => 'bool',
+            'topicSubscriptionCount' => 'int'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    * topicSubscriptionCount  **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         'createdAt' => 'int64',
         'permissions' => null,
         'consumeOrderly' => null,
-        'groupOnline' => null
+        'groupOnline' => null,
+        'topicSubscriptionCount' => 'int64'
     ];
 
     /**
@@ -107,6 +111,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    * topicSubscriptionCount  **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'permissions' => 'permissions',
             'consumeOrderly' => 'consume_orderly',
-            'groupOnline' => 'group_online'
+            'groupOnline' => 'group_online',
+            'topicSubscriptionCount' => 'topic_subscription_count'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    * topicSubscriptionCount  **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'permissions' => 'setPermissions',
             'consumeOrderly' => 'setConsumeOrderly',
-            'groupOnline' => 'setGroupOnline'
+            'groupOnline' => 'setGroupOnline',
+            'topicSubscriptionCount' => 'setTopicSubscriptionCount'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * permissions  **参数解释**： 权限集。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 不涉及。 **取值范围**： - true：按顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
     * groupOnline  **参数解释**： 消费组是否在线。 **约束限制**： 不涉及。 **取值范围**： - true：消费组在线。 - false：消费组不在线。 **默认取值**： 不涉及。
+    * topicSubscriptionCount  **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'permissions' => 'getPermissions',
             'consumeOrderly' => 'getConsumeOrderly',
-            'groupOnline' => 'getGroupOnline'
+            'groupOnline' => 'getGroupOnline',
+            'topicSubscriptionCount' => 'getTopicSubscriptionCount'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
         $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
         $this->container['groupOnline'] = isset($data['groupOnline']) ? $data['groupOnline'] : null;
+        $this->container['topicSubscriptionCount'] = isset($data['topicSubscriptionCount']) ? $data['topicSubscriptionCount'] : null;
     }
 
     /**
@@ -514,6 +525,30 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     public function setGroupOnline($groupOnline)
     {
         $this->container['groupOnline'] = $groupOnline;
+        return $this;
+    }
+
+    /**
+    * Gets topicSubscriptionCount
+    *  **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTopicSubscriptionCount()
+    {
+        return $this->container['topicSubscriptionCount'];
+    }
+
+    /**
+    * Sets topicSubscriptionCount
+    *
+    * @param int|null $topicSubscriptionCount **参数解释**： Topic订阅数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTopicSubscriptionCount($topicSubscriptionCount)
+    {
+        $this->container['topicSubscriptionCount'] = $topicSubscriptionCount;
         return $this;
     }
 

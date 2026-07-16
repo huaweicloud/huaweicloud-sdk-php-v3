@@ -21,25 +21,25 @@ class ListAuditInstancesNewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * servers  实例信息列表
-    * total  总数
+    * instances  实例列表
+    * total  总记录数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'servers' => '\HuaweiCloud\SDK\Dbss\V1\Model\AuditInstanceListBean[]',
+            'instances' => '\HuaweiCloud\SDK\Dbss\V1\Model\ResponseAuditV2[]',
             'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * servers  实例信息列表
-    * total  总数
+    * instances  实例列表
+    * total  总记录数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'servers' => null,
+        'instances' => null,
         'total' => 'int32'
     ];
 
@@ -66,37 +66,37 @@ class ListAuditInstancesNewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * servers  实例信息列表
-    * total  总数
+    * instances  实例列表
+    * total  总记录数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'servers' => 'servers',
+            'instances' => 'instances',
             'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * servers  实例信息列表
-    * total  总数
+    * instances  实例列表
+    * total  总记录数
     *
     * @var string[]
     */
     protected static $setters = [
-            'servers' => 'setServers',
+            'instances' => 'setInstances',
             'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * servers  实例信息列表
-    * total  总数
+    * instances  实例列表
+    * total  总记录数
     *
     * @var string[]
     */
     protected static $getters = [
-            'servers' => 'getServers',
+            'instances' => 'getInstances',
             'total' => 'getTotal'
     ];
 
@@ -158,7 +158,7 @@ class ListAuditInstancesNewResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['servers'] = isset($data['servers']) ? $data['servers'] : null;
+        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -185,32 +185,32 @@ class ListAuditInstancesNewResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets servers
-    *  实例信息列表
+    * Gets instances
+    *  实例列表
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\AuditInstanceListBean[]|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\ResponseAuditV2[]|null
     */
-    public function getServers()
+    public function getInstances()
     {
-        return $this->container['servers'];
+        return $this->container['instances'];
     }
 
     /**
-    * Sets servers
+    * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\AuditInstanceListBean[]|null $servers 实例信息列表
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\ResponseAuditV2[]|null $instances 实例列表
     *
     * @return $this
     */
-    public function setServers($servers)
+    public function setInstances($instances)
     {
-        $this->container['servers'] = $servers;
+        $this->container['instances'] = $instances;
         return $this;
     }
 
     /**
     * Gets total
-    *  总数
+    *  总记录数
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListAuditInstancesNewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 总记录数
     *
     * @return $this
     */

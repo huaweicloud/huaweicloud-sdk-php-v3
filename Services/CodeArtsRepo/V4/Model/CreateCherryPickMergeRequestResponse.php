@@ -23,7 +23,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * state  CherryPick结果
     * title  CherryPick标题
-    * cherryPickBranchName  CherryPick临时分支名名称
+    * cherryPickBranchName  CherryPick临时分支名称
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
     * Array of property to format mappings. Used for (de)serialization
     * state  CherryPick结果
     * title  CherryPick标题
-    * cherryPickBranchName  CherryPick临时分支名名称
+    * cherryPickBranchName  CherryPick临时分支名称
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
     * and the value is the original name
     * state  CherryPick结果
     * title  CherryPick标题
-    * cherryPickBranchName  CherryPick临时分支名名称
+    * cherryPickBranchName  CherryPick临时分支名称
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
     * Array of attributes to setter functions (for deserialization of responses)
     * state  CherryPick结果
     * title  CherryPick标题
-    * cherryPickBranchName  CherryPick临时分支名名称
+    * cherryPickBranchName  CherryPick临时分支名称
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
     * Array of attributes to getter functions (for serialization of requests)
     * state  CherryPick结果
     * title  CherryPick标题
-    * cherryPickBranchName  CherryPick临时分支名名称
+    * cherryPickBranchName  CherryPick临时分支名称
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets cherryPickBranchName
-    *  CherryPick临时分支名名称
+    *  CherryPick临时分支名称
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class CreateCherryPickMergeRequestResponse implements ModelInterface, ArrayAcces
     /**
     * Sets cherryPickBranchName
     *
-    * @param string|null $cherryPickBranchName CherryPick临时分支名名称
+    * @param string|null $cherryPickBranchName CherryPick临时分支名称
     *
     * @return $this
     */

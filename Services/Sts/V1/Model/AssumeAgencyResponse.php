@@ -21,7 +21,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourceIdentity  调用链里最初调用者所声明的身份。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     * assumedAgency  assumedAgency
     * credentials  credentials
     *
@@ -35,7 +35,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourceIdentity  调用链里最初调用者所声明的身份。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     * assumedAgency  assumedAgency
     * credentials  credentials
     *
@@ -70,7 +70,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourceIdentity  调用链里最初调用者所声明的身份。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     * assumedAgency  assumedAgency
     * credentials  credentials
     *
@@ -84,7 +84,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourceIdentity  调用链里最初调用者所声明的身份。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     * assumedAgency  assumedAgency
     * credentials  credentials
     *
@@ -98,7 +98,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourceIdentity  调用链里最初调用者所声明的身份。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     * assumedAgency  assumedAgency
     * credentials  credentials
     *
@@ -206,7 +206,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIdentity
-    *  调用链里最初调用者所声明的身份。
+    *  **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -218,7 +218,7 @@ class AssumeAgencyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sourceIdentity
     *
-    * @param string|null $sourceIdentity 调用链里最初调用者所声明的身份。
+    * @param string|null $sourceIdentity **参数解释**： 调用链里最初调用者所声明的身份。  **取值范围**： 不涉及。
     *
     * @return $this
     */

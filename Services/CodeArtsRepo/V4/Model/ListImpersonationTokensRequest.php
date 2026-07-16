@@ -20,7 +20,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
@@ -29,7 +28,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groupId' => 'int',
             'state' => 'string',
             'search' => 'string',
             'offset' => 'int',
@@ -38,7 +36,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
@@ -47,7 +44,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groupId' => 'int32',
         'state' => null,
         'search' => null,
         'offset' => 'int32',
@@ -77,7 +73,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
@@ -86,7 +81,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'groupId' => 'group_id',
             'state' => 'state',
             'search' => 'search',
             'offset' => 'offset',
@@ -95,7 +89,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
@@ -104,7 +97,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'groupId' => 'setGroupId',
             'state' => 'setState',
             'search' => 'setSearch',
             'offset' => 'setOffset',
@@ -113,7 +105,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
     * state  **参数解释：** 状态 all 所有状态 active 活跃，未过期 inactive 非活跃，失效的。
     * search  **参数解释：** 检索内容
     * offset  **参数解释：** 偏移量，从0开始。
@@ -122,7 +113,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'groupId' => 'getGroupId',
             'state' => 'getState',
             'search' => 'getSearch',
             'offset' => 'getOffset',
@@ -204,7 +194,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['search'] = isset($data['search']) ? $data['search'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -219,15 +208,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['groupId'] === null) {
-            $invalidProperties[] = "'groupId' can't be null";
-        }
-            if (($this->container['groupId'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'groupId', must be smaller than or equal to 2147483647.";
-            }
-            if (($this->container['groupId'] < 1)) {
-                $invalidProperties[] = "invalid value for 'groupId', must be bigger than or equal to 1.";
-            }
             $allowedValues = $this->getStateAllowableValues();
                 if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -272,30 +252,6 @@ class ListImpersonationTokensRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets groupId
-    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    *
-    * @return int
-    */
-    public function getGroupId()
-    {
-        return $this->container['groupId'];
-    }
-
-    /**
-    * Sets groupId
-    *
-    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
-    *
-    * @return $this
-    */
-    public function setGroupId($groupId)
-    {
-        $this->container['groupId'] = $groupId;
-        return $this;
     }
 
     /**

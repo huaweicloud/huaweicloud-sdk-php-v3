@@ -26,7 +26,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
-    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
@@ -56,7 +56,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
-    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
@@ -107,7 +107,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
-    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
@@ -137,7 +137,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
-    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
@@ -167,7 +167,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     * refreshTime  **参数解释** 刷新时间 **约束限制** 不涉及 **取值范围** 枚举值： - 0 不刷新 - 10 10秒 - 60 1分钟 - 300 5分钟 - 1200 20分钟 **默认取值** 不涉及
     * from  **参数解释** 开始时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
     * to  **参数解释** 结束时间 **约束限制** 不涉及 **取值范围** 时间戳取值为[0,9999999999999] **默认取值** 不涉及
-    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * screenColor  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     * enableScreenAutoPlay  **参数解释** 监控大屏是否自动切换 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
     * timeInterval  **参数解释**  监控大屏自动切换时间间隔  **约束限制**  不涉及  **取值范围**  枚举值：  - 10000 10秒  - 30000 30秒  - 60000 1分钟  **默认取值**  不涉及
     * enableLegend  **参数解释** 是否开启图例 **约束限制** 不涉及 **取值范围** - true 是 - false 否 **默认取值** 不涉及
@@ -406,9 +406,6 @@ class ExtendInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['screenColor']) && (mb_strlen($this->container['screenColor']) > 100)) {
                 $invalidProperties[] = "invalid value for 'screenColor', the character length must be smaller than or equal to 100.";
             }
-            if (!is_null($this->container['screenColor']) && (mb_strlen($this->container['screenColor']) < 1)) {
-                $invalidProperties[] = "invalid value for 'screenColor', the character length must be bigger than or equal to 1.";
-            }
             $allowedValues = $this->getTimeIntervalAllowableValues();
                 if (!is_null($this->container['timeInterval']) && !in_array($this->container['timeInterval'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -583,7 +580,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets screenColor
-    *  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    *  **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -595,7 +592,7 @@ class ExtendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets screenColor
     *
-    * @param string|null $screenColor **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度为[1,100]个字符 **默认取值** 不涉及
+    * @param string|null $screenColor **参数解释** 监控大屏背景颜色 **约束限制** 不涉及 **取值范围** 背景颜色长度最长为100个字符 **默认取值** 不涉及
     *
     * @return $this
     */

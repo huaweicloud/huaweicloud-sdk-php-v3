@@ -60,6 +60,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
@@ -69,7 +70,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -132,6 +135,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'bool',
             'supportFeatures' => 'string',
             'diskEncrypted' => 'bool',
+            'diskEncryptedKey' => 'string',
             'cesVersion' => 'string',
             'nodeNum' => 'int',
             'newSpecBillingEnable' => 'bool',
@@ -141,7 +145,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'namesrvAddress' => 'string',
             'namesrvDomainName' => 'string',
             'brokerAddress' => 'string',
+            'ipv6BrokerAddress' => 'string',
             'publicNamesrvAddress' => 'string',
+            'ipv6NamesrvAddress' => 'string',
             'publicNamesrvDomainName' => 'string',
             'publicBrokerAddress' => 'string',
             'grpcAddress' => 'string',
@@ -204,6 +210,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
@@ -213,7 +220,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -276,6 +285,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
         'ipv6Enable' => null,
         'supportFeatures' => null,
         'diskEncrypted' => null,
+        'diskEncryptedKey' => null,
         'cesVersion' => null,
         'nodeNum' => 'int32',
         'newSpecBillingEnable' => null,
@@ -285,7 +295,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
         'namesrvAddress' => null,
         'namesrvDomainName' => null,
         'brokerAddress' => null,
+        'ipv6BrokerAddress' => null,
         'publicNamesrvAddress' => null,
+        'ipv6NamesrvAddress' => null,
         'publicNamesrvDomainName' => null,
         'publicBrokerAddress' => null,
         'grpcAddress' => null,
@@ -369,6 +381,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
@@ -378,7 +391,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -441,6 +456,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'ipv6_enable',
             'supportFeatures' => 'support_features',
             'diskEncrypted' => 'disk_encrypted',
+            'diskEncryptedKey' => 'disk_encrypted_key',
             'cesVersion' => 'ces_version',
             'nodeNum' => 'node_num',
             'newSpecBillingEnable' => 'new_spec_billing_enable',
@@ -450,7 +466,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'namesrvAddress' => 'namesrv_address',
             'namesrvDomainName' => 'namesrv_domain_name',
             'brokerAddress' => 'broker_address',
+            'ipv6BrokerAddress' => 'ipv6_broker_address',
             'publicNamesrvAddress' => 'public_namesrv_address',
+            'ipv6NamesrvAddress' => 'ipv6_namesrv_address',
             'publicNamesrvDomainName' => 'public_namesrv_domain_name',
             'publicBrokerAddress' => 'public_broker_address',
             'grpcAddress' => 'grpc_address',
@@ -513,6 +531,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
@@ -522,7 +541,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -585,6 +606,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'setIpv6Enable',
             'supportFeatures' => 'setSupportFeatures',
             'diskEncrypted' => 'setDiskEncrypted',
+            'diskEncryptedKey' => 'setDiskEncryptedKey',
             'cesVersion' => 'setCesVersion',
             'nodeNum' => 'setNodeNum',
             'newSpecBillingEnable' => 'setNewSpecBillingEnable',
@@ -594,7 +616,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'namesrvAddress' => 'setNamesrvAddress',
             'namesrvDomainName' => 'setNamesrvDomainName',
             'brokerAddress' => 'setBrokerAddress',
+            'ipv6BrokerAddress' => 'setIpv6BrokerAddress',
             'publicNamesrvAddress' => 'setPublicNamesrvAddress',
+            'ipv6NamesrvAddress' => 'setIpv6NamesrvAddress',
             'publicNamesrvDomainName' => 'setPublicNamesrvDomainName',
             'publicBrokerAddress' => 'setPublicBrokerAddress',
             'grpcAddress' => 'setGrpcAddress',
@@ -657,6 +681,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启。 - false：不开启。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * nodeNum  **参数解释**： 节点数。（仅RocketMQ 4.8.0版本会显示此字段） **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * newSpecBillingEnable  **参数解释**： 是否启用新规格计费。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
@@ -666,7 +691,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     * namesrvAddress  **参数解释**： 元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * namesrvDomainName  **参数解释**： 元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokerAddress  **参数解释**： 业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvAddress  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicNamesrvDomainName  **参数解释**： 公网元数据域名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * publicBrokerAddress  **参数解释**： 公网业务数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * grpcAddress  **参数解释**： grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -729,6 +756,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'ipv6Enable' => 'getIpv6Enable',
             'supportFeatures' => 'getSupportFeatures',
             'diskEncrypted' => 'getDiskEncrypted',
+            'diskEncryptedKey' => 'getDiskEncryptedKey',
             'cesVersion' => 'getCesVersion',
             'nodeNum' => 'getNodeNum',
             'newSpecBillingEnable' => 'getNewSpecBillingEnable',
@@ -738,7 +766,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
             'namesrvAddress' => 'getNamesrvAddress',
             'namesrvDomainName' => 'getNamesrvDomainName',
             'brokerAddress' => 'getBrokerAddress',
+            'ipv6BrokerAddress' => 'getIpv6BrokerAddress',
             'publicNamesrvAddress' => 'getPublicNamesrvAddress',
+            'ipv6NamesrvAddress' => 'getIpv6NamesrvAddress',
             'publicNamesrvDomainName' => 'getPublicNamesrvDomainName',
             'publicBrokerAddress' => 'getPublicBrokerAddress',
             'grpcAddress' => 'getGrpcAddress',
@@ -857,6 +887,7 @@ class InstanceDetail implements ModelInterface, ArrayAccess
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['supportFeatures'] = isset($data['supportFeatures']) ? $data['supportFeatures'] : null;
         $this->container['diskEncrypted'] = isset($data['diskEncrypted']) ? $data['diskEncrypted'] : null;
+        $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
         $this->container['cesVersion'] = isset($data['cesVersion']) ? $data['cesVersion'] : null;
         $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
         $this->container['newSpecBillingEnable'] = isset($data['newSpecBillingEnable']) ? $data['newSpecBillingEnable'] : null;
@@ -866,7 +897,9 @@ class InstanceDetail implements ModelInterface, ArrayAccess
         $this->container['namesrvAddress'] = isset($data['namesrvAddress']) ? $data['namesrvAddress'] : null;
         $this->container['namesrvDomainName'] = isset($data['namesrvDomainName']) ? $data['namesrvDomainName'] : null;
         $this->container['brokerAddress'] = isset($data['brokerAddress']) ? $data['brokerAddress'] : null;
+        $this->container['ipv6BrokerAddress'] = isset($data['ipv6BrokerAddress']) ? $data['ipv6BrokerAddress'] : null;
         $this->container['publicNamesrvAddress'] = isset($data['publicNamesrvAddress']) ? $data['publicNamesrvAddress'] : null;
+        $this->container['ipv6NamesrvAddress'] = isset($data['ipv6NamesrvAddress']) ? $data['ipv6NamesrvAddress'] : null;
         $this->container['publicNamesrvDomainName'] = isset($data['publicNamesrvDomainName']) ? $data['publicNamesrvDomainName'] : null;
         $this->container['publicBrokerAddress'] = isset($data['publicBrokerAddress']) ? $data['publicBrokerAddress'] : null;
         $this->container['grpcAddress'] = isset($data['grpcAddress']) ? $data['grpcAddress'] : null;
@@ -1870,6 +1903,30 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets diskEncryptedKey
+    *  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiskEncryptedKey()
+    {
+        return $this->container['diskEncryptedKey'];
+    }
+
+    /**
+    * Sets diskEncryptedKey
+    *
+    * @param string|null $diskEncryptedKey **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedKey($diskEncryptedKey)
+    {
+        $this->container['diskEncryptedKey'] = $diskEncryptedKey;
+        return $this;
+    }
+
+    /**
     * Gets cesVersion
     *  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
@@ -2086,6 +2143,30 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ipv6BrokerAddress
+    *  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIpv6BrokerAddress()
+    {
+        return $this->container['ipv6BrokerAddress'];
+    }
+
+    /**
+    * Sets ipv6BrokerAddress
+    *
+    * @param string|null $ipv6BrokerAddress **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpv6BrokerAddress($ipv6BrokerAddress)
+    {
+        $this->container['ipv6BrokerAddress'] = $ipv6BrokerAddress;
+        return $this;
+    }
+
+    /**
     * Gets publicNamesrvAddress
     *  **参数解释**： 公网元数据地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
@@ -2106,6 +2187,30 @@ class InstanceDetail implements ModelInterface, ArrayAccess
     public function setPublicNamesrvAddress($publicNamesrvAddress)
     {
         $this->container['publicNamesrvAddress'] = $publicNamesrvAddress;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6NamesrvAddress
+    *  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIpv6NamesrvAddress()
+    {
+        return $this->container['ipv6NamesrvAddress'];
+    }
+
+    /**
+    * Sets ipv6NamesrvAddress
+    *
+    * @param string|null $ipv6NamesrvAddress **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpv6NamesrvAddress($ipv6NamesrvAddress)
+    {
+        $this->container['ipv6NamesrvAddress'] = $ipv6NamesrvAddress;
         return $this;
     }
 

@@ -37,6 +37,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * assessedTechnicalLevel  技术等级评定。
     * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
     * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    * isTemporaryCertificate  是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -59,6 +60,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'assessedTechnicalLevel' => 'string',
             'imageLocation' => 'int[][]',
             'adjustedImage' => 'string',
+            'isTemporaryCertificate' => 'bool',
             'confidence' => 'object'
     ];
 
@@ -81,6 +83,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * assessedTechnicalLevel  技术等级评定。
     * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
     * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    * isTemporaryCertificate  是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -103,6 +106,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         'assessedTechnicalLevel' => null,
         'imageLocation' => 'int32',
         'adjustedImage' => null,
+        'isTemporaryCertificate' => null,
         'confidence' => null
     ];
 
@@ -146,6 +150,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * assessedTechnicalLevel  技术等级评定。
     * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
     * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    * isTemporaryCertificate  是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -168,6 +173,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'assessedTechnicalLevel' => 'assessed_technical_level',
             'imageLocation' => 'image_location',
             'adjustedImage' => 'adjusted_image',
+            'isTemporaryCertificate' => 'is_temporary_certificate',
             'confidence' => 'confidence'
     ];
 
@@ -190,6 +196,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * assessedTechnicalLevel  技术等级评定。
     * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
     * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    * isTemporaryCertificate  是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -212,6 +219,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'assessedTechnicalLevel' => 'setAssessedTechnicalLevel',
             'imageLocation' => 'setImageLocation',
             'adjustedImage' => 'setAdjustedImage',
+            'isTemporaryCertificate' => 'setIsTemporaryCertificate',
             'confidence' => 'setConfidence'
     ];
 
@@ -234,6 +242,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * assessedTechnicalLevel  技术等级评定。
     * imageLocation  道路运输证在原图中的坐标位置，输出左上、右上、右下、左下四个点坐标。仅在return_image_location设置为true时返回该字段。
     * adjustedImage  道路运输证图片的base64编码结果。仅在return_adjusted_image设置为true时返回该字段。
+    * isTemporaryCertificate  是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -256,6 +265,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'assessedTechnicalLevel' => 'getAssessedTechnicalLevel',
             'imageLocation' => 'getImageLocation',
             'adjustedImage' => 'getAdjustedImage',
+            'isTemporaryCertificate' => 'getIsTemporaryCertificate',
             'confidence' => 'getConfidence'
     ];
 
@@ -334,6 +344,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         $this->container['assessedTechnicalLevel'] = isset($data['assessedTechnicalLevel']) ? $data['assessedTechnicalLevel'] : null;
         $this->container['imageLocation'] = isset($data['imageLocation']) ? $data['imageLocation'] : null;
         $this->container['adjustedImage'] = isset($data['adjustedImage']) ? $data['adjustedImage'] : null;
+        $this->container['isTemporaryCertificate'] = isset($data['isTemporaryCertificate']) ? $data['isTemporaryCertificate'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
@@ -764,6 +775,30 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     public function setAdjustedImage($adjustedImage)
     {
         $this->container['adjustedImage'] = $adjustedImage;
+        return $this;
+    }
+
+    /**
+    * Gets isTemporaryCertificate
+    *  是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
+    *
+    * @return bool|null
+    */
+    public function getIsTemporaryCertificate()
+    {
+        return $this->container['isTemporaryCertificate'];
+    }
+
+    /**
+    * Sets isTemporaryCertificate
+    *
+    * @param bool|null $isTemporaryCertificate 是否是待理证，取值范围包括： - true：是待理证 - false：非待理证
+    *
+    * @return $this
+    */
+    public function setIsTemporaryCertificate($isTemporaryCertificate)
+    {
+        $this->container['isTemporaryCertificate'] = $isTemporaryCertificate;
         return $this;
     }
 

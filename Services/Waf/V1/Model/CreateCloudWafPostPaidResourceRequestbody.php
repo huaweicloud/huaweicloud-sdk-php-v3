@@ -21,21 +21,29 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
     /**
     * Array of property to type mappings. Used for (de)serialization
     * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
+    * postpaidName  **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    * extendParams  **参数解释：** 扩展参数 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'consoleArea' => 'string'
+            'consoleArea' => 'string',
+            'postpaidName' => 'string',
+            'extendParams' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
+    * postpaidName  **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    * extendParams  **参数解释：** 扩展参数 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'consoleArea' => null
+        'consoleArea' => null,
+        'postpaidName' => null,
+        'extendParams' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
+    * postpaidName  **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    * extendParams  **参数解释：** 扩展参数 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'consoleArea' => 'console_area'
+            'consoleArea' => 'console_area',
+            'postpaidName' => 'postpaid_name',
+            'extendParams' => 'extend_params'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
+    * postpaidName  **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    * extendParams  **参数解释：** 扩展参数 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
-            'consoleArea' => 'setConsoleArea'
+            'consoleArea' => 'setConsoleArea',
+            'postpaidName' => 'setPostpaidName',
+            'extendParams' => 'setExtendParams'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * consoleArea  租户所在的站点 - hec-hk：华为云国际站 - hws：华为云大陆站
+    * postpaidName  **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    * extendParams  **参数解释：** 扩展参数 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
-            'consoleArea' => 'getConsoleArea'
+            'consoleArea' => 'getConsoleArea',
+            'postpaidName' => 'getPostpaidName',
+            'extendParams' => 'getExtendParams'
     ];
 
     /**
@@ -148,6 +168,8 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
     public function __construct(array $data = null)
     {
         $this->container['consoleArea'] = isset($data['consoleArea']) ? $data['consoleArea'] : null;
+        $this->container['postpaidName'] = isset($data['postpaidName']) ? $data['postpaidName'] : null;
+        $this->container['extendParams'] = isset($data['extendParams']) ? $data['extendParams'] : null;
     }
 
     /**
@@ -196,6 +218,54 @@ class CreateCloudWafPostPaidResourceRequestbody implements ModelInterface, Array
     public function setConsoleArea($consoleArea)
     {
         $this->container['consoleArea'] = $consoleArea;
+        return $this;
+    }
+
+    /**
+    * Gets postpaidName
+    *  **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    *
+    * @return string|null
+    */
+    public function getPostpaidName()
+    {
+        return $this->container['postpaidName'];
+    }
+
+    /**
+    * Sets postpaidName
+    *
+    * @param string|null $postpaidName **参数解释：** 按需功能名称 **取值范围：**  - CLOUD_WAF：按需云模式  - LARGE_MODEL_FIREWALL_AI_GUARD_DETECT: AI安全护栏
+    *
+    * @return $this
+    */
+    public function setPostpaidName($postpaidName)
+    {
+        $this->container['postpaidName'] = $postpaidName;
+        return $this;
+    }
+
+    /**
+    * Gets extendParams
+    *  **参数解释：** 扩展参数 **取值范围：** 不涉及
+    *
+    * @return object|null
+    */
+    public function getExtendParams()
+    {
+        return $this->container['extendParams'];
+    }
+
+    /**
+    * Sets extendParams
+    *
+    * @param object|null $extendParams **参数解释：** 扩展参数 **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setExtendParams($extendParams)
+    {
+        $this->container['extendParams'] = $extendParams;
         return $this;
     }
 

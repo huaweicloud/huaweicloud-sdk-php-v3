@@ -21,9 +21,9 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accountId  账号ID。
-    * principalUrn  主体URN。
-    * principalId  主体ID。
+    * accountId  **参数解释**： 账号ID。  **取值范围**： 不涉及。
+    * principalUrn  **参数解释**： 主体URN。  **取值范围**： 不涉及。
+    * principalId  **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accountId  账号ID。
-    * principalUrn  主体URN。
-    * principalId  主体ID。
+    * accountId  **参数解释**： 账号ID。  **取值范围**： 不涉及。
+    * principalUrn  **参数解释**： 主体URN。  **取值范围**： 不涉及。
+    * principalId  **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accountId  账号ID。
-    * principalUrn  主体URN。
-    * principalId  主体ID。
+    * accountId  **参数解释**： 账号ID。  **取值范围**： 不涉及。
+    * principalUrn  **参数解释**： 主体URN。  **取值范围**： 不涉及。
+    * principalId  **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accountId  账号ID。
-    * principalUrn  主体URN。
-    * principalId  主体ID。
+    * accountId  **参数解释**： 账号ID。  **取值范围**： 不涉及。
+    * principalUrn  **参数解释**： 主体URN。  **取值范围**： 不涉及。
+    * principalId  **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accountId  账号ID。
-    * principalUrn  主体URN。
-    * principalId  主体ID。
+    * accountId  **参数解释**： 账号ID。  **取值范围**： 不涉及。
+    * principalUrn  **参数解释**： 主体URN。  **取值范围**： 不涉及。
+    * principalId  **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountId
-    *  账号ID。
+    *  **参数解释**： 账号ID。  **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accountId
     *
-    * @param string|null $accountId 账号ID。
+    * @param string|null $accountId **参数解释**： 账号ID。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets principalUrn
-    *  主体URN。
+    *  **参数解释**： 主体URN。  **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets principalUrn
     *
-    * @param string|null $principalUrn 主体URN。
+    * @param string|null $principalUrn **参数解释**： 主体URN。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets principalId
-    *  主体ID。
+    *  **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class GetCallerIdentityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets principalId
     *
-    * @param string|null $principalId 主体ID。
+    * @param string|null $principalId **参数解释**： 主体ID。  **取值范围**： 不涉及。
     *
     * @return $this
     */

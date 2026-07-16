@@ -1407,6 +1407,12 @@ class VpnClient extends Client
         if ($localVarParams['resourceId'] !== null) {
             $queryParams['resource_id'] = $localVarParams['resourceId'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -2547,6 +2553,192 @@ class VpnClient extends Client
     }
 
     /**
+     * 导出VPN连接配置
+     *
+     * 根据连接ID、设备厂商、型号、版本，导出指定VPN连接对应的配置文件
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportVpnConnectionPeerConfiguration($request)
+    {
+        return $this->exportVpnConnectionPeerConfigurationWithHttpInfo($request);
+    }
+
+    public function exportVpnConnectionPeerConfigurationWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-connection/{vpn_connection_id}/peer-configuration/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnConnectionId'] !== null) {
+            $pathParams['vpn_connection_id'] = $localVarParams['vpnConnectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ExportVpnConnectionPeerConfigurationResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ExportVpnConnectionPeerConfigurationRequest');
+    }
+
+    /**
+     * 查询VPN连接网段协商信息
+     *
+     * 根据连接ID，查询指定的VPN连接网段协商信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listConnectionIpsecSa($request)
+    {
+        return $this->listConnectionIpsecSaWithHttpInfo($request);
+    }
+
+    public function listConnectionIpsecSaWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-connection/{vpn_connection_id}/ipsec-sa';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnConnectionId'] !== null) {
+            $pathParams['vpn_connection_id'] = $localVarParams['vpnConnectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListConnectionIpsecSaResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListConnectionIpsecSaRequest');
+    }
+
+    /**
+     * 获取可导出VPN连接配置的设备
+     *
+     * 获取可导出VPN连接配置的设备厂商、型号、版本
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPeerConfigurationSupportedDevices($request)
+    {
+        return $this->listPeerConfigurationSupportedDevicesWithHttpInfo($request);
+    }
+
+    public function listPeerConfigurationSupportedDevicesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/peer-configuration/supported-devices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListPeerConfigurationSupportedDevicesResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListPeerConfigurationSupportedDevicesRequest');
+    }
+
+    /**
      * 查询VPN连接列表
      *
      * 查询VPN连接列表
@@ -3469,6 +3661,12 @@ class VpnClient extends Client
         if ($localVarParams['resourceId'] !== null) {
             $queryParams['resource_id'] = $localVarParams['resourceId'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -3890,6 +4088,74 @@ class VpnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVgwCertificateResponse',
             $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVgwCertificateRequest');
+    }
+
+    /**
+     * 查询租户下的的所有VPN网关证书
+     *
+     * 查询租户下的所有VPN网关证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnGatewayCertificates($request)
+    {
+        return $this->listVpnGatewayCertificatesWithHttpInfo($request);
+    }
+
+    public function listVpnGatewayCertificatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-gateway-certificates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['preExpireDays'] !== null) {
+            $queryParams['pre_expire_days'] = $localVarParams['preExpireDays'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnGatewayCertificatesResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnGatewayCertificatesRequest');
     }
 
     /**

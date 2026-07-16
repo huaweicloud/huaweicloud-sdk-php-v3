@@ -26,7 +26,7 @@ class UpdateObjectConfigDescResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => 'object'
+            'data' => 'string'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UpdateObjectConfigDescResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  成员id
     *
-    * @return object|null
+    * @return string|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class UpdateObjectConfigDescResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data 成员id
+    * @param string|null $data 成员id
     *
     * @return $this
     */

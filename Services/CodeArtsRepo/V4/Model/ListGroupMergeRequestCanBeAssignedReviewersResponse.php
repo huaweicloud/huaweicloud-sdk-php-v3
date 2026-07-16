@@ -34,7 +34,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
     * nickName  用户昵称
     * tenantName  租户名称
     * errorMessage  **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
-    * isCommitter  **参数解释：** 是否为committer。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -52,7 +52,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
             'nickName' => 'string',
             'tenantName' => 'string',
             'errorMessage' => 'string',
-            'isCommitter' => 'bool'
+            'xTotal' => 'string'
     ];
 
     /**
@@ -70,7 +70,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
     * nickName  用户昵称
     * tenantName  租户名称
     * errorMessage  **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
-    * isCommitter  **参数解释：** 是否为committer。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -88,7 +88,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
         'nickName' => null,
         'tenantName' => null,
         'errorMessage' => null,
-        'isCommitter' => null
+        'xTotal' => null
     ];
 
     /**
@@ -127,7 +127,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
     * nickName  用户昵称
     * tenantName  租户名称
     * errorMessage  **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
-    * isCommitter  **参数解释：** 是否为committer。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -145,7 +145,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
             'nickName' => 'nick_name',
             'tenantName' => 'tenant_name',
             'errorMessage' => 'error_message',
-            'isCommitter' => 'is_committer'
+            'xTotal' => 'X-Total'
     ];
 
     /**
@@ -163,7 +163,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
     * nickName  用户昵称
     * tenantName  租户名称
     * errorMessage  **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
-    * isCommitter  **参数解释：** 是否为committer。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
             'nickName' => 'setNickName',
             'tenantName' => 'setTenantName',
             'errorMessage' => 'setErrorMessage',
-            'isCommitter' => 'setIsCommitter'
+            'xTotal' => 'setXTotal'
     ];
 
     /**
@@ -199,7 +199,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
     * nickName  用户昵称
     * tenantName  租户名称
     * errorMessage  **参数解释：** 部分查询接口校验到传参里的用户权限不足或不存在时，返回该用户但该字段不为空用于提示。
-    * isCommitter  **参数解释：** 是否为committer。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
             'nickName' => 'getNickName',
             'tenantName' => 'getTenantName',
             'errorMessage' => 'getErrorMessage',
-            'isCommitter' => 'getIsCommitter'
+            'xTotal' => 'getXTotal'
     ];
 
     /**
@@ -308,7 +308,7 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
         $this->container['tenantName'] = isset($data['tenantName']) ? $data['tenantName'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
-        $this->container['isCommitter'] = isset($data['isCommitter']) ? $data['isCommitter'] : null;
+        $this->container['xTotal'] = isset($data['xTotal']) ? $data['xTotal'] : null;
     }
 
     /**
@@ -672,26 +672,26 @@ class ListGroupMergeRequestCanBeAssignedReviewersResponse implements ModelInterf
     }
 
     /**
-    * Gets isCommitter
-    *  **参数解释：** 是否为committer。
+    * Gets xTotal
+    *  xTotal
     *
-    * @return bool|null
+    * @return string|null
     */
-    public function getIsCommitter()
+    public function getXTotal()
     {
-        return $this->container['isCommitter'];
+        return $this->container['xTotal'];
     }
 
     /**
-    * Sets isCommitter
+    * Sets xTotal
     *
-    * @param bool|null $isCommitter **参数解释：** 是否为committer。
+    * @param string|null $xTotal xTotal
     *
     * @return $this
     */
-    public function setIsCommitter($isCommitter)
+    public function setXTotal($xTotal)
     {
-        $this->container['isCommitter'] = $isCommitter;
+        $this->container['xTotal'] = $xTotal;
         return $this;
     }
 

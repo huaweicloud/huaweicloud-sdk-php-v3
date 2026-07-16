@@ -25,6 +25,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
     * name  地理位置控制规则名称
     * policyid  策略id
     * geoip  地理位置封禁区域
+    * geoTagList  地理位置封禁区域
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  描述
@@ -37,6 +38,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
             'name' => 'string',
             'policyid' => 'string',
             'geoip' => 'string',
+            'geoTagList' => 'string[]',
             'white' => 'int',
             'status' => 'int',
             'description' => 'string',
@@ -49,6 +51,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
     * name  地理位置控制规则名称
     * policyid  策略id
     * geoip  地理位置封禁区域
+    * geoTagList  地理位置封禁区域
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  描述
@@ -61,6 +64,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
         'name' => null,
         'policyid' => null,
         'geoip' => null,
+        'geoTagList' => null,
         'white' => null,
         'status' => null,
         'description' => null,
@@ -94,6 +98,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
     * name  地理位置控制规则名称
     * policyid  策略id
     * geoip  地理位置封禁区域
+    * geoTagList  地理位置封禁区域
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  描述
@@ -106,6 +111,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
             'name' => 'name',
             'policyid' => 'policyid',
             'geoip' => 'geoip',
+            'geoTagList' => 'geoTagList',
             'white' => 'white',
             'status' => 'status',
             'description' => 'description',
@@ -118,6 +124,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
     * name  地理位置控制规则名称
     * policyid  策略id
     * geoip  地理位置封禁区域
+    * geoTagList  地理位置封禁区域
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  描述
@@ -130,6 +137,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'policyid' => 'setPolicyid',
             'geoip' => 'setGeoip',
+            'geoTagList' => 'setGeoTagList',
             'white' => 'setWhite',
             'status' => 'setStatus',
             'description' => 'setDescription',
@@ -142,6 +150,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
     * name  地理位置控制规则名称
     * policyid  策略id
     * geoip  地理位置封禁区域
+    * geoTagList  地理位置封禁区域
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * description  描述
@@ -154,6 +163,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'policyid' => 'getPolicyid',
             'geoip' => 'getGeoip',
+            'geoTagList' => 'getGeoTagList',
             'white' => 'getWhite',
             'status' => 'getStatus',
             'description' => 'getDescription',
@@ -222,6 +232,7 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['geoip'] = isset($data['geoip']) ? $data['geoip'] : null;
+        $this->container['geoTagList'] = isset($data['geoTagList']) ? $data['geoTagList'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -343,6 +354,30 @@ class DeleteGeoipRuleResponse implements ModelInterface, ArrayAccess
     public function setGeoip($geoip)
     {
         $this->container['geoip'] = $geoip;
+        return $this;
+    }
+
+    /**
+    * Gets geoTagList
+    *  地理位置封禁区域
+    *
+    * @return string[]|null
+    */
+    public function getGeoTagList()
+    {
+        return $this->container['geoTagList'];
+    }
+
+    /**
+    * Sets geoTagList
+    *
+    * @param string[]|null $geoTagList 地理位置封禁区域
+    *
+    * @return $this
+    */
+    public function setGeoTagList($geoTagList)
+    {
+        $this->container['geoTagList'] = $geoTagList;
         return $this;
     }
 

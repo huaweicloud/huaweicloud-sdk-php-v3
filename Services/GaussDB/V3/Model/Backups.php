@@ -44,7 +44,7 @@ class Backups implements ModelInterface, ArrayAccess
             'status' => 'string',
             'takeUpTime' => 'int',
             'type' => 'string',
-            'size' => 'int',
+            'size' => 'double',
             'datastore' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlDatastoreInBackup',
             'instanceId' => 'string',
             'instanceName' => 'string',
@@ -78,7 +78,7 @@ class Backups implements ModelInterface, ArrayAccess
         'status' => null,
         'takeUpTime' => 'int32',
         'type' => null,
-        'size' => 'int64',
+        'size' => 'double',
         'datastore' => null,
         'instanceId' => null,
         'instanceName' => null,
@@ -501,7 +501,7 @@ class Backups implements ModelInterface, ArrayAccess
     * Gets size
     *  备份大小（单位：MB）。
     *
-    * @return int|null
+    * @return double|null
     */
     public function getSize()
     {
@@ -511,7 +511,7 @@ class Backups implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 备份大小（单位：MB）。
+    * @param double|null $size 备份大小（单位：MB）。
     *
     * @return $this
     */

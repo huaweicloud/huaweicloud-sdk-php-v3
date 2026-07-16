@@ -22,21 +22,21 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  名称。
     * description  描述。
-    * values  参数值。
+    * values  **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'values' => 'object'
+            'values' => 'map[string,string]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  名称。
     * description  描述。
-    * values  参数值。
+    * values  **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  名称。
     * description  描述。
-    * values  参数值。
+    * values  **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  名称。
     * description  描述。
-    * values  参数值。
+    * values  **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  名称。
     * description  描述。
-    * values  参数值。
+    * values  **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -180,16 +180,22 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 2147483647)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 2147483647)) {
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+            if ((mb_strlen($this->container['description']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 1)) {
+            if ((mb_strlen($this->container['description']) < 1)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -210,7 +216,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     * Gets name
     *  名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -220,7 +226,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称。
+    * @param string $name 名称。
     *
     * @return $this
     */
@@ -234,7 +240,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     * Gets description
     *  描述。
     *
-    * @return string|null
+    * @return string
     */
     public function getDescription()
     {
@@ -244,7 +250,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述。
+    * @param string $description 描述。
     *
     * @return $this
     */
@@ -256,9 +262,9 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  参数值。
+    *  **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
-    * @return object|null
+    * @return map[string,string]|null
     */
     public function getValues()
     {
@@ -268,7 +274,7 @@ class CreateConfigurationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param object|null $values 参数值。
+    * @param map[string,string]|null $values **参数解释**：  参数值对象，用户基于默认参数模板自定义的参数值。  **约束限制**：  不涉及。  **取值范围**：  - key：参数名称，如“contains_shard_key”，“connection_idle_timeout”。为空时不修改参数值。  - value：参数值，如“6”，“20”。key不为空时value也不可为空。  **默认取值**：  不涉及。
     *
     * @return $this
     */

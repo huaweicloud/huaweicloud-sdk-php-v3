@@ -934,11 +934,11 @@ class DdmAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                [],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -7721,7 +7721,7 @@ class DdmAsyncClient extends Client
     
     public function checkDataNodeConnectionAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/instance/{instance_id}/rds/connection';
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/rds/connection';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -21,17 +21,17 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => 'map[string,\HuaweiCloud\SDK\Cfw\V1\Model\MapStringString[]]'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\DeleteDomainSetResponseDatas'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    * data  data
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    *  data
     *
-    * @return map[string,\HuaweiCloud\SDK\Cfw\V1\Model\MapStringString[]]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\DeleteDomainSetResponseDatas|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class BatchDeleteDomainSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param map[string,\HuaweiCloud\SDK\Cfw\V1\Model\MapStringString[]]|null $data **参数解释**： 批量删除域名组响应信息 **取值范围**： 不涉及
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\DeleteDomainSetResponseDatas|null $data data
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
@@ -35,6 +36,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'float',
             'totalWriteQueueNum' => 'float',
             'permission' => 'string',
+            'createdAt' => 'int',
             'brokers' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\TopicBrokers[]',
             'messageType' => 'string'
     ];
@@ -45,6 +47,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
@@ -55,6 +58,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
         'totalReadQueueNum' => null,
         'totalWriteQueueNum' => null,
         'permission' => null,
+        'createdAt' => 'int64',
         'brokers' => null,
         'messageType' => null
     ];
@@ -86,6 +90,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
@@ -96,6 +101,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'total_read_queue_num',
             'totalWriteQueueNum' => 'total_write_queue_num',
             'permission' => 'permission',
+            'createdAt' => 'created_at',
             'brokers' => 'brokers',
             'messageType' => 'message_type'
     ];
@@ -106,6 +112,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
@@ -116,6 +123,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'setTotalReadQueueNum',
             'totalWriteQueueNum' => 'setTotalWriteQueueNum',
             'permission' => 'setPermission',
+            'createdAt' => 'setCreatedAt',
             'brokers' => 'setBrokers',
             'messageType' => 'setMessageType'
     ];
@@ -126,6 +134,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     * totalReadQueueNum  **参数解释**： 总读队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * totalWriteQueueNum  **参数解释**： 总写队列个数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * permission  **参数解释**： 权限。 **约束限制**： 不涉及。 **取值范围**： - sub：拥有订阅权限。 - pub：拥有发布权限。 - all：拥有发布、订阅权限。       **默认取值**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * messageType  **参数解释**： 消息类型（RocketMQ实例5.x版本才包含此参数）。 **约束限制**： 不涉及。 **取值范围**： - NORMAL：普通消息。 - FIFO：顺序消息。 - DELAY：定时消息。 - TRANSACTION：事务消息。 **默认取值**： 不涉及。
     *
@@ -136,6 +145,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
             'totalReadQueueNum' => 'getTotalReadQueueNum',
             'totalWriteQueueNum' => 'getTotalWriteQueueNum',
             'permission' => 'getPermission',
+            'createdAt' => 'getCreatedAt',
             'brokers' => 'getBrokers',
             'messageType' => 'getMessageType'
     ];
@@ -238,6 +248,7 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
         $this->container['totalReadQueueNum'] = isset($data['totalReadQueueNum']) ? $data['totalReadQueueNum'] : null;
         $this->container['totalWriteQueueNum'] = isset($data['totalWriteQueueNum']) ? $data['totalWriteQueueNum'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['messageType'] = isset($data['messageType']) ? $data['messageType'] : null;
     }
@@ -373,6 +384,30 @@ class ShowOneTopicResponse implements ModelInterface, ArrayAccess
     public function setPermission($permission)
     {
         $this->container['permission'] = $permission;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param int|null $createdAt **参数解释**： 创建时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
         return $this;
     }
 

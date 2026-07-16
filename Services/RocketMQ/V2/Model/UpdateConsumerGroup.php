@@ -25,6 +25,8 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'bool',
             'brokers' => 'string[]',
             'name' => 'string',
-            'retryMaxTime' => 'int'
+            'retryMaxTime' => 'int',
+            'consumeOrderly' => 'bool',
+            'groupDesc' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
         'broadcast' => null,
         'brokers' => null,
         'name' => null,
-        'retryMaxTime' => null
+        'retryMaxTime' => null,
+        'consumeOrderly' => null,
+        'groupDesc' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'broadcast',
             'brokers' => 'brokers',
             'name' => 'name',
-            'retryMaxTime' => 'retry_max_time'
+            'retryMaxTime' => 'retry_max_time',
+            'consumeOrderly' => 'consume_orderly',
+            'groupDesc' => 'group_desc'
     ];
 
     /**
@@ -100,6 +112,8 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'setBroadcast',
             'brokers' => 'setBrokers',
             'name' => 'setName',
-            'retryMaxTime' => 'setRetryMaxTime'
+            'retryMaxTime' => 'setRetryMaxTime',
+            'consumeOrderly' => 'setConsumeOrderly',
+            'groupDesc' => 'setGroupDesc'
     ];
 
     /**
@@ -118,6 +134,8 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 待修改参数的消费组（消费组名称不支持修改）。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * retryMaxTime  **参数解释**： 最大重试次数。 **约束限制**： 不涉及。 **取值范围**： 1~16。 **默认取值**： 不涉及。
+    * consumeOrderly  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    * groupDesc  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'getBroadcast',
             'brokers' => 'getBrokers',
             'name' => 'getName',
-            'retryMaxTime' => 'getRetryMaxTime'
+            'retryMaxTime' => 'getRetryMaxTime',
+            'consumeOrderly' => 'getConsumeOrderly',
+            'groupDesc' => 'getGroupDesc'
     ];
 
     /**
@@ -192,6 +212,8 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
+        $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
     }
 
     /**
@@ -211,6 +233,12 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
         if ($this->container['retryMaxTime'] === null) {
             $invalidProperties[] = "'retryMaxTime' can't be null";
         }
+            if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) > 200)) {
+                $invalidProperties[] = "invalid value for 'groupDesc', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['groupDesc']) && (mb_strlen($this->container['groupDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'groupDesc', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -342,6 +370,54 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     public function setRetryMaxTime($retryMaxTime)
     {
         $this->container['retryMaxTime'] = $retryMaxTime;
+        return $this;
+    }
+
+    /**
+    * Gets consumeOrderly
+    *  **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getConsumeOrderly()
+    {
+        return $this->container['consumeOrderly'];
+    }
+
+    /**
+    * Sets consumeOrderly
+    *
+    * @param bool|null $consumeOrderly **参数解释**： 是否按顺序消费。 **约束限制**： 仅RocketMQ实例5.x版本需要填写此参数。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **取值范围**： - true：顺序消费。 - false：不按顺序消费。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setConsumeOrderly($consumeOrderly)
+    {
+        $this->container['consumeOrderly'] = $consumeOrderly;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc **参数解释**： 消费组描述。 **约束限制**： 不涉及。 **取值范围**： 0~200。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
         return $this;
     }
 

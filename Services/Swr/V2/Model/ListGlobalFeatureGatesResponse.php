@@ -24,13 +24,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enableUserDefObs' => 'bool',
             'enableEnterprise' => 'bool',
-            'cerAvailable' => 'bool'
+            'cerAvailable' => 'bool',
+            'enableIntranetAccessSwitch' => 'bool'
     ];
 
     /**
@@ -38,13 +40,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'enableUserDefObs' => null,
         'enableEnterprise' => null,
-        'cerAvailable' => null
+        'cerAvailable' => null,
+        'enableIntranetAccessSwitch' => null
     ];
 
     /**
@@ -73,13 +77,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'enableUserDefObs' => 'enableUserDefObs',
             'enableEnterprise' => 'enableEnterprise',
-            'cerAvailable' => 'cerAvailable'
+            'cerAvailable' => 'cerAvailable',
+            'enableIntranetAccessSwitch' => 'enableIntranetAccessSwitch'
     ];
 
     /**
@@ -87,13 +93,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
     *
     * @var string[]
     */
     protected static $setters = [
             'enableUserDefObs' => 'setEnableUserDefObs',
             'enableEnterprise' => 'setEnableEnterprise',
-            'cerAvailable' => 'setCerAvailable'
+            'cerAvailable' => 'setCerAvailable',
+            'enableIntranetAccessSwitch' => 'setEnableIntranetAccessSwitch'
     ];
 
     /**
@@ -101,13 +109,15 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableUserDefObs  是否支持使用用户的obs桶
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
+    * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
     *
     * @var string[]
     */
     protected static $getters = [
             'enableUserDefObs' => 'getEnableUserDefObs',
             'enableEnterprise' => 'getEnableEnterprise',
-            'cerAvailable' => 'getCerAvailable'
+            'cerAvailable' => 'getCerAvailable',
+            'enableIntranetAccessSwitch' => 'getEnableIntranetAccessSwitch'
     ];
 
     /**
@@ -171,6 +181,7 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableUserDefObs'] = isset($data['enableUserDefObs']) ? $data['enableUserDefObs'] : null;
         $this->container['enableEnterprise'] = isset($data['enableEnterprise']) ? $data['enableEnterprise'] : null;
         $this->container['cerAvailable'] = isset($data['cerAvailable']) ? $data['cerAvailable'] : null;
+        $this->container['enableIntranetAccessSwitch'] = isset($data['enableIntranetAccessSwitch']) ? $data['enableIntranetAccessSwitch'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setCerAvailable($cerAvailable)
     {
         $this->container['cerAvailable'] = $cerAvailable;
+        return $this;
+    }
+
+    /**
+    * Gets enableIntranetAccessSwitch
+    *  是否展示创建内网访问的开关按钮
+    *
+    * @return bool|null
+    */
+    public function getEnableIntranetAccessSwitch()
+    {
+        return $this->container['enableIntranetAccessSwitch'];
+    }
+
+    /**
+    * Sets enableIntranetAccessSwitch
+    *
+    * @param bool|null $enableIntranetAccessSwitch 是否展示创建内网访问的开关按钮
+    *
+    * @return $this
+    */
+    public function setEnableIntranetAccessSwitch($enableIntranetAccessSwitch)
+    {
+        $this->container['enableIntranetAccessSwitch'] = $enableIntranetAccessSwitch;
         return $this;
     }
 

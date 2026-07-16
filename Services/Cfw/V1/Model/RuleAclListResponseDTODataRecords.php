@@ -27,7 +27,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * name  **参数解释**： 规则名称 **取值范围**： 不涉及
     * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
-    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
@@ -79,7 +79,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * name  **参数解释**： 规则名称 **取值范围**： 不涉及
     * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
-    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
@@ -152,7 +152,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * name  **参数解释**： 规则名称 **取值范围**： 不涉及
     * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
-    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
@@ -204,7 +204,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * name  **参数解释**： 规则名称 **取值范围**： 不涉及
     * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
-    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
@@ -256,7 +256,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * name  **参数解释**： 规则名称 **取值范围**： 不涉及
     * direction  **参数解释**： 规则方向 **取值范围**： 0：外到内1：内到外
     * actionType  **参数解释**： 规则动作类型，用于区分规则对流量的动作 **取值范围**： 0表示允许通行（permit），1表示拒绝通行（deny）
-    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * status  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     * description  **参数解释**： 规则描述，用于描述规则的用途。 **取值范围**： 不涉及
     * longConnectTime  **参数解释**： 长连接时长（s）。 **取值范围**： 1-86400000。
     * longConnectEnable  **参数解释**： 用于表示是否支持长连接。 **取值范围**： 0表示不支持，1表示支持
@@ -624,7 +624,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    *  **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     *
     * @return int|null
     */
@@ -636,7 +636,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示启用，1表示禁用
+    * @param int|null $status **参数解释**： 规则启用状态，用于区分规则是否启用 **取值范围**： 0表示禁用，1表示启用
     *
     * @return $this
     */

@@ -20,15 +20,15 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
-    * datastoreType  参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * datastoreType  **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     * backupId  备份ID。
-    * backupType  参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
-    * type  参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
-    * limit  参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
-    * offset  参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
-    * beginTime  参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
-    * endTime  参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * backupType  **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
+    * type  **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
+    * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
+    * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    * beginTime  **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * endTime  **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
-    * datastoreType  参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * datastoreType  **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     * backupId  备份ID。
-    * backupType  参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
-    * type  参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
-    * limit  参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
-    * offset  参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
-    * beginTime  参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
-    * endTime  参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * backupType  **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
+    * type  **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
+    * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
+    * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    * beginTime  **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * endTime  **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
-    * datastoreType  参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * datastoreType  **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     * backupId  备份ID。
-    * backupType  参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
-    * type  参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
-    * limit  参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
-    * offset  参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
-    * beginTime  参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
-    * endTime  参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * backupType  **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
+    * type  **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
+    * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
+    * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    * beginTime  **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * endTime  **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
-    * datastoreType  参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * datastoreType  **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     * backupId  备份ID。
-    * backupType  参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
-    * type  参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
-    * limit  参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
-    * offset  参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
-    * beginTime  参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
-    * endTime  参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * backupType  **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
+    * type  **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
+    * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
+    * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    * beginTime  **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * endTime  **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
-    * datastoreType  参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    * instanceId  **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * datastoreType  **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     * backupId  备份ID。
-    * backupType  参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
-    * type  参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
-    * limit  参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
-    * offset  参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
-    * beginTime  参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
-    * endTime  参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * backupType  **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
+    * type  **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
+    * limit  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
+    * offset  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    * beginTime  **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
+    * endTime  **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
+    *  **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -283,7 +283,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 参数解释： 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值： 不涉及。
+    * @param string|null $instanceId **参数解释：** 实例ID，可以调用“查询实例列表”接口获取。如果未申请实例，可以调用“创建实例”接口创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -295,7 +295,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreType
-    *  参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    *  **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreType
     *
-    * @param string|null $datastoreType 参数解释： 数据库类型。 约束限制： 不涉及。 取值范围： 不涉及。 默认取值：  - cassandra  - redis  - mongodb  - influxdb
+    * @param string|null $datastoreType **参数解释：** 数据库类型。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：**  - cassandra  - redis  - mongodb  - influxdb
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupType
-    *  参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
+    *  **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets backupType
     *
-    * @param string|null $backupType 参数解释： 备份类型，大小写敏感。 约束限制： 不涉及。 取值范围：  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 默认取值： 不涉及。
+    * @param string|null $backupType **参数解释：** 备份类型，大小写敏感。 **约束限制：** 不涉及。 **取值范围：**  - 取值为“Auto”，表示自动全量备份。  - 取值为“Manual”，表示手动全量备份。  - 当该字段未传入值时，默认只查询所有的全量备份(包含库表级)，包括自动全备备份和手动全量备份。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
+    *  **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 参数解释： 备份策略类型。 约束限制： 不涉及。 取值范围：  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 默认取值：  Instance。
+    * @param string|null $type **参数解释：** 备份策略类型。 **约束限制：** 不涉及。 **取值范围：**  - Instance 表示查询实例级备份。  - DatabaseTable 表示查询库表级备份。 **默认取值：**  Instance。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
+    *  **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
     *
     * @return int|null
     */
@@ -403,7 +403,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 参数解释： 查询备份个数上限值。 约束限制： 不涉及。 取值范围： 1~100。 默认取值： 不传该参数时，默认查询前100条实例信息。
+    * @param int|null $limit **参数解释：** 查询备份个数上限值。 **约束限制：** 不涉及。 **取值范围：** 1~100。 **默认取值：** 不传该参数时，默认查询前100条实例信息。
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    *  **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
     *
     * @return int|null
     */
@@ -427,7 +427,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 参数解释： 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 约束限制： 取值大于或等于0。 取值范围： 取值大于或等于0。 默认取值： 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
+    * @param int|null $offset **参数解释：** 索引位置偏移量，表示从指定project ID下最新的备份创建时间开始，按时间的先后顺序偏移offset条数据后查询对应的备份信息。 **约束限制：** 取值大于或等于0。 **取值范围：** 取值大于或等于0。 **默认取值：** 不传该参数时，查询偏移量默认为0，表示从最新的备份创建时间对应的备份开始查询。
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    *  **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 参数解释： 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “end_time”有值时，“begin_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * @param string|null $beginTime **参数解释：** 查询备份开始的时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “end_time”有值时，“begin_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    *  **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 参数解释： 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 约束限制： - “begin_time”有值时，“end_time”必选。 取值范围： 不涉及。 默认取值： 默认为空。
+    * @param string|null $endTime **参数解释：** 查询备份开始的结束时间，为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **约束限制：** - “begin_time”有值时，“end_time”必选。 **取值范围：** 不涉及。 **默认取值：** 默认为空。
     *
     * @return $this
     */

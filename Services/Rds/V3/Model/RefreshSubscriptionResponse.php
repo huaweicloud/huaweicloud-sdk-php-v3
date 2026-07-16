@@ -21,20 +21,22 @@ class RefreshSubscriptionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * resp  响应结果
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'resp' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * resp  响应结果
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'resp' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class RefreshSubscriptionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * resp  响应结果
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'resp' => 'resp'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * resp  响应结果
     *
     * @var string[]
     */
     protected static $setters = [
+            'resp' => 'setResp'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * resp  响应结果
     *
     * @var string[]
     */
     protected static $getters = [
+            'resp' => 'getResp'
     ];
 
     /**
@@ -143,6 +148,7 @@ class RefreshSubscriptionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['resp'] = isset($data['resp']) ? $data['resp'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class RefreshSubscriptionResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets resp
+    *  响应结果
+    *
+    * @return string|null
+    */
+    public function getResp()
+    {
+        return $this->container['resp'];
+    }
+
+    /**
+    * Sets resp
+    *
+    * @param string|null $resp 响应结果
+    *
+    * @return $this
+    */
+    public function setResp($resp)
+    {
+        $this->container['resp'] = $resp;
+        return $this;
     }
 
     /**

@@ -29,6 +29,7 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * commitEmail  **参数解释：** 提交邮箱。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * isDefault  **参数解释：** 是否为默认邮箱。
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'lastActivityOn' => 'string',
-            'commitEmail' => 'string'
+            'commitEmail' => 'string',
+            'isDefault' => 'bool'
     ];
 
     /**
@@ -53,6 +55,7 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * commitEmail  **参数解释：** 提交邮箱。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * isDefault  **参数解释：** 是否为默认邮箱。
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'updatedAt' => null,
         'lastActivityOn' => null,
-        'commitEmail' => null
+        'commitEmail' => null,
+        'isDefault' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * commitEmail  **参数解释：** 提交邮箱。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * isDefault  **参数解释：** 是否为默认邮箱。
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'lastActivityOn' => 'last_activity_on',
-            'commitEmail' => 'commit_email'
+            'commitEmail' => 'commit_email',
+            'isDefault' => 'is_default'
     ];
 
     /**
@@ -122,6 +128,7 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * commitEmail  **参数解释：** 提交邮箱。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * isDefault  **参数解释：** 是否为默认邮箱。
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'lastActivityOn' => 'setLastActivityOn',
-            'commitEmail' => 'setCommitEmail'
+            'commitEmail' => 'setCommitEmail',
+            'isDefault' => 'setIsDefault'
     ];
 
     /**
@@ -146,6 +154,7 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  **参数解释：** 更新时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * lastActivityOn  **参数解释：** 最后活跃时间。 **取值范围：** 字符串长度不少于1，不超过1000。
     * commitEmail  **参数解释：** 提交邮箱。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * isDefault  **参数解释：** 是否为默认邮箱。
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'lastActivityOn' => 'getLastActivityOn',
-            'commitEmail' => 'getCommitEmail'
+            'commitEmail' => 'getCommitEmail',
+            'isDefault' => 'getIsDefault'
     ];
 
     /**
@@ -241,6 +251,7 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['lastActivityOn'] = isset($data['lastActivityOn']) ? $data['lastActivityOn'] : null;
         $this->container['commitEmail'] = isset($data['commitEmail']) ? $data['commitEmail'] : null;
+        $this->container['isDefault'] = isset($data['isDefault']) ? $data['isDefault'] : null;
     }
 
     /**
@@ -510,6 +521,30 @@ class UpdateUserEmailsResponse implements ModelInterface, ArrayAccess
     public function setCommitEmail($commitEmail)
     {
         $this->container['commitEmail'] = $commitEmail;
+        return $this;
+    }
+
+    /**
+    * Gets isDefault
+    *  **参数解释：** 是否为默认邮箱。
+    *
+    * @return bool|null
+    */
+    public function getIsDefault()
+    {
+        return $this->container['isDefault'];
+    }
+
+    /**
+    * Sets isDefault
+    *
+    * @param bool|null $isDefault **参数解释：** 是否为默认邮箱。
+    *
+    * @return $this
+    */
+    public function setIsDefault($isDefault)
+    {
+        $this->container['isDefault'] = $isDefault;
         return $this;
     }
 

@@ -1337,7 +1337,7 @@ class DwsAsyncClient extends Client
     /**
      * 创建告警订阅
      *
-     * 创建告警订阅。
+     * 创建订阅告警。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1940,7 +1940,7 @@ class DwsAsyncClient extends Client
     /**
      * 创建逻辑集群
      *
-     * 创建逻辑集群。
+     * 使用弹性池的节点，创建逻辑集群，此接口已经不再演进，后续版本中可能会下线，新版本中此接口对应功能已经下线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3134,11 +3134,11 @@ class DwsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -5561,6 +5561,9 @@ class DwsAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['logicalClusterName'] !== null) {
+            $queryParams['logical_cluster_name'] = $localVarParams['logicalClusterName'];
+        }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
         }
@@ -7395,9 +7398,9 @@ class DwsAsyncClient extends Client
     }
 
     /**
-     * 查询集群使用指标列表
+     * 查询集群使用的指标列表
      *
-     * 查询集群使用指标列表。
+     * 查询集群使用的指标列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11790,7 +11793,7 @@ class DwsAsyncClient extends Client
     /**
      * 逻辑集群缩容
      *
-     * 逻辑集群缩容，支持从弹性池缩容。
+     * 逻辑集群缩容，支持从逻辑集群中缩容、从弹性池中缩容。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12993,11 +12996,11 @@ class DwsAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -13165,6 +13168,7 @@ class DwsAsyncClient extends Client
      * 编辑修改逻辑集群。接口根据提交的请求体判断当前操作是逻辑集群缩容或者扩容。
      * 场景一：原始的逻辑集群有6个节点（两个环），提交请求时的请求体只有1个环，此时为逻辑集群缩容。
      * 场景二：原始的逻辑集群有6个节点（两个环），提交请求时的请求体中有3个环，此时为逻辑集群扩容。
+     * 此接口已经不再演进，后续版本中可能会下线，新版本中此接口对应功能已经下线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

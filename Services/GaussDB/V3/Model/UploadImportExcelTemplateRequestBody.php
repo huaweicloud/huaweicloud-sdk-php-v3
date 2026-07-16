@@ -24,6 +24,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
     * file  **参数解释**：  Excel文件上传。  **约束限制**：  Excel文件。  **取值范围**：  .xlsx文件。  **默认取值**：  不涉及。
     * isInstanceLevel  **参数解释**：  判断是否是实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：实例级同步。 - false: 非实例级同步。  **默认取值**：  false。
     * selectedDbs  **参数解释**：  用户选中的数据库名，用英文\",\"隔开。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * databaseScope  **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
     * isSupportRegexp  **参数解释**：  是否支持标配符。  **约束限制**：  不涉及。  **取值范围**：  - true: 支持标配符。 - false: 不支持标配符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
             'file' => '\SplFileObject',
             'isInstanceLevel' => 'string',
             'selectedDbs' => 'string',
+            'databaseScope' => 'string',
             'isSupportRegexp' => 'string'
     ];
 
@@ -42,6 +44,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
     * file  **参数解释**：  Excel文件上传。  **约束限制**：  Excel文件。  **取值范围**：  .xlsx文件。  **默认取值**：  不涉及。
     * isInstanceLevel  **参数解释**：  判断是否是实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：实例级同步。 - false: 非实例级同步。  **默认取值**：  false。
     * selectedDbs  **参数解释**：  用户选中的数据库名，用英文\",\"隔开。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * databaseScope  **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
     * isSupportRegexp  **参数解释**：  是否支持标配符。  **约束限制**：  不涉及。  **取值范围**：  - true: 支持标配符。 - false: 不支持标配符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
         'file' => 'binary',
         'isInstanceLevel' => null,
         'selectedDbs' => null,
+        'databaseScope' => null,
         'isSupportRegexp' => null
     ];
 
@@ -81,6 +85,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
     * file  **参数解释**：  Excel文件上传。  **约束限制**：  Excel文件。  **取值范围**：  .xlsx文件。  **默认取值**：  不涉及。
     * isInstanceLevel  **参数解释**：  判断是否是实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：实例级同步。 - false: 非实例级同步。  **默认取值**：  false。
     * selectedDbs  **参数解释**：  用户选中的数据库名，用英文\",\"隔开。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * databaseScope  **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
     * isSupportRegexp  **参数解释**：  是否支持标配符。  **约束限制**：  不涉及。  **取值范围**：  - true: 支持标配符。 - false: 不支持标配符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
             'file' => 'file',
             'isInstanceLevel' => 'is_instance_level',
             'selectedDbs' => 'selected_dbs',
+            'databaseScope' => 'database_scope',
             'isSupportRegexp' => 'is_support_regexp'
     ];
 
@@ -99,6 +105,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
     * file  **参数解释**：  Excel文件上传。  **约束限制**：  Excel文件。  **取值范围**：  .xlsx文件。  **默认取值**：  不涉及。
     * isInstanceLevel  **参数解释**：  判断是否是实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：实例级同步。 - false: 非实例级同步。  **默认取值**：  false。
     * selectedDbs  **参数解释**：  用户选中的数据库名，用英文\",\"隔开。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * databaseScope  **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
     * isSupportRegexp  **参数解释**：  是否支持标配符。  **约束限制**：  不涉及。  **取值范围**：  - true: 支持标配符。 - false: 不支持标配符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
             'file' => 'setFile',
             'isInstanceLevel' => 'setIsInstanceLevel',
             'selectedDbs' => 'setSelectedDbs',
+            'databaseScope' => 'setDatabaseScope',
             'isSupportRegexp' => 'setIsSupportRegexp'
     ];
 
@@ -117,6 +125,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
     * file  **参数解释**：  Excel文件上传。  **约束限制**：  Excel文件。  **取值范围**：  .xlsx文件。  **默认取值**：  不涉及。
     * isInstanceLevel  **参数解释**：  判断是否是实例级同步。  **约束限制**：  不涉及。  **取值范围**：  - true：实例级同步。 - false: 非实例级同步。  **默认取值**：  false。
     * selectedDbs  **参数解释**：  用户选中的数据库名，用英文\",\"隔开。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * databaseScope  **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
     * isSupportRegexp  **参数解释**：  是否支持标配符。  **约束限制**：  不涉及。  **取值范围**：  - true: 支持标配符。 - false: 不支持标配符。  **默认取值**：  不涉及。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
             'file' => 'getFile',
             'isInstanceLevel' => 'getIsInstanceLevel',
             'selectedDbs' => 'getSelectedDbs',
+            'databaseScope' => 'getDatabaseScope',
             'isSupportRegexp' => 'getIsSupportRegexp'
     ];
 
@@ -221,6 +231,7 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
         $this->container['file'] = isset($data['file']) ? $data['file'] : null;
         $this->container['isInstanceLevel'] = isset($data['isInstanceLevel']) ? $data['isInstanceLevel'] : null;
         $this->container['selectedDbs'] = isset($data['selectedDbs']) ? $data['selectedDbs'] : null;
+        $this->container['databaseScope'] = isset($data['databaseScope']) ? $data['databaseScope'] : null;
         $this->container['isSupportRegexp'] = isset($data['isSupportRegexp']) ? $data['isSupportRegexp'] : null;
     }
 
@@ -388,6 +399,30 @@ class UploadImportExcelTemplateRequestBody implements ModelInterface, ArrayAcces
     public function setSelectedDbs($selectedDbs)
     {
         $this->container['selectedDbs'] = $selectedDbs;
+        return $this;
+    }
+
+    /**
+    * Gets databaseScope
+    *  **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
+    *
+    * @return string|null
+    */
+    public function getDatabaseScope()
+    {
+        return $this->container['databaseScope'];
+    }
+
+    /**
+    * Sets databaseScope
+    *
+    * @param string|null $databaseScope **参数解释**：  数据库同步范围。  **约束限制**：  必须选择实例级同步。  **取值范围**：  - true：所有库。 - false：部分库。  **默认取值**：  部分库。
+    *
+    * @return $this
+    */
+    public function setDatabaseScope($databaseScope)
+    {
+        $this->container['databaseScope'] = $databaseScope;
         return $this;
     }
 

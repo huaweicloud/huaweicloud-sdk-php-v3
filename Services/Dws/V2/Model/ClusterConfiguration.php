@@ -22,7 +22,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     * status  **参数解释**： 集群参数状态。 **取值范围**： - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
     * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
@@ -40,7 +40,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     * status  **参数解释**： 集群参数状态。 **取值范围**： - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
     * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
@@ -79,7 +79,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     * status  **参数解释**： 集群参数状态。 **取值范围**： - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
     * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
@@ -97,7 +97,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     * status  **参数解释**： 集群参数状态。 **取值范围**： - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
     * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
@@ -115,7 +115,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 参数组ID。 **取值范围**： 不涉及。
     * name  **参数解释**： 参数组名称。 **取值范围**： 不涉及。
-    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    * type  **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     * status  **参数解释**： 集群参数状态。 **取值范围**： - In-Sync：已同步。 - Applying：应用中。 - Pending-Reboot：需重启生效。 - Sync-Failure：应用失败。
     * failReason  **参数解释**： 参数应用失败原因。 **取值范围**： 不涉及。
     *
@@ -281,7 +281,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    *  **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     *
     * @return string
     */
@@ -293,7 +293,7 @@ class ClusterConfiguration implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 参数组类型。 **取值范围**： 当前只有以下两个参数组有效，其他参数组仅显示但无实际意义。 - parameterGroup：guc参数组。 - securityParameterGroup：安全设置参数组。
+    * @param string $type **参数解释**： 参数组类型。 **取值范围**： 当前只有hiddenParameterGroup、securityParameterGroup两个参数组有效，其他参数组仅显示但无法通过外部接口去修改。 - hiddenParameterGroup：隐藏参数组，对应参数修改页面的参数组。 - securityParameterGroup：安全设置参数组。 - parameterGroup：guc参数组。 - GUCConfig：GUC配置参数组。 - OBSConfig：OBS配置参数组。
     *
     * @return $this
     */

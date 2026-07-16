@@ -35,6 +35,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**： 企业项目ID。若为企业项目账号，该参数必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * proxyEnable  **参数解释**： 是否开启Proxy功能。 **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。默认不开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启 - false：不开启 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
@@ -63,6 +65,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'enableAcl' => 'bool',
             'ipv6Enable' => 'bool',
+            'ipv6BrokerAddress' => 'string',
+            'ipv6NamesrvAddress' => 'string',
             'proxyEnable' => 'bool',
             'enablePublicip' => 'bool',
             'diskEncryptedEnable' => 'bool',
@@ -91,6 +95,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**： 企业项目ID。若为企业项目账号，该参数必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * proxyEnable  **参数解释**： 是否开启Proxy功能。 **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。默认不开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启 - false：不开启 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
@@ -119,6 +125,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'enableAcl' => null,
         'ipv6Enable' => null,
+        'ipv6BrokerAddress' => null,
+        'ipv6NamesrvAddress' => null,
         'proxyEnable' => null,
         'enablePublicip' => null,
         'diskEncryptedEnable' => null,
@@ -168,6 +176,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**： 企业项目ID。若为企业项目账号，该参数必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * proxyEnable  **参数解释**： 是否开启Proxy功能。 **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。默认不开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启 - false：不开启 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
@@ -196,6 +206,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'enableAcl' => 'enable_acl',
             'ipv6Enable' => 'ipv6_enable',
+            'ipv6BrokerAddress' => 'ipv6_broker_address',
+            'ipv6NamesrvAddress' => 'ipv6_namesrv_address',
             'proxyEnable' => 'proxy_enable',
             'enablePublicip' => 'enable_publicip',
             'diskEncryptedEnable' => 'disk_encrypted_enable',
@@ -224,6 +236,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**： 企业项目ID。若为企业项目账号，该参数必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * proxyEnable  **参数解释**： 是否开启Proxy功能。 **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。默认不开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启 - false：不开启 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
@@ -252,6 +266,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'enableAcl' => 'setEnableAcl',
             'ipv6Enable' => 'setIpv6Enable',
+            'ipv6BrokerAddress' => 'setIpv6BrokerAddress',
+            'ipv6NamesrvAddress' => 'setIpv6NamesrvAddress',
             'proxyEnable' => 'setProxyEnable',
             'enablePublicip' => 'setEnablePublicip',
             'diskEncryptedEnable' => 'setDiskEncryptedEnable',
@@ -280,6 +296,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**： 企业项目ID。若为企业项目账号，该参数必填。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * enableAcl  **参数解释**： 是否开启访问控制列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否支持IPv6。[华为云Stack不支持此参数。](tag:hcs,hcs_oemout) **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * proxyEnable  **参数解释**： 是否开启Proxy功能。 **约束限制**： 不涉及。 **取值范围**： - true：支持 - false：不支持 **默认取值**： false。
     * enablePublicip  **参数解释**： 是否开启公网访问功能。默认不开启公网。 **约束限制**： 不涉及。 **取值范围**： - true：开启 - false：不开启 **默认取值**： false。
     * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
@@ -308,6 +326,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'enableAcl' => 'getEnableAcl',
             'ipv6Enable' => 'getIpv6Enable',
+            'ipv6BrokerAddress' => 'getIpv6BrokerAddress',
+            'ipv6NamesrvAddress' => 'getIpv6NamesrvAddress',
             'proxyEnable' => 'getProxyEnable',
             'enablePublicip' => 'getEnablePublicip',
             'diskEncryptedEnable' => 'getDiskEncryptedEnable',
@@ -392,6 +412,8 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['ipv6BrokerAddress'] = isset($data['ipv6BrokerAddress']) ? $data['ipv6BrokerAddress'] : null;
+        $this->container['ipv6NamesrvAddress'] = isset($data['ipv6NamesrvAddress']) ? $data['ipv6NamesrvAddress'] : null;
         $this->container['proxyEnable'] = isset($data['proxyEnable']) ? $data['proxyEnable'] : null;
         $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : null;
         $this->container['diskEncryptedEnable'] = isset($data['diskEncryptedEnable']) ? $data['diskEncryptedEnable'] : null;
@@ -441,6 +463,18 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
         if ($this->container['storageSpecCode'] === null) {
             $invalidProperties[] = "'storageSpecCode' can't be null";
         }
+            if (!is_null($this->container['ipv6BrokerAddress']) && (mb_strlen($this->container['ipv6BrokerAddress']) > 64)) {
+                $invalidProperties[] = "invalid value for 'ipv6BrokerAddress', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['ipv6BrokerAddress']) && (mb_strlen($this->container['ipv6BrokerAddress']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ipv6BrokerAddress', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['ipv6NamesrvAddress']) && (mb_strlen($this->container['ipv6NamesrvAddress']) > 64)) {
+                $invalidProperties[] = "invalid value for 'ipv6NamesrvAddress', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['ipv6NamesrvAddress']) && (mb_strlen($this->container['ipv6NamesrvAddress']) < 1)) {
+                $invalidProperties[] = "invalid value for 'ipv6NamesrvAddress', the character length must be bigger than or equal to 1.";
+            }
         if ($this->container['brokerNum'] === null) {
             $invalidProperties[] = "'brokerNum' can't be null";
         }
@@ -815,6 +849,54 @@ class CreateInstanceByEngineReq implements ModelInterface, ArrayAccess
     public function setIpv6Enable($ipv6Enable)
     {
         $this->container['ipv6Enable'] = $ipv6Enable;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6BrokerAddress
+    *  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIpv6BrokerAddress()
+    {
+        return $this->container['ipv6BrokerAddress'];
+    }
+
+    /**
+    * Sets ipv6BrokerAddress
+    *
+    * @param string|null $ipv6BrokerAddress **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpv6BrokerAddress($ipv6BrokerAddress)
+    {
+        $this->container['ipv6BrokerAddress'] = $ipv6BrokerAddress;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6NamesrvAddress
+    *  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIpv6NamesrvAddress()
+    {
+        return $this->container['ipv6NamesrvAddress'];
+    }
+
+    /**
+    * Sets ipv6NamesrvAddress
+    *
+    * @param string|null $ipv6NamesrvAddress **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpv6NamesrvAddress($ipv6NamesrvAddress)
+    {
+        $this->container['ipv6NamesrvAddress'] = $ipv6NamesrvAddress;
         return $this;
     }
 

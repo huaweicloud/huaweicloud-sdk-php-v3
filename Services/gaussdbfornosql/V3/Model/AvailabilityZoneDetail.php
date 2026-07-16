@@ -20,8 +20,8 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * primaryAvailabilityZone  主可用区，应为单可用区且和备可用区不同
-    * secondaryAvailabilityZone  备可用区，应为单可用区且和主可用区不同
+    * primaryAvailabilityZone  **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * secondaryAvailabilityZone  **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * primaryAvailabilityZone  主可用区，应为单可用区且和备可用区不同
-    * secondaryAvailabilityZone  备可用区，应为单可用区且和主可用区不同
+    * primaryAvailabilityZone  **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * secondaryAvailabilityZone  **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * primaryAvailabilityZone  主可用区，应为单可用区且和备可用区不同
-    * secondaryAvailabilityZone  备可用区，应为单可用区且和主可用区不同
+    * primaryAvailabilityZone  **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * secondaryAvailabilityZone  **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * primaryAvailabilityZone  主可用区，应为单可用区且和备可用区不同
-    * secondaryAvailabilityZone  备可用区，应为单可用区且和主可用区不同
+    * primaryAvailabilityZone  **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * secondaryAvailabilityZone  **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * primaryAvailabilityZone  主可用区，应为单可用区且和备可用区不同
-    * secondaryAvailabilityZone  备可用区，应为单可用区且和主可用区不同
+    * primaryAvailabilityZone  **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * secondaryAvailabilityZone  **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryAvailabilityZone
-    *  主可用区，应为单可用区且和备可用区不同
+    *  **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
     /**
     * Sets primaryAvailabilityZone
     *
-    * @param string $primaryAvailabilityZone 主可用区，应为单可用区且和备可用区不同
+    * @param string $primaryAvailabilityZone **参数解释：** 主可用区，应为单可用区且和备可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets secondaryAvailabilityZone
-    *  备可用区，应为单可用区且和主可用区不同
+    *  **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class AvailabilityZoneDetail implements ModelInterface, ArrayAccess
     /**
     * Sets secondaryAvailabilityZone
     *
-    * @param string $secondaryAvailabilityZone 备可用区，应为单可用区且和主可用区不同
+    * @param string $secondaryAvailabilityZone **参数解释：** 备可用区，应为单可用区且和主可用区不同。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

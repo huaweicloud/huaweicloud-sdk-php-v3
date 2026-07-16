@@ -43,6 +43,8 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * unaggregation  该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -68,7 +70,9 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
             'totalNum' => 'int',
             'unaggregation' => 'bool',
             'agingTime' => 'int',
-            'producer' => 'int'
+            'producer' => 'int',
+            'priority' => 'int',
+            'ccPriority' => 'int'
     ];
 
     /**
@@ -95,6 +99,8 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * unaggregation  该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -120,7 +126,9 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
         'totalNum' => null,
         'unaggregation' => null,
         'agingTime' => null,
-        'producer' => null
+        'producer' => null,
+        'priority' => 'int32',
+        'ccPriority' => 'int32'
     ];
 
     /**
@@ -168,6 +176,8 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * unaggregation  该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -193,7 +203,9 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
             'totalNum' => 'total_num',
             'unaggregation' => 'unaggregation',
             'agingTime' => 'aging_time',
-            'producer' => 'producer'
+            'producer' => 'producer',
+            'priority' => 'priority',
+            'ccPriority' => 'cc_priority'
     ];
 
     /**
@@ -220,6 +232,8 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * unaggregation  该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -245,7 +259,9 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
             'totalNum' => 'setTotalNum',
             'unaggregation' => 'setUnaggregation',
             'agingTime' => 'setAgingTime',
-            'producer' => 'setProducer'
+            'producer' => 'setProducer',
+            'priority' => 'setPriority',
+            'ccPriority' => 'setCcPriority'
     ];
 
     /**
@@ -272,6 +288,8 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     * unaggregation  该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -297,7 +315,9 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
             'totalNum' => 'getTotalNum',
             'unaggregation' => 'getUnaggregation',
             'agingTime' => 'getAgingTime',
-            'producer' => 'getProducer'
+            'producer' => 'getProducer',
+            'priority' => 'getPriority',
+            'ccPriority' => 'getCcPriority'
     ];
 
     /**
@@ -405,6 +425,8 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
         $this->container['unaggregation'] = isset($data['unaggregation']) ? $data['unaggregation'] : null;
         $this->container['agingTime'] = isset($data['agingTime']) ? $data['agingTime'] : null;
         $this->container['producer'] = isset($data['producer']) ? $data['producer'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['ccPriority'] = isset($data['ccPriority']) ? $data['ccPriority'] : null;
     }
 
     /**
@@ -962,6 +984,54 @@ class UpdateCcRuleResponse implements ModelInterface, ArrayAccess
     public function setProducer($producer)
     {
         $this->container['producer'] = $producer;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets ccPriority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getCcPriority()
+    {
+        return $this->container['ccPriority'];
+    }
+
+    /**
+    * Sets ccPriority
+    *
+    * @param int|null $ccPriority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setCcPriority($ccPriority)
+    {
+        $this->container['ccPriority'] = $ccPriority;
         return $this;
     }
 

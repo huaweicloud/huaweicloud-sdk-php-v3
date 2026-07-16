@@ -41,6 +41,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启SSL加密访问。 **约束限制**： 不涉及。 **取值范围**： - true：开启SSL加密访问。 - false：关闭SSL加密访问。 **默认取值**： 不涉及。
     * storageSpecCode  **参数解释**： 存储IO规格。  [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws_hk) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)。](tag:hws_eu) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
     * tags  **参数解释**： 标签列表。 **约束限制**： 一个RabbitMQ实例最多添加20个标签。
     * bssParam  bssParam
     *
@@ -68,6 +71,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
             'sslEnable' => 'bool',
             'storageSpecCode' => 'string',
             'enterpriseProjectId' => 'string',
+            'diskEncryptedEnable' => 'bool',
+            'diskEncryptedKey' => 'string',
+            'archType' => 'string',
             'tags' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]',
             'bssParam' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\BssParam'
     ];
@@ -95,6 +101,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启SSL加密访问。 **约束限制**： 不涉及。 **取值范围**： - true：开启SSL加密访问。 - false：关闭SSL加密访问。 **默认取值**： 不涉及。
     * storageSpecCode  **参数解释**： 存储IO规格。  [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws_hk) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)。](tag:hws_eu) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
     * tags  **参数解释**： 标签列表。 **约束限制**： 一个RabbitMQ实例最多添加20个标签。
     * bssParam  bssParam
     *
@@ -122,6 +131,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         'sslEnable' => null,
         'storageSpecCode' => null,
         'enterpriseProjectId' => null,
+        'diskEncryptedEnable' => null,
+        'diskEncryptedKey' => null,
+        'archType' => null,
         'tags' => null,
         'bssParam' => null
     ];
@@ -170,6 +182,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启SSL加密访问。 **约束限制**： 不涉及。 **取值范围**： - true：开启SSL加密访问。 - false：关闭SSL加密访问。 **默认取值**： 不涉及。
     * storageSpecCode  **参数解释**： 存储IO规格。  [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws_hk) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)。](tag:hws_eu) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
     * tags  **参数解释**： 标签列表。 **约束限制**： 一个RabbitMQ实例最多添加20个标签。
     * bssParam  bssParam
     *
@@ -197,6 +212,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
             'sslEnable' => 'ssl_enable',
             'storageSpecCode' => 'storage_spec_code',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'diskEncryptedEnable' => 'disk_encrypted_enable',
+            'diskEncryptedKey' => 'disk_encrypted_key',
+            'archType' => 'arch_type',
             'tags' => 'tags',
             'bssParam' => 'bss_param'
     ];
@@ -224,6 +242,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启SSL加密访问。 **约束限制**： 不涉及。 **取值范围**： - true：开启SSL加密访问。 - false：关闭SSL加密访问。 **默认取值**： 不涉及。
     * storageSpecCode  **参数解释**： 存储IO规格。  [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws_hk) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)。](tag:hws_eu) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
     * tags  **参数解释**： 标签列表。 **约束限制**： 一个RabbitMQ实例最多添加20个标签。
     * bssParam  bssParam
     *
@@ -251,6 +272,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
             'sslEnable' => 'setSslEnable',
             'storageSpecCode' => 'setStorageSpecCode',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'diskEncryptedEnable' => 'setDiskEncryptedEnable',
+            'diskEncryptedKey' => 'setDiskEncryptedKey',
+            'archType' => 'setArchType',
             'tags' => 'setTags',
             'bssParam' => 'setBssParam'
     ];
@@ -278,6 +302,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * sslEnable  **参数解释**： 是否开启SSL加密访问。 **约束限制**： 不涉及。 **取值范围**： - true：开启SSL加密访问。 - false：关闭SSL加密访问。 **默认取值**： 不涉及。
     * storageSpecCode  **参数解释**： 存储IO规格。  [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/intl/zh-cn/productdesc-evs/zh-cn_topic_0014580744.html)。](tag:hws_hk) [如何选择磁盘类型请参考[磁盘类型及性能介绍](https://support.huaweicloud.com/eu/productdesc-evs/en-us_topic_0014580744.html)。](tag:hws_eu) **约束限制**： 不涉及。 **取值范围**： - dms.physical.storage.high.v2：高IO云硬盘。 - dms.physical.storage.ultra.v2：超高IO云硬盘。 [- dms.physical.storage.general：通用型SSD云硬盘。](tag:hws,hws_hk,dt,ax) [- dms.physical.storage.extreme：极速型SSD云硬盘。](tag:hws,hws_hk,dt,ax) **默认取值**： 不涉及。
     * enterpriseProjectId  **参数解释**： 企业项目ID。 **约束限制**： 若为企业项目账号，该参数必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * diskEncryptedEnable  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * archType  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
     * tags  **参数解释**： 标签列表。 **约束限制**： 一个RabbitMQ实例最多添加20个标签。
     * bssParam  bssParam
     *
@@ -305,6 +332,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
             'sslEnable' => 'getSslEnable',
             'storageSpecCode' => 'getStorageSpecCode',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'diskEncryptedEnable' => 'getDiskEncryptedEnable',
+            'diskEncryptedKey' => 'getDiskEncryptedKey',
+            'archType' => 'getArchType',
             'tags' => 'getTags',
             'bssParam' => 'getBssParam'
     ];
@@ -439,6 +469,9 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         $this->container['sslEnable'] = isset($data['sslEnable']) ? $data['sslEnable'] : null;
         $this->container['storageSpecCode'] = isset($data['storageSpecCode']) ? $data['storageSpecCode'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['diskEncryptedEnable'] = isset($data['diskEncryptedEnable']) ? $data['diskEncryptedEnable'] : null;
+        $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
+        $this->container['archType'] = isset($data['archType']) ? $data['archType'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['bssParam'] = isset($data['bssParam']) ? $data['bssParam'] : null;
     }
@@ -454,9 +487,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['engine'] === null) {
-            $invalidProperties[] = "'engine' can't be null";
-        }
             $allowedValues = $this->getEngineAllowableValues();
                 if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -470,6 +500,12 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         }
         if ($this->container['storageSpace'] === null) {
             $invalidProperties[] = "'storageSpace' can't be null";
+        }
+        if ($this->container['accessUser'] === null) {
+            $invalidProperties[] = "'accessUser' can't be null";
+        }
+        if ($this->container['password'] === null) {
+            $invalidProperties[] = "'password' can't be null";
         }
         if ($this->container['vpcId'] === null) {
             $invalidProperties[] = "'vpcId' can't be null";
@@ -571,7 +607,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Gets engine
     *  **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getEngine()
     {
@@ -581,7 +617,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
+    * @param string|null $engine **参数解释**： 消息引擎。 **约束限制**： 不涉及 **取值范围**： rabbitmq：RabbitMQ引擎。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -667,7 +703,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Gets accessUser
     *  **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getAccessUser()
     {
@@ -677,7 +713,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets accessUser
     *
-    * @param string|null $accessUser **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $accessUser **参数解释**：  认证用户名。 **约束限制**： 只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -691,7 +727,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Gets password
     *  **参数解释**： 实例的认证密码。 **约束限制**： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头 - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getPassword()
     {
@@ -701,7 +737,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string|null $password **参数解释**： 实例的认证密码。 **约束限制**： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头 - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $password **参数解释**： 实例的认证密码。 **约束限制**： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头 - 当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1020,6 +1056,78 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedEnable
+    *  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *
+    * @return bool|null
+    */
+    public function getDiskEncryptedEnable()
+    {
+        return $this->container['diskEncryptedEnable'];
+    }
+
+    /**
+    * Sets diskEncryptedEnable
+    *
+    * @param bool|null $diskEncryptedEnable **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： false。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedEnable($diskEncryptedEnable)
+    {
+        $this->container['diskEncryptedEnable'] = $diskEncryptedEnable;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedKey
+    *  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiskEncryptedKey()
+    {
+        return $this->container['diskEncryptedKey'];
+    }
+
+    /**
+    * Sets diskEncryptedKey
+    *
+    * @param string|null $diskEncryptedKey **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedKey($diskEncryptedKey)
+    {
+        $this->container['diskEncryptedKey'] = $diskEncryptedKey;
+        return $this;
+    }
+
+    /**
+    * Gets archType
+    *  **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getArchType()
+    {
+        return $this->container['archType'];
+    }
+
+    /**
+    * Sets archType
+    *
+    * @param string|null $archType **参数解释**： CPU架构。 **约束限制**： 不涉及。 **取值范围**： - X86：X86架构。 [- ARM：鲲鹏架构。](tag:hws_test,cmcc,ctc) **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setArchType($archType)
+    {
+        $this->container['archType'] = $archType;
         return $this;
     }
 

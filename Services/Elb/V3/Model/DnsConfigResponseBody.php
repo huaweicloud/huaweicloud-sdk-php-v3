@@ -20,18 +20,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  **参数解释**：自定义域名解析配置ID。
     * vipAddress  **参数解释**：负载均衡器的IPv4虚拟IP地址。
     * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：[不支持IPv6，请勿使用。](tag:dt)
     * eips  **参数解释**：负载均衡器绑定的EIP。  注：该字段与publicips一致。
     * globalEips  **参数解释**：负载均衡器绑定的GEIP。
     * publicDomainNameEnable  **参数解释**：是否配置公网域名。 **取值范围**：   true：开启公网域名   false：关闭公网域名
     * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。 **约束限制**：   公网域名只能使用公网类型的zone。   当配置公网域名开关打开时，该字段不能置空。   所填的公网zone必须在云解析服务已注册过。
-    * publicDnsZoneId  **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
     * publicDomainName  **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
     * publicDnsRecordSetTtl  参数解释:   公网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
     * privateDomainNameEnable  **参数解释**：   是否配置私网域名。 **取值范围**：   true：开启私网域名   false：关闭私网域名
     * privateDnsZoneName  **参数解释**：   私网域名所使用的zone的名称。 **约束限制**：   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。   当配置私网域名开关打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。
-    * privateDnsZoneId  **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
     * privateDomainName  **参数解释**：负载均衡实例的私网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}-internal.elb.{region_id}.{zone_name}
     * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。 **约束限制**：不涉及 **取值范围**：private public **默认取值**：private
     * privateDnsRecordSetTtl  **参数解释**：   私网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
@@ -39,18 +38,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'vipAddress' => 'string',
             'ipv6VipAddress' => 'string',
             'eips' => '\HuaweiCloud\SDK\Elb\V3\Model\EipInfo[]',
             'globalEips' => '\HuaweiCloud\SDK\Elb\V3\Model\GlobalEipInfo[]',
             'publicDomainNameEnable' => 'bool',
             'publicDnsZoneName' => 'string',
-            'publicDnsZoneId' => 'string',
             'publicDomainName' => 'string',
             'publicDnsRecordSetTtl' => 'int',
             'privateDomainNameEnable' => 'bool',
             'privateDnsZoneName' => 'string',
-            'privateDnsZoneId' => 'string',
             'privateDomainName' => 'string',
             'privateDnsZoneType' => 'string',
             'privateDnsRecordSetTtl' => 'int'
@@ -58,18 +56,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  **参数解释**：自定义域名解析配置ID。
     * vipAddress  **参数解释**：负载均衡器的IPv4虚拟IP地址。
     * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：[不支持IPv6，请勿使用。](tag:dt)
     * eips  **参数解释**：负载均衡器绑定的EIP。  注：该字段与publicips一致。
     * globalEips  **参数解释**：负载均衡器绑定的GEIP。
     * publicDomainNameEnable  **参数解释**：是否配置公网域名。 **取值范围**：   true：开启公网域名   false：关闭公网域名
     * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。 **约束限制**：   公网域名只能使用公网类型的zone。   当配置公网域名开关打开时，该字段不能置空。   所填的公网zone必须在云解析服务已注册过。
-    * publicDnsZoneId  **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
     * publicDomainName  **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
     * publicDnsRecordSetTtl  参数解释:   公网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
     * privateDomainNameEnable  **参数解释**：   是否配置私网域名。 **取值范围**：   true：开启私网域名   false：关闭私网域名
     * privateDnsZoneName  **参数解释**：   私网域名所使用的zone的名称。 **约束限制**：   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。   当配置私网域名开关打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。
-    * privateDnsZoneId  **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
     * privateDomainName  **参数解释**：负载均衡实例的私网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}-internal.elb.{region_id}.{zone_name}
     * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。 **约束限制**：不涉及 **取值范围**：private public **默认取值**：private
     * privateDnsRecordSetTtl  **参数解释**：   私网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
@@ -77,18 +74,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'vipAddress' => null,
         'ipv6VipAddress' => null,
         'eips' => null,
         'globalEips' => null,
         'publicDomainNameEnable' => null,
         'publicDnsZoneName' => null,
-        'publicDnsZoneId' => null,
         'publicDomainName' => null,
         'publicDnsRecordSetTtl' => 'int32',
         'privateDomainNameEnable' => null,
         'privateDnsZoneName' => null,
-        'privateDnsZoneId' => null,
         'privateDomainName' => null,
         'privateDnsZoneType' => null,
         'privateDnsRecordSetTtl' => 'int32'
@@ -117,18 +113,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  **参数解释**：自定义域名解析配置ID。
     * vipAddress  **参数解释**：负载均衡器的IPv4虚拟IP地址。
     * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：[不支持IPv6，请勿使用。](tag:dt)
     * eips  **参数解释**：负载均衡器绑定的EIP。  注：该字段与publicips一致。
     * globalEips  **参数解释**：负载均衡器绑定的GEIP。
     * publicDomainNameEnable  **参数解释**：是否配置公网域名。 **取值范围**：   true：开启公网域名   false：关闭公网域名
     * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。 **约束限制**：   公网域名只能使用公网类型的zone。   当配置公网域名开关打开时，该字段不能置空。   所填的公网zone必须在云解析服务已注册过。
-    * publicDnsZoneId  **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
     * publicDomainName  **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
     * publicDnsRecordSetTtl  参数解释:   公网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
     * privateDomainNameEnable  **参数解释**：   是否配置私网域名。 **取值范围**：   true：开启私网域名   false：关闭私网域名
     * privateDnsZoneName  **参数解释**：   私网域名所使用的zone的名称。 **约束限制**：   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。   当配置私网域名开关打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。
-    * privateDnsZoneId  **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
     * privateDomainName  **参数解释**：负载均衡实例的私网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}-internal.elb.{region_id}.{zone_name}
     * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。 **约束限制**：不涉及 **取值范围**：private public **默认取值**：private
     * privateDnsRecordSetTtl  **参数解释**：   私网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
@@ -136,18 +131,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'vipAddress' => 'vip_address',
             'ipv6VipAddress' => 'ipv6_vip_address',
             'eips' => 'eips',
             'globalEips' => 'global_eips',
             'publicDomainNameEnable' => 'public_domain_name_enable',
             'publicDnsZoneName' => 'public_dns_zone_name',
-            'publicDnsZoneId' => 'public_dns_zone_id',
             'publicDomainName' => 'public_domain_name',
             'publicDnsRecordSetTtl' => 'public_dns_record_set_ttl',
             'privateDomainNameEnable' => 'private_domain_name_enable',
             'privateDnsZoneName' => 'private_dns_zone_name',
-            'privateDnsZoneId' => 'private_dns_zone_id',
             'privateDomainName' => 'private_domain_name',
             'privateDnsZoneType' => 'private_dns_zone_type',
             'privateDnsRecordSetTtl' => 'private_dns_record_set_ttl'
@@ -155,18 +149,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  **参数解释**：自定义域名解析配置ID。
     * vipAddress  **参数解释**：负载均衡器的IPv4虚拟IP地址。
     * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：[不支持IPv6，请勿使用。](tag:dt)
     * eips  **参数解释**：负载均衡器绑定的EIP。  注：该字段与publicips一致。
     * globalEips  **参数解释**：负载均衡器绑定的GEIP。
     * publicDomainNameEnable  **参数解释**：是否配置公网域名。 **取值范围**：   true：开启公网域名   false：关闭公网域名
     * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。 **约束限制**：   公网域名只能使用公网类型的zone。   当配置公网域名开关打开时，该字段不能置空。   所填的公网zone必须在云解析服务已注册过。
-    * publicDnsZoneId  **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
     * publicDomainName  **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
     * publicDnsRecordSetTtl  参数解释:   公网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
     * privateDomainNameEnable  **参数解释**：   是否配置私网域名。 **取值范围**：   true：开启私网域名   false：关闭私网域名
     * privateDnsZoneName  **参数解释**：   私网域名所使用的zone的名称。 **约束限制**：   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。   当配置私网域名开关打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。
-    * privateDnsZoneId  **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
     * privateDomainName  **参数解释**：负载均衡实例的私网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}-internal.elb.{region_id}.{zone_name}
     * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。 **约束限制**：不涉及 **取值范围**：private public **默认取值**：private
     * privateDnsRecordSetTtl  **参数解释**：   私网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
@@ -174,18 +167,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'vipAddress' => 'setVipAddress',
             'ipv6VipAddress' => 'setIpv6VipAddress',
             'eips' => 'setEips',
             'globalEips' => 'setGlobalEips',
             'publicDomainNameEnable' => 'setPublicDomainNameEnable',
             'publicDnsZoneName' => 'setPublicDnsZoneName',
-            'publicDnsZoneId' => 'setPublicDnsZoneId',
             'publicDomainName' => 'setPublicDomainName',
             'publicDnsRecordSetTtl' => 'setPublicDnsRecordSetTtl',
             'privateDomainNameEnable' => 'setPrivateDomainNameEnable',
             'privateDnsZoneName' => 'setPrivateDnsZoneName',
-            'privateDnsZoneId' => 'setPrivateDnsZoneId',
             'privateDomainName' => 'setPrivateDomainName',
             'privateDnsZoneType' => 'setPrivateDnsZoneType',
             'privateDnsRecordSetTtl' => 'setPrivateDnsRecordSetTtl'
@@ -193,18 +185,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  **参数解释**：自定义域名解析配置ID。
     * vipAddress  **参数解释**：负载均衡器的IPv4虚拟IP地址。
     * ipv6VipAddress  **参数解释**：双栈类型负载均衡器的IPv6地址。  **约束限制**：[不支持IPv6，请勿使用。](tag:dt)
     * eips  **参数解释**：负载均衡器绑定的EIP。  注：该字段与publicips一致。
     * globalEips  **参数解释**：负载均衡器绑定的GEIP。
     * publicDomainNameEnable  **参数解释**：是否配置公网域名。 **取值范围**：   true：开启公网域名   false：关闭公网域名
     * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。 **约束限制**：   公网域名只能使用公网类型的zone。   当配置公网域名开关打开时，该字段不能置空。   所填的公网zone必须在云解析服务已注册过。
-    * publicDnsZoneId  **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
     * publicDomainName  **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
     * publicDnsRecordSetTtl  参数解释:   公网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
     * privateDomainNameEnable  **参数解释**：   是否配置私网域名。 **取值范围**：   true：开启私网域名   false：关闭私网域名
     * privateDnsZoneName  **参数解释**：   私网域名所使用的zone的名称。 **约束限制**：   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。   当配置私网域名开关打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。
-    * privateDnsZoneId  **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
     * privateDomainName  **参数解释**：负载均衡实例的私网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}-internal.elb.{region_id}.{zone_name}
     * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。 **约束限制**：不涉及 **取值范围**：private public **默认取值**：private
     * privateDnsRecordSetTtl  **参数解释**：   私网解析记录集超时时间。   解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。   如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。 **取值范围**：   1-2147483647 **默认取值**：   300
@@ -212,18 +203,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'vipAddress' => 'getVipAddress',
             'ipv6VipAddress' => 'getIpv6VipAddress',
             'eips' => 'getEips',
             'globalEips' => 'getGlobalEips',
             'publicDomainNameEnable' => 'getPublicDomainNameEnable',
             'publicDnsZoneName' => 'getPublicDnsZoneName',
-            'publicDnsZoneId' => 'getPublicDnsZoneId',
             'publicDomainName' => 'getPublicDomainName',
             'publicDnsRecordSetTtl' => 'getPublicDnsRecordSetTtl',
             'privateDomainNameEnable' => 'getPrivateDomainNameEnable',
             'privateDnsZoneName' => 'getPrivateDnsZoneName',
-            'privateDnsZoneId' => 'getPrivateDnsZoneId',
             'privateDomainName' => 'getPrivateDomainName',
             'privateDnsZoneType' => 'getPrivateDnsZoneType',
             'privateDnsRecordSetTtl' => 'getPrivateDnsRecordSetTtl'
@@ -287,18 +277,17 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['vipAddress'] = isset($data['vipAddress']) ? $data['vipAddress'] : null;
         $this->container['ipv6VipAddress'] = isset($data['ipv6VipAddress']) ? $data['ipv6VipAddress'] : null;
         $this->container['eips'] = isset($data['eips']) ? $data['eips'] : null;
         $this->container['globalEips'] = isset($data['globalEips']) ? $data['globalEips'] : null;
         $this->container['publicDomainNameEnable'] = isset($data['publicDomainNameEnable']) ? $data['publicDomainNameEnable'] : null;
         $this->container['publicDnsZoneName'] = isset($data['publicDnsZoneName']) ? $data['publicDnsZoneName'] : null;
-        $this->container['publicDnsZoneId'] = isset($data['publicDnsZoneId']) ? $data['publicDnsZoneId'] : null;
         $this->container['publicDomainName'] = isset($data['publicDomainName']) ? $data['publicDomainName'] : null;
         $this->container['publicDnsRecordSetTtl'] = isset($data['publicDnsRecordSetTtl']) ? $data['publicDnsRecordSetTtl'] : null;
         $this->container['privateDomainNameEnable'] = isset($data['privateDomainNameEnable']) ? $data['privateDomainNameEnable'] : null;
         $this->container['privateDnsZoneName'] = isset($data['privateDnsZoneName']) ? $data['privateDnsZoneName'] : null;
-        $this->container['privateDnsZoneId'] = isset($data['privateDnsZoneId']) ? $data['privateDnsZoneId'] : null;
         $this->container['privateDomainName'] = isset($data['privateDomainName']) ? $data['privateDomainName'] : null;
         $this->container['privateDnsZoneType'] = isset($data['privateDnsZoneType']) ? $data['privateDnsZoneType'] : null;
         $this->container['privateDnsRecordSetTtl'] = isset($data['privateDnsRecordSetTtl']) ? $data['privateDnsRecordSetTtl'] : null;
@@ -324,6 +313,30 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  **参数解释**：自定义域名解析配置ID。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id **参数解释**：自定义域名解析配置ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**
@@ -471,30 +484,6 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets publicDnsZoneId
-    *  **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
-    *
-    * @return string|null
-    */
-    public function getPublicDnsZoneId()
-    {
-        return $this->container['publicDnsZoneId'];
-    }
-
-    /**
-    * Sets publicDnsZoneId
-    *
-    * @param string|null $publicDnsZoneId **参数解释**：   公网域名所使用的zone对应的id。   根据传入的公网zone 名称查询得出。
-    *
-    * @return $this
-    */
-    public function setPublicDnsZoneId($publicDnsZoneId)
-    {
-        $this->container['publicDnsZoneId'] = $publicDnsZoneId;
-        return $this;
-    }
-
-    /**
     * Gets publicDomainName
     *  **参数解释**：   负载均衡实例的公网域名。 **约束限制**：   根据负载均衡实例id，局点id和zone信息以如下格式生成：   {lb_id}.elb.{region_id}.{zone_name}
     *
@@ -587,30 +576,6 @@ class DnsConfigResponseBody implements ModelInterface, ArrayAccess
     public function setPrivateDnsZoneName($privateDnsZoneName)
     {
         $this->container['privateDnsZoneName'] = $privateDnsZoneName;
-        return $this;
-    }
-
-    /**
-    * Gets privateDnsZoneId
-    *  **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
-    *
-    * @return string|null
-    */
-    public function getPrivateDnsZoneId()
-    {
-        return $this->container['privateDnsZoneId'];
-    }
-
-    /**
-    * Sets privateDnsZoneId
-    *
-    * @param string|null $privateDnsZoneId **参数解释**：   私网域名所使用的zone对应的id。 **约束限制**：   根据传入的私网zone 名称查询得出。
-    *
-    * @return $this
-    */
-    public function setPrivateDnsZoneId($privateDnsZoneId)
-    {
-        $this->container['privateDnsZoneId'] = $privateDnsZoneId;
         return $this;
     }
 

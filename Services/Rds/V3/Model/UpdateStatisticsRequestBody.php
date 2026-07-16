@@ -158,6 +158,9 @@ class UpdateStatisticsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['dbName'] === null) {
+            $invalidProperties[] = "'dbName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateStatisticsRequestBody implements ModelInterface, ArrayAccess
     * Gets dbName
     *  数据库名
     *
-    * @return string|null
+    * @return string
     */
     public function getDbName()
     {
@@ -186,7 +189,7 @@ class UpdateStatisticsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName 数据库名
+    * @param string $dbName 数据库名
     *
     * @return $this
     */

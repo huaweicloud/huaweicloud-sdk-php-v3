@@ -21,7 +21,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -52,6 +53,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'policyname' => 'string',
             'priority' => 'int',
+            'ccPriority' => 'int',
             'name' => 'string',
             'id' => 'string',
             'policyid' => 'string',
@@ -81,7 +83,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -111,7 +114,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'policyname' => null,
-        'priority' => null,
+        'priority' => 'int32',
+        'ccPriority' => 'int32',
         'name' => null,
         'id' => null,
         'policyid' => null,
@@ -162,7 +166,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -193,6 +198,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'policyname' => 'policyname',
             'priority' => 'priority',
+            'ccPriority' => 'cc_priority',
             'name' => 'name',
             'id' => 'id',
             'policyid' => 'policyid',
@@ -222,7 +228,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -253,6 +260,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'policyname' => 'setPolicyname',
             'priority' => 'setPriority',
+            'ccPriority' => 'setCcPriority',
             'name' => 'setName',
             'id' => 'setId',
             'policyid' => 'setPolicyid',
@@ -282,7 +290,8 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * policyname  **参数解释：** 策略名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     * name  规则名称
     * id  Rule ID.
     * policyid  Policy ID.
@@ -313,6 +322,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'policyname' => 'getPolicyname',
             'priority' => 'getPriority',
+            'ccPriority' => 'getCcPriority',
             'name' => 'getName',
             'id' => 'getId',
             'policyid' => 'getPolicyid',
@@ -424,6 +434,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     {
         $this->container['policyname'] = isset($data['policyname']) ? $data['policyname'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['ccPriority'] = isset($data['ccPriority']) ? $data['ccPriority'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
@@ -506,7 +517,7 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
     *
     * @return int|null
     */
@@ -518,13 +529,37 @@ class CcrulesListInfo implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
     *
     * @return $this
     */
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets ccPriority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getCcPriority()
+    {
+        return $this->container['ccPriority'];
+    }
+
+    /**
+    * Sets ccPriority
+    *
+    * @param int|null $ccPriority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setCcPriority($ccPriority)
+    {
+        $this->container['ccPriority'] = $ccPriority;
         return $this;
     }
 

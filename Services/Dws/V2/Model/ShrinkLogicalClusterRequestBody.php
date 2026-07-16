@@ -20,30 +20,34 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
     * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterRings' => '\HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]',
             'parallelJobs' => 'int',
-            'mode' => 'string'
+            'mode' => 'string',
+            'shrinkNodeNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
     * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterRings' => null,
         'parallelJobs' => 'int32',
-        'mode' => null
+        'mode' => null,
+        'shrinkNodeNum' => 'int32'
     ];
 
     /**
@@ -69,44 +73,50 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
     * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterRings' => 'cluster_rings',
             'parallelJobs' => 'parallel_jobs',
-            'mode' => 'mode'
+            'mode' => 'mode',
+            'shrinkNodeNum' => 'shrink_node_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
     * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterRings' => 'setClusterRings',
             'parallelJobs' => 'setParallelJobs',
-            'mode' => 'setMode'
+            'mode' => 'setMode',
+            'shrinkNodeNum' => 'setShrinkNodeNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
     * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterRings' => 'getClusterRings',
             'parallelJobs' => 'getParallelJobs',
-            'mode' => 'getMode'
+            'mode' => 'getMode',
+            'shrinkNodeNum' => 'getShrinkNodeNum'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
         $this->container['clusterRings'] = isset($data['clusterRings']) ? $data['clusterRings'] : null;
         $this->container['parallelJobs'] = isset($data['parallelJobs']) ? $data['parallelJobs'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['shrinkNodeNum'] = isset($data['shrinkNodeNum']) ? $data['shrinkNodeNum'] : null;
     }
 
     /**
@@ -180,9 +191,6 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['clusterRings'] === null) {
-            $invalidProperties[] = "'clusterRings' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -199,9 +207,9 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterRings
-    *  **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    *  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
-    * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null
     */
     public function getClusterRings()
     {
@@ -211,7 +219,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[] $clusterRings **参数解释**： 缩容主机环信息。  **约束限制**：  不涉及。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null $clusterRings **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -266,6 +274,30 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets shrinkNodeNum
+    *  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getShrinkNodeNum()
+    {
+        return $this->container['shrinkNodeNum'];
+    }
+
+    /**
+    * Sets shrinkNodeNum
+    *
+    * @param int|null $shrinkNodeNum **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setShrinkNodeNum($shrinkNodeNum)
+    {
+        $this->container['shrinkNodeNum'] = $shrinkNodeNum;
         return $this;
     }
 

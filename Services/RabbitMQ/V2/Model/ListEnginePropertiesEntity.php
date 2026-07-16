@@ -30,6 +30,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * engineVersions  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -45,6 +46,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'maxBandwidthPerBroker' => 'string',
             'minStoragePerNode' => 'string',
             'maxTpsPerBroker' => 'string',
+            'engineVersions' => 'string',
             'productAlias' => 'string'
     ];
 
@@ -60,6 +62,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * engineVersions  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -75,6 +78,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
         'maxBandwidthPerBroker' => null,
         'minStoragePerNode' => null,
         'maxTpsPerBroker' => null,
+        'engineVersions' => null,
         'productAlias' => null
     ];
 
@@ -111,6 +115,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * engineVersions  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -126,6 +131,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'maxBandwidthPerBroker' => 'max_bandwidth_per_broker',
             'minStoragePerNode' => 'min_storage_per_node',
             'maxTpsPerBroker' => 'max_tps_per_broker',
+            'engineVersions' => 'engine_versions',
             'productAlias' => 'product_alias'
     ];
 
@@ -141,6 +147,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * engineVersions  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -156,6 +163,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'maxBandwidthPerBroker' => 'setMaxBandwidthPerBroker',
             'minStoragePerNode' => 'setMinStoragePerNode',
             'maxTpsPerBroker' => 'setMaxTpsPerBroker',
+            'engineVersions' => 'setEngineVersions',
             'productAlias' => 'setProductAlias'
     ];
 
@@ -171,6 +179,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     * maxBandwidthPerBroker  **参数解释**： 每个Broker的最大带宽。 **取值范围**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **取值范围**： 不涉及。
     * maxTpsPerBroker  **参数解释**： 每个Broker的最大TPS。 **取值范围**： 不涉及。
+    * engineVersions  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -186,6 +195,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
             'maxBandwidthPerBroker' => 'getMaxBandwidthPerBroker',
             'minStoragePerNode' => 'getMinStoragePerNode',
             'maxTpsPerBroker' => 'getMaxTpsPerBroker',
+            'engineVersions' => 'getEngineVersions',
             'productAlias' => 'getProductAlias'
     ];
 
@@ -257,6 +267,7 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
         $this->container['maxBandwidthPerBroker'] = isset($data['maxBandwidthPerBroker']) ? $data['maxBandwidthPerBroker'] : null;
         $this->container['minStoragePerNode'] = isset($data['minStoragePerNode']) ? $data['minStoragePerNode'] : null;
         $this->container['maxTpsPerBroker'] = isset($data['maxTpsPerBroker']) ? $data['maxTpsPerBroker'] : null;
+        $this->container['engineVersions'] = isset($data['engineVersions']) ? $data['engineVersions'] : null;
         $this->container['productAlias'] = isset($data['productAlias']) ? $data['productAlias'] : null;
     }
 
@@ -519,6 +530,30 @@ class ListEnginePropertiesEntity implements ModelInterface, ArrayAccess
     public function setMaxTpsPerBroker($maxTpsPerBroker)
     {
         $this->container['maxTpsPerBroker'] = $maxTpsPerBroker;
+        return $this;
+    }
+
+    /**
+    * Gets engineVersions
+    *  **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEngineVersions()
+    {
+        return $this->container['engineVersions'];
+    }
+
+    /**
+    * Sets engineVersions
+    *
+    * @param string|null $engineVersions **参数解释**： 消息引擎版本。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setEngineVersions($engineVersions)
+    {
+        $this->container['engineVersions'] = $engineVersions;
         return $this;
     }
 

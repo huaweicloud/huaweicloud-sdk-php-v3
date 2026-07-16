@@ -30,6 +30,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     * enlargeThreshold  扩容阈值（百分比数值），指CPU平均使用率。
     * maxFlavor  扩容规格上限。
     * reduceEnabled  自动回缩开关状态。  取值：  - true：已开启 - false：已关闭
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
     * minFlavor  缩容规格下限。
     * silenceStartAt  静默期开始时间（上一次变更结束时间）。  格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * scalingStrategy  scalingStrategy
@@ -49,6 +50,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'int',
             'maxFlavor' => 'string',
             'reduceEnabled' => 'bool',
+            'reduceThreshold' => 'int',
             'minFlavor' => 'string',
             'silenceStartAt' => 'string',
             'scalingStrategy' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ScalingStrategyInfo',
@@ -68,6 +70,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     * enlargeThreshold  扩容阈值（百分比数值），指CPU平均使用率。
     * maxFlavor  扩容规格上限。
     * reduceEnabled  自动回缩开关状态。  取值：  - true：已开启 - false：已关闭
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
     * minFlavor  缩容规格下限。
     * silenceStartAt  静默期开始时间（上一次变更结束时间）。  格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * scalingStrategy  scalingStrategy
@@ -87,6 +90,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
         'enlargeThreshold' => null,
         'maxFlavor' => null,
         'reduceEnabled' => null,
+        'reduceThreshold' => null,
         'minFlavor' => null,
         'silenceStartAt' => null,
         'scalingStrategy' => null,
@@ -127,6 +131,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     * enlargeThreshold  扩容阈值（百分比数值），指CPU平均使用率。
     * maxFlavor  扩容规格上限。
     * reduceEnabled  自动回缩开关状态。  取值：  - true：已开启 - false：已关闭
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
     * minFlavor  缩容规格下限。
     * silenceStartAt  静默期开始时间（上一次变更结束时间）。  格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * scalingStrategy  scalingStrategy
@@ -146,6 +151,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'enlarge_threshold',
             'maxFlavor' => 'max_flavor',
             'reduceEnabled' => 'reduce_enabled',
+            'reduceThreshold' => 'reduce_threshold',
             'minFlavor' => 'min_flavor',
             'silenceStartAt' => 'silence_start_at',
             'scalingStrategy' => 'scaling_strategy',
@@ -165,6 +171,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     * enlargeThreshold  扩容阈值（百分比数值），指CPU平均使用率。
     * maxFlavor  扩容规格上限。
     * reduceEnabled  自动回缩开关状态。  取值：  - true：已开启 - false：已关闭
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
     * minFlavor  缩容规格下限。
     * silenceStartAt  静默期开始时间（上一次变更结束时间）。  格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * scalingStrategy  scalingStrategy
@@ -184,6 +191,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'setEnlargeThreshold',
             'maxFlavor' => 'setMaxFlavor',
             'reduceEnabled' => 'setReduceEnabled',
+            'reduceThreshold' => 'setReduceThreshold',
             'minFlavor' => 'setMinFlavor',
             'silenceStartAt' => 'setSilenceStartAt',
             'scalingStrategy' => 'setScalingStrategy',
@@ -203,6 +211,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     * enlargeThreshold  扩容阈值（百分比数值），指CPU平均使用率。
     * maxFlavor  扩容规格上限。
     * reduceEnabled  自动回缩开关状态。  取值：  - true：已开启 - false：已关闭
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
     * minFlavor  缩容规格下限。
     * silenceStartAt  静默期开始时间（上一次变更结束时间）。  格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * scalingStrategy  scalingStrategy
@@ -222,6 +231,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'getEnlargeThreshold',
             'maxFlavor' => 'getMaxFlavor',
             'reduceEnabled' => 'getReduceEnabled',
+            'reduceThreshold' => 'getReduceThreshold',
             'minFlavor' => 'getMinFlavor',
             'silenceStartAt' => 'getSilenceStartAt',
             'scalingStrategy' => 'getScalingStrategy',
@@ -297,6 +307,7 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
         $this->container['enlargeThreshold'] = isset($data['enlargeThreshold']) ? $data['enlargeThreshold'] : null;
         $this->container['maxFlavor'] = isset($data['maxFlavor']) ? $data['maxFlavor'] : null;
         $this->container['reduceEnabled'] = isset($data['reduceEnabled']) ? $data['reduceEnabled'] : null;
+        $this->container['reduceThreshold'] = isset($data['reduceThreshold']) ? $data['reduceThreshold'] : null;
         $this->container['minFlavor'] = isset($data['minFlavor']) ? $data['minFlavor'] : null;
         $this->container['silenceStartAt'] = isset($data['silenceStartAt']) ? $data['silenceStartAt'] : null;
         $this->container['scalingStrategy'] = isset($data['scalingStrategy']) ? $data['scalingStrategy'] : null;
@@ -313,6 +324,12 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['reduceThreshold']) && ($this->container['reduceThreshold'] > 30)) {
+                $invalidProperties[] = "invalid value for 'reduceThreshold', must be smaller than or equal to 30.";
+            }
+            if (!is_null($this->container['reduceThreshold']) && ($this->container['reduceThreshold'] < 10)) {
+                $invalidProperties[] = "invalid value for 'reduceThreshold', must be bigger than or equal to 10.";
+            }
         return $invalidProperties;
     }
 
@@ -540,6 +557,30 @@ class ShowAutoScalingPolicyResponse implements ModelInterface, ArrayAccess
     public function setReduceEnabled($reduceEnabled)
     {
         $this->container['reduceEnabled'] = $reduceEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets reduceThreshold
+    *  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
+    *
+    * @return int|null
+    */
+    public function getReduceThreshold()
+    {
+        return $this->container['reduceThreshold'];
+    }
+
+    /**
+    * Sets reduceThreshold
+    *
+    * @param int|null $reduceThreshold **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **取值范围**：  10-30。
+    *
+    * @return $this
+    */
+    public function setReduceThreshold($reduceThreshold)
+    {
+        $this->container['reduceThreshold'] = $reduceThreshold;
         return $this;
     }
 

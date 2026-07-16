@@ -79,7 +79,7 @@ class ListIpGroupResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'total' => 'total',
             'items' => 'items',
-            'cloudTotal' => 'cloudTotal'
+            'cloudTotal' => 'cloud_total'
     ];
 
     /**

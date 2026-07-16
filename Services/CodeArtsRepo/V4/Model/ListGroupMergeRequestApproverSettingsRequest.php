@@ -20,7 +20,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -34,7 +34,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -69,7 +69,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -83,7 +83,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -97,7 +97,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -217,7 +217,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
 
     /**
     * Gets groupId
-    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return int
     */
@@ -229,7 +229,7 @@ class ListGroupMergeRequestApproverSettingsRequest implements ModelInterface, Ar
     /**
     * Sets groupId
     *
-    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return $this
     */

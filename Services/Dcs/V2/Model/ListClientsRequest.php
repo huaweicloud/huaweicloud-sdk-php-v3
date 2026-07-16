@@ -242,9 +242,6 @@ class ListClientsRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-        if ($this->container['nodeId'] === null) {
-            $invalidProperties[] = "'nodeId' can't be null";
-        }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
             }
@@ -301,7 +298,7 @@ class ListClientsRequest implements ModelInterface, ArrayAccess
     * Gets nodeId
     *  节点ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getNodeId()
     {
@@ -311,7 +308,7 @@ class ListClientsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string $nodeId 节点ID。
+    * @param string|null $nodeId 节点ID。
     *
     * @return $this
     */

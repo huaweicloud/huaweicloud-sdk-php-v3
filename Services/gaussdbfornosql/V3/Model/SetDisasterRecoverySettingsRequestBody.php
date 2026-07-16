@@ -20,17 +20,17 @@ class SetDisasterRecoverySettingsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * disasterRecoverySettings  容灾切换的故障节点比例列表。
+    * disasterRecoverySettings  **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'disasterRecoverySettings' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SwitchoverRatioInfo[]'
+            'disasterRecoverySettings' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SetSwitchoverRatioInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * disasterRecoverySettings  容灾切换的故障节点比例列表。
+    * disasterRecoverySettings  **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SetDisasterRecoverySettingsRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * disasterRecoverySettings  容灾切换的故障节点比例列表。
+    * disasterRecoverySettings  **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SetDisasterRecoverySettingsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * disasterRecoverySettings  容灾切换的故障节点比例列表。
+    * disasterRecoverySettings  **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SetDisasterRecoverySettingsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * disasterRecoverySettings  容灾切换的故障节点比例列表。
+    * disasterRecoverySettings  **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -174,9 +174,9 @@ class SetDisasterRecoverySettingsRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets disasterRecoverySettings
-    *  容灾切换的故障节点比例列表。
+    *  **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SwitchoverRatioInfo[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SetSwitchoverRatioInfo[]|null
     */
     public function getDisasterRecoverySettings()
     {
@@ -186,7 +186,7 @@ class SetDisasterRecoverySettingsRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets disasterRecoverySettings
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SwitchoverRatioInfo[]|null $disasterRecoverySettings 容灾切换的故障节点比例列表。
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\SetSwitchoverRatioInfo[]|null $disasterRecoverySettings **参数解释：** 容灾切换的故障节点比例列表。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

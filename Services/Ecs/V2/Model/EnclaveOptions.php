@@ -158,9 +158,6 @@ class EnclaveOptions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['enabled'] === null) {
-            $invalidProperties[] = "'enabled' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class EnclaveOptions implements ModelInterface, ArrayAccess
     * Gets enabled
     *  enabled
     *
-    * @return bool
+    * @return bool|null
     */
     public function getEnabled()
     {
@@ -189,7 +186,7 @@ class EnclaveOptions implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled enabled
+    * @param bool|null $enabled enabled
     *
     * @return $this
     */

@@ -31,7 +31,7 @@ class CreateSubjectNewRequest implements ModelInterface, ArrayAccess
             'workspace' => 'string',
             'xProjectId' => 'string',
             'contentType' => 'string',
-            'body' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SubjectParamsVO'
+            'body' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogVO'
     ];
 
     /**
@@ -302,7 +302,7 @@ class CreateSubjectNewRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SubjectParamsVO|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogVO|null
     */
     public function getBody()
     {
@@ -312,7 +312,7 @@ class CreateSubjectNewRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SubjectParamsVO|null $body body
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogVO|null $body body
     *
     * @return $this
     */

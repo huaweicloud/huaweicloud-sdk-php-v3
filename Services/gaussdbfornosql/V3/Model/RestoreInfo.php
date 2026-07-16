@@ -20,9 +20,9 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backupId  备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * sourceInstanceId  数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * restoreTime  数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    * backupId  **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * sourceInstanceId  **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * restoreTime  **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backupId  备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * sourceInstanceId  数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * restoreTime  数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    * backupId  **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * sourceInstanceId  **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * restoreTime  **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class RestoreInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backupId  备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * sourceInstanceId  数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * restoreTime  数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    * backupId  **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * sourceInstanceId  **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * restoreTime  **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backupId  备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * sourceInstanceId  数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * restoreTime  数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    * backupId  **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * sourceInstanceId  **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * restoreTime  **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backupId  备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * sourceInstanceId  数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
-    * restoreTime  数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    * backupId  **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * sourceInstanceId  **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * restoreTime  **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupId
-    *  备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
+    *  **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class RestoreInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string|null $backupId 备份文件ID。  用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
+    * @param string|null $backupId **参数解释：** 全量备份文件ID。 **约束限制：** 用于根据指定备份恢复数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceInstanceId
-    *  数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
+    *  **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class RestoreInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sourceInstanceId
     *
-    * @param string|null $sourceInstanceId 数据恢复参考的指定实例的ID。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。
+    * @param string|null $sourceInstanceId **参数解释：** 数据恢复参考的指定实例的ID。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class RestoreInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTime
-    *  数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    *  **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class RestoreInfo implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param int|null $restoreTime 数据恢复的指定的时间点。  用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。取值为UTC 13位毫秒数，可通过[查询实例可恢复的时间段]接口进行查询。
+    * @param int|null $restoreTime **参数解释：** 数据恢复的指定的时间点。 **约束限制：** 用于恢复指定实例的指定时间点的数据到一个新创建的实例的场景，此场景下该字段取值不能为空。 **取值范围：** 取值为UTC 13位毫秒数，可通过查询实例可恢复的时间段 - QueryingtheTimeWindowWhenaBackupCanBeRestored接口进行查询。 **默认取值：** 不涉及。
     *
     * @return $this
     */

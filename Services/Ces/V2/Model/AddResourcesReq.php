@@ -21,7 +21,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resources  当资源添加方式为手动创建、资源层级为子维度时，资源分组新增资源时只需传递新增的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    * productResources  [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resources  当资源添加方式为手动创建、资源层级为子维度时，资源分组新增资源时只需传递新增的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    * productResources  [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resources  当资源添加方式为手动创建、资源层级为子维度时，资源分组新增资源时只需传递新增的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    * productResources  [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resources  当资源添加方式为手动创建、资源层级为子维度时，资源分组新增资源时只需传递新增的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    * productResources  [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resources  当资源添加方式为手动创建、资源层级为子维度时，资源分组新增资源时只需传递新增的资源信息
-    * productResources  当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    * productResources  [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productResources
-    *  当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    *  [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null
     */
@@ -221,7 +221,7 @@ class AddResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets productResources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources 当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources [天翼云、移动云不支持该字段。](tag:ctc,cmcc)当资源添加方式为手动创建、资源层级为云产品时，资源分组新增资源时需要将已有资源信息和新增的资源信息一起传递
     *
     * @return $this
     */

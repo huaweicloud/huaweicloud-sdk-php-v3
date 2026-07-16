@@ -44,6 +44,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * operatorConfig  算子的并行度配置。
     * staticEstimatorConfig  每个算子的流量/命中率配置，json格式的字符串。例如： {\"operator_list\":[   {\"id\":\"0a448493b4782967b150582570326227\",\"rate_factor\":0.55},   {\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"rate_factor\":1},   {\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"rate_factor\":0.55},   {\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"output_rate\":2000} ]}
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
@@ -78,6 +79,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'bool',
             'resumeMaxNum' => 'int',
             'runtimeConfig' => 'string',
+            'flinkLogConfig' => 'string',
             'operatorConfig' => 'string',
             'staticEstimatorConfig' => 'string',
             'flinkVersion' => 'string',
@@ -112,6 +114,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * operatorConfig  算子的并行度配置。
     * staticEstimatorConfig  每个算子的流量/命中率配置，json格式的字符串。例如： {\"operator_list\":[   {\"id\":\"0a448493b4782967b150582570326227\",\"rate_factor\":0.55},   {\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"rate_factor\":1},   {\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"rate_factor\":0.55},   {\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"output_rate\":2000} ]}
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
@@ -146,6 +149,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
         'resumeCheckpoint' => null,
         'resumeMaxNum' => 'int32',
         'runtimeConfig' => null,
+        'flinkLogConfig' => null,
         'operatorConfig' => null,
         'staticEstimatorConfig' => null,
         'flinkVersion' => null,
@@ -201,6 +205,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * operatorConfig  算子的并行度配置。
     * staticEstimatorConfig  每个算子的流量/命中率配置，json格式的字符串。例如： {\"operator_list\":[   {\"id\":\"0a448493b4782967b150582570326227\",\"rate_factor\":0.55},   {\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"rate_factor\":1},   {\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"rate_factor\":0.55},   {\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"output_rate\":2000} ]}
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
@@ -235,6 +240,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'resume_checkpoint',
             'resumeMaxNum' => 'resume_max_num',
             'runtimeConfig' => 'runtime_config',
+            'flinkLogConfig' => 'flink_log_config',
             'operatorConfig' => 'operator_config',
             'staticEstimatorConfig' => 'static_estimator_config',
             'flinkVersion' => 'flink_version',
@@ -269,6 +275,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * operatorConfig  算子的并行度配置。
     * staticEstimatorConfig  每个算子的流量/命中率配置，json格式的字符串。例如： {\"operator_list\":[   {\"id\":\"0a448493b4782967b150582570326227\",\"rate_factor\":0.55},   {\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"rate_factor\":1},   {\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"rate_factor\":0.55},   {\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"output_rate\":2000} ]}
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
@@ -303,6 +310,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'setResumeCheckpoint',
             'resumeMaxNum' => 'setResumeMaxNum',
             'runtimeConfig' => 'setRuntimeConfig',
+            'flinkLogConfig' => 'setFlinkLogConfig',
             'operatorConfig' => 'setOperatorConfig',
             'staticEstimatorConfig' => 'setStaticEstimatorConfig',
             'flinkVersion' => 'setFlinkVersion',
@@ -337,6 +345,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * resumeCheckpoint  异常重启是否从checkpoint恢复。
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * operatorConfig  算子的并行度配置。
     * staticEstimatorConfig  每个算子的流量/命中率配置，json格式的字符串。例如： {\"operator_list\":[   {\"id\":\"0a448493b4782967b150582570326227\",\"rate_factor\":0.55},   {\"id\":\"6d2677a0ecc3fd8df0b72ec675edf8f4\",\"rate_factor\":1},   {\"id\":\"ea632d67b7d595e5b851708ae9ad79d6\",\"rate_factor\":0.55},   {\"id\":\"bc764cd8ddf7a0cff126f51c16239658\",\"output_rate\":2000} ]}
     * flinkVersion  Flink版本。当前只支持1.10和1.12。
@@ -371,6 +380,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'resumeCheckpoint' => 'getResumeCheckpoint',
             'resumeMaxNum' => 'getResumeMaxNum',
             'runtimeConfig' => 'getRuntimeConfig',
+            'flinkLogConfig' => 'getFlinkLogConfig',
             'operatorConfig' => 'getOperatorConfig',
             'staticEstimatorConfig' => 'getStaticEstimatorConfig',
             'flinkVersion' => 'getFlinkVersion',
@@ -461,6 +471,7 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : null;
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
+        $this->container['flinkLogConfig'] = isset($data['flinkLogConfig']) ? $data['flinkLogConfig'] : null;
         $this->container['operatorConfig'] = isset($data['operatorConfig']) ? $data['operatorConfig'] : null;
         $this->container['staticEstimatorConfig'] = isset($data['staticEstimatorConfig']) ? $data['staticEstimatorConfig'] : null;
         $this->container['flinkVersion'] = isset($data['flinkVersion']) ? $data['flinkVersion'] : null;
@@ -1082,6 +1093,30 @@ class UpdateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     public function setRuntimeConfig($runtimeConfig)
     {
         $this->container['runtimeConfig'] = $runtimeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets flinkLogConfig
+    *  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return string|null
+    */
+    public function getFlinkLogConfig()
+    {
+        return $this->container['flinkLogConfig'];
+    }
+
+    /**
+    * Sets flinkLogConfig
+    *
+    * @param string|null $flinkLogConfig Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return $this
+    */
+    public function setFlinkLogConfig($flinkLogConfig)
+    {
+        $this->container['flinkLogConfig'] = $flinkLogConfig;
         return $this;
     }
 

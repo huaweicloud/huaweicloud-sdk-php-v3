@@ -26,6 +26,7 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUserIds  **参数解释：** 开发人员创建分支权限例外白名单。多个用户ID使用逗号分隔。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'string',
             'tagNameRegex' => 'string',
             'forbiddenDeveloperCreateBranch' => 'bool',
-            'createBranchWhitelistUserIds' => 'string'
+            'createBranchWhitelistUserIds' => 'string',
+            'repoEncryptionEnabled' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUserIds  **参数解释：** 开发人员创建分支权限例外白名单。多个用户ID使用逗号分隔。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
         'branchNameRegex' => null,
         'tagNameRegex' => null,
         'forbiddenDeveloperCreateBranch' => null,
-        'createBranchWhitelistUserIds' => null
+        'createBranchWhitelistUserIds' => null,
+        'repoEncryptionEnabled' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUserIds  **参数解释：** 开发人员创建分支权限例外白名单。多个用户ID使用逗号分隔。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'branch_name_regex',
             'tagNameRegex' => 'tag_name_regex',
             'forbiddenDeveloperCreateBranch' => 'forbidden_developer_create_branch',
-            'createBranchWhitelistUserIds' => 'create_branch_whitelist_user_ids'
+            'createBranchWhitelistUserIds' => 'create_branch_whitelist_user_ids',
+            'repoEncryptionEnabled' => 'repo_encryption_enabled'
     ];
 
     /**
@@ -107,6 +113,7 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUserIds  **参数解释：** 开发人员创建分支权限例外白名单。多个用户ID使用逗号分隔。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'setBranchNameRegex',
             'tagNameRegex' => 'setTagNameRegex',
             'forbiddenDeveloperCreateBranch' => 'setForbiddenDeveloperCreateBranch',
-            'createBranchWhitelistUserIds' => 'setCreateBranchWhitelistUserIds'
+            'createBranchWhitelistUserIds' => 'setCreateBranchWhitelistUserIds',
+            'repoEncryptionEnabled' => 'setRepoEncryptionEnabled'
     ];
 
     /**
@@ -127,6 +135,7 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUserIds  **参数解释：** 开发人员创建分支权限例外白名单。多个用户ID使用逗号分隔。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'getBranchNameRegex',
             'tagNameRegex' => 'getTagNameRegex',
             'forbiddenDeveloperCreateBranch' => 'getForbiddenDeveloperCreateBranch',
-            'createBranchWhitelistUserIds' => 'getCreateBranchWhitelistUserIds'
+            'createBranchWhitelistUserIds' => 'getCreateBranchWhitelistUserIds',
+            'repoEncryptionEnabled' => 'getRepoEncryptionEnabled'
     ];
 
     /**
@@ -203,6 +213,7 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
         $this->container['tagNameRegex'] = isset($data['tagNameRegex']) ? $data['tagNameRegex'] : null;
         $this->container['forbiddenDeveloperCreateBranch'] = isset($data['forbiddenDeveloperCreateBranch']) ? $data['forbiddenDeveloperCreateBranch'] : null;
         $this->container['createBranchWhitelistUserIds'] = isset($data['createBranchWhitelistUserIds']) ? $data['createBranchWhitelistUserIds'] : null;
+        $this->container['repoEncryptionEnabled'] = isset($data['repoEncryptionEnabled']) ? $data['repoEncryptionEnabled'] : null;
     }
 
     /**
@@ -386,6 +397,30 @@ class GeneralPolicyBodyDto implements ModelInterface, ArrayAccess
     public function setCreateBranchWhitelistUserIds($createBranchWhitelistUserIds)
     {
         $this->container['createBranchWhitelistUserIds'] = $createBranchWhitelistUserIds;
+        return $this;
+    }
+
+    /**
+    * Gets repoEncryptionEnabled
+    *  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    *
+    * @return bool|null
+    */
+    public function getRepoEncryptionEnabled()
+    {
+        return $this->container['repoEncryptionEnabled'];
+    }
+
+    /**
+    * Sets repoEncryptionEnabled
+    *
+    * @param bool|null $repoEncryptionEnabled **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    *
+    * @return $this
+    */
+    public function setRepoEncryptionEnabled($repoEncryptionEnabled)
+    {
+        $this->container['repoEncryptionEnabled'] = $repoEncryptionEnabled;
         return $this;
     }
 

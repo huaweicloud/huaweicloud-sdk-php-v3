@@ -20,10 +20,10 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * accessKeyId  临时安全凭证的AK。
-    * expiration  临时安全凭证的失效时间。
-    * secretAccessKey  临时安全凭证的SK。
-    * securityToken  临时安全凭证的security_token。
+    * accessKeyId  **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
+    * expiration  **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
+    * secretAccessKey  **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
+    * securityToken  **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * accessKeyId  临时安全凭证的AK。
-    * expiration  临时安全凭证的失效时间。
-    * secretAccessKey  临时安全凭证的SK。
-    * securityToken  临时安全凭证的security_token。
+    * accessKeyId  **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
+    * expiration  **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
+    * secretAccessKey  **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
+    * securityToken  **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CredentialsDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * accessKeyId  临时安全凭证的AK。
-    * expiration  临时安全凭证的失效时间。
-    * secretAccessKey  临时安全凭证的SK。
-    * securityToken  临时安全凭证的security_token。
+    * accessKeyId  **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
+    * expiration  **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
+    * secretAccessKey  **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
+    * securityToken  **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * accessKeyId  临时安全凭证的AK。
-    * expiration  临时安全凭证的失效时间。
-    * secretAccessKey  临时安全凭证的SK。
-    * securityToken  临时安全凭证的security_token。
+    * accessKeyId  **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
+    * expiration  **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
+    * secretAccessKey  **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
+    * securityToken  **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * accessKeyId  临时安全凭证的AK。
-    * expiration  临时安全凭证的失效时间。
-    * secretAccessKey  临时安全凭证的SK。
-    * securityToken  临时安全凭证的security_token。
+    * accessKeyId  **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
+    * expiration  **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
+    * secretAccessKey  **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
+    * securityToken  **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessKeyId
-    *  临时安全凭证的AK。
+    *  **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -243,7 +243,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
     /**
     * Sets accessKeyId
     *
-    * @param string $accessKeyId 临时安全凭证的AK。
+    * @param string $accessKeyId **参数解释**： 临时安全凭证的AK。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiration
-    *  临时安全凭证的失效时间。
+    *  **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
     *
     * @return \DateTime
     */
@@ -267,7 +267,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
     /**
     * Sets expiration
     *
-    * @param \DateTime $expiration 临时安全凭证的失效时间。
+    * @param \DateTime $expiration **参数解释**： 临时安全凭证的失效时间。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets secretAccessKey
-    *  临时安全凭证的SK。
+    *  **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -291,7 +291,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
     /**
     * Sets secretAccessKey
     *
-    * @param string $secretAccessKey 临时安全凭证的SK。
+    * @param string $secretAccessKey **参数解释**： 临时安全凭证的SK。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityToken
-    *  临时安全凭证的security_token。
+    *  **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class CredentialsDto implements ModelInterface, ArrayAccess
     /**
     * Sets securityToken
     *
-    * @param string $securityToken 临时安全凭证的security_token。
+    * @param string $securityToken **参数解释**： 临时安全凭证的security_token。  **取值范围**： 不涉及。
     *
     * @return $this
     */

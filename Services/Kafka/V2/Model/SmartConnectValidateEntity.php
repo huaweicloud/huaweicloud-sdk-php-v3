@@ -169,6 +169,9 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -211,7 +214,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     * Gets type
     *  **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -221,7 +224,7 @@ class SmartConnectValidateEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
+    * @param string $type **参数解释**： Smart Connect任务类型。 **取值范围**： - OBS_SINK：转储。 - KAFKA_REPLICATOR_SOURCE：Kafka数据复制。
     *
     * @return $this
     */

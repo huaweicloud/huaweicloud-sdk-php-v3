@@ -21,21 +21,33 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * offset  分页偏移量。
+    * limit  一页数量。
+    * total  总条数。
     * jobs  任务列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'offset' => 'int',
+            'limit' => 'int',
+            'total' => 'int',
             'jobs' => '\HuaweiCloud\SDK\Ddm\V1\Model\JobItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * offset  分页偏移量。
+    * limit  一页数量。
+    * total  总条数。
     * jobs  任务列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'offset' => 'int32',
+        'limit' => 'int32',
+        'total' => 'int32',
         'jobs' => null
     ];
 
@@ -62,31 +74,49 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * offset  分页偏移量。
+    * limit  一页数量。
+    * total  总条数。
     * jobs  任务列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'total' => 'total',
             'jobs' => 'jobs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * offset  分页偏移量。
+    * limit  一页数量。
+    * total  总条数。
     * jobs  任务列表。
     *
     * @var string[]
     */
     protected static $setters = [
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'total' => 'setTotal',
             'jobs' => 'setJobs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * offset  分页偏移量。
+    * limit  一页数量。
+    * total  总条数。
     * jobs  任务列表。
     *
     * @var string[]
     */
     protected static $getters = [
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'total' => 'getTotal',
             'jobs' => 'getJobs'
     ];
 
@@ -148,6 +178,9 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
     }
 
@@ -171,6 +204,78 @@ class ListTasksResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets offset
+    *  分页偏移量。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页偏移量。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  一页数量。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 一页数量。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  总条数。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total 总条数。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+        return $this;
     }
 
     /**

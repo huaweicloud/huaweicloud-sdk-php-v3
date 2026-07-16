@@ -180,22 +180,31 @@ class DNInstance implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['dnInstanceId']) && (mb_strlen($this->container['dnInstanceId']) > 2147483647)) {
+        if ($this->container['dnInstanceId'] === null) {
+            $invalidProperties[] = "'dnInstanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['dnInstanceId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'dnInstanceId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['dnInstanceId']) && (mb_strlen($this->container['dnInstanceId']) < 1)) {
+            if ((mb_strlen($this->container['dnInstanceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dnInstanceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['adminUser']) && (mb_strlen($this->container['adminUser']) > 2147483647)) {
+        if ($this->container['adminUser'] === null) {
+            $invalidProperties[] = "'adminUser' can't be null";
+        }
+            if ((mb_strlen($this->container['adminUser']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'adminUser', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['adminUser']) && (mb_strlen($this->container['adminUser']) < 1)) {
+            if ((mb_strlen($this->container['adminUser']) < 1)) {
                 $invalidProperties[] = "invalid value for 'adminUser', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['adminPassword']) && (mb_strlen($this->container['adminPassword']) > 2147483647)) {
+        if ($this->container['adminPassword'] === null) {
+            $invalidProperties[] = "'adminPassword' can't be null";
+        }
+            if ((mb_strlen($this->container['adminPassword']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'adminPassword', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['adminPassword']) && (mb_strlen($this->container['adminPassword']) < 1)) {
+            if ((mb_strlen($this->container['adminPassword']) < 1)) {
                 $invalidProperties[] = "invalid value for 'adminPassword', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -216,7 +225,7 @@ class DNInstance implements ModelInterface, ArrayAccess
     * Gets dnInstanceId
     *  实例id。
     *
-    * @return string|null
+    * @return string
     */
     public function getDnInstanceId()
     {
@@ -226,7 +235,7 @@ class DNInstance implements ModelInterface, ArrayAccess
     /**
     * Sets dnInstanceId
     *
-    * @param string|null $dnInstanceId 实例id。
+    * @param string $dnInstanceId 实例id。
     *
     * @return $this
     */
@@ -240,7 +249,7 @@ class DNInstance implements ModelInterface, ArrayAccess
     * Gets adminUser
     *  实例账号。
     *
-    * @return string|null
+    * @return string
     */
     public function getAdminUser()
     {
@@ -250,7 +259,7 @@ class DNInstance implements ModelInterface, ArrayAccess
     /**
     * Sets adminUser
     *
-    * @param string|null $adminUser 实例账号。
+    * @param string $adminUser 实例账号。
     *
     * @return $this
     */
@@ -264,7 +273,7 @@ class DNInstance implements ModelInterface, ArrayAccess
     * Gets adminPassword
     *  实例密码。
     *
-    * @return string|null
+    * @return string
     */
     public function getAdminPassword()
     {
@@ -274,7 +283,7 @@ class DNInstance implements ModelInterface, ArrayAccess
     /**
     * Sets adminPassword
     *
-    * @param string|null $adminPassword 实例密码。
+    * @param string $adminPassword 实例密码。
     *
     * @return $this
     */

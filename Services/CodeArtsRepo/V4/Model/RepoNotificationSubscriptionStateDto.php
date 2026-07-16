@@ -20,7 +20,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * enabled  **参数解释：** 开启通知。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * enabled  **参数解释：** 开启通知。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * enabled  **参数解释：** 开启通知。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * enabled  **参数解释：** 开启通知。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * enabled  **参数解释：** 开启通知。
     *
     * @var string[]
@@ -208,7 +208,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
 
     /**
     * Gets configSource
-    *  **参数解释：** 配资源。
+    *  **参数解释：** 配置源。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class RepoNotificationSubscriptionStateDto implements ModelInterface, ArrayAcces
     /**
     * Sets configSource
     *
-    * @param string|null $configSource **参数解释：** 配资源。
+    * @param string|null $configSource **参数解释：** 配置源。
     *
     * @return $this
     */

@@ -158,6 +158,9 @@ class UpdateWatermarkDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['watermark'] === null) {
+            $invalidProperties[] = "'watermark' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class UpdateWatermarkDto implements ModelInterface, ArrayAccess
     * Gets watermark
     *  **参数解释：** 水印开启状态。 - true，开启水印。 - false，关闭水印。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getWatermark()
     {
@@ -186,7 +189,7 @@ class UpdateWatermarkDto implements ModelInterface, ArrayAccess
     /**
     * Sets watermark
     *
-    * @param bool|null $watermark **参数解释：** 水印开启状态。 - true，开启水印。 - false，关闭水印。
+    * @param bool $watermark **参数解释：** 水印开启状态。 - true，开启水印。 - false，关闭水印。
     *
     * @return $this
     */

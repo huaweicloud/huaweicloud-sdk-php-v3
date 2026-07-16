@@ -158,10 +158,13 @@ class BussinessGroupTransferBodyDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ownerId']) && ($this->container['ownerId'] > 2147483647)) {
+        if ($this->container['ownerId'] === null) {
+            $invalidProperties[] = "'ownerId' can't be null";
+        }
+            if (($this->container['ownerId'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'ownerId', must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['ownerId']) && ($this->container['ownerId'] < 1)) {
+            if (($this->container['ownerId'] < 1)) {
                 $invalidProperties[] = "invalid value for 'ownerId', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -182,7 +185,7 @@ class BussinessGroupTransferBodyDto implements ModelInterface, ArrayAccess
     * Gets ownerId
     *  移交目标用户id
     *
-    * @return int|null
+    * @return int
     */
     public function getOwnerId()
     {
@@ -192,7 +195,7 @@ class BussinessGroupTransferBodyDto implements ModelInterface, ArrayAccess
     /**
     * Sets ownerId
     *
-    * @param int|null $ownerId 移交目标用户id
+    * @param int $ownerId 移交目标用户id
     *
     * @return $this
     */

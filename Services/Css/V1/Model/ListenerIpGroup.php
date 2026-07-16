@@ -20,24 +20,28 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * type  **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
     * ipgroupId  监听器关联的访问控制组的ID。创建时必选，更新时非必选。
     * enableIpgroup  访问控制组的状态。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'type' => 'string',
             'ipgroupId' => 'string',
             'enableIpgroup' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * type  **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
     * ipgroupId  监听器关联的访问控制组的ID。创建时必选，更新时非必选。
     * enableIpgroup  访问控制组的状态。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'type' => null,
         'ipgroupId' => null,
         'enableIpgroup' => null
     ];
@@ -65,36 +69,42 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * type  **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
     * ipgroupId  监听器关联的访问控制组的ID。创建时必选，更新时非必选。
     * enableIpgroup  访问控制组的状态。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'type' => 'type',
             'ipgroupId' => 'ipgroup_id',
             'enableIpgroup' => 'enable_ipgroup'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * type  **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
     * ipgroupId  监听器关联的访问控制组的ID。创建时必选，更新时非必选。
     * enableIpgroup  访问控制组的状态。
     *
     * @var string[]
     */
     protected static $setters = [
+            'type' => 'setType',
             'ipgroupId' => 'setIpgroupId',
             'enableIpgroup' => 'setEnableIpgroup'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * type  **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
     * ipgroupId  监听器关联的访问控制组的ID。创建时必选，更新时非必选。
     * enableIpgroup  访问控制组的状态。
     *
     * @var string[]
     */
     protected static $getters = [
+            'type' => 'getType',
             'ipgroupId' => 'getIpgroupId',
             'enableIpgroup' => 'getEnableIpgroup'
     ];
@@ -157,6 +167,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['ipgroupId'] = isset($data['ipgroupId']) ? $data['ipgroupId'] : null;
         $this->container['enableIpgroup'] = isset($data['enableIpgroup']) ? $data['enableIpgroup'] : null;
     }
@@ -181,6 +192,30 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type **参数解释**： 访问控制组的类型。 **取值范围**： - white:白名单，只允许指定IP访问。 - black:黑名单，不允许指定IP访问。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
     }
 
     /**

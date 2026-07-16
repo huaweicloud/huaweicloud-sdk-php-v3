@@ -4965,9 +4965,6 @@ class CfwClient extends Client
         if ($localVarParams['domainName'] !== null) {
             $queryParams['domain_name'] = $localVarParams['domainName'];
         }
-        if ($localVarParams['objectId'] !== null) {
-            $queryParams['object_Id'] = $localVarParams['objectId'];
-        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

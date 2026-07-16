@@ -20,25 +20,21 @@ class ReduceNodeOpenRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例id。
     * nodeIds  节点id列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
             'nodeIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例id。
     * nodeIds  节点id列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
         'nodeIds' => null
     ];
 
@@ -65,37 +61,31 @@ class ReduceNodeOpenRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例id。
     * nodeIds  节点id列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
             'nodeIds' => 'node_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例id。
     * nodeIds  节点id列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
             'nodeIds' => 'setNodeIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例id。
     * nodeIds  节点id列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
             'nodeIds' => 'getNodeIds'
     ];
 
@@ -157,7 +147,6 @@ class ReduceNodeOpenRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['nodeIds'] = isset($data['nodeIds']) ? $data['nodeIds'] : null;
     }
 
@@ -169,12 +158,9 @@ class ReduceNodeOpenRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
-            }
+        if ($this->container['nodeIds'] === null) {
+            $invalidProperties[] = "'nodeIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -190,34 +176,10 @@ class ReduceNodeOpenRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  实例id。
-    *
-    * @return string|null
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string|null $instanceId 实例id。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
     * Gets nodeIds
     *  节点id列表。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getNodeIds()
     {
@@ -227,7 +189,7 @@ class ReduceNodeOpenRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodeIds
     *
-    * @param string[]|null $nodeIds 节点id列表。
+    * @param string[] $nodeIds 节点id列表。
     *
     * @return $this
     */

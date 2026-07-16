@@ -22,21 +22,33 @@ class ShowAvalibleDdmsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instances  可用目标DDM。
+    * offset  **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instances' => '\HuaweiCloud\SDK\Ddm\V1\Model\DDMInstance4Restore[]'
+            'instances' => '\HuaweiCloud\SDK\Ddm\V1\Model\DDMInstance4Restore[]',
+            'offset' => 'int',
+            'limit' => 'int',
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instances  可用目标DDM。
+    * offset  **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instances' => null
+        'instances' => null,
+        'offset' => null,
+        'limit' => null,
+        'total' => null
     ];
 
     /**
@@ -63,31 +75,49 @@ class ShowAvalibleDdmsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instances  可用目标DDM。
+    * offset  **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instances' => 'instances'
+            'instances' => 'instances',
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instances  可用目标DDM。
+    * offset  **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instances' => 'setInstances'
+            'instances' => 'setInstances',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instances  可用目标DDM。
+    * offset  **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instances' => 'getInstances'
+            'instances' => 'getInstances',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'total' => 'getTotal'
     ];
 
     /**
@@ -149,6 +179,9 @@ class ShowAvalibleDdmsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -194,6 +227,78 @@ class ShowAvalibleDdmsResponse implements ModelInterface, ArrayAccess
     public function setInstances($instances)
     {
         $this->container['instances'] = $instances;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**：  分页参数: 起始值。  **取值范围**：   大于等于0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**：  分页参数: 每页记录数。  **取值范围**：  大于0且小于等于128。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  **参数解释**：  总记录数。  **取值范围**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total **参数解释**：  总记录数。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
         return $this;
     }
 

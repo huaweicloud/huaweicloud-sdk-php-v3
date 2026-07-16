@@ -230,6 +230,77 @@ class DbssAsyncClient extends Client
     }
 
     /**
+     * 上传/更新数据库私钥
+     *
+     * 上传/更新数据库私钥
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addDatabaseSslKeyAsync($request)
+    {
+        return $this->addDatabaseSslKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function addDatabaseSslKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/audit/{instance_id}/databases/{db_id}/sslkey';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['dbId'] !== null) {
+            $pathParams['db_id'] = $localVarParams['dbId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\AddDatabaseSslKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\AddDatabaseSslKeyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 添加RDS数据库[待下线]
      *
      * 添加RDS数据库
@@ -3825,6 +3896,74 @@ class DbssAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
+    public function listAuditInstancesLastAsync($request)
+    {
+        return $this->listAuditInstancesLastAsyncWithHttpInfo($request);
+    }
+    
+    public function listAuditInstancesLastAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/audit/instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ListAuditInstancesLastResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ListAuditInstancesLastRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询审计实例列表[待下线]
+     *
+     * 查询审计实例列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
     public function listAuditInstancesNewAsync($request)
     {
         return $this->listAuditInstancesNewAsyncWithHttpInfo($request);
@@ -5101,6 +5240,83 @@ class DbssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ListDbEncryptInstancesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ListDbEncryptInstancesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 云脑链接器获取资源列表
+     *
+     * 云脑链接器获取资源列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDomainAllResourceAsync($request)
+    {
+        return $this->listDomainAllResourceAsyncWithHttpInfo($request);
+    }
+    
+    public function listDomainAllResourceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/all-resources/{region_id}/{resource_type}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $pathParams['region_id'] = $localVarParams['regionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ListDomainAllResourceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ListDomainAllResourceRequest',
             $asyncRequest = true);
     }
 
@@ -7570,6 +7786,77 @@ class DbssAsyncClient extends Client
     }
 
     /**
+     * 云脑链接器获取资源总量
+     *
+     * 云脑链接器获取资源总量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDomainAllResourceCountAsync($request)
+    {
+        return $this->showDomainAllResourceCountAsyncWithHttpInfo($request);
+    }
+    
+    public function showDomainAllResourceCountAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/all-resources/{region_id}/{resource_type}/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domainId'] !== null) {
+            $pathParams['domain_id'] = $localVarParams['domainId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $pathParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $pathParams['region_id'] = $localVarParams['regionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ShowDomainAllResourceCountResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ShowDomainAllResourceCountRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取实例监控数据
      *
      * 获取实例监控数据
@@ -7696,6 +7983,71 @@ class DbssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ShowInstanceQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ShowInstanceQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取审计实例日志保存时间配置
+     *
+     * 获取审计实例日志保存时间配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLogRetentionCommonSettingsAsync($request)
+    {
+        return $this->showLogRetentionCommonSettingsAsyncWithHttpInfo($request);
+    }
+    
+    public function showLogRetentionCommonSettingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/audit/{instance_id}/settings/common-settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\ShowLogRetentionCommonSettingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\ShowLogRetentionCommonSettingsRequest',
             $asyncRequest = true);
     }
 
@@ -9626,6 +9978,74 @@ class DbssAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\UpdateDbOmInstanceNameResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\UpdateDbOmInstanceNameRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 设置审计实例日志保存时间配置
+     *
+     * 设置审计实例日志保存时间配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateLogRetentionCommonSettingsAsync($request)
+    {
+        return $this->updateLogRetentionCommonSettingsAsyncWithHttpInfo($request);
+    }
+    
+    public function updateLogRetentionCommonSettingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/audit/{instance_id}/settings/common-settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dbss\V1\Model\UpdateLogRetentionCommonSettingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dbss\V1\Model\UpdateLogRetentionCommonSettingsRequest',
             $asyncRequest = true);
     }
 

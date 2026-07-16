@@ -25,7 +25,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
-    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
-    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
-    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
-    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * validAt  **参数解释**： 参数生效方式 **取值范围**： - static：集群、节点池创建时生效，后续不可修改 - immediately：集群、节点池运行中时可以修改，修改后生效
     * empty  **参数解释**： 配置项是否可以为空 **取值范围**： - true：配置项为空时，不使用默认值，为空值 - false：配置项为空时，使用默认值
     * schema  **参数解释**： 参数分类 **取值范围**： 不涉及
-    * type  **参数解释**： 参数类型 **取值范围**： 不涉及
+    * type  **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @var string[]
     */
@@ -390,7 +390,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 参数类型 **取值范围**： 不涉及
+    *  **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @return string
     */
@@ -402,7 +402,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**： 参数类型 **取值范围**： 不涉及
+    * @param string $type **参数解释**： 参数类型 **取值范围**： - str: 数据类型为字符串 - int: 数据类型为整型 - float: 数据类型为浮点型 - bool: 数据类型为布尔型
     *
     * @return $this
     */

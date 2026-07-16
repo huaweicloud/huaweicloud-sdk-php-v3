@@ -23,7 +23,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
     * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
-    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
     * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
-    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
     * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
-    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
     * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
-    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * errorCode  **参数解释**： 错误码。 **取值范围**： 不涉及。
     * errorMsg  **参数解释**： 错误信息。 **取值范围**： 不涉及。
-    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    * jobId  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    *  **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class DeleteDwsClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： 不涉及。
+    * @param string|null $jobId **参数解释**： 任务ID，可用于查询任务进度信息。 **取值范围**： null表示该接口不返回异步任务信息，其它值为异步任务的ID。
     *
     * @return $this
     */

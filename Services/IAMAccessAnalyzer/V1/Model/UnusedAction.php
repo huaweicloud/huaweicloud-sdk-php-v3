@@ -22,24 +22,32 @@ class UnusedAction implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * action  授权项名称。
     * lastAccessed  用户使用授权项的最后访问时间。
+    * roleSources  通过该操作访问的角色来源列表。
+    * identityPolicySources  通过该操作访问的身份策略来源列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'lastAccessed' => '\DateTime'
+            'lastAccessed' => '\DateTime',
+            'roleSources' => 'string[]',
+            'identityPolicySources' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  授权项名称。
     * lastAccessed  用户使用授权项的最后访问时间。
+    * roleSources  通过该操作访问的角色来源列表。
+    * identityPolicySources  通过该操作访问的身份策略来源列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'action' => null,
-        'lastAccessed' => 'date-time'
+        'lastAccessed' => 'date-time',
+        'roleSources' => null,
+        'identityPolicySources' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class UnusedAction implements ModelInterface, ArrayAccess
     * and the value is the original name
     * action  授权项名称。
     * lastAccessed  用户使用授权项的最后访问时间。
+    * roleSources  通过该操作访问的角色来源列表。
+    * identityPolicySources  通过该操作访问的身份策略来源列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'action' => 'action',
-            'lastAccessed' => 'last_accessed'
+            'lastAccessed' => 'last_accessed',
+            'roleSources' => 'role_sources',
+            'identityPolicySources' => 'identity_policy_sources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  授权项名称。
     * lastAccessed  用户使用授权项的最后访问时间。
+    * roleSources  通过该操作访问的角色来源列表。
+    * identityPolicySources  通过该操作访问的身份策略来源列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'action' => 'setAction',
-            'lastAccessed' => 'setLastAccessed'
+            'lastAccessed' => 'setLastAccessed',
+            'roleSources' => 'setRoleSources',
+            'identityPolicySources' => 'setIdentityPolicySources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  授权项名称。
     * lastAccessed  用户使用授权项的最后访问时间。
+    * roleSources  通过该操作访问的角色来源列表。
+    * identityPolicySources  通过该操作访问的身份策略来源列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'action' => 'getAction',
-            'lastAccessed' => 'getLastAccessed'
+            'lastAccessed' => 'getLastAccessed',
+            'roleSources' => 'getRoleSources',
+            'identityPolicySources' => 'getIdentityPolicySources'
     ];
 
     /**
@@ -159,6 +179,8 @@ class UnusedAction implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['lastAccessed'] = isset($data['lastAccessed']) ? $data['lastAccessed'] : null;
+        $this->container['roleSources'] = isset($data['roleSources']) ? $data['roleSources'] : null;
+        $this->container['identityPolicySources'] = isset($data['identityPolicySources']) ? $data['identityPolicySources'] : null;
     }
 
     /**
@@ -231,6 +253,54 @@ class UnusedAction implements ModelInterface, ArrayAccess
     public function setLastAccessed($lastAccessed)
     {
         $this->container['lastAccessed'] = $lastAccessed;
+        return $this;
+    }
+
+    /**
+    * Gets roleSources
+    *  通过该操作访问的角色来源列表。
+    *
+    * @return string[]|null
+    */
+    public function getRoleSources()
+    {
+        return $this->container['roleSources'];
+    }
+
+    /**
+    * Sets roleSources
+    *
+    * @param string[]|null $roleSources 通过该操作访问的角色来源列表。
+    *
+    * @return $this
+    */
+    public function setRoleSources($roleSources)
+    {
+        $this->container['roleSources'] = $roleSources;
+        return $this;
+    }
+
+    /**
+    * Gets identityPolicySources
+    *  通过该操作访问的身份策略来源列表。
+    *
+    * @return string[]|null
+    */
+    public function getIdentityPolicySources()
+    {
+        return $this->container['identityPolicySources'];
+    }
+
+    /**
+    * Sets identityPolicySources
+    *
+    * @param string[]|null $identityPolicySources 通过该操作访问的身份策略来源列表。
+    *
+    * @return $this
+    */
+    public function setIdentityPolicySources($identityPolicySources)
+    {
+        $this->container['identityPolicySources'] = $identityPolicySources;
         return $this;
     }
 

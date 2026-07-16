@@ -20,26 +20,30 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * size  磁盘大小。单位：GB。
-    * used  磁盘使用量。单位：GB。
+    * size  参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
+    * used  参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
+    * giftSize  参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'size' => 'string',
-            'used' => 'string'
+            'used' => 'string',
+            'giftSize' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * size  磁盘大小。单位：GB。
-    * used  磁盘使用量。单位：GB。
+    * size  参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
+    * used  参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
+    * giftSize  参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'size' => null,
-        'used' => null
+        'used' => null,
+        'giftSize' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * size  磁盘大小。单位：GB。
-    * used  磁盘使用量。单位：GB。
+    * size  参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
+    * used  参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
+    * giftSize  参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'size' => 'size',
-            'used' => 'used'
+            'used' => 'used',
+            'giftSize' => 'gift_size'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * size  磁盘大小。单位：GB。
-    * used  磁盘使用量。单位：GB。
+    * size  参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
+    * used  参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
+    * giftSize  参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'size' => 'setSize',
-            'used' => 'setUsed'
+            'used' => 'setUsed',
+            'giftSize' => 'setGiftSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * size  磁盘大小。单位：GB。
-    * used  磁盘使用量。单位：GB。
+    * size  参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
+    * used  参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
+    * giftSize  参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'size' => 'getSize',
-            'used' => 'getUsed'
+            'used' => 'getUsed',
+            'giftSize' => 'getGiftSize'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Volume implements ModelInterface, ArrayAccess
     {
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['used'] = isset($data['used']) ? $data['used'] : null;
+        $this->container['giftSize'] = isset($data['giftSize']) ? $data['giftSize'] : null;
     }
 
     /**
@@ -191,7 +202,7 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  磁盘大小。单位：GB。
+    *  参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @return string
     */
@@ -203,7 +214,7 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param string $size 磁盘大小。单位：GB。
+    * @param string $size 参数解释： 磁盘大小。单位：GB。 取值范围： 不涉及。
     *
     * @return $this
     */
@@ -215,7 +226,7 @@ class Volume implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  磁盘使用量。单位：GB。
+    *  参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
     *
     * @return string
     */
@@ -227,13 +238,37 @@ class Volume implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param string $used 磁盘使用量。单位：GB。
+    * @param string $used 参数解释： 磁盘使用量。单位：GB。 取值范围： 不涉及。
     *
     * @return $this
     */
     public function setUsed($used)
     {
         $this->container['used'] = $used;
+        return $this;
+    }
+
+    /**
+    * Gets giftSize
+    *  参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getGiftSize()
+    {
+        return $this->container['giftSize'];
+    }
+
+    /**
+    * Sets giftSize
+    *
+    * @param string|null $giftSize 参数解释： 赠送的磁盘大小。单位：GB。 取值范围： 不涉及。
+    *
+    * @return $this
+    */
+    public function setGiftSize($giftSize)
+    {
+        $this->container['giftSize'] = $giftSize;
         return $this;
     }
 

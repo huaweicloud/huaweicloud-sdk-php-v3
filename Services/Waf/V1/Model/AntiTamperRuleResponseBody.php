@@ -27,6 +27,7 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * hostname  防篡改的域名
     * url  防篡改的url
+    * policyname  策略名称
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
             'description' => 'string',
             'status' => 'int',
             'hostname' => 'string',
-            'url' => 'string'
+            'url' => 'string',
+            'policyname' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * hostname  防篡改的域名
     * url  防篡改的url
+    * policyname  策略名称
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
         'description' => null,
         'status' => null,
         'hostname' => null,
-        'url' => null
+        'url' => null,
+        'policyname' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * hostname  防篡改的域名
     * url  防篡改的url
+    * policyname  策略名称
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
             'description' => 'description',
             'status' => 'status',
             'hostname' => 'hostname',
-            'url' => 'url'
+            'url' => 'url',
+            'policyname' => 'policyname'
     ];
 
     /**
@@ -114,6 +120,7 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * hostname  防篡改的域名
     * url  防篡改的url
+    * policyname  策略名称
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'status' => 'setStatus',
             'hostname' => 'setHostname',
-            'url' => 'setUrl'
+            'url' => 'setUrl',
+            'policyname' => 'setPolicyname'
     ];
 
     /**
@@ -136,6 +144,7 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
     * status  **参数解释：** 规则状态标识，用于指定规则的启用或关闭状态 **约束限制：** 不涉及 **取值范围：**  - 0：关闭  - 1：开启 **默认取值：** 不涉及
     * hostname  防篡改的域名
     * url  防篡改的url
+    * policyname  策略名称
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'status' => 'getStatus',
             'hostname' => 'getHostname',
-            'url' => 'getUrl'
+            'url' => 'getUrl',
+            'policyname' => 'getPolicyname'
     ];
 
     /**
@@ -214,6 +224,7 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['hostname'] = isset($data['hostname']) ? $data['hostname'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['policyname'] = isset($data['policyname']) ? $data['policyname'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class AntiTamperRuleResponseBody implements ModelInterface, ArrayAccess
     public function setUrl($url)
     {
         $this->container['url'] = $url;
+        return $this;
+    }
+
+    /**
+    * Gets policyname
+    *  策略名称
+    *
+    * @return string|null
+    */
+    public function getPolicyname()
+    {
+        return $this->container['policyname'];
+    }
+
+    /**
+    * Sets policyname
+    *
+    * @param string|null $policyname 策略名称
+    *
+    * @return $this
+    */
+    public function setPolicyname($policyname)
+    {
+        $this->container['policyname'] = $policyname;
         return $this;
     }
 

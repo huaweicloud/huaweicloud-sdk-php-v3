@@ -32,8 +32,8 @@ class CertsRecordsDatastore implements ModelInterface, ArrayAccess
             'id' => 'string',
             'status' => 'string',
             'fileLocation' => 'string',
-            'fileName' => 'bool',
-            'updateAt' => 'bool'
+            'fileName' => 'string',
+            'updateAt' => 'string'
     ];
 
     /**
@@ -292,7 +292,7 @@ class CertsRecordsDatastore implements ModelInterface, ArrayAccess
     * Gets fileName
     *  证书记录文件名称。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getFileName()
     {
@@ -302,7 +302,7 @@ class CertsRecordsDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param bool|null $fileName 证书记录文件名称。
+    * @param string|null $fileName 证书记录文件名称。
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class CertsRecordsDatastore implements ModelInterface, ArrayAccess
     * Gets updateAt
     *  证书记录更新时间。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getUpdateAt()
     {
@@ -326,7 +326,7 @@ class CertsRecordsDatastore implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param bool|null $updateAt 证书记录更新时间。
+    * @param string|null $updateAt 证书记录更新时间。
     *
     * @return $this
     */

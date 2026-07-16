@@ -28,6 +28,8 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * createTime  **参数解释：** 规则上线时间，Web防护规则正式启用的时间（时间戳格式） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTime  **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * effectiveTime  **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -38,7 +40,9 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
             'applicationType' => 'string',
             'protectionType' => 'string',
             'description' => 'string',
-            'createTime' => 'int'
+            'createTime' => 'int',
+            'updateTime' => 'int',
+            'effectiveTime' => 'int'
     ];
 
     /**
@@ -50,6 +54,8 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * createTime  **参数解释：** 规则上线时间，Web防护规则正式启用的时间（时间戳格式） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTime  **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * effectiveTime  **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -60,7 +66,9 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
         'applicationType' => null,
         'protectionType' => null,
         'description' => null,
-        'createTime' => 'int64'
+        'createTime' => 'int64',
+        'updateTime' => 'int64',
+        'effectiveTime' => 'int64'
     ];
 
     /**
@@ -93,6 +101,8 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * createTime  **参数解释：** 规则上线时间，Web防护规则正式启用的时间（时间戳格式） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTime  **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * effectiveTime  **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -103,7 +113,9 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
             'applicationType' => 'application_type',
             'protectionType' => 'protection_type',
             'description' => 'description',
-            'createTime' => 'create_time'
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time',
+            'effectiveTime' => 'effective_time'
     ];
 
     /**
@@ -115,6 +127,8 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * createTime  **参数解释：** 规则上线时间，Web防护规则正式启用的时间（时间戳格式） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTime  **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * effectiveTime  **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -125,7 +139,9 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
             'applicationType' => 'setApplicationType',
             'protectionType' => 'setProtectionType',
             'description' => 'setDescription',
-            'createTime' => 'setCreateTime'
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
+            'effectiveTime' => 'setEffectiveTime'
     ];
 
     /**
@@ -137,6 +153,8 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     * protectionType  **参数解释：** 防护类型，区分规则的防护类别（如SQL注入防护、XSS防护、命令注入防护） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * description  **参数解释：** 描述，对Web防护规则的功能、适用场景等补充说明 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * createTime  **参数解释：** 规则上线时间，Web防护规则正式启用的时间（时间戳格式） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTime  **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * effectiveTime  **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -147,7 +165,9 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
             'applicationType' => 'getApplicationType',
             'protectionType' => 'getProtectionType',
             'description' => 'getDescription',
-            'createTime' => 'getCreateTime'
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
+            'effectiveTime' => 'getEffectiveTime'
     ];
 
     /**
@@ -232,6 +252,8 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
         $this->container['protectionType'] = isset($data['protectionType']) ? $data['protectionType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
     }
 
     /**
@@ -429,6 +451,54 @@ class ShowWebProtectionRuleResponse implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime **参数解释：** 规则更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTime
+    *  **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getEffectiveTime()
+    {
+        return $this->container['effectiveTime'];
+    }
+
+    /**
+    * Sets effectiveTime
+    *
+    * @param int|null $effectiveTime **参数解释：** 新增规则的生效时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setEffectiveTime($effectiveTime)
+    {
+        $this->container['effectiveTime'] = $effectiveTime;
         return $this;
     }
 

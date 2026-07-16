@@ -46,6 +46,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     * stats  stats
     * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
@@ -81,6 +82,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
             'nickName' => 'string',
             'tenantName' => 'string',
             'userName' => 'string',
+            'authorId' => 'int',
             'stats' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CommitStatsDto',
             'status' => 'string',
             'lastPipeline' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\PipelineBasicDto',
@@ -116,6 +118,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     * stats  stats
     * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
@@ -151,6 +154,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
         'nickName' => null,
         'tenantName' => null,
         'userName' => null,
+        'authorId' => 'int32',
         'stats' => null,
         'status' => null,
         'lastPipeline' => null,
@@ -207,6 +211,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     * stats  stats
     * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
@@ -242,6 +247,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
             'nickName' => 'nick_name',
             'tenantName' => 'tenant_name',
             'userName' => 'user_name',
+            'authorId' => 'author_id',
             'stats' => 'stats',
             'status' => 'status',
             'lastPipeline' => 'last_pipeline',
@@ -277,6 +283,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     * stats  stats
     * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
@@ -312,6 +319,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
             'nickName' => 'setNickName',
             'tenantName' => 'setTenantName',
             'userName' => 'setUserName',
+            'authorId' => 'setAuthorId',
             'stats' => 'setStats',
             'status' => 'setStatus',
             'lastPipeline' => 'setLastPipeline',
@@ -347,6 +355,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     * stats  stats
     * status  流水线状态，pending为排队，running为运行中，success为成功，failed为失败，canceled为取消，skipped为跳过，timedout为超时
     * lastPipeline  lastPipeline
@@ -382,6 +391,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
             'nickName' => 'getNickName',
             'tenantName' => 'getTenantName',
             'userName' => 'getUserName',
+            'authorId' => 'getAuthorId',
             'stats' => 'getStats',
             'status' => 'getStatus',
             'lastPipeline' => 'getLastPipeline',
@@ -498,6 +508,7 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
         $this->container['tenantName'] = isset($data['tenantName']) ? $data['tenantName'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['authorId'] = isset($data['authorId']) ? $data['authorId'] : null;
         $this->container['stats'] = isset($data['stats']) ? $data['stats'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['lastPipeline'] = isset($data['lastPipeline']) ? $data['lastPipeline'] : null;
@@ -645,6 +656,12 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['authorId']) && ($this->container['authorId'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'authorId', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['authorId']) && ($this->container['authorId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'authorId', must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -1265,6 +1282,30 @@ class ShowCommitResponse implements ModelInterface, ArrayAccess
     public function setUserName($userName)
     {
         $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets authorId
+    *  作者id
+    *
+    * @return int|null
+    */
+    public function getAuthorId()
+    {
+        return $this->container['authorId'];
+    }
+
+    /**
+    * Sets authorId
+    *
+    * @param int|null $authorId 作者id
+    *
+    * @return $this
+    */
+    public function setAuthorId($authorId)
+    {
+        $this->container['authorId'] = $authorId;
         return $this;
     }
 

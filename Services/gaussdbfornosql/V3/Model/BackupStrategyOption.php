@@ -20,20 +20,20 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
-    * keepDays  指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    * startTime  **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'startTime' => 'string',
-            'keepDays' => 'string'
+            'keepDays' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
-    * keepDays  指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    * startTime  **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
-    * keepDays  指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    * startTime  **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
-    * keepDays  指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    * startTime  **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
-    * keepDays  指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    * startTime  **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
     * @var string[]
     */
@@ -172,6 +172,12 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
         if ($this->container['startTime'] === null) {
             $invalidProperties[] = "'startTime' can't be null";
         }
+            if (!is_null($this->container['keepDays']) && ($this->container['keepDays'] > 35)) {
+                $invalidProperties[] = "invalid value for 'keepDays', must be smaller than or equal to 35.";
+            }
+            if (!is_null($this->container['keepDays']) && ($this->container['keepDays'] < 0)) {
+                $invalidProperties[] = "invalid value for 'keepDays', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -188,7 +194,7 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
+    *  **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
     *
     * @return string
     */
@@ -200,7 +206,7 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 备份时间段。自动备份将在该时间段内触发。 取值范围：非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。   - HH取值必须比hh大1。   - mm和MM取值必须相同，且取值必须为00、30。   - 不传该参数，默认的备份时间段为00:00-01:00。   - 取值示例：23:00-00:00。
+    * @param string $startTime **参数解释：** 备份时间段。自动备份将在该时间段内触发。 **约束限制：** 非空，格式必须为hh:mm-HH:MM且有效，当前时间指UTC时间。 - HH取值必须比hh大1。 - mm和MM取值必须相同，且取值必须为00、15、30或45。 - 不传该参数，默认的备份时间段为00:00-01:00。 - 取值示例：23:00-00:00。 **取值范围：** 不涉及。 **默认取值：** 默认的备份时间段为00:00-01:00。
     *
     * @return $this
     */
@@ -212,9 +218,9 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDays
-    *  指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    *  **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getKeepDays()
     {
@@ -224,7 +230,7 @@ class BackupStrategyOption implements ModelInterface, ArrayAccess
     /**
     * Sets keepDays
     *
-    * @param string|null $keepDays 指定已生成的备份文件可以保存的天数。 取值范围：0~35。   - 取0值，表示不设置自动备份策略。   - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。
+    * @param int|null $keepDays **参数解释：** 指定已生成的备份文件可以保存的天数。 **约束限制：** 不涉及。 **取值范围：** 0~35。 - 取0值，表示不设置自动备份策略。 - 不传该参数，默认开启自动备份策略，备份文件默认保存7天。 **默认取值：** 7。
     *
     * @return $this
     */

@@ -27,6 +27,7 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
     * finishedAt  结束时间，当创建未结束时结束时间为null。格式：Unix时间戳格式。
     * modifyDeleteReset  修改参数配置记录。
     * failedMsg  返回错误信息。当状态为success时该参数为null。
+    * instType  **参数解释**： 节点类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
             'status' => 'string',
             'finishedAt' => 'string',
             'modifyDeleteReset' => 'string',
-            'failedMsg' => 'string'
+            'failedMsg' => 'string',
+            'instType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
     * finishedAt  结束时间，当创建未结束时结束时间为null。格式：Unix时间戳格式。
     * modifyDeleteReset  修改参数配置记录。
     * failedMsg  返回错误信息。当状态为success时该参数为null。
+    * instType  **参数解释**： 节点类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
         'status' => null,
         'finishedAt' => null,
         'modifyDeleteReset' => null,
-        'failedMsg' => null
+        'failedMsg' => null,
+        'instType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
     * finishedAt  结束时间，当创建未结束时结束时间为null。格式：Unix时间戳格式。
     * modifyDeleteReset  修改参数配置记录。
     * failedMsg  返回错误信息。当状态为success时该参数为null。
+    * instType  **参数解释**： 节点类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
             'status' => 'status',
             'finishedAt' => 'finishedAt',
             'modifyDeleteReset' => 'modifyDeleteReset',
-            'failedMsg' => 'failedMsg'
+            'failedMsg' => 'failedMsg',
+            'instType' => 'instType'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
     * finishedAt  结束时间，当创建未结束时结束时间为null。格式：Unix时间戳格式。
     * modifyDeleteReset  修改参数配置记录。
     * failedMsg  返回错误信息。当状态为success时该参数为null。
+    * instType  **参数解释**： 节点类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'finishedAt' => 'setFinishedAt',
             'modifyDeleteReset' => 'setModifyDeleteReset',
-            'failedMsg' => 'setFailedMsg'
+            'failedMsg' => 'setFailedMsg',
+            'instType' => 'setInstType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
     * finishedAt  结束时间，当创建未结束时结束时间为null。格式：Unix时间戳格式。
     * modifyDeleteReset  修改参数配置记录。
     * failedMsg  返回错误信息。当状态为success时该参数为null。
+    * instType  **参数解释**： 节点类型。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'finishedAt' => 'getFinishedAt',
             'modifyDeleteReset' => 'getModifyDeleteReset',
-            'failedMsg' => 'getFailedMsg'
+            'failedMsg' => 'getFailedMsg',
+            'instType' => 'getInstType'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
         $this->container['finishedAt'] = isset($data['finishedAt']) ? $data['finishedAt'] : null;
         $this->container['modifyDeleteReset'] = isset($data['modifyDeleteReset']) ? $data['modifyDeleteReset'] : null;
         $this->container['failedMsg'] = isset($data['failedMsg']) ? $data['failedMsg'] : null;
+        $this->container['instType'] = isset($data['instType']) ? $data['instType'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class ConfigListRsp implements ModelInterface, ArrayAccess
     public function setFailedMsg($failedMsg)
     {
         $this->container['failedMsg'] = $failedMsg;
+        return $this;
+    }
+
+    /**
+    * Gets instType
+    *  **参数解释**： 节点类型。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getInstType()
+    {
+        return $this->container['instType'];
+    }
+
+    /**
+    * Sets instType
+    *
+    * @param string|null $instType **参数解释**： 节点类型。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setInstType($instType)
+    {
+        $this->container['instType'] = $instType;
         return $this;
     }
 

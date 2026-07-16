@@ -27,6 +27,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -42,6 +43,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
             'phase' => 'string',
             'desiredNodeCount' => 'int',
             'unpaidScaleNodeCount' => 'int',
+            'activeNodeCount' => 'int',
             'existingNodeCount' => '\HuaweiCloud\SDK\Cce\V3\Model\ScaleGroupStatusExistingNodeCount',
             'upcomingNodeCount' => '\HuaweiCloud\SDK\Cce\V3\Model\ScaleGroupStatusUpcomingNodeCount',
             'scaleDownDisabledNodeCount' => 'int',
@@ -57,6 +59,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -72,6 +75,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
         'phase' => null,
         'desiredNodeCount' => 'int32',
         'unpaidScaleNodeCount' => 'int32',
+        'activeNodeCount' => 'int32',
         'existingNodeCount' => null,
         'upcomingNodeCount' => null,
         'scaleDownDisabledNodeCount' => 'int32',
@@ -108,6 +112,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -123,6 +128,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
             'phase' => 'phase',
             'desiredNodeCount' => 'desiredNodeCount',
             'unpaidScaleNodeCount' => 'unpaidScaleNodeCount',
+            'activeNodeCount' => 'activeNodeCount',
             'existingNodeCount' => 'existingNodeCount',
             'upcomingNodeCount' => 'upcomingNodeCount',
             'scaleDownDisabledNodeCount' => 'scaleDownDisabledNodeCount',
@@ -138,6 +144,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -153,6 +160,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
             'phase' => 'setPhase',
             'desiredNodeCount' => 'setDesiredNodeCount',
             'unpaidScaleNodeCount' => 'setUnpaidScaleNodeCount',
+            'activeNodeCount' => 'setActiveNodeCount',
             'existingNodeCount' => 'setExistingNodeCount',
             'upcomingNodeCount' => 'setUpcomingNodeCount',
             'scaleDownDisabledNodeCount' => 'setScaleDownDisabledNodeCount',
@@ -168,6 +176,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -183,6 +192,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
             'phase' => 'getPhase',
             'desiredNodeCount' => 'getDesiredNodeCount',
             'unpaidScaleNodeCount' => 'getUnpaidScaleNodeCount',
+            'activeNodeCount' => 'getActiveNodeCount',
             'existingNodeCount' => 'getExistingNodeCount',
             'upcomingNodeCount' => 'getUpcomingNodeCount',
             'scaleDownDisabledNodeCount' => 'getScaleDownDisabledNodeCount',
@@ -275,6 +285,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
         $this->container['phase'] = isset($data['phase']) ? $data['phase'] : null;
         $this->container['desiredNodeCount'] = isset($data['desiredNodeCount']) ? $data['desiredNodeCount'] : null;
         $this->container['unpaidScaleNodeCount'] = isset($data['unpaidScaleNodeCount']) ? $data['unpaidScaleNodeCount'] : null;
+        $this->container['activeNodeCount'] = isset($data['activeNodeCount']) ? $data['activeNodeCount'] : null;
         $this->container['existingNodeCount'] = isset($data['existingNodeCount']) ? $data['existingNodeCount'] : null;
         $this->container['upcomingNodeCount'] = isset($data['upcomingNodeCount']) ? $data['upcomingNodeCount'] : null;
         $this->container['scaleDownDisabledNodeCount'] = isset($data['scaleDownDisabledNodeCount']) ? $data['scaleDownDisabledNodeCount'] : null;
@@ -476,6 +487,30 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     public function setUnpaidScaleNodeCount($unpaidScaleNodeCount)
     {
         $this->container['unpaidScaleNodeCount'] = $unpaidScaleNodeCount;
+        return $this;
+    }
+
+    /**
+    * Gets activeNodeCount
+    *  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getActiveNodeCount()
+    {
+        return $this->container['activeNodeCount'];
+    }
+
+    /**
+    * Sets activeNodeCount
+    *
+    * @param int|null $activeNodeCount **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setActiveNodeCount($activeNodeCount)
+    {
+        $this->container['activeNodeCount'] = $activeNodeCount;
         return $this;
     }
 

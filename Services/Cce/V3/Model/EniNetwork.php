@@ -183,9 +183,6 @@ class EniNetwork implements ModelInterface, ArrayAccess
             if (!is_null($this->container['eniSubnetId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['eniSubnetId'])) {
                 $invalidProperties[] = "invalid value for 'eniSubnetId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
-        if ($this->container['subnets'] === null) {
-            $invalidProperties[] = "'subnets' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -252,7 +249,7 @@ class EniNetwork implements ModelInterface, ArrayAccess
     * Gets subnets
     *  IPv4子网ID列表
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NetworkSubnet[]
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NetworkSubnet[]|null
     */
     public function getSubnets()
     {
@@ -262,7 +259,7 @@ class EniNetwork implements ModelInterface, ArrayAccess
     /**
     * Sets subnets
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NetworkSubnet[] $subnets IPv4子网ID列表
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NetworkSubnet[]|null $subnets IPv4子网ID列表
     *
     * @return $this
     */

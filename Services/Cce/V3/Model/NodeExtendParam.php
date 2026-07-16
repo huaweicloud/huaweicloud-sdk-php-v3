@@ -20,10 +20,10 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ecsperformancetype  云服务器规格的分类。响应中会返回此字段。
+    * ecsperformancetype  **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     * orderId  **参数解释**： 订单ID。 **约束限制**： 节点付费类型为自动付费包周期类型时，响应中会返回此字段(仅创建场景涉及)，节点池场景响应返回中无该参数。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * productId  **参数解释**： 产品ID。 **约束限制**： 节点付费类型为自动付费包周期类型或者节点池类型是包周期节点池时，响应中会返回此字段。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     * periodType  - month：月 - year：年 > 作为请求参数，billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > 作为请求参数，billingMode为1或2（已废弃）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
@@ -88,10 +88,10 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ecsperformancetype  云服务器规格的分类。响应中会返回此字段。
+    * ecsperformancetype  **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     * orderId  **参数解释**： 订单ID。 **约束限制**： 节点付费类型为自动付费包周期类型时，响应中会返回此字段(仅创建场景涉及)，节点池场景响应返回中无该参数。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * productId  **参数解释**： 产品ID。 **约束限制**： 节点付费类型为自动付费包周期类型或者节点池类型是包周期节点池时，响应中会返回此字段。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     * periodType  - month：月 - year：年 > 作为请求参数，billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > 作为请求参数，billingMode为1或2（已废弃）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
@@ -177,10 +177,10 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ecsperformancetype  云服务器规格的分类。响应中会返回此字段。
+    * ecsperformancetype  **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     * orderId  **参数解释**： 订单ID。 **约束限制**： 节点付费类型为自动付费包周期类型时，响应中会返回此字段(仅创建场景涉及)，节点池场景响应返回中无该参数。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * productId  **参数解释**： 产品ID。 **约束限制**： 节点付费类型为自动付费包周期类型或者节点池类型是包周期节点池时，响应中会返回此字段。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     * periodType  - month：月 - year：年 > 作为请求参数，billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > 作为请求参数，billingMode为1或2（已废弃）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
@@ -245,10 +245,10 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ecsperformancetype  云服务器规格的分类。响应中会返回此字段。
+    * ecsperformancetype  **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     * orderId  **参数解释**： 订单ID。 **约束限制**： 节点付费类型为自动付费包周期类型时，响应中会返回此字段(仅创建场景涉及)，节点池场景响应返回中无该参数。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * productId  **参数解释**： 产品ID。 **约束限制**： 节点付费类型为自动付费包周期类型或者节点池类型是包周期节点池时，响应中会返回此字段。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     * periodType  - month：月 - year：年 > 作为请求参数，billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > 作为请求参数，billingMode为1或2（已废弃）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
@@ -313,10 +313,10 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ecsperformancetype  云服务器规格的分类。响应中会返回此字段。
+    * ecsperformancetype  **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     * orderId  **参数解释**： 订单ID。 **约束限制**： 节点付费类型为自动付费包周期类型时，响应中会返回此字段(仅创建场景涉及)，节点池场景响应返回中无该参数。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * productId  **参数解释**： 产品ID。 **约束限制**： 节点付费类型为自动付费包周期类型或者节点池类型是包周期节点池时，响应中会返回此字段。 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    * maxPods  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     * periodType  - month：月 - year：年 > 作为请求参数，billingMode为1（包周期）或2（已废弃：自动付费包周期）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * periodNum  订购周期数，取值范围： - periodType=month（周期类型为月）时，取值为[1-9]。 - periodType=year（周期类型为年）时，取值为1。 > 作为请求参数，billingMode为1或2（已废弃）时生效，且为必选。 > 作为响应参数，仅在创建包周期节点时返回。
     * isAutoRenew  是否自动续订 - “true”：自动续订 - “false”：不自动续订 > billingMode为1或2（已废弃）时生效，不填写此参数时默认不会自动续费。
@@ -549,7 +549,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets ecsperformancetype
-    *  云服务器规格的分类。响应中会返回此字段。
+    *  **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets ecsperformancetype
     *
-    * @param string|null $ecsperformancetype 云服务器规格的分类。响应中会返回此字段。
+    * @param string|null $ecsperformancetype **参数解释**： 云服务器规格的分类。响应中会返回此字段。 **约束限制**： 不涉及 **取值范围**： 请参考ECS API参考手册中“查询规格详情和规格扩展信息列表”接口的ecs:performancetype参数说明，以了解云服务器的规格类型。   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/api-ecs/zh-cn_topic_0020212656.html)](tag:hws)   [链接请参见[查询规格详情和规格扩展信息列表](https://support.huaweicloud.com/intl/zh-cn/api-ecs/zh-cn_topic_0020212656.html)](tag:hws_hk) **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -621,7 +621,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPods
-    *  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    *  节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     *
     * @return int|null
     */
@@ -633,7 +633,7 @@ class NodeExtendParam implements ModelInterface, ArrayAccess
     /**
     * Sets maxPods
     *
-    * @param int|null $maxPods 节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
+    * @param int|null $maxPods 节点最大允许创建的实例数(Pod)，该数量包含系统默认实例，通用取值范围为16~256，节点运行时子类别为安全运行时v2(kuasar-vmm)场景取值范围为16~1024。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点可以创建多少个Pod，受多个参数影响，具体请参见[节点最多可以创建多少Pod](maxPods.xml)。
     *
     * @return $this
     */

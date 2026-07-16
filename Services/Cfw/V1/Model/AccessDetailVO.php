@@ -20,6 +20,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * allSessionCount  **参数解释**： 所有会话数 **取值范围**： 不涉及
+    * sessionCount  **参数解释**： 会话数 **取值范围**： 不涉及
     * dstIpCount  **参数解释**： 目的IP数量 **取值范围**： 不涉及
     * dstPortCount  **参数解释**： 目的端口数量 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
@@ -34,6 +36,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'allSessionCount' => 'int',
+            'sessionCount' => 'int',
             'dstIpCount' => 'int',
             'dstPortCount' => 'int',
             'hitCount' => 'int',
@@ -48,6 +52,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * allSessionCount  **参数解释**： 所有会话数 **取值范围**： 不涉及
+    * sessionCount  **参数解释**： 会话数 **取值范围**： 不涉及
     * dstIpCount  **参数解释**： 目的IP数量 **取值范围**： 不涉及
     * dstPortCount  **参数解释**： 目的端口数量 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
@@ -62,6 +68,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'allSessionCount' => 'int64',
+        'sessionCount' => 'int64',
         'dstIpCount' => 'int64',
         'dstPortCount' => 'int64',
         'hitCount' => 'int64',
@@ -97,6 +105,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * allSessionCount  **参数解释**： 所有会话数 **取值范围**： 不涉及
+    * sessionCount  **参数解释**： 会话数 **取值范围**： 不涉及
     * dstIpCount  **参数解释**： 目的IP数量 **取值范围**： 不涉及
     * dstPortCount  **参数解释**： 目的端口数量 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
@@ -111,6 +121,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'allSessionCount' => 'all_session_count',
+            'sessionCount' => 'session_count',
             'dstIpCount' => 'dst_ip_count',
             'dstPortCount' => 'dst_port_count',
             'hitCount' => 'hit_count',
@@ -125,6 +137,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * allSessionCount  **参数解释**： 所有会话数 **取值范围**： 不涉及
+    * sessionCount  **参数解释**： 会话数 **取值范围**： 不涉及
     * dstIpCount  **参数解释**： 目的IP数量 **取值范围**： 不涉及
     * dstPortCount  **参数解释**： 目的端口数量 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
@@ -139,6 +153,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'allSessionCount' => 'setAllSessionCount',
+            'sessionCount' => 'setSessionCount',
             'dstIpCount' => 'setDstIpCount',
             'dstPortCount' => 'setDstPortCount',
             'hitCount' => 'setHitCount',
@@ -153,6 +169,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * allSessionCount  **参数解释**： 所有会话数 **取值范围**： 不涉及
+    * sessionCount  **参数解释**： 会话数 **取值范围**： 不涉及
     * dstIpCount  **参数解释**： 目的IP数量 **取值范围**： 不涉及
     * dstPortCount  **参数解释**： 目的端口数量 **取值范围**： 不涉及
     * hitCount  **参数解释**： 命中次数 **取值范围**： 不涉及
@@ -167,6 +185,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'allSessionCount' => 'getAllSessionCount',
+            'sessionCount' => 'getSessionCount',
             'dstIpCount' => 'getDstIpCount',
             'dstPortCount' => 'getDstPortCount',
             'hitCount' => 'getHitCount',
@@ -237,6 +257,8 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['allSessionCount'] = isset($data['allSessionCount']) ? $data['allSessionCount'] : null;
+        $this->container['sessionCount'] = isset($data['sessionCount']) ? $data['sessionCount'] : null;
         $this->container['dstIpCount'] = isset($data['dstIpCount']) ? $data['dstIpCount'] : null;
         $this->container['dstPortCount'] = isset($data['dstPortCount']) ? $data['dstPortCount'] : null;
         $this->container['hitCount'] = isset($data['hitCount']) ? $data['hitCount'] : null;
@@ -269,6 +291,54 @@ class AccessDetailVO implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets allSessionCount
+    *  **参数解释**： 所有会话数 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getAllSessionCount()
+    {
+        return $this->container['allSessionCount'];
+    }
+
+    /**
+    * Sets allSessionCount
+    *
+    * @param int|null $allSessionCount **参数解释**： 所有会话数 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setAllSessionCount($allSessionCount)
+    {
+        $this->container['allSessionCount'] = $allSessionCount;
+        return $this;
+    }
+
+    /**
+    * Gets sessionCount
+    *  **参数解释**： 会话数 **取值范围**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getSessionCount()
+    {
+        return $this->container['sessionCount'];
+    }
+
+    /**
+    * Sets sessionCount
+    *
+    * @param int|null $sessionCount **参数解释**： 会话数 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSessionCount($sessionCount)
+    {
+        $this->container['sessionCount'] = $sessionCount;
+        return $this;
     }
 
     /**

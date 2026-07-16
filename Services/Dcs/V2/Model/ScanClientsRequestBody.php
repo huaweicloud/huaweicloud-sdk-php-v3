@@ -169,9 +169,6 @@ class ScanClientsRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['nodeId'] === null) {
-            $invalidProperties[] = "'nodeId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -190,7 +187,7 @@ class ScanClientsRequestBody implements ModelInterface, ArrayAccess
     * Gets nodeId
     *  节点ID
     *
-    * @return string
+    * @return string|null
     */
     public function getNodeId()
     {
@@ -200,7 +197,7 @@ class ScanClientsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string $nodeId 节点ID
+    * @param string|null $nodeId 节点ID
     *
     * @return $this
     */

@@ -25,9 +25,9 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
-    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
-    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
-    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    * productMetrics  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -61,9 +61,9 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
-    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
-    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
-    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    * productMetrics  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -118,9 +118,9 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
-    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
-    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
-    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    * productMetrics  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -154,9 +154,9 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
-    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
-    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
-    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    * productMetrics  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -190,9 +190,9 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     * relationIds  **参数解释**： 关联ID列表。        **约束限制**： relation_type为ALARM_RULE时填屏蔽的告警规则ID；relation_type为RESOURCE_POLICY_NOTIFICATION时填屏蔽的告警策略ID。包含的关联ID数量为[1,100]
     * resources  **参数解释**： 必填。关联的资源列表   **约束限制**： relation_type为RESOURCE、RESOURCE_POLICY_NOTIFICATION 时填屏蔽的资源信息。包含的资源数量为[1,100]
     * metricNames  **参数解释**： 关联的指标名称 **约束限制**： relation_type为RESOURCE可选填，不填视为对资源所有指标进行告警屏蔽。包含的指标数量为[0,50]
-    * productMetrics  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
-    * resourceLevel  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
-    * productName  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    * productMetrics  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * resourceLevel  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * productName  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     * maskType  maskType
     * startDate  **参数解释**： 屏蔽起始日期。           **约束限制**： 不涉及。 **取值范围**： 字符长度为10，格式为：yyyy-MM-dd           **默认取值**： 不涉及。
     * startTime  **参数解释**： 屏蔽起始时间。          **约束限制**： 不涉及。 **取值范围**： 字符长度为8，格式为：HH:mm:ss         **默认取值**： 不涉及。
@@ -505,7 +505,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets productMetrics
-    *  **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    *  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null
     */
@@ -517,7 +517,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets productMetrics
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics **参数解释**： 按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductMetric[]|null $productMetrics **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)按云产品维度屏蔽时的指标信息 **约束限制**： 包含的指标数量为[0,50]
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets resourceLevel
-    *  **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    *  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -541,7 +541,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets resourceLevel
     *
-    * @param string|null $resourceLevel **参数解释**： 资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
+    * @param string|null $resourceLevel **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级。 **约束限制**： 不涉及。 **取值范围**： 枚举值。 - product：资源层级为云产品 - dimension：资源层级为子维度 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
 
     /**
     * Gets productName
-    *  **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    *  **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -565,7 +565,7 @@ class BatchUpdateNotificationMasksRequestBody implements ModelInterface, ArrayAc
     /**
     * Sets productName
     *
-    * @param string|null $productName **参数解释**： 资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
+    * @param string|null $productName **参数解释**： [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制**： 不涉及 **取值范围**： 长度为[0,128]个字符。 **默认取值**： 不涉及。
     *
     * @return $this
     */

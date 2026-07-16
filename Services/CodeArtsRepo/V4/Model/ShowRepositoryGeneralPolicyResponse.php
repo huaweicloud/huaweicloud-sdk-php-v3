@@ -27,6 +27,8 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUsers  **参数解释：** 开发人员创建分支权限白名单。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    * repoEncryptionStatus  repoEncryptionStatus
     *
     * @var string[]
     */
@@ -36,7 +38,9 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'string',
             'tagNameRegex' => 'string',
             'forbiddenDeveloperCreateBranch' => 'bool',
-            'createBranchWhitelistUsers' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\PushRuleDevelopersDto[]'
+            'createBranchWhitelistUsers' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\PushRuleDevelopersDto[]',
+            'repoEncryptionEnabled' => 'bool',
+            'repoEncryptionStatus' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ProjectEncryptionStatusBriefDto'
     ];
 
     /**
@@ -47,6 +51,8 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUsers  **参数解释：** 开发人员创建分支权限白名单。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    * repoEncryptionStatus  repoEncryptionStatus
     *
     * @var string[]
     */
@@ -56,7 +62,9 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
         'branchNameRegex' => null,
         'tagNameRegex' => null,
         'forbiddenDeveloperCreateBranch' => null,
-        'createBranchWhitelistUsers' => null
+        'createBranchWhitelistUsers' => null,
+        'repoEncryptionEnabled' => null,
+        'repoEncryptionStatus' => null
     ];
 
     /**
@@ -88,6 +96,8 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUsers  **参数解释：** 开发人员创建分支权限白名单。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    * repoEncryptionStatus  repoEncryptionStatus
     *
     * @var string[]
     */
@@ -97,7 +107,9 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'branch_name_regex',
             'tagNameRegex' => 'tag_name_regex',
             'forbiddenDeveloperCreateBranch' => 'forbidden_developer_create_branch',
-            'createBranchWhitelistUsers' => 'create_branch_whitelist_users'
+            'createBranchWhitelistUsers' => 'create_branch_whitelist_users',
+            'repoEncryptionEnabled' => 'repo_encryption_enabled',
+            'repoEncryptionStatus' => 'repo_encryption_status'
     ];
 
     /**
@@ -108,6 +120,8 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUsers  **参数解释：** 开发人员创建分支权限白名单。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    * repoEncryptionStatus  repoEncryptionStatus
     *
     * @var string[]
     */
@@ -117,7 +131,9 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'setBranchNameRegex',
             'tagNameRegex' => 'setTagNameRegex',
             'forbiddenDeveloperCreateBranch' => 'setForbiddenDeveloperCreateBranch',
-            'createBranchWhitelistUsers' => 'setCreateBranchWhitelistUsers'
+            'createBranchWhitelistUsers' => 'setCreateBranchWhitelistUsers',
+            'repoEncryptionEnabled' => 'setRepoEncryptionEnabled',
+            'repoEncryptionStatus' => 'setRepoEncryptionStatus'
     ];
 
     /**
@@ -128,6 +144,8 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
     * tagNameRegex  **参数解释：** Tag名规则。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * forbiddenDeveloperCreateBranch  **参数解释：** 是否禁止开发者创建分支。 **约束限制：** 不涉及。 **取值范围：** - true，禁止开发者创建分支。 - false，允许开发者创建分支。
     * createBranchWhitelistUsers  **参数解释：** 开发人员创建分支权限白名单。
+    * repoEncryptionEnabled  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    * repoEncryptionStatus  repoEncryptionStatus
     *
     * @var string[]
     */
@@ -137,7 +155,9 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
             'branchNameRegex' => 'getBranchNameRegex',
             'tagNameRegex' => 'getTagNameRegex',
             'forbiddenDeveloperCreateBranch' => 'getForbiddenDeveloperCreateBranch',
-            'createBranchWhitelistUsers' => 'getCreateBranchWhitelistUsers'
+            'createBranchWhitelistUsers' => 'getCreateBranchWhitelistUsers',
+            'repoEncryptionEnabled' => 'getRepoEncryptionEnabled',
+            'repoEncryptionStatus' => 'getRepoEncryptionStatus'
     ];
 
     /**
@@ -204,6 +224,8 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
         $this->container['tagNameRegex'] = isset($data['tagNameRegex']) ? $data['tagNameRegex'] : null;
         $this->container['forbiddenDeveloperCreateBranch'] = isset($data['forbiddenDeveloperCreateBranch']) ? $data['forbiddenDeveloperCreateBranch'] : null;
         $this->container['createBranchWhitelistUsers'] = isset($data['createBranchWhitelistUsers']) ? $data['createBranchWhitelistUsers'] : null;
+        $this->container['repoEncryptionEnabled'] = isset($data['repoEncryptionEnabled']) ? $data['repoEncryptionEnabled'] : null;
+        $this->container['repoEncryptionStatus'] = isset($data['repoEncryptionStatus']) ? $data['repoEncryptionStatus'] : null;
     }
 
     /**
@@ -381,6 +403,54 @@ class ShowRepositoryGeneralPolicyResponse implements ModelInterface, ArrayAccess
     public function setCreateBranchWhitelistUsers($createBranchWhitelistUsers)
     {
         $this->container['createBranchWhitelistUsers'] = $createBranchWhitelistUsers;
+        return $this;
+    }
+
+    /**
+    * Gets repoEncryptionEnabled
+    *  **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    *
+    * @return bool|null
+    */
+    public function getRepoEncryptionEnabled()
+    {
+        return $this->container['repoEncryptionEnabled'];
+    }
+
+    /**
+    * Sets repoEncryptionEnabled
+    *
+    * @param bool|null $repoEncryptionEnabled **参数解释：** 是否开启仓库加密。 **约束限制：** 不涉及。 **取值范围：** - true，开启仓库加密。 - false，关闭仓库加密。
+    *
+    * @return $this
+    */
+    public function setRepoEncryptionEnabled($repoEncryptionEnabled)
+    {
+        $this->container['repoEncryptionEnabled'] = $repoEncryptionEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets repoEncryptionStatus
+    *  repoEncryptionStatus
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ProjectEncryptionStatusBriefDto|null
+    */
+    public function getRepoEncryptionStatus()
+    {
+        return $this->container['repoEncryptionStatus'];
+    }
+
+    /**
+    * Sets repoEncryptionStatus
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ProjectEncryptionStatusBriefDto|null $repoEncryptionStatus repoEncryptionStatus
+    *
+    * @return $this
+    */
+    public function setRepoEncryptionStatus($repoEncryptionStatus)
+    {
+        $this->container['repoEncryptionStatus'] = $repoEncryptionStatus;
         return $this;
     }
 

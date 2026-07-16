@@ -27,7 +27,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
     * averageLatency  数据更改的平均延迟时间（以秒为单位）。
     * lastDistSync  上一次分发代理运行时间。格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * replicatedTransactions  等待传送到分发数据库的事务数。
-    * replicationRateTrans  平均每秒传送到分发数据库的事务数。
     *
     * @var string[]
     */
@@ -37,8 +36,7 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
             'bestLatency' => 'int',
             'averageLatency' => 'int',
             'lastDistSync' => 'string',
-            'replicatedTransactions' => 'int',
-            'replicationRateTrans' => 'float'
+            'replicatedTransactions' => 'int'
     ];
 
     /**
@@ -49,7 +47,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
     * averageLatency  数据更改的平均延迟时间（以秒为单位）。
     * lastDistSync  上一次分发代理运行时间。格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * replicatedTransactions  等待传送到分发数据库的事务数。
-    * replicationRateTrans  平均每秒传送到分发数据库的事务数。
     *
     * @var string[]
     */
@@ -59,8 +56,7 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
         'bestLatency' => null,
         'averageLatency' => null,
         'lastDistSync' => null,
-        'replicatedTransactions' => null,
-        'replicationRateTrans' => null
+        'replicatedTransactions' => null
     ];
 
     /**
@@ -92,7 +88,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
     * averageLatency  数据更改的平均延迟时间（以秒为单位）。
     * lastDistSync  上一次分发代理运行时间。格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * replicatedTransactions  等待传送到分发数据库的事务数。
-    * replicationRateTrans  平均每秒传送到分发数据库的事务数。
     *
     * @var string[]
     */
@@ -102,8 +97,7 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
             'bestLatency' => 'best_latency',
             'averageLatency' => 'average_latency',
             'lastDistSync' => 'last_dist_sync',
-            'replicatedTransactions' => 'replicated_transactions',
-            'replicationRateTrans' => 'replication_rate_trans'
+            'replicatedTransactions' => 'replicated_transactions'
     ];
 
     /**
@@ -114,7 +108,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
     * averageLatency  数据更改的平均延迟时间（以秒为单位）。
     * lastDistSync  上一次分发代理运行时间。格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * replicatedTransactions  等待传送到分发数据库的事务数。
-    * replicationRateTrans  平均每秒传送到分发数据库的事务数。
     *
     * @var string[]
     */
@@ -124,8 +117,7 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
             'bestLatency' => 'setBestLatency',
             'averageLatency' => 'setAverageLatency',
             'lastDistSync' => 'setLastDistSync',
-            'replicatedTransactions' => 'setReplicatedTransactions',
-            'replicationRateTrans' => 'setReplicationRateTrans'
+            'replicatedTransactions' => 'setReplicatedTransactions'
     ];
 
     /**
@@ -136,7 +128,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
     * averageLatency  数据更改的平均延迟时间（以秒为单位）。
     * lastDistSync  上一次分发代理运行时间。格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * replicatedTransactions  等待传送到分发数据库的事务数。
-    * replicationRateTrans  平均每秒传送到分发数据库的事务数。
     *
     * @var string[]
     */
@@ -146,8 +137,7 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
             'bestLatency' => 'getBestLatency',
             'averageLatency' => 'getAverageLatency',
             'lastDistSync' => 'getLastDistSync',
-            'replicatedTransactions' => 'getReplicatedTransactions',
-            'replicationRateTrans' => 'getReplicationRateTrans'
+            'replicatedTransactions' => 'getReplicatedTransactions'
     ];
 
     /**
@@ -214,7 +204,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
         $this->container['averageLatency'] = isset($data['averageLatency']) ? $data['averageLatency'] : null;
         $this->container['lastDistSync'] = isset($data['lastDistSync']) ? $data['lastDistSync'] : null;
         $this->container['replicatedTransactions'] = isset($data['replicatedTransactions']) ? $data['replicatedTransactions'] : null;
-        $this->container['replicationRateTrans'] = isset($data['replicationRateTrans']) ? $data['replicationRateTrans'] : null;
     }
 
     /**
@@ -380,30 +369,6 @@ class CollectPublicationMonitorResponse implements ModelInterface, ArrayAccess
     public function setReplicatedTransactions($replicatedTransactions)
     {
         $this->container['replicatedTransactions'] = $replicatedTransactions;
-        return $this;
-    }
-
-    /**
-    * Gets replicationRateTrans
-    *  平均每秒传送到分发数据库的事务数。
-    *
-    * @return float|null
-    */
-    public function getReplicationRateTrans()
-    {
-        return $this->container['replicationRateTrans'];
-    }
-
-    /**
-    * Sets replicationRateTrans
-    *
-    * @param float|null $replicationRateTrans 平均每秒传送到分发数据库的事务数。
-    *
-    * @return $this
-    */
-    public function setReplicationRateTrans($replicationRateTrans)
-    {
-        $this->container['replicationRateTrans'] = $replicationRateTrans;
         return $this;
     }
 

@@ -219,9 +219,6 @@ class BatchCreateGeoIpRuleRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['white'] === null) {
             $invalidProperties[] = "'white' can't be null";
         }
-        if ($this->container['ipType'] === null) {
-            $invalidProperties[] = "'ipType' can't be null";
-        }
         if ($this->container['policyIds'] === null) {
             $invalidProperties[] = "'policyIds' can't be null";
         }
@@ -315,7 +312,7 @@ class BatchCreateGeoIpRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets ipType
     *  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     *
-    * @return string
+    * @return string|null
     */
     public function getIpType()
     {
@@ -325,7 +322,7 @@ class BatchCreateGeoIpRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ipType
     *
-    * @param string $ipType ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
+    * @param string|null $ipType ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     *
     * @return $this
     */

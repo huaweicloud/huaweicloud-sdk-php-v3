@@ -33,7 +33,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'dimensions' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespDimensions[]',
             'instanceIds' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCesHierarchyRespInstanceIds[]',
-            'nodes' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCesHierarchyRespNodes[]',
+            'nodes' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespNodes[]',
             'topics' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespTopics[]',
             'dlq' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespDlq[]',
             'groups' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespGroups[]'
@@ -280,7 +280,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     * Gets nodes
     *  **参数解释**： 节点信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCesHierarchyRespNodes[]|null
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespNodes[]|null
     */
     public function getNodes()
     {
@@ -290,7 +290,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodes
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCesHierarchyRespNodes[]|null $nodes **参数解释**： 节点信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ShowCeshierarchyRespNodes[]|null $nodes **参数解释**： 节点信息。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

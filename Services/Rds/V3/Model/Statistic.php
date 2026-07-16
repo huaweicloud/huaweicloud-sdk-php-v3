@@ -37,7 +37,7 @@ class Statistic implements ModelInterface, ArrayAccess
             'calls' => 'int',
             'query' => 'string',
             'rows' => 'int',
-            'canUse' => 'double'
+            'canUse' => 'bool'
     ];
 
     /**
@@ -59,7 +59,7 @@ class Statistic implements ModelInterface, ArrayAccess
         'calls' => 'int64',
         'query' => null,
         'rows' => 'int64',
-        'canUse' => 'double'
+        'canUse' => null
     ];
 
     /**
@@ -386,7 +386,7 @@ class Statistic implements ModelInterface, ArrayAccess
     * Gets canUse
     *  是否可以执行sql限流
     *
-    * @return double|null
+    * @return bool|null
     */
     public function getCanUse()
     {
@@ -396,7 +396,7 @@ class Statistic implements ModelInterface, ArrayAccess
     /**
     * Sets canUse
     *
-    * @param double|null $canUse 是否可以执行sql限流
+    * @param bool|null $canUse 是否可以执行sql限流
     *
     * @return $this
     */

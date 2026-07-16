@@ -35,6 +35,8 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * domainAggregation  是否开启域名聚合统计。
     * regionAggregation  是否开启全局计数。
     * description  规则描述
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -53,7 +55,9 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
             'lockTime' => 'int',
             'domainAggregation' => 'bool',
             'regionAggregation' => 'bool',
-            'description' => 'string'
+            'description' => 'string',
+            'priority' => 'int',
+            'ccPriority' => 'int'
     ];
 
     /**
@@ -73,6 +77,8 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * domainAggregation  是否开启域名聚合统计。
     * regionAggregation  是否开启全局计数。
     * description  规则描述
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -91,7 +97,9 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
         'lockTime' => null,
         'domainAggregation' => null,
         'regionAggregation' => null,
-        'description' => null
+        'description' => null,
+        'priority' => 'int32',
+        'ccPriority' => 'int32'
     ];
 
     /**
@@ -132,6 +140,8 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * domainAggregation  是否开启域名聚合统计。
     * regionAggregation  是否开启全局计数。
     * description  规则描述
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -150,7 +160,9 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
             'lockTime' => 'lock_time',
             'domainAggregation' => 'domain_aggregation',
             'regionAggregation' => 'region_aggregation',
-            'description' => 'description'
+            'description' => 'description',
+            'priority' => 'priority',
+            'ccPriority' => 'cc_priority'
     ];
 
     /**
@@ -170,6 +182,8 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * domainAggregation  是否开启域名聚合统计。
     * regionAggregation  是否开启全局计数。
     * description  规则描述
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -188,7 +202,9 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
             'lockTime' => 'setLockTime',
             'domainAggregation' => 'setDomainAggregation',
             'regionAggregation' => 'setRegionAggregation',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'priority' => 'setPriority',
+            'ccPriority' => 'setCcPriority'
     ];
 
     /**
@@ -208,6 +224,8 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     * domainAggregation  是否开启域名聚合统计。
     * regionAggregation  是否开启全局计数。
     * description  规则描述
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -226,7 +244,9 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
             'lockTime' => 'getLockTime',
             'domainAggregation' => 'getDomainAggregation',
             'regionAggregation' => 'getRegionAggregation',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'priority' => 'getPriority',
+            'ccPriority' => 'getCcPriority'
     ];
 
     /**
@@ -327,6 +347,8 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['domainAggregation'] = isset($data['domainAggregation']) ? $data['domainAggregation'] : null;
         $this->container['regionAggregation'] = isset($data['regionAggregation']) ? $data['regionAggregation'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['ccPriority'] = isset($data['ccPriority']) ? $data['ccPriority'] : null;
     }
 
     /**
@@ -734,6 +756,54 @@ class UpdateCcRuleRequestBody implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets ccPriority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getCcPriority()
+    {
+        return $this->container['ccPriority'];
+    }
+
+    /**
+    * Sets ccPriority
+    *
+    * @param int|null $ccPriority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setCcPriority($ccPriority)
+    {
+        $this->container['ccPriority'] = $ccPriority;
         return $this;
     }
 

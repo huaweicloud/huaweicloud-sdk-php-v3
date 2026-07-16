@@ -26,6 +26,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
             'securityGroups' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerNicSecurityGroup[]',
             'ipAddress' => 'string',
             'ipv6Enable' => 'bool',
-            'ipv6Bandwidth' => '\HuaweiCloud\SDK\Ecs\V2\Model\Ipv6Bandwidth'
+            'ipv6Bandwidth' => '\HuaweiCloud\SDK\Ecs\V2\Model\Ipv6Bandwidth',
+            'efiEnable' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
         'securityGroups' => null,
         'ipAddress' => null,
         'ipv6Enable' => null,
-        'ipv6Bandwidth' => null
+        'ipv6Bandwidth' => null,
+        'efiEnable' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
             'securityGroups' => 'security_groups',
             'ipAddress' => 'ip_address',
             'ipv6Enable' => 'ipv6_enable',
-            'ipv6Bandwidth' => 'ipv6_bandwidth'
+            'ipv6Bandwidth' => 'ipv6_bandwidth',
+            'efiEnable' => 'efi_enable'
     ];
 
     /**
@@ -107,6 +113,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
             'securityGroups' => 'setSecurityGroups',
             'ipAddress' => 'setIpAddress',
             'ipv6Enable' => 'setIpv6Enable',
-            'ipv6Bandwidth' => 'setIpv6Bandwidth'
+            'ipv6Bandwidth' => 'setIpv6Bandwidth',
+            'efiEnable' => 'setEfiEnable'
     ];
 
     /**
@@ -127,6 +135,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     * ipAddress  IP地址，无该参数表示自动分配IP地址。
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
             'securityGroups' => 'getSecurityGroups',
             'ipAddress' => 'getIpAddress',
             'ipv6Enable' => 'getIpv6Enable',
-            'ipv6Bandwidth' => 'getIpv6Bandwidth'
+            'ipv6Bandwidth' => 'getIpv6Bandwidth',
+            'efiEnable' => 'getEfiEnable'
     ];
 
     /**
@@ -203,6 +213,7 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6Bandwidth'] = isset($data['ipv6Bandwidth']) ? $data['ipv6Bandwidth'] : null;
+        $this->container['efiEnable'] = isset($data['efiEnable']) ? $data['efiEnable'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class BatchAddServerNicOption implements ModelInterface, ArrayAccess
     public function setIpv6Bandwidth($ipv6Bandwidth)
     {
         $this->container['ipv6Bandwidth'] = $ipv6Bandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets efiEnable
+    *  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
+    *
+    * @return bool|null
+    */
+    public function getEfiEnable()
+    {
+        return $this->container['efiEnable'];
+    }
+
+    /**
+    * Sets efiEnable
+    *
+    * @param bool|null $efiEnable 使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
+    *
+    * @return $this
+    */
+    public function setEfiEnable($efiEnable)
+    {
+        $this->container['efiEnable'] = $efiEnable;
         return $this;
     }
 

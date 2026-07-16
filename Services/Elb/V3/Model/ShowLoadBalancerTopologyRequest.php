@@ -21,12 +21,12 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * listenerId  监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
-    * poolId  后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
-    * listenerName  监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
-    * listenerProtocol  监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
-    * listenerProtocolPort  监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
-    * poolName  后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    * listenerId  **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolId  **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerName  **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocol  **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocolPort  **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolName  **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -43,12 +43,12 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * listenerId  监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
-    * poolId  后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
-    * listenerName  监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
-    * listenerProtocol  监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
-    * listenerProtocolPort  监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
-    * poolName  后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    * listenerId  **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolId  **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerName  **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocol  **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocolPort  **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolName  **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -86,12 +86,12 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * listenerId  监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
-    * poolId  后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
-    * listenerName  监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
-    * listenerProtocol  监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
-    * listenerProtocolPort  监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
-    * poolName  后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    * listenerId  **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolId  **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerName  **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocol  **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocolPort  **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolName  **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -108,12 +108,12 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * listenerId  监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
-    * poolId  后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
-    * listenerName  监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
-    * listenerProtocol  监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
-    * listenerProtocolPort  监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
-    * poolName  后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    * listenerId  **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolId  **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerName  **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocol  **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocolPort  **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolName  **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -130,12 +130,12 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancerId  **参数解释**：负载均衡器ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
-    * listenerId  监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
-    * poolId  后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
-    * listenerName  监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
-    * listenerProtocol  监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
-    * listenerProtocolPort  监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
-    * poolName  后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    * listenerId  **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolId  **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerName  **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocol  **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * listenerProtocolPort  **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
+    * poolName  **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -267,7 +267,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerId
-    *  监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
+    *  **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -279,7 +279,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets listenerId
     *
-    * @param string|null $listenerId 监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。
+    * @param string|null $listenerId **参数解释**：监听器的ID。  支持多值查询，查询条件格式：*listener_id=xxx&listener_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolId
-    *  后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
+    *  **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets poolId
     *
-    * @param string|null $poolId 后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。
+    * @param string|null $poolId **参数解释**：后端服务器组的ID。  支持多值查询，查询条件格式：*pool_id=xxx&pool_id=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerName
-    *  监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
+    *  **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets listenerName
     *
-    * @param string|null $listenerName 监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。
+    * @param string|null $listenerName **参数解释**：监听器的名称。  支持多值查询，查询条件格式：*listener_name=xxx&listener_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerProtocol
-    *  监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
+    *  **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets listenerProtocol
     *
-    * @param string|null $listenerProtocol 监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。
+    * @param string|null $listenerProtocol **参数解释**：监听器的协议。  支持多值查询，查询条件格式：*listener_protocol=xxx&listener_protocol=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerProtocolPort
-    *  监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
+    *  **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return int|null
     */
@@ -375,7 +375,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets listenerProtocolPort
     *
-    * @param int|null $listenerProtocolPort 监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。
+    * @param int|null $listenerProtocolPort **参数解释**：监听器的监听端口。  支持多值查询，查询条件格式：*listener_protocol_port=xxx&listener_protocol_port=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolName
-    *  后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    *  **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class ShowLoadBalancerTopologyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets poolName
     *
-    * @param string|null $poolName 后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。
+    * @param string|null $poolName **参数解释**：后端服务器组的名称。  支持多值查询，查询条件格式：*pool_name=xxx&pool_name=xxx*。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

@@ -435,6 +435,12 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dstKmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['dstKmsKeyId'])) {
                 $invalidProperties[] = "invalid value for 'dstKmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
+            if (!is_null($this->container['sourceCdnAuthenticationKey']) && (mb_strlen($this->container['sourceCdnAuthenticationKey']) > 255)) {
+                $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['sourceCdnAuthenticationKey']) && (mb_strlen($this->container['sourceCdnAuthenticationKey']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['sourceCdnAuthenticationKey']) && !preg_match("/^[^<>&\\\"'\\\\\\\\]*$/", $this->container['sourceCdnAuthenticationKey'])) {
                 $invalidProperties[] = "invalid value for 'sourceCdnAuthenticationKey', must be conform to the pattern /^[^<>&\\\"'\\\\\\\\]*$/.";
             }
@@ -457,6 +463,9 @@ class StartTaskGroupReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sourceCdnKmsKeyId']) && (mb_strlen($this->container['sourceCdnKmsKeyId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'sourceCdnKmsKeyId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sourceCdnKmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['sourceCdnKmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'sourceCdnKmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         return $invalidProperties;
     }

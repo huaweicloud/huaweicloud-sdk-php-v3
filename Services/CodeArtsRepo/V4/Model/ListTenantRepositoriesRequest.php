@@ -28,6 +28,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
     * createdBefore  **参数解释：** 筛选在该时间之前创建的仓库。
     * sort  **参数解释：** 结果集排序方式。 **约束限制：** 与sort_field搭配使用。  **取值范围：** - asc，正序返回。 - desc，倒序返回。
     * sortField  **参数解释：** 用作排序的字段。 - owner，仓库所有者。 - capacity，使用空间。 - status，状态。 - create_time，创建时间。 - member_number，成员数量。 - repository_name，仓库名称。
+    * locked  **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -42,6 +43,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
             'createdBefore' => '\DateTime',
             'sort' => 'string',
             'sortField' => 'string',
+            'locked' => 'bool',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -56,6 +58,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
     * createdBefore  **参数解释：** 筛选在该时间之前创建的仓库。
     * sort  **参数解释：** 结果集排序方式。 **约束限制：** 与sort_field搭配使用。  **取值范围：** - asc，正序返回。 - desc，倒序返回。
     * sortField  **参数解释：** 用作排序的字段。 - owner，仓库所有者。 - capacity，使用空间。 - status，状态。 - create_time，创建时间。 - member_number，成员数量。 - repository_name，仓库名称。
+    * locked  **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -70,6 +73,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
         'createdBefore' => 'date-time',
         'sort' => null,
         'sortField' => null,
+        'locked' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -105,6 +109,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
     * createdBefore  **参数解释：** 筛选在该时间之前创建的仓库。
     * sort  **参数解释：** 结果集排序方式。 **约束限制：** 与sort_field搭配使用。  **取值范围：** - asc，正序返回。 - desc，倒序返回。
     * sortField  **参数解释：** 用作排序的字段。 - owner，仓库所有者。 - capacity，使用空间。 - status，状态。 - create_time，创建时间。 - member_number，成员数量。 - repository_name，仓库名称。
+    * locked  **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -119,6 +124,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
             'createdBefore' => 'created_before',
             'sort' => 'sort',
             'sortField' => 'sort_field',
+            'locked' => 'locked',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -133,6 +139,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
     * createdBefore  **参数解释：** 筛选在该时间之前创建的仓库。
     * sort  **参数解释：** 结果集排序方式。 **约束限制：** 与sort_field搭配使用。  **取值范围：** - asc，正序返回。 - desc，倒序返回。
     * sortField  **参数解释：** 用作排序的字段。 - owner，仓库所有者。 - capacity，使用空间。 - status，状态。 - create_time，创建时间。 - member_number，成员数量。 - repository_name，仓库名称。
+    * locked  **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -147,6 +154,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
             'createdBefore' => 'setCreatedBefore',
             'sort' => 'setSort',
             'sortField' => 'setSortField',
+            'locked' => 'setLocked',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -161,6 +169,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
     * createdBefore  **参数解释：** 筛选在该时间之前创建的仓库。
     * sort  **参数解释：** 结果集排序方式。 **约束限制：** 与sort_field搭配使用。  **取值范围：** - asc，正序返回。 - desc，倒序返回。
     * sortField  **参数解释：** 用作排序的字段。 - owner，仓库所有者。 - capacity，使用空间。 - status，状态。 - create_time，创建时间。 - member_number，成员数量。 - repository_name，仓库名称。
+    * locked  **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
     * offset  **参数解释：** 偏移量，从0开始。
     * limit  **参数解释：** 返回数量。
     *
@@ -175,6 +184,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
             'createdBefore' => 'getCreatedBefore',
             'sort' => 'getSort',
             'sortField' => 'getSortField',
+            'locked' => 'getLocked',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -304,6 +314,7 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
         $this->container['createdBefore'] = isset($data['createdBefore']) ? $data['createdBefore'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
         $this->container['sortField'] = isset($data['sortField']) ? $data['sortField'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -573,6 +584,30 @@ class ListTenantRepositoriesRequest implements ModelInterface, ArrayAccess
     public function setSortField($sortField)
     {
         $this->container['sortField'] = $sortField;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked **参数解释：** 是否锁定。 **约束限制：** 不传是查询全部数据 **取值范围：** - true，锁定的仓库。 - false，未锁定的仓库。
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

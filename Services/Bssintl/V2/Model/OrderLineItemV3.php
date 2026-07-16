@@ -21,7 +21,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
-    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountMode  订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     * discountAmount  订单可用的折扣金额（即减免金额）。
     * discountRatio  订单可用的折扣比例。
     *
@@ -37,7 +37,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
-    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountMode  订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     * discountAmount  订单可用的折扣金额（即减免金额）。
     * discountRatio  订单可用的折扣比例。
     *
@@ -74,7 +74,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
-    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountMode  订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     * discountAmount  订单可用的折扣金额（即减免金额）。
     * discountRatio  订单可用的折扣比例。
     *
@@ -90,7 +90,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
-    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountMode  订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     * discountAmount  订单可用的折扣金额（即减免金额）。
     * discountRatio  订单可用的折扣比例。
     *
@@ -106,7 +106,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * orderLineItemIds  可使用相同折扣的订单项合并后的订单项ID列表。 相同产品、相同规格（对于线性产品）、相同最终价格（例如，严选产品改价）的订单项将进行合并。
-    * discountMode  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * discountMode  订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     * discountAmount  订单可用的折扣金额（即减免金额）。
     * discountRatio  订单可用的折扣比例。
     *
@@ -243,7 +243,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountMode
-    *  订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    *  订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountMode
     *
-    * @param int $discountMode 订单可用折扣的模式 。 0：折扣1：一口价2：满减
+    * @param int $discountMode 订单可用折扣的模式。 0：折扣 1：一口价 2：满减
     *
     * @return $this
     */

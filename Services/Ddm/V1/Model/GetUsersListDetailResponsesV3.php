@@ -28,6 +28,7 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
     * description  **参数解释**：  账号的描述信息。  **取值范围**：  不涉及。
     * created  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     * databases  **参数解释**：  关联的逻辑库集合。账号只对已关联的逻辑库有访问权限。  **取值范围**：  不涉及。
+    * expirationTime  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
             'passwordLastChanged' => 'string',
             'description' => 'string',
             'created' => 'string',
-            'databases' => '\HuaweiCloud\SDK\Ddm\V1\Model\GetUsersListdatabaseV3[]'
+            'databases' => '\HuaweiCloud\SDK\Ddm\V1\Model\GetUsersListdatabaseV3[]',
+            'expirationTime' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
     * description  **参数解释**：  账号的描述信息。  **取值范围**：  不涉及。
     * created  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     * databases  **参数解释**：  关联的逻辑库集合。账号只对已关联的逻辑库有访问权限。  **取值范围**：  不涉及。
+    * expirationTime  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
         'passwordLastChanged' => null,
         'description' => null,
         'created' => null,
-        'databases' => null
+        'databases' => null,
+        'expirationTime' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
     * description  **参数解释**：  账号的描述信息。  **取值范围**：  不涉及。
     * created  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     * databases  **参数解释**：  关联的逻辑库集合。账号只对已关联的逻辑库有访问权限。  **取值范围**：  不涉及。
+    * expirationTime  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
             'passwordLastChanged' => 'password_last_changed',
             'description' => 'description',
             'created' => 'created',
-            'databases' => 'databases'
+            'databases' => 'databases',
+            'expirationTime' => 'expiration_time'
     ];
 
     /**
@@ -121,6 +127,7 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
     * description  **参数解释**：  账号的描述信息。  **取值范围**：  不涉及。
     * created  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     * databases  **参数解释**：  关联的逻辑库集合。账号只对已关联的逻辑库有访问权限。  **取值范围**：  不涉及。
+    * expirationTime  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
             'passwordLastChanged' => 'setPasswordLastChanged',
             'description' => 'setDescription',
             'created' => 'setCreated',
-            'databases' => 'setDatabases'
+            'databases' => 'setDatabases',
+            'expirationTime' => 'setExpirationTime'
     ];
 
     /**
@@ -145,6 +153,7 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
     * description  **参数解释**：  账号的描述信息。  **取值范围**：  不涉及。
     * created  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     * databases  **参数解释**：  关联的逻辑库集合。账号只对已关联的逻辑库有访问权限。  **取值范围**：  不涉及。
+    * expirationTime  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
             'passwordLastChanged' => 'getPasswordLastChanged',
             'description' => 'getDescription',
             'created' => 'getCreated',
-            'databases' => 'getDatabases'
+            'databases' => 'getDatabases',
+            'expirationTime' => 'getExpirationTime'
     ];
 
     /**
@@ -225,6 +235,7 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
+        $this->container['expirationTime'] = isset($data['expirationTime']) ? $data['expirationTime'] : null;
     }
 
     /**
@@ -456,6 +467,30 @@ class GetUsersListDetailResponsesV3 implements ModelInterface, ArrayAccess
     public function setDatabases($databases)
     {
         $this->container['databases'] = $databases;
+        return $this;
+    }
+
+    /**
+    * Gets expirationTime
+    *  **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getExpirationTime()
+    {
+        return $this->container['expirationTime'];
+    }
+
+    /**
+    * Sets expirationTime
+    *
+    * @param string|null $expirationTime **参数解释**：  DDM实例账号的创建时间。  格式为yyyy-mm-ddThh:mm:ssZ。其中，T指定某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setExpirationTime($expirationTime)
+    {
+        $this->container['expirationTime'] = $expirationTime;
         return $this;
     }
 

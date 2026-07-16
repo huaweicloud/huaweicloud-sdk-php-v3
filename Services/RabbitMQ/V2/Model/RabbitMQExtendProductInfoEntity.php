@@ -22,6 +22,7 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
+    * billingCode  账单计费类型。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型
     * chargingMode  支持的计费模式类型。
@@ -30,12 +31,14 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * availableZones  有可用资源的可用区列表。
     * unavailableZones  资源售罄的可用区列表
     * supportFeatures  支持的特性功能。
+    * qingtianIncompatible  是否兼容擎天。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
             'productId' => 'string',
+            'billingCode' => 'string',
             'ecsFlavorId' => 'string',
             'archTypes' => 'string[]',
             'chargingMode' => 'string[]',
@@ -43,13 +46,15 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
             'properties' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\RabbitMQExtendProductPropertiesEntity',
             'availableZones' => 'string[]',
             'unavailableZones' => 'string[]',
-            'supportFeatures' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\RabbitMQProductSupportFeaturesEntity[]'
+            'supportFeatures' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\RabbitMQProductSupportFeaturesEntity[]',
+            'qingtianIncompatible' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
+    * billingCode  账单计费类型。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型
     * chargingMode  支持的计费模式类型。
@@ -58,12 +63,14 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * availableZones  有可用资源的可用区列表。
     * unavailableZones  资源售罄的可用区列表
     * supportFeatures  支持的特性功能。
+    * qingtianIncompatible  是否兼容擎天。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
         'productId' => null,
+        'billingCode' => null,
         'ecsFlavorId' => null,
         'archTypes' => null,
         'chargingMode' => null,
@@ -71,7 +78,8 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
         'properties' => null,
         'availableZones' => null,
         'unavailableZones' => null,
-        'supportFeatures' => null
+        'supportFeatures' => null,
+        'qingtianIncompatible' => null
     ];
 
     /**
@@ -99,6 +107,7 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
+    * billingCode  账单计费类型。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型
     * chargingMode  支持的计费模式类型。
@@ -107,12 +116,14 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * availableZones  有可用资源的可用区列表。
     * unavailableZones  资源售罄的可用区列表
     * supportFeatures  支持的特性功能。
+    * qingtianIncompatible  是否兼容擎天。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
             'productId' => 'product_id',
+            'billingCode' => 'billing_code',
             'ecsFlavorId' => 'ecs_flavor_id',
             'archTypes' => 'arch_types',
             'chargingMode' => 'charging_mode',
@@ -120,13 +131,15 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
             'properties' => 'properties',
             'availableZones' => 'available_zones',
             'unavailableZones' => 'unavailable_zones',
-            'supportFeatures' => 'support_features'
+            'supportFeatures' => 'support_features',
+            'qingtianIncompatible' => 'qingtian_incompatible'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
+    * billingCode  账单计费类型。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型
     * chargingMode  支持的计费模式类型。
@@ -135,12 +148,14 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * availableZones  有可用资源的可用区列表。
     * unavailableZones  资源售罄的可用区列表
     * supportFeatures  支持的特性功能。
+    * qingtianIncompatible  是否兼容擎天。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
             'productId' => 'setProductId',
+            'billingCode' => 'setBillingCode',
             'ecsFlavorId' => 'setEcsFlavorId',
             'archTypes' => 'setArchTypes',
             'chargingMode' => 'setChargingMode',
@@ -148,13 +163,15 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
             'properties' => 'setProperties',
             'availableZones' => 'setAvailableZones',
             'unavailableZones' => 'setUnavailableZones',
-            'supportFeatures' => 'setSupportFeatures'
+            'supportFeatures' => 'setSupportFeatures',
+            'qingtianIncompatible' => 'setQingtianIncompatible'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  **参数解释**： 实例类型。 **取值范围**： - single：单机。 - cluster：集群。
     * productId  产品ID。
+    * billingCode  账单计费类型。
     * ecsFlavorId  该产品使用的ECS规格。
     * archTypes  支持的CPU架构类型
     * chargingMode  支持的计费模式类型。
@@ -163,12 +180,14 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     * availableZones  有可用资源的可用区列表。
     * unavailableZones  资源售罄的可用区列表
     * supportFeatures  支持的特性功能。
+    * qingtianIncompatible  是否兼容擎天。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
             'productId' => 'getProductId',
+            'billingCode' => 'getBillingCode',
             'ecsFlavorId' => 'getEcsFlavorId',
             'archTypes' => 'getArchTypes',
             'chargingMode' => 'getChargingMode',
@@ -176,7 +195,8 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
             'properties' => 'getProperties',
             'availableZones' => 'getAvailableZones',
             'unavailableZones' => 'getUnavailableZones',
-            'supportFeatures' => 'getSupportFeatures'
+            'supportFeatures' => 'getSupportFeatures',
+            'qingtianIncompatible' => 'getQingtianIncompatible'
     ];
 
     /**
@@ -239,6 +259,7 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
+        $this->container['billingCode'] = isset($data['billingCode']) ? $data['billingCode'] : null;
         $this->container['ecsFlavorId'] = isset($data['ecsFlavorId']) ? $data['ecsFlavorId'] : null;
         $this->container['archTypes'] = isset($data['archTypes']) ? $data['archTypes'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
@@ -247,6 +268,7 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
         $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
         $this->container['unavailableZones'] = isset($data['unavailableZones']) ? $data['unavailableZones'] : null;
         $this->container['supportFeatures'] = isset($data['supportFeatures']) ? $data['supportFeatures'] : null;
+        $this->container['qingtianIncompatible'] = isset($data['qingtianIncompatible']) ? $data['qingtianIncompatible'] : null;
     }
 
     /**
@@ -316,6 +338,30 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     public function setProductId($productId)
     {
         $this->container['productId'] = $productId;
+        return $this;
+    }
+
+    /**
+    * Gets billingCode
+    *  账单计费类型。
+    *
+    * @return string|null
+    */
+    public function getBillingCode()
+    {
+        return $this->container['billingCode'];
+    }
+
+    /**
+    * Sets billingCode
+    *
+    * @param string|null $billingCode 账单计费类型。
+    *
+    * @return $this
+    */
+    public function setBillingCode($billingCode)
+    {
+        $this->container['billingCode'] = $billingCode;
         return $this;
     }
 
@@ -508,6 +554,30 @@ class RabbitMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     public function setSupportFeatures($supportFeatures)
     {
         $this->container['supportFeatures'] = $supportFeatures;
+        return $this;
+    }
+
+    /**
+    * Gets qingtianIncompatible
+    *  是否兼容擎天。
+    *
+    * @return bool|null
+    */
+    public function getQingtianIncompatible()
+    {
+        return $this->container['qingtianIncompatible'];
+    }
+
+    /**
+    * Sets qingtianIncompatible
+    *
+    * @param bool|null $qingtianIncompatible 是否兼容擎天。
+    *
+    * @return $this
+    */
+    public function setQingtianIncompatible($qingtianIncompatible)
+    {
+        $this->container['qingtianIncompatible'] = $qingtianIncompatible;
         return $this;
     }
 

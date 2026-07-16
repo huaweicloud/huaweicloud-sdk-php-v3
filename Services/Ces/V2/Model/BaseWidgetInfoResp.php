@@ -25,7 +25,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
-    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
@@ -53,7 +53,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
-    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
@@ -102,7 +102,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
-    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
@@ -130,7 +130,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
-    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
@@ -158,7 +158,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     * title  **参数解释** 监控视图标题 **取值范围** 长度为[1,128]个字符，允许包括以下内容：1、中文汉字；2、拉丁字母；3、英文大小写字母；4、数字(0-9)；5、符号： ” \" ≤ < > & % _ : / ; “ ' ? + , ~ ， （ ） º ( ) [ . -
     * threshold  **参数解释** 监控视图指标的阈值 **取值范围** 最小值为0，最大值为1.7976931348623157e+308
     * thresholdEnabled  **参数解释** 阈值是否展示 **取值范围** - true:展示 - false:不展示
-    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * view  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     * metricDisplayMode  **参数解释** 指标展示类型 **取值范围** - single:单指标展示 - multiple:多指标展示
     * properties  properties
     * location  location
@@ -225,6 +225,8 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     const VIEW_TABLE = 'table';
     const VIEW_CIRCULAR_BAR = 'circular_bar';
     const VIEW_AREA_CHART = 'area_chart';
+    const VIEW_GAUGE = 'gauge';
+    const VIEW_STAT = 'stat';
     const METRIC_DISPLAY_MODE_SINGLE = 'single';
     const METRIC_DISPLAY_MODE_MULTIPLE = 'multiple';
     
@@ -243,6 +245,8 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
             self::VIEW_TABLE,
             self::VIEW_CIRCULAR_BAR,
             self::VIEW_AREA_CHART,
+            self::VIEW_GAUGE,
+            self::VIEW_STAT,
         ];
     }
 
@@ -471,7 +475,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets view
-    *  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    *  **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     *
     * @return string|null
     */
@@ -483,7 +487,7 @@ class BaseWidgetInfoResp implements ModelInterface, ArrayAccess
     /**
     * Sets view
     *
-    * @param string|null $view **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图
+    * @param string|null $view **参数解释** 监控视图图表类型 **取值范围** - bar:条形图 - line:折线图 - bar_chart:柱状图 - table:表格 - circular_bar:环形柱状图 - area_chart:面积图 - gauge:仪表盘 - stat:数字
     *
     * @return $this
     */

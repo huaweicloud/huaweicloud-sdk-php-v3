@@ -22,24 +22,28 @@ class ShowTemplateDeployParamsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * templateName  模板名称。
     * version  模板版本。
+    * accountId  纳管账号ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'templateName' => 'string',
-            'version' => 'string'
+            'version' => 'string',
+            'accountId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * templateName  模板名称。
     * version  模板版本。
+    * accountId  纳管账号ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'templateName' => null,
-        'version' => null
+        'version' => null,
+        'accountId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShowTemplateDeployParamsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * templateName  模板名称。
     * version  模板版本。
+    * accountId  纳管账号ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'templateName' => 'template_name',
-            'version' => 'version'
+            'version' => 'version',
+            'accountId' => 'account_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * templateName  模板名称。
     * version  模板版本。
+    * accountId  纳管账号ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'templateName' => 'setTemplateName',
-            'version' => 'setVersion'
+            'version' => 'setVersion',
+            'accountId' => 'setAccountId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * templateName  模板名称。
     * version  模板版本。
+    * accountId  纳管账号ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'templateName' => 'getTemplateName',
-            'version' => 'getVersion'
+            'version' => 'getVersion',
+            'accountId' => 'getAccountId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShowTemplateDeployParamsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
     }
 
     /**
@@ -186,6 +197,12 @@ class ShowTemplateDeployParamsRequest implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^V[1-9][0-9]{0,9}$/", $this->container['version'])) {
                 $invalidProperties[] = "invalid value for 'version', must be conform to the pattern /^V[1-9][0-9]{0,9}$/.";
+            }
+            if (!is_null($this->container['accountId']) && (mb_strlen($this->container['accountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['accountId']) && !preg_match("/^[\\w-]+$/", $this->container['accountId'])) {
+                $invalidProperties[] = "invalid value for 'accountId', must be conform to the pattern /^[\\w-]+$/.";
             }
         return $invalidProperties;
     }
@@ -246,6 +263,30 @@ class ShowTemplateDeployParamsRequest implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets accountId
+    *  纳管账号ID。
+    *
+    * @return string|null
+    */
+    public function getAccountId()
+    {
+        return $this->container['accountId'];
+    }
+
+    /**
+    * Sets accountId
+    *
+    * @param string|null $accountId 纳管账号ID。
+    *
+    * @return $this
+    */
+    public function setAccountId($accountId)
+    {
+        $this->container['accountId'] = $accountId;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * urn  目标委托的URN。
-    * id  目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    * urn  **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
+    * id  **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * urn  目标委托的URN。
-    * id  目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    * urn  **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
+    * id  **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * urn  目标委托的URN。
-    * id  目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    * urn  **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
+    * id  **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * urn  目标委托的URN。
-    * id  目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    * urn  **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
+    * id  **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * urn  目标委托的URN。
-    * id  目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    * urn  **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
+    * id  **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -200,7 +200,7 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  目标委托的URN。
+    *  **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string $urn 目标委托的URN。
+    * @param string $urn **参数解释**： 委托会话或信任委托会话的URN。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -224,7 +224,7 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    *  **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -236,7 +236,7 @@ class AssumedAgencyDto implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 目标委托的唯一标志，包含了委托ID和委托会话名称信息。
+    * @param string $id **参数解释**： 委托会话或信任委托会话的唯一标识，包含了委托ID和委托会话名称信息。  **取值范围**： 不涉及。
     *
     * @return $this
     */

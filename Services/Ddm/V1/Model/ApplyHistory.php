@@ -24,7 +24,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
     * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
-    * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * errorMessage  **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
             'targetName' => 'string',
             'applyResult' => 'string',
             'appliedAt' => '\DateTime',
-            'errorCode' => 'string'
+            'errorMessage' => 'string'
     ];
 
     /**
@@ -42,7 +42,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
     * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
-    * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * errorMessage  **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
         'targetName' => null,
         'applyResult' => null,
         'appliedAt' => 'date-time',
-        'errorCode' => null
+        'errorMessage' => null
     ];
 
     /**
@@ -81,7 +81,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
     * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
-    * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * errorMessage  **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
             'targetName' => 'target_name',
             'applyResult' => 'apply_result',
             'appliedAt' => 'applied_at',
-            'errorCode' => 'error_code'
+            'errorMessage' => 'error_message'
     ];
 
     /**
@@ -99,7 +99,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
     * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
-    * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * errorMessage  **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
             'targetName' => 'setTargetName',
             'applyResult' => 'setApplyResult',
             'appliedAt' => 'setAppliedAt',
-            'errorCode' => 'setErrorCode'
+            'errorMessage' => 'setErrorMessage'
     ];
 
     /**
@@ -117,7 +117,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     * targetName  **参数解释**：  参数组的名称。  **参数范围**：  不涉及。
     * applyResult  **参数解释**：  应用结果。  **参数范围**：  不涉及。
     * appliedAt  **参数解释**：  应用日期。  **参数范围**：  不涉及。
-    * errorCode  **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * errorMessage  **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
             'targetName' => 'getTargetName',
             'applyResult' => 'getApplyResult',
             'appliedAt' => 'getAppliedAt',
-            'errorCode' => 'getErrorCode'
+            'errorMessage' => 'getErrorMessage'
     ];
 
     /**
@@ -191,7 +191,7 @@ class ApplyHistory implements ModelInterface, ArrayAccess
         $this->container['targetName'] = isset($data['targetName']) ? $data['targetName'] : null;
         $this->container['applyResult'] = isset($data['applyResult']) ? $data['applyResult'] : null;
         $this->container['appliedAt'] = isset($data['appliedAt']) ? $data['appliedAt'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
     }
 
     /**
@@ -220,11 +220,11 @@ class ApplyHistory implements ModelInterface, ArrayAccess
             if (!is_null($this->container['applyResult']) && (mb_strlen($this->container['applyResult']) < 1)) {
                 $invalidProperties[] = "invalid value for 'applyResult', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['errorMessage']) && (mb_strlen($this->container['errorMessage']) > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'errorMessage', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) < 1)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['errorMessage']) && (mb_strlen($this->container['errorMessage']) < 1)) {
+                $invalidProperties[] = "invalid value for 'errorMessage', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -337,26 +337,26 @@ class ApplyHistory implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * Gets errorMessage
+    *  **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @return string|null
     */
-    public function getErrorCode()
+    public function getErrorMessage()
     {
-        return $this->container['errorCode'];
+        return $this->container['errorMessage'];
     }
 
     /**
-    * Sets errorCode
+    * Sets errorMessage
     *
-    * @param string|null $errorCode **参数解释**：  错误码。  **参数范围**：  不涉及。
+    * @param string|null $errorMessage **参数解释**：  实例应用参数组的报错信息，若实例应用参数组成功则返回空。  **取值范围**：  不涉及。
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setErrorMessage($errorMessage)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['errorMessage'] = $errorMessage;
         return $this;
     }
 

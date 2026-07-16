@@ -22,21 +22,25 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * confs  配置文件列表。
+    * totalSize  totalSize
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'confs' => '\HuaweiCloud\SDK\Css\V1\Model\Confs[]'
+            'confs' => '\HuaweiCloud\SDK\Css\V1\Model\Confs[]',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * confs  配置文件列表。
+    * totalSize  totalSize
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'confs' => null
+        'confs' => null,
+        'totalSize' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * confs  配置文件列表。
+    * totalSize  totalSize
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'confs' => 'confs'
+            'confs' => 'confs',
+            'totalSize' => 'totalSize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * confs  配置文件列表。
+    * totalSize  totalSize
     *
     * @var string[]
     */
     protected static $setters = [
-            'confs' => 'setConfs'
+            'confs' => 'setConfs',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * confs  配置文件列表。
+    * totalSize  totalSize
     *
     * @var string[]
     */
     protected static $getters = [
-            'confs' => 'getConfs'
+            'confs' => 'getConfs',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['confs'] = isset($data['confs']) ? $data['confs'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     public function setConfs($confs)
     {
         $this->container['confs'] = $confs;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  totalSize
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize totalSize
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

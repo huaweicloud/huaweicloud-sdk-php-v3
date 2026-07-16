@@ -269,6 +269,9 @@ class User implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['accessKey'] === null) {
+            $invalidProperties[] = "'accessKey' can't be null";
+        }
         if ($this->container['secretKey'] === null) {
             $invalidProperties[] = "'secretKey' can't be null";
         }
@@ -306,7 +309,7 @@ class User implements ModelInterface, ArrayAccess
     * Gets accessKey
     *  **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string
     */
     public function getAccessKey()
     {
@@ -316,7 +319,7 @@ class User implements ModelInterface, ArrayAccess
     /**
     * Sets accessKey
     *
-    * @param string|null $accessKey **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string $accessKey **参数解释**： 用户名。 **约束限制**： 只能英文字母开头，且由英文字母、数字、中划线、下划线组成，长度为7~64个字符。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

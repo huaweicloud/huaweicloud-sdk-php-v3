@@ -31,6 +31,7 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
     * nickName  **参数解释：** 昵称 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 租户名称。 **取值范围：** 不涉及。
     * approverComment  **参数解释：** 审核备注。 **取值范围：** 不涉及。
+    * hasPermission  **参数解释：** 是否有相关权限。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
             'avatarUrl' => 'string',
             'nickName' => 'string',
             'tenantName' => 'string',
-            'approverComment' => 'string'
+            'approverComment' => 'string',
+            'hasPermission' => 'bool'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
     * nickName  **参数解释：** 昵称 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 租户名称。 **取值范围：** 不涉及。
     * approverComment  **参数解释：** 审核备注。 **取值范围：** 不涉及。
+    * hasPermission  **参数解释：** 是否有相关权限。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
         'avatarUrl' => null,
         'nickName' => null,
         'tenantName' => null,
-        'approverComment' => null
+        'approverComment' => null,
+        'hasPermission' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
     * nickName  **参数解释：** 昵称 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 租户名称。 **取值范围：** 不涉及。
     * approverComment  **参数解释：** 审核备注。 **取值范围：** 不涉及。
+    * hasPermission  **参数解释：** 是否有相关权限。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
             'avatarUrl' => 'avatar_url',
             'nickName' => 'nick_name',
             'tenantName' => 'tenant_name',
-            'approverComment' => 'approver_comment'
+            'approverComment' => 'approver_comment',
+            'hasPermission' => 'has_permission'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
     * nickName  **参数解释：** 昵称 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 租户名称。 **取值范围：** 不涉及。
     * approverComment  **参数解释：** 审核备注。 **取值范围：** 不涉及。
+    * hasPermission  **参数解释：** 是否有相关权限。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
             'avatarUrl' => 'setAvatarUrl',
             'nickName' => 'setNickName',
             'tenantName' => 'setTenantName',
-            'approverComment' => 'setApproverComment'
+            'approverComment' => 'setApproverComment',
+            'hasPermission' => 'setHasPermission'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
     * nickName  **参数解释：** 昵称 **取值范围：** 不涉及。
     * tenantName  **参数解释：** 租户名称。 **取值范围：** 不涉及。
     * approverComment  **参数解释：** 审核备注。 **取值范围：** 不涉及。
+    * hasPermission  **参数解释：** 是否有相关权限。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
             'avatarUrl' => 'getAvatarUrl',
             'nickName' => 'getNickName',
             'tenantName' => 'getTenantName',
-            'approverComment' => 'getApproverComment'
+            'approverComment' => 'getApproverComment',
+            'hasPermission' => 'getHasPermission'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
         $this->container['tenantName'] = isset($data['tenantName']) ? $data['tenantName'] : null;
         $this->container['approverComment'] = isset($data['approverComment']) ? $data['approverComment'] : null;
+        $this->container['hasPermission'] = isset($data['hasPermission']) ? $data['hasPermission'] : null;
     }
 
     /**
@@ -561,6 +572,30 @@ class ApproverBasicDto implements ModelInterface, ArrayAccess
     public function setApproverComment($approverComment)
     {
         $this->container['approverComment'] = $approverComment;
+        return $this;
+    }
+
+    /**
+    * Gets hasPermission
+    *  **参数解释：** 是否有相关权限。
+    *
+    * @return bool|null
+    */
+    public function getHasPermission()
+    {
+        return $this->container['hasPermission'];
+    }
+
+    /**
+    * Sets hasPermission
+    *
+    * @param bool|null $hasPermission **参数解释：** 是否有相关权限。
+    *
+    * @return $this
+    */
+    public function setHasPermission($hasPermission)
+    {
+        $this->container['hasPermission'] = $hasPermission;
         return $this;
     }
 

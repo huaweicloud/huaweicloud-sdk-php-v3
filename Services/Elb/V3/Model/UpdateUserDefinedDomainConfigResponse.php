@@ -22,21 +22,25 @@ class UpdateUserDefinedDomainConfigResponse implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'loadbalancer' => '\HuaweiCloud\SDK\Elb\V3\Model\DnsConfigResponseBody'
+            'loadbalancer' => '\HuaweiCloud\SDK\Elb\V3\Model\DnsConfigResponseBody',
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'loadbalancer' => null
+        'loadbalancer' => null,
+        'requestId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdateUserDefinedDomainConfigResponse implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * loadbalancer  loadbalancer
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'loadbalancer' => 'loadbalancer'
+            'loadbalancer' => 'loadbalancer',
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancer  loadbalancer
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $setters = [
-            'loadbalancer' => 'setLoadbalancer'
+            'loadbalancer' => 'setLoadbalancer',
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancer  loadbalancer
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     *
     * @var string[]
     */
     protected static $getters = [
-            'loadbalancer' => 'getLoadbalancer'
+            'loadbalancer' => 'getLoadbalancer',
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdateUserDefinedDomainConfigResponse implements ModelInterface, ArrayAcce
     public function __construct(array $data = null)
     {
         $this->container['loadbalancer'] = isset($data['loadbalancer']) ? $data['loadbalancer'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class UpdateUserDefinedDomainConfigResponse implements ModelInterface, ArrayAcce
     public function setLoadbalancer($loadbalancer)
     {
         $this->container['loadbalancer'] = $loadbalancer;
+        return $this;
+    }
+
+    /**
+    * Gets requestId
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 

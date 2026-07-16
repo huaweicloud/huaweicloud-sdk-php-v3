@@ -23,31 +23,32 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息。
-    * qualifiedName  扩展名。
+    * qualifiedName  对象标识。
     * guid  guid，自动生成。
     * code  编码。
     * alias  别名。
     * status  status
+    * permission  permission
     * newBiz  newBiz
-    * dataOwner  数据所有者。
+    * dataOwner  数据owner。
     * dataOwnerList  数据所有者集合。
     * dataDepartment  数据域。
     * path  路径信息。
     * level  层级信息。
     * ordinal  序号。
-    * owner  责任人。
+    * owner  责任人
     * parentId  父目录ID，木有则为根目录，ID字符串。
     * swapOrderId  同层排序，目标节点的ID，ID字符串。
     * id  主题ID，ID字符串。
-    * qualifiedId  认证ID，自动生成。
-    * fromPublic  是否来自公共层。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * qualifiedId  认证ID，自动生成
+    * createBy  创建人
+    * updateBy  更新人
+    * createTime  创建时间
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程，前端不传。
     * children  下层子目录，只读。
     * selfDefinedFields  属性自定义项。
+    * relations  关系
     *
     * @var string[]
     */
@@ -60,6 +61,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'code' => 'string',
             'alias' => 'string',
             'status' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizStatusEnum',
+            'permission' => 'int',
             'newBiz' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizVersionManageVO',
             'dataOwner' => 'string',
             'dataOwnerList' => 'string',
@@ -68,18 +70,18 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'level' => 'int',
             'ordinal' => 'int',
             'owner' => 'string',
-            'parentId' => 'string',
-            'swapOrderId' => 'string',
+            'parentId' => 'int',
+            'swapOrderId' => 'int',
             'id' => 'string',
             'qualifiedId' => 'string',
-            'fromPublic' => 'bool',
             'createBy' => 'string',
             'updateBy' => 'string',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime',
             'childrenNum' => 'int',
             'children' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogVO[]',
-            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]'
+            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]',
+            'relations' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RelationVO[]'
     ];
 
     /**
@@ -87,31 +89,32 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息。
-    * qualifiedName  扩展名。
+    * qualifiedName  对象标识。
     * guid  guid，自动生成。
     * code  编码。
     * alias  别名。
     * status  status
+    * permission  permission
     * newBiz  newBiz
-    * dataOwner  数据所有者。
+    * dataOwner  数据owner。
     * dataOwnerList  数据所有者集合。
     * dataDepartment  数据域。
     * path  路径信息。
     * level  层级信息。
     * ordinal  序号。
-    * owner  责任人。
+    * owner  责任人
     * parentId  父目录ID，木有则为根目录，ID字符串。
     * swapOrderId  同层排序，目标节点的ID，ID字符串。
     * id  主题ID，ID字符串。
-    * qualifiedId  认证ID，自动生成。
-    * fromPublic  是否来自公共层。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * qualifiedId  认证ID，自动生成
+    * createBy  创建人
+    * updateBy  更新人
+    * createTime  创建时间
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程，前端不传。
     * children  下层子目录，只读。
     * selfDefinedFields  属性自定义项。
+    * relations  关系
     *
     * @var string[]
     */
@@ -124,6 +127,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
         'code' => null,
         'alias' => null,
         'status' => null,
+        'permission' => null,
         'newBiz' => null,
         'dataOwner' => null,
         'dataOwnerList' => null,
@@ -132,18 +136,18 @@ class CatalogVO implements ModelInterface, ArrayAccess
         'level' => null,
         'ordinal' => null,
         'owner' => null,
-        'parentId' => null,
-        'swapOrderId' => null,
+        'parentId' => 'int64',
+        'swapOrderId' => 'int64',
         'id' => null,
         'qualifiedId' => null,
-        'fromPublic' => null,
         'createBy' => null,
         'updateBy' => null,
         'createTime' => 'date-time',
         'updateTime' => 'date-time',
         'childrenNum' => null,
         'children' => null,
-        'selfDefinedFields' => null
+        'selfDefinedFields' => null,
+        'relations' => null
     ];
 
     /**
@@ -172,31 +176,32 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息。
-    * qualifiedName  扩展名。
+    * qualifiedName  对象标识。
     * guid  guid，自动生成。
     * code  编码。
     * alias  别名。
     * status  status
+    * permission  permission
     * newBiz  newBiz
-    * dataOwner  数据所有者。
+    * dataOwner  数据owner。
     * dataOwnerList  数据所有者集合。
     * dataDepartment  数据域。
     * path  路径信息。
     * level  层级信息。
     * ordinal  序号。
-    * owner  责任人。
+    * owner  责任人
     * parentId  父目录ID，木有则为根目录，ID字符串。
     * swapOrderId  同层排序，目标节点的ID，ID字符串。
     * id  主题ID，ID字符串。
-    * qualifiedId  认证ID，自动生成。
-    * fromPublic  是否来自公共层。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * qualifiedId  认证ID，自动生成
+    * createBy  创建人
+    * updateBy  更新人
+    * createTime  创建时间
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程，前端不传。
     * children  下层子目录，只读。
     * selfDefinedFields  属性自定义项。
+    * relations  关系
     *
     * @var string[]
     */
@@ -209,6 +214,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'code' => 'code',
             'alias' => 'alias',
             'status' => 'status',
+            'permission' => 'permission',
             'newBiz' => 'new_biz',
             'dataOwner' => 'data_owner',
             'dataOwnerList' => 'data_owner_list',
@@ -221,14 +227,14 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'swapOrderId' => 'swap_order_id',
             'id' => 'id',
             'qualifiedId' => 'qualified_id',
-            'fromPublic' => 'from_public',
             'createBy' => 'create_by',
             'updateBy' => 'update_by',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'childrenNum' => 'children_num',
             'children' => 'children',
-            'selfDefinedFields' => 'self_defined_fields'
+            'selfDefinedFields' => 'self_defined_fields',
+            'relations' => 'relations'
     ];
 
     /**
@@ -236,31 +242,32 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息。
-    * qualifiedName  扩展名。
+    * qualifiedName  对象标识。
     * guid  guid，自动生成。
     * code  编码。
     * alias  别名。
     * status  status
+    * permission  permission
     * newBiz  newBiz
-    * dataOwner  数据所有者。
+    * dataOwner  数据owner。
     * dataOwnerList  数据所有者集合。
     * dataDepartment  数据域。
     * path  路径信息。
     * level  层级信息。
     * ordinal  序号。
-    * owner  责任人。
+    * owner  责任人
     * parentId  父目录ID，木有则为根目录，ID字符串。
     * swapOrderId  同层排序，目标节点的ID，ID字符串。
     * id  主题ID，ID字符串。
-    * qualifiedId  认证ID，自动生成。
-    * fromPublic  是否来自公共层。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * qualifiedId  认证ID，自动生成
+    * createBy  创建人
+    * updateBy  更新人
+    * createTime  创建时间
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程，前端不传。
     * children  下层子目录，只读。
     * selfDefinedFields  属性自定义项。
+    * relations  关系
     *
     * @var string[]
     */
@@ -273,6 +280,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'code' => 'setCode',
             'alias' => 'setAlias',
             'status' => 'setStatus',
+            'permission' => 'setPermission',
             'newBiz' => 'setNewBiz',
             'dataOwner' => 'setDataOwner',
             'dataOwnerList' => 'setDataOwnerList',
@@ -285,14 +293,14 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'swapOrderId' => 'setSwapOrderId',
             'id' => 'setId',
             'qualifiedId' => 'setQualifiedId',
-            'fromPublic' => 'setFromPublic',
             'createBy' => 'setCreateBy',
             'updateBy' => 'setUpdateBy',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'childrenNum' => 'setChildrenNum',
             'children' => 'setChildren',
-            'selfDefinedFields' => 'setSelfDefinedFields'
+            'selfDefinedFields' => 'setSelfDefinedFields',
+            'relations' => 'setRelations'
     ];
 
     /**
@@ -300,31 +308,32 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息。
-    * qualifiedName  扩展名。
+    * qualifiedName  对象标识。
     * guid  guid，自动生成。
     * code  编码。
     * alias  别名。
     * status  status
+    * permission  permission
     * newBiz  newBiz
-    * dataOwner  数据所有者。
+    * dataOwner  数据owner。
     * dataOwnerList  数据所有者集合。
     * dataDepartment  数据域。
     * path  路径信息。
     * level  层级信息。
     * ordinal  序号。
-    * owner  责任人。
+    * owner  责任人
     * parentId  父目录ID，木有则为根目录，ID字符串。
     * swapOrderId  同层排序，目标节点的ID，ID字符串。
     * id  主题ID，ID字符串。
-    * qualifiedId  认证ID，自动生成。
-    * fromPublic  是否来自公共层。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * qualifiedId  认证ID，自动生成
+    * createBy  创建人
+    * updateBy  更新人
+    * createTime  创建时间
     * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程，前端不传。
     * children  下层子目录，只读。
     * selfDefinedFields  属性自定义项。
+    * relations  关系
     *
     * @var string[]
     */
@@ -337,6 +346,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'code' => 'getCode',
             'alias' => 'getAlias',
             'status' => 'getStatus',
+            'permission' => 'getPermission',
             'newBiz' => 'getNewBiz',
             'dataOwner' => 'getDataOwner',
             'dataOwnerList' => 'getDataOwnerList',
@@ -349,14 +359,14 @@ class CatalogVO implements ModelInterface, ArrayAccess
             'swapOrderId' => 'getSwapOrderId',
             'id' => 'getId',
             'qualifiedId' => 'getQualifiedId',
-            'fromPublic' => 'getFromPublic',
             'createBy' => 'getCreateBy',
             'updateBy' => 'getUpdateBy',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'childrenNum' => 'getChildrenNum',
             'children' => 'getChildren',
-            'selfDefinedFields' => 'getSelfDefinedFields'
+            'selfDefinedFields' => 'getSelfDefinedFields',
+            'relations' => 'getRelations'
     ];
 
     /**
@@ -425,6 +435,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['newBiz'] = isset($data['newBiz']) ? $data['newBiz'] : null;
         $this->container['dataOwner'] = isset($data['dataOwner']) ? $data['dataOwner'] : null;
         $this->container['dataOwnerList'] = isset($data['dataOwnerList']) ? $data['dataOwnerList'] : null;
@@ -437,7 +448,6 @@ class CatalogVO implements ModelInterface, ArrayAccess
         $this->container['swapOrderId'] = isset($data['swapOrderId']) ? $data['swapOrderId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['qualifiedId'] = isset($data['qualifiedId']) ? $data['qualifiedId'] : null;
-        $this->container['fromPublic'] = isset($data['fromPublic']) ? $data['fromPublic'] : null;
         $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
         $this->container['updateBy'] = isset($data['updateBy']) ? $data['updateBy'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -445,6 +455,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
         $this->container['childrenNum'] = isset($data['childrenNum']) ? $data['childrenNum'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
         $this->container['selfDefinedFields'] = isset($data['selfDefinedFields']) ? $data['selfDefinedFields'] : null;
+        $this->container['relations'] = isset($data['relations']) ? $data['relations'] : null;
     }
 
     /**
@@ -455,15 +466,54 @@ class CatalogVO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['nameCh']) && (mb_strlen($this->container['nameCh']) > 600)) {
-                $invalidProperties[] = "invalid value for 'nameCh', the character length must be smaller than or equal to 600.";
+        if ($this->container['nameCh'] === null) {
+            $invalidProperties[] = "'nameCh' can't be null";
+        }
+            if ((mb_strlen($this->container['nameCh']) > 200)) {
+                $invalidProperties[] = "invalid value for 'nameCh', the character length must be smaller than or equal to 200.";
             }
-            if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) > 600)) {
-                $invalidProperties[] = "invalid value for 'nameEn', the character length must be smaller than or equal to 600.";
+            if (!preg_match("/^[^\\\\<>]*$/", $this->container['nameCh'])) {
+                $invalidProperties[] = "invalid value for 'nameCh', must be conform to the pattern /^[^\\\\<>]*$/.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 2000)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 2000.";
+            if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) > 100)) {
+                $invalidProperties[] = "invalid value for 'nameEn', the character length must be smaller than or equal to 100.";
             }
+            if (!is_null($this->container['nameEn']) && !preg_match("/^[a-zA-Z\\d\\s&\\(\\)_\\-]*$/", $this->container['nameEn'])) {
+                $invalidProperties[] = "invalid value for 'nameEn', must be conform to the pattern /^[a-zA-Z\\d\\s&\\(\\)_\\-]*$/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 200)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['description']) && !preg_match("/^[^\\\\\\\\]*$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^\\\\\\\\]*$/.";
+            }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 100)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['code']) && !preg_match("/^[a-zA-Z\\d\\s&\\(\\)_\\-]*$/", $this->container['code'])) {
+                $invalidProperties[] = "invalid value for 'code', must be conform to the pattern /^[a-zA-Z\\d\\s&\\(\\)_\\-]*$/.";
+            }
+            if (!is_null($this->container['alias']) && (mb_strlen($this->container['alias']) > 200)) {
+                $invalidProperties[] = "invalid value for 'alias', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['alias']) && !preg_match("/^[^\\\\<>]*$/", $this->container['alias'])) {
+                $invalidProperties[] = "invalid value for 'alias', must be conform to the pattern /^[^\\\\<>]*$/.";
+            }
+            if (!is_null($this->container['dataOwner']) && (mb_strlen($this->container['dataOwner']) > 256)) {
+                $invalidProperties[] = "invalid value for 'dataOwner', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['dataOwner']) && !preg_match("/^[^\\\\<>]*$/", $this->container['dataOwner'])) {
+                $invalidProperties[] = "invalid value for 'dataOwner', must be conform to the pattern /^[^\\\\<>]*$/.";
+            }
+        if ($this->container['dataOwnerList'] === null) {
+            $invalidProperties[] = "'dataOwnerList' can't be null";
+        }
+            if (!preg_match("/^[^\\\\<>]*$/", $this->container['dataOwnerList'])) {
+                $invalidProperties[] = "invalid value for 'dataOwnerList', must be conform to the pattern /^[^\\\\<>]*$/.";
+            }
+        if ($this->container['level'] === null) {
+            $invalidProperties[] = "'level' can't be null";
+        }
             if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) > 4000)) {
                 $invalidProperties[] = "invalid value for 'owner', the character length must be smaller than or equal to 4000.";
             }
@@ -485,7 +535,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * Gets nameCh
     *  中文名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getNameCh()
     {
@@ -495,7 +545,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string|null $nameCh 中文名称。
+    * @param string $nameCh 中文名称。
     *
     * @return $this
     */
@@ -555,7 +605,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualifiedName
-    *  扩展名。
+    *  对象标识。
     *
     * @return string|null
     */
@@ -567,7 +617,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualifiedName
     *
-    * @param string|null $qualifiedName 扩展名。
+    * @param string|null $qualifiedName 对象标识。
     *
     * @return $this
     */
@@ -674,6 +724,30 @@ class CatalogVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets permission
+    *  permission
+    *
+    * @return int|null
+    */
+    public function getPermission()
+    {
+        return $this->container['permission'];
+    }
+
+    /**
+    * Sets permission
+    *
+    * @param int|null $permission permission
+    *
+    * @return $this
+    */
+    public function setPermission($permission)
+    {
+        $this->container['permission'] = $permission;
+        return $this;
+    }
+
+    /**
     * Gets newBiz
     *  newBiz
     *
@@ -699,7 +773,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataOwner
-    *  数据所有者。
+    *  数据owner。
     *
     * @return string|null
     */
@@ -711,7 +785,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataOwner
     *
-    * @param string|null $dataOwner 数据所有者。
+    * @param string|null $dataOwner 数据owner。
     *
     * @return $this
     */
@@ -725,7 +799,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * Gets dataOwnerList
     *  数据所有者集合。
     *
-    * @return string|null
+    * @return string
     */
     public function getDataOwnerList()
     {
@@ -735,7 +809,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataOwnerList
     *
-    * @param string|null $dataOwnerList 数据所有者集合。
+    * @param string $dataOwnerList 数据所有者集合。
     *
     * @return $this
     */
@@ -797,7 +871,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * Gets level
     *  层级信息。
     *
-    * @return int|null
+    * @return int
     */
     public function getLevel()
     {
@@ -807,7 +881,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param int|null $level 层级信息。
+    * @param int $level 层级信息。
     *
     * @return $this
     */
@@ -843,7 +917,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  责任人。
+    *  责任人
     *
     * @return string|null
     */
@@ -855,7 +929,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 责任人。
+    * @param string|null $owner 责任人
     *
     * @return $this
     */
@@ -869,7 +943,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * Gets parentId
     *  父目录ID，木有则为根目录，ID字符串。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getParentId()
     {
@@ -879,7 +953,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 父目录ID，木有则为根目录，ID字符串。
+    * @param int|null $parentId 父目录ID，木有则为根目录，ID字符串。
     *
     * @return $this
     */
@@ -893,7 +967,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     * Gets swapOrderId
     *  同层排序，目标节点的ID，ID字符串。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getSwapOrderId()
     {
@@ -903,7 +977,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets swapOrderId
     *
-    * @param string|null $swapOrderId 同层排序，目标节点的ID，ID字符串。
+    * @param int|null $swapOrderId 同层排序，目标节点的ID，ID字符串。
     *
     * @return $this
     */
@@ -939,7 +1013,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualifiedId
-    *  认证ID，自动生成。
+    *  认证ID，自动生成
     *
     * @return string|null
     */
@@ -951,7 +1025,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualifiedId
     *
-    * @param string|null $qualifiedId 认证ID，自动生成。
+    * @param string|null $qualifiedId 认证ID，自动生成
     *
     * @return $this
     */
@@ -962,32 +1036,8 @@ class CatalogVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets fromPublic
-    *  是否来自公共层。
-    *
-    * @return bool|null
-    */
-    public function getFromPublic()
-    {
-        return $this->container['fromPublic'];
-    }
-
-    /**
-    * Sets fromPublic
-    *
-    * @param bool|null $fromPublic 是否来自公共层。
-    *
-    * @return $this
-    */
-    public function setFromPublic($fromPublic)
-    {
-        $this->container['fromPublic'] = $fromPublic;
-        return $this;
-    }
-
-    /**
     * Gets createBy
-    *  创建人。
+    *  创建人
     *
     * @return string|null
     */
@@ -999,7 +1049,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人。
+    * @param string|null $createBy 创建人
     *
     * @return $this
     */
@@ -1011,7 +1061,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人。
+    *  更新人
     *
     * @return string|null
     */
@@ -1023,7 +1073,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人。
+    * @param string|null $updateBy 更新人
     *
     * @return $this
     */
@@ -1035,7 +1085,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间
     *
     * @return \DateTime|null
     */
@@ -1047,7 +1097,7 @@ class CatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间
     *
     * @return $this
     */
@@ -1150,6 +1200,30 @@ class CatalogVO implements ModelInterface, ArrayAccess
     public function setSelfDefinedFields($selfDefinedFields)
     {
         $this->container['selfDefinedFields'] = $selfDefinedFields;
+        return $this;
+    }
+
+    /**
+    * Gets relations
+    *  关系
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RelationVO[]|null
+    */
+    public function getRelations()
+    {
+        return $this->container['relations'];
+    }
+
+    /**
+    * Sets relations
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RelationVO[]|null $relations 关系
+    *
+    * @return $this
+    */
+    public function setRelations($relations)
+    {
+        $this->container['relations'] = $relations;
         return $this;
     }
 

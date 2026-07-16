@@ -40,6 +40,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * anyPortEnable  **参数解释**：后端是否开启全端口转发。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false 不开启，true 开启。  **取值范围**：不涉及
     * connectionDrain  connectionDrain
     * quicCidHashStrategy  quicCidHashStrategy
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
             'healthmonitor' => '\HuaweiCloud\SDK\Elb\V3\Model\MasterSlaveHealthMonitor',
             'anyPortEnable' => 'bool',
             'connectionDrain' => '\HuaweiCloud\SDK\Elb\V3\Model\ConnectionDrain',
-            'quicCidHashStrategy' => '\HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy'
+            'quicCidHashStrategy' => '\HuaweiCloud\SDK\Elb\V3\Model\QuicCidHashStrategy',
+            'publicBorderGroup' => 'string'
     ];
 
     /**
@@ -88,6 +90,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * anyPortEnable  **参数解释**：后端是否开启全端口转发。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false 不开启，true 开启。  **取值范围**：不涉及
     * connectionDrain  connectionDrain
     * quicCidHashStrategy  quicCidHashStrategy
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
         'healthmonitor' => null,
         'anyPortEnable' => null,
         'connectionDrain' => null,
-        'quicCidHashStrategy' => null
+        'quicCidHashStrategy' => null,
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * anyPortEnable  **参数解释**：后端是否开启全端口转发。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false 不开启，true 开启。  **取值范围**：不涉及
     * connectionDrain  connectionDrain
     * quicCidHashStrategy  quicCidHashStrategy
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
             'healthmonitor' => 'healthmonitor',
             'anyPortEnable' => 'any_port_enable',
             'connectionDrain' => 'connection_drain',
-            'quicCidHashStrategy' => 'quic_cid_hash_strategy'
+            'quicCidHashStrategy' => 'quic_cid_hash_strategy',
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
@@ -205,6 +211,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * anyPortEnable  **参数解释**：后端是否开启全端口转发。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false 不开启，true 开启。  **取值范围**：不涉及
     * connectionDrain  connectionDrain
     * quicCidHashStrategy  quicCidHashStrategy
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
             'healthmonitor' => 'setHealthmonitor',
             'anyPortEnable' => 'setAnyPortEnable',
             'connectionDrain' => 'setConnectionDrain',
-            'quicCidHashStrategy' => 'setQuicCidHashStrategy'
+            'quicCidHashStrategy' => 'setQuicCidHashStrategy',
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
@@ -253,6 +261,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     * anyPortEnable  **参数解释**：后端是否开启全端口转发。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false 不开启，true 开启。  **取值范围**：不涉及
     * connectionDrain  connectionDrain
     * quicCidHashStrategy  quicCidHashStrategy
+    * publicBorderGroup  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
             'healthmonitor' => 'getHealthmonitor',
             'anyPortEnable' => 'getAnyPortEnable',
             'connectionDrain' => 'getConnectionDrain',
-            'quicCidHashStrategy' => 'getQuicCidHashStrategy'
+            'quicCidHashStrategy' => 'getQuicCidHashStrategy',
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -357,6 +367,7 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
         $this->container['anyPortEnable'] = isset($data['anyPortEnable']) ? $data['anyPortEnable'] : null;
         $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
         $this->container['quicCidHashStrategy'] = isset($data['quicCidHashStrategy']) ? $data['quicCidHashStrategy'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -909,6 +920,30 @@ class MasterSlavePool implements ModelInterface, ArrayAccess
     public function setQuicCidHashStrategy($quicCidHashStrategy)
     {
         $this->container['quicCidHashStrategy'] = $quicCidHashStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup **参数解释**：公网边界组。  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  [不支持该字段，请勿使用。](tag:hws_eu,hws_eu_wb,hws_test,fcs,dt,hcso_dt,ctc,cmcc,tm,sbc,hk_sbc,hk_tm,hk_vdf,srg,g42,hk_g42)
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

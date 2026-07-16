@@ -22,6 +22,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * versions  **参数解释**： 支持的产品版本类型。
     * products  **参数解释**： 产品规格的详细信息。
     *
@@ -29,6 +32,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'engine' => 'string',
+            'total' => 'int',
+            'nextOffset' => 'int',
+            'previousOffset' => 'int',
             'versions' => 'string[]',
             'products' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListEngineProductsEntity[]'
     ];
@@ -36,6 +42,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * versions  **参数解释**： 支持的产品版本类型。
     * products  **参数解释**： 产品规格的详细信息。
     *
@@ -43,6 +52,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'engine' => null,
+        'total' => 'int32',
+        'nextOffset' => 'int32',
+        'previousOffset' => 'int32',
         'versions' => null,
         'products' => null
     ];
@@ -71,6 +83,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * versions  **参数解释**： 支持的产品版本类型。
     * products  **参数解释**： 产品规格的详细信息。
     *
@@ -78,6 +93,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'engine' => 'engine',
+            'total' => 'total',
+            'nextOffset' => 'next_offset',
+            'previousOffset' => 'previous_offset',
             'versions' => 'versions',
             'products' => 'products'
     ];
@@ -85,6 +103,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * versions  **参数解释**： 支持的产品版本类型。
     * products  **参数解释**： 产品规格的详细信息。
     *
@@ -92,6 +113,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'engine' => 'setEngine',
+            'total' => 'setTotal',
+            'nextOffset' => 'setNextOffset',
+            'previousOffset' => 'setPreviousOffset',
             'versions' => 'setVersions',
             'products' => 'setProducts'
     ];
@@ -99,6 +123,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * engine  **参数解释**： 消息引擎类型。 **取值范围**： rabbitmq：RabbitMQ引擎。
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * versions  **参数解释**： 支持的产品版本类型。
     * products  **参数解释**： 产品规格的详细信息。
     *
@@ -106,6 +133,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'engine' => 'getEngine',
+            'total' => 'getTotal',
+            'nextOffset' => 'getNextOffset',
+            'previousOffset' => 'getPreviousOffset',
             'versions' => 'getVersions',
             'products' => 'getProducts'
     ];
@@ -169,6 +199,9 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['engine'] = isset($data['engine']) ? $data['engine'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['nextOffset'] = isset($data['nextOffset']) ? $data['nextOffset'] : null;
+        $this->container['previousOffset'] = isset($data['previousOffset']) ? $data['previousOffset'] : null;
         $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
         $this->container['products'] = isset($data['products']) ? $data['products'] : null;
     }
@@ -216,6 +249,78 @@ class ListEngineProductsResponse implements ModelInterface, ArrayAccess
     public function setEngine($engine)
     {
         $this->container['engine'] = $engine;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets nextOffset
+    *  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getNextOffset()
+    {
+        return $this->container['nextOffset'];
+    }
+
+    /**
+    * Sets nextOffset
+    *
+    * @param int|null $nextOffset **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNextOffset($nextOffset)
+    {
+        $this->container['nextOffset'] = $nextOffset;
+        return $this;
+    }
+
+    /**
+    * Gets previousOffset
+    *  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getPreviousOffset()
+    {
+        return $this->container['previousOffset'];
+    }
+
+    /**
+    * Sets previousOffset
+    *
+    * @param int|null $previousOffset **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPreviousOffset($previousOffset)
+    {
+        $this->container['previousOffset'] = $previousOffset;
         return $this;
     }
 

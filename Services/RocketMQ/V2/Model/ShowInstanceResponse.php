@@ -59,6 +59,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
@@ -133,6 +135,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageType' => 'string',
             'extendTimes' => 'int',
             'ipv6Enable' => 'bool',
+            'ipv6BrokerAddress' => 'string',
+            'ipv6NamesrvAddress' => 'string',
             'supportFeatures' => 'string',
             'diskEncrypted' => 'bool',
             'cesVersion' => 'string',
@@ -207,6 +211,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
@@ -281,6 +287,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'storageType' => null,
         'extendTimes' => 'int64',
         'ipv6Enable' => null,
+        'ipv6BrokerAddress' => null,
+        'ipv6NamesrvAddress' => null,
         'supportFeatures' => null,
         'diskEncrypted' => null,
         'cesVersion' => null,
@@ -376,6 +384,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
@@ -450,6 +460,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageType' => 'storage_type',
             'extendTimes' => 'extend_times',
             'ipv6Enable' => 'ipv6_enable',
+            'ipv6BrokerAddress' => 'ipv6_broker_address',
+            'ipv6NamesrvAddress' => 'ipv6_namesrv_address',
             'supportFeatures' => 'support_features',
             'diskEncrypted' => 'disk_encrypted',
             'cesVersion' => 'ces_version',
@@ -524,6 +536,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
@@ -598,6 +612,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageType' => 'setStorageType',
             'extendTimes' => 'setExtendTimes',
             'ipv6Enable' => 'setIpv6Enable',
+            'ipv6BrokerAddress' => 'setIpv6BrokerAddress',
+            'ipv6NamesrvAddress' => 'setIpv6NamesrvAddress',
             'supportFeatures' => 'setSupportFeatures',
             'diskEncrypted' => 'setDiskEncrypted',
             'cesVersion' => 'setCesVersion',
@@ -672,6 +688,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * storageType  **参数解释**： 存储类型。 **约束限制**： 不涉及。 **取值范围**： - hec：[华为云存储类型。](tag:hws,hws_hk)[存储类型。](tag:ctc,hws_eu,ocb,g42,hk_g42,tm,sbc,hk_sbc,cmcc,hk_tm,hcs,fcs,dt,srg,ax,srg,hcs_oemout) [- dss：专属云存储类型。](tag:hws,hws_hk) **默认取值**： 不涉及。
     * extendTimes  **参数解释**： 扩展时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
+    * ipv6BrokerAddress  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * ipv6NamesrvAddress  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * supportFeatures  **参数解释**： 实例支持的特性功能。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：未开启。 **默认取值**： 不涉及。
     * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
     * cesVersion  **参数解释**： 云监控版本。 **约束限制**： 不涉及。 **取值范围**： - true：开启。 - false：不开启。 **默认取值**： 不涉及。
@@ -746,6 +764,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'storageType' => 'getStorageType',
             'extendTimes' => 'getExtendTimes',
             'ipv6Enable' => 'getIpv6Enable',
+            'ipv6BrokerAddress' => 'getIpv6BrokerAddress',
+            'ipv6NamesrvAddress' => 'getIpv6NamesrvAddress',
             'supportFeatures' => 'getSupportFeatures',
             'diskEncrypted' => 'getDiskEncrypted',
             'cesVersion' => 'getCesVersion',
@@ -876,6 +896,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['storageType'] = isset($data['storageType']) ? $data['storageType'] : null;
         $this->container['extendTimes'] = isset($data['extendTimes']) ? $data['extendTimes'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
+        $this->container['ipv6BrokerAddress'] = isset($data['ipv6BrokerAddress']) ? $data['ipv6BrokerAddress'] : null;
+        $this->container['ipv6NamesrvAddress'] = isset($data['ipv6NamesrvAddress']) ? $data['ipv6NamesrvAddress'] : null;
         $this->container['supportFeatures'] = isset($data['supportFeatures']) ? $data['supportFeatures'] : null;
         $this->container['diskEncrypted'] = isset($data['diskEncrypted']) ? $data['diskEncrypted'] : null;
         $this->container['cesVersion'] = isset($data['cesVersion']) ? $data['cesVersion'] : null;
@@ -1841,6 +1863,54 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setIpv6Enable($ipv6Enable)
     {
         $this->container['ipv6Enable'] = $ipv6Enable;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6BrokerAddress
+    *  **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIpv6BrokerAddress()
+    {
+        return $this->container['ipv6BrokerAddress'];
+    }
+
+    /**
+    * Sets ipv6BrokerAddress
+    *
+    * @param string|null $ipv6BrokerAddress **参数解释**： 业务数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpv6BrokerAddress($ipv6BrokerAddress)
+    {
+        $this->container['ipv6BrokerAddress'] = $ipv6BrokerAddress;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6NamesrvAddress
+    *  **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIpv6NamesrvAddress()
+    {
+        return $this->container['ipv6NamesrvAddress'];
+    }
+
+    /**
+    * Sets ipv6NamesrvAddress
+    *
+    * @param string|null $ipv6NamesrvAddress **参数解释**： 元数据IPv6的地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIpv6NamesrvAddress($ipv6NamesrvAddress)
+    {
+        $this->container['ipv6NamesrvAddress'] = $ipv6NamesrvAddress;
         return $this;
     }
 

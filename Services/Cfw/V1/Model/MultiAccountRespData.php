@@ -22,24 +22,28 @@ class MultiAccountRespData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**： 防火墙ID **取值范围**： 不涉及
     * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * trustServiceStatus  **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'trustServiceStatus' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**： 防火墙ID **取值范围**： 不涉及
     * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * trustServiceStatus  **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'name' => null
+        'name' => null,
+        'trustServiceStatus' => 'int32'
     ];
 
     /**
@@ -67,36 +71,42 @@ class MultiAccountRespData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  **参数解释**： 防火墙ID **取值范围**： 不涉及
     * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * trustServiceStatus  **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'name' => 'name'
+            'name' => 'name',
+            'trustServiceStatus' => 'trust_service_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**： 防火墙ID **取值范围**： 不涉及
     * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * trustServiceStatus  **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'name' => 'setName'
+            'name' => 'setName',
+            'trustServiceStatus' => 'setTrustServiceStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**： 防火墙ID **取值范围**： 不涉及
     * name  **参数解释**： 防火墙名称 **取值范围**： 不涉及
+    * trustServiceStatus  **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'name' => 'getName'
+            'name' => 'getName',
+            'trustServiceStatus' => 'getTrustServiceStatus'
     ];
 
     /**
@@ -159,6 +169,7 @@ class MultiAccountRespData implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['trustServiceStatus'] = isset($data['trustServiceStatus']) ? $data['trustServiceStatus'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class MultiAccountRespData implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets trustServiceStatus
+    *  **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
+    *
+    * @return int|null
+    */
+    public function getTrustServiceStatus()
+    {
+        return $this->container['trustServiceStatus'];
+    }
+
+    /**
+    * Sets trustServiceStatus
+    *
+    * @param int|null $trustServiceStatus **参数解释**： 云防火墙可信服务状态 **取值范围**： 1 已开启
+    *
+    * @return $this
+    */
+    public function setTrustServiceStatus($trustServiceStatus)
+    {
+        $this->container['trustServiceStatus'] = $trustServiceStatus;
         return $this;
     }
 

@@ -24,8 +24,8 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -46,8 +46,8 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -89,8 +89,8 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -111,8 +111,8 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -133,8 +133,8 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * enterpriseProjectIdAndTags  **参数解释** 资源匹配规则为组合匹配时传入的参数，已废弃。 **约束限制** type为COMB时传入，不超过50个条件。
     * extendRelationIds  **参数解释** 匹配企业项目时关联的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -354,7 +354,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    *  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null
     */
@@ -366,7 +366,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets productNames
-    *  **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    *  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class PutResourceGroupReq implements ModelInterface, ArrayAccess
     /**
     * Sets productNames
     *
-    * @param string|null $productNames **参数解释** 资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
+    * @param string|null $productNames **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级为云产品时的云产品名称 **约束限制** 不涉及。 **取值范围** 一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。不超过10240个字符。 **默认取值** 不涉及。
     *
     * @return $this
     */

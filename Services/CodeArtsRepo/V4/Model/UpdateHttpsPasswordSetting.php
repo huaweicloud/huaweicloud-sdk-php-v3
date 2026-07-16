@@ -158,10 +158,13 @@ class UpdateHttpsPasswordSetting implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['httpsCloneIamAuth']) && (mb_strlen($this->container['httpsCloneIamAuth']) > 1000)) {
+        if ($this->container['httpsCloneIamAuth'] === null) {
+            $invalidProperties[] = "'httpsCloneIamAuth' can't be null";
+        }
+            if ((mb_strlen($this->container['httpsCloneIamAuth']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'httpsCloneIamAuth', the character length must be smaller than or equal to 1000.";
             }
-            if (!is_null($this->container['httpsCloneIamAuth']) && (mb_strlen($this->container['httpsCloneIamAuth']) < 1)) {
+            if ((mb_strlen($this->container['httpsCloneIamAuth']) < 1)) {
                 $invalidProperties[] = "invalid value for 'httpsCloneIamAuth', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -182,7 +185,7 @@ class UpdateHttpsPasswordSetting implements ModelInterface, ArrayAccess
     * Gets httpsCloneIamAuth
     *  **参数解释：** 是否用https的认证方式 true,false。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
-    * @return string|null
+    * @return string
     */
     public function getHttpsCloneIamAuth()
     {
@@ -192,7 +195,7 @@ class UpdateHttpsPasswordSetting implements ModelInterface, ArrayAccess
     /**
     * Sets httpsCloneIamAuth
     *
-    * @param string|null $httpsCloneIamAuth **参数解释：** 是否用https的认证方式 true,false。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param string $httpsCloneIamAuth **参数解释：** 是否用https的认证方式 true,false。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return $this
     */

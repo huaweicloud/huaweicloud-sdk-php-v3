@@ -5168,9 +5168,6 @@ class CfwAsyncClient extends Client
         if ($localVarParams['domainName'] !== null) {
             $queryParams['domain_name'] = $localVarParams['domainName'];
         }
-        if ($localVarParams['objectId'] !== null) {
-            $queryParams['object_id'] = $localVarParams['objectId'];
-        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

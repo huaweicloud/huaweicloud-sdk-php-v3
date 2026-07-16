@@ -20,34 +20,34 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'publicDnsRecordSetTtl' => 'int',
             'privateDomainNameEnable' => 'bool',
+            'privateDnsRecordSetTtl' => 'int',
             'publicDomainNameEnable' => 'bool',
-            'privateDnsRecordSetTtl' => 'int'
+            'publicDnsRecordSetTtl' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'publicDnsRecordSetTtl' => 'int32',
         'privateDomainNameEnable' => null,
+        'privateDnsRecordSetTtl' => 'int32',
         'publicDomainNameEnable' => null,
-        'privateDnsRecordSetTtl' => 'int32'
+        'publicDnsRecordSetTtl' => 'int32'
     ];
 
     /**
@@ -73,50 +73,50 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'publicDnsRecordSetTtl' => 'public_dns_record_set_ttl',
             'privateDomainNameEnable' => 'private_domain_name_enable',
+            'privateDnsRecordSetTtl' => 'private_dns_record_set_ttl',
             'publicDomainNameEnable' => 'public_domain_name_enable',
-            'privateDnsRecordSetTtl' => 'private_dns_record_set_ttl'
+            'publicDnsRecordSetTtl' => 'public_dns_record_set_ttl'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
     protected static $setters = [
-            'publicDnsRecordSetTtl' => 'setPublicDnsRecordSetTtl',
             'privateDomainNameEnable' => 'setPrivateDomainNameEnable',
+            'privateDnsRecordSetTtl' => 'setPrivateDnsRecordSetTtl',
             'publicDomainNameEnable' => 'setPublicDomainNameEnable',
-            'privateDnsRecordSetTtl' => 'setPrivateDnsRecordSetTtl'
+            'publicDnsRecordSetTtl' => 'setPublicDnsRecordSetTtl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
     protected static $getters = [
-            'publicDnsRecordSetTtl' => 'getPublicDnsRecordSetTtl',
             'privateDomainNameEnable' => 'getPrivateDomainNameEnable',
+            'privateDnsRecordSetTtl' => 'getPrivateDnsRecordSetTtl',
             'publicDomainNameEnable' => 'getPublicDomainNameEnable',
-            'privateDnsRecordSetTtl' => 'getPrivateDnsRecordSetTtl'
+            'publicDnsRecordSetTtl' => 'getPublicDnsRecordSetTtl'
     ];
 
     /**
@@ -177,10 +177,10 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['publicDnsRecordSetTtl'] = isset($data['publicDnsRecordSetTtl']) ? $data['publicDnsRecordSetTtl'] : null;
         $this->container['privateDomainNameEnable'] = isset($data['privateDomainNameEnable']) ? $data['privateDomainNameEnable'] : null;
-        $this->container['publicDomainNameEnable'] = isset($data['publicDomainNameEnable']) ? $data['publicDomainNameEnable'] : null;
         $this->container['privateDnsRecordSetTtl'] = isset($data['privateDnsRecordSetTtl']) ? $data['privateDnsRecordSetTtl'] : null;
+        $this->container['publicDomainNameEnable'] = isset($data['publicDomainNameEnable']) ? $data['publicDomainNameEnable'] : null;
+        $this->container['publicDnsRecordSetTtl'] = isset($data['publicDnsRecordSetTtl']) ? $data['publicDnsRecordSetTtl'] : null;
     }
 
     /**
@@ -206,32 +206,8 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets publicDnsRecordSetTtl
-    *  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    *
-    * @return int|null
-    */
-    public function getPublicDnsRecordSetTtl()
-    {
-        return $this->container['publicDnsRecordSetTtl'];
-    }
-
-    /**
-    * Sets publicDnsRecordSetTtl
-    *
-    * @param int|null $publicDnsRecordSetTtl **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    *
-    * @return $this
-    */
-    public function setPublicDnsRecordSetTtl($publicDnsRecordSetTtl)
-    {
-        $this->container['publicDnsRecordSetTtl'] = $publicDnsRecordSetTtl;
-        return $this;
-    }
-
-    /**
     * Gets privateDomainNameEnable
-    *  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    *  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
     *
     * @return bool|null
     */
@@ -243,7 +219,7 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateDomainNameEnable
     *
-    * @param bool|null $privateDomainNameEnable **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * @param bool|null $privateDomainNameEnable **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启私网域名解析。 - false：关闭私网域名解析。  **默认取值**：false
     *
     * @return $this
     */
@@ -254,32 +230,8 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets publicDomainNameEnable
-    *  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    *
-    * @return bool|null
-    */
-    public function getPublicDomainNameEnable()
-    {
-        return $this->container['publicDomainNameEnable'];
-    }
-
-    /**
-    * Sets publicDomainNameEnable
-    *
-    * @param bool|null $publicDomainNameEnable **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    *
-    * @return $this
-    */
-    public function setPublicDomainNameEnable($publicDomainNameEnable)
-    {
-        $this->container['publicDomainNameEnable'] = $publicDomainNameEnable;
-        return $this;
-    }
-
-    /**
     * Gets privateDnsRecordSetTtl
-    *  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    *  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @return int|null
     */
@@ -291,13 +243,61 @@ class SystemDefaultDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateDnsRecordSetTtl
     *
-    * @param int|null $privateDnsRecordSetTtl **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * @param int|null $privateDnsRecordSetTtl **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @return $this
     */
     public function setPrivateDnsRecordSetTtl($privateDnsRecordSetTtl)
     {
         $this->container['privateDnsRecordSetTtl'] = $privateDnsRecordSetTtl;
+        return $this;
+    }
+
+    /**
+    * Gets publicDomainNameEnable
+    *  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    *
+    * @return bool|null
+    */
+    public function getPublicDomainNameEnable()
+    {
+        return $this->container['publicDomainNameEnable'];
+    }
+
+    /**
+    * Sets publicDomainNameEnable
+    *
+    * @param bool|null $publicDomainNameEnable **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    *
+    * @return $this
+    */
+    public function setPublicDomainNameEnable($publicDomainNameEnable)
+    {
+        $this->container['publicDomainNameEnable'] = $publicDomainNameEnable;
+        return $this;
+    }
+
+    /**
+    * Gets publicDnsRecordSetTtl
+    *  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    *
+    * @return int|null
+    */
+    public function getPublicDnsRecordSetTtl()
+    {
+        return $this->container['publicDnsRecordSetTtl'];
+    }
+
+    /**
+    * Sets publicDnsRecordSetTtl
+    *
+    * @param int|null $publicDnsRecordSetTtl **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    *
+    * @return $this
+    */
+    public function setPublicDnsRecordSetTtl($publicDnsRecordSetTtl)
+    {
+        $this->container['publicDnsRecordSetTtl'] = $publicDnsRecordSetTtl;
         return $this;
     }
 

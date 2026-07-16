@@ -151,6 +151,68 @@ class OmsClient extends Client
     }
 
     /**
+     * 检查url来源列表文件格式
+     *
+     * 检查url来源列表文件格式是否有效
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkUrlSourceListFileFormat($request)
+    {
+        return $this->checkUrlSourceListFileFormatWithHttpInfo($request);
+    }
+
+    public function checkUrlSourceListFileFormatWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/objectstorage/buckets/url-source-list-file';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Oms\V2\Model\CheckUrlSourceListFileFormatResponse',
+            $requestType='\HuaweiCloud\SDK\Oms\V2\Model\CheckUrlSourceListFileFormatRequest');
+    }
+
+    /**
      * 创建同步事件
      *
      * 源端有对象需要进行同步时，调用该接口创建一个同步事件，系统将根据同步事件中包含的对象名称进行同步(目前只支持华北-北京四、华东-上海一地区)。
@@ -840,6 +902,9 @@ class OmsClient extends Client
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
+        if ($localVarParams['taskName'] !== null) {
+            $queryParams['task_name'] = $localVarParams['taskName'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -1494,7 +1559,7 @@ class OmsClient extends Client
     /**
      * 启动同步任务
      *
-     * 同步任务停止后，调用该接口以启动同步任务(目前只支持华北-北京四、华东-上海一地区)。
+     * 同步任务停止后，调用该接口以启动同步任务(目前只支持华北-北京四、华东-上海一和西南-贵阳一地区)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1689,7 +1754,7 @@ class OmsClient extends Client
     /**
      * 暂停同步任务
      *
-     * 当同步任务处于同步中时，调用该接口停止任务(目前只支持华北-北京四、华东-上海一地区)。
+     * 当同步任务处于同步中时，调用该接口停止任务(目前只支持华北-北京四、华东-上海一和西南-贵阳一地区)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

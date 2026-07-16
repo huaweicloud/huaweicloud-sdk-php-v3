@@ -22,21 +22,25 @@ class ListActionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * actions  操作记录列表。
+    * totalSize  操作记录总条数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'actions' => '\HuaweiCloud\SDK\Css\V1\Model\Actions[]'
+            'actions' => '\HuaweiCloud\SDK\Css\V1\Model\Actions[]',
+            'totalSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * actions  操作记录列表。
+    * totalSize  操作记录总条数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'actions' => null
+        'actions' => null,
+        'totalSize' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListActionsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * actions  操作记录列表。
+    * totalSize  操作记录总条数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'actions' => 'actions'
+            'actions' => 'actions',
+            'totalSize' => 'totalSize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * actions  操作记录列表。
+    * totalSize  操作记录总条数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'actions' => 'setActions'
+            'actions' => 'setActions',
+            'totalSize' => 'setTotalSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * actions  操作记录列表。
+    * totalSize  操作记录总条数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'actions' => 'getActions'
+            'actions' => 'getActions',
+            'totalSize' => 'getTotalSize'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListActionsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
+        $this->container['totalSize'] = isset($data['totalSize']) ? $data['totalSize'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListActionsResponse implements ModelInterface, ArrayAccess
     public function setActions($actions)
     {
         $this->container['actions'] = $actions;
+        return $this;
+    }
+
+    /**
+    * Gets totalSize
+    *  操作记录总条数。
+    *
+    * @return int|null
+    */
+    public function getTotalSize()
+    {
+        return $this->container['totalSize'];
+    }
+
+    /**
+    * Sets totalSize
+    *
+    * @param int|null $totalSize 操作记录总条数。
+    *
+    * @return $this
+    */
+    public function setTotalSize($totalSize)
+    {
+        $this->container['totalSize'] = $totalSize;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  子任务ID
-    * type  子任务类型
-    * status  状态
+    * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     * creationTimestamp  任务创建时间
     * updateTimestamp  任务更新时间
     * message  信息
@@ -41,8 +41,8 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  子任务ID
-    * type  子任务类型
-    * status  状态
+    * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     * creationTimestamp  任务创建时间
     * updateTimestamp  任务更新时间
     * message  信息
@@ -82,8 +82,8 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  子任务ID
-    * type  子任务类型
-    * status  状态
+    * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     * creationTimestamp  任务创建时间
     * updateTimestamp  任务更新时间
     * message  信息
@@ -102,8 +102,8 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  子任务ID
-    * type  子任务类型
-    * status  状态
+    * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     * creationTimestamp  任务创建时间
     * updateTimestamp  任务更新时间
     * message  信息
@@ -122,8 +122,8 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  子任务ID
-    * type  子任务类型
-    * status  状态
+    * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
+    * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     * creationTimestamp  任务创建时间
     * updateTimestamp  任务更新时间
     * message  信息
@@ -253,7 +253,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  子任务类型
+    *  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 子任务类型
+    * @param string|null $type **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
     *
     * @return $this
     */

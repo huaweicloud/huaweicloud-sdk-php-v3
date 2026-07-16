@@ -21,20 +21,30 @@ class UpdateFlavorByTypeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * orderId  **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * changeMode  **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'orderId' => 'string',
+            'clusterId' => 'string',
+            'changeMode' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * orderId  **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * changeMode  **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'orderId' => null,
+        'clusterId' => null,
+        'changeMode' => 'int32'
     ];
 
     /**
@@ -60,29 +70,44 @@ class UpdateFlavorByTypeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * orderId  **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * changeMode  **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'orderId' => 'orderId',
+            'clusterId' => 'clusterId',
+            'changeMode' => 'changeMode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * orderId  **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * changeMode  **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
     *
     * @var string[]
     */
     protected static $setters = [
+            'orderId' => 'setOrderId',
+            'clusterId' => 'setClusterId',
+            'changeMode' => 'setChangeMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * orderId  **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * clusterId  **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    * changeMode  **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
     *
     * @var string[]
     */
     protected static $getters = [
+            'orderId' => 'getOrderId',
+            'clusterId' => 'getClusterId',
+            'changeMode' => 'getChangeMode'
     ];
 
     /**
@@ -143,6 +168,9 @@ class UpdateFlavorByTypeResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['changeMode'] = isset($data['changeMode']) ? $data['changeMode'] : null;
     }
 
     /**
@@ -165,6 +193,78 @@ class UpdateFlavorByTypeResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets orderId
+    *  **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId **参数解释**： 变更订单ID，仅包周期集群返回。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
+    }
+
+    /**
+    * Gets clusterId
+    *  **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getClusterId()
+    {
+        return $this->container['clusterId'];
+    }
+
+    /**
+    * Sets clusterId
+    *
+    * @param string|null $clusterId **参数解释**： 集群ID，仅包周期集群返回。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setClusterId($clusterId)
+    {
+        $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets changeMode
+    *  **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
+    *
+    * @return int|null
+    */
+    public function getChangeMode()
+    {
+        return $this->container['changeMode'];
+    }
+
+    /**
+    * Sets changeMode
+    *
+    * @param int|null $changeMode **参数解释**： 变更模式，仅包周期集群返回。 **取值范围**： - 10：升配。 - 30：降配。
+    *
+    * @return $this
+    */
+    public function setChangeMode($changeMode)
+    {
+        $this->container['changeMode'] = $changeMode;
+        return $this;
     }
 
     /**

@@ -26,6 +26,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
     * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
             'ipAddress' => 'string',
             'ipv6Enable' => 'bool',
             'ipv6Bandwidth' => '\HuaweiCloud\SDK\Ecs\V2\Model\PostPaidServerIpv6Bandwidth',
-            'allowedAddressPairs' => '\HuaweiCloud\SDK\Ecs\V2\Model\CreateServerNicAllowedAddressPairs[]'
+            'allowedAddressPairs' => '\HuaweiCloud\SDK\Ecs\V2\Model\CreateServerNicAllowedAddressPairs[]',
+            'efiEnable' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
     * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
         'ipAddress' => null,
         'ipv6Enable' => null,
         'ipv6Bandwidth' => null,
-        'allowedAddressPairs' => null
+        'allowedAddressPairs' => null,
+        'efiEnable' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
     * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
             'ipAddress' => 'ip_address',
             'ipv6Enable' => 'ipv6_enable',
             'ipv6Bandwidth' => 'ipv6_bandwidth',
-            'allowedAddressPairs' => 'allowed_address_pairs'
+            'allowedAddressPairs' => 'allowed_address_pairs',
+            'efiEnable' => 'efi_enable'
     ];
 
     /**
@@ -107,6 +113,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
     * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
             'ipAddress' => 'setIpAddress',
             'ipv6Enable' => 'setIpv6Enable',
             'ipv6Bandwidth' => 'setIpv6Bandwidth',
-            'allowedAddressPairs' => 'setAllowedAddressPairs'
+            'allowedAddressPairs' => 'setAllowedAddressPairs',
+            'efiEnable' => 'setEfiEnable'
     ];
 
     /**
@@ -127,6 +135,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     * ipv6Enable  是否支持ipv6。  取值为true时，标识此网卡支持ipv6。
     * ipv6Bandwidth  ipv6Bandwidth
     * allowedAddressPairs  IP/Mac对列表， 约束：IP地址不允许为 “0.0.0.0/0” 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目地址检查开关 被绑定的云服务器网卡allowed_address_pairs填“1.1.1.1/0”
+    * efiEnable  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
             'ipAddress' => 'getIpAddress',
             'ipv6Enable' => 'getIpv6Enable',
             'ipv6Bandwidth' => 'getIpv6Bandwidth',
-            'allowedAddressPairs' => 'getAllowedAddressPairs'
+            'allowedAddressPairs' => 'getAllowedAddressPairs',
+            'efiEnable' => 'getEfiEnable'
     ];
 
     /**
@@ -203,6 +213,7 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6Bandwidth'] = isset($data['ipv6Bandwidth']) ? $data['ipv6Bandwidth'] : null;
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
+        $this->container['efiEnable'] = isset($data['efiEnable']) ? $data['efiEnable'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class PostPaidServerNic implements ModelInterface, ArrayAccess
     public function setAllowedAddressPairs($allowedAddressPairs)
     {
         $this->container['allowedAddressPairs'] = $allowedAddressPairs;
+        return $this;
+    }
+
+    /**
+    * Gets efiEnable
+    *  使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
+    *
+    * @return bool|null
+    */
+    public function getEfiEnable()
+    {
+        return $this->container['efiEnable'];
+    }
+
+    /**
+    * Sets efiEnable
+    *
+    * @param bool|null $efiEnable 使能网卡的vRoCE能力，只支持从网卡，主网卡不支持。
+    *
+    * @return $this
+    */
+    public function setEfiEnable($efiEnable)
+    {
+        $this->container['efiEnable'] = $efiEnable;
         return $this;
     }
 

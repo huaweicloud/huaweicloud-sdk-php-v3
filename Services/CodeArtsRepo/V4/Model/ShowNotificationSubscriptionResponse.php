@@ -23,9 +23,9 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库ID。
     * enabled  **参数解释：** 开启通知。
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * webhookConfig  webhookConfig
-    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阀值（百分比）。
+    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阈值（百分比）。
     * subscriptEvents  **参数解释：** 通知事件。
     *
     * @var string[]
@@ -43,9 +43,9 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     * Array of property to format mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库ID。
     * enabled  **参数解释：** 开启通知。
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * webhookConfig  webhookConfig
-    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阀值（百分比）。
+    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阈值（百分比）。
     * subscriptEvents  **参数解释：** 通知事件。
     *
     * @var string[]
@@ -84,9 +84,9 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     * and the value is the original name
     * repositoryId  **参数解释：** 仓库ID。
     * enabled  **参数解释：** 开启通知。
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * webhookConfig  webhookConfig
-    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阀值（百分比）。
+    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阈值（百分比）。
     * subscriptEvents  **参数解释：** 通知事件。
     *
     * @var string[]
@@ -104,9 +104,9 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     * Array of attributes to setter functions (for deserialization of responses)
     * repositoryId  **参数解释：** 仓库ID。
     * enabled  **参数解释：** 开启通知。
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * webhookConfig  webhookConfig
-    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阀值（百分比）。
+    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阈值（百分比）。
     * subscriptEvents  **参数解释：** 通知事件。
     *
     * @var string[]
@@ -124,9 +124,9 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     * Array of attributes to getter functions (for serialization of requests)
     * repositoryId  **参数解释：** 仓库ID。
     * enabled  **参数解释：** 开启通知。
-    * configSource  **参数解释：** 配资源。
+    * configSource  **参数解释：** 配置源。
     * webhookConfig  webhookConfig
-    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阀值（百分比）。
+    * waringRepoUsageRate  **参数解释：** 仓库使用量告警阈值（百分比）。
     * subscriptEvents  **参数解释：** 通知事件。
     *
     * @var string[]
@@ -332,7 +332,7 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets configSource
-    *  **参数解释：** 配资源。
+    *  **参数解释：** 配置源。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     /**
     * Sets configSource
     *
-    * @param string|null $configSource **参数解释：** 配资源。
+    * @param string|null $configSource **参数解释：** 配置源。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets waringRepoUsageRate
-    *  **参数解释：** 仓库使用量告警阀值（百分比）。
+    *  **参数解释：** 仓库使用量告警阈值（百分比）。
     *
     * @return int|null
     */
@@ -392,7 +392,7 @@ class ShowNotificationSubscriptionResponse implements ModelInterface, ArrayAcces
     /**
     * Sets waringRepoUsageRate
     *
-    * @param int|null $waringRepoUsageRate **参数解释：** 仓库使用量告警阀值（百分比）。
+    * @param int|null $waringRepoUsageRate **参数解释：** 仓库使用量告警阈值（百分比）。
     *
     * @return $this
     */

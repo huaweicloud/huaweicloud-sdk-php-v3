@@ -20,7 +20,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    * name  **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     * size  **参数解释**：带宽大小。  **约束限制**： - 当id字段为null时，size是必须的。 - 调整带宽时的最小单位会根据带宽范围不同存在差异。   + 小于等于300Mbit/s: 默认最小单位为1Mbit/s。   + 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。   + 大于1000Mbit/s: 默认最小单位为500Mbit/s。  **取值范围**：默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  **默认取值**：不涉及
     * chargeMode  **参数解释**：计费模式。  **约束限制**：当id字段为null时，charge_mode是必须的。 [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,hcso_dt)  **取值范围**：  - bandwidth：按带宽计费。  - traffic： 按流量计费。  **默认取值**：不涉及
     * shareType  **参数解释**：带宽类型。  **约束限制**： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。  **取值范围**： - PER：独享带宽。 - WHOLE：共享带宽。  **默认取值**：不涉及
@@ -40,7 +40,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    * name  **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     * size  **参数解释**：带宽大小。  **约束限制**： - 当id字段为null时，size是必须的。 - 调整带宽时的最小单位会根据带宽范围不同存在差异。   + 小于等于300Mbit/s: 默认最小单位为1Mbit/s。   + 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。   + 大于1000Mbit/s: 默认最小单位为500Mbit/s。  **取值范围**：默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  **默认取值**：不涉及
     * chargeMode  **参数解释**：计费模式。  **约束限制**：当id字段为null时，charge_mode是必须的。 [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,hcso_dt)  **取值范围**：  - bandwidth：按带宽计费。  - traffic： 按流量计费。  **默认取值**：不涉及
     * shareType  **参数解释**：带宽类型。  **约束限制**： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。  **取值范围**： - PER：独享带宽。 - WHOLE：共享带宽。  **默认取值**：不涉及
@@ -81,7 +81,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    * name  **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     * size  **参数解释**：带宽大小。  **约束限制**： - 当id字段为null时，size是必须的。 - 调整带宽时的最小单位会根据带宽范围不同存在差异。   + 小于等于300Mbit/s: 默认最小单位为1Mbit/s。   + 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。   + 大于1000Mbit/s: 默认最小单位为500Mbit/s。  **取值范围**：默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  **默认取值**：不涉及
     * chargeMode  **参数解释**：计费模式。  **约束限制**：当id字段为null时，charge_mode是必须的。 [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,hcso_dt)  **取值范围**：  - bandwidth：按带宽计费。  - traffic： 按流量计费。  **默认取值**：不涉及
     * shareType  **参数解释**：带宽类型。  **约束限制**： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。  **取值范围**： - PER：独享带宽。 - WHOLE：共享带宽。  **默认取值**：不涉及
@@ -101,7 +101,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    * name  **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     * size  **参数解释**：带宽大小。  **约束限制**： - 当id字段为null时，size是必须的。 - 调整带宽时的最小单位会根据带宽范围不同存在差异。   + 小于等于300Mbit/s: 默认最小单位为1Mbit/s。   + 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。   + 大于1000Mbit/s: 默认最小单位为500Mbit/s。  **取值范围**：默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  **默认取值**：不涉及
     * chargeMode  **参数解释**：计费模式。  **约束限制**：当id字段为null时，charge_mode是必须的。 [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,hcso_dt)  **取值范围**：  - bandwidth：按带宽计费。  - traffic： 按流量计费。  **默认取值**：不涉及
     * shareType  **参数解释**：带宽类型。  **约束限制**： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。  **取值范围**： - PER：独享带宽。 - WHOLE：共享带宽。  **默认取值**：不涉及
@@ -121,7 +121,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    * name  **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     * size  **参数解释**：带宽大小。  **约束限制**： - 当id字段为null时，size是必须的。 - 调整带宽时的最小单位会根据带宽范围不同存在差异。   + 小于等于300Mbit/s: 默认最小单位为1Mbit/s。   + 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。   + 大于1000Mbit/s: 默认最小单位为500Mbit/s。  **取值范围**：默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  **默认取值**：不涉及
     * chargeMode  **参数解释**：计费模式。  **约束限制**：当id字段为null时，charge_mode是必须的。 [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,hcso_dt)  **取值范围**：  - bandwidth：按带宽计费。  - traffic： 按流量计费。  **默认取值**：不涉及
     * shareType  **参数解释**：带宽类型。  **约束限制**： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。  **取值范围**： - PER：独享带宽。 - WHOLE：共享带宽。  **默认取值**：不涉及
@@ -308,7 +308,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    *  **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**：带宽名称。  **约束限制**： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
+    * @param string|null $name **参数解释**：带宽名称。  **约束限制**：  - 如果选用的是独享带宽，share_type是PER，该字段是必选。 - 如果使用的是共享带宽，参数bandwidth对象的id有值，该字段被忽略。  **取值范围**：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  **默认取值**：不涉及
     *
     * @return $this
     */

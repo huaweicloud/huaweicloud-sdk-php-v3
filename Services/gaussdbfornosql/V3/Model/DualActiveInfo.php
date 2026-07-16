@@ -20,10 +20,13 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * role  双活角色。
-    * status  双活状态。
-    * destinationInstanceId  双活对端实例id。
-    * destinationRegion  双活对端region。
+    * role  **参数解释：** 双活角色。 **取值范围：** 不涉及。
+    * status  **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
+    * destinationInstanceId  **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
+    * destinationRegion  **参数解释：** 双活对端region。 **取值范围：** 不涉及。
+    * destinationInstanceName  **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    * destinationInstanceNodeNum  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    * destinationInstanceSpecCode  **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -31,15 +34,21 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
             'role' => 'string',
             'status' => 'string',
             'destinationInstanceId' => 'string',
-            'destinationRegion' => 'string'
+            'destinationRegion' => 'string',
+            'destinationInstanceName' => 'string',
+            'destinationInstanceNodeNum' => 'string',
+            'destinationInstanceSpecCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * role  双活角色。
-    * status  双活状态。
-    * destinationInstanceId  双活对端实例id。
-    * destinationRegion  双活对端region。
+    * role  **参数解释：** 双活角色。 **取值范围：** 不涉及。
+    * status  **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
+    * destinationInstanceId  **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
+    * destinationRegion  **参数解释：** 双活对端region。 **取值范围：** 不涉及。
+    * destinationInstanceName  **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    * destinationInstanceNodeNum  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    * destinationInstanceSpecCode  **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +56,10 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
         'role' => null,
         'status' => null,
         'destinationInstanceId' => null,
-        'destinationRegion' => null
+        'destinationRegion' => null,
+        'destinationInstanceName' => null,
+        'destinationInstanceNodeNum' => null,
+        'destinationInstanceSpecCode' => null
     ];
 
     /**
@@ -73,10 +85,13 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * role  双活角色。
-    * status  双活状态。
-    * destinationInstanceId  双活对端实例id。
-    * destinationRegion  双活对端region。
+    * role  **参数解释：** 双活角色。 **取值范围：** 不涉及。
+    * status  **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
+    * destinationInstanceId  **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
+    * destinationRegion  **参数解释：** 双活对端region。 **取值范围：** 不涉及。
+    * destinationInstanceName  **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    * destinationInstanceNodeNum  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    * destinationInstanceSpecCode  **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -84,15 +99,21 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
             'role' => 'role',
             'status' => 'status',
             'destinationInstanceId' => 'destination_instance_id',
-            'destinationRegion' => 'destination_region'
+            'destinationRegion' => 'destination_region',
+            'destinationInstanceName' => 'destination_instance_name',
+            'destinationInstanceNodeNum' => 'destination_instance_node_num',
+            'destinationInstanceSpecCode' => 'destination_instance_spec_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * role  双活角色。
-    * status  双活状态。
-    * destinationInstanceId  双活对端实例id。
-    * destinationRegion  双活对端region。
+    * role  **参数解释：** 双活角色。 **取值范围：** 不涉及。
+    * status  **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
+    * destinationInstanceId  **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
+    * destinationRegion  **参数解释：** 双活对端region。 **取值范围：** 不涉及。
+    * destinationInstanceName  **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    * destinationInstanceNodeNum  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    * destinationInstanceSpecCode  **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -100,15 +121,21 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
             'role' => 'setRole',
             'status' => 'setStatus',
             'destinationInstanceId' => 'setDestinationInstanceId',
-            'destinationRegion' => 'setDestinationRegion'
+            'destinationRegion' => 'setDestinationRegion',
+            'destinationInstanceName' => 'setDestinationInstanceName',
+            'destinationInstanceNodeNum' => 'setDestinationInstanceNodeNum',
+            'destinationInstanceSpecCode' => 'setDestinationInstanceSpecCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * role  双活角色。
-    * status  双活状态。
-    * destinationInstanceId  双活对端实例id。
-    * destinationRegion  双活对端region。
+    * role  **参数解释：** 双活角色。 **取值范围：** 不涉及。
+    * status  **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
+    * destinationInstanceId  **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
+    * destinationRegion  **参数解释：** 双活对端region。 **取值范围：** 不涉及。
+    * destinationInstanceName  **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    * destinationInstanceNodeNum  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    * destinationInstanceSpecCode  **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +143,10 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
             'role' => 'getRole',
             'status' => 'getStatus',
             'destinationInstanceId' => 'getDestinationInstanceId',
-            'destinationRegion' => 'getDestinationRegion'
+            'destinationRegion' => 'getDestinationRegion',
+            'destinationInstanceName' => 'getDestinationInstanceName',
+            'destinationInstanceNodeNum' => 'getDestinationInstanceNodeNum',
+            'destinationInstanceSpecCode' => 'getDestinationInstanceSpecCode'
     ];
 
     /**
@@ -181,6 +211,9 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['destinationInstanceId'] = isset($data['destinationInstanceId']) ? $data['destinationInstanceId'] : null;
         $this->container['destinationRegion'] = isset($data['destinationRegion']) ? $data['destinationRegion'] : null;
+        $this->container['destinationInstanceName'] = isset($data['destinationInstanceName']) ? $data['destinationInstanceName'] : null;
+        $this->container['destinationInstanceNodeNum'] = isset($data['destinationInstanceNodeNum']) ? $data['destinationInstanceNodeNum'] : null;
+        $this->container['destinationInstanceSpecCode'] = isset($data['destinationInstanceSpecCode']) ? $data['destinationInstanceSpecCode'] : null;
     }
 
     /**
@@ -207,7 +240,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets role
-    *  双活角色。
+    *  **参数解释：** 双活角色。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +252,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param string|null $role 双活角色。
+    * @param string|null $role **参数解释：** 双活角色。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +264,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  双活状态。
+    *  **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
     *
     * @return string|null
     */
@@ -243,7 +276,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 双活状态。
+    * @param string|null $status **参数解释：** 双活状态。 **取值范围：** - normal：表示双活状态正常。 - abnormal：表示双活状态异常。
     *
     * @return $this
     */
@@ -255,7 +288,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationInstanceId
-    *  双活对端实例id。
+    *  **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +300,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets destinationInstanceId
     *
-    * @param string|null $destinationInstanceId 双活对端实例id。
+    * @param string|null $destinationInstanceId **参数解释：** 双活对端实例id。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +312,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationRegion
-    *  双活对端region。
+    *  **参数解释：** 双活对端region。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -291,13 +324,85 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets destinationRegion
     *
-    * @param string|null $destinationRegion 双活对端region。
+    * @param string|null $destinationRegion **参数解释：** 双活对端region。 **取值范围：** 不涉及。
     *
     * @return $this
     */
     public function setDestinationRegion($destinationRegion)
     {
         $this->container['destinationRegion'] = $destinationRegion;
+        return $this;
+    }
+
+    /**
+    * Gets destinationInstanceName
+    *  **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDestinationInstanceName()
+    {
+        return $this->container['destinationInstanceName'];
+    }
+
+    /**
+    * Sets destinationInstanceName
+    *
+    * @param string|null $destinationInstanceName **参数解释：** 双活对端实例名称。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDestinationInstanceName($destinationInstanceName)
+    {
+        $this->container['destinationInstanceName'] = $destinationInstanceName;
+        return $this;
+    }
+
+    /**
+    * Gets destinationInstanceNodeNum
+    *  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDestinationInstanceNodeNum()
+    {
+        return $this->container['destinationInstanceNodeNum'];
+    }
+
+    /**
+    * Sets destinationInstanceNodeNum
+    *
+    * @param string|null $destinationInstanceNodeNum **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDestinationInstanceNodeNum($destinationInstanceNodeNum)
+    {
+        $this->container['destinationInstanceNodeNum'] = $destinationInstanceNodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets destinationInstanceSpecCode
+    *  **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDestinationInstanceSpecCode()
+    {
+        return $this->container['destinationInstanceSpecCode'];
+    }
+
+    /**
+    * Sets destinationInstanceSpecCode
+    *
+    * @param string|null $destinationInstanceSpecCode **参数解释：** 双活对端实例规格。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDestinationInstanceSpecCode($destinationInstanceSpecCode)
+    {
+        $this->container['destinationInstanceSpecCode'] = $destinationInstanceSpecCode;
         return $this;
     }
 

@@ -40,7 +40,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
-    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
@@ -112,7 +112,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
-    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
@@ -205,7 +205,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
-    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
@@ -277,7 +277,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
-    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
@@ -349,7 +349,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     * backupKey  **参数解释**： 快照的key，在其它快照中会用到。 **取值范围**： 不涉及。
     * priorBackupKey  **参数解释**： 增量快照，使用的前一个快照backup_key。 **取值范围**： 不涉及。
     * baseBackupKey  **参数解释**： 对应全量快照backup_key。 **取值范围**： 不涉及。
-    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    * backupDevice  **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     * totalBackupSize  **参数解释**： 累计快照大小。 **取值范围**： 不涉及。
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持就地恢复。 **取值范围**： 不涉及。
@@ -1022,7 +1022,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupDevice
-    *  **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    *  **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     *
     * @return string|null
     */
@@ -1034,7 +1034,7 @@ class SnapshotDetail implements ModelInterface, ArrayAccess
     /**
     * Sets backupDevice
     *
-    * @param string|null $backupDevice **参数解释**： 备份介质。 **取值范围**： NBU、OBS。
+    * @param string|null $backupDevice **参数解释**： 备份介质。 **取值范围**： NBU、OBS、obs。
     *
     * @return $this
     */

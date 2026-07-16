@@ -74,6 +74,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * tags  **参数解释**： 标签列表。
     * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
     * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -130,7 +132,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6ConnectAddresses' => 'string[]',
             'tags' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\TagEntity[]',
             'serviceType' => 'string',
-            'storageType' => 'string'
+            'storageType' => 'string',
+            'diskEncrypted' => 'bool',
+            'diskEncryptedKey' => 'string'
     ];
 
     /**
@@ -188,6 +192,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * tags  **参数解释**： 标签列表。
     * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
     * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -244,7 +250,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'ipv6ConnectAddresses' => null,
         'tags' => null,
         'serviceType' => null,
-        'storageType' => null
+        'storageType' => null,
+        'diskEncrypted' => null,
+        'diskEncryptedKey' => null
     ];
 
     /**
@@ -323,6 +331,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * tags  **参数解释**： 标签列表。
     * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
     * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -379,7 +389,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6ConnectAddresses' => 'ipv6_connect_addresses',
             'tags' => 'tags',
             'serviceType' => 'service_type',
-            'storageType' => 'storage_type'
+            'storageType' => 'storage_type',
+            'diskEncrypted' => 'disk_encrypted',
+            'diskEncryptedKey' => 'disk_encrypted_key'
     ];
 
     /**
@@ -437,6 +449,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * tags  **参数解释**： 标签列表。
     * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
     * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -493,7 +507,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6ConnectAddresses' => 'setIpv6ConnectAddresses',
             'tags' => 'setTags',
             'serviceType' => 'setServiceType',
-            'storageType' => 'setStorageType'
+            'storageType' => 'setStorageType',
+            'diskEncrypted' => 'setDiskEncrypted',
+            'diskEncryptedKey' => 'setDiskEncryptedKey'
     ];
 
     /**
@@ -551,6 +567,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * tags  **参数解释**： 标签列表。
     * serviceType  **参数解释**： 服务类型。 **取值范围**： advanced：服务类型。
     * storageType  **参数解释**： 存储类型。 **取值范围**： hec：存储类型。
+    * diskEncrypted  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    * diskEncryptedKey  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -607,7 +625,9 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'ipv6ConnectAddresses' => 'getIpv6ConnectAddresses',
             'tags' => 'getTags',
             'serviceType' => 'getServiceType',
-            'storageType' => 'getStorageType'
+            'storageType' => 'getStorageType',
+            'diskEncrypted' => 'getDiskEncrypted',
+            'diskEncryptedKey' => 'getDiskEncryptedKey'
     ];
 
     /**
@@ -755,6 +775,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['storageType'] = isset($data['storageType']) ? $data['storageType'] : null;
+        $this->container['diskEncrypted'] = isset($data['diskEncrypted']) ? $data['diskEncrypted'] : null;
+        $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
     }
 
     /**
@@ -2064,6 +2086,54 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setStorageType($storageType)
     {
         $this->container['storageType'] = $storageType;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncrypted
+    *  **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    *
+    * @return bool|null
+    */
+    public function getDiskEncrypted()
+    {
+        return $this->container['diskEncrypted'];
+    }
+
+    /**
+    * Sets diskEncrypted
+    *
+    * @param bool|null $diskEncrypted **参数解释**： 是否开启磁盘加密。 **取值范围**： - true：开启 - false：不开启
+    *
+    * @return $this
+    */
+    public function setDiskEncrypted($diskEncrypted)
+    {
+        $this->container['diskEncrypted'] = $diskEncrypted;
+        return $this;
+    }
+
+    /**
+    * Gets diskEncryptedKey
+    *  **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDiskEncryptedKey()
+    {
+        return $this->container['diskEncryptedKey'];
+    }
+
+    /**
+    * Sets diskEncryptedKey
+    *
+    * @param string|null $diskEncryptedKey **参数解释**： 磁盘加密key，未开启磁盘加密时为空。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptedKey($diskEncryptedKey)
+    {
+        $this->container['diskEncryptedKey'] = $diskEncryptedKey;
         return $this;
     }
 

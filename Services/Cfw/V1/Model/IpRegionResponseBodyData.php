@@ -32,8 +32,8 @@ class IpRegionResponseBodyData implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'descriptionCn' => 'string',
             'descriptionEn' => 'string',
-            'regionType' => 'string',
-            'superiorRegionId' => 'int'
+            'regionType' => 'int',
+            'superiorRegionId' => 'string'
     ];
 
     /**
@@ -292,7 +292,7 @@ class IpRegionResponseBodyData implements ModelInterface, ArrayAccess
     * Gets regionType
     *  **参数解释**： 区域类型 **取值范围**： - 0：国家 - 1：省份 - 2：大洲
     *
-    * @return string|null
+    * @return int|null
     */
     public function getRegionType()
     {
@@ -302,7 +302,7 @@ class IpRegionResponseBodyData implements ModelInterface, ArrayAccess
     /**
     * Sets regionType
     *
-    * @param string|null $regionType **参数解释**： 区域类型 **取值范围**： - 0：国家 - 1：省份 - 2：大洲
+    * @param int|null $regionType **参数解释**： 区域类型 **取值范围**： - 0：国家 - 1：省份 - 2：大洲
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class IpRegionResponseBodyData implements ModelInterface, ArrayAccess
     * Gets superiorRegionId
     *  **参数解释**： 上级区域ID **取值范围**： 不涉及
     *
-    * @return int|null
+    * @return string|null
     */
     public function getSuperiorRegionId()
     {
@@ -326,7 +326,7 @@ class IpRegionResponseBodyData implements ModelInterface, ArrayAccess
     /**
     * Sets superiorRegionId
     *
-    * @param int|null $superiorRegionId **参数解释**： 上级区域ID **取值范围**： 不涉及
+    * @param string|null $superiorRegionId **参数解释**： 上级区域ID **取值范围**： 不涉及
     *
     * @return $this
     */

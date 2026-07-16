@@ -24,6 +24,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     * id  监听器ID。
     * name  监听器的名称。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    * clientCaTlsContainerRef  **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -33,6 +35,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'protocolPort' => 'string',
+            'defaultTlsContainerRef' => 'string',
+            'clientCaTlsContainerRef' => 'string',
             'ipgroup' => '\HuaweiCloud\SDK\Css\V1\Model\EsIpgroupResource'
     ];
 
@@ -42,6 +46,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     * id  监听器ID。
     * name  监听器的名称。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    * clientCaTlsContainerRef  **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -51,6 +57,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'protocolPort' => null,
+        'defaultTlsContainerRef' => null,
+        'clientCaTlsContainerRef' => null,
         'ipgroup' => null
     ];
 
@@ -81,6 +89,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     * id  监听器ID。
     * name  监听器的名称。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    * clientCaTlsContainerRef  **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -90,6 +100,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'protocolPort' => 'protocol_port',
+            'defaultTlsContainerRef' => 'default_tls_container_ref',
+            'clientCaTlsContainerRef' => 'client_ca_tls_container_ref',
             'ipgroup' => 'ipgroup'
     ];
 
@@ -99,6 +111,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     * id  监听器ID。
     * name  监听器的名称。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    * clientCaTlsContainerRef  **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -108,6 +122,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'protocolPort' => 'setProtocolPort',
+            'defaultTlsContainerRef' => 'setDefaultTlsContainerRef',
+            'clientCaTlsContainerRef' => 'setClientCaTlsContainerRef',
             'ipgroup' => 'setIpgroup'
     ];
 
@@ -117,6 +133,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     * id  监听器ID。
     * name  监听器的名称。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    * clientCaTlsContainerRef  **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -126,6 +144,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'protocolPort' => 'getProtocolPort',
+            'defaultTlsContainerRef' => 'getDefaultTlsContainerRef',
+            'clientCaTlsContainerRef' => 'getClientCaTlsContainerRef',
             'ipgroup' => 'getIpgroup'
     ];
 
@@ -191,6 +211,8 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
+        $this->container['defaultTlsContainerRef'] = isset($data['defaultTlsContainerRef']) ? $data['defaultTlsContainerRef'] : null;
+        $this->container['clientCaTlsContainerRef'] = isset($data['clientCaTlsContainerRef']) ? $data['clientCaTlsContainerRef'] : null;
         $this->container['ipgroup'] = isset($data['ipgroup']) ? $data['ipgroup'] : null;
     }
 
@@ -309,6 +331,54 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     public function setProtocolPort($protocolPort)
     {
         $this->container['protocolPort'] = $protocolPort;
+        return $this;
+    }
+
+    /**
+    * Gets defaultTlsContainerRef
+    *  **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDefaultTlsContainerRef()
+    {
+        return $this->container['defaultTlsContainerRef'];
+    }
+
+    /**
+    * Sets defaultTlsContainerRef
+    *
+    * @param string|null $defaultTlsContainerRef **参数解释**： 监听器使用的服务器证书ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDefaultTlsContainerRef($defaultTlsContainerRef)
+    {
+        $this->container['defaultTlsContainerRef'] = $defaultTlsContainerRef;
+        return $this;
+    }
+
+    /**
+    * Gets clientCaTlsContainerRef
+    *  **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClientCaTlsContainerRef()
+    {
+        return $this->container['clientCaTlsContainerRef'];
+    }
+
+    /**
+    * Sets clientCaTlsContainerRef
+    *
+    * @param string|null $clientCaTlsContainerRef **参数解释**： 监听器使用的CA证书ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClientCaTlsContainerRef($clientCaTlsContainerRef)
+    {
+        $this->container['clientCaTlsContainerRef'] = $clientCaTlsContainerRef;
         return $this;
     }
 

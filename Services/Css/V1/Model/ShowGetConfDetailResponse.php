@@ -27,6 +27,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     * setting  setting
     * updateAt  更新时间。
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+    * sensitiveWordsShielding  是否隐藏敏感词
     *
     * @var string[]
     */
@@ -36,7 +37,8 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
             'confContent' => 'string',
             'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Setting',
             'updateAt' => 'string',
-            'desc' => 'string'
+            'desc' => 'string',
+            'sensitiveWordsShielding' => 'bool'
     ];
 
     /**
@@ -47,6 +49,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     * setting  setting
     * updateAt  更新时间。
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+    * sensitiveWordsShielding  是否隐藏敏感词
     *
     * @var string[]
     */
@@ -56,7 +59,8 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
         'confContent' => null,
         'setting' => null,
         'updateAt' => null,
-        'desc' => null
+        'desc' => null,
+        'sensitiveWordsShielding' => null
     ];
 
     /**
@@ -88,6 +92,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     * setting  setting
     * updateAt  更新时间。
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+    * sensitiveWordsShielding  是否隐藏敏感词
     *
     * @var string[]
     */
@@ -97,7 +102,8 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
             'confContent' => 'confContent',
             'setting' => 'setting',
             'updateAt' => 'updateAt',
-            'desc' => 'desc'
+            'desc' => 'desc',
+            'sensitiveWordsShielding' => 'sensitiveWordsShielding'
     ];
 
     /**
@@ -108,6 +114,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     * setting  setting
     * updateAt  更新时间。
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+    * sensitiveWordsShielding  是否隐藏敏感词
     *
     * @var string[]
     */
@@ -117,7 +124,8 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
             'confContent' => 'setConfContent',
             'setting' => 'setSetting',
             'updateAt' => 'setUpdateAt',
-            'desc' => 'setDesc'
+            'desc' => 'setDesc',
+            'sensitiveWordsShielding' => 'setSensitiveWordsShielding'
     ];
 
     /**
@@ -128,6 +136,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     * setting  setting
     * updateAt  更新时间。
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
+    * sensitiveWordsShielding  是否隐藏敏感词
     *
     * @var string[]
     */
@@ -137,7 +146,8 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
             'confContent' => 'getConfContent',
             'setting' => 'getSetting',
             'updateAt' => 'getUpdateAt',
-            'desc' => 'getDesc'
+            'desc' => 'getDesc',
+            'sensitiveWordsShielding' => 'getSensitiveWordsShielding'
     ];
 
     /**
@@ -204,6 +214,7 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
         $this->container['setting'] = isset($data['setting']) ? $data['setting'] : null;
         $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
         $this->container['desc'] = isset($data['desc']) ? $data['desc'] : null;
+        $this->container['sensitiveWordsShielding'] = isset($data['sensitiveWordsShielding']) ? $data['sensitiveWordsShielding'] : null;
     }
 
     /**
@@ -369,6 +380,30 @@ class ShowGetConfDetailResponse implements ModelInterface, ArrayAccess
     public function setDesc($desc)
     {
         $this->container['desc'] = $desc;
+        return $this;
+    }
+
+    /**
+    * Gets sensitiveWordsShielding
+    *  是否隐藏敏感词
+    *
+    * @return bool|null
+    */
+    public function getSensitiveWordsShielding()
+    {
+        return $this->container['sensitiveWordsShielding'];
+    }
+
+    /**
+    * Sets sensitiveWordsShielding
+    *
+    * @param bool|null $sensitiveWordsShielding 是否隐藏敏感词
+    *
+    * @return $this
+    */
+    public function setSensitiveWordsShielding($sensitiveWordsShielding)
+    {
+        $this->container['sensitiveWordsShielding'] = $sensitiveWordsShielding;
         return $this;
     }
 

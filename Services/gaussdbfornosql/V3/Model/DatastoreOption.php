@@ -20,9 +20,9 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
-    * version  数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
-    * storageEngine  存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    * type  **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
+    * version  **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * storageEngine  **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
-    * version  数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
-    * storageEngine  存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    * type  **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
+    * version  **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * storageEngine  **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class DatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
-    * version  数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
-    * storageEngine  存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    * type  **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
+    * version  **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * storageEngine  **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
-    * version  数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
-    * storageEngine  存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    * type  **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
+    * version  **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * storageEngine  **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
-    * version  数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
-    * storageEngine  存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    * type  **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
+    * version  **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * storageEngine  **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
+    *  **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 数据库类型。 - 支持GeminiDB Cassandra，GeminiDB Mongo，GeminiDB Influx数据库实例。 - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。
+    * @param string $type **参数解释：** 数据库类型。 **约束限制：** 支持GeminiDB Cassandra、GeminiDB Mongo、GeminiDB Influx和GeminiDB Redis数据库实例。 **取值范围：** - 取值为“cassandra”，表示创建GeminiDB Cassandra数据库实例。 - 取值为“mongodb”，表示创建GeminiDB Mongo数据库实例。 - 取值为“influxdb”，表示创建GeminiDB Influx数据库实例。 - 取值为“redis”，表示创建GeminiDB Redis数据库实例。 - 取值为“dynamodb”，表示创建GeminiDB兼容DynamoDB数据库实例。 - 取值为“hbase”，表示创建GeminiDB HBase数据库实例。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
+    *  **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 数据库版本。 - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。
+    * @param string $version **参数解释：** 数据库版本。 **约束限制：** - GeminiDB Cassandra实例支持3.11版本，取值为“3.11”。 - GeminiDB Mongo实例支持4.0版本，取值为4.0\"。 - GeminiDB Influ经典部署模式集群类型实例支持1.8版本，取值为“1.8”。 - GeminiDB Influx云原生部署模式集群类型实例支持1.7版本，取值为“1.7”。 - GeminiDB Redis实例支持5.0版本，取值为“5.0”。 - GeminiDB DynamoDB实例取值为“”。 - GeminiDB HBase实例取值为“”。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageEngine
-    *  存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    *  **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
     /**
     * Sets storageEngine
     *
-    * @param string $storageEngine 存储引擎。 - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。
+    * @param string $storageEngine **参数解释：** 存储引擎。 **约束限制：** 不涉及。 **取值范围：** - GeminiDB Cassandra实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Mongo实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Influx实例支持RocksDB存储引擎，取值为“rocksDB”。 - GeminiDB Redis实例支持RocksDB存储引擎，取值为“rocksDB”。 **默认取值：** 不涉及。
     *
     * @return $this
     */

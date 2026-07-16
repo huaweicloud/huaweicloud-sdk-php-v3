@@ -23,24 +23,36 @@ class ShowRelatedDnsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * relatedDataNodes  关联DN。
     * latestRestorableTime  最近恢复时间点。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'relatedDataNodes' => '\HuaweiCloud\SDK\Ddm\V1\Model\RelatedDnVO[]',
-            'latestRestorableTime' => 'string'
+            'latestRestorableTime' => 'string',
+            'offset' => 'int',
+            'limit' => 'int',
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * relatedDataNodes  关联DN。
     * latestRestorableTime  最近恢复时间点。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'relatedDataNodes' => null,
-        'latestRestorableTime' => null
+        'latestRestorableTime' => null,
+        'offset' => null,
+        'limit' => null,
+        'total' => null
     ];
 
     /**
@@ -68,36 +80,54 @@ class ShowRelatedDnsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * relatedDataNodes  关联DN。
     * latestRestorableTime  最近恢复时间点。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'relatedDataNodes' => 'related_data_nodes',
-            'latestRestorableTime' => 'latest_restorable_time'
+            'latestRestorableTime' => 'latest_restorable_time',
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * relatedDataNodes  关联DN。
     * latestRestorableTime  最近恢复时间点。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'relatedDataNodes' => 'setRelatedDataNodes',
-            'latestRestorableTime' => 'setLatestRestorableTime'
+            'latestRestorableTime' => 'setLatestRestorableTime',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * relatedDataNodes  关联DN。
     * latestRestorableTime  最近恢复时间点。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'relatedDataNodes' => 'getRelatedDataNodes',
-            'latestRestorableTime' => 'getLatestRestorableTime'
+            'latestRestorableTime' => 'getLatestRestorableTime',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'total' => 'getTotal'
     ];
 
     /**
@@ -160,6 +190,9 @@ class ShowRelatedDnsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['relatedDataNodes'] = isset($data['relatedDataNodes']) ? $data['relatedDataNodes'] : null;
         $this->container['latestRestorableTime'] = isset($data['latestRestorableTime']) ? $data['latestRestorableTime'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -235,6 +268,78 @@ class ShowRelatedDnsResponse implements ModelInterface, ArrayAccess
     public function setLatestRestorableTime($latestRestorableTime)
     {
         $this->container['latestRestorableTime'] = $latestRestorableTime;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  **参数解释**：  总记录数。  **参数范围**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total **参数解释**：  总记录数。  **参数范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
         return $this;
     }
 

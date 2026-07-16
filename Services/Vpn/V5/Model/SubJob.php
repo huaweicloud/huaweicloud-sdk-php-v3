@@ -23,6 +23,7 @@ class SubJob implements ModelInterface, ArrayAccess
     * id  任务ID
     * jobType  任务类型
     * status  任务状态
+    * expectedTimeSeconds  预计剩余执行时间，单位：s
     * createdAt  创建时间
     * finishedAt  完成时间
     * errorMessage  错误信息
@@ -33,6 +34,7 @@ class SubJob implements ModelInterface, ArrayAccess
             'id' => 'string',
             'jobType' => 'string',
             'status' => 'string',
+            'expectedTimeSeconds' => 'int',
             'createdAt' => '\DateTime',
             'finishedAt' => '\DateTime',
             'errorMessage' => 'string'
@@ -43,6 +45,7 @@ class SubJob implements ModelInterface, ArrayAccess
     * id  任务ID
     * jobType  任务类型
     * status  任务状态
+    * expectedTimeSeconds  预计剩余执行时间，单位：s
     * createdAt  创建时间
     * finishedAt  完成时间
     * errorMessage  错误信息
@@ -53,6 +56,7 @@ class SubJob implements ModelInterface, ArrayAccess
         'id' => null,
         'jobType' => null,
         'status' => null,
+        'expectedTimeSeconds' => null,
         'createdAt' => 'date-time',
         'finishedAt' => 'date-time',
         'errorMessage' => null
@@ -84,6 +88,7 @@ class SubJob implements ModelInterface, ArrayAccess
     * id  任务ID
     * jobType  任务类型
     * status  任务状态
+    * expectedTimeSeconds  预计剩余执行时间，单位：s
     * createdAt  创建时间
     * finishedAt  完成时间
     * errorMessage  错误信息
@@ -94,6 +99,7 @@ class SubJob implements ModelInterface, ArrayAccess
             'id' => 'id',
             'jobType' => 'job_type',
             'status' => 'status',
+            'expectedTimeSeconds' => 'expected_time_seconds',
             'createdAt' => 'created_at',
             'finishedAt' => 'finished_at',
             'errorMessage' => 'error_message'
@@ -104,6 +110,7 @@ class SubJob implements ModelInterface, ArrayAccess
     * id  任务ID
     * jobType  任务类型
     * status  任务状态
+    * expectedTimeSeconds  预计剩余执行时间，单位：s
     * createdAt  创建时间
     * finishedAt  完成时间
     * errorMessage  错误信息
@@ -114,6 +121,7 @@ class SubJob implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'jobType' => 'setJobType',
             'status' => 'setStatus',
+            'expectedTimeSeconds' => 'setExpectedTimeSeconds',
             'createdAt' => 'setCreatedAt',
             'finishedAt' => 'setFinishedAt',
             'errorMessage' => 'setErrorMessage'
@@ -124,6 +132,7 @@ class SubJob implements ModelInterface, ArrayAccess
     * id  任务ID
     * jobType  任务类型
     * status  任务状态
+    * expectedTimeSeconds  预计剩余执行时间，单位：s
     * createdAt  创建时间
     * finishedAt  完成时间
     * errorMessage  错误信息
@@ -134,6 +143,7 @@ class SubJob implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'jobType' => 'getJobType',
             'status' => 'getStatus',
+            'expectedTimeSeconds' => 'getExpectedTimeSeconds',
             'createdAt' => 'getCreatedAt',
             'finishedAt' => 'getFinishedAt',
             'errorMessage' => 'getErrorMessage'
@@ -182,6 +192,7 @@ class SubJob implements ModelInterface, ArrayAccess
     const JOB_TYPE_PREPARE_RESOURCE = 'prepare_resource';
     const JOB_TYPE_UPGRADE_WORKER_1 = 'upgrade_worker_1';
     const JOB_TYPE_UPGRADE_WORKER_2 = 'upgrade_worker_2';
+    const JOB_TYPE_MIGRATE_NETWORK_1 = 'migrate_network_1';
     const STATUS_INIT = 'init';
     const STATUS_UPGRADING = 'upgrading';
     const STATUS_SUCCESS = 'success';
@@ -199,6 +210,7 @@ class SubJob implements ModelInterface, ArrayAccess
             self::JOB_TYPE_PREPARE_RESOURCE,
             self::JOB_TYPE_UPGRADE_WORKER_1,
             self::JOB_TYPE_UPGRADE_WORKER_2,
+            self::JOB_TYPE_MIGRATE_NETWORK_1,
         ];
     }
 
@@ -236,6 +248,7 @@ class SubJob implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['expectedTimeSeconds'] = isset($data['expectedTimeSeconds']) ? $data['expectedTimeSeconds'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['finishedAt'] = isset($data['finishedAt']) ? $data['finishedAt'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
@@ -372,6 +385,30 @@ class SubJob implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets expectedTimeSeconds
+    *  预计剩余执行时间，单位：s
+    *
+    * @return int|null
+    */
+    public function getExpectedTimeSeconds()
+    {
+        return $this->container['expectedTimeSeconds'];
+    }
+
+    /**
+    * Sets expectedTimeSeconds
+    *
+    * @param int|null $expectedTimeSeconds 预计剩余执行时间，单位：s
+    *
+    * @return $this
+    */
+    public function setExpectedTimeSeconds($expectedTimeSeconds)
+    {
+        $this->container['expectedTimeSeconds'] = $expectedTimeSeconds;
         return $this;
     }
 

@@ -22,16 +22,16 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值** 不涉及
-    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * associationEpIds  **参数解释** 该资源分组内包含的资源来源的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目ID。
     * providers  **参数解释** 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考《配置审计API参考》中的\"支持的服务和资源类型\"章节 **约束限制** 不涉及 **取值范围** 长度为[0,512]个字符 **默认取值** 不涉及
     * enterpriseProjectIdAndTags  **参数解释** 匹配企业项目或匹配标签参数。 **约束限制** 不超过50个条件。
     * resources  **参数解释** 手动创建时的资源详情。 **约束限制** 不超过1000个资源。
-    * productResources  **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
-    * resourceLevel  **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    * productResources  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    * resourceLevel  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -56,16 +56,16 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值** 不涉及
-    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * associationEpIds  **参数解释** 该资源分组内包含的资源来源的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目ID。
     * providers  **参数解释** 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考《配置审计API参考》中的\"支持的服务和资源类型\"章节 **约束限制** 不涉及 **取值范围** 长度为[0,512]个字符 **默认取值** 不涉及
     * enterpriseProjectIdAndTags  **参数解释** 匹配企业项目或匹配标签参数。 **约束限制** 不超过50个条件。
     * resources  **参数解释** 手动创建时的资源详情。 **约束限制** 不超过1000个资源。
-    * productResources  **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
-    * resourceLevel  **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    * productResources  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    * resourceLevel  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -111,16 +111,16 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值** 不涉及
-    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * associationEpIds  **参数解释** 该资源分组内包含的资源来源的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目ID。
     * providers  **参数解释** 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考《配置审计API参考》中的\"支持的服务和资源类型\"章节 **约束限制** 不涉及 **取值范围** 长度为[0,512]个字符 **默认取值** 不涉及
     * enterpriseProjectIdAndTags  **参数解释** 匹配企业项目或匹配标签参数。 **约束限制** 不超过50个条件。
     * resources  **参数解释** 手动创建时的资源详情。 **约束限制** 不超过1000个资源。
-    * productResources  **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
-    * resourceLevel  **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    * productResources  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    * resourceLevel  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -145,16 +145,16 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值** 不涉及
-    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * associationEpIds  **参数解释** 该资源分组内包含的资源来源的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目ID。
     * providers  **参数解释** 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考《配置审计API参考》中的\"支持的服务和资源类型\"章节 **约束限制** 不涉及 **取值范围** 长度为[0,512]个字符 **默认取值** 不涉及
     * enterpriseProjectIdAndTags  **参数解释** 匹配企业项目或匹配标签参数。 **约束限制** 不超过50个条件。
     * resources  **参数解释** 手动创建时的资源详情。 **约束限制** 不超过1000个资源。
-    * productResources  **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
-    * resourceLevel  **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    * productResources  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    * resourceLevel  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -179,16 +179,16 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupName  **参数解释** 资源分组的名称 **约束限制** 不涉及 **取值范围** 只能为字母、数字、汉字、-或_，长度为[1,128]个字符 **默认取值** 不涉及
     * enterpriseProjectId  **参数解释** 资源分组归属企业项目ID **约束限制** 不涉及 **取值范围** 由数字、字母和-组成，或者为0（默认企业项目ID）。 **默认取值** 不涉及
-    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    * type  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     * tags  **参数解释** 标签动态匹配时的关联标签。 **约束限制** type为TAG时必传，不超过50个标签。
     * associationEpIds  **参数解释** 该资源分组内包含的资源来源的企业项目ID。 **约束限制** type为EPS时必传，不超过50个企业项目ID。
     * providers  **参数解释** 云服务名称,格式为\"dcs,ecs\",支持的云服务providers请参考《配置审计API参考》中的\"支持的服务和资源类型\"章节 **约束限制** 不涉及 **取值范围** 长度为[0,512]个字符 **默认取值** 不涉及
     * enterpriseProjectIdAndTags  **参数解释** 匹配企业项目或匹配标签参数。 **约束限制** 不超过50个条件。
     * resources  **参数解释** 手动创建时的资源详情。 **约束限制** 不超过1000个资源。
-    * productResources  **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
-    * instances  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
-    * productNames  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
-    * resourceLevel  **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    * productResources  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    * instances  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * productNames  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    * resourceLevel  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     * combRelation  combRelation
     *
     * @var string[]
@@ -407,7 +407,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    *  **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称），COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
+    * @param string|null $type **参数解释** 资源分组添加资源方式 **约束限制** 不涉及 **取值范围** 取值只能为EPS（同步企业项目），TAG（标签动态匹配），NAME（实例名称）[天翼云、移动云不支持该枚举值。](tag:ctc,cmcc)，COMB（组合匹配），不传为手动添加。 **默认取值** 不涉及
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets productResources
-    *  **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    *  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null
     */
@@ -563,7 +563,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets productResources
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources **参数解释** 手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ProductResource[]|null $productResources **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)手动创建，选择资源层级为云产品时的资源详情。 **约束限制** 不超过50个资源。
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    *  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
     *
     * @return \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null
     */
@@ -587,7 +587,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances **参数解释** 实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\Instance[]|null $instances **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)实例名称匹配参数。 **约束限制** type为NAME时必传，不超过50个实例。
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets productNames
-    *  **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    *  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -611,7 +611,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets productNames
     *
-    * @param string|null $productNames **参数解释** 创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
+    * @param string|null $productNames **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)创建资源层级为云产品时的云产品名称，一般由\"服务命名空间,服务首层维度名称\"组成，如\"SYS.ECS,instance_id\"。多个云产品则用“;”隔开，如\"SERVICE.BMS,instance_id;SYS.ECS,instance_id\"。 **约束限制** 不涉及。 **取值范围** 长度[0,10240]个字符 **默认取值** 不涉及。
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceLevel
-    *  **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    *  **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     *
     * @return string|null
     */
@@ -635,7 +635,7 @@ class CreateResourceGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceLevel
     *
-    * @param string|null $resourceLevel **参数解释** 资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
+    * @param string|null $resourceLevel **参数解释** [天翼云、移动云不支持该字段。](tag:ctc,cmcc)资源层级，资源生效范围。选择云产品，则云产品及其子层级均可进入该资源分组，选择子维度，则只生效具体的子维度。不传表示子维度。 **约束限制** 不涉及。 **取值范围** - product: 云产品 - dimension: 子维度 **默认取值** 不涉及。
     *
     * @return $this
     */

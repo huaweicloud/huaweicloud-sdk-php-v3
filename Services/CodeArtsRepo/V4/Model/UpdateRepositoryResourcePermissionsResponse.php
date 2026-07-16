@@ -21,22 +21,26 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    * status  返回状态码
+    * message  返回信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string'
+            'status' => 'int',
+            'message' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    * status  返回状态码
+    * message  返回信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null
+        'status' => null,
+        'message' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    * status  返回状态码
+    * message  返回信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status'
+            'status' => 'status',
+            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    * status  返回状态码
+    * message  返回信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    * status  返回状态码
+    * message  返回信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'message' => 'getMessage'
     ];
 
     /**
@@ -130,22 +140,7 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
     {
         return self::$openAPIModelName;
     }
-    const STATUS_SUCCESS = 'success';
-    const STATUS_FAIL = 'fail';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_SUCCESS,
-            self::STATUS_FAIL,
-        ];
-    }
 
 
     /**
@@ -164,6 +159,7 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
     public function __construct(array $data = null)
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -174,19 +170,17 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if (!is_null($this->container['status']) && ($this->container['status'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 1000.";
             }
-
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 20)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 20.";
+            if (!is_null($this->container['status']) && ($this->container['status'] < 0)) {
+                $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 0)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -204,9 +198,9 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
 
     /**
     * Gets status
-    *  **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    *  返回状态码
     *
-    * @return string|null
+    * @return int|null
     */
     public function getStatus()
     {
@@ -216,13 +210,37 @@ class UpdateRepositoryResourcePermissionsResponse implements ModelInterface, Arr
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 状态码。 - success，表示接口请求成功。 - fail，表示接口请求失败。
+    * @param int|null $status 返回状态码
     *
     * @return $this
     */
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  返回信息
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message 返回信息
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
         return $this;
     }
 

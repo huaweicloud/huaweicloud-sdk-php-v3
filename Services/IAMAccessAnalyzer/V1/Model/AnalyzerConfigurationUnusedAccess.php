@@ -169,10 +169,13 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['unusedAccessAge']) && ($this->container['unusedAccessAge'] > 180)) {
+        if ($this->container['unusedAccessAge'] === null) {
+            $invalidProperties[] = "'unusedAccessAge' can't be null";
+        }
+            if (($this->container['unusedAccessAge'] > 180)) {
                 $invalidProperties[] = "invalid value for 'unusedAccessAge', must be smaller than or equal to 180.";
             }
-            if (!is_null($this->container['unusedAccessAge']) && ($this->container['unusedAccessAge'] < 1)) {
+            if (($this->container['unusedAccessAge'] < 1)) {
                 $invalidProperties[] = "invalid value for 'unusedAccessAge', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -193,7 +196,7 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     * Gets unusedAccessAge
     *  生成分析结果的预设天数。
     *
-    * @return int|null
+    * @return int
     */
     public function getUnusedAccessAge()
     {
@@ -203,7 +206,7 @@ class AnalyzerConfigurationUnusedAccess implements ModelInterface, ArrayAccess
     /**
     * Sets unusedAccessAge
     *
-    * @param int|null $unusedAccessAge 生成分析结果的预设天数。
+    * @param int $unusedAccessAge 生成分析结果的预设天数。
     *
     * @return $this
     */

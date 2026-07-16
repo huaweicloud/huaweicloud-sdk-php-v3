@@ -21,21 +21,33 @@ class ShowRabbitMqProjectTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'total' => 'int',
+            'nextOffset' => 'int',
+            'previousOffset' => 'int',
             'tags' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\TagMultyValueEntity[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'total' => 'int32',
+        'nextOffset' => 'int32',
+        'previousOffset' => 'int32',
         'tags' => null
     ];
 
@@ -62,31 +74,49 @@ class ShowRabbitMqProjectTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'total' => 'total',
+            'nextOffset' => 'next_offset',
+            'previousOffset' => 'previous_offset',
             'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
     protected static $setters = [
+            'total' => 'setTotal',
+            'nextOffset' => 'setNextOffset',
+            'previousOffset' => 'setPreviousOffset',
             'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * total  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    * nextOffset  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    * previousOffset  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
     * tags  **参数解释**： 标签列表。
     *
     * @var string[]
     */
     protected static $getters = [
+            'total' => 'getTotal',
+            'nextOffset' => 'getNextOffset',
+            'previousOffset' => 'getPreviousOffset',
             'tags' => 'getTags'
     ];
 
@@ -148,6 +178,9 @@ class ShowRabbitMqProjectTagsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['nextOffset'] = isset($data['nextOffset']) ? $data['nextOffset'] : null;
+        $this->container['previousOffset'] = isset($data['previousOffset']) ? $data['previousOffset'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
@@ -171,6 +204,78 @@ class ShowRabbitMqProjectTagsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets total
+    *  **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total **参数解释**： 查询结果总数。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets nextOffset
+    *  **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getNextOffset()
+    {
+        return $this->container['nextOffset'];
+    }
+
+    /**
+    * Sets nextOffset
+    *
+    * @param int|null $nextOffset **参数解释**： 下一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNextOffset($nextOffset)
+    {
+        $this->container['nextOffset'] = $nextOffset;
+        return $this;
+    }
+
+    /**
+    * Gets previousOffset
+    *  **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getPreviousOffset()
+    {
+        return $this->container['previousOffset'];
+    }
+
+    /**
+    * Sets previousOffset
+    *
+    * @param int|null $previousOffset **参数解释**： 前一个偏移量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPreviousOffset($previousOffset)
+    {
+        $this->container['previousOffset'] = $previousOffset;
+        return $this;
     }
 
     /**

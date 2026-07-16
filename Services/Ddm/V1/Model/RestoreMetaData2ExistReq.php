@@ -20,20 +20,20 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * source  metadata恢复源。
-    * target  metadata恢复目标。
+    * source  source
+    * target  target
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'source' => 'object',
-            'target' => 'object'
+            'source' => '\HuaweiCloud\SDK\Ddm\V1\Model\RestoreMetaDataSource',
+            'target' => '\HuaweiCloud\SDK\Ddm\V1\Model\RestoreMetaDataTarget'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * source  metadata恢复源。
-    * target  metadata恢复目标。
+    * source  source
+    * target  target
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * source  metadata恢复源。
-    * target  metadata恢复目标。
+    * source  source
+    * target  target
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * source  metadata恢复源。
-    * target  metadata恢复目标。
+    * source  source
+    * target  target
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * source  metadata恢复源。
-    * target  metadata恢复目标。
+    * source  source
+    * target  target
     *
     * @var string[]
     */
@@ -191,9 +191,9 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  metadata恢复源。
+    *  source
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\RestoreMetaDataSource
     */
     public function getSource()
     {
@@ -203,7 +203,7 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param object $source metadata恢复源。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\RestoreMetaDataSource $source source
     *
     * @return $this
     */
@@ -215,9 +215,9 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets target
-    *  metadata恢复目标。
+    *  target
     *
-    * @return object
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\RestoreMetaDataTarget
     */
     public function getTarget()
     {
@@ -227,7 +227,7 @@ class RestoreMetaData2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets target
     *
-    * @param object $target metadata恢复目标。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\RestoreMetaDataTarget $target target
     *
     * @return $this
     */

@@ -49,7 +49,7 @@ class DeleteAlertNoticeConfigResponse implements ModelInterface, ArrayAccess
             'threat' => 'string[]',
             'preferHtml' => 'bool',
             'noticeClass' => 'string',
-            'nearlyExpiredTime' => 'string',
+            'nearlyExpiredTime' => 'int',
             'isAllEnterpriseProject' => 'bool',
             'enterpriseProjectId' => 'string',
             'updateTime' => 'int'
@@ -85,7 +85,7 @@ class DeleteAlertNoticeConfigResponse implements ModelInterface, ArrayAccess
         'threat' => null,
         'preferHtml' => null,
         'noticeClass' => null,
-        'nearlyExpiredTime' => null,
+        'nearlyExpiredTime' => 'int64',
         'isAllEnterpriseProject' => null,
         'enterpriseProjectId' => null,
         'updateTime' => 'int64'
@@ -560,7 +560,7 @@ class DeleteAlertNoticeConfigResponse implements ModelInterface, ArrayAccess
     * Gets nearlyExpiredTime
     *  提前通知天数
     *
-    * @return string|null
+    * @return int|null
     */
     public function getNearlyExpiredTime()
     {
@@ -570,7 +570,7 @@ class DeleteAlertNoticeConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nearlyExpiredTime
     *
-    * @param string|null $nearlyExpiredTime 提前通知天数
+    * @param int|null $nearlyExpiredTime 提前通知天数
     *
     * @return $this
     */

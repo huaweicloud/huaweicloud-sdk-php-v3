@@ -362,7 +362,7 @@ class CssAsyncClient extends Client
     }
 
     /**
-     * 删除配置文件
+     * 删除配置文件V2
      *
      * 删除配置文件。
      * 
@@ -430,7 +430,7 @@ class CssAsyncClient extends Client
     }
 
     /**
-     * 删除自定义模板
+     * 删除自定义模板V2
      *
      * 此接口用于删除自定义模板。
      * 

@@ -341,13 +341,14 @@ class ListPersonalMergeRequestsRequest implements ModelInterface, ArrayAccess
     const SORT_DESC = 'desc';
     const VIEW_SIMPLE = 'simple';
     const VIEW_BASIC = 'basic';
+    const VIEW_VIEW_FOR_LIST = 'view_for_list';
     const SCOPE_CREATED_BY_ME = 'created_by_me';
     const SCOPE_ASSIGNED_TO_ME = 'assigned_to_me';
     const SCOPE_NEED_MY_REVIEW = 'need_my_review';
     const SCOPE_NEED_MY_APPROVE = 'need_my_approve';
     const SCOPE_ALL = 'all';
-    const WIP_TRUE = 'true';
-    const WIP_FALSE = 'false';
+    const WIP_YES = 'yes';
+    const WIP_NO = 'no';
     
 
     /**
@@ -403,6 +404,7 @@ class ListPersonalMergeRequestsRequest implements ModelInterface, ArrayAccess
         return [
             self::VIEW_SIMPLE,
             self::VIEW_BASIC,
+            self::VIEW_VIEW_FOR_LIST,
         ];
     }
 
@@ -430,8 +432,8 @@ class ListPersonalMergeRequestsRequest implements ModelInterface, ArrayAccess
     public function getWipAllowableValues()
     {
         return [
-            self::WIP_TRUE,
-            self::WIP_FALSE,
+            self::WIP_YES,
+            self::WIP_NO,
         ];
     }
 

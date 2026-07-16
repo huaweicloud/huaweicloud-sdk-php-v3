@@ -26,7 +26,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     * intranetIps  **参数解释**: 内网ip列表
     * elasticIps  **参数解释**: 弹性公网ip列表
-    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
@@ -62,7 +62,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     * intranetIps  **参数解释**: 内网ip列表
     * elasticIps  **参数解释**: 弹性公网ip列表
-    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
@@ -119,7 +119,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     * intranetIps  **参数解释**: 内网ip列表
     * elasticIps  **参数解释**: 弹性公网ip列表
-    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
@@ -155,7 +155,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     * intranetIps  **参数解释**: 内网ip列表
     * elasticIps  **参数解释**: 弹性公网ip列表
-    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
@@ -191,7 +191,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     * instanceType  **参数解释**: 主机类型，仅支持ECS弹性云服务器和BMS裸金属服务器 **取值范围**: - ECS: 弹性云服务器 - BMS：裸金属服务器
     * intranetIps  **参数解释**: 内网ip列表
     * elasticIps  **参数解释**: 弹性公网ip列表
-    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * invocationType  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     * invocationStatus  **参数解释**: 任务状态 **取值范围**: - PENDING：待执行 - RUNNING：运行中 - TIMEOUT：超时 - FAILED：失败 - SUCCEEDED：成功 - CANCELED：取消 - ROLLBACKED：已回退
     * invocationTarget  **参数解释**: 任务对象, 支持telescope监控 **取值范围**: - telescope: 主机监控插件telescope
     * createTime  **参数解释**: 任务创建时间 **取值范围**: 数字范围为[1111111111111,9999999999999]
@@ -265,6 +265,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_UPDATE = 'UPDATE';
     const INVOCATION_TYPE_ROLLBACK = 'ROLLBACK';
     const INVOCATION_TYPE_RETRY = 'RETRY';
+    const INVOCATION_TYPE_SET_REMOTE_INSTALLER = 'SET_REMOTE_INSTALLER';
+    const INVOCATION_TYPE_REMOTE_INSTALL = 'REMOTE_INSTALL';
     const INVOCATION_STATUS_PENDING = 'PENDING';
     const INVOCATION_STATUS_RUNNING = 'RUNNING';
     const INVOCATION_STATUS_TIMEOUT = 'TIMEOUT';
@@ -300,6 +302,8 @@ class InvocationInfo implements ModelInterface, ArrayAccess
             self::INVOCATION_TYPE_UPDATE,
             self::INVOCATION_TYPE_ROLLBACK,
             self::INVOCATION_TYPE_RETRY,
+            self::INVOCATION_TYPE_SET_REMOTE_INSTALLER,
+            self::INVOCATION_TYPE_REMOTE_INSTALL,
         ];
     }
 
@@ -607,7 +611,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets invocationType
-    *  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    *  **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     *
     * @return string|null
     */
@@ -619,7 +623,7 @@ class InvocationInfo implements ModelInterface, ArrayAccess
     /**
     * Sets invocationType
     *
-    * @param string|null $invocationType **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试
+    * @param string|null $invocationType **参数解释**: 任务类型 **取值范围**: - INSTALL：安装 - UPDATE：升级 - ROLLBACK：回滚 - RETRY：重试 - SET_REMOTE_INSTALLER：设置远程安装主机 - REMOTE_INSTALL：执行远程安装
     *
     * @return $this
     */

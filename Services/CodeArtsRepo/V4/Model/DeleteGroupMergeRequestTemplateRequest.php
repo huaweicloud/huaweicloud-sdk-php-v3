@@ -20,7 +20,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * templateId  **参数解释：** 合并请求模板id。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * templateId  **参数解释：** 合并请求模板id。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * templateId  **参数解释：** 合并请求模板id。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * templateId  **参数解释：** 合并请求模板id。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * templateId  **参数解释：** 合并请求模板id。
     *
     * @var string[]
@@ -203,7 +203,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets groupId
-    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return int
     */
@@ -215,7 +215,7 @@ class DeleteGroupMergeRequestTemplateRequest implements ModelInterface, ArrayAcc
     /**
     * Sets groupId
     *
-    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return $this
     */

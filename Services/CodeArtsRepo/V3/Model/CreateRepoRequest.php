@@ -23,6 +23,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
     * importMembers  是否导入项目成员，取值范围：0->不导入项目成员，1->导入项目成员
     * name  仓库名称，取值范围：可以输入英文大小写字母、数字、连字符、下划线，且必须以字母开头
     * projectUuid  指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
+    * groupId  代码组id，代码组首页，Group ID后的数字Id
     * templateId  复制模板的ID
     * visibilityLevel  仓库状态，取值范围：0->私有，20->公开只读
     * importUrl  模板仓库的https地址的base64加密
@@ -38,6 +39,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
             'importMembers' => 'int',
             'name' => 'string',
             'projectUuid' => 'string',
+            'groupId' => 'int',
             'templateId' => 'string',
             'visibilityLevel' => 'int',
             'importUrl' => 'string',
@@ -53,6 +55,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
     * importMembers  是否导入项目成员，取值范围：0->不导入项目成员，1->导入项目成员
     * name  仓库名称，取值范围：可以输入英文大小写字母、数字、连字符、下划线，且必须以字母开头
     * projectUuid  指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
+    * groupId  代码组id，代码组首页，Group ID后的数字Id
     * templateId  复制模板的ID
     * visibilityLevel  仓库状态，取值范围：0->私有，20->公开只读
     * importUrl  模板仓库的https地址的base64加密
@@ -68,6 +71,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
         'importMembers' => 'int32',
         'name' => null,
         'projectUuid' => null,
+        'groupId' => 'int32',
         'templateId' => null,
         'visibilityLevel' => 'int32',
         'importUrl' => null,
@@ -104,6 +108,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
     * importMembers  是否导入项目成员，取值范围：0->不导入项目成员，1->导入项目成员
     * name  仓库名称，取值范围：可以输入英文大小写字母、数字、连字符、下划线，且必须以字母开头
     * projectUuid  指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
+    * groupId  代码组id，代码组首页，Group ID后的数字Id
     * templateId  复制模板的ID
     * visibilityLevel  仓库状态，取值范围：0->私有，20->公开只读
     * importUrl  模板仓库的https地址的base64加密
@@ -119,6 +124,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
             'importMembers' => 'import_members',
             'name' => 'name',
             'projectUuid' => 'project_uuid',
+            'groupId' => 'group_id',
             'templateId' => 'template_id',
             'visibilityLevel' => 'visibility_level',
             'importUrl' => 'import_url',
@@ -134,6 +140,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
     * importMembers  是否导入项目成员，取值范围：0->不导入项目成员，1->导入项目成员
     * name  仓库名称，取值范围：可以输入英文大小写字母、数字、连字符、下划线，且必须以字母开头
     * projectUuid  指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
+    * groupId  代码组id，代码组首页，Group ID后的数字Id
     * templateId  复制模板的ID
     * visibilityLevel  仓库状态，取值范围：0->私有，20->公开只读
     * importUrl  模板仓库的https地址的base64加密
@@ -149,6 +156,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
             'importMembers' => 'setImportMembers',
             'name' => 'setName',
             'projectUuid' => 'setProjectUuid',
+            'groupId' => 'setGroupId',
             'templateId' => 'setTemplateId',
             'visibilityLevel' => 'setVisibilityLevel',
             'importUrl' => 'setImportUrl',
@@ -164,6 +172,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
     * importMembers  是否导入项目成员，取值范围：0->不导入项目成员，1->导入项目成员
     * name  仓库名称，取值范围：可以输入英文大小写字母、数字、连字符、下划线，且必须以字母开头
     * projectUuid  指定项目ID，获取方式请参见[获取项目ID](codehub_api_0014.xml)。
+    * groupId  代码组id，代码组首页，Group ID后的数字Id
     * templateId  复制模板的ID
     * visibilityLevel  仓库状态，取值范围：0->私有，20->公开只读
     * importUrl  模板仓库的https地址的base64加密
@@ -179,6 +188,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
             'importMembers' => 'getImportMembers',
             'name' => 'getName',
             'projectUuid' => 'getProjectUuid',
+            'groupId' => 'getGroupId',
             'templateId' => 'getTemplateId',
             'visibilityLevel' => 'getVisibilityLevel',
             'importUrl' => 'getImportUrl',
@@ -250,6 +260,7 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
         $this->container['importMembers'] = isset($data['importMembers']) ? $data['importMembers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectUuid'] = isset($data['projectUuid']) ? $data['projectUuid'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['visibilityLevel'] = isset($data['visibilityLevel']) ? $data['visibilityLevel'] : null;
         $this->container['importUrl'] = isset($data['importUrl']) ? $data['importUrl'] : null;
@@ -363,6 +374,30 @@ class CreateRepoRequest implements ModelInterface, ArrayAccess
     public function setProjectUuid($projectUuid)
     {
         $this->container['projectUuid'] = $projectUuid;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  代码组id，代码组首页，Group ID后的数字Id
+    *
+    * @return int|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param int|null $groupId 代码组id，代码组首页，Group ID后的数字Id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

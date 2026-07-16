@@ -172,9 +172,6 @@ class UpdateScheduleRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['schedule'] === null) {
             $invalidProperties[] = "'schedule' can't be null";
         }
-        if ($this->container['parameters'] === null) {
-            $invalidProperties[] = "'parameters' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,7 +214,7 @@ class UpdateScheduleRequestBody implements ModelInterface, ArrayAccess
     * Gets parameters
     *  parameters
     *
-    * @return \HuaweiCloud\SDK\Swr\V2\Model\GcParameters
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\GcParameters|null
     */
     public function getParameters()
     {
@@ -227,7 +224,7 @@ class UpdateScheduleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param \HuaweiCloud\SDK\Swr\V2\Model\GcParameters $parameters parameters
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\GcParameters|null $parameters parameters
     *
     * @return $this
     */

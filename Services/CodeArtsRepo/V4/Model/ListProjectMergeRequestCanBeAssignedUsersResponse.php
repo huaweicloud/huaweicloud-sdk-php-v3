@@ -22,21 +22,25 @@ class ListProjectMergeRequestCanBeAssignedUsersResponse implements ModelInterfac
     /**
     * Array of property to type mappings. Used for (de)serialization
     * body  body
+    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestVoteReviewerDto[]'
+            'body' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]',
+            'xTotal' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * body  body
+    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'body' => null,
+        'xTotal' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListProjectMergeRequestCanBeAssignedUsersResponse implements ModelInterfac
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * body  body
+    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'body' => 'body',
+            'xTotal' => 'X-Total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * body  body
+    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'body' => 'setBody',
+            'xTotal' => 'setXTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * body  body
+    * xTotal  xTotal
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'body' => 'getBody',
+            'xTotal' => 'getXTotal'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListProjectMergeRequestCanBeAssignedUsersResponse implements ModelInterfac
     public function __construct(array $data = null)
     {
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['xTotal'] = isset($data['xTotal']) ? $data['xTotal'] : null;
     }
 
     /**
@@ -177,7 +188,7 @@ class ListProjectMergeRequestCanBeAssignedUsersResponse implements ModelInterfac
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestVoteReviewerDto[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]|null
     */
     public function getBody()
     {
@@ -187,13 +198,37 @@ class ListProjectMergeRequestCanBeAssignedUsersResponse implements ModelInterfac
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestVoteReviewerDto[]|null $body body
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]|null $body body
     *
     * @return $this
     */
     public function setBody($body)
     {
         $this->container['body'] = $body;
+        return $this;
+    }
+
+    /**
+    * Gets xTotal
+    *  xTotal
+    *
+    * @return string|null
+    */
+    public function getXTotal()
+    {
+        return $this->container['xTotal'];
+    }
+
+    /**
+    * Sets xTotal
+    *
+    * @param string|null $xTotal xTotal
+    *
+    * @return $this
+    */
+    public function setXTotal($xTotal)
+    {
+        $this->container['xTotal'] = $xTotal;
         return $this;
     }
 

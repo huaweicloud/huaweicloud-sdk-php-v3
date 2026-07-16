@@ -24,6 +24,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * limit  查询返回迁移任务列表当前页面的数量，默认查询10条。 最多返回100条迁移任务信息。
     * offset  起始的任务序号，默认为0。 取值大于等于0，取值为0时从第一条开始查询。
     * status  迁移任务状态（无该参数时代表查询所有状态的任务）： 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7: 暂停中
+    * taskName  任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'limit' => 'int',
             'offset' => 'int',
-            'status' => 'int'
+            'status' => 'int',
+            'taskName' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * limit  查询返回迁移任务列表当前页面的数量，默认查询10条。 最多返回100条迁移任务信息。
     * offset  起始的任务序号，默认为0。 取值大于等于0，取值为0时从第一条开始查询。
     * status  迁移任务状态（无该参数时代表查询所有状态的任务）： 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7: 暂停中
+    * taskName  任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
         'groupId' => null,
         'limit' => 'int32',
         'offset' => 'int32',
-        'status' => 'int32'
+        'status' => 'int32',
+        'taskName' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * limit  查询返回迁移任务列表当前页面的数量，默认查询10条。 最多返回100条迁移任务信息。
     * offset  起始的任务序号，默认为0。 取值大于等于0，取值为0时从第一条开始查询。
     * status  迁移任务状态（无该参数时代表查询所有状态的任务）： 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7: 暂停中
+    * taskName  任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'limit' => 'limit',
             'offset' => 'offset',
-            'status' => 'status'
+            'status' => 'status',
+            'taskName' => 'task_name'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * limit  查询返回迁移任务列表当前页面的数量，默认查询10条。 最多返回100条迁移任务信息。
     * offset  起始的任务序号，默认为0。 取值大于等于0，取值为0时从第一条开始查询。
     * status  迁移任务状态（无该参数时代表查询所有状态的任务）： 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7: 暂停中
+    * taskName  任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'taskName' => 'setTaskName'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     * limit  查询返回迁移任务列表当前页面的数量，默认查询10条。 最多返回100条迁移任务信息。
     * offset  起始的任务序号，默认为0。 取值大于等于0，取值为0时从第一条开始查询。
     * status  迁移任务状态（无该参数时代表查询所有状态的任务）： 1：等待调度 2：正在执行 3：停止 4：失败 5：成功 7: 暂停中
+    * taskName  任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'taskName' => 'getTaskName'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['taskName'] = isset($data['taskName']) ? $data['taskName'] : null;
     }
 
     /**
@@ -214,6 +225,12 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['status']) && ($this->container['status'] < 1)) {
                 $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['taskName']) && (mb_strlen($this->container['taskName']) > 255)) {
+                $invalidProperties[] = "invalid value for 'taskName', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['taskName']) && (mb_strlen($this->container['taskName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'taskName', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -322,6 +339,30 @@ class ListTasksRequest implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets taskName
+    *  任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
+    *
+    * @return string|null
+    */
+    public function getTaskName()
+    {
+        return $this->container['taskName'];
+    }
+
+    /**
+    * Sets taskName
+    *
+    * @param string|null $taskName 任务名称，支持模糊查询。 1.长度限制0~255 2.不支持特殊字符
+    *
+    * @return $this
+    */
+    public function setTaskName($taskName)
+    {
+        $this->container['taskName'] = $taskName;
         return $this;
     }
 

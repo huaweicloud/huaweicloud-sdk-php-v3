@@ -27,6 +27,7 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
     * ipRemarks  ip或ip段的备注
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
+    * description  描述
     *
     * @var string[]
     */
@@ -36,7 +37,8 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'string',
             'ipRemarks' => 'map[string,string]',
             'size' => 'int',
-            'rules' => '\HuaweiCloud\SDK\Waf\V1\Model\RuleInfo[]'
+            'rules' => '\HuaweiCloud\SDK\Waf\V1\Model\RuleInfo[]',
+            'description' => 'string'
     ];
 
     /**
@@ -47,6 +49,7 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
     * ipRemarks  ip或ip段的备注
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
+    * description  描述
     *
     * @var string[]
     */
@@ -56,7 +59,8 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
         'ips' => null,
         'ipRemarks' => null,
         'size' => null,
-        'rules' => null
+        'rules' => null,
+        'description' => null
     ];
 
     /**
@@ -88,6 +92,7 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
     * ipRemarks  ip或ip段的备注
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
+    * description  描述
     *
     * @var string[]
     */
@@ -97,7 +102,8 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'ips',
             'ipRemarks' => 'ip_remarks',
             'size' => 'size',
-            'rules' => 'rules'
+            'rules' => 'rules',
+            'description' => 'description'
     ];
 
     /**
@@ -108,6 +114,7 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
     * ipRemarks  ip或ip段的备注
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
+    * description  描述
     *
     * @var string[]
     */
@@ -117,7 +124,8 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'setIps',
             'ipRemarks' => 'setIpRemarks',
             'size' => 'setSize',
-            'rules' => 'setRules'
+            'rules' => 'setRules',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -128,6 +136,7 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
     * ipRemarks  ip或ip段的备注
     * size  地址组长度
     * rules  ip地址组绑定的规则列表
+    * description  描述
     *
     * @var string[]
     */
@@ -137,7 +146,8 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
             'ips' => 'getIps',
             'ipRemarks' => 'getIpRemarks',
             'size' => 'getSize',
-            'rules' => 'getRules'
+            'rules' => 'getRules',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -204,6 +214,7 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
         $this->container['ipRemarks'] = isset($data['ipRemarks']) ? $data['ipRemarks'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -369,6 +380,30 @@ class DeleteIpGroupResponse implements ModelInterface, ArrayAccess
     public function setRules($rules)
     {
         $this->container['rules'] = $rules;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

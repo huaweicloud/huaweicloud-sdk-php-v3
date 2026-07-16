@@ -45,6 +45,8 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * timestamp  创建规则时间戳
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -72,7 +74,9 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
             'unaggregation' => 'bool',
             'agingTime' => 'int',
             'producer' => 'int',
-            'timestamp' => 'int'
+            'timestamp' => 'int',
+            'priority' => 'int',
+            'ccPriority' => 'int'
     ];
 
     /**
@@ -101,6 +105,8 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * timestamp  创建规则时间戳
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -128,7 +134,9 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
         'unaggregation' => null,
         'agingTime' => null,
         'producer' => null,
-        'timestamp' => 'int64'
+        'timestamp' => 'int64',
+        'priority' => 'int32',
+        'ccPriority' => 'int32'
     ];
 
     /**
@@ -178,6 +186,8 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * timestamp  创建规则时间戳
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -205,7 +215,9 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
             'unaggregation' => 'unaggregation',
             'agingTime' => 'aging_time',
             'producer' => 'producer',
-            'timestamp' => 'timestamp'
+            'timestamp' => 'timestamp',
+            'priority' => 'priority',
+            'ccPriority' => 'cc_priority'
     ];
 
     /**
@@ -234,6 +246,8 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * timestamp  创建规则时间戳
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -261,7 +275,9 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
             'unaggregation' => 'setUnaggregation',
             'agingTime' => 'setAgingTime',
             'producer' => 'setProducer',
-            'timestamp' => 'setTimestamp'
+            'timestamp' => 'setTimestamp',
+            'priority' => 'setPriority',
+            'ccPriority' => 'setCcPriority'
     ];
 
     /**
@@ -290,6 +306,8 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
     * agingTime  规则老化时间，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * producer  规则创建对象，该参数为预留参数，用于后续功能扩展，当前请用户忽略该参数
     * timestamp  创建规则时间戳
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -317,7 +335,9 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
             'unaggregation' => 'getUnaggregation',
             'agingTime' => 'getAgingTime',
             'producer' => 'getProducer',
-            'timestamp' => 'getTimestamp'
+            'timestamp' => 'getTimestamp',
+            'priority' => 'getPriority',
+            'ccPriority' => 'getCcPriority'
     ];
 
     /**
@@ -427,6 +447,8 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
         $this->container['agingTime'] = isset($data['agingTime']) ? $data['agingTime'] : null;
         $this->container['producer'] = isset($data['producer']) ? $data['producer'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['ccPriority'] = isset($data['ccPriority']) ? $data['ccPriority'] : null;
     }
 
     /**
@@ -1032,6 +1054,54 @@ class DeleteCcRuleResponse implements ModelInterface, ArrayAccess
     public function setTimestamp($timestamp)
     {
         $this->container['timestamp'] = $timestamp;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets ccPriority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getCcPriority()
+    {
+        return $this->container['ccPriority'];
+    }
+
+    /**
+    * Sets ccPriority
+    *
+    * @param int|null $ccPriority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setCcPriority($ccPriority)
+    {
+        $this->container['ccPriority'] = $ccPriority;
         return $this;
     }
 

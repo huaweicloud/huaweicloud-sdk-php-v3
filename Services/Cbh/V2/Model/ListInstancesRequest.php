@@ -21,21 +21,29 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
+    * limit  查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    * offset  查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'int'
+            'instanceId' => 'int',
+            'limit' => 'string',
+            'offset' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
+    * limit  查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    * offset  查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => 'int64'
+        'instanceId' => 'int64',
+        'limit' => null,
+        'offset' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
+    * limit  查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    * offset  查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
+    * limit  查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    * offset  查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  云堡垒机实例ID。（非必传，需要查询单个实例详情时传入）
+    * limit  查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    * offset  查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -163,6 +185,18 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['instanceId']) && ($this->container['instanceId'] < 0)) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) > 64)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['limit']) && (mb_strlen($this->container['limit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) > 64)) {
+                $invalidProperties[] = "invalid value for 'offset', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['offset']) && (mb_strlen($this->container['offset']) < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -199,6 +233,54 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    *
+    * @return string|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param string|null $limit 查询返回的记录数量上限，默认值 1000，即一次最多返回 1000 条实例记录。最小值为1，最大值为1000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
+    *
+    * @return string|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param string|null $offset 查询的起始偏移量（索引位置），默认值 0，即从第 0 条记录开始查。最小值为0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

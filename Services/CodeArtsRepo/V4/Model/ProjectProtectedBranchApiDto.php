@@ -20,9 +20,9 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：** 保护分支唯一标识。
-    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
-    * actions  **参数解释：** 事件列表。
+    * id  **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
+    * actions  **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：** 保护分支唯一标识。
-    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
-    * actions  **参数解释：** 事件列表。
+    * id  **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
+    * actions  **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：** 保护分支唯一标识。
-    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
-    * actions  **参数解释：** 事件列表。
+    * id  **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
+    * actions  **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：** 保护分支唯一标识。
-    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
-    * actions  **参数解释：** 事件列表。
+    * id  **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
+    * actions  **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：** 保护分支唯一标识。
-    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
-    * actions  **参数解释：** 事件列表。
+    * id  **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
+    * actions  **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：** 保护分支唯一标识。
+    *  **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -220,7 +220,7 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id **参数解释：** 保护分支唯一标识。
+    * @param int|null $id **参数解释：** 保护分支唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
+    *  **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param string|null $name **参数解释：** 保护分支名称 **取值范围：** 字符串长度不少于1，不超过1000。 **约束限制：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
-    *  **参数解释：** 事件列表。
+    *  **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ProjectProtectedActionResultApiDto[]|null
     */
@@ -268,7 +268,7 @@ class ProjectProtectedBranchApiDto implements ModelInterface, ArrayAccess
     /**
     * Sets actions
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ProjectProtectedActionResultApiDto[]|null $actions **参数解释：** 事件列表。
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\ProjectProtectedActionResultApiDto[]|null $actions **参数解释：** 事件列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

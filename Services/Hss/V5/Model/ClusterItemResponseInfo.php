@@ -24,6 +24,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterNs  集群命名空间
     * clusterLabels  集群标签
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     * protectStatus  **参数解释**： 集群防护状态 **取值范围**: - unprotected：未受保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。 - installing：正在安装。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
             'clusterName' => 'string',
             'clusterNs' => 'string[]',
             'clusterLabels' => 'string[]',
+            'clusterType' => 'string',
             'protectStatus' => 'string'
     ];
 
@@ -42,6 +44,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterNs  集群命名空间
     * clusterLabels  集群标签
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     * protectStatus  **参数解释**： 集群防护状态 **取值范围**: - unprotected：未受保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。 - installing：正在安装。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
         'clusterName' => null,
         'clusterNs' => null,
         'clusterLabels' => null,
+        'clusterType' => null,
         'protectStatus' => null
     ];
 
@@ -81,6 +85,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterNs  集群命名空间
     * clusterLabels  集群标签
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     * protectStatus  **参数解释**： 集群防护状态 **取值范围**: - unprotected：未受保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。 - installing：正在安装。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
             'clusterName' => 'cluster_name',
             'clusterNs' => 'cluster_ns',
             'clusterLabels' => 'cluster_labels',
+            'clusterType' => 'cluster_type',
             'protectStatus' => 'protect_status'
     ];
 
@@ -99,6 +105,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterNs  集群命名空间
     * clusterLabels  集群标签
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     * protectStatus  **参数解释**： 集群防护状态 **取值范围**: - unprotected：未受保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。 - installing：正在安装。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
             'clusterName' => 'setClusterName',
             'clusterNs' => 'setClusterNs',
             'clusterLabels' => 'setClusterLabels',
+            'clusterType' => 'setClusterType',
             'protectStatus' => 'setProtectStatus'
     ];
 
@@ -117,6 +125,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * clusterNs  集群命名空间
     * clusterLabels  集群标签
+    * clusterType  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
     * protectStatus  **参数解释**： 集群防护状态 **取值范围**: - unprotected：未受保护。 - plugin error：插件错误。 - protected with policy：受策略保护。 - deploy policy failed：部署策略失败。 - protected without policy：无策略保护。 - uninstall failed：卸载失败。 - uninstall：卸载。 - installing：正在安装。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
             'clusterName' => 'getClusterName',
             'clusterNs' => 'getClusterNs',
             'clusterLabels' => 'getClusterLabels',
+            'clusterType' => 'getClusterType',
             'protectStatus' => 'getProtectStatus'
     ];
 
@@ -191,6 +201,7 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['clusterNs'] = isset($data['clusterNs']) ? $data['clusterNs'] : null;
         $this->container['clusterLabels'] = isset($data['clusterLabels']) ? $data['clusterLabels'] : null;
+        $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
     }
 
@@ -213,6 +224,12 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'clusterName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) > 255)) {
+                $invalidProperties[] = "invalid value for 'clusterType', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'clusterType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['protectStatus']) && (mb_strlen($this->container['protectStatus']) > 32)) {
                 $invalidProperties[] = "invalid value for 'protectStatus', the character length must be smaller than or equal to 32.";
@@ -327,6 +344,30 @@ class ClusterItemResponseInfo implements ModelInterface, ArrayAccess
     public function setClusterLabels($clusterLabels)
     {
         $this->container['clusterLabels'] = $clusterLabels;
+        return $this;
+    }
+
+    /**
+    * Gets clusterType
+    *  **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    *
+    * @return string|null
+    */
+    public function getClusterType()
+    {
+        return $this->container['clusterType'];
+    }
+
+    /**
+    * Sets clusterType
+    *
+    * @param string|null $clusterType **参数解释**： 集群类型 **取值范围**: - k8s：原生集群。 - cce：CCE集群。 - ali：阿里云集群。 - tencent：腾讯云集群。 - azure：微软云集群。 - aws：亚马逊集群。 - self_built_hw：华为云自建集群。 - self_built_idc：IDC自建集群。
+    *
+    * @return $this
+    */
+    public function setClusterType($clusterType)
+    {
+        $this->container['clusterType'] = $clusterType;
         return $this;
     }
 

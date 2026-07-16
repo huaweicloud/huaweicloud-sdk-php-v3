@@ -20,7 +20,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * securityPolicyId  自定义安全策略的ID。
+    * securityPolicyId  **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * securityPolicyId  自定义安全策略的ID。
+    * securityPolicyId  **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * securityPolicyId  自定义安全策略的ID。
+    * securityPolicyId  **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * securityPolicyId  自定义安全策略的ID。
+    * securityPolicyId  **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * securityPolicyId  自定义安全策略的ID。
+    * securityPolicyId  **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * body  body
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityPolicyId
-    *  自定义安全策略的ID。
+    *  **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateSecurityPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets securityPolicyId
     *
-    * @param string $securityPolicyId 自定义安全策略的ID。
+    * @param string $securityPolicyId **参数解释**：自定义安全策略的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */

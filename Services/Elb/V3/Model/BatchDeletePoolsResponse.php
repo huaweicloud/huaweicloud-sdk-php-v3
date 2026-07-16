@@ -21,21 +21,25 @@ class BatchDeletePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pools  后端服务器组批量删除后的响应结果。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'requestId' => 'string',
             'pools' => '\HuaweiCloud\SDK\Elb\V3\Model\BatchDeletePoolsResp[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pools  后端服务器组批量删除后的响应结果。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'requestId' => null,
         'pools' => null
     ];
 
@@ -62,31 +66,37 @@ class BatchDeletePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pools  后端服务器组批量删除后的响应结果。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'requestId' => 'request_id',
             'pools' => 'pools'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pools  后端服务器组批量删除后的响应结果。
     *
     * @var string[]
     */
     protected static $setters = [
+            'requestId' => 'setRequestId',
             'pools' => 'setPools'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * pools  后端服务器组批量删除后的响应结果。
     *
     * @var string[]
     */
     protected static $getters = [
+            'requestId' => 'getRequestId',
             'pools' => 'getPools'
     ];
 
@@ -148,6 +158,7 @@ class BatchDeletePoolsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['pools'] = isset($data['pools']) ? $data['pools'] : null;
     }
 
@@ -171,6 +182,30 @@ class BatchDeletePoolsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets requestId
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
+        return $this;
     }
 
     /**

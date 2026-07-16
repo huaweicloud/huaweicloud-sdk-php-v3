@@ -244,6 +244,9 @@ class ExtDataSourceReq implements ModelInterface, ArrayAccess
         if ($this->container['userName'] === null) {
             $invalidProperties[] = "'userName' can't be null";
         }
+            if (!is_null($this->container['userPwd']) && (mb_strlen($this->container['userPwd']) < 8)) {
+                $invalidProperties[] = "invalid value for 'userPwd', the character length must be bigger than or equal to 8.";
+            }
         return $invalidProperties;
     }
 

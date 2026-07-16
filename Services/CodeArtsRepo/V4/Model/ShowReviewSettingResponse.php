@@ -27,10 +27,11 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     * reviewDefaultCategories  **参数解释：** 检视意见分类的key(已勾选)。
     * reviewCustomizedCategories  **参数解释：** 自定义分类。
     * reviewModules  **参数解释：** 检视意见模块。
-    * repositoryId  **参数解释：** 仓库id。
-    * noteRequiredAttributes  **参数解释：** 检视意见必填项。
-    * codehubDefaultCategories  **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
-    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    * secondaryCategoryType  **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
+    * secondaryCategories  **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    * noteRequiredAttributes  **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
+    * codehubDefaultCategories  **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
+    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
             'reviewDefaultCategories' => 'string[]',
             'reviewCustomizedCategories' => 'string[]',
             'reviewModules' => 'string[]',
-            'repositoryId' => 'int',
+            'secondaryCategoryType' => 'string',
+            'secondaryCategories' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]',
             'noteRequiredAttributes' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\RequiredAttributeDto[]',
             'codehubDefaultCategories' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]',
             'hicodeDefaultCategories' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]'
@@ -55,10 +57,11 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     * reviewDefaultCategories  **参数解释：** 检视意见分类的key(已勾选)。
     * reviewCustomizedCategories  **参数解释：** 自定义分类。
     * reviewModules  **参数解释：** 检视意见模块。
-    * repositoryId  **参数解释：** 仓库id。
-    * noteRequiredAttributes  **参数解释：** 检视意见必填项。
-    * codehubDefaultCategories  **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
-    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    * secondaryCategoryType  **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
+    * secondaryCategories  **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    * noteRequiredAttributes  **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
+    * codehubDefaultCategories  **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
+    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @var string[]
     */
@@ -69,7 +72,8 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
         'reviewDefaultCategories' => null,
         'reviewCustomizedCategories' => null,
         'reviewModules' => null,
-        'repositoryId' => 'int32',
+        'secondaryCategoryType' => null,
+        'secondaryCategories' => null,
         'noteRequiredAttributes' => null,
         'codehubDefaultCategories' => null,
         'hicodeDefaultCategories' => null
@@ -104,10 +108,11 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     * reviewDefaultCategories  **参数解释：** 检视意见分类的key(已勾选)。
     * reviewCustomizedCategories  **参数解释：** 自定义分类。
     * reviewModules  **参数解释：** 检视意见模块。
-    * repositoryId  **参数解释：** 仓库id。
-    * noteRequiredAttributes  **参数解释：** 检视意见必填项。
-    * codehubDefaultCategories  **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
-    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    * secondaryCategoryType  **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
+    * secondaryCategories  **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    * noteRequiredAttributes  **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
+    * codehubDefaultCategories  **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
+    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @var string[]
     */
@@ -118,7 +123,8 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
             'reviewDefaultCategories' => 'review_default_categories',
             'reviewCustomizedCategories' => 'review_customized_categories',
             'reviewModules' => 'review_modules',
-            'repositoryId' => 'repository_id',
+            'secondaryCategoryType' => 'secondary_category_type',
+            'secondaryCategories' => 'secondary_categories',
             'noteRequiredAttributes' => 'note_required_attributes',
             'codehubDefaultCategories' => 'codehub_default_categories',
             'hicodeDefaultCategories' => 'hicode_default_categories'
@@ -132,10 +138,11 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     * reviewDefaultCategories  **参数解释：** 检视意见分类的key(已勾选)。
     * reviewCustomizedCategories  **参数解释：** 自定义分类。
     * reviewModules  **参数解释：** 检视意见模块。
-    * repositoryId  **参数解释：** 仓库id。
-    * noteRequiredAttributes  **参数解释：** 检视意见必填项。
-    * codehubDefaultCategories  **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
-    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    * secondaryCategoryType  **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
+    * secondaryCategories  **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    * noteRequiredAttributes  **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
+    * codehubDefaultCategories  **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
+    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @var string[]
     */
@@ -146,7 +153,8 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
             'reviewDefaultCategories' => 'setReviewDefaultCategories',
             'reviewCustomizedCategories' => 'setReviewCustomizedCategories',
             'reviewModules' => 'setReviewModules',
-            'repositoryId' => 'setRepositoryId',
+            'secondaryCategoryType' => 'setSecondaryCategoryType',
+            'secondaryCategories' => 'setSecondaryCategories',
             'noteRequiredAttributes' => 'setNoteRequiredAttributes',
             'codehubDefaultCategories' => 'setCodehubDefaultCategories',
             'hicodeDefaultCategories' => 'setHicodeDefaultCategories'
@@ -160,10 +168,11 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     * reviewDefaultCategories  **参数解释：** 检视意见分类的key(已勾选)。
     * reviewCustomizedCategories  **参数解释：** 自定义分类。
     * reviewModules  **参数解释：** 检视意见模块。
-    * repositoryId  **参数解释：** 仓库id。
-    * noteRequiredAttributes  **参数解释：** 检视意见必填项。
-    * codehubDefaultCategories  **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
-    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    * secondaryCategoryType  **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
+    * secondaryCategories  **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    * noteRequiredAttributes  **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
+    * codehubDefaultCategories  **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
+    * hicodeDefaultCategories  **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @var string[]
     */
@@ -174,7 +183,8 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
             'reviewDefaultCategories' => 'getReviewDefaultCategories',
             'reviewCustomizedCategories' => 'getReviewCustomizedCategories',
             'reviewModules' => 'getReviewModules',
-            'repositoryId' => 'getRepositoryId',
+            'secondaryCategoryType' => 'getSecondaryCategoryType',
+            'secondaryCategories' => 'getSecondaryCategories',
             'noteRequiredAttributes' => 'getNoteRequiredAttributes',
             'codehubDefaultCategories' => 'getCodehubDefaultCategories',
             'hicodeDefaultCategories' => 'getHicodeDefaultCategories'
@@ -244,7 +254,8 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
         $this->container['reviewDefaultCategories'] = isset($data['reviewDefaultCategories']) ? $data['reviewDefaultCategories'] : null;
         $this->container['reviewCustomizedCategories'] = isset($data['reviewCustomizedCategories']) ? $data['reviewCustomizedCategories'] : null;
         $this->container['reviewModules'] = isset($data['reviewModules']) ? $data['reviewModules'] : null;
-        $this->container['repositoryId'] = isset($data['repositoryId']) ? $data['repositoryId'] : null;
+        $this->container['secondaryCategoryType'] = isset($data['secondaryCategoryType']) ? $data['secondaryCategoryType'] : null;
+        $this->container['secondaryCategories'] = isset($data['secondaryCategories']) ? $data['secondaryCategories'] : null;
         $this->container['noteRequiredAttributes'] = isset($data['noteRequiredAttributes']) ? $data['noteRequiredAttributes'] : null;
         $this->container['codehubDefaultCategories'] = isset($data['codehubDefaultCategories']) ? $data['codehubDefaultCategories'] : null;
         $this->container['hicodeDefaultCategories'] = isset($data['hicodeDefaultCategories']) ? $data['hicodeDefaultCategories'] : null;
@@ -258,12 +269,6 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['repositoryId']) && ($this->container['repositoryId'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'repositoryId', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['repositoryId']) && ($this->container['repositoryId'] < 1)) {
-                $invalidProperties[] = "invalid value for 'repositoryId', must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -423,32 +428,56 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets repositoryId
-    *  **参数解释：** 仓库id。
+    * Gets secondaryCategoryType
+    *  **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getRepositoryId()
+    public function getSecondaryCategoryType()
     {
-        return $this->container['repositoryId'];
+        return $this->container['secondaryCategoryType'];
     }
 
     /**
-    * Sets repositoryId
+    * Sets secondaryCategoryType
     *
-    * @param int|null $repositoryId **参数解释：** 仓库id。
+    * @param string|null $secondaryCategoryType **参数解释：** 系统预置检视意见分类类型(启用系统预置检视意见分类时返回，默认'HiCode')。
     *
     * @return $this
     */
-    public function setRepositoryId($repositoryId)
+    public function setSecondaryCategoryType($secondaryCategoryType)
     {
-        $this->container['repositoryId'] = $repositoryId;
+        $this->container['secondaryCategoryType'] = $secondaryCategoryType;
+        return $this;
+    }
+
+    /**
+    * Gets secondaryCategories
+    *  **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null
+    */
+    public function getSecondaryCategories()
+    {
+        return $this->container['secondaryCategories'];
+    }
+
+    /**
+    * Sets secondaryCategories
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null $secondaryCategories **参数解释：** 系统预置检视意见分类详情(启用系统预置检视意见分类时返回)。
+    *
+    * @return $this
+    */
+    public function setSecondaryCategories($secondaryCategories)
+    {
+        $this->container['secondaryCategories'] = $secondaryCategories;
         return $this;
     }
 
     /**
     * Gets noteRequiredAttributes
-    *  **参数解释：** 检视意见必填项。
+    *  **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
     *
     * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\RequiredAttributeDto[]|null
     */
@@ -460,7 +489,7 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Sets noteRequiredAttributes
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\RequiredAttributeDto[]|null $noteRequiredAttributes **参数解释：** 检视意见必填项。
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\RequiredAttributeDto[]|null $noteRequiredAttributes **参数解释：** 检视意见必填项(post接口不更新必填项时不返回)。
     *
     * @return $this
     */
@@ -472,7 +501,7 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets codehubDefaultCategories
-    *  **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
+    *  **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
     *
     * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null
     */
@@ -484,7 +513,7 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Sets codehubDefaultCategories
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null $codehubDefaultCategories **参数解释：** 检视意见分类(所有可勾选的，需传参with_default_review_categories: true才返回)。
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null $codehubDefaultCategories **参数解释：** 检视意见分类(可勾选的，需get接口传参with_default_review_categories: true才返回)。
     *
     * @return $this
     */
@@ -496,7 +525,7 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hicodeDefaultCategories
-    *  **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    *  **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null
     */
@@ -508,7 +537,7 @@ class ShowReviewSettingResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hicodeDefaultCategories
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null $hicodeDefaultCategories **参数解释：** 系统预置检视意见分类(需传参with_default_review_categories: true才返回)。
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\CategoryDto[]|null $hicodeDefaultCategories **参数解释：** 系统预置检视意见分类(需get接口传参with_default_review_categories: true才返回)。
     *
     * @return $this
     */

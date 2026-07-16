@@ -22,7 +22,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
-    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * discountType  折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
-    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * discountType  折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     * and the value is the original name
     * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
-    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * discountType  折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
-    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * discountType  折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * discountId  订单的可用折扣ID。 支付订单时，输入该参数的值，即可使用折扣。
     * discountValue  折扣率或者满减值，如果折扣模式是一口价，这个值为空。
-    * discountType  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * discountType  折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     * orders  可使用折扣的订单列表。 具体请参见表3。
     *
     * @var string[]
@@ -267,7 +267,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets discountType
-    *  折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    *  折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     *
     * @return int
     */
@@ -279,7 +279,7 @@ class DiscountInfoV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountType
     *
-    * @param int $discountType 折扣类型，取值为 0：促销折扣1：合同折扣2：商务优惠3：合作伙伴授予折扣609：订单调价折扣
+    * @param int $discountType 折扣类型，取值为 0：促销折扣；1：合同折扣；2：商务优惠；3：合作伙伴授予折扣；609：订单调价折扣
     *
     * @return $this
     */

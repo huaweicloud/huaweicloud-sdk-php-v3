@@ -56,6 +56,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
+    * totalPages  总页码。
+    * currentPage  当前页码。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
@@ -115,6 +117,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'itemList' => '\HuaweiCloud\SDK\Ocr\V1\Model\ItemList[]',
             'province' => 'string',
             'city' => 'string',
+            'totalPages' => 'string',
+            'currentPage' => 'string',
             'confidence' => 'object',
             'textLocation' => 'object',
             'belongBuyerName' => 'string',
@@ -174,6 +178,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
+    * totalPages  总页码。
+    * currentPage  当前页码。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
@@ -233,6 +239,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         'itemList' => null,
         'province' => null,
         'city' => null,
+        'totalPages' => null,
+        'currentPage' => null,
         'confidence' => null,
         'textLocation' => null,
         'belongBuyerName' => null,
@@ -313,6 +321,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
+    * totalPages  总页码。
+    * currentPage  当前页码。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
@@ -372,6 +382,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'itemList' => 'item_list',
             'province' => 'province',
             'city' => 'city',
+            'totalPages' => 'total_pages',
+            'currentPage' => 'current_page',
             'confidence' => 'confidence',
             'textLocation' => 'text_location',
             'belongBuyerName' => 'belong_buyer_name',
@@ -431,6 +443,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
+    * totalPages  总页码。
+    * currentPage  当前页码。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
@@ -490,6 +504,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'itemList' => 'setItemList',
             'province' => 'setProvince',
             'city' => 'setCity',
+            'totalPages' => 'setTotalPages',
+            'currentPage' => 'setCurrentPage',
             'confidence' => 'setConfidence',
             'textLocation' => 'setTextLocation',
             'belongBuyerName' => 'setBelongBuyerName',
@@ -549,6 +565,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     * itemList  货物或应税劳务列表。
     * province  省。
     * city  市。
+    * totalPages  总页码。
+    * currentPage  当前页码。
     * confidence  各个字段的置信度。 当“advanced_mode”设置为“true”时才返回。
     * textLocation  文本框在原图位置。输出左上、右上、右下、左下四个点坐标。当\"return_text_location\"设置为“true”时才返回。
     * belongBuyerName  销货清单的购买方名称。 当传入图片为发票销货清单时返回此字段。
@@ -608,6 +626,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
             'itemList' => 'getItemList',
             'province' => 'getProvince',
             'city' => 'getCity',
+            'totalPages' => 'getTotalPages',
+            'currentPage' => 'getCurrentPage',
             'confidence' => 'getConfidence',
             'textLocation' => 'getTextLocation',
             'belongBuyerName' => 'getBelongBuyerName',
@@ -723,6 +743,8 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['itemList'] = isset($data['itemList']) ? $data['itemList'] : null;
         $this->container['province'] = isset($data['province']) ? $data['province'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
+        $this->container['totalPages'] = isset($data['totalPages']) ? $data['totalPages'] : null;
+        $this->container['currentPage'] = isset($data['currentPage']) ? $data['currentPage'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
         $this->container['textLocation'] = isset($data['textLocation']) ? $data['textLocation'] : null;
         $this->container['belongBuyerName'] = isset($data['belongBuyerName']) ? $data['belongBuyerName'] : null;
@@ -1627,6 +1649,54 @@ class VatInvoiceResult implements ModelInterface, ArrayAccess
     public function setCity($city)
     {
         $this->container['city'] = $city;
+        return $this;
+    }
+
+    /**
+    * Gets totalPages
+    *  总页码。
+    *
+    * @return string|null
+    */
+    public function getTotalPages()
+    {
+        return $this->container['totalPages'];
+    }
+
+    /**
+    * Sets totalPages
+    *
+    * @param string|null $totalPages 总页码。
+    *
+    * @return $this
+    */
+    public function setTotalPages($totalPages)
+    {
+        $this->container['totalPages'] = $totalPages;
+        return $this;
+    }
+
+    /**
+    * Gets currentPage
+    *  当前页码。
+    *
+    * @return string|null
+    */
+    public function getCurrentPage()
+    {
+        return $this->container['currentPage'];
+    }
+
+    /**
+    * Sets currentPage
+    *
+    * @param string|null $currentPage 当前页码。
+    *
+    * @return $this
+    */
+    public function setCurrentPage($currentPage)
+    {
+        $this->container['currentPage'] = $currentPage;
         return $this;
     }
 

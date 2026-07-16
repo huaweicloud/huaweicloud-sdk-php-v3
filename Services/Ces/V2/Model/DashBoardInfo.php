@@ -23,12 +23,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * dashboardId  **参数解释**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
-    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
-    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
-    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * widgetNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * extendInfo  extendInfo
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
@@ -42,7 +43,8 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'isFavorite' => 'bool',
             'creatorName' => 'string',
             'createTime' => 'int',
-            'widgetsNum' => 'int',
+            'widgetNum' => 'int',
+            'extendInfo' => '\HuaweiCloud\SDK\Ces\V2\Model\ExtendInfoResp',
             'namespace' => 'string',
             'subProduct' => 'string',
             'dashboardTemplateId' => 'string'
@@ -53,12 +55,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * dashboardId  **参数解释**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
-    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
-    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
-    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * widgetNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * extendInfo  extendInfo
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
@@ -72,7 +75,8 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
         'isFavorite' => null,
         'creatorName' => null,
         'createTime' => 'int64',
-        'widgetsNum' => 'integer',
+        'widgetNum' => 'integer',
+        'extendInfo' => null,
         'namespace' => null,
         'subProduct' => null,
         'dashboardTemplateId' => null
@@ -104,12 +108,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * dashboardId  **参数解释**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
-    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
-    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
-    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * widgetNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * extendInfo  extendInfo
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
@@ -123,7 +128,8 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'isFavorite' => 'is_favorite',
             'creatorName' => 'creator_name',
             'createTime' => 'create_time',
-            'widgetsNum' => 'widgets_num',
+            'widgetNum' => 'widget_num',
+            'extendInfo' => 'extend_info',
             'namespace' => 'namespace',
             'subProduct' => 'sub_product',
             'dashboardTemplateId' => 'dashboard_template_id'
@@ -134,12 +140,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * dashboardId  **参数解释**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
-    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
-    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
-    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * widgetNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * extendInfo  extendInfo
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
@@ -153,7 +160,8 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'isFavorite' => 'setIsFavorite',
             'creatorName' => 'setCreatorName',
             'createTime' => 'setCreateTime',
-            'widgetsNum' => 'setWidgetsNum',
+            'widgetNum' => 'setWidgetNum',
+            'extendInfo' => 'setExtendInfo',
             'namespace' => 'setNamespace',
             'subProduct' => 'setSubProduct',
             'dashboardTemplateId' => 'setDashboardTemplateId'
@@ -164,12 +172,13 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     * dashboardId  **参数解释**： 监控看板id **取值范围** 以db开头，包含22个字母和数字，长度为24个字符
     * dashboardName  **参数解释** 自定义监控看板名称 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * enterpriseId  **参数解释** 企业项目ID **取值范围** 只能包含小写字母、数字、“-”、“_”，可以自定义企业项目ID，长度为36个字符。也可以为0（代表默认企业项目ID）。
-    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * rowWidgetNum  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     * isFavorite  **参数解释** 监控看板是否标记收藏 **取值范围** - true: 收藏, - false: 未收藏
     * creatorName  **参数解释** 监控看板的创建用户名 **取值范围** 长度为[1,128]个字符，只允许中文、英文、数字0-9、_和-
     * createTime  **参数解释** 监控看板创建时间 **取值范围** 最小值为1111111111111，最大值为9999999999999
-    * widgetsNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
-    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * widgetNum  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * extendInfo  extendInfo
+    * namespace  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     * subProduct  **参数解释** 子产品标识 **取值范围** 长度为[1,128]个字符
     * dashboardTemplateId  **参数解释** 监控大盘模板id **取值范围** 以mb开头，包含22个字母和数字，长度为24个字符
     *
@@ -183,7 +192,8 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             'isFavorite' => 'getIsFavorite',
             'creatorName' => 'getCreatorName',
             'createTime' => 'getCreateTime',
-            'widgetsNum' => 'getWidgetsNum',
+            'widgetNum' => 'getWidgetNum',
+            'extendInfo' => 'getExtendInfo',
             'namespace' => 'getNamespace',
             'subProduct' => 'getSubProduct',
             'dashboardTemplateId' => 'getDashboardTemplateId'
@@ -254,7 +264,8 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
         $this->container['isFavorite'] = isset($data['isFavorite']) ? $data['isFavorite'] : null;
         $this->container['creatorName'] = isset($data['creatorName']) ? $data['creatorName'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['widgetsNum'] = isset($data['widgetsNum']) ? $data['widgetsNum'] : null;
+        $this->container['widgetNum'] = isset($data['widgetNum']) ? $data['widgetNum'] : null;
+        $this->container['extendInfo'] = isset($data['extendInfo']) ? $data['extendInfo'] : null;
         $this->container['namespace'] = isset($data['namespace']) ? $data['namespace'] : null;
         $this->container['subProduct'] = isset($data['subProduct']) ? $data['subProduct'] : null;
         $this->container['dashboardTemplateId'] = isset($data['dashboardTemplateId']) ? $data['dashboardTemplateId'] : null;
@@ -283,12 +294,6 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseId']) && !preg_match("/^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/", $this->container['enterpriseId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseId', must be conform to the pattern /^((([a-z]|[0-9]){8}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){4}-([a-z]|[0-9]){12})|0)$/.";
             }
-            if (!is_null($this->container['rowWidgetNum']) && ($this->container['rowWidgetNum'] > 3)) {
-                $invalidProperties[] = "invalid value for 'rowWidgetNum', must be smaller than or equal to 3.";
-            }
-            if (!is_null($this->container['rowWidgetNum']) && ($this->container['rowWidgetNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'rowWidgetNum', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['creatorName']) && (mb_strlen($this->container['creatorName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'creatorName', the character length must be smaller than or equal to 128.";
             }
@@ -304,11 +309,11 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['createTime']) && ($this->container['createTime'] < 1111111111111)) {
                 $invalidProperties[] = "invalid value for 'createTime', must be bigger than or equal to 1111111111111.";
             }
-            if (!is_null($this->container['widgetsNum']) && ($this->container['widgetsNum'] > 50)) {
-                $invalidProperties[] = "invalid value for 'widgetsNum', must be smaller than or equal to 50.";
+            if (!is_null($this->container['widgetNum']) && ($this->container['widgetNum'] > 50)) {
+                $invalidProperties[] = "invalid value for 'widgetNum', must be smaller than or equal to 50.";
             }
-            if (!is_null($this->container['widgetsNum']) && ($this->container['widgetsNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'widgetsNum', must be bigger than or equal to 0.";
+            if (!is_null($this->container['widgetNum']) && ($this->container['widgetNum'] < 0)) {
+                $invalidProperties[] = "invalid value for 'widgetNum', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 32)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 32.";
@@ -416,7 +421,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowWidgetNum
-    *  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    *  **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     *
     * @return int|null
     */
@@ -428,7 +433,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rowWidgetNum
     *
-    * @param int|null $rowWidgetNum **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图
+    * @param int|null $rowWidgetNum **参数解释** 每行展示视图数量 **取值范围** - 0:表示自定义坐标 - 1:代表每行1个视图 - 2:代表每行2个视图 - 3:代表每行3个视图 - 4:代表每行4个视图
     *
     * @return $this
     */
@@ -511,32 +516,56 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets widgetsNum
+    * Gets widgetNum
     *  **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
     *
     * @return int|null
     */
-    public function getWidgetsNum()
+    public function getWidgetNum()
     {
-        return $this->container['widgetsNum'];
+        return $this->container['widgetNum'];
     }
 
     /**
-    * Sets widgetsNum
+    * Sets widgetNum
     *
-    * @param int|null $widgetsNum **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
+    * @param int|null $widgetNum **参数解释** 看板下的视图总数 **取值范围** 最小值为0，最大值为50
     *
     * @return $this
     */
-    public function setWidgetsNum($widgetsNum)
+    public function setWidgetNum($widgetNum)
     {
-        $this->container['widgetsNum'] = $widgetsNum;
+        $this->container['widgetNum'] = $widgetNum;
+        return $this;
+    }
+
+    /**
+    * Gets extendInfo
+    *  extendInfo
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ExtendInfoResp|null
+    */
+    public function getExtendInfo()
+    {
+        return $this->container['extendInfo'];
+    }
+
+    /**
+    * Sets extendInfo
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ExtendInfoResp|null $extendInfo extendInfo
+    *
+    * @return $this
+    */
+    public function setExtendInfo($extendInfo)
+    {
+        $this->container['extendInfo'] = $extendInfo;
         return $this;
     }
 
     /**
     * Gets namespace
-    *  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    *  **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     *
     * @return string|null
     */
@@ -548,7 +577,7 @@ class DashBoardInfo implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/en-us/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
+    * @param string|null $namespace **参数解释** 查询服务的命名空间，各服务命名空间请参阅[[支持监控的服务列表](https://support.huaweicloud.com/api-ces/ces_03_0059.html)](tag:hc)[[支持监控的服务列表](https://support.huaweicloud.com/intl/zh-cn/api-ces/ces_03_0059.html)](tag:hk)[[支持监控的服务列表](https://support.huaweicloud.com/eu/en-us/api-ces/ces_03_0059.html)](tag:hws_eu)[[支持监控的服务列表](ces_03_0059.xml)](tag:ax,cmcc,ctc,dt,dt_test,hcso_dt,fcs,fcs_vm,mix,g42,hk_g42,hk_sbc,hk_tm,hk_vdf,hws_ocb,ocb,sbc,srg) **取值范围** 格式为service.item；service和item必须是字符串，必须以字母开头，只能包含0-9/a-z/A-Z/_。字符串的长度必须在 3 到 32个字符之间。
     *
     * @return $this
     */

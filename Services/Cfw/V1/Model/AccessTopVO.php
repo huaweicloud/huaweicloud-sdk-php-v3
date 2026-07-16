@@ -20,6 +20,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * allHitRuleList  **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
     * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
@@ -42,6 +43,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'allHitRuleList' => '\HuaweiCloud\SDK\Cfw\V1\Model\AccessTopMemberVO[]',
             'denyCount' => 'int',
             'denyTopOneAclId' => 'string',
             'denyTopOneAclName' => 'string',
@@ -64,6 +66,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * allHitRuleList  **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
     * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
@@ -86,6 +89,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'allHitRuleList' => null,
         'denyCount' => 'int64',
         'denyTopOneAclId' => null,
         'denyTopOneAclName' => null,
@@ -129,6 +133,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * allHitRuleList  **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
     * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
@@ -151,6 +156,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'allHitRuleList' => 'all_hit_rule_list',
             'denyCount' => 'deny_count',
             'denyTopOneAclId' => 'deny_top_one_acl_id',
             'denyTopOneAclName' => 'deny_top_one_acl_name',
@@ -173,6 +179,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * allHitRuleList  **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
     * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
@@ -195,6 +202,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'allHitRuleList' => 'setAllHitRuleList',
             'denyCount' => 'setDenyCount',
             'denyTopOneAclId' => 'setDenyTopOneAclId',
             'denyTopOneAclName' => 'setDenyTopOneAclName',
@@ -217,6 +225,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * allHitRuleList  **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
     * denyCount  **参数解释**： 阻断次数 **取值范围**： 不涉及
     * denyTopOneAclId  **参数解释**： Top命中的阻断策略ID **取值范围**： 不涉及
     * denyTopOneAclName  **参数解释**： Top命中的阻断策略名称 **取值范围**： 不涉及
@@ -239,6 +248,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'allHitRuleList' => 'getAllHitRuleList',
             'denyCount' => 'getDenyCount',
             'denyTopOneAclId' => 'getDenyTopOneAclId',
             'denyTopOneAclName' => 'getDenyTopOneAclName',
@@ -317,6 +327,7 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['allHitRuleList'] = isset($data['allHitRuleList']) ? $data['allHitRuleList'] : null;
         $this->container['denyCount'] = isset($data['denyCount']) ? $data['denyCount'] : null;
         $this->container['denyTopOneAclId'] = isset($data['denyTopOneAclId']) ? $data['denyTopOneAclId'] : null;
         $this->container['denyTopOneAclName'] = isset($data['denyTopOneAclName']) ? $data['denyTopOneAclName'] : null;
@@ -357,6 +368,30 @@ class AccessTopVO implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets allHitRuleList
+    *  **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AccessTopMemberVO[]|null
+    */
+    public function getAllHitRuleList()
+    {
+        return $this->container['allHitRuleList'];
+    }
+
+    /**
+    * Sets allHitRuleList
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AccessTopMemberVO[]|null $allHitRuleList **参数解释**： 所有命中规则列表 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setAllHitRuleList($allHitRuleList)
+    {
+        $this->container['allHitRuleList'] = $allHitRuleList;
+        return $this;
     }
 
     /**

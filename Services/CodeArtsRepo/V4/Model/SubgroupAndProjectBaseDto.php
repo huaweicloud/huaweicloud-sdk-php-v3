@@ -76,8 +76,8 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
             'fullName' => 'string',
             'fullPath' => 'string',
             'createdAt' => 'string',
-            'updatedAtTimestamp' => 'string',
-            'starTime' => 'string',
+            'updatedAtTimestamp' => 'int',
+            'starTime' => 'int',
             'starred' => 'bool',
             'developMode' => 'string',
             'id' => 'int',
@@ -174,8 +174,8 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
         'fullName' => null,
         'fullPath' => null,
         'createdAt' => null,
-        'updatedAtTimestamp' => null,
-        'starTime' => null,
+        'updatedAtTimestamp' => 'int64',
+        'starTime' => 'int64',
         'starred' => null,
         'developMode' => null,
         'id' => 'int32',
@@ -684,18 +684,6 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['createdAt']) && (mb_strlen($this->container['createdAt']) < 1)) {
                 $invalidProperties[] = "invalid value for 'createdAt', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['updatedAtTimestamp']) && (mb_strlen($this->container['updatedAtTimestamp']) > 1000)) {
-                $invalidProperties[] = "invalid value for 'updatedAtTimestamp', the character length must be smaller than or equal to 1000.";
-            }
-            if (!is_null($this->container['updatedAtTimestamp']) && (mb_strlen($this->container['updatedAtTimestamp']) < 1)) {
-                $invalidProperties[] = "invalid value for 'updatedAtTimestamp', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['starTime']) && (mb_strlen($this->container['starTime']) > 1000)) {
-                $invalidProperties[] = "invalid value for 'starTime', the character length must be smaller than or equal to 1000.";
-            }
-            if (!is_null($this->container['starTime']) && (mb_strlen($this->container['starTime']) < 1)) {
-                $invalidProperties[] = "invalid value for 'starTime', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['developMode']) && (mb_strlen($this->container['developMode']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'developMode', the character length must be smaller than or equal to 1000.";
             }
@@ -1056,7 +1044,7 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
     * Gets updatedAtTimestamp
     *  **参数解释：** 更新时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getUpdatedAtTimestamp()
     {
@@ -1066,7 +1054,7 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAtTimestamp
     *
-    * @param string|null $updatedAtTimestamp **参数解释：** 更新时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param int|null $updatedAtTimestamp **参数解释：** 更新时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return $this
     */
@@ -1080,7 +1068,7 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
     * Gets starTime
     *  **参数解释：** 开始时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getStarTime()
     {
@@ -1090,7 +1078,7 @@ class SubgroupAndProjectBaseDto implements ModelInterface, ArrayAccess
     /**
     * Sets starTime
     *
-    * @param string|null $starTime **参数解释：** 开始时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
+    * @param int|null $starTime **参数解释：** 开始时间戳。 **取值范围：** 字符串长度不少于1，不超过1000。
     *
     * @return $this
     */

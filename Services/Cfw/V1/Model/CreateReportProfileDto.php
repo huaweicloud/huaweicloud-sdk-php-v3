@@ -345,13 +345,10 @@ class CreateReportProfileDto implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['topicUrn'] === null) {
-            $invalidProperties[] = "'topicUrn' can't be null";
-        }
-            if ((mb_strlen($this->container['topicUrn']) > 1024)) {
+            if (!is_null($this->container['topicUrn']) && (mb_strlen($this->container['topicUrn']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'topicUrn', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['topicUrn']) < 1)) {
+            if (!is_null($this->container['topicUrn']) && (mb_strlen($this->container['topicUrn']) < 1)) {
                 $invalidProperties[] = "invalid value for 'topicUrn', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getSubscriptionTypeAllowableValues();
@@ -548,7 +545,7 @@ class CreateReportProfileDto implements ModelInterface, ArrayAccess
     * Gets topicUrn
     *  **参数解释**： 通知群组 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getTopicUrn()
     {
@@ -558,7 +555,7 @@ class CreateReportProfileDto implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string $topicUrn **参数解释**： 通知群组 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param string|null $topicUrn **参数解释**： 通知群组 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -20,33 +20,38 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  实例ID。
-    * name  实例名称。
-    * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
-    * port  数据库端口。
-    * region  实例所在区域。
+    * id  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * status  **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    * port  **参数解释：** 数据库端口。 **取值范围：** 不涉及。
+    * region  **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     * datastore  datastore
-    * mode  实例类型。与请求参数相同。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    * engine  存储引擎。取值为“rocksDB”。
-    * created  实例创建时间。
-    * updated  实例操作最新变更的时间。
-    * dbUserName  默认用户名。取值为“rwuser”。
-    * vpcId  虚拟私有云ID。
-    * subnetId  子网ID。
-    * securityGroupId  安全组ID。
+    * mode  **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
+    * productType  **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    * engine  **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
+    * created  **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
+    * dbUserName  **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
+    * vpcId  **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
+    * subnetId  **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
+    * securityGroupId  **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     * backupStrategy  backupStrategy
-    * payMode  计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
-    * maintenanceWindow  系统可维护时间窗。
-    * groups  组信息。
-    * enterpriseProjectId  企业项目ID。取值为“0”，表示为default企业项目。
-    * dedicatedResourceId  专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
-    * timeZone  时区。
-    * actions  实例正在执行的动作。
-    * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
-    * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
-    * availabilityZone  实例可用区。
+    * payMode  **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    * maintenanceWindow  **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
+    * groups  **参数解释：** 组信息。 **取值范围：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
+    * dedicatedResourceId  **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
+    * timeZone  **参数解释：** 时区。 **取值范围：** 不涉及。
+    * actions  **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
+    * diskEncryptionId  **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    * lbIpAddress  **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * lbPort  **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  **参数解释：** 实例可用区。 **取值范围：** 不涉及。
+    * drInstanceId  **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
     * dualActiveInfo  dualActiveInfo
+    * ccmCertInfo  ccmCertInfo
+    * ssl  **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    * backupSpaceUsage  backupSpaceUsage
     *
     * @var string[]
     */
@@ -74,41 +79,51 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'dedicatedResourceId' => 'string',
             'timeZone' => 'string',
             'actions' => 'string[]',
+            'diskEncryptionId' => 'string',
             'lbIpAddress' => 'string',
             'lbPort' => 'string',
             'availabilityZone' => 'string',
-            'dualActiveInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DualActiveInfo'
+            'drInstanceId' => 'string',
+            'dualActiveInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DualActiveInfo',
+            'ccmCertInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CertInfoOption',
+            'ssl' => 'string',
+            'backupSpaceUsage' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\BackupSpaceUsage'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  实例ID。
-    * name  实例名称。
-    * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
-    * port  数据库端口。
-    * region  实例所在区域。
+    * id  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * status  **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    * port  **参数解释：** 数据库端口。 **取值范围：** 不涉及。
+    * region  **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     * datastore  datastore
-    * mode  实例类型。与请求参数相同。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    * engine  存储引擎。取值为“rocksDB”。
-    * created  实例创建时间。
-    * updated  实例操作最新变更的时间。
-    * dbUserName  默认用户名。取值为“rwuser”。
-    * vpcId  虚拟私有云ID。
-    * subnetId  子网ID。
-    * securityGroupId  安全组ID。
+    * mode  **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
+    * productType  **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    * engine  **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
+    * created  **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
+    * dbUserName  **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
+    * vpcId  **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
+    * subnetId  **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
+    * securityGroupId  **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     * backupStrategy  backupStrategy
-    * payMode  计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
-    * maintenanceWindow  系统可维护时间窗。
-    * groups  组信息。
-    * enterpriseProjectId  企业项目ID。取值为“0”，表示为default企业项目。
-    * dedicatedResourceId  专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
-    * timeZone  时区。
-    * actions  实例正在执行的动作。
-    * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
-    * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
-    * availabilityZone  实例可用区。
+    * payMode  **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    * maintenanceWindow  **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
+    * groups  **参数解释：** 组信息。 **取值范围：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
+    * dedicatedResourceId  **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
+    * timeZone  **参数解释：** 时区。 **取值范围：** 不涉及。
+    * actions  **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
+    * diskEncryptionId  **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    * lbIpAddress  **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * lbPort  **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  **参数解释：** 实例可用区。 **取值范围：** 不涉及。
+    * drInstanceId  **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
     * dualActiveInfo  dualActiveInfo
+    * ccmCertInfo  ccmCertInfo
+    * ssl  **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    * backupSpaceUsage  backupSpaceUsage
     *
     * @var string[]
     */
@@ -136,10 +151,15 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         'dedicatedResourceId' => null,
         'timeZone' => null,
         'actions' => null,
+        'diskEncryptionId' => null,
         'lbIpAddress' => null,
         'lbPort' => null,
         'availabilityZone' => null,
-        'dualActiveInfo' => null
+        'drInstanceId' => null,
+        'dualActiveInfo' => null,
+        'ccmCertInfo' => null,
+        'ssl' => null,
+        'backupSpaceUsage' => null
     ];
 
     /**
@@ -165,33 +185,38 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  实例ID。
-    * name  实例名称。
-    * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
-    * port  数据库端口。
-    * region  实例所在区域。
+    * id  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * status  **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    * port  **参数解释：** 数据库端口。 **取值范围：** 不涉及。
+    * region  **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     * datastore  datastore
-    * mode  实例类型。与请求参数相同。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    * engine  存储引擎。取值为“rocksDB”。
-    * created  实例创建时间。
-    * updated  实例操作最新变更的时间。
-    * dbUserName  默认用户名。取值为“rwuser”。
-    * vpcId  虚拟私有云ID。
-    * subnetId  子网ID。
-    * securityGroupId  安全组ID。
+    * mode  **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
+    * productType  **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    * engine  **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
+    * created  **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
+    * dbUserName  **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
+    * vpcId  **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
+    * subnetId  **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
+    * securityGroupId  **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     * backupStrategy  backupStrategy
-    * payMode  计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
-    * maintenanceWindow  系统可维护时间窗。
-    * groups  组信息。
-    * enterpriseProjectId  企业项目ID。取值为“0”，表示为default企业项目。
-    * dedicatedResourceId  专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
-    * timeZone  时区。
-    * actions  实例正在执行的动作。
-    * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
-    * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
-    * availabilityZone  实例可用区。
+    * payMode  **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    * maintenanceWindow  **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
+    * groups  **参数解释：** 组信息。 **取值范围：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
+    * dedicatedResourceId  **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
+    * timeZone  **参数解释：** 时区。 **取值范围：** 不涉及。
+    * actions  **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
+    * diskEncryptionId  **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    * lbIpAddress  **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * lbPort  **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  **参数解释：** 实例可用区。 **取值范围：** 不涉及。
+    * drInstanceId  **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
     * dualActiveInfo  dualActiveInfo
+    * ccmCertInfo  ccmCertInfo
+    * ssl  **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    * backupSpaceUsage  backupSpaceUsage
     *
     * @var string[]
     */
@@ -219,41 +244,51 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'dedicatedResourceId' => 'dedicated_resource_id',
             'timeZone' => 'time_zone',
             'actions' => 'actions',
+            'diskEncryptionId' => 'disk_encryption_id',
             'lbIpAddress' => 'lb_ip_address',
             'lbPort' => 'lb_port',
             'availabilityZone' => 'availability_zone',
-            'dualActiveInfo' => 'dual_active_info'
+            'drInstanceId' => 'dr_instance_id',
+            'dualActiveInfo' => 'dual_active_info',
+            'ccmCertInfo' => 'ccm_cert_info',
+            'ssl' => 'ssl',
+            'backupSpaceUsage' => 'backup_space_usage'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  实例ID。
-    * name  实例名称。
-    * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
-    * port  数据库端口。
-    * region  实例所在区域。
+    * id  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * status  **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    * port  **参数解释：** 数据库端口。 **取值范围：** 不涉及。
+    * region  **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     * datastore  datastore
-    * mode  实例类型。与请求参数相同。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    * engine  存储引擎。取值为“rocksDB”。
-    * created  实例创建时间。
-    * updated  实例操作最新变更的时间。
-    * dbUserName  默认用户名。取值为“rwuser”。
-    * vpcId  虚拟私有云ID。
-    * subnetId  子网ID。
-    * securityGroupId  安全组ID。
+    * mode  **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
+    * productType  **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    * engine  **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
+    * created  **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
+    * dbUserName  **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
+    * vpcId  **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
+    * subnetId  **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
+    * securityGroupId  **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     * backupStrategy  backupStrategy
-    * payMode  计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
-    * maintenanceWindow  系统可维护时间窗。
-    * groups  组信息。
-    * enterpriseProjectId  企业项目ID。取值为“0”，表示为default企业项目。
-    * dedicatedResourceId  专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
-    * timeZone  时区。
-    * actions  实例正在执行的动作。
-    * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
-    * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
-    * availabilityZone  实例可用区。
+    * payMode  **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    * maintenanceWindow  **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
+    * groups  **参数解释：** 组信息。 **取值范围：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
+    * dedicatedResourceId  **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
+    * timeZone  **参数解释：** 时区。 **取值范围：** 不涉及。
+    * actions  **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
+    * diskEncryptionId  **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    * lbIpAddress  **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * lbPort  **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  **参数解释：** 实例可用区。 **取值范围：** 不涉及。
+    * drInstanceId  **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
     * dualActiveInfo  dualActiveInfo
+    * ccmCertInfo  ccmCertInfo
+    * ssl  **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    * backupSpaceUsage  backupSpaceUsage
     *
     * @var string[]
     */
@@ -281,41 +316,51 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'dedicatedResourceId' => 'setDedicatedResourceId',
             'timeZone' => 'setTimeZone',
             'actions' => 'setActions',
+            'diskEncryptionId' => 'setDiskEncryptionId',
             'lbIpAddress' => 'setLbIpAddress',
             'lbPort' => 'setLbPort',
             'availabilityZone' => 'setAvailabilityZone',
-            'dualActiveInfo' => 'setDualActiveInfo'
+            'drInstanceId' => 'setDrInstanceId',
+            'dualActiveInfo' => 'setDualActiveInfo',
+            'ccmCertInfo' => 'setCcmCertInfo',
+            'ssl' => 'setSsl',
+            'backupSpaceUsage' => 'setBackupSpaceUsage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  实例ID。
-    * name  实例名称。
-    * status  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
-    * port  数据库端口。
-    * region  实例所在区域。
+    * id  **参数解释：** 实例ID。 **取值范围：** 不涉及。
+    * name  **参数解释：** 实例名称。 **取值范围：** 不涉及。
+    * status  **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    * port  **参数解释：** 数据库端口。 **取值范围：** 不涉及。
+    * region  **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     * datastore  datastore
-    * mode  实例类型。与请求参数相同。
-    * productType  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
-    * engine  存储引擎。取值为“rocksDB”。
-    * created  实例创建时间。
-    * updated  实例操作最新变更的时间。
-    * dbUserName  默认用户名。取值为“rwuser”。
-    * vpcId  虚拟私有云ID。
-    * subnetId  子网ID。
-    * securityGroupId  安全组ID。
+    * mode  **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
+    * productType  **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    * engine  **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
+    * created  **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
+    * updated  **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
+    * dbUserName  **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
+    * vpcId  **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
+    * subnetId  **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
+    * securityGroupId  **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     * backupStrategy  backupStrategy
-    * payMode  计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
-    * maintenanceWindow  系统可维护时间窗。
-    * groups  组信息。
-    * enterpriseProjectId  企业项目ID。取值为“0”，表示为default企业项目。
-    * dedicatedResourceId  专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
-    * timeZone  时区。
-    * actions  实例正在执行的动作。
-    * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
-    * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
-    * availabilityZone  实例可用区。
+    * payMode  **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    * maintenanceWindow  **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
+    * groups  **参数解释：** 组信息。 **取值范围：** 不涉及。
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
+    * dedicatedResourceId  **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
+    * timeZone  **参数解释：** 时区。 **取值范围：** 不涉及。
+    * actions  **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
+    * diskEncryptionId  **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    * lbIpAddress  **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * lbPort  **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  **参数解释：** 实例可用区。 **取值范围：** 不涉及。
+    * drInstanceId  **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
     * dualActiveInfo  dualActiveInfo
+    * ccmCertInfo  ccmCertInfo
+    * ssl  **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    * backupSpaceUsage  backupSpaceUsage
     *
     * @var string[]
     */
@@ -343,10 +388,15 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'dedicatedResourceId' => 'getDedicatedResourceId',
             'timeZone' => 'getTimeZone',
             'actions' => 'getActions',
+            'diskEncryptionId' => 'getDiskEncryptionId',
             'lbIpAddress' => 'getLbIpAddress',
             'lbPort' => 'getLbPort',
             'availabilityZone' => 'getAvailabilityZone',
-            'dualActiveInfo' => 'getDualActiveInfo'
+            'drInstanceId' => 'getDrInstanceId',
+            'dualActiveInfo' => 'getDualActiveInfo',
+            'ccmCertInfo' => 'getCcmCertInfo',
+            'ssl' => 'getSsl',
+            'backupSpaceUsage' => 'getBackupSpaceUsage'
     ];
 
     /**
@@ -430,10 +480,15 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         $this->container['dedicatedResourceId'] = isset($data['dedicatedResourceId']) ? $data['dedicatedResourceId'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
+        $this->container['diskEncryptionId'] = isset($data['diskEncryptionId']) ? $data['diskEncryptionId'] : null;
         $this->container['lbIpAddress'] = isset($data['lbIpAddress']) ? $data['lbIpAddress'] : null;
         $this->container['lbPort'] = isset($data['lbPort']) ? $data['lbPort'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
+        $this->container['drInstanceId'] = isset($data['drInstanceId']) ? $data['drInstanceId'] : null;
         $this->container['dualActiveInfo'] = isset($data['dualActiveInfo']) ? $data['dualActiveInfo'] : null;
+        $this->container['ccmCertInfo'] = isset($data['ccmCertInfo']) ? $data['ccmCertInfo'] : null;
+        $this->container['ssl'] = isset($data['ssl']) ? $data['ssl'] : null;
+        $this->container['backupSpaceUsage'] = isset($data['backupSpaceUsage']) ? $data['backupSpaceUsage'] : null;
     }
 
     /**
@@ -507,6 +562,12 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         if ($this->container['actions'] === null) {
             $invalidProperties[] = "'actions' can't be null";
         }
+        if ($this->container['diskEncryptionId'] === null) {
+            $invalidProperties[] = "'diskEncryptionId' can't be null";
+        }
+        if ($this->container['ssl'] === null) {
+            $invalidProperties[] = "'ssl' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -523,7 +584,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实例ID。
+    *  **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -535,7 +596,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 实例ID。
+    * @param string $id **参数解释：** 实例ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -547,7 +608,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例名称。
+    *  **参数解释：** 实例名称。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -559,7 +620,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 实例名称。
+    * @param string $name **参数解释：** 实例名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -571,7 +632,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    *  **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     *
     * @return string
     */
@@ -583,7 +644,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 实例状态。 取值： - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
+    * @param string $status **参数解释：** 实例状态。 **取值范围：** - normal，表示实例正常。 - abnormal，表示实例异常。 - creating，表示实例创建中。 - frozen，表示实例被冻结。 - data_disk_full，表示实例磁盘已满。 - createfail，表示实例创建失败。 - enlargefail，表示实例扩容节点个数失败。
     *
     * @return $this
     */
@@ -595,7 +656,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  数据库端口。
+    *  **参数解释：** 数据库端口。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -607,7 +668,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param string $port 数据库端口。
+    * @param string $port **参数解释：** 数据库端口。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -619,7 +680,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  实例所在区域。
+    *  **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -631,7 +692,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region 实例所在区域。
+    * @param string $region **参数解释：** 实例所在区域。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -667,7 +728,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型。与请求参数相同。
+    *  **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
     *
     * @return string
     */
@@ -679,7 +740,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string $mode 实例类型。与请求参数相同。
+    * @param string $mode **参数解释：** 实例类型。 **取值范围：** 与请求参数相同。
     *
     * @return $this
     */
@@ -691,7 +752,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets productType
-    *  产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    *  **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     *
     * @return string|null
     */
@@ -703,7 +764,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets productType
     *
-    * @param string|null $productType 产品类型。 GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
+    * @param string|null $productType **参数解释：** 产品类型。 **取值范围：** GeminiDB Redis云原生部署模式集群涉及此字段，取值：   -  Standard 标准型   -  Capacity 容量型
     *
     * @return $this
     */
@@ -715,7 +776,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  存储引擎。取值为“rocksDB”。
+    *  **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
     *
     * @return string
     */
@@ -727,7 +788,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 存储引擎。取值为“rocksDB”。
+    * @param string $engine **参数解释：** 存储引擎。 **取值范围：** 取值为“rocksDB”。
     *
     * @return $this
     */
@@ -739,7 +800,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  实例创建时间。
+    *  **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -751,7 +812,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string $created 实例创建时间。
+    * @param string $created **参数解释：** 实例创建时间。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -763,7 +824,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  实例操作最新变更的时间。
+    *  **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -775,7 +836,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string $updated 实例操作最新变更的时间。
+    * @param string $updated **参数解释：** 实例操作最新变更的时间。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -787,7 +848,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbUserName
-    *  默认用户名。取值为“rwuser”。
+    *  **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
     *
     * @return string
     */
@@ -799,7 +860,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets dbUserName
     *
-    * @param string $dbUserName 默认用户名。取值为“rwuser”。
+    * @param string $dbUserName **参数解释：** 默认用户名。 **取值范围：** 取值为“rwuser”。
     *
     * @return $this
     */
@@ -811,7 +872,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  虚拟私有云ID。
+    *  **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -823,7 +884,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 虚拟私有云ID。
+    * @param string $vpcId **参数解释：** 虚拟私有云ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -835,7 +896,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  子网ID。
+    *  **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
     *
     * @return string
     */
@@ -847,7 +908,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string $subnetId 子网ID。
+    * @param string $subnetId **参数解释：** 子网ID。 **取值范围：** GeminiDB Cassandra 实例使用多个子网的场景，请参见表 ListInstancesNodeResult字段数据结构说明中的“subnet_id”。
     *
     * @return $this
     */
@@ -859,7 +920,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroupId
-    *  安全组ID。
+    *  **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -871,7 +932,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string $securityGroupId 安全组ID。
+    * @param string $securityGroupId **参数解释：** 安全组ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -907,7 +968,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets payMode
-    *  计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    *  **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
     *
     * @return string
     */
@@ -919,7 +980,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets payMode
     *
-    * @param string $payMode 计费方式。 - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
+    * @param string $payMode **参数解释：** 计费方式。 **取值范围：** - 取值为“0”，表示按需计费。 - 取值为“1”，表示包年/包月计费。
     *
     * @return $this
     */
@@ -931,7 +992,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintenanceWindow
-    *  系统可维护时间窗。
+    *  **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -943,7 +1004,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets maintenanceWindow
     *
-    * @param string $maintenanceWindow 系统可维护时间窗。
+    * @param string $maintenanceWindow **参数解释：** 系统可维护时间窗。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -955,7 +1016,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets groups
-    *  组信息。
+    *  **参数解释：** 组信息。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ListInstancesGroupResult[]
     */
@@ -967,7 +1028,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ListInstancesGroupResult[] $groups 组信息。
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ListInstancesGroupResult[] $groups **参数解释：** 组信息。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -979,7 +1040,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID。取值为“0”，表示为default企业项目。
+    *  **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
     *
     * @return string
     */
@@ -991,7 +1052,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 企业项目ID。取值为“0”，表示为default企业项目。
+    * @param string $enterpriseProjectId **参数解释：** 企业项目ID。 **取值范围：** 取值为“0”，表示为default企业项目。
     *
     * @return $this
     */
@@ -1003,7 +1064,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets dedicatedResourceId
-    *  专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
+    *  **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1015,7 +1076,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets dedicatedResourceId
     *
-    * @param string|null $dedicatedResourceId 专属资源ID，只有数据库实例属于专属资源池才会返回该参数。
+    * @param string|null $dedicatedResourceId **参数解释：** 专属资源ID。只有数据库实例属于专属资源池才会返回该参数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1027,7 +1088,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeZone
-    *  时区。
+    *  **参数解释：** 时区。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -1039,7 +1100,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets timeZone
     *
-    * @param string $timeZone 时区。
+    * @param string $timeZone **参数解释：** 时区。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1051,7 +1112,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets actions
-    *  实例正在执行的动作。
+    *  **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
     *
     * @return string[]
     */
@@ -1063,7 +1124,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets actions
     *
-    * @param string[] $actions 实例正在执行的动作。
+    * @param string[] $actions **参数解释：** 实例正在执行的动作。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1074,8 +1135,32 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets diskEncryptionId
+    *  **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    *
+    * @return string
+    */
+    public function getDiskEncryptionId()
+    {
+        return $this->container['diskEncryptionId'];
+    }
+
+    /**
+    * Sets diskEncryptionId
+    *
+    * @param string $diskEncryptionId **参数解释：** 磁盘加密时的密钥ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDiskEncryptionId($diskEncryptionId)
+    {
+        $this->container['diskEncryptionId'] = $diskEncryptionId;
+        return $this;
+    }
+
+    /**
     * Gets lbIpAddress
-    *  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
+    *  **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
     *
     * @return string|null
     */
@@ -1087,7 +1172,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets lbIpAddress
     *
-    * @param string|null $lbIpAddress 负载均衡ip，只有存在负载均衡ip，才会返回该参数。
+    * @param string|null $lbIpAddress **参数解释：** 负载均衡ip。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
     *
     * @return $this
     */
@@ -1099,7 +1184,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets lbPort
-    *  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    *  **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
     *
     * @return string|null
     */
@@ -1111,7 +1196,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets lbPort
     *
-    * @param string|null $lbPort 负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    * @param string|null $lbPort **参数解释：** 负载均衡端口。 **取值范围：** 只有存在负载均衡ip，才会返回该参数。
     *
     * @return $this
     */
@@ -1123,7 +1208,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  实例可用区。
+    *  **参数解释：** 实例可用区。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1135,13 +1220,37 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string|null $availabilityZone 实例可用区。
+    * @param string|null $availabilityZone **参数解释：** 实例可用区。 **取值范围：** 不涉及。
     *
     * @return $this
     */
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
+        return $this;
+    }
+
+    /**
+    * Gets drInstanceId
+    *  **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDrInstanceId()
+    {
+        return $this->container['drInstanceId'];
+    }
+
+    /**
+    * Sets drInstanceId
+    *
+    * @param string|null $drInstanceId **参数解释：** 容灾实例ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDrInstanceId($drInstanceId)
+    {
+        $this->container['drInstanceId'] = $drInstanceId;
         return $this;
     }
 
@@ -1166,6 +1275,78 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     public function setDualActiveInfo($dualActiveInfo)
     {
         $this->container['dualActiveInfo'] = $dualActiveInfo;
+        return $this;
+    }
+
+    /**
+    * Gets ccmCertInfo
+    *  ccmCertInfo
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CertInfoOption|null
+    */
+    public function getCcmCertInfo()
+    {
+        return $this->container['ccmCertInfo'];
+    }
+
+    /**
+    * Sets ccmCertInfo
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\CertInfoOption|null $ccmCertInfo ccmCertInfo
+    *
+    * @return $this
+    */
+    public function setCcmCertInfo($ccmCertInfo)
+    {
+        $this->container['ccmCertInfo'] = $ccmCertInfo;
+        return $this;
+    }
+
+    /**
+    * Gets ssl
+    *  **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    *
+    * @return string
+    */
+    public function getSsl()
+    {
+        return $this->container['ssl'];
+    }
+
+    /**
+    * Sets ssl
+    *
+    * @param string $ssl **参数解释：** SSL安全连接启用情况。 **取值范围：** - 取值为“0”表示未启用。 - 取值为“1”表示已启用。
+    *
+    * @return $this
+    */
+    public function setSsl($ssl)
+    {
+        $this->container['ssl'] = $ssl;
+        return $this;
+    }
+
+    /**
+    * Gets backupSpaceUsage
+    *  backupSpaceUsage
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\BackupSpaceUsage|null
+    */
+    public function getBackupSpaceUsage()
+    {
+        return $this->container['backupSpaceUsage'];
+    }
+
+    /**
+    * Sets backupSpaceUsage
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\BackupSpaceUsage|null $backupSpaceUsage backupSpaceUsage
+    *
+    * @return $this
+    */
+    public function setBackupSpaceUsage($backupSpaceUsage)
+    {
+        $this->container['backupSpaceUsage'] = $backupSpaceUsage;
         return $this;
     }
 

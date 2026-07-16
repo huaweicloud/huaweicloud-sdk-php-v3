@@ -20,7 +20,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groups  **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
@@ -32,7 +32,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string',
+            'groups' => 'string[]',
             'name' => 'string',
             'brokers' => 'string[]',
             'broadcast' => 'bool',
@@ -44,7 +44,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groups  **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
@@ -56,7 +56,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null,
+        'groups' => null,
         'name' => null,
         'brokers' => null,
         'broadcast' => null,
@@ -89,7 +89,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groups  **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
@@ -101,7 +101,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id',
+            'groups' => 'groups',
             'name' => 'name',
             'brokers' => 'brokers',
             'broadcast' => 'broadcast',
@@ -113,7 +113,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groups  **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
@@ -125,7 +125,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId',
+            'groups' => 'setGroups',
             'name' => 'setName',
             'brokers' => 'setBrokers',
             'broadcast' => 'setBroadcast',
@@ -137,7 +137,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * groups  **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * name  **参数解释**： 消费组名称。 **约束限制**： 只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。 当创建消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * brokers  **参数解释**： 关联的代理列表。 **约束限制**： 仅RocketMQ实例4.8.0版本需要填写此参数。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * broadcast  **参数解释**： 是否设置为广播消费。 **约束限制**： 不涉及。 **取值范围**： - true：使用广播消费。 - false：不使用广播消费。 **默认取值**： 不涉及。
@@ -149,7 +149,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId',
+            'groups' => 'getGroups',
             'name' => 'getName',
             'brokers' => 'getBrokers',
             'broadcast' => 'getBroadcast',
@@ -217,7 +217,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     */
     public function __construct(array $data = null)
     {
-        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['broadcast'] = isset($data['broadcast']) ? $data['broadcast'] : null;
@@ -256,26 +256,26 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     }
 
     /**
-    * Gets jobId
-    *  **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * Gets groups
+    *  **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string|null
+    * @return string[]|null
     */
-    public function getJobId()
+    public function getGroups()
     {
-        return $this->container['jobId'];
+        return $this->container['groups'];
     }
 
     /**
-    * Sets jobId
+    * Sets groups
     *
-    * @param string|null $jobId **参数解释**： 待删除的消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string[]|null $groups **参数解释**： 需要删除的消费组名称列表。 **约束限制**： 当批量删除消费组时必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */
-    public function setJobId($jobId)
+    public function setGroups($groups)
     {
-        $this->container['jobId'] = $jobId;
+        $this->container['groups'] = $groups;
         return $this;
     }
 

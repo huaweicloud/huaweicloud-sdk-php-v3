@@ -22,21 +22,33 @@ class ListAvailableRdsForMigrateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * dataNodes  可用后端DN信息。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dataNodes' => '\HuaweiCloud\SDK\Ddm\V1\Model\AvailableDnInstance[]'
+            'dataNodes' => '\HuaweiCloud\SDK\Ddm\V1\Model\AvailableDnInstance[]',
+            'offset' => 'int',
+            'limit' => 'int',
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dataNodes  可用后端DN信息。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'dataNodes' => null
+        'dataNodes' => null,
+        'offset' => null,
+        'limit' => null,
+        'total' => null
     ];
 
     /**
@@ -63,31 +75,49 @@ class ListAvailableRdsForMigrateResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * dataNodes  可用后端DN信息。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'dataNodes' => 'data_nodes'
+            'dataNodes' => 'data_nodes',
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dataNodes  可用后端DN信息。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'dataNodes' => 'setDataNodes'
+            'dataNodes' => 'setDataNodes',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dataNodes  可用后端DN信息。
+    * offset  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    * limit  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    * total  **参数解释**：  总记录数。  **参数范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'dataNodes' => 'getDataNodes'
+            'dataNodes' => 'getDataNodes',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'total' => 'getTotal'
     ];
 
     /**
@@ -149,6 +179,9 @@ class ListAvailableRdsForMigrateResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['dataNodes'] = isset($data['dataNodes']) ? $data['dataNodes'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -194,6 +227,78 @@ class ListAvailableRdsForMigrateResponse implements ModelInterface, ArrayAccess
     public function setDataNodes($dataNodes)
     {
         $this->container['dataNodes'] = $dataNodes;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**：  分页参数: 起始值。  **参数范围**：   大于等于0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**：  分页参数: 每页记录数。  **参数范围**：  大于0且小于等于128。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  **参数解释**：  总记录数。  **参数范围**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total **参数解释**：  总记录数。  **参数范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
         return $this;
     }
 

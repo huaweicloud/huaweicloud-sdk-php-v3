@@ -20,11 +20,11 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：** 统计ID。
-    * userId  **参数解释：** 用户ID。
-    * projectId  **参数解释：** 仓库ID。
-    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
-    * status  **参数解释：** 统计状态。
+    * id  **参数解释：** 统计ID。 **默认取值：** 不涉及。
+    * userId  **参数解释：** 用户ID。 **默认取值：** 不涉及。
+    * projectId  **参数解释：** 仓库ID。 **默认取值：** 不涉及。
+    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
+    * status  **参数解释：** 统计状态。 **默认取值：** 0
     * statDate  **参数解释：** 统计时间。
     * createdAt  **参数解释：** 统计创建时间。
     * updatedAt  **参数解释：** 统计更新时间。
@@ -44,11 +44,11 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：** 统计ID。
-    * userId  **参数解释：** 用户ID。
-    * projectId  **参数解释：** 仓库ID。
-    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
-    * status  **参数解释：** 统计状态。
+    * id  **参数解释：** 统计ID。 **默认取值：** 不涉及。
+    * userId  **参数解释：** 用户ID。 **默认取值：** 不涉及。
+    * projectId  **参数解释：** 仓库ID。 **默认取值：** 不涉及。
+    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
+    * status  **参数解释：** 统计状态。 **默认取值：** 0
     * statDate  **参数解释：** 统计时间。
     * createdAt  **参数解释：** 统计创建时间。
     * updatedAt  **参数解释：** 统计更新时间。
@@ -89,11 +89,11 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：** 统计ID。
-    * userId  **参数解释：** 用户ID。
-    * projectId  **参数解释：** 仓库ID。
-    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
-    * status  **参数解释：** 统计状态。
+    * id  **参数解释：** 统计ID。 **默认取值：** 不涉及。
+    * userId  **参数解释：** 用户ID。 **默认取值：** 不涉及。
+    * projectId  **参数解释：** 仓库ID。 **默认取值：** 不涉及。
+    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
+    * status  **参数解释：** 统计状态。 **默认取值：** 0
     * statDate  **参数解释：** 统计时间。
     * createdAt  **参数解释：** 统计创建时间。
     * updatedAt  **参数解释：** 统计更新时间。
@@ -113,11 +113,11 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：** 统计ID。
-    * userId  **参数解释：** 用户ID。
-    * projectId  **参数解释：** 仓库ID。
-    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
-    * status  **参数解释：** 统计状态。
+    * id  **参数解释：** 统计ID。 **默认取值：** 不涉及。
+    * userId  **参数解释：** 用户ID。 **默认取值：** 不涉及。
+    * projectId  **参数解释：** 仓库ID。 **默认取值：** 不涉及。
+    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
+    * status  **参数解释：** 统计状态。 **默认取值：** 0
     * statDate  **参数解释：** 统计时间。
     * createdAt  **参数解释：** 统计创建时间。
     * updatedAt  **参数解释：** 统计更新时间。
@@ -137,11 +137,11 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：** 统计ID。
-    * userId  **参数解释：** 用户ID。
-    * projectId  **参数解释：** 仓库ID。
-    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
-    * status  **参数解释：** 统计状态。
+    * id  **参数解释：** 统计ID。 **默认取值：** 不涉及。
+    * userId  **参数解释：** 用户ID。 **默认取值：** 不涉及。
+    * projectId  **参数解释：** 仓库ID。 **默认取值：** 不涉及。
+    * branch  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
+    * status  **参数解释：** 统计状态。 **默认取值：** 0
     * statDate  **参数解释：** 统计时间。
     * createdAt  **参数解释：** 统计创建时间。
     * updatedAt  **参数解释：** 统计更新时间。
@@ -269,7 +269,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：** 统计ID。
+    *  **参数解释：** 统计ID。 **默认取值：** 不涉及。
     *
     * @return int|null
     */
@@ -281,7 +281,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id **参数解释：** 统计ID。
+    * @param int|null $id **参数解释：** 统计ID。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  **参数解释：** 用户ID。
+    *  **参数解释：** 用户ID。 **默认取值：** 不涉及。
     *
     * @return int|null
     */
@@ -305,7 +305,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param int|null $userId **参数解释：** 用户ID。
+    * @param int|null $userId **参数解释：** 用户ID。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  **参数解释：** 仓库ID。
+    *  **参数解释：** 仓库ID。 **默认取值：** 不涉及。
     *
     * @return int|null
     */
@@ -329,7 +329,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param int|null $projectId **参数解释：** 仓库ID。
+    * @param int|null $projectId **参数解释：** 仓库ID。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets branch
-    *  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
+    *  **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -353,7 +353,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
     /**
     * Sets branch
     *
-    * @param string|null $branch **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节
+    * @param string|null $branch **参数解释：** 分支名。 **取值范围：** 最小1个字节，最大200字节 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 统计状态。
+    *  **参数解释：** 统计状态。 **默认取值：** 0
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class StatisticEventsDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 统计状态。
+    * @param string|null $status **参数解释：** 统计状态。 **默认取值：** 0
     *
     * @return $this
     */

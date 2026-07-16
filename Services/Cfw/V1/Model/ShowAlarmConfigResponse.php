@@ -21,26 +21,26 @@ class ShowAlarmConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * alarmConfigs  告警配置列表
     * data  data
+    * alarmConfigs  告警配置列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'alarmConfigs' => '\HuaweiCloud\SDK\Cfw\V1\Model\AlarmConfig[]',
-            'data' => 'object'
+            'data' => 'object',
+            'alarmConfigs' => '\HuaweiCloud\SDK\Cfw\V1\Model\AlarmConfig[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * alarmConfigs  告警配置列表
     * data  data
+    * alarmConfigs  告警配置列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'alarmConfigs' => null,
-        'data' => null
+        'data' => null,
+        'alarmConfigs' => null
     ];
 
     /**
@@ -66,38 +66,38 @@ class ShowAlarmConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * alarmConfigs  告警配置列表
     * data  data
+    * alarmConfigs  告警配置列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'alarmConfigs' => 'alarm_configs',
-            'data' => 'data'
+            'data' => 'data',
+            'alarmConfigs' => 'alarm_configs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * alarmConfigs  告警配置列表
     * data  data
+    * alarmConfigs  告警配置列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'alarmConfigs' => 'setAlarmConfigs',
-            'data' => 'setData'
+            'data' => 'setData',
+            'alarmConfigs' => 'setAlarmConfigs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * alarmConfigs  告警配置列表
     * data  data
+    * alarmConfigs  告警配置列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'alarmConfigs' => 'getAlarmConfigs',
-            'data' => 'getData'
+            'data' => 'getData',
+            'alarmConfigs' => 'getAlarmConfigs'
     ];
 
     /**
@@ -158,8 +158,8 @@ class ShowAlarmConfigResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['alarmConfigs'] = isset($data['alarmConfigs']) ? $data['alarmConfigs'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['alarmConfigs'] = isset($data['alarmConfigs']) ? $data['alarmConfigs'] : null;
     }
 
     /**
@@ -185,30 +185,6 @@ class ShowAlarmConfigResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets alarmConfigs
-    *  告警配置列表
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AlarmConfig[]|null
-    */
-    public function getAlarmConfigs()
-    {
-        return $this->container['alarmConfigs'];
-    }
-
-    /**
-    * Sets alarmConfigs
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AlarmConfig[]|null $alarmConfigs 告警配置列表
-    *
-    * @return $this
-    */
-    public function setAlarmConfigs($alarmConfigs)
-    {
-        $this->container['alarmConfigs'] = $alarmConfigs;
-        return $this;
-    }
-
-    /**
     * Gets data
     *  data
     *
@@ -229,6 +205,30 @@ class ShowAlarmConfigResponse implements ModelInterface, ArrayAccess
     public function setData($data)
     {
         $this->container['data'] = $data;
+        return $this;
+    }
+
+    /**
+    * Gets alarmConfigs
+    *  告警配置列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AlarmConfig[]|null
+    */
+    public function getAlarmConfigs()
+    {
+        return $this->container['alarmConfigs'];
+    }
+
+    /**
+    * Sets alarmConfigs
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AlarmConfig[]|null $alarmConfigs 告警配置列表
+    *
+    * @return $this
+    */
+    public function setAlarmConfigs($alarmConfigs)
+    {
+        $this->container['alarmConfigs'] = $alarmConfigs;
         return $this;
     }
 

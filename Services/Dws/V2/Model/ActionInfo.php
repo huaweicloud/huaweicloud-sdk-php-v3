@@ -20,7 +20,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
@@ -42,7 +42,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
@@ -85,7 +85,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
@@ -107,7 +107,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
@@ -129,7 +129,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * actionName  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     * progress  **参数解释**： 操作进度，默认10。 **取值范围**： 0~100
     * completed  **参数解释**： 操作是否完成。 **取值范围**： 不涉及。
     * startTime  **参数解释**： 操作开始时间。 **取值范围**： 不涉及。
@@ -240,7 +240,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionName
-    *  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    *  **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets actionName
     *
-    * @param string|null $actionName **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群
+    * @param string|null $actionName **参数解释**： 操作名称。 **取值范围**： Create：创建逻辑集群 Expand：扩容逻辑集群 Restart：重启逻辑集群 Delete：删除逻辑集群 Shrink：缩容逻辑集群 Grow：扩容逻辑集群
     *
     * @return $this
     */

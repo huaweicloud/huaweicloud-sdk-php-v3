@@ -27,7 +27,7 @@ class ModifySubscriptionsRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'subscriptionIds' => 'string[]',
-            'jobSchedule' => '\HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule'
+            'jobSchedule' => '\HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleModify'
     ];
 
     /**
@@ -217,7 +217,7 @@ class ModifySubscriptionsRequestBody implements ModelInterface, ArrayAccess
     * Gets jobSchedule
     *  jobSchedule
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleModify
     */
     public function getJobSchedule()
     {
@@ -227,7 +227,7 @@ class ModifySubscriptionsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets jobSchedule
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule $jobSchedule jobSchedule
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleModify $jobSchedule jobSchedule
     *
     * @return $this
     */

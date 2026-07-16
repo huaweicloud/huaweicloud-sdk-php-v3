@@ -30,6 +30,7 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     * description  规则描述
     * timestamp  创建规则时间戳
+    * geoTagList  地理位置
     *
     * @var string[]
     */
@@ -42,7 +43,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'int',
             'ipType' => 'string',
             'description' => 'string',
-            'timestamp' => 'int'
+            'timestamp' => 'int',
+            'geoTagList' => 'string[]'
     ];
 
     /**
@@ -56,6 +58,7 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     * description  规则描述
     * timestamp  创建规则时间戳
+    * geoTagList  地理位置
     *
     * @var string[]
     */
@@ -68,7 +71,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'ipType' => null,
         'description' => null,
-        'timestamp' => 'int64'
+        'timestamp' => 'int64',
+        'geoTagList' => null
     ];
 
     /**
@@ -103,6 +107,7 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     * description  规则描述
     * timestamp  创建规则时间戳
+    * geoTagList  地理位置
     *
     * @var string[]
     */
@@ -115,7 +120,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'ipType' => 'ip_type',
             'description' => 'description',
-            'timestamp' => 'timestamp'
+            'timestamp' => 'timestamp',
+            'geoTagList' => 'geoTagList'
     ];
 
     /**
@@ -129,6 +135,7 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     * description  规则描述
     * timestamp  创建规则时间戳
+    * geoTagList  地理位置
     *
     * @var string[]
     */
@@ -141,7 +148,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'ipType' => 'setIpType',
             'description' => 'setDescription',
-            'timestamp' => 'setTimestamp'
+            'timestamp' => 'setTimestamp',
+            'geoTagList' => 'setGeoTagList'
     ];
 
     /**
@@ -155,6 +163,7 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     * ipType  ip范围。若您的网站使用独享模式，请确认独享引擎是否全部升级到最新版本，避免造成异常。202412之后的版本支持配置IP范围
     * description  规则描述
     * timestamp  创建规则时间戳
+    * geoTagList  地理位置
     *
     * @var string[]
     */
@@ -167,7 +176,8 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'ipType' => 'getIpType',
             'description' => 'getDescription',
-            'timestamp' => 'getTimestamp'
+            'timestamp' => 'getTimestamp',
+            'geoTagList' => 'getGeoTagList'
     ];
 
     /**
@@ -237,6 +247,7 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
         $this->container['ipType'] = isset($data['ipType']) ? $data['ipType'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['geoTagList'] = isset($data['geoTagList']) ? $data['geoTagList'] : null;
     }
 
     /**
@@ -474,6 +485,30 @@ class CreateGeoipRuleResponse implements ModelInterface, ArrayAccess
     public function setTimestamp($timestamp)
     {
         $this->container['timestamp'] = $timestamp;
+        return $this;
+    }
+
+    /**
+    * Gets geoTagList
+    *  地理位置
+    *
+    * @return string[]|null
+    */
+    public function getGeoTagList()
+    {
+        return $this->container['geoTagList'];
+    }
+
+    /**
+    * Sets geoTagList
+    *
+    * @param string[]|null $geoTagList 地理位置
+    *
+    * @return $this
+    */
+    public function setGeoTagList($geoTagList)
+    {
+        $this->container['geoTagList'] = $geoTagList;
         return $this;
     }
 

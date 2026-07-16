@@ -45,6 +45,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
     * paramGroup  参数组。
     * actions  实例动作。
     * createFailErrorCode  实例创建失败错误码。
+    * usersSyncSwitchOn  **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
     * groups  实例分组。
     * opsWindow  opsWindow
     * tagsInfo  tagsInfo
@@ -91,6 +92,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
             'paramGroup' => 'string',
             'actions' => '\HuaweiCloud\SDK\GaussDB\V3\Model\QueryAction[]',
             'createFailErrorCode' => 'string',
+            'usersSyncSwitchOn' => 'bool',
             'groups' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksInstanceInfoGroups[]',
             'opsWindow' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksInstanceInfoOpsWindow',
             'tagsInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksInstanceInfoTagsInfo',
@@ -137,6 +139,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
     * paramGroup  参数组。
     * actions  实例动作。
     * createFailErrorCode  实例创建失败错误码。
+    * usersSyncSwitchOn  **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
     * groups  实例分组。
     * opsWindow  opsWindow
     * tagsInfo  tagsInfo
@@ -183,6 +186,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
         'paramGroup' => null,
         'actions' => null,
         'createFailErrorCode' => null,
+        'usersSyncSwitchOn' => null,
         'groups' => null,
         'opsWindow' => null,
         'tagsInfo' => null,
@@ -250,6 +254,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
     * paramGroup  参数组。
     * actions  实例动作。
     * createFailErrorCode  实例创建失败错误码。
+    * usersSyncSwitchOn  **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
     * groups  实例分组。
     * opsWindow  opsWindow
     * tagsInfo  tagsInfo
@@ -296,6 +301,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
             'paramGroup' => 'param_group',
             'actions' => 'actions',
             'createFailErrorCode' => 'create_fail_error_code',
+            'usersSyncSwitchOn' => 'users_sync_switch_on',
             'groups' => 'groups',
             'opsWindow' => 'ops_window',
             'tagsInfo' => 'tags_info',
@@ -342,6 +348,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
     * paramGroup  参数组。
     * actions  实例动作。
     * createFailErrorCode  实例创建失败错误码。
+    * usersSyncSwitchOn  **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
     * groups  实例分组。
     * opsWindow  opsWindow
     * tagsInfo  tagsInfo
@@ -388,6 +395,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
             'paramGroup' => 'setParamGroup',
             'actions' => 'setActions',
             'createFailErrorCode' => 'setCreateFailErrorCode',
+            'usersSyncSwitchOn' => 'setUsersSyncSwitchOn',
             'groups' => 'setGroups',
             'opsWindow' => 'setOpsWindow',
             'tagsInfo' => 'setTagsInfo',
@@ -434,6 +442,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
     * paramGroup  参数组。
     * actions  实例动作。
     * createFailErrorCode  实例创建失败错误码。
+    * usersSyncSwitchOn  **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
     * groups  实例分组。
     * opsWindow  opsWindow
     * tagsInfo  tagsInfo
@@ -480,6 +489,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
             'paramGroup' => 'getParamGroup',
             'actions' => 'getActions',
             'createFailErrorCode' => 'getCreateFailErrorCode',
+            'usersSyncSwitchOn' => 'getUsersSyncSwitchOn',
             'groups' => 'getGroups',
             'opsWindow' => 'getOpsWindow',
             'tagsInfo' => 'getTagsInfo',
@@ -582,6 +592,7 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
         $this->container['paramGroup'] = isset($data['paramGroup']) ? $data['paramGroup'] : null;
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
         $this->container['createFailErrorCode'] = isset($data['createFailErrorCode']) ? $data['createFailErrorCode'] : null;
+        $this->container['usersSyncSwitchOn'] = isset($data['usersSyncSwitchOn']) ? $data['usersSyncSwitchOn'] : null;
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['opsWindow'] = isset($data['opsWindow']) ? $data['opsWindow'] : null;
         $this->container['tagsInfo'] = isset($data['tagsInfo']) ? $data['tagsInfo'] : null;
@@ -1220,6 +1231,30 @@ class StarRocksInstanceInfoInstances implements ModelInterface, ArrayAccess
     public function setCreateFailErrorCode($createFailErrorCode)
     {
         $this->container['createFailErrorCode'] = $createFailErrorCode;
+        return $this;
+    }
+
+    /**
+    * Gets usersSyncSwitchOn
+    *  **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
+    *
+    * @return bool|null
+    */
+    public function getUsersSyncSwitchOn()
+    {
+        return $this->container['usersSyncSwitchOn'];
+    }
+
+    /**
+    * Sets usersSyncSwitchOn
+    *
+    * @param bool|null $usersSyncSwitchOn **参数解释**：  账号同步开关状态。  **取值范围**：  - true：开启。 - false：关闭。
+    *
+    * @return $this
+    */
+    public function setUsersSyncSwitchOn($usersSyncSwitchOn)
+    {
+        $this->container['usersSyncSwitchOn'] = $usersSyncSwitchOn;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class TagDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值，取值可以为空字符串，不可以为null。
+    * key  **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值，取值可以为空字符串，不可以为null。
+    * key  **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。
-    * value  标签值，取值可以为空字符串，不可以为null。
+    * key  **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。
-    * value  标签值，取值可以为空字符串，不可以为null。
+    * key  **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。
-    * value  标签值，取值可以为空字符串，不可以为null。
+    * key  **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * value  **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class TagDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。
+    *  **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class TagDto implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签键。
+    * @param string $key **参数解释**： 标签键。  **约束限制**： 长度范围为[1,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class TagDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签值，取值可以为空字符串，不可以为null。
+    *  **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class TagDto implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 标签值，取值可以为空字符串，不可以为null。
+    * @param string $value **参数解释**： 标签值。  **约束限制**： 长度范围为[0,255]。  **取值范围**： 取值可以为空字符串，不可以为null。  **默认取值**： 不涉及。
     *
     * @return $this
     */

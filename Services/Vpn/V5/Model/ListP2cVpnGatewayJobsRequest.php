@@ -21,21 +21,29 @@ class ListP2cVpnGatewayJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源ID
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceId' => 'string'
+            'resourceId' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源ID
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceId' => null
+        'resourceId' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListP2cVpnGatewayJobsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源ID
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceId' => 'resource_id'
+            'resourceId' => 'resource_id',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源ID
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceId' => 'setResourceId'
+            'resourceId' => 'setResourceId',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源ID
+    * limit  分页查询时每页返回的记录数量
+    * marker  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceId' => 'getResourceId'
+            'resourceId' => 'getResourceId',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListP2cVpnGatewayJobsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -160,6 +182,9 @@ class ListP2cVpnGatewayJobsRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
             if (!is_null($this->container['resourceId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
         return $invalidProperties;
     }
@@ -196,6 +221,54 @@ class ListP2cVpnGatewayJobsRequest implements ModelInterface, ArrayAccess
     public function setResourceId($resourceId)
     {
         $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  分页查询时每页返回的记录数量
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 分页查询时每页返回的记录数量
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 上一页最后一条资源记录的创建时间，为空时为查询第一页。使用说明：必须与limit一起使用。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

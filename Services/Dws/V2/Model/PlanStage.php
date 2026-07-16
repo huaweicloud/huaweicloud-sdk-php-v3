@@ -25,8 +25,8 @@ class PlanStage implements ModelInterface, ArrayAccess
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
-    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
-    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
@@ -51,8 +51,8 @@ class PlanStage implements ModelInterface, ArrayAccess
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
-    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
-    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
@@ -98,8 +98,8 @@ class PlanStage implements ModelInterface, ArrayAccess
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
-    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
-    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
@@ -124,8 +124,8 @@ class PlanStage implements ModelInterface, ArrayAccess
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
-    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
-    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
@@ -150,8 +150,8 @@ class PlanStage implements ModelInterface, ArrayAccess
     * planId  **参数解释**： 计划ID。 **取值范围**： 不涉及。
     * stageId  **参数解释**： 计划阶段ID。 **取值范围**： 不涉及。
     * stageName  **参数解释**： 计划阶段名称。 **取值范围**： 不涉及。
-    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
-    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * startTime  **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
+    * endTime  **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     * nextValidTime  **参数解释**： 下次校验时间。 **取值范围**： 不涉及。
     * queueList  **参数解释**： 资源队列列表。 **取值范围**： 不涉及。
     *
@@ -397,7 +397,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    *  **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime **参数解释**： 计划开始时间。 **取值范围**： 不涉及。
+    * @param string|null $startTime **参数解释**： 计划开始时间。 **取值范围**： 仅时间部分，如00:00:00。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class PlanStage implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    *  **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     *
     * @return string|null
     */
@@ -433,7 +433,7 @@ class PlanStage implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime **参数解释**： 计划结束时间。 **取值范围**： 不涉及。
+    * @param string|null $endTime **参数解释**： 计划结束时间。 **取值范围**： 仅时间部分，如00:00:00。
     *
     * @return $this
     */

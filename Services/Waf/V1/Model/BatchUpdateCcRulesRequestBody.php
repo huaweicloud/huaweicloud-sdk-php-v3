@@ -36,6 +36,8 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     * regionAggregation  是否开启全局计数。
     * description  规则描述
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -55,7 +57,9 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
             'domainAggregation' => 'bool',
             'regionAggregation' => 'bool',
             'description' => 'string',
-            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateCcRulesRequestBodyPolicyRuleIds[]'
+            'policyRuleIds' => '\HuaweiCloud\SDK\Waf\V1\Model\BatchUpdateCcRulesRequestBodyPolicyRuleIds[]',
+            'priority' => 'int',
+            'ccPriority' => 'int'
     ];
 
     /**
@@ -76,6 +80,8 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     * regionAggregation  是否开启全局计数。
     * description  规则描述
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -95,7 +101,9 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
         'domainAggregation' => null,
         'regionAggregation' => null,
         'description' => null,
-        'policyRuleIds' => null
+        'policyRuleIds' => null,
+        'priority' => 'int32',
+        'ccPriority' => 'int32'
     ];
 
     /**
@@ -137,6 +145,8 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     * regionAggregation  是否开启全局计数。
     * description  规则描述
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -156,7 +166,9 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
             'domainAggregation' => 'domain_aggregation',
             'regionAggregation' => 'region_aggregation',
             'description' => 'description',
-            'policyRuleIds' => 'policy_rule_ids'
+            'policyRuleIds' => 'policy_rule_ids',
+            'priority' => 'priority',
+            'ccPriority' => 'cc_priority'
     ];
 
     /**
@@ -177,6 +189,8 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     * regionAggregation  是否开启全局计数。
     * description  规则描述
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -196,7 +210,9 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
             'domainAggregation' => 'setDomainAggregation',
             'regionAggregation' => 'setRegionAggregation',
             'description' => 'setDescription',
-            'policyRuleIds' => 'setPolicyRuleIds'
+            'policyRuleIds' => 'setPolicyRuleIds',
+            'priority' => 'setPriority',
+            'ccPriority' => 'setCcPriority'
     ];
 
     /**
@@ -217,6 +233,8 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     * regionAggregation  是否开启全局计数。
     * description  规则描述
     * policyRuleIds  **参数解释：** 策略和规则id数组，关联防护策略与对应的规则集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    * ccPriority  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
     *
     * @var string[]
     */
@@ -236,7 +254,9 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
             'domainAggregation' => 'getDomainAggregation',
             'regionAggregation' => 'getRegionAggregation',
             'description' => 'getDescription',
-            'policyRuleIds' => 'getPolicyRuleIds'
+            'policyRuleIds' => 'getPolicyRuleIds',
+            'priority' => 'getPriority',
+            'ccPriority' => 'getCcPriority'
     ];
 
     /**
@@ -338,6 +358,8 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
         $this->container['regionAggregation'] = isset($data['regionAggregation']) ? $data['regionAggregation'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyRuleIds'] = isset($data['policyRuleIds']) ? $data['policyRuleIds'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['ccPriority'] = isset($data['ccPriority']) ? $data['ccPriority'] : null;
     }
 
     /**
@@ -772,6 +794,54 @@ class BatchUpdateCcRulesRequestBody implements ModelInterface, ArrayAccess
     public function setPolicyRuleIds($policyRuleIds)
     {
         $this->container['policyRuleIds'] = $policyRuleIds;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：1到100。 本字段仅在边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets ccPriority
+    *  执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return int|null
+    */
+    public function getCcPriority()
+    {
+        return $this->container['ccPriority'];
+    }
+
+    /**
+    * Sets ccPriority
+    *
+    * @param int|null $ccPriority 执行该规则的优先级，值越小，优先级越高，值相同时，规则创建时间早，优先级越高。取值范围：0到65535。 本字段仅在非边缘安全场景生效
+    *
+    * @return $this
+    */
+    public function setCcPriority($ccPriority)
+    {
+        $this->container['ccPriority'] = $ccPriority;
         return $this;
     }
 

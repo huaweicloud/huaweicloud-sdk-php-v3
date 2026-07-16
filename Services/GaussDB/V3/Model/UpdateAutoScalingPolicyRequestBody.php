@@ -26,6 +26,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
     * enlargeThreshold  CPU平均使用率（百分比数值）。  取值范围：50-100。  status为ON时必填。
     * maxFlavor  扩容规格上限。开启扩缩规格时必填。
     * reduceEnabled  是否开启自动回缩。开启自动变配时必填。 - true：是。 - false：否。
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
     * maxReadOnlyCount  只读节点数量上限。开启增删只读节点时必填。
     * readOnlyWeight  只读节点读写分离权重。开启增删只读节点时必填。
     * scalingStrategy  scalingStrategy
@@ -39,6 +40,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'int',
             'maxFlavor' => 'string',
             'reduceEnabled' => 'bool',
+            'reduceThreshold' => 'int',
             'maxReadOnlyCount' => 'int',
             'readOnlyWeight' => 'int',
             'scalingStrategy' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ScalingStrategyReqInfo'
@@ -52,6 +54,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
     * enlargeThreshold  CPU平均使用率（百分比数值）。  取值范围：50-100。  status为ON时必填。
     * maxFlavor  扩容规格上限。开启扩缩规格时必填。
     * reduceEnabled  是否开启自动回缩。开启自动变配时必填。 - true：是。 - false：否。
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
     * maxReadOnlyCount  只读节点数量上限。开启增删只读节点时必填。
     * readOnlyWeight  只读节点读写分离权重。开启增删只读节点时必填。
     * scalingStrategy  scalingStrategy
@@ -65,6 +68,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
         'enlargeThreshold' => null,
         'maxFlavor' => null,
         'reduceEnabled' => null,
+        'reduceThreshold' => null,
         'maxReadOnlyCount' => null,
         'readOnlyWeight' => null,
         'scalingStrategy' => null
@@ -99,6 +103,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
     * enlargeThreshold  CPU平均使用率（百分比数值）。  取值范围：50-100。  status为ON时必填。
     * maxFlavor  扩容规格上限。开启扩缩规格时必填。
     * reduceEnabled  是否开启自动回缩。开启自动变配时必填。 - true：是。 - false：否。
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
     * maxReadOnlyCount  只读节点数量上限。开启增删只读节点时必填。
     * readOnlyWeight  只读节点读写分离权重。开启增删只读节点时必填。
     * scalingStrategy  scalingStrategy
@@ -112,6 +117,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'enlarge_threshold',
             'maxFlavor' => 'max_flavor',
             'reduceEnabled' => 'reduce_enabled',
+            'reduceThreshold' => 'reduce_threshold',
             'maxReadOnlyCount' => 'max_read_only_count',
             'readOnlyWeight' => 'read_only_weight',
             'scalingStrategy' => 'scaling_strategy'
@@ -125,6 +131,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
     * enlargeThreshold  CPU平均使用率（百分比数值）。  取值范围：50-100。  status为ON时必填。
     * maxFlavor  扩容规格上限。开启扩缩规格时必填。
     * reduceEnabled  是否开启自动回缩。开启自动变配时必填。 - true：是。 - false：否。
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
     * maxReadOnlyCount  只读节点数量上限。开启增删只读节点时必填。
     * readOnlyWeight  只读节点读写分离权重。开启增删只读节点时必填。
     * scalingStrategy  scalingStrategy
@@ -138,6 +145,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'setEnlargeThreshold',
             'maxFlavor' => 'setMaxFlavor',
             'reduceEnabled' => 'setReduceEnabled',
+            'reduceThreshold' => 'setReduceThreshold',
             'maxReadOnlyCount' => 'setMaxReadOnlyCount',
             'readOnlyWeight' => 'setReadOnlyWeight',
             'scalingStrategy' => 'setScalingStrategy'
@@ -151,6 +159,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
     * enlargeThreshold  CPU平均使用率（百分比数值）。  取值范围：50-100。  status为ON时必填。
     * maxFlavor  扩容规格上限。开启扩缩规格时必填。
     * reduceEnabled  是否开启自动回缩。开启自动变配时必填。 - true：是。 - false：否。
+    * reduceThreshold  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
     * maxReadOnlyCount  只读节点数量上限。开启增删只读节点时必填。
     * readOnlyWeight  只读节点读写分离权重。开启增删只读节点时必填。
     * scalingStrategy  scalingStrategy
@@ -164,6 +173,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
             'enlargeThreshold' => 'getEnlargeThreshold',
             'maxFlavor' => 'getMaxFlavor',
             'reduceEnabled' => 'getReduceEnabled',
+            'reduceThreshold' => 'getReduceThreshold',
             'maxReadOnlyCount' => 'getMaxReadOnlyCount',
             'readOnlyWeight' => 'getReadOnlyWeight',
             'scalingStrategy' => 'getScalingStrategy'
@@ -233,6 +243,7 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
         $this->container['enlargeThreshold'] = isset($data['enlargeThreshold']) ? $data['enlargeThreshold'] : null;
         $this->container['maxFlavor'] = isset($data['maxFlavor']) ? $data['maxFlavor'] : null;
         $this->container['reduceEnabled'] = isset($data['reduceEnabled']) ? $data['reduceEnabled'] : null;
+        $this->container['reduceThreshold'] = isset($data['reduceThreshold']) ? $data['reduceThreshold'] : null;
         $this->container['maxReadOnlyCount'] = isset($data['maxReadOnlyCount']) ? $data['maxReadOnlyCount'] : null;
         $this->container['readOnlyWeight'] = isset($data['readOnlyWeight']) ? $data['readOnlyWeight'] : null;
         $this->container['scalingStrategy'] = isset($data['scalingStrategy']) ? $data['scalingStrategy'] : null;
@@ -249,6 +260,12 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
+            if (!is_null($this->container['reduceThreshold']) && ($this->container['reduceThreshold'] > 30)) {
+                $invalidProperties[] = "invalid value for 'reduceThreshold', must be smaller than or equal to 30.";
+            }
+            if (!is_null($this->container['reduceThreshold']) && ($this->container['reduceThreshold'] < 10)) {
+                $invalidProperties[] = "invalid value for 'reduceThreshold', must be bigger than or equal to 10.";
+            }
         if ($this->container['scalingStrategy'] === null) {
             $invalidProperties[] = "'scalingStrategy' can't be null";
         }
@@ -407,6 +424,30 @@ class UpdateAutoScalingPolicyRequestBody implements ModelInterface, ArrayAccess
     public function setReduceEnabled($reduceEnabled)
     {
         $this->container['reduceEnabled'] = $reduceEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets reduceThreshold
+    *  **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
+    *
+    * @return int|null
+    */
+    public function getReduceThreshold()
+    {
+        return $this->container['reduceThreshold'];
+    }
+
+    /**
+    * Sets reduceThreshold
+    *
+    * @param int|null $reduceThreshold **参数解释**：  自动回缩的CPU平均使用率阈值（百分比数值）。  **约束限制**：  不涉及。  **取值范围**：  10-30。  **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setReduceThreshold($reduceThreshold)
+    {
+        $this->container['reduceThreshold'] = $reduceThreshold;
         return $this;
     }
 

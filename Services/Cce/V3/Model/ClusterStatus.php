@@ -31,6 +31,7 @@ class ClusterStatus implements ModelInterface, ArrayAccess
     * lockSourceId  锁定的资源ID
     * deleteOption  删除配置状态（仅删除请求响应包含）
     * deleteStatus  删除状态信息（仅删除请求响应包含）
+    * conditions  **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ClusterStatus implements ModelInterface, ArrayAccess
             'lockSource' => 'string',
             'lockSourceId' => 'string',
             'deleteOption' => 'object',
-            'deleteStatus' => 'object'
+            'deleteStatus' => 'object',
+            'conditions' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterCondition[]'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ClusterStatus implements ModelInterface, ArrayAccess
     * lockSourceId  锁定的资源ID
     * deleteOption  删除配置状态（仅删除请求响应包含）
     * deleteStatus  删除状态信息（仅删除请求响应包含）
+    * conditions  **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ClusterStatus implements ModelInterface, ArrayAccess
         'lockSource' => null,
         'lockSourceId' => null,
         'deleteOption' => null,
-        'deleteStatus' => null
+        'deleteStatus' => null,
+        'conditions' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ClusterStatus implements ModelInterface, ArrayAccess
     * lockSourceId  锁定的资源ID
     * deleteOption  删除配置状态（仅删除请求响应包含）
     * deleteStatus  删除状态信息（仅删除请求响应包含）
+    * conditions  **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ClusterStatus implements ModelInterface, ArrayAccess
             'lockSource' => 'lockSource',
             'lockSourceId' => 'lockSourceId',
             'deleteOption' => 'deleteOption',
-            'deleteStatus' => 'deleteStatus'
+            'deleteStatus' => 'deleteStatus',
+            'conditions' => 'conditions'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ClusterStatus implements ModelInterface, ArrayAccess
     * lockSourceId  锁定的资源ID
     * deleteOption  删除配置状态（仅删除请求响应包含）
     * deleteStatus  删除状态信息（仅删除请求响应包含）
+    * conditions  **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ClusterStatus implements ModelInterface, ArrayAccess
             'lockSource' => 'setLockSource',
             'lockSourceId' => 'setLockSourceId',
             'deleteOption' => 'setDeleteOption',
-            'deleteStatus' => 'setDeleteStatus'
+            'deleteStatus' => 'setDeleteStatus',
+            'conditions' => 'setConditions'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ClusterStatus implements ModelInterface, ArrayAccess
     * lockSourceId  锁定的资源ID
     * deleteOption  删除配置状态（仅删除请求响应包含）
     * deleteStatus  删除状态信息（仅删除请求响应包含）
+    * conditions  **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ClusterStatus implements ModelInterface, ArrayAccess
             'lockSource' => 'getLockSource',
             'lockSourceId' => 'getLockSourceId',
             'deleteOption' => 'getDeleteOption',
-            'deleteStatus' => 'getDeleteStatus'
+            'deleteStatus' => 'getDeleteStatus',
+            'conditions' => 'getConditions'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ClusterStatus implements ModelInterface, ArrayAccess
         $this->container['lockSourceId'] = isset($data['lockSourceId']) ? $data['lockSourceId'] : null;
         $this->container['deleteOption'] = isset($data['deleteOption']) ? $data['deleteOption'] : null;
         $this->container['deleteStatus'] = isset($data['deleteStatus']) ? $data['deleteStatus'] : null;
+        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class ClusterStatus implements ModelInterface, ArrayAccess
     public function setDeleteStatus($deleteStatus)
     {
         $this->container['deleteStatus'] = $deleteStatus;
+        return $this;
+    }
+
+    /**
+    * Gets conditions
+    *  **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterCondition[]|null
+    */
+    public function getConditions()
+    {
+        return $this->container['conditions'];
+    }
+
+    /**
+    * Sets conditions
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterCondition[]|null $conditions **参数解释**： 集群当前详细状态列表，详情参见Condition类型定义。 **约束限制**： 不涉及
+    *
+    * @return $this
+    */
+    public function setConditions($conditions)
+    {
+        $this->container['conditions'] = $conditions;
         return $this;
     }
 

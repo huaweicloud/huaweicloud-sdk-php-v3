@@ -20,13 +20,13 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * privateDnsZoneName  **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
-    * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsZoneName  **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * privateDnsZoneName  **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * privateDnsZoneType  **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * privateDnsZoneName  **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
-    * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsZoneName  **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * privateDnsZoneName  **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * privateDnsZoneType  **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * privateDnsZoneName  **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
-    * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsZoneName  **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * privateDnsZoneName  **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * privateDnsZoneType  **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * privateDnsZoneName  **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
-    * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsZoneName  **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * privateDnsZoneName  **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * privateDnsZoneType  **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicDomainNameEnable  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
-    * publicDnsZoneName  **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
-    * publicDnsRecordSetTtl  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
-    * privateDomainNameEnable  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
-    * privateDnsZoneName  **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
-    * privateDnsZoneType  **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
-    * privateDnsRecordSetTtl  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * publicDomainNameEnable  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
+    * publicDnsZoneName  **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * publicDnsRecordSetTtl  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * privateDomainNameEnable  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * privateDnsZoneName  **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
+    * privateDnsZoneType  **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
+    * privateDnsRecordSetTtl  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicDomainNameEnable
-    *  **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
+    *  **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
     *
     * @return bool|null
     */
@@ -252,7 +252,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets publicDomainNameEnable
     *
-    * @param bool|null $publicDomainNameEnable **参数解释**：是否配置公网域名。  **约束限制**：不涉及  **取值范围**： true：开启公网域名 false：关闭公网域名  **默认取值**：false
+    * @param bool|null $publicDomainNameEnable **参数解释**：是否启用公网域名解析。  **约束限制**：不涉及  **取值范围**： - true：开启公网域名解析。 - false：关闭公网域名解析。  **默认取值**：false
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicDnsZoneName
-    *  **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
+    *  **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets publicDnsZoneName
     *
-    * @param string|null $publicDnsZoneName **参数解释**：公网域名所使用的zone名称。  **约束限制**：公网域名只能使用公网类型的zone，当配置公网域名开关打开时，该字段不能置空，所填的公网zone必须在云解析服务已注册过。  **取值范围**：不涉及  **默认取值**：不涉及
+    * @param string|null $publicDnsZoneName **参数解释**：公网域名解析所使用的根域名。  **约束限制**： - 公网域名解析只能选择公网类型的根域名。 - 若启用公网域名解析（public_domain_name_enable=true），则公网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicDnsRecordSetTtl
-    *  **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    *  **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets publicDnsRecordSetTtl
     *
-    * @param int|null $publicDnsRecordSetTtl **参数解释**：公网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * @param int|null $publicDnsRecordSetTtl **参数解释**：公网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateDomainNameEnable
-    *  **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    *  **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateDomainNameEnable
     *
-    * @param bool|null $privateDomainNameEnable **参数解释**：是否配置私网域名。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
+    * @param bool|null $privateDomainNameEnable **参数解释**：是否启用私网域名解析。  **约束限制**：不涉及  **取值范围**： true：开启私网域名 false：关闭私网域名  **默认取值**：false
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateDnsZoneName
-    *  **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
+    *  **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateDnsZoneName
     *
-    * @param string|null $privateDnsZoneName **参数解释**：私网域名所使用的zone的名称。  **约束限制**：   只有当private_domain_name_enable打开时，该字段才有效。   当private_domain_name_enable打开时，该字段不能置空。   所填的私网zone必须在云解析服务已注册过。   私网域名既能使用公网zone，也能使用私网zone，zone的类型在private_dns_zone_type字段中指定。  **取值范围**：不涉及  **默认取值**：不涉及
+    * @param string|null $privateDnsZoneName **参数解释**：私网域名解析所使用的根域名。  **约束限制**： - 私网域名解析可以选择私网类型的根域名，也可以选择公网类型的根域名。需要在private_dns_zone_type字段中明确指定。 - 若启用私网域名解析（private_domain_name_enable=true），则私网根域名不能为空，且必须在云解析服务已注册。  **取值范围**：不涉及  **默认取值**：不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateDnsZoneType
-    *  **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
+    *  **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateDnsZoneType
     *
-    * @param string|null $privateDnsZoneType **参数解释**：私网域名所使用的zone的类型。  **约束限制**：不涉及  **取值范围**： private: 使用私网zone public: 使用公网zone  **默认取值**：private
+    * @param string|null $privateDnsZoneType **参数解释**：私网域名解析所使用的根域名的类型。  **约束限制**：不涉及  **取值范围**： - private: 私网根域名。 - public: 公网根域名。  **默认取值**：private
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateDnsRecordSetTtl
-    *  **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    *  **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class UserDefinedDnsConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateDnsRecordSetTtl
     *
-    * @param int|null $privateDnsRecordSetTtl **参数解释**：私网解析记录集超时时间。解析记录在本地DNS服务器的缓存时间，缓存时间越长更新生效越慢，以秒为单位。如果您的服务地址经常更换，建议TTL值设置相对小些，反之，建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
+    * @param int|null $privateDnsRecordSetTtl **参数解释**：私网域名解析记录在本地DNS服务器的缓存超时时间，单位：秒。域名解析信息更新后，需要等待DNS服务器上的缓存超时才会生效。如果您的域名解析信息经常变更，建议TTL值设置相对小些，反之建议设置相对大些。  **约束限制**：不涉及  **取值范围**：1-2147483647  **默认取值**：300
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    * startTime  **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    * startTime  **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    * startTime  **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    * startTime  **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    * startTime  **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    *  **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ModifyInstanceOpsWindowV3Req implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 参数解释： 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 约束限制： 不涉及。
+    * @param string $startTime **参数解释：** 开始时间，格式必须为HH:MM且有效，时间为UTC时间，只能为整点。结束时间默认与开始时间相隔四个小时。 **约束限制：** 不涉及。
     *
     * @return $this
     */

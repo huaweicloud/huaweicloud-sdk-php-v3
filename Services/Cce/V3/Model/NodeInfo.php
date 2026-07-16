@@ -22,8 +22,8 @@ class NodeInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * uid  节点UID
     * name  节点名称
-    * status  状态
-    * nodeType  节点类型
+    * status  **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
+    * nodeType  **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class NodeInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * uid  节点UID
     * name  节点名称
-    * status  状态
-    * nodeType  节点类型
+    * status  **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
+    * nodeType  **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class NodeInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * uid  节点UID
     * name  节点名称
-    * status  状态
-    * nodeType  节点类型
+    * status  **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
+    * nodeType  **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class NodeInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * uid  节点UID
     * name  节点名称
-    * status  状态
-    * nodeType  节点类型
+    * status  **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
+    * nodeType  **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class NodeInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * uid  节点UID
     * name  节点名称
-    * status  状态
-    * nodeType  节点类型
+    * status  **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
+    * nodeType  **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -255,7 +255,7 @@ class NodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class NodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param string|null $status **参数解释**： 节点状态 **取值范围**： - Build：创建中，表示节点正处于创建过程中。 - Installing：安装中，表示节点正处于纳管过程中。 - Upgrading：升级中，表示节点正处于升级过程中。 - Active：运行中，表示节点处于正常状态。 - Abnormal：不可用，表示节点处于异常状态。 - Deleting： 删除中，表示节点正处于删除过程中。 - Error：错误，表示节点处于故障状态。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class NodeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  节点类型
+    *  **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class NodeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string|null $nodeType 节点类型
+    * @param string|null $nodeType **参数解释**： 节点类型 **取值范围**： - master：控制面节点 - node：数据面节点 **默认取值**： 不涉及
     *
     * @return $this
     */

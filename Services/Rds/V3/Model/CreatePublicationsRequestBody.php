@@ -34,9 +34,9 @@ class CreatePublicationsRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'publicationName' => 'string',
             'publicationDatabase' => 'string',
-            'isCreateSnapshotImmediately' => 'string',
+            'isCreateSnapshotImmediately' => 'bool',
             'subscriptionOptions' => '\HuaweiCloud\SDK\Rds\V3\Model\SubscriptionOption',
-            'jobSchedule' => '\HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule',
+            'jobSchedule' => '\HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleCreate',
             'isSelectAllTable' => 'bool',
             'extendTables' => 'string[]',
             'tables' => '\HuaweiCloud\SDK\Rds\V3\Model\PublicationTableInfoRequest[]'
@@ -316,7 +316,7 @@ class CreatePublicationsRequestBody implements ModelInterface, ArrayAccess
     * Gets isCreateSnapshotImmediately
     *  是否立即创建快照。
     *
-    * @return string
+    * @return bool
     */
     public function getIsCreateSnapshotImmediately()
     {
@@ -326,7 +326,7 @@ class CreatePublicationsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isCreateSnapshotImmediately
     *
-    * @param string $isCreateSnapshotImmediately 是否立即创建快照。
+    * @param bool $isCreateSnapshotImmediately 是否立即创建快照。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class CreatePublicationsRequestBody implements ModelInterface, ArrayAccess
     * Gets jobSchedule
     *  jobSchedule
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleCreate
     */
     public function getJobSchedule()
     {
@@ -374,7 +374,7 @@ class CreatePublicationsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets jobSchedule
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule $jobSchedule jobSchedule
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleCreate $jobSchedule jobSchedule
     *
     * @return $this
     */

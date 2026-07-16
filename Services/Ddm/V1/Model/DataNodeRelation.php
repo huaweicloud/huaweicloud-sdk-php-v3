@@ -169,16 +169,22 @@ class DataNodeRelation implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['sourceInstanceId']) && (mb_strlen($this->container['sourceInstanceId']) > 2147483647)) {
+        if ($this->container['sourceInstanceId'] === null) {
+            $invalidProperties[] = "'sourceInstanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['sourceInstanceId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'sourceInstanceId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['sourceInstanceId']) && (mb_strlen($this->container['sourceInstanceId']) < 1)) {
+            if ((mb_strlen($this->container['sourceInstanceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'sourceInstanceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['targetInstanceId']) && (mb_strlen($this->container['targetInstanceId']) > 2147483647)) {
+        if ($this->container['targetInstanceId'] === null) {
+            $invalidProperties[] = "'targetInstanceId' can't be null";
+        }
+            if ((mb_strlen($this->container['targetInstanceId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'targetInstanceId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['targetInstanceId']) && (mb_strlen($this->container['targetInstanceId']) < 1)) {
+            if ((mb_strlen($this->container['targetInstanceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'targetInstanceId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -199,7 +205,7 @@ class DataNodeRelation implements ModelInterface, ArrayAccess
     * Gets sourceInstanceId
     *  源实例id。
     *
-    * @return string|null
+    * @return string
     */
     public function getSourceInstanceId()
     {
@@ -209,7 +215,7 @@ class DataNodeRelation implements ModelInterface, ArrayAccess
     /**
     * Sets sourceInstanceId
     *
-    * @param string|null $sourceInstanceId 源实例id。
+    * @param string $sourceInstanceId 源实例id。
     *
     * @return $this
     */
@@ -223,7 +229,7 @@ class DataNodeRelation implements ModelInterface, ArrayAccess
     * Gets targetInstanceId
     *  目标实例id。
     *
-    * @return string|null
+    * @return string
     */
     public function getTargetInstanceId()
     {
@@ -233,7 +239,7 @@ class DataNodeRelation implements ModelInterface, ArrayAccess
     /**
     * Sets targetInstanceId
     *
-    * @param string|null $targetInstanceId 目标实例id。
+    * @param string $targetInstanceId 目标实例id。
     *
     * @return $this
     */

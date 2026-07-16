@@ -48,6 +48,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * jobType  作业类型。
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -83,6 +84,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'int',
             'checkpointPath' => 'string',
             'runtimeConfig' => 'string',
+            'flinkLogConfig' => 'string',
             'jobType' => 'string',
             'resourceConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\ResourceConfig',
             'resourceConfigVersion' => 'string'
@@ -118,6 +120,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * jobType  作业类型。
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -153,6 +156,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         'resumeMaxNum' => 'int32',
         'checkpointPath' => null,
         'runtimeConfig' => null,
+        'flinkLogConfig' => null,
         'jobType' => null,
         'resourceConfig' => null,
         'resourceConfigVersion' => null
@@ -209,6 +213,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * jobType  作业类型。
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -244,6 +249,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'resume_max_num',
             'checkpointPath' => 'checkpoint_path',
             'runtimeConfig' => 'runtime_config',
+            'flinkLogConfig' => 'flink_log_config',
             'jobType' => 'job_type',
             'resourceConfig' => 'resource_config',
             'resourceConfigVersion' => 'resource_config_version'
@@ -279,6 +285,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * jobType  作业类型。
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -314,6 +321,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'setResumeMaxNum',
             'checkpointPath' => 'setCheckpointPath',
             'runtimeConfig' => 'setRuntimeConfig',
+            'flinkLogConfig' => 'setFlinkLogConfig',
             'jobType' => 'setJobType',
             'resourceConfig' => 'setResourceConfig',
             'resourceConfigVersion' => 'setResourceConfigVersion'
@@ -349,6 +357,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     * resumeMaxNum  异常重试最大次数，单位：次/小时。取值范围：-1或大于0。默认值为“-1”，表示无限次数。
     * checkpointPath  用户Jar中checkpoint的储存地址，不同作业路径需要保持不同。
     * runtimeConfig  Flink作业运行时自定义优化参数。
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * jobType  作业类型。
     * resourceConfig  resourceConfig
     * resourceConfigVersion  资源配置版本。可选值 \"v1\" ,\"v2\".默认为“v1”。
@@ -384,6 +393,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
             'resumeMaxNum' => 'getResumeMaxNum',
             'checkpointPath' => 'getCheckpointPath',
             'runtimeConfig' => 'getRuntimeConfig',
+            'flinkLogConfig' => 'getFlinkLogConfig',
             'jobType' => 'getJobType',
             'resourceConfig' => 'getResourceConfig',
             'resourceConfigVersion' => 'getResourceConfigVersion'
@@ -475,6 +485,7 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
         $this->container['checkpointPath'] = isset($data['checkpointPath']) ? $data['checkpointPath'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
+        $this->container['flinkLogConfig'] = isset($data['flinkLogConfig']) ? $data['flinkLogConfig'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['resourceConfig'] = isset($data['resourceConfig']) ? $data['resourceConfig'] : null;
         $this->container['resourceConfigVersion'] = isset($data['resourceConfigVersion']) ? $data['resourceConfigVersion'] : null;
@@ -1189,6 +1200,30 @@ class UpdateFlinkJarJobRequestBody implements ModelInterface, ArrayAccess
     public function setRuntimeConfig($runtimeConfig)
     {
         $this->container['runtimeConfig'] = $runtimeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets flinkLogConfig
+    *  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return string|null
+    */
+    public function getFlinkLogConfig()
+    {
+        return $this->container['flinkLogConfig'];
+    }
+
+    /**
+    * Sets flinkLogConfig
+    *
+    * @param string|null $flinkLogConfig Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return $this
+    */
+    public function setFlinkLogConfig($flinkLogConfig)
+    {
+        $this->container['flinkLogConfig'] = $flinkLogConfig;
         return $this;
     }
 

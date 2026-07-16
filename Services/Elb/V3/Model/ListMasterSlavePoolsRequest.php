@@ -39,6 +39,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * type  **参数解释**：后端服务器组的类型。  **约束限制**：不涉及  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  **默认取值**：不涉及
     * connectionDrain  **参数解释**：查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false  **约束限制**：不涉及  **取值范围**：true 开启，false 不开启。  **默认取值**：不涉及
+    * publicBorderGroup  **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'string[]',
             'vpcId' => 'string[]',
             'type' => 'string[]',
-            'connectionDrain' => 'bool'
+            'connectionDrain' => 'bool',
+            'publicBorderGroup' => 'string[]'
     ];
 
     /**
@@ -85,6 +87,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * type  **参数解释**：后端服务器组的类型。  **约束限制**：不涉及  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  **默认取值**：不涉及
     * connectionDrain  **参数解释**：查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false  **约束限制**：不涉及  **取值范围**：true 开启，false 不开启。  **默认取值**：不涉及
+    * publicBorderGroup  **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
         'memberInstanceId' => null,
         'vpcId' => null,
         'type' => null,
-        'connectionDrain' => null
+        'connectionDrain' => null,
+        'publicBorderGroup' => null
     ];
 
     /**
@@ -152,6 +156,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * type  **参数解释**：后端服务器组的类型。  **约束限制**：不涉及  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  **默认取值**：不涉及
     * connectionDrain  **参数解释**：查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false  **约束限制**：不涉及  **取值范围**：true 开启，false 不开启。  **默认取值**：不涉及
+    * publicBorderGroup  **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'member_instance_id',
             'vpcId' => 'vpc_id',
             'type' => 'type',
-            'connectionDrain' => 'connection_drain'
+            'connectionDrain' => 'connection_drain',
+            'publicBorderGroup' => 'public_border_group'
     ];
 
     /**
@@ -198,6 +204,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * type  **参数解释**：后端服务器组的类型。  **约束限制**：不涉及  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  **默认取值**：不涉及
     * connectionDrain  **参数解释**：查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false  **约束限制**：不涉及  **取值范围**：true 开启，false 不开启。  **默认取值**：不涉及
+    * publicBorderGroup  **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'setMemberInstanceId',
             'vpcId' => 'setVpcId',
             'type' => 'setType',
-            'connectionDrain' => 'setConnectionDrain'
+            'connectionDrain' => 'setConnectionDrain',
+            'publicBorderGroup' => 'setPublicBorderGroup'
     ];
 
     /**
@@ -244,6 +252,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：后端服务器组关联的虚拟私有云的ID。  **约束限制**：不涉及  **取值范围**：不涉及  **默认取值**：不涉及
     * type  **参数解释**：后端服务器组的类型。  **约束限制**：不涉及  **取值范围**： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加IP类型后端，type指定为该类型时，vpc_id不允许指定。 - 空字符串（\"\"）：允许任意类型的后端  **默认取值**：不涉及
     * connectionDrain  **参数解释**：查询是否开启延迟注销的功能，查询条件格式：*connection_drain=true或者*connection_drain=false  **约束限制**：不涉及  **取值范围**：true 开启，false 不开启。  **默认取值**：不涉及
+    * publicBorderGroup  **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
             'memberInstanceId' => 'getMemberInstanceId',
             'vpcId' => 'getVpcId',
             'type' => 'getType',
-            'connectionDrain' => 'getConnectionDrain'
+            'connectionDrain' => 'getConnectionDrain',
+            'publicBorderGroup' => 'getPublicBorderGroup'
     ];
 
     /**
@@ -346,6 +356,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['connectionDrain'] = isset($data['connectionDrain']) ? $data['connectionDrain'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -829,6 +840,30 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     public function setConnectionDrain($connectionDrain)
     {
         $this->container['connectionDrain'] = $connectionDrain;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    *
+    * @return string[]|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string[]|null $publicBorderGroup **参数解释**：公网边界组。 支持多值查询，查询条件格式：*public_border_group=xxx&public_border_group=xxx*。  **约束限制**：不涉及  **取值范围**： - center：表示中心站点的公网边界组 - 边缘站点名称：表示边缘站点的公网边界组  **默认取值**：不涉及
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

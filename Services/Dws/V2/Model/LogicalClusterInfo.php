@@ -33,6 +33,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
+    * nodeList  **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
             'addToElastic' => 'bool',
             'mode' => 'string',
             'waitingForKilling' => 'int',
-            'clusterType' => 'string'
+            'clusterType' => 'string',
+            'nodeList' => '\HuaweiCloud\SDK\Dws\V2\Model\NodeVo[]'
     ];
 
     /**
@@ -67,6 +69,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
+    * nodeList  **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
         'addToElastic' => null,
         'mode' => null,
         'waitingForKilling' => null,
-        'clusterType' => null
+        'clusterType' => null,
+        'nodeList' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
+    * nodeList  **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
             'addToElastic' => 'add_to_elastic',
             'mode' => 'mode',
             'waitingForKilling' => 'waiting_for_killing',
-            'clusterType' => 'cluster_type'
+            'clusterType' => 'cluster_type',
+            'nodeList' => 'node_list'
     ];
 
     /**
@@ -156,6 +162,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
+    * nodeList  **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
             'addToElastic' => 'setAddToElastic',
             'mode' => 'setMode',
             'waitingForKilling' => 'setWaitingForKilling',
-            'clusterType' => 'setClusterType'
+            'clusterType' => 'setClusterType',
+            'nodeList' => 'setNodeList'
     ];
 
     /**
@@ -190,6 +198,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     * mode  **参数解释**： 逻辑集群模式。 **取值范围**： 不涉及。
     * waitingForKilling  **参数解释**： 作业等待时间。 **取值范围**： 不涉及。
     * clusterType  **参数解释**： 逻辑集群类型。 **取值范围**： - createFromPlan：计划弹性。 - createFromElastic：自动弹性。
+    * nodeList  **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
             'addToElastic' => 'getAddToElastic',
             'mode' => 'getMode',
             'waitingForKilling' => 'getWaitingForKilling',
-            'clusterType' => 'getClusterType'
+            'clusterType' => 'getClusterType',
+            'nodeList' => 'getNodeList'
     ];
 
     /**
@@ -280,6 +290,7 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['waitingForKilling'] = isset($data['waitingForKilling']) ? $data['waitingForKilling'] : null;
         $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
+        $this->container['nodeList'] = isset($data['nodeList']) ? $data['nodeList'] : null;
     }
 
     /**
@@ -613,6 +624,30 @@ class LogicalClusterInfo implements ModelInterface, ArrayAccess
     public function setClusterType($clusterType)
     {
         $this->container['clusterType'] = $clusterType;
+        return $this;
+    }
+
+    /**
+    * Gets nodeList
+    *  **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\NodeVo[]|null
+    */
+    public function getNodeList()
+    {
+        return $this->container['nodeList'];
+    }
+
+    /**
+    * Sets nodeList
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\NodeVo[]|null $nodeList **参数解释**： 逻辑集群包含的节点信息列表。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNodeList($nodeList)
+    {
+        $this->container['nodeList'] = $nodeList;
         return $this;
     }
 

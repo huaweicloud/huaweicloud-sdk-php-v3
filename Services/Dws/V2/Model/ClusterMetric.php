@@ -25,7 +25,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
     * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
     * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
-    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
     * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
     * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
-    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
     * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
     * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
-    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
     * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
     * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
-    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     * metricName  **参数解释**： 作用域。 **取值范围**： 不涉及。
     * collectRate  **参数解释**： 采集速率。 **取值范围**： 不涉及。
     * collectRange  **参数解释**： 采集时间范围。 **取值范围**： 不涉及。
-    * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * createTime  **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *  **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class ClusterMetric implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * @param string|null $createTime **参数解释**： 创建时间。 **取值范围**： 毫秒时间戳格式的字符串。
     *
     * @return $this
     */

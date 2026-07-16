@@ -30,7 +30,7 @@ class ModifyPublicationsRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'subscriptionOptions' => '\HuaweiCloud\SDK\Rds\V3\Model\SubscriptionOption',
-            'jobSchedule' => '\HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule',
+            'jobSchedule' => '\HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleModifyPub',
             'isSelectAllTable' => 'bool',
             'extendTables' => 'string[]',
             'tables' => '\HuaweiCloud\SDK\Rds\V3\Model\PublicationTableInfoRequest[]'
@@ -244,7 +244,7 @@ class ModifyPublicationsRequestBody implements ModelInterface, ArrayAccess
     * Gets jobSchedule
     *  jobSchedule
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleModifyPub|null
     */
     public function getJobSchedule()
     {
@@ -254,7 +254,7 @@ class ModifyPublicationsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets jobSchedule
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobSchedule|null $jobSchedule jobSchedule
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\OperateUsedJobScheduleModifyPub|null $jobSchedule jobSchedule
     *
     * @return $this
     */

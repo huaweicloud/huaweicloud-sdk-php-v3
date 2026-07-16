@@ -20,7 +20,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * settingType  **参数解释：** 必填项，设置类型protected_branches保护分支 protected_tags保护tag push_rules推送规则 merge_requests合并请求 mr_branch_policies合并分支 reviews检视意见 e2e_settings e2e设置 webhook_settings hook设置 deploy_keys 部署key watermark水印 repository_settings仓库设置。
     *
     * @var string[]
@@ -244,7 +244,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return int
     */
@@ -256,7 +256,7 @@ class ShowGroupsInheritRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return $this
     */

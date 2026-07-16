@@ -29,6 +29,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
     * maxStoragePerNode  **参数解释**： 每个节点的最大存储，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maxTpsPerRcu  **参数解释**： 单个rcu最大TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    * stepLength  **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
     * engineVersions  **参数解释**： 消息引擎版本。  **约束限制**： 不涉及。  **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     * minStorage  **参数解释**： 最小存储空间，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -49,6 +51,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
             'maxStoragePerNode' => 'string',
             'productAlias' => 'string',
             'maxTpsPerRcu' => 'string',
+            'maxTpsPerBroker' => 'string',
+            'stepLength' => 'string',
             'engineVersions' => 'string',
             'minStorage' => 'string',
             'minStoragePerNode' => 'string',
@@ -69,6 +73,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
     * maxStoragePerNode  **参数解释**： 每个节点的最大存储，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maxTpsPerRcu  **参数解释**： 单个rcu最大TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    * stepLength  **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
     * engineVersions  **参数解释**： 消息引擎版本。  **约束限制**： 不涉及。  **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     * minStorage  **参数解释**： 最小存储空间，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -89,6 +95,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
         'maxStoragePerNode' => null,
         'productAlias' => null,
         'maxTpsPerRcu' => null,
+        'maxTpsPerBroker' => null,
+        'stepLength' => null,
         'engineVersions' => null,
         'minStorage' => null,
         'minStoragePerNode' => null,
@@ -130,6 +138,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
     * maxStoragePerNode  **参数解释**： 每个节点的最大存储，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maxTpsPerRcu  **参数解释**： 单个rcu最大TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    * stepLength  **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
     * engineVersions  **参数解释**： 消息引擎版本。  **约束限制**： 不涉及。  **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     * minStorage  **参数解释**： 最小存储空间，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -150,6 +160,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
             'maxStoragePerNode' => 'max_storage_per_node',
             'productAlias' => 'product_alias',
             'maxTpsPerRcu' => 'max_tps_per_rcu',
+            'maxTpsPerBroker' => 'max_tps_per_broker',
+            'stepLength' => 'step_length',
             'engineVersions' => 'engine_versions',
             'minStorage' => 'min_storage',
             'minStoragePerNode' => 'min_storage_per_node',
@@ -170,6 +182,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
     * maxStoragePerNode  **参数解释**： 每个节点的最大存储，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maxTpsPerRcu  **参数解释**： 单个rcu最大TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    * stepLength  **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
     * engineVersions  **参数解释**： 消息引擎版本。  **约束限制**： 不涉及。  **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     * minStorage  **参数解释**： 最小存储空间，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -190,6 +204,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
             'maxStoragePerNode' => 'setMaxStoragePerNode',
             'productAlias' => 'setProductAlias',
             'maxTpsPerRcu' => 'setMaxTpsPerRcu',
+            'maxTpsPerBroker' => 'setMaxTpsPerBroker',
+            'stepLength' => 'setStepLength',
             'engineVersions' => 'setEngineVersions',
             'minStorage' => 'setMinStorage',
             'minStoragePerNode' => 'setMinStoragePerNode',
@@ -210,6 +226,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
     * maxStoragePerNode  **参数解释**： 每个节点的最大存储，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * productAlias  **参数解释**： product_id的别名。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * maxTpsPerRcu  **参数解释**： 单个rcu最大TPS。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * maxTpsPerBroker  **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    * stepLength  **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
     * engineVersions  **参数解释**： 消息引擎版本。  **约束限制**： 不涉及。  **取值范围**： [- 4.8.0](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,cmcc,ax,srg) [- 5.x](tag:hws,hws_eu,hws_hk,ctc,g42,hk_g42,tm,sbc,hk_sbc,hk_tm,dt,srg) **默认取值**： 不涉及。
     * minStorage  **参数解释**： 最小存储空间，单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * minStoragePerNode  **参数解释**： 每个节点的最小存储。单位为GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
@@ -230,6 +248,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
             'maxStoragePerNode' => 'getMaxStoragePerNode',
             'productAlias' => 'getProductAlias',
             'maxTpsPerRcu' => 'getMaxTpsPerRcu',
+            'maxTpsPerBroker' => 'getMaxTpsPerBroker',
+            'stepLength' => 'getStepLength',
             'engineVersions' => 'getEngineVersions',
             'minStorage' => 'getMinStorage',
             'minStoragePerNode' => 'getMinStoragePerNode',
@@ -306,6 +326,8 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
         $this->container['maxStoragePerNode'] = isset($data['maxStoragePerNode']) ? $data['maxStoragePerNode'] : null;
         $this->container['productAlias'] = isset($data['productAlias']) ? $data['productAlias'] : null;
         $this->container['maxTpsPerRcu'] = isset($data['maxTpsPerRcu']) ? $data['maxTpsPerRcu'] : null;
+        $this->container['maxTpsPerBroker'] = isset($data['maxTpsPerBroker']) ? $data['maxTpsPerBroker'] : null;
+        $this->container['stepLength'] = isset($data['stepLength']) ? $data['stepLength'] : null;
         $this->container['engineVersions'] = isset($data['engineVersions']) ? $data['engineVersions'] : null;
         $this->container['minStorage'] = isset($data['minStorage']) ? $data['minStorage'] : null;
         $this->container['minStoragePerNode'] = isset($data['minStoragePerNode']) ? $data['minStoragePerNode'] : null;
@@ -550,6 +572,54 @@ class ProductEntityProperties implements ModelInterface, ArrayAccess
     public function setMaxTpsPerRcu($maxTpsPerRcu)
     {
         $this->container['maxTpsPerRcu'] = $maxTpsPerRcu;
+        return $this;
+    }
+
+    /**
+    * Gets maxTpsPerBroker
+    *  **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getMaxTpsPerBroker()
+    {
+        return $this->container['maxTpsPerBroker'];
+    }
+
+    /**
+    * Sets maxTpsPerBroker
+    *
+    * @param string|null $maxTpsPerBroker **参数解释**： 单个broker最大TPS。 **约束限制**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setMaxTpsPerBroker($maxTpsPerBroker)
+    {
+        $this->container['maxTpsPerBroker'] = $maxTpsPerBroker;
+        return $this;
+    }
+
+    /**
+    * Gets stepLength
+    *  **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStepLength()
+    {
+        return $this->container['stepLength'];
+    }
+
+    /**
+    * Sets stepLength
+    *
+    * @param string|null $stepLength **参数解释**： 每次增加或减少的代理数量。 **约束限制**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setStepLength($stepLength)
+    {
+        $this->container['stepLength'] = $stepLength;
         return $this;
     }
 

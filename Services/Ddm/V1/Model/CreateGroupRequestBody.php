@@ -22,7 +22,8 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  组名称
     * type  组类型，type：rw读写、r只读
-    * flavorId  节点规格ID。
+    * flavorId  节点规格ID（规格ID和规格码必须传一个）。
+    * flavorRef  节点规格码（规格ID和规格码必须传一个）。
     * nodes  节点信息列表
     *
     * @var string[]
@@ -31,6 +32,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
             'name' => 'string',
             'type' => 'string',
             'flavorId' => 'string',
+            'flavorRef' => 'string',
             'nodes' => '\HuaweiCloud\SDK\Ddm\V1\Model\NodeInfo[]'
     ];
 
@@ -38,7 +40,8 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  组名称
     * type  组类型，type：rw读写、r只读
-    * flavorId  节点规格ID。
+    * flavorId  节点规格ID（规格ID和规格码必须传一个）。
+    * flavorRef  节点规格码（规格ID和规格码必须传一个）。
     * nodes  节点信息列表
     *
     * @var string[]
@@ -47,6 +50,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
         'name' => null,
         'type' => null,
         'flavorId' => null,
+        'flavorRef' => null,
         'nodes' => null
     ];
 
@@ -75,7 +79,8 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  组名称
     * type  组类型，type：rw读写、r只读
-    * flavorId  节点规格ID。
+    * flavorId  节点规格ID（规格ID和规格码必须传一个）。
+    * flavorRef  节点规格码（规格ID和规格码必须传一个）。
     * nodes  节点信息列表
     *
     * @var string[]
@@ -84,6 +89,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
             'name' => 'name',
             'type' => 'type',
             'flavorId' => 'flavor_id',
+            'flavorRef' => 'flavor_ref',
             'nodes' => 'nodes'
     ];
 
@@ -91,7 +97,8 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  组名称
     * type  组类型，type：rw读写、r只读
-    * flavorId  节点规格ID。
+    * flavorId  节点规格ID（规格ID和规格码必须传一个）。
+    * flavorRef  节点规格码（规格ID和规格码必须传一个）。
     * nodes  节点信息列表
     *
     * @var string[]
@@ -100,6 +107,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'type' => 'setType',
             'flavorId' => 'setFlavorId',
+            'flavorRef' => 'setFlavorRef',
             'nodes' => 'setNodes'
     ];
 
@@ -107,7 +115,8 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  组名称
     * type  组类型，type：rw读写、r只读
-    * flavorId  节点规格ID。
+    * flavorId  节点规格ID（规格ID和规格码必须传一个）。
+    * flavorRef  节点规格码（规格ID和规格码必须传一个）。
     * nodes  节点信息列表
     *
     * @var string[]
@@ -116,6 +125,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'type' => 'getType',
             'flavorId' => 'getFlavorId',
+            'flavorRef' => 'getFlavorRef',
             'nodes' => 'getNodes'
     ];
 
@@ -195,6 +205,7 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['flavorId'] = isset($data['flavorId']) ? $data['flavorId'] : null;
+        $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
     }
 
@@ -220,9 +231,6 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['flavorId'] === null) {
-            $invalidProperties[] = "'flavorId' can't be null";
-        }
         if ($this->container['nodes'] === null) {
             $invalidProperties[] = "'nodes' can't be null";
         }
@@ -290,9 +298,9 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavorId
-    *  节点规格ID。
+    *  节点规格ID（规格ID和规格码必须传一个）。
     *
-    * @return string
+    * @return string|null
     */
     public function getFlavorId()
     {
@@ -302,13 +310,37 @@ class CreateGroupRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets flavorId
     *
-    * @param string $flavorId 节点规格ID。
+    * @param string|null $flavorId 节点规格ID（规格ID和规格码必须传一个）。
     *
     * @return $this
     */
     public function setFlavorId($flavorId)
     {
         $this->container['flavorId'] = $flavorId;
+        return $this;
+    }
+
+    /**
+    * Gets flavorRef
+    *  节点规格码（规格ID和规格码必须传一个）。
+    *
+    * @return string|null
+    */
+    public function getFlavorRef()
+    {
+        return $this->container['flavorRef'];
+    }
+
+    /**
+    * Sets flavorRef
+    *
+    * @param string|null $flavorRef 节点规格码（规格ID和规格码必须传一个）。
+    *
+    * @return $this
+    */
+    public function setFlavorRef($flavorRef)
+    {
+        $this->container['flavorRef'] = $flavorRef;
         return $this;
     }
 

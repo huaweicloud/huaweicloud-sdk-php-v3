@@ -24,9 +24,9 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     * rateType  **参数解释**： 查询类型，固定取值。 **约束限制**： 不涉及。 **取值范围**： skew：表倾斜率。 dirtyPage：表脏页率。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
-    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     * sortBy  **参数解释**： 正序还是倒序排序，固定取值。 **约束限制**： 不涉及。 **取值范围**： ASC：正序。 DESC：倒序。 **默认取值**： 不涉及。
-    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     * value  **参数解释**： 过滤条件的值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -48,9 +48,9 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     * rateType  **参数解释**： 查询类型，固定取值。 **约束限制**： 不涉及。 **取值范围**： skew：表倾斜率。 dirtyPage：表脏页率。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
-    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     * sortBy  **参数解释**： 正序还是倒序排序，固定取值。 **约束限制**： 不涉及。 **取值范围**： ASC：正序。 DESC：倒序。 **默认取值**： 不涉及。
-    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     * value  **参数解释**： 过滤条件的值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -93,9 +93,9 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     * rateType  **参数解释**： 查询类型，固定取值。 **约束限制**： 不涉及。 **取值范围**： skew：表倾斜率。 dirtyPage：表脏页率。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
-    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     * sortBy  **参数解释**： 正序还是倒序排序，固定取值。 **约束限制**： 不涉及。 **取值范围**： ASC：正序。 DESC：倒序。 **默认取值**： 不涉及。
-    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     * value  **参数解释**： 过滤条件的值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -117,9 +117,9 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     * rateType  **参数解释**： 查询类型，固定取值。 **约束限制**： 不涉及。 **取值范围**： skew：表倾斜率。 dirtyPage：表脏页率。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
-    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     * sortBy  **参数解释**： 正序还是倒序排序，固定取值。 **约束限制**： 不涉及。 **取值范围**： ASC：正序。 DESC：倒序。 **默认取值**： 不涉及。
-    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     * value  **参数解释**： 过滤条件的值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -141,9 +141,9 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     * rateType  **参数解释**： 查询类型，固定取值。 **约束限制**： 不涉及。 **取值范围**： skew：表倾斜率。 dirtyPage：表脏页率。 **默认取值**： 不涉及。
     * offset  **参数解释**： 分页偏移量，从0开始，页数减1。 **约束限制**： 不涉及。 **取值范围**： 大于等于0。 **默认取值**： 0
     * limit  **参数解释**： 分页单页大小。 **约束限制**： 不涉及。 **取值范围**： 大于0。 **默认取值**： 不限制。
-    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    * orderBy  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     * sortBy  **参数解释**： 正序还是倒序排序，固定取值。 **约束限制**： 不涉及。 **取值范围**： ASC：正序。 DESC：倒序。 **默认取值**： 不涉及。
-    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    * filter  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     * value  **参数解释**： 过滤条件的值。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -359,7 +359,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    *  **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -371,7 +371,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
+    * @param string|null $orderBy **参数解释**： 排序字段，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为null或空字符串时表示按默认排序处理。 table_size：表大小。 rate：表倾斜率或脏页率。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets filter
-    *  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    *  **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class ListTablesStatisticRequest implements ModelInterface, ArrayAccess
     /**
     * Sets filter
     *
-    * @param string|null $filter **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
+    * @param string|null $filter **参数解释**： 查询条件，固定取值。 **约束限制**： 不涉及。 **取值范围**： 值为空字符串或null时表示不过滤。 db_name：数据库名称。 schema_name：schema名称。 table_name：表名。 table_owner：所属用户。 **默认取值**： 不涉及。
     *
     * @return $this
     */

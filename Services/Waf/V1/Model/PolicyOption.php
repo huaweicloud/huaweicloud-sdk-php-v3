@@ -30,6 +30,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * webshell  Webshell检测是否开启
     * cc  cc规则是否开启
     * custom  精准防护是否开启
+    * precise  精准防护（旧版）是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
     * ignore  全局白名单是否开启
@@ -38,6 +39,8 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
+    * followedAction  攻击惩罚规则是否开启
+    * anticrawler  反爬虫规则是否开启
     *
     * @var string[]
     */
@@ -52,6 +55,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'webshell' => 'bool',
             'cc' => 'bool',
             'custom' => 'bool',
+            'precise' => 'bool',
             'whiteblackip' => 'bool',
             'geoip' => 'bool',
             'ignore' => 'bool',
@@ -59,7 +63,9 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'bool',
             'antileakage' => 'bool',
             'botEnable' => 'bool',
-            'modulexEnabled' => 'bool'
+            'modulexEnabled' => 'bool',
+            'followedAction' => 'bool',
+            'anticrawler' => 'bool'
     ];
 
     /**
@@ -74,6 +80,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * webshell  Webshell检测是否开启
     * cc  cc规则是否开启
     * custom  精准防护是否开启
+    * precise  精准防护（旧版）是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
     * ignore  全局白名单是否开启
@@ -82,6 +89,8 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
+    * followedAction  攻击惩罚规则是否开启
+    * anticrawler  反爬虫规则是否开启
     *
     * @var string[]
     */
@@ -96,6 +105,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
         'webshell' => null,
         'cc' => null,
         'custom' => null,
+        'precise' => null,
         'whiteblackip' => null,
         'geoip' => null,
         'ignore' => null,
@@ -103,7 +113,9 @@ class PolicyOption implements ModelInterface, ArrayAccess
         'antitamper' => null,
         'antileakage' => null,
         'botEnable' => null,
-        'modulexEnabled' => null
+        'modulexEnabled' => null,
+        'followedAction' => null,
+        'anticrawler' => null
     ];
 
     /**
@@ -139,6 +151,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * webshell  Webshell检测是否开启
     * cc  cc规则是否开启
     * custom  精准防护是否开启
+    * precise  精准防护（旧版）是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
     * ignore  全局白名单是否开启
@@ -147,6 +160,8 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
+    * followedAction  攻击惩罚规则是否开启
+    * anticrawler  反爬虫规则是否开启
     *
     * @var string[]
     */
@@ -161,6 +176,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'webshell' => 'webshell',
             'cc' => 'cc',
             'custom' => 'custom',
+            'precise' => 'precise',
             'whiteblackip' => 'whiteblackip',
             'geoip' => 'geoip',
             'ignore' => 'ignore',
@@ -168,7 +184,9 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'antitamper',
             'antileakage' => 'antileakage',
             'botEnable' => 'bot_enable',
-            'modulexEnabled' => 'modulex_enabled'
+            'modulexEnabled' => 'modulex_enabled',
+            'followedAction' => 'followed_action',
+            'anticrawler' => 'anticrawler'
     ];
 
     /**
@@ -183,6 +201,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * webshell  Webshell检测是否开启
     * cc  cc规则是否开启
     * custom  精准防护是否开启
+    * precise  精准防护（旧版）是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
     * ignore  全局白名单是否开启
@@ -191,6 +210,8 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
+    * followedAction  攻击惩罚规则是否开启
+    * anticrawler  反爬虫规则是否开启
     *
     * @var string[]
     */
@@ -205,6 +226,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'webshell' => 'setWebshell',
             'cc' => 'setCc',
             'custom' => 'setCustom',
+            'precise' => 'setPrecise',
             'whiteblackip' => 'setWhiteblackip',
             'geoip' => 'setGeoip',
             'ignore' => 'setIgnore',
@@ -212,7 +234,9 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'setAntitamper',
             'antileakage' => 'setAntileakage',
             'botEnable' => 'setBotEnable',
-            'modulexEnabled' => 'setModulexEnabled'
+            'modulexEnabled' => 'setModulexEnabled',
+            'followedAction' => 'setFollowedAction',
+            'anticrawler' => 'setAnticrawler'
     ];
 
     /**
@@ -227,6 +251,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * webshell  Webshell检测是否开启
     * cc  cc规则是否开启
     * custom  精准防护是否开启
+    * precise  精准防护（旧版）是否开启
     * whiteblackip  黑白名单防护是否开启
     * geoip  地理位置访问控制规则是否开启
     * ignore  全局白名单是否开启
@@ -235,6 +260,8 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
+    * followedAction  攻击惩罚规则是否开启
+    * anticrawler  反爬虫规则是否开启
     *
     * @var string[]
     */
@@ -249,6 +276,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'webshell' => 'getWebshell',
             'cc' => 'getCc',
             'custom' => 'getCustom',
+            'precise' => 'getPrecise',
             'whiteblackip' => 'getWhiteblackip',
             'geoip' => 'getGeoip',
             'ignore' => 'getIgnore',
@@ -256,7 +284,9 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'getAntitamper',
             'antileakage' => 'getAntileakage',
             'botEnable' => 'getBotEnable',
-            'modulexEnabled' => 'getModulexEnabled'
+            'modulexEnabled' => 'getModulexEnabled',
+            'followedAction' => 'getFollowedAction',
+            'anticrawler' => 'getAnticrawler'
     ];
 
     /**
@@ -327,6 +357,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
         $this->container['webshell'] = isset($data['webshell']) ? $data['webshell'] : null;
         $this->container['cc'] = isset($data['cc']) ? $data['cc'] : null;
         $this->container['custom'] = isset($data['custom']) ? $data['custom'] : null;
+        $this->container['precise'] = isset($data['precise']) ? $data['precise'] : null;
         $this->container['whiteblackip'] = isset($data['whiteblackip']) ? $data['whiteblackip'] : null;
         $this->container['geoip'] = isset($data['geoip']) ? $data['geoip'] : null;
         $this->container['ignore'] = isset($data['ignore']) ? $data['ignore'] : null;
@@ -335,6 +366,8 @@ class PolicyOption implements ModelInterface, ArrayAccess
         $this->container['antileakage'] = isset($data['antileakage']) ? $data['antileakage'] : null;
         $this->container['botEnable'] = isset($data['botEnable']) ? $data['botEnable'] : null;
         $this->container['modulexEnabled'] = isset($data['modulexEnabled']) ? $data['modulexEnabled'] : null;
+        $this->container['followedAction'] = isset($data['followedAction']) ? $data['followedAction'] : null;
+        $this->container['anticrawler'] = isset($data['anticrawler']) ? $data['anticrawler'] : null;
     }
 
     /**
@@ -600,6 +633,30 @@ class PolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets precise
+    *  精准防护（旧版）是否开启
+    *
+    * @return bool|null
+    */
+    public function getPrecise()
+    {
+        return $this->container['precise'];
+    }
+
+    /**
+    * Sets precise
+    *
+    * @param bool|null $precise 精准防护（旧版）是否开启
+    *
+    * @return $this
+    */
+    public function setPrecise($precise)
+    {
+        $this->container['precise'] = $precise;
+        return $this;
+    }
+
+    /**
     * Gets whiteblackip
     *  黑白名单防护是否开启
     *
@@ -788,6 +845,54 @@ class PolicyOption implements ModelInterface, ArrayAccess
     public function setModulexEnabled($modulexEnabled)
     {
         $this->container['modulexEnabled'] = $modulexEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets followedAction
+    *  攻击惩罚规则是否开启
+    *
+    * @return bool|null
+    */
+    public function getFollowedAction()
+    {
+        return $this->container['followedAction'];
+    }
+
+    /**
+    * Sets followedAction
+    *
+    * @param bool|null $followedAction 攻击惩罚规则是否开启
+    *
+    * @return $this
+    */
+    public function setFollowedAction($followedAction)
+    {
+        $this->container['followedAction'] = $followedAction;
+        return $this;
+    }
+
+    /**
+    * Gets anticrawler
+    *  反爬虫规则是否开启
+    *
+    * @return bool|null
+    */
+    public function getAnticrawler()
+    {
+        return $this->container['anticrawler'];
+    }
+
+    /**
+    * Sets anticrawler
+    *
+    * @param bool|null $anticrawler 反爬虫规则是否开启
+    *
+    * @return $this
+    */
+    public function setAnticrawler($anticrawler)
+    {
+        $this->container['anticrawler'] = $anticrawler;
         return $this;
     }
 

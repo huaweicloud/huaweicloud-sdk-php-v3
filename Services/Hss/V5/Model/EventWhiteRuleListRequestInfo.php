@@ -24,6 +24,9 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
     * fieldKey  **参数解释**： 加白字段 **取值范围**: - file/process hash：进程/文件hash。 - file_path：文件路径。 - process_path：进程路径。 - login_ip：登录ip。 - reg_key：注册表key。 - process_cmdline：进程命令行。 - username：用户名。
     * fieldValue  加白字段值
     * judgeType  **参数解释**： 通配符 **取值范围**: - equal：相等。 - contain：包含。
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
     *
     * @var string[]
     */
@@ -31,7 +34,10 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
             'eventType' => 'int',
             'fieldKey' => 'string',
             'fieldValue' => 'string',
-            'judgeType' => 'string'
+            'judgeType' => 'string',
+            'scope' => 'bool',
+            'agentIds' => 'string[]',
+            'instanceIds' => 'string[]'
     ];
 
     /**
@@ -40,6 +46,9 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
     * fieldKey  **参数解释**： 加白字段 **取值范围**: - file/process hash：进程/文件hash。 - file_path：文件路径。 - process_path：进程路径。 - login_ip：登录ip。 - reg_key：注册表key。 - process_cmdline：进程命令行。 - username：用户名。
     * fieldValue  加白字段值
     * judgeType  **参数解释**： 通配符 **取值范围**: - equal：相等。 - contain：包含。
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
     *
     * @var string[]
     */
@@ -47,7 +56,10 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
         'eventType' => 'int32',
         'fieldKey' => null,
         'fieldValue' => null,
-        'judgeType' => null
+        'judgeType' => null,
+        'scope' => null,
+        'agentIds' => null,
+        'instanceIds' => null
     ];
 
     /**
@@ -77,6 +89,9 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
     * fieldKey  **参数解释**： 加白字段 **取值范围**: - file/process hash：进程/文件hash。 - file_path：文件路径。 - process_path：进程路径。 - login_ip：登录ip。 - reg_key：注册表key。 - process_cmdline：进程命令行。 - username：用户名。
     * fieldValue  加白字段值
     * judgeType  **参数解释**： 通配符 **取值范围**: - equal：相等。 - contain：包含。
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
     *
     * @var string[]
     */
@@ -84,7 +99,10 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
             'eventType' => 'event_type',
             'fieldKey' => 'field_key',
             'fieldValue' => 'field_value',
-            'judgeType' => 'judge_type'
+            'judgeType' => 'judge_type',
+            'scope' => 'scope',
+            'agentIds' => 'agent_ids',
+            'instanceIds' => 'instance_ids'
     ];
 
     /**
@@ -93,6 +111,9 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
     * fieldKey  **参数解释**： 加白字段 **取值范围**: - file/process hash：进程/文件hash。 - file_path：文件路径。 - process_path：进程路径。 - login_ip：登录ip。 - reg_key：注册表key。 - process_cmdline：进程命令行。 - username：用户名。
     * fieldValue  加白字段值
     * judgeType  **参数解释**： 通配符 **取值范围**: - equal：相等。 - contain：包含。
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
     *
     * @var string[]
     */
@@ -100,7 +121,10 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
             'eventType' => 'setEventType',
             'fieldKey' => 'setFieldKey',
             'fieldValue' => 'setFieldValue',
-            'judgeType' => 'setJudgeType'
+            'judgeType' => 'setJudgeType',
+            'scope' => 'setScope',
+            'agentIds' => 'setAgentIds',
+            'instanceIds' => 'setInstanceIds'
     ];
 
     /**
@@ -109,6 +133,9 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
     * fieldKey  **参数解释**： 加白字段 **取值范围**: - file/process hash：进程/文件hash。 - file_path：文件路径。 - process_path：进程路径。 - login_ip：登录ip。 - reg_key：注册表key。 - process_cmdline：进程命令行。 - username：用户名。
     * fieldValue  加白字段值
     * judgeType  **参数解释**： 通配符 **取值范围**: - equal：相等。 - contain：包含。
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
     *
     * @var string[]
     */
@@ -116,7 +143,10 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
             'eventType' => 'getEventType',
             'fieldKey' => 'getFieldKey',
             'fieldValue' => 'getFieldValue',
-            'judgeType' => 'getJudgeType'
+            'judgeType' => 'getJudgeType',
+            'scope' => 'getScope',
+            'agentIds' => 'getAgentIds',
+            'instanceIds' => 'getInstanceIds'
     ];
 
     /**
@@ -181,6 +211,9 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
         $this->container['fieldKey'] = isset($data['fieldKey']) ? $data['fieldKey'] : null;
         $this->container['fieldValue'] = isset($data['fieldValue']) ? $data['fieldValue'] : null;
         $this->container['judgeType'] = isset($data['judgeType']) ? $data['judgeType'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['agentIds'] = isset($data['agentIds']) ? $data['agentIds'] : null;
+        $this->container['instanceIds'] = isset($data['instanceIds']) ? $data['instanceIds'] : null;
     }
 
     /**
@@ -334,6 +367,78 @@ class EventWhiteRuleListRequestInfo implements ModelInterface, ArrayAccess
     public function setJudgeType($judgeType)
     {
         $this->container['judgeType'] = $judgeType;
+        return $this;
+    }
+
+    /**
+    * Gets scope
+    *  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    *
+    * @return bool|null
+    */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+    * Sets scope
+    *
+    * @param bool|null $scope **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    *
+    * @return $this
+    */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
+        return $this;
+    }
+
+    /**
+    * Gets agentIds
+    *  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    *
+    * @return string[]|null
+    */
+    public function getAgentIds()
+    {
+        return $this->container['agentIds'];
+    }
+
+    /**
+    * Sets agentIds
+    *
+    * @param string[]|null $agentIds **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setAgentIds($agentIds)
+    {
+        $this->container['agentIds'] = $agentIds;
+        return $this;
+    }
+
+    /**
+    * Gets instanceIds
+    *  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
+    *
+    * @return string[]|null
+    */
+    public function getInstanceIds()
+    {
+        return $this->container['instanceIds'];
+    }
+
+    /**
+    * Sets instanceIds
+    *
+    * @param string[]|null $instanceIds **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceIds($instanceIds)
+    {
+        $this->container['instanceIds'] = $instanceIds;
         return $this;
     }
 

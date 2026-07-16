@@ -40,8 +40,8 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
             'protocol' => 'int',
             'port' => 'string',
             'description' => 'string',
-            'createdDate' => 'string',
-            'modifiedDate' => 'string'
+            'createdDate' => 'int',
+            'modifiedDate' => 'int'
     ];
 
     /**
@@ -432,7 +432,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Gets createdDate
     *  |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreatedDate()
     {
@@ -442,7 +442,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets createdDate
     *
-    * @param string|null $createdDate |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
+    * @param int|null $createdDate |- **参数解释**： 黑白名单创建时间。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -456,7 +456,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Gets modifiedDate
     *  |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
-    * @return string|null
+    * @return int|null
     */
     public function getModifiedDate()
     {
@@ -466,7 +466,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets modifiedDate
     *
-    * @param string|null $modifiedDate |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
+    * @param int|null $modifiedDate |- **参数解释**： 黑白名单修改时间。 **取值范围**： 不涉及
     *
     * @return $this
     */

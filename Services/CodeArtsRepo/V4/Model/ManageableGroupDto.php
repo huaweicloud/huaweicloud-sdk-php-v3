@@ -20,30 +20,42 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fullName  代码组全名
-    * id  代码组id
-    * name  代码组名
+    * fullName  **参数解释：** 代码组全名。
+    * id  **参数解释：** 代码组id。
+    * name  **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
+    * fullPath  **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * path  **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * visibility  **参数解释：** 可见性。 **取值范围：** private public。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'fullName' => 'string',
             'id' => 'int',
-            'name' => 'string'
+            'name' => 'string',
+            'fullPath' => 'string',
+            'path' => 'string',
+            'visibility' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fullName  代码组全名
-    * id  代码组id
-    * name  代码组名
+    * fullName  **参数解释：** 代码组全名。
+    * id  **参数解释：** 代码组id。
+    * name  **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
+    * fullPath  **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * path  **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * visibility  **参数解释：** 可见性。 **取值范围：** private public。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'fullName' => null,
         'id' => 'int32',
-        'name' => null
+        'name' => null,
+        'fullPath' => null,
+        'path' => null,
+        'visibility' => null
     ];
 
     /**
@@ -69,44 +81,62 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fullName  代码组全名
-    * id  代码组id
-    * name  代码组名
+    * fullName  **参数解释：** 代码组全名。
+    * id  **参数解释：** 代码组id。
+    * name  **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
+    * fullPath  **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * path  **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * visibility  **参数解释：** 可见性。 **取值范围：** private public。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'fullName' => 'full_name',
             'id' => 'id',
-            'name' => 'name'
+            'name' => 'name',
+            'fullPath' => 'full_path',
+            'path' => 'path',
+            'visibility' => 'visibility'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fullName  代码组全名
-    * id  代码组id
-    * name  代码组名
+    * fullName  **参数解释：** 代码组全名。
+    * id  **参数解释：** 代码组id。
+    * name  **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
+    * fullPath  **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * path  **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * visibility  **参数解释：** 可见性。 **取值范围：** private public。
     *
     * @var string[]
     */
     protected static $setters = [
             'fullName' => 'setFullName',
             'id' => 'setId',
-            'name' => 'setName'
+            'name' => 'setName',
+            'fullPath' => 'setFullPath',
+            'path' => 'setPath',
+            'visibility' => 'setVisibility'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fullName  代码组全名
-    * id  代码组id
-    * name  代码组名
+    * fullName  **参数解释：** 代码组全名。
+    * id  **参数解释：** 代码组id。
+    * name  **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
+    * fullPath  **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * path  **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    * visibility  **参数解释：** 可见性。 **取值范围：** private public。
     *
     * @var string[]
     */
     protected static $getters = [
             'fullName' => 'getFullName',
             'id' => 'getId',
-            'name' => 'getName'
+            'name' => 'getName',
+            'fullPath' => 'getFullPath',
+            'path' => 'getPath',
+            'visibility' => 'getVisibility'
     ];
 
     /**
@@ -149,7 +179,22 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const VISIBILITY__PUBLIC = 'public';
+    const VISIBILITY__PRIVATE = 'private';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getVisibilityAllowableValues()
+    {
+        return [
+            self::VISIBILITY__PUBLIC,
+            self::VISIBILITY__PRIVATE,
+        ];
+    }
 
 
     /**
@@ -170,6 +215,9 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
         $this->container['fullName'] = isset($data['fullName']) ? $data['fullName'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['fullPath'] = isset($data['fullPath']) ? $data['fullPath'] : null;
+        $this->container['path'] = isset($data['path']) ? $data['path'] : null;
+        $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
     }
 
     /**
@@ -192,12 +240,32 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['id']) && ($this->container['id'] < 1)) {
                 $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 2)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 2.";
             }
+            if (!is_null($this->container['fullPath']) && (mb_strlen($this->container['fullPath']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'fullPath', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['fullPath']) && (mb_strlen($this->container['fullPath']) < 0)) {
+                $invalidProperties[] = "invalid value for 'fullPath', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'path', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) < 0)) {
+                $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getVisibilityAllowableValues();
+                if (!is_null($this->container['visibility']) && !in_array($this->container['visibility'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'visibility', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -214,7 +282,7 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets fullName
-    *  代码组全名
+    *  **参数解释：** 代码组全名。
     *
     * @return string|null
     */
@@ -226,7 +294,7 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
     /**
     * Sets fullName
     *
-    * @param string|null $fullName 代码组全名
+    * @param string|null $fullName **参数解释：** 代码组全名。
     *
     * @return $this
     */
@@ -238,7 +306,7 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  代码组id
+    *  **参数解释：** 代码组id。
     *
     * @return int|null
     */
@@ -250,7 +318,7 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 代码组id
+    * @param int|null $id **参数解释：** 代码组id。
     *
     * @return $this
     */
@@ -262,7 +330,7 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  代码组名
+    *  **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
     *
     * @return string|null
     */
@@ -274,13 +342,85 @@ class ManageableGroupDto implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 代码组名
+    * @param string|null $name **参数解释：** 代码组名。 **取值范围：** 字符串长度不少于0，不超过256。
     *
     * @return $this
     */
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets fullPath
+    *  **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    *
+    * @return string|null
+    */
+    public function getFullPath()
+    {
+        return $this->container['fullPath'];
+    }
+
+    /**
+    * Sets fullPath
+    *
+    * @param string|null $fullPath **参数解释：** 全路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    *
+    * @return $this
+    */
+    public function setFullPath($fullPath)
+    {
+        $this->container['fullPath'] = $fullPath;
+        return $this;
+    }
+
+    /**
+    * Gets path
+    *  **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    *
+    * @return string|null
+    */
+    public function getPath()
+    {
+        return $this->container['path'];
+    }
+
+    /**
+    * Sets path
+    *
+    * @param string|null $path **参数解释：** 路径。 **取值范围：** 字符串长度不少于0，不超过1000。
+    *
+    * @return $this
+    */
+    public function setPath($path)
+    {
+        $this->container['path'] = $path;
+        return $this;
+    }
+
+    /**
+    * Gets visibility
+    *  **参数解释：** 可见性。 **取值范围：** private public。
+    *
+    * @return string|null
+    */
+    public function getVisibility()
+    {
+        return $this->container['visibility'];
+    }
+
+    /**
+    * Sets visibility
+    *
+    * @param string|null $visibility **参数解释：** 可见性。 **取值范围：** private public。
+    *
+    * @return $this
+    */
+    public function setVisibility($visibility)
+    {
+        $this->container['visibility'] = $visibility;
         return $this;
     }
 

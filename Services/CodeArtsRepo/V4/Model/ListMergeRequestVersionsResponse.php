@@ -24,11 +24,12 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** diff主键ID。
     * headCommitSha  **参数解释：** head commit节点。
     * baseCommitSha  **参数解释：** base commit节点。
-    * startCommitSha  **参数解释：** tart commit节点。
+    * startCommitSha  **参数解释：** start commit节点。
     * createdAt  **参数解释：** 创建时间。
     * mergeRequestId  **参数解释：** MR主键ID。
     * state  **参数解释：** 状态。
     * realSize  **参数解释：** diff大小。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'mergeRequestId' => 'int',
             'state' => 'string',
-            'realSize' => 'string'
+            'realSize' => 'string',
+            'xTotal' => 'string'
     ];
 
     /**
@@ -48,11 +50,12 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** diff主键ID。
     * headCommitSha  **参数解释：** head commit节点。
     * baseCommitSha  **参数解释：** base commit节点。
-    * startCommitSha  **参数解释：** tart commit节点。
+    * startCommitSha  **参数解释：** start commit节点。
     * createdAt  **参数解释：** 创建时间。
     * mergeRequestId  **参数解释：** MR主键ID。
     * state  **参数解释：** 状态。
     * realSize  **参数解释：** diff大小。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'mergeRequestId' => null,
         'state' => null,
-        'realSize' => null
+        'realSize' => null,
+        'xTotal' => null
     ];
 
     /**
@@ -93,11 +97,12 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** diff主键ID。
     * headCommitSha  **参数解释：** head commit节点。
     * baseCommitSha  **参数解释：** base commit节点。
-    * startCommitSha  **参数解释：** tart commit节点。
+    * startCommitSha  **参数解释：** start commit节点。
     * createdAt  **参数解释：** 创建时间。
     * mergeRequestId  **参数解释：** MR主键ID。
     * state  **参数解释：** 状态。
     * realSize  **参数解释：** diff大小。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'mergeRequestId' => 'merge_request_id',
             'state' => 'state',
-            'realSize' => 'real_size'
+            'realSize' => 'real_size',
+            'xTotal' => 'X-Total'
     ];
 
     /**
@@ -117,11 +123,12 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** diff主键ID。
     * headCommitSha  **参数解释：** head commit节点。
     * baseCommitSha  **参数解释：** base commit节点。
-    * startCommitSha  **参数解释：** tart commit节点。
+    * startCommitSha  **参数解释：** start commit节点。
     * createdAt  **参数解释：** 创建时间。
     * mergeRequestId  **参数解释：** MR主键ID。
     * state  **参数解释：** 状态。
     * realSize  **参数解释：** diff大小。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'mergeRequestId' => 'setMergeRequestId',
             'state' => 'setState',
-            'realSize' => 'setRealSize'
+            'realSize' => 'setRealSize',
+            'xTotal' => 'setXTotal'
     ];
 
     /**
@@ -141,11 +149,12 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     * id  **参数解释：** diff主键ID。
     * headCommitSha  **参数解释：** head commit节点。
     * baseCommitSha  **参数解释：** base commit节点。
-    * startCommitSha  **参数解释：** tart commit节点。
+    * startCommitSha  **参数解释：** start commit节点。
     * createdAt  **参数解释：** 创建时间。
     * mergeRequestId  **参数解释：** MR主键ID。
     * state  **参数解释：** 状态。
     * realSize  **参数解释：** diff大小。
+    * xTotal  xTotal
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'mergeRequestId' => 'getMergeRequestId',
             'state' => 'getState',
-            'realSize' => 'getRealSize'
+            'realSize' => 'getRealSize',
+            'xTotal' => 'getXTotal'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
         $this->container['mergeRequestId'] = isset($data['mergeRequestId']) ? $data['mergeRequestId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['realSize'] = isset($data['realSize']) ? $data['realSize'] : null;
+        $this->container['xTotal'] = isset($data['xTotal']) ? $data['xTotal'] : null;
     }
 
     /**
@@ -324,7 +335,7 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startCommitSha
-    *  **参数解释：** tart commit节点。
+    *  **参数解释：** start commit节点。
     *
     * @return string|null
     */
@@ -336,7 +347,7 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startCommitSha
     *
-    * @param string|null $startCommitSha **参数解释：** tart commit节点。
+    * @param string|null $startCommitSha **参数解释：** start commit节点。
     *
     * @return $this
     */
@@ -439,6 +450,30 @@ class ListMergeRequestVersionsResponse implements ModelInterface, ArrayAccess
     public function setRealSize($realSize)
     {
         $this->container['realSize'] = $realSize;
+        return $this;
+    }
+
+    /**
+    * Gets xTotal
+    *  xTotal
+    *
+    * @return string|null
+    */
+    public function getXTotal()
+    {
+        return $this->container['xTotal'];
+    }
+
+    /**
+    * Sets xTotal
+    *
+    * @param string|null $xTotal xTotal
+    *
+    * @return $this
+    */
+    public function setXTotal($xTotal)
+    {
+        $this->container['xTotal'] = $xTotal;
         return $this;
     }
 

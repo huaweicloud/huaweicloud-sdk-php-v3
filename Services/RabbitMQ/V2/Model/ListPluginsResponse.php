@@ -21,21 +21,25 @@ class ListPluginsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * pluginsModifying  插件是否在变更中。
     * plugins  插件信息列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'pluginsModifying' => 'bool',
             'plugins' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\PluginEntity[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * pluginsModifying  插件是否在变更中。
     * plugins  插件信息列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'pluginsModifying' => null,
         'plugins' => null
     ];
 
@@ -62,31 +66,37 @@ class ListPluginsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * pluginsModifying  插件是否在变更中。
     * plugins  插件信息列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'pluginsModifying' => 'plugins_modifying',
             'plugins' => 'plugins'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * pluginsModifying  插件是否在变更中。
     * plugins  插件信息列表。
     *
     * @var string[]
     */
     protected static $setters = [
+            'pluginsModifying' => 'setPluginsModifying',
             'plugins' => 'setPlugins'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * pluginsModifying  插件是否在变更中。
     * plugins  插件信息列表。
     *
     * @var string[]
     */
     protected static $getters = [
+            'pluginsModifying' => 'getPluginsModifying',
             'plugins' => 'getPlugins'
     ];
 
@@ -148,6 +158,7 @@ class ListPluginsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['pluginsModifying'] = isset($data['pluginsModifying']) ? $data['pluginsModifying'] : null;
         $this->container['plugins'] = isset($data['plugins']) ? $data['plugins'] : null;
     }
 
@@ -171,6 +182,30 @@ class ListPluginsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets pluginsModifying
+    *  插件是否在变更中。
+    *
+    * @return bool|null
+    */
+    public function getPluginsModifying()
+    {
+        return $this->container['pluginsModifying'];
+    }
+
+    /**
+    * Sets pluginsModifying
+    *
+    * @param bool|null $pluginsModifying 插件是否在变更中。
+    *
+    * @return $this
+    */
+    public function setPluginsModifying($pluginsModifying)
+    {
+        $this->container['pluginsModifying'] = $pluginsModifying;
+        return $this;
     }
 
     /**

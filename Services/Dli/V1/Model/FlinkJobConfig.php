@@ -43,6 +43,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
@@ -85,6 +86,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'executionAgencyUrn' => 'string',
             'resumeCheckpoint' => 'bool',
             'runtimeConfig' => 'string',
+            'flinkLogConfig' => 'string',
             'graphEditorEnabled' => 'bool',
             'graphEditorData' => 'string',
             'resumeMaxNum' => 'int',
@@ -127,6 +129,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
@@ -169,6 +172,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         'executionAgencyUrn' => null,
         'resumeCheckpoint' => null,
         'runtimeConfig' => null,
+        'flinkLogConfig' => null,
         'graphEditorEnabled' => null,
         'graphEditorData' => null,
         'resumeMaxNum' => 'int64',
@@ -232,6 +236,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
@@ -274,6 +279,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'executionAgencyUrn' => 'execution_agency_urn',
             'resumeCheckpoint' => 'resume_checkpoint',
             'runtimeConfig' => 'runtime_config',
+            'flinkLogConfig' => 'flink_log_config',
             'graphEditorEnabled' => 'graph_editor_enabled',
             'graphEditorData' => 'graph_editor_data',
             'resumeMaxNum' => 'resume_max_num',
@@ -316,6 +322,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
@@ -358,6 +365,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'executionAgencyUrn' => 'setExecutionAgencyUrn',
             'resumeCheckpoint' => 'setResumeCheckpoint',
             'runtimeConfig' => 'setRuntimeConfig',
+            'flinkLogConfig' => 'setFlinkLogConfig',
             'graphEditorEnabled' => 'setGraphEditorEnabled',
             'graphEditorData' => 'setGraphEditorData',
             'resumeMaxNum' => 'setResumeMaxNum',
@@ -400,6 +408,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executionAgencyUrn  参数解释:  授权给DLI的委托名。Flink1.15版本时支持配置该参数。 示例: agency 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeCheckpoint  参数解释:  异常自动重启时，是否从最新checkpoint恢复，默认false 示例: 0 约束限制:  无 取值范围: true,false 默认取值: false
     * runtimeConfig  参数解释: Flink作业运行时自定义优化参数 示例: [{\\\"key\\\":\\\"high-availability\\\",\\\"value\\\":\\\"org.apache.flink.kubernetes.highavailability.KubernetesHaServicesFactory\\\" },{ \\\"key\\\":\\\"kubernetes.jobmanager.replicas\\\",\\\"value\\\":\\\"2\\\" },{ \\\"key\\\":\\\"high-availability.storageDir\\\",\\\"value\\\":\\\"obs://fz-test/test\\\"}] 约束限制:  无 取值范围: 无 默认取值: 无
+    * flinkLogConfig  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
     * graphEditorEnabled  参数解释: 流图编辑开关 示例: false 约束限制:  无 取值范围: 无 默认取值: false
     * graphEditorData  参数解释: 流图编辑数据 约束限制:  无 取值范围: 无 默认取值: 无
     * resumeMaxNum  参数解释: 异常重试最大次数。-1代表无限 示例: -1 约束限制:  无 取值范围: 无 默认取值: 无
@@ -442,6 +451,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'executionAgencyUrn' => 'getExecutionAgencyUrn',
             'resumeCheckpoint' => 'getResumeCheckpoint',
             'runtimeConfig' => 'getRuntimeConfig',
+            'flinkLogConfig' => 'getFlinkLogConfig',
             'graphEditorEnabled' => 'getGraphEditorEnabled',
             'graphEditorData' => 'getGraphEditorData',
             'resumeMaxNum' => 'getResumeMaxNum',
@@ -555,6 +565,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         $this->container['executionAgencyUrn'] = isset($data['executionAgencyUrn']) ? $data['executionAgencyUrn'] : null;
         $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : null;
         $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
+        $this->container['flinkLogConfig'] = isset($data['flinkLogConfig']) ? $data['flinkLogConfig'] : null;
         $this->container['graphEditorEnabled'] = isset($data['graphEditorEnabled']) ? $data['graphEditorEnabled'] : null;
         $this->container['graphEditorData'] = isset($data['graphEditorData']) ? $data['graphEditorData'] : null;
         $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
@@ -1163,6 +1174,30 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     public function setRuntimeConfig($runtimeConfig)
     {
         $this->container['runtimeConfig'] = $runtimeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets flinkLogConfig
+    *  Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return string|null
+    */
+    public function getFlinkLogConfig()
+    {
+        return $this->container['flinkLogConfig'];
+    }
+
+    /**
+    * Sets flinkLogConfig
+    *
+    * @param string|null $flinkLogConfig Flink作业日志级别配置（JSON格式）。 支持全局root_logger_level及类/包级别loggers_level_of_class精细化控制，可选值为：TRACE，DEBUG，INFO，WARN，ERROR。 例如：{\\\"root_logger_level\\\":\\\"INFO\\\",\\\"loggers_level_of_class\\\":{\\\"org.apache.flink\\\":\\\"WARN\\\",\\\"org.apache.kafka.clients.consumer.KafkaConsumer\\\":\\\"DEBUG\\\",\\\"com.mycompany.job.MainFunction\\\":\\\"TRACE\\\"}}
+    *
+    * @return $this
+    */
+    public function setFlinkLogConfig($flinkLogConfig)
+    {
+        $this->container['flinkLogConfig'] = $flinkLogConfig;
         return $this;
     }
 

@@ -28,6 +28,7 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
     * changeFileCount  **参数解释：** 修改文件数量。
     * changeLineCount  **参数解释：** 改变行数数量。
     * tooLarge  **参数解释：** 是否为大文件。 **取值范围：** - true，大文件。 - false，非大文件
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
             'removedLines' => 'int',
             'changeFileCount' => 'int',
             'changeLineCount' => 'int',
-            'tooLarge' => 'bool'
+            'tooLarge' => 'bool',
+            'blobId' => 'string'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
     * changeFileCount  **参数解释：** 修改文件数量。
     * changeLineCount  **参数解释：** 改变行数数量。
     * tooLarge  **参数解释：** 是否为大文件。 **取值范围：** - true，大文件。 - false，非大文件
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
         'removedLines' => 'int32',
         'changeFileCount' => 'int32',
         'changeLineCount' => 'int32',
-        'tooLarge' => null
+        'tooLarge' => null,
+        'blobId' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
     * changeFileCount  **参数解释：** 修改文件数量。
     * changeLineCount  **参数解释：** 改变行数数量。
     * tooLarge  **参数解释：** 是否为大文件。 **取值范围：** - true，大文件。 - false，非大文件
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
             'removedLines' => 'removed_lines',
             'changeFileCount' => 'change_file_count',
             'changeLineCount' => 'change_line_count',
-            'tooLarge' => 'too_large'
+            'tooLarge' => 'too_large',
+            'blobId' => 'blob_id'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
     * changeFileCount  **参数解释：** 修改文件数量。
     * changeLineCount  **参数解释：** 改变行数数量。
     * tooLarge  **参数解释：** 是否为大文件。 **取值范围：** - true，大文件。 - false，非大文件
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
             'removedLines' => 'setRemovedLines',
             'changeFileCount' => 'setChangeFileCount',
             'changeLineCount' => 'setChangeLineCount',
-            'tooLarge' => 'setTooLarge'
+            'tooLarge' => 'setTooLarge',
+            'blobId' => 'setBlobId'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
     * changeFileCount  **参数解释：** 修改文件数量。
     * changeLineCount  **参数解释：** 改变行数数量。
     * tooLarge  **参数解释：** 是否为大文件。 **取值范围：** - true，大文件。 - false，非大文件
+    * blobId  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
             'removedLines' => 'getRemovedLines',
             'changeFileCount' => 'getChangeFileCount',
             'changeLineCount' => 'getChangeLineCount',
-            'tooLarge' => 'getTooLarge'
+            'tooLarge' => 'getTooLarge',
+            'blobId' => 'getBlobId'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
         $this->container['changeFileCount'] = isset($data['changeFileCount']) ? $data['changeFileCount'] : null;
         $this->container['changeLineCount'] = isset($data['changeLineCount']) ? $data['changeLineCount'] : null;
         $this->container['tooLarge'] = isset($data['tooLarge']) ? $data['tooLarge'] : null;
+        $this->container['blobId'] = isset($data['blobId']) ? $data['blobId'] : null;
     }
 
     /**
@@ -428,6 +439,30 @@ class ShowCommitDiffMetadataResponse implements ModelInterface, ArrayAccess
     public function setTooLarge($tooLarge)
     {
         $this->container['tooLarge'] = $tooLarge;
+        return $this;
+    }
+
+    /**
+    * Gets blobId
+    *  **参数解释：** blob文件ID。 **约束限制：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getBlobId()
+    {
+        return $this->container['blobId'];
+    }
+
+    /**
+    * Sets blobId
+    *
+    * @param string|null $blobId **参数解释：** blob文件ID。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setBlobId($blobId)
+    {
+        $this->container['blobId'] = $blobId;
         return $this;
     }
 

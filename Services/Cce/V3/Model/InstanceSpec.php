@@ -23,7 +23,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * version  插件模板版本号，如1.0.0
     * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  插件模板类型
+    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * addonTemplateLogo  插件模板logo图片的地址
     * addonTemplateLabels  插件模板所属类型
     * description  插件模板描述
@@ -47,7 +47,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * version  插件模板版本号，如1.0.0
     * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  插件模板类型
+    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * addonTemplateLogo  插件模板logo图片的地址
     * addonTemplateLabels  插件模板所属类型
     * description  插件模板描述
@@ -92,7 +92,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * version  插件模板版本号，如1.0.0
     * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  插件模板类型
+    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * addonTemplateLogo  插件模板logo图片的地址
     * addonTemplateLabels  插件模板所属类型
     * description  插件模板描述
@@ -116,7 +116,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * version  插件模板版本号，如1.0.0
     * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  插件模板类型
+    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * addonTemplateLogo  插件模板logo图片的地址
     * addonTemplateLabels  插件模板所属类型
     * description  插件模板描述
@@ -140,7 +140,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     * clusterId  集群id
     * version  插件模板版本号，如1.0.0
     * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  插件模板类型
+    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     * addonTemplateLogo  插件模板logo图片的地址
     * addonTemplateLabels  插件模板所属类型
     * description  插件模板描述
@@ -344,7 +344,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateType
-    *  插件模板类型
+    *  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -356,7 +356,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateType
     *
-    * @param string $addonTemplateType 插件模板类型
+    * @param string $addonTemplateType **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
     *
     * @return $this
     */

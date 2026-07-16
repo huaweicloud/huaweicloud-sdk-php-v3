@@ -35,7 +35,7 @@ class SubtaskDetail implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'int',
-            'jobId' => 'int',
+            'jobId' => 'string',
             'namespace' => 'string',
             'repository' => 'string',
             'tag' => 'string',
@@ -329,7 +329,7 @@ class SubtaskDetail implements ModelInterface, ArrayAccess
     * Gets jobId
     *  内部任务ID
     *
-    * @return int
+    * @return string
     */
     public function getJobId()
     {
@@ -339,7 +339,7 @@ class SubtaskDetail implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param int $jobId 内部任务ID
+    * @param string $jobId 内部任务ID
     *
     * @return $this
     */

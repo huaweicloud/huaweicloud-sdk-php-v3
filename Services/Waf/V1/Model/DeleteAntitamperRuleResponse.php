@@ -25,6 +25,9 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * url  防篡改的url
     * timestamp  创建规则的时间戳
+    * hostname  防护域名
+    * status  规则状态
+    * description  规则描述
     *
     * @var string[]
     */
@@ -32,7 +35,10 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'string',
             'policyid' => 'string',
             'url' => 'string',
-            'timestamp' => 'int'
+            'timestamp' => 'int',
+            'hostname' => 'string',
+            'status' => 'string',
+            'description' => 'string'
     ];
 
     /**
@@ -41,6 +47,9 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * url  防篡改的url
     * timestamp  创建规则的时间戳
+    * hostname  防护域名
+    * status  规则状态
+    * description  规则描述
     *
     * @var string[]
     */
@@ -48,7 +57,10 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
         'id' => null,
         'policyid' => null,
         'url' => null,
-        'timestamp' => 'int64'
+        'timestamp' => 'int64',
+        'hostname' => null,
+        'status' => null,
+        'description' => null
     ];
 
     /**
@@ -78,6 +90,9 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * url  防篡改的url
     * timestamp  创建规则的时间戳
+    * hostname  防护域名
+    * status  规则状态
+    * description  规则描述
     *
     * @var string[]
     */
@@ -85,7 +100,10 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'id',
             'policyid' => 'policyid',
             'url' => 'url',
-            'timestamp' => 'timestamp'
+            'timestamp' => 'timestamp',
+            'hostname' => 'hostname',
+            'status' => 'status',
+            'description' => 'description'
     ];
 
     /**
@@ -94,6 +112,9 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * url  防篡改的url
     * timestamp  创建规则的时间戳
+    * hostname  防护域名
+    * status  规则状态
+    * description  规则描述
     *
     * @var string[]
     */
@@ -101,7 +122,10 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'policyid' => 'setPolicyid',
             'url' => 'setUrl',
-            'timestamp' => 'setTimestamp'
+            'timestamp' => 'setTimestamp',
+            'hostname' => 'setHostname',
+            'status' => 'setStatus',
+            'description' => 'setDescription'
     ];
 
     /**
@@ -110,6 +134,9 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * url  防篡改的url
     * timestamp  创建规则的时间戳
+    * hostname  防护域名
+    * status  规则状态
+    * description  规则描述
     *
     * @var string[]
     */
@@ -117,7 +144,10 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'policyid' => 'getPolicyid',
             'url' => 'getUrl',
-            'timestamp' => 'getTimestamp'
+            'timestamp' => 'getTimestamp',
+            'hostname' => 'getHostname',
+            'status' => 'getStatus',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -182,6 +212,9 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['hostname'] = isset($data['hostname']) ? $data['hostname'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -299,6 +332,78 @@ class DeleteAntitamperRuleResponse implements ModelInterface, ArrayAccess
     public function setTimestamp($timestamp)
     {
         $this->container['timestamp'] = $timestamp;
+        return $this;
+    }
+
+    /**
+    * Gets hostname
+    *  防护域名
+    *
+    * @return string|null
+    */
+    public function getHostname()
+    {
+        return $this->container['hostname'];
+    }
+
+    /**
+    * Sets hostname
+    *
+    * @param string|null $hostname 防护域名
+    *
+    * @return $this
+    */
+    public function setHostname($hostname)
+    {
+        $this->container['hostname'] = $hostname;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  规则状态
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 规则状态
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  规则描述
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 规则描述
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

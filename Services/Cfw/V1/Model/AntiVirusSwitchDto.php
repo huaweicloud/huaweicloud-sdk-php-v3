@@ -169,12 +169,18 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['antiVirusStatus']) && ($this->container['antiVirusStatus'] > 1)) {
+        if ($this->container['antiVirusStatus'] === null) {
+            $invalidProperties[] = "'antiVirusStatus' can't be null";
+        }
+            if (($this->container['antiVirusStatus'] > 1)) {
                 $invalidProperties[] = "invalid value for 'antiVirusStatus', must be smaller than or equal to 1.";
             }
-            if (!is_null($this->container['antiVirusStatus']) && ($this->container['antiVirusStatus'] < 0)) {
+            if (($this->container['antiVirusStatus'] < 0)) {
                 $invalidProperties[] = "invalid value for 'antiVirusStatus', must be bigger than or equal to 0.";
             }
+        if ($this->container['objectId'] === null) {
+            $invalidProperties[] = "'objectId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -193,7 +199,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     * Gets antiVirusStatus
     *  参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
     *
-    * @return int|null
+    * @return int
     */
     public function getAntiVirusStatus()
     {
@@ -203,7 +209,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     /**
     * Sets antiVirusStatus
     *
-    * @param int|null $antiVirusStatus 参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
+    * @param int $antiVirusStatus 参数解释： 反病毒开关状态，为必传参数 约束限制： 不涉及 取值范围： 0：开启 1：关闭 默认取值： 不涉及
     *
     * @return $this
     */
@@ -217,7 +223,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     * Gets objectId
     *  防护对象ID，为必传参数
     *
-    * @return string|null
+    * @return string
     */
     public function getObjectId()
     {
@@ -227,7 +233,7 @@ class AntiVirusSwitchDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象ID，为必传参数
+    * @param string $objectId 防护对象ID，为必传参数
     *
     * @return $this
     */

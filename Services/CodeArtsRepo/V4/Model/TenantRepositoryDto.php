@@ -30,6 +30,7 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     * repositoryName  **参数解释：** 仓库名。 **取值范围：** 不涉及。
     * projectName  **参数解释：** 项目名。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 项目Id。 **取值范围：** 不涉及。
+    * locked  **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
             'repositoryId' => 'int',
             'repositoryName' => 'string',
             'projectName' => 'string',
-            'projectId' => 'string'
+            'projectId' => 'string',
+            'locked' => 'bool'
     ];
 
     /**
@@ -58,6 +60,7 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     * repositoryName  **参数解释：** 仓库名。 **取值范围：** 不涉及。
     * projectName  **参数解释：** 项目名。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 项目Id。 **取值范围：** 不涉及。
+    * locked  **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
         'repositoryId' => null,
         'repositoryName' => null,
         'projectName' => null,
-        'projectId' => null
+        'projectId' => null,
+        'locked' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     * repositoryName  **参数解释：** 仓库名。 **取值范围：** 不涉及。
     * projectName  **参数解释：** 项目名。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 项目Id。 **取值范围：** 不涉及。
+    * locked  **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
             'repositoryId' => 'repository_id',
             'repositoryName' => 'repository_name',
             'projectName' => 'project_name',
-            'projectId' => 'project_id'
+            'projectId' => 'project_id',
+            'locked' => 'locked'
     ];
 
     /**
@@ -135,6 +141,7 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     * repositoryName  **参数解释：** 仓库名。 **取值范围：** 不涉及。
     * projectName  **参数解释：** 项目名。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 项目Id。 **取值范围：** 不涉及。
+    * locked  **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
             'repositoryId' => 'setRepositoryId',
             'repositoryName' => 'setRepositoryName',
             'projectName' => 'setProjectName',
-            'projectId' => 'setProjectId'
+            'projectId' => 'setProjectId',
+            'locked' => 'setLocked'
     ];
 
     /**
@@ -163,6 +171,7 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     * repositoryName  **参数解释：** 仓库名。 **取值范围：** 不涉及。
     * projectName  **参数解释：** 项目名。 **取值范围：** 不涉及。
     * projectId  **参数解释：** 项目Id。 **取值范围：** 不涉及。
+    * locked  **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
             'repositoryId' => 'getRepositoryId',
             'repositoryName' => 'getRepositoryName',
             'projectName' => 'getProjectName',
-            'projectId' => 'getProjectId'
+            'projectId' => 'getProjectId',
+            'locked' => 'getLocked'
     ];
 
     /**
@@ -268,6 +278,7 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
         $this->container['repositoryName'] = isset($data['repositoryName']) ? $data['repositoryName'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
     }
 
     /**
@@ -579,6 +590,30 @@ class TenantRepositoryDto implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets locked
+    *  **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
+    *
+    * @return bool|null
+    */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+    * Sets locked
+    *
+    * @param bool|null $locked **参数解释：** 是否锁定。 **取值范围：** - true，是。 - false，否。
+    *
+    * @return $this
+    */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * encodedMessage  加密的鉴权失败原因，字符串长度范围[1,10240]。
+    * encodedMessage  **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * encodedMessage  加密的鉴权失败原因，字符串长度范围[1,10240]。
+    * encodedMessage  **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * encodedMessage  加密的鉴权失败原因，字符串长度范围[1,10240]。
+    * encodedMessage  **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * encodedMessage  加密的鉴权失败原因，字符串长度范围[1,10240]。
+    * encodedMessage  **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * encodedMessage  加密的鉴权失败原因，字符串长度范围[1,10240]。
+    * encodedMessage  **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets encodedMessage
-    *  加密的鉴权失败原因，字符串长度范围[1,10240]。
+    *  **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class DecodeAuthorizationMessageReq implements ModelInterface, ArrayAccess
     /**
     * Sets encodedMessage
     *
-    * @param string $encodedMessage 加密的鉴权失败原因，字符串长度范围[1,10240]。
+    * @param string $encodedMessage **参数解释**： 加密的鉴权失败原因。  **约束限制**： 长度范围为[1,10240]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */

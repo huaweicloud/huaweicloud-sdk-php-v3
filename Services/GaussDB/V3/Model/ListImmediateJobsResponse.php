@@ -23,24 +23,28 @@ class ListImmediateJobsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobs  任务详情。
     * totalCount  任务总数。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobs' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TaskDetailInfo[]',
-            'totalCount' => 'int'
+            'totalCount' => 'int',
+            'actionNames' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobs  任务详情。
     * totalCount  任务总数。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobs' => null,
-        'totalCount' => null
+        'totalCount' => null,
+        'actionNames' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListImmediateJobsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobs  任务详情。
     * totalCount  任务总数。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobs' => 'jobs',
-            'totalCount' => 'total_count'
+            'totalCount' => 'total_count',
+            'actionNames' => 'action_names'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobs  任务详情。
     * totalCount  任务总数。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'jobs' => 'setJobs',
-            'totalCount' => 'setTotalCount'
+            'totalCount' => 'setTotalCount',
+            'actionNames' => 'setActionNames'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobs  任务详情。
     * totalCount  任务总数。
+    * actionNames  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'jobs' => 'getJobs',
-            'totalCount' => 'getTotalCount'
+            'totalCount' => 'getTotalCount',
+            'actionNames' => 'getActionNames'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListImmediateJobsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['actionNames'] = isset($data['actionNames']) ? $data['actionNames'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListImmediateJobsResponse implements ModelInterface, ArrayAccess
     public function setTotalCount($totalCount)
     {
         $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets actionNames
+    *  **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getActionNames()
+    {
+        return $this->container['actionNames'];
+    }
+
+    /**
+    * Sets actionNames
+    *
+    * @param string[]|null $actionNames **参数解释**：  支持筛选的任务名称。  **取值范围**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setActionNames($actionNames)
+    {
+        $this->container['actionNames'] = $actionNames;
         return $this;
     }
 

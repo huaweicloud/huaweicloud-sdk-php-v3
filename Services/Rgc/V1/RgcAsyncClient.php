@@ -3327,6 +3327,9 @@ class RgcAsyncClient extends Client
         if ($localVarParams['version'] !== null) {
             $queryParams['version'] = $localVarParams['version'];
         }
+        if ($localVarParams['accountId'] !== null) {
+            $queryParams['account_id'] = $localVarParams['accountId'];
+        }
         if ($localVarParams['templateName'] !== null) {
             $pathParams['template_name'] = $localVarParams['templateName'];
         }

@@ -20,11 +20,11 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    * chargeMode  **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
+    * periodType  **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
+    * periodNum  **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
+    * isAutoRenew  **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
+    * isAutoPay  **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    * chargeMode  **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
+    * periodType  **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
+    * periodNum  **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
+    * isAutoRenew  **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
+    * isAutoPay  **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    * chargeMode  **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
+    * periodType  **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
+    * periodNum  **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
+    * isAutoRenew  **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
+    * isAutoPay  **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    * chargeMode  **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
+    * periodType  **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
+    * periodNum  **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
+    * isAutoRenew  **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
+    * isAutoPay  **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
-    * periodType  订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
-    * periodNum  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
-    * isAutoRenew  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
-    * isAutoPay  创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    * chargeMode  **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
+    * periodType  **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
+    * periodNum  **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
+    * isAutoRenew  **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
+    * isAutoPay  **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
+    *  **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -233,7 +233,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式。 取值范围：   - prePaid：预付费，即包年/包月。   - postPaid：后付费，即按需付费。
+    * @param string $chargeMode **参数解释：** 计费模式。 **约束限制：** 不涉及。 **取值范围：** - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
+    *  **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param string|null $periodType 订购周期类型。 “charge_mode”为“prePaid”时生效，且为必选值。 取值范围：   - month：包月。   - year：包年。
+    * @param string|null $periodType **参数解释：** 订购周期类型。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - month：包月。 - year：包年。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -269,7 +269,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
+    *  **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -281,7 +281,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param string|null $periodNum “charge_mode”为“prePaid”时生效，且为必选值，指定订购的时间。 取值范围：   - 当“period_type”为“month”时，取值为1~9。   - 当“period_type”为“year”时，取值为1~3
+    * @param string|null $periodNum **参数解释：** 指定订购的时间。 **约束限制：** “charge_mode”为“prePaid”时生效，且为必选值。 **取值范围：** - 当“period_type”为“month”时，取值为1~9。 - 当“period_type”为“year”时，取值为1~3 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
+    *  **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
     *
     * @return string|null
     */
@@ -305,7 +305,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param string|null $isAutoRenew 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 取值范围：   - true，表示自动续订。   - false，表示不自动续订，默认为该方式。
+    * @param string|null $isAutoRenew **参数解释：** 创建包周期实例时可指定，表示是否自动续订，续订的周期和原周期相同，且续订时会自动支付。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动续订。 - false，表示不自动续订，默认为该方式。 **默认取值：** false。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    *  **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class ChargeInfoOption implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param string|null $isAutoPay 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 取值范围：   - true，表示自动从账户中支付   - false，表示手动从账户中支付，默认为该支付方式。
+    * @param string|null $isAutoPay **参数解释：** 创建包周期实例时可指定，表示是否自动从账户中支付，该字段不影响自动续订的支付方式。 **约束限制：** 不涉及。 **取值范围：** - true，表示自动从账户中支付 - false，表示手动从账户中支付，默认为该支付方式 **默认取值：** false。
     *
     * @return $this
     */

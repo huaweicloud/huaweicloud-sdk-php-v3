@@ -24,6 +24,7 @@ class ClientData implements ModelInterface, ArrayAccess
     * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeType  **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
     * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class ClientData implements ModelInterface, ArrayAccess
             'version' => 'string',
             'clientId' => 'string',
             'clientAddr' => 'string',
+            'consumeType' => 'string',
             'subscriptions' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\Subscription[]'
     ];
 
@@ -42,6 +44,7 @@ class ClientData implements ModelInterface, ArrayAccess
     * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeType  **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
     * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class ClientData implements ModelInterface, ArrayAccess
         'version' => null,
         'clientId' => null,
         'clientAddr' => null,
+        'consumeType' => null,
         'subscriptions' => null
     ];
 
@@ -81,6 +85,7 @@ class ClientData implements ModelInterface, ArrayAccess
     * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeType  **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
     * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class ClientData implements ModelInterface, ArrayAccess
             'version' => 'version',
             'clientId' => 'client_id',
             'clientAddr' => 'client_addr',
+            'consumeType' => 'consume_type',
             'subscriptions' => 'subscriptions'
     ];
 
@@ -99,6 +105,7 @@ class ClientData implements ModelInterface, ArrayAccess
     * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeType  **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
     * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class ClientData implements ModelInterface, ArrayAccess
             'version' => 'setVersion',
             'clientId' => 'setClientId',
             'clientAddr' => 'setClientAddr',
+            'consumeType' => 'setConsumeType',
             'subscriptions' => 'setSubscriptions'
     ];
 
@@ -117,6 +125,7 @@ class ClientData implements ModelInterface, ArrayAccess
     * version  **参数解释**： 客户端版本。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientId  **参数解释**： 客户端ID。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * clientAddr  **参数解释**： 客户端地址。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * consumeType  **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
     * subscriptions  **参数解释**： 订阅关系列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class ClientData implements ModelInterface, ArrayAccess
             'version' => 'getVersion',
             'clientId' => 'getClientId',
             'clientAddr' => 'getClientAddr',
+            'consumeType' => 'getConsumeType',
             'subscriptions' => 'getSubscriptions'
     ];
 
@@ -169,7 +179,24 @@ class ClientData implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CONSUME_TYPE_CONSUME_POP = 'CONSUME_POP';
+    const CONSUME_TYPE_CONSUME_PASSIVELY = 'CONSUME_PASSIVELY';
+    const CONSUME_TYPE_CONSUME_ACTIVELY = 'CONSUME_ACTIVELY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getConsumeTypeAllowableValues()
+    {
+        return [
+            self::CONSUME_TYPE_CONSUME_POP,
+            self::CONSUME_TYPE_CONSUME_PASSIVELY,
+            self::CONSUME_TYPE_CONSUME_ACTIVELY,
+        ];
+    }
 
 
     /**
@@ -191,6 +218,7 @@ class ClientData implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['clientId'] = isset($data['clientId']) ? $data['clientId'] : null;
         $this->container['clientAddr'] = isset($data['clientAddr']) ? $data['clientAddr'] : null;
+        $this->container['consumeType'] = isset($data['consumeType']) ? $data['consumeType'] : null;
         $this->container['subscriptions'] = isset($data['subscriptions']) ? $data['subscriptions'] : null;
     }
 
@@ -202,6 +230,20 @@ class ClientData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getConsumeTypeAllowableValues();
+                if (!is_null($this->container['consumeType']) && !in_array($this->container['consumeType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'consumeType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['consumeType']) && (mb_strlen($this->container['consumeType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'consumeType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['consumeType']) && (mb_strlen($this->container['consumeType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'consumeType', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -309,6 +351,30 @@ class ClientData implements ModelInterface, ArrayAccess
     public function setClientAddr($clientAddr)
     {
         $this->container['clientAddr'] = $clientAddr;
+        return $this;
+    }
+
+    /**
+    * Gets consumeType
+    *  **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConsumeType()
+    {
+        return $this->container['consumeType'];
+    }
+
+    /**
+    * Sets consumeType
+    *
+    * @param string|null $consumeType **参数解释**： 消费类型。 **约束限制**： 不涉及。 **取值范围**： - CONSUME_POP：POP消费模式 - CONSUME_PASSIVELY：推消费模式 - CONSUME_ACTIVELY：拉消费模式 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setConsumeType($consumeType)
+    {
+        $this->container['consumeType'] = $consumeType;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  类型
+    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     * quota  配额
     * used  已使用量
     *
@@ -34,7 +34,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  类型
+    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     * quota  配额
     * used  已使用量
     *
@@ -69,7 +69,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  类型
+    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     * quota  配额
     * used  已使用量
     *
@@ -83,7 +83,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  类型
+    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     * quota  配额
     * used  已使用量
     *
@@ -97,7 +97,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  类型
+    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     * quota  配额
     * used  已使用量
     *
@@ -196,7 +196,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型
+    *  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型
+    * @param string|null $type **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
     *
     * @return $this
     */

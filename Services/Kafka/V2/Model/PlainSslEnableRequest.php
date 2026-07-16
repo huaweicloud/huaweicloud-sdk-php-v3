@@ -240,6 +240,9 @@ class PlainSslEnableRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['protocol'] === null) {
+            $invalidProperties[] = "'protocol' can't be null";
+        }
             $allowedValues = $this->getProtocolAllowableValues();
                 if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -248,6 +251,9 @@ class PlainSslEnableRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['enable'] === null) {
+            $invalidProperties[] = "'enable' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -266,7 +272,7 @@ class PlainSslEnableRequest implements ModelInterface, ArrayAccess
     * Gets protocol
     *  需要开启或者关闭的接入方式。
     *
-    * @return string|null
+    * @return string
     */
     public function getProtocol()
     {
@@ -276,7 +282,7 @@ class PlainSslEnableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 需要开启或者关闭的接入方式。
+    * @param string $protocol 需要开启或者关闭的接入方式。
     *
     * @return $this
     */
@@ -290,7 +296,7 @@ class PlainSslEnableRequest implements ModelInterface, ArrayAccess
     * Gets enable
     *  - true：开启指定的接入方式。 - false：关闭指定的接入方式。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getEnable()
     {
@@ -300,7 +306,7 @@ class PlainSslEnableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable - true：开启指定的接入方式。 - false：关闭指定的接入方式。
+    * @param bool $enable - true：开启指定的接入方式。 - false：关闭指定的接入方式。
     *
     * @return $this
     */

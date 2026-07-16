@@ -20,7 +20,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * filter  **参数解释：** 检索条件，名称。
     * orderBy  **参数解释：** 排序字段 id 唯一标识 name 名称 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
@@ -42,7 +42,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * filter  **参数解释：** 检索条件，名称。
     * orderBy  **参数解释：** 排序字段 id 唯一标识 name 名称 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
@@ -85,7 +85,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * filter  **参数解释：** 检索条件，名称。
     * orderBy  **参数解释：** 排序字段 id 唯一标识 name 名称 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
@@ -107,7 +107,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * filter  **参数解释：** 检索条件，名称。
     * orderBy  **参数解释：** 排序字段 id 唯一标识 name 名称 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
@@ -129,7 +129,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * groupId  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     * filter  **参数解释：** 检索条件，名称。
     * orderBy  **参数解释：** 排序字段 id 唯一标识 name 名称 created_at 创建时间 updated_at 更新时间
     * sort  **参数解释：** 排序顺序 asc顺序 desc逆序
@@ -317,7 +317,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
 
     /**
     * Gets groupId
-    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    *  **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return int
     */
@@ -329,7 +329,7 @@ class ListGroupSubgroupsAndRepositoriesRequest implements ModelInterface, ArrayA
     /**
     * Sets groupId
     *
-    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id
+    * @param int $groupId **参数解释：** 代码组id，代码组首页，Group ID后的数字Id **默认取值：** 不涉及。
     *
     * @return $this
     */

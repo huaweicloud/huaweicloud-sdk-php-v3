@@ -20,22 +20,22 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * source  数据恢复源。
-    * target  数据恢复目标。
+    * source  source
+    * target  target
     * dataNodeRelations  关联dn。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'source' => 'object',
-            'target' => 'object',
+            'source' => '\HuaweiCloud\SDK\Ddm\V1\Model\RestoreInstSource',
+            'target' => '\HuaweiCloud\SDK\Ddm\V1\Model\RestoreInstTarget',
             'dataNodeRelations' => '\HuaweiCloud\SDK\Ddm\V1\Model\DataNodeRelation[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * source  数据恢复源。
-    * target  数据恢复目标。
+    * source  source
+    * target  target
     * dataNodeRelations  关联dn。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * source  数据恢复源。
-    * target  数据恢复目标。
+    * source  source
+    * target  target
     * dataNodeRelations  关联dn。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * source  数据恢复源。
-    * target  数据恢复目标。
+    * source  source
+    * target  target
     * dataNodeRelations  关联dn。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * source  数据恢复源。
-    * target  数据恢复目标。
+    * source  source
+    * target  target
     * dataNodeRelations  关联dn。
     *
     * @var string[]
@@ -180,6 +180,15 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['source'] === null) {
+            $invalidProperties[] = "'source' can't be null";
+        }
+        if ($this->container['target'] === null) {
+            $invalidProperties[] = "'target' can't be null";
+        }
+        if ($this->container['dataNodeRelations'] === null) {
+            $invalidProperties[] = "'dataNodeRelations' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,9 +205,9 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  数据恢复源。
+    *  source
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\RestoreInstSource
     */
     public function getSource()
     {
@@ -208,7 +217,7 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param object|null $source 数据恢复源。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\RestoreInstSource $source source
     *
     * @return $this
     */
@@ -220,9 +229,9 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets target
-    *  数据恢复目标。
+    *  target
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\RestoreInstTarget
     */
     public function getTarget()
     {
@@ -232,7 +241,7 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets target
     *
-    * @param object|null $target 数据恢复目标。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\RestoreInstTarget $target target
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
     * Gets dataNodeRelations
     *  关联dn。
     *
-    * @return \HuaweiCloud\SDK\Ddm\V1\Model\DataNodeRelation[]|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\DataNodeRelation[]
     */
     public function getDataNodeRelations()
     {
@@ -256,7 +265,7 @@ class RestoreInst2ExistReq implements ModelInterface, ArrayAccess
     /**
     * Sets dataNodeRelations
     *
-    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DataNodeRelation[]|null $dataNodeRelations 关联dn。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\DataNodeRelation[] $dataNodeRelations 关联dn。
     *
     * @return $this
     */

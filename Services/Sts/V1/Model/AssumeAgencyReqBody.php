@@ -20,17 +20,17 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * durationSeconds  获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
-    * externalId  外部ID，防止混淆代理人问题。
-    * policy  自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
-    * policyIds  预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
-    * agencyUrn  目标委托的URN。
-    * agencySessionName  委托会话的会话名。
-    * serialNumber  调用者绑定的MFA设备的序列号。
-    * tokenCode  调用者绑定的MFA设备上的6位数字码。
-    * sourceIdentity  调用链里最初调用者所声明的身份。
-    * tags  自定义标签列表。
-    * transitiveTagKeys  随着临时安全凭证调用链持续透传的标签键列表。
+    * durationSeconds  **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
+    * externalId  **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policy  **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policyIds  **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencyUrn  **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencySessionName  **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * serialNumber  **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tokenCode  **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tags  **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * transitiveTagKeys  **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * durationSeconds  获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
-    * externalId  外部ID，防止混淆代理人问题。
-    * policy  自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
-    * policyIds  预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
-    * agencyUrn  目标委托的URN。
-    * agencySessionName  委托会话的会话名。
-    * serialNumber  调用者绑定的MFA设备的序列号。
-    * tokenCode  调用者绑定的MFA设备上的6位数字码。
-    * sourceIdentity  调用链里最初调用者所声明的身份。
-    * tags  自定义标签列表。
-    * transitiveTagKeys  随着临时安全凭证调用链持续透传的标签键列表。
+    * durationSeconds  **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
+    * externalId  **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policy  **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policyIds  **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencyUrn  **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencySessionName  **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * serialNumber  **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tokenCode  **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tags  **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * transitiveTagKeys  **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * durationSeconds  获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
-    * externalId  外部ID，防止混淆代理人问题。
-    * policy  自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
-    * policyIds  预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
-    * agencyUrn  目标委托的URN。
-    * agencySessionName  委托会话的会话名。
-    * serialNumber  调用者绑定的MFA设备的序列号。
-    * tokenCode  调用者绑定的MFA设备上的6位数字码。
-    * sourceIdentity  调用链里最初调用者所声明的身份。
-    * tags  自定义标签列表。
-    * transitiveTagKeys  随着临时安全凭证调用链持续透传的标签键列表。
+    * durationSeconds  **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
+    * externalId  **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policy  **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policyIds  **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencyUrn  **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencySessionName  **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * serialNumber  **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tokenCode  **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tags  **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * transitiveTagKeys  **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * durationSeconds  获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
-    * externalId  外部ID，防止混淆代理人问题。
-    * policy  自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
-    * policyIds  预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
-    * agencyUrn  目标委托的URN。
-    * agencySessionName  委托会话的会话名。
-    * serialNumber  调用者绑定的MFA设备的序列号。
-    * tokenCode  调用者绑定的MFA设备上的6位数字码。
-    * sourceIdentity  调用链里最初调用者所声明的身份。
-    * tags  自定义标签列表。
-    * transitiveTagKeys  随着临时安全凭证调用链持续透传的标签键列表。
+    * durationSeconds  **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
+    * externalId  **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policy  **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policyIds  **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencyUrn  **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencySessionName  **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * serialNumber  **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tokenCode  **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tags  **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * transitiveTagKeys  **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * durationSeconds  获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
-    * externalId  外部ID，防止混淆代理人问题。
-    * policy  自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
-    * policyIds  预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
-    * agencyUrn  目标委托的URN。
-    * agencySessionName  委托会话的会话名。
-    * serialNumber  调用者绑定的MFA设备的序列号。
-    * tokenCode  调用者绑定的MFA设备上的6位数字码。
-    * sourceIdentity  调用链里最初调用者所声明的身份。
-    * tags  自定义标签列表。
-    * transitiveTagKeys  随着临时安全凭证调用链持续透传的标签键列表。
+    * durationSeconds  **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
+    * externalId  **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policy  **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * policyIds  **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencyUrn  **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * agencySessionName  **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * serialNumber  **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tokenCode  **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * sourceIdentity  **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * tags  **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
+    * transitiveTagKeys  **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -350,7 +350,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets durationSeconds
-    *  获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
+    *  **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
     *
     * @return int|null
     */
@@ -362,7 +362,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets durationSeconds
     *
-    * @param int|null $durationSeconds 获得的临时安全凭证的有效时间（单位秒）。请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。
+    * @param int|null $durationSeconds **参数解释**： 获得的临时安全凭证的有效时间（单位：秒）。  **约束限制**： 请注意，该时间需要小于委托本身设置的最大会话持续时间，同时在携带X-Security-Token的Header头时该时间不能超过3600秒。  **取值范围**： 取值范围为[900,43200]。  **默认取值**： 默认值为3600。
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets externalId
-    *  外部ID，防止混淆代理人问题。
+    *  **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -386,7 +386,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets externalId
     *
-    * @param string|null $externalId 外部ID，防止混淆代理人问题。
+    * @param string|null $externalId **参数解释**： 外部ID，防止混淆代理人问题。  **约束限制**： 长度范围为[2,1224]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -398,7 +398,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
-    *  自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
+    *  **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -410,7 +410,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param string|null $policy 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。
+    * @param string|null $policy **参数解释**： 自定义策略，限制本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。  **约束限制**： 本次会话获得的临时安全凭证的权限范围不会超过该自定义策略指定的权限。 长度范围为[2,2048]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyIds
-    *  预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
+    *  **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -434,7 +434,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyIds
     *
-    * @param string[]|null $policyIds 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。
+    * @param string[]|null $policyIds **参数解释**： 预置策略列表，限制本次会话获得的临时安全凭证的权限范围不会超过该预置策略指定的权限。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencyUrn
-    *  目标委托的URN。
+    *  **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -458,7 +458,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets agencyUrn
     *
-    * @param string $agencyUrn 目标委托的URN。
+    * @param string $agencyUrn **参数解释**： 目标委托的URN。  **约束限制**： 长度范围为[0,1500]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agencySessionName
-    *  委托会话的会话名。
+    *  **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -482,7 +482,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets agencySessionName
     *
-    * @param string $agencySessionName 委托会话的会话名。
+    * @param string $agencySessionName **参数解释**： 委托会话的会话名。  **约束限制**： 长度范围为[2,128]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -494,7 +494,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serialNumber
-    *  调用者绑定的MFA设备的序列号。
+    *  **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -506,7 +506,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets serialNumber
     *
-    * @param string|null $serialNumber 调用者绑定的MFA设备的序列号。
+    * @param string|null $serialNumber **参数解释**： 调用者绑定的MFA设备的序列号。  **约束限制**： 长度范围为[9,256]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tokenCode
-    *  调用者绑定的MFA设备上的6位数字码。
+    *  **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -530,7 +530,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets tokenCode
     *
-    * @param string|null $tokenCode 调用者绑定的MFA设备上的6位数字码。
+    * @param string|null $tokenCode **参数解释**： 调用者绑定的MFA设备上的6位数字码。  **约束限制**： 长度范围为[6,6]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceIdentity
-    *  调用链里最初调用者所声明的身份。
+    *  **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets sourceIdentity
     *
-    * @param string|null $sourceIdentity 调用链里最初调用者所声明的身份。
+    * @param string|null $sourceIdentity **参数解释**： 调用链里最初调用者所声明的身份。  **约束限制**： 长度范围为[2,64]。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -566,7 +566,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  自定义标签列表。
+    *  **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Sts\V1\Model\TagDto[]|null
     */
@@ -578,7 +578,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Sts\V1\Model\TagDto[]|null $tags 自定义标签列表。
+    * @param \HuaweiCloud\SDK\Sts\V1\Model\TagDto[]|null $tags **参数解释**： 自定义标签列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets transitiveTagKeys
-    *  随着临时安全凭证调用链持续透传的标签键列表。
+    *  **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -602,7 +602,7 @@ class AssumeAgencyReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets transitiveTagKeys
     *
-    * @param string[]|null $transitiveTagKeys 随着临时安全凭证调用链持续透传的标签键列表。
+    * @param string[]|null $transitiveTagKeys **参数解释**： 随着临时安全凭证调用链持续透传的标签键列表。  **约束限制**： 不涉及。  **取值范围**： 不涉及。  **默认取值**： 不涉及。
     *
     * @return $this
     */

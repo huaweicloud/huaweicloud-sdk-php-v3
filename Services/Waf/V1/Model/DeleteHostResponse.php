@@ -36,6 +36,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
+    * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     *
     * @var string[]
     */
@@ -54,7 +55,8 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
             'accessStatus' => 'int',
             'exclusiveIp' => 'bool',
             'paidType' => 'string',
-            'webTag' => 'string'
+            'webTag' => 'string',
+            'region' => 'string'
     ];
 
     /**
@@ -74,6 +76,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
+    * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     *
     * @var string[]
     */
@@ -92,7 +95,8 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
         'accessStatus' => null,
         'exclusiveIp' => null,
         'paidType' => null,
-        'webTag' => null
+        'webTag' => null,
+        'region' => null
     ];
 
     /**
@@ -133,6 +137,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
+    * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     *
     * @var string[]
     */
@@ -151,7 +156,8 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
             'accessStatus' => 'access_status',
             'exclusiveIp' => 'exclusive_ip',
             'paidType' => 'paid_type',
-            'webTag' => 'web_tag'
+            'webTag' => 'web_tag',
+            'region' => 'region'
     ];
 
     /**
@@ -171,6 +177,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
+    * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     *
     * @var string[]
     */
@@ -189,7 +196,8 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
             'accessStatus' => 'setAccessStatus',
             'exclusiveIp' => 'setExclusiveIp',
             'paidType' => 'setPaidType',
-            'webTag' => 'setWebTag'
+            'webTag' => 'setWebTag',
+            'region' => 'setRegion'
     ];
 
     /**
@@ -209,6 +217,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不使用独享ip
     * paidType  **参数解释：** 套餐付费模式标识，用于指定套餐的计费方式 **约束限制：** 不涉及 **取值范围：**  - prePaid:包周期模式  - postPaid:按需模式  **默认取值：** prePaid
     * webTag  网站名称，对应WAF控制台域名详情中的网站名称
+    * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     *
     * @var string[]
     */
@@ -227,7 +236,8 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
             'accessStatus' => 'getAccessStatus',
             'exclusiveIp' => 'getExclusiveIp',
             'paidType' => 'getPaidType',
-            'webTag' => 'getWebTag'
+            'webTag' => 'getWebTag',
+            'region' => 'getRegion'
     ];
 
     /**
@@ -318,6 +328,7 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
         $this->container['exclusiveIp'] = isset($data['exclusiveIp']) ? $data['exclusiveIp'] : null;
         $this->container['paidType'] = isset($data['paidType']) ? $data['paidType'] : null;
         $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
     }
 
     /**
@@ -707,6 +718,30 @@ class DeleteHostResponse implements ModelInterface, ArrayAccess
     public function setWebTag($webTag)
     {
         $this->container['webTag'] = $webTag;
+        return $this;
+    }
+
+    /**
+    * Gets region
+    *  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    *
+    * @return string|null
+    */
+    public function getRegion()
+    {
+        return $this->container['region'];
+    }
+
+    /**
+    * Sets region
+    *
+    * @param string|null $region 华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    *
+    * @return $this
+    */
+    public function setRegion($region)
+    {
+        $this->container['region'] = $region;
         return $this;
     }
 

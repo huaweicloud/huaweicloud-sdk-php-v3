@@ -57,6 +57,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
+    * httpsTlsVersion  httpsTlsVersion
     *
     * @var string[]
     */
@@ -97,7 +98,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'requestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewrite[]',
             'browserCacheRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]',
             'accessAreaFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]',
-            'clientCert' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCert'
+            'clientCert' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCert',
+            'httpsTlsVersion' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsTlsVersion'
     ];
 
     /**
@@ -139,6 +141,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
+    * httpsTlsVersion  httpsTlsVersion
     *
     * @var string[]
     */
@@ -179,7 +182,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         'requestUrlRewrite' => null,
         'browserCacheRules' => null,
         'accessAreaFilter' => null,
-        'clientCert' => null
+        'clientCert' => null,
+        'httpsTlsVersion' => null
     ];
 
     /**
@@ -242,6 +246,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
+    * httpsTlsVersion  httpsTlsVersion
     *
     * @var string[]
     */
@@ -282,7 +287,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'requestUrlRewrite' => 'request_url_rewrite',
             'browserCacheRules' => 'browser_cache_rules',
             'accessAreaFilter' => 'access_area_filter',
-            'clientCert' => 'client_cert'
+            'clientCert' => 'client_cert',
+            'httpsTlsVersion' => 'https_tls_version'
     ];
 
     /**
@@ -324,6 +330,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
+    * httpsTlsVersion  httpsTlsVersion
     *
     * @var string[]
     */
@@ -364,7 +371,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'requestUrlRewrite' => 'setRequestUrlRewrite',
             'browserCacheRules' => 'setBrowserCacheRules',
             'accessAreaFilter' => 'setAccessAreaFilter',
-            'clientCert' => 'setClientCert'
+            'clientCert' => 'setClientCert',
+            'httpsTlsVersion' => 'setHttpsTlsVersion'
     ];
 
     /**
@@ -406,6 +414,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * browserCacheRules  浏览器缓存过期时间。
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
+    * httpsTlsVersion  httpsTlsVersion
     *
     * @var string[]
     */
@@ -446,7 +455,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'requestUrlRewrite' => 'getRequestUrlRewrite',
             'browserCacheRules' => 'getBrowserCacheRules',
             'accessAreaFilter' => 'getAccessAreaFilter',
-            'clientCert' => 'getClientCert'
+            'clientCert' => 'getClientCert',
+            'httpsTlsVersion' => 'getHttpsTlsVersion'
     ];
 
     /**
@@ -544,6 +554,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         $this->container['browserCacheRules'] = isset($data['browserCacheRules']) ? $data['browserCacheRules'] : null;
         $this->container['accessAreaFilter'] = isset($data['accessAreaFilter']) ? $data['accessAreaFilter'] : null;
         $this->container['clientCert'] = isset($data['clientCert']) ? $data['clientCert'] : null;
+        $this->container['httpsTlsVersion'] = isset($data['httpsTlsVersion']) ? $data['httpsTlsVersion'] : null;
     }
 
     /**
@@ -1453,6 +1464,30 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function setClientCert($clientCert)
     {
         $this->container['clientCert'] = $clientCert;
+        return $this;
+    }
+
+    /**
+    * Gets httpsTlsVersion
+    *  httpsTlsVersion
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\HttpsTlsVersion|null
+    */
+    public function getHttpsTlsVersion()
+    {
+        return $this->container['httpsTlsVersion'];
+    }
+
+    /**
+    * Sets httpsTlsVersion
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\HttpsTlsVersion|null $httpsTlsVersion httpsTlsVersion
+    *
+    * @return $this
+    */
+    public function setHttpsTlsVersion($httpsTlsVersion)
+    {
+        $this->container['httpsTlsVersion'] = $httpsTlsVersion;
         return $this;
     }
 

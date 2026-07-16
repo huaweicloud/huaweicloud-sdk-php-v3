@@ -21,24 +21,28 @@ class BatchDeleteLoadbalancersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  批量删除任务id
     * loadbalancerIds  待删除的负载均衡器id列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'requestId' => 'string',
             'jobId' => 'string',
             'loadbalancerIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  批量删除任务id
     * loadbalancerIds  待删除的负载均衡器id列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'requestId' => null,
         'jobId' => null,
         'loadbalancerIds' => null
     ];
@@ -66,36 +70,42 @@ class BatchDeleteLoadbalancersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  批量删除任务id
     * loadbalancerIds  待删除的负载均衡器id列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'requestId' => 'request_id',
             'jobId' => 'job_id',
             'loadbalancerIds' => 'loadbalancer_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  批量删除任务id
     * loadbalancerIds  待删除的负载均衡器id列表。
     *
     * @var string[]
     */
     protected static $setters = [
+            'requestId' => 'setRequestId',
             'jobId' => 'setJobId',
             'loadbalancerIds' => 'setLoadbalancerIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * requestId  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
     * jobId  批量删除任务id
     * loadbalancerIds  待删除的负载均衡器id列表。
     *
     * @var string[]
     */
     protected static $getters = [
+            'requestId' => 'getRequestId',
             'jobId' => 'getJobId',
             'loadbalancerIds' => 'getLoadbalancerIds'
     ];
@@ -158,6 +168,7 @@ class BatchDeleteLoadbalancersResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['loadbalancerIds'] = isset($data['loadbalancerIds']) ? $data['loadbalancerIds'] : null;
     }
@@ -182,6 +193,30 @@ class BatchDeleteLoadbalancersResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets requestId
+    *  **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId **参数解释**：请求ID。  **取值范围**：由数字、小写字母和中划线（-）组成的字符串，自动生成。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
+        return $this;
     }
 
     /**

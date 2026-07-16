@@ -20,23 +20,23 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称。
-    * description  描述。
-    * values  参数值。
+    * name  **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
+    * description  **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'values' => 'object'
+            'values' => 'map[string,string]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称。
-    * description  描述。
-    * values  参数值。
+    * name  **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
+    * description  **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称。
-    * description  描述。
-    * values  参数值。
+    * name  **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
+    * description  **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称。
-    * description  描述。
-    * values  参数值。
+    * name  **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
+    * description  **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称。
-    * description  描述。
-    * values  参数值。
+    * name  **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
+    * description  **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
+    * values  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称。
+    *  **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
     *
     * @return string|null
     */
@@ -223,7 +223,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称。
+    * @param string|null $name **参数解释**：  参数组名称。  **约束限制**：  不涉及。  **取值范围**：  在1到64个字符之间，区分大小写，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -235,7 +235,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述。
+    *  **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
     *
     * @return string|null
     */
@@ -247,7 +247,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述。
+    * @param string|null $description **参数解释**：  参数组描述。  **约束限制**：  不涉及。  **取值范围**：  不能超过256位，且不能包含回车和特殊字符 ! < \" = ' > &。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -259,9 +259,9 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  参数值。
+    *  **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
-    * @return object
+    * @return map[string,string]
     */
     public function getValues()
     {
@@ -271,7 +271,7 @@ class ParaGroupUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param object $values 参数值。
+    * @param map[string,string] $values **参数解释**：  修改的值。  **约束限制**：  不涉及  **取值范围**：  长度为1-64的a-z、A-Z、0-9、.、_ 和 -的字符。  **默认取值**：  不涉及。
     *
     * @return $this
     */

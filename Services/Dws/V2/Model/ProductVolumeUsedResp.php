@@ -20,7 +20,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     * volumeNum  **参数解释**： 节点使用的磁盘数量信息。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 集群单节点的可用存储容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 集群节点上单数据磁盘的物理存储容量。 **取值范围**： 不涉及。
@@ -36,7 +36,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     * volumeNum  **参数解释**： 节点使用的磁盘数量信息。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 集群单节点的可用存储容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 集群节点上单数据磁盘的物理存储容量。 **取值范围**： 不涉及。
@@ -73,7 +73,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     * volumeNum  **参数解释**： 节点使用的磁盘数量信息。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 集群单节点的可用存储容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 集群节点上单数据磁盘的物理存储容量。 **取值范围**： 不涉及。
@@ -89,7 +89,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     * volumeNum  **参数解释**： 节点使用的磁盘数量信息。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 集群单节点的可用存储容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 集群节点上单数据磁盘的物理存储容量。 **取值范围**： 不涉及。
@@ -105,7 +105,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    * volumeType  **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     * volumeNum  **参数解释**： 节点使用的磁盘数量信息。 **取值范围**： 不涉及。
     * capacity  **参数解释**： 集群单节点的可用存储容量。 **取值范围**： 不涉及。
     * volumeSize  **参数解释**： 集群节点上单数据磁盘的物理存储容量。 **取值范围**： 不涉及。
@@ -207,7 +207,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeType
-    *  **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    *  **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ProductVolumeUsedResp implements ModelInterface, ArrayAccess
     /**
     * Sets volumeType
     *
-    * @param string|null $volumeType **参数解释**： 节点使用存储类型。 **取值范围**： HIGH：SAS盘； ULTRAHIGH：SSD云盘； COMMON：SATA盘； LOCAL_DISK：本地盘；
+    * @param string|null $volumeType **参数解释**： 节点使用存储类型。 **取值范围**： 不同接口中此字段返回格式可能有如下几种类型。 SAS、SSD、SATA、HIGH、ULTRAHIGH、COMMON、LOCAL_DISK
     *
     * @return $this
     */

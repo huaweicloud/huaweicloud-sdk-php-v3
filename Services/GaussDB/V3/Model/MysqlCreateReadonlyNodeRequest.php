@@ -22,6 +22,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * chargeMode  **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
     * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
@@ -29,6 +30,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'priorities' => 'int[]',
             'isAutoPay' => 'string',
+            'chargeMode' => 'string',
             'availabilityZones' => 'string[]'
     ];
 
@@ -36,6 +38,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * chargeMode  **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
     * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'priorities' => 'int32',
         'isAutoPay' => null,
+        'chargeMode' => null,
         'availabilityZones' => null
     ];
 
@@ -71,6 +75,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * chargeMode  **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
     * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
@@ -78,6 +83,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'priorities' => 'priorities',
             'isAutoPay' => 'is_auto_pay',
+            'chargeMode' => 'charge_mode',
             'availabilityZones' => 'availability_zones'
     ];
 
@@ -85,6 +91,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * chargeMode  **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
     * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
@@ -92,6 +99,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'priorities' => 'setPriorities',
             'isAutoPay' => 'setIsAutoPay',
+            'chargeMode' => 'setChargeMode',
             'availabilityZones' => 'setAvailabilityZones'
     ];
 
@@ -99,6 +107,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * priorities  指定创建的只读节点故障倒换优先级。  故障倒换优先级的取值范围为1~16，数字越小，优先级越大，即故障倒换时，主节点会优先倒换到优先级高的只读节点上，优先级相同的只读节点选为主节点的概率相同。最多支持9个只读节点设置故障倒换优先级，超过9个的只读节点优先级默认为-1，表示不会参与倒换。可通过修改节点的故障倒换优先级来进行调整。
     * isAutoPay  创建包周期时可指定，表示是否自动从客户的账户中支付，此字段不影响自动续订的支付方式。  - true，为自动支付，默认该方式。 - false，为手动支付。
+    * chargeMode  **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
     * availabilityZones  可用区。可指定可用区创建只读节点，不传该参数时默认为自动选择可用区。  调用[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)获取，其中az_status中的key为availability_zone。  注：指定可用区创建只读节点，可能由于资源不足创建失败。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'priorities' => 'getPriorities',
             'isAutoPay' => 'getIsAutoPay',
+            'chargeMode' => 'getChargeMode',
             'availabilityZones' => 'getAvailabilityZones'
     ];
 
@@ -149,7 +159,22 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHARGE_MODE_PRE_PAID = 'prePaid';
+    const CHARGE_MODE_POST_PAID = 'postPaid';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChargeModeAllowableValues()
+    {
+        return [
+            self::CHARGE_MODE_PRE_PAID,
+            self::CHARGE_MODE_POST_PAID,
+        ];
+    }
 
 
     /**
@@ -169,6 +194,7 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     {
         $this->container['priorities'] = isset($data['priorities']) ? $data['priorities'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['availabilityZones'] = isset($data['availabilityZones']) ? $data['availabilityZones'] : null;
     }
 
@@ -183,6 +209,14 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
         if ($this->container['priorities'] === null) {
             $invalidProperties[] = "'priorities' can't be null";
         }
+            $allowedValues = $this->getChargeModeAllowableValues();
+                if (!is_null($this->container['chargeMode']) && !in_array($this->container['chargeMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chargeMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -242,6 +276,30 @@ class MysqlCreateReadonlyNodeRequest implements ModelInterface, ArrayAccess
     public function setIsAutoPay($isAutoPay)
     {
         $this->container['isAutoPay'] = $isAutoPay;
+        return $this;
+    }
+
+    /**
+    * Gets chargeMode
+    *  **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
+    *
+    * @return string|null
+    */
+    public function getChargeMode()
+    {
+        return $this->container['chargeMode'];
+    }
+
+    /**
+    * Sets chargeMode
+    *
+    * @param string|null $chargeMode **参数解释**：     计费模式。  **约束限制**：  仅当实例为包年/包月实例时生效。  **取值范围**：  - prePaid：预付费，即包年/包月。 - postPaid：后付费，即按需付费。  **默认取值**：  prePaid。
+    *
+    * @return $this
+    */
+    public function setChargeMode($chargeMode)
+    {
+        $this->container['chargeMode'] = $chargeMode;
         return $this;
     }
 

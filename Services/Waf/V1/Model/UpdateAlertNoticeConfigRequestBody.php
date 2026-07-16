@@ -42,7 +42,7 @@ class UpdateAlertNoticeConfigRequestBody implements ModelInterface, ArrayAccess
             'times' => 'int',
             'threat' => 'string[]',
             'noticeClass' => 'string',
-            'nearlyExpiredTime' => 'string',
+            'nearlyExpiredTime' => 'int',
             'isAllEnterpriseProject' => 'bool'
     ];
 
@@ -70,7 +70,7 @@ class UpdateAlertNoticeConfigRequestBody implements ModelInterface, ArrayAccess
         'times' => 'int32',
         'threat' => null,
         'noticeClass' => null,
-        'nearlyExpiredTime' => null,
+        'nearlyExpiredTime' => 'int64',
         'isAllEnterpriseProject' => null
     ];
 
@@ -476,7 +476,7 @@ class UpdateAlertNoticeConfigRequestBody implements ModelInterface, ArrayAccess
     * Gets nearlyExpiredTime
     *  提前通知天数，通知类型为证书到期通知需要填写该参数
     *
-    * @return string|null
+    * @return int|null
     */
     public function getNearlyExpiredTime()
     {
@@ -486,7 +486,7 @@ class UpdateAlertNoticeConfigRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets nearlyExpiredTime
     *
-    * @param string|null $nearlyExpiredTime 提前通知天数，通知类型为证书到期通知需要填写该参数
+    * @param int|null $nearlyExpiredTime 提前通知天数，通知类型为证书到期通知需要填写该参数
     *
     * @return $this
     */

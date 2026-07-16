@@ -22,7 +22,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * version  待安装、升级插件的版本号，例如1.0.0 - 安装：该参数非必传，如果不传，匹配集群支持的最新版本 - 升级：该参数必传，需指定版本号
     * clusterId  集群id
-    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     * addonTemplateName  待安装插件模板名称，如coredns
     *
     * @var string[]
@@ -38,7 +38,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * version  待安装、升级插件的版本号，例如1.0.0 - 安装：该参数非必传，如果不传，匹配集群支持的最新版本 - 升级：该参数必传，需指定版本号
     * clusterId  集群id
-    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     * addonTemplateName  待安装插件模板名称，如coredns
     *
     * @var string[]
@@ -75,7 +75,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
     * and the value is the original name
     * version  待安装、升级插件的版本号，例如1.0.0 - 安装：该参数非必传，如果不传，匹配集群支持的最新版本 - 升级：该参数必传，需指定版本号
     * clusterId  集群id
-    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     * addonTemplateName  待安装插件模板名称，如coredns
     *
     * @var string[]
@@ -91,7 +91,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * version  待安装、升级插件的版本号，例如1.0.0 - 安装：该参数非必传，如果不传，匹配集群支持的最新版本 - 升级：该参数必传，需指定版本号
     * clusterId  集群id
-    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     * addonTemplateName  待安装插件模板名称，如coredns
     *
     * @var string[]
@@ -107,7 +107,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * version  待安装、升级插件的版本号，例如1.0.0 - 安装：该参数非必传，如果不传，匹配集群支持的最新版本 - 升级：该参数必传，需指定版本号
     * clusterId  集群id
-    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    * values  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     * addonTemplateName  待安装插件模板名称，如coredns
     *
     * @var string[]
@@ -264,7 +264,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    *  插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     *
     * @return map[string,object]
     */
@@ -276,7 +276,7 @@ class InstanceRequestSpec implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param map[string,object] $values 插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。
+    * @param map[string,object] $values 插件模板安装参数（各插件不同），升级插件时需要填写全量安装参数，未填写参数将使用插件模板中的默认值，当前插件安装参数可通过查询插件实例接口获取。[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/api-cce/cce_02_0366.html)。](tag:hws)[安装参数请参考[插件实例字段说明](https://support.huaweicloud.com/intl/zh-cn/api-cce/cce_02_0366.html)。](tag:hws_hk)
     *
     * @return $this
     */

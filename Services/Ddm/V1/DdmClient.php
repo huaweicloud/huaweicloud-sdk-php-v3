@@ -895,11 +895,11 @@ class DdmClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                [],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -7389,7 +7389,7 @@ class DdmClient extends Client
 
     public function checkDataNodeConnectionWithHttpInfo($request)
     {
-        $resourcePath = '/v3/{project_id}/instance/{instance_id}/rds/connection';
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/rds/connection';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

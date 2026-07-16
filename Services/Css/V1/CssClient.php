@@ -2091,7 +2091,7 @@ class CssClient extends Client
     }
 
     /**
-     * 获取智能运维告警可用的SMN主题
+     * 获取可用的SMN主题
      *
      * 该接口用于获取智能运维告警可用的SMN主题。
      * 
@@ -3491,7 +3491,7 @@ class CssClient extends Client
     }
 
     /**
-     * 自动设置集群快照的基础配置（不推荐使用）
+     * 自动设置集群快照的基础配置
      *
      * 该接口用于自动设置集群快照的基础配置，包括配置OBS桶和IAM委托。
      * 
@@ -3834,12 +3834,12 @@ class CssClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function startVpecp($request)
+    public function startVpcep($request)
     {
-        return $this->startVpecpWithHttpInfo($request);
+        return $this->startVpcepWithHttpInfo($request);
     }
 
-    public function startVpecpWithHttpInfo($request)
+    public function startVpcepWithHttpInfo($request)
     {
         $resourcePath = '/v1.0/{project_id}/clusters/{cluster_id}/vpcepservice/open';
         $formParams = [];
@@ -3885,8 +3885,8 @@ class CssClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Css\V1\Model\StartVpecpResponse',
-            $requestType='\HuaweiCloud\SDK\Css\V1\Model\StartVpecpRequest');
+            $responseType='\HuaweiCloud\SDK\Css\V1\Model\StartVpcepResponse',
+            $requestType='\HuaweiCloud\SDK\Css\V1\Model\StartVpcepRequest');
     }
 
     /**
@@ -4147,12 +4147,12 @@ class CssClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function stopVpecp($request)
+    public function stopVpcep($request)
     {
-        return $this->stopVpecpWithHttpInfo($request);
+        return $this->stopVpcepWithHttpInfo($request);
     }
 
-    public function stopVpecpWithHttpInfo($request)
+    public function stopVpcepWithHttpInfo($request)
     {
         $resourcePath = '/v1.0/{project_id}/clusters/{cluster_id}/vpcepservice/close';
         $formParams = [];
@@ -4195,8 +4195,8 @@ class CssClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Css\V1\Model\StopVpecpResponse',
-            $requestType='\HuaweiCloud\SDK\Css\V1\Model\StopVpecpRequest');
+            $responseType='\HuaweiCloud\SDK\Css\V1\Model\StopVpcepResponse',
+            $requestType='\HuaweiCloud\SDK\Css\V1\Model\StopVpcepRequest');
     }
 
     /**
@@ -4776,11 +4776,11 @@ class CssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6309,71 +6309,6 @@ class CssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Css\V1\Model\DeleteConfResponse',
             $requestType='\HuaweiCloud\SDK\Css\V1\Model\DeleteConfRequest');
-    }
-
-    /**
-     * 删除配置文件V2
-     *
-     * 删除配置文件。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteConfig($request)
-    {
-        return $this->deleteConfigWithHttpInfo($request);
-    }
-
-    public function deleteConfigWithHttpInfo($request)
-    {
-        $resourcePath = '/v2.0/{project_id}/clusters/{cluster_id}/lgsconf/delete';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['clusterId'] !== null) {
-            $pathParams['cluster_id'] = $localVarParams['clusterId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Css\V1\Model\DeleteConfigResponse',
-            $requestType='\HuaweiCloud\SDK\Css\V1\Model\DeleteConfigRequest');
     }
 
     /**

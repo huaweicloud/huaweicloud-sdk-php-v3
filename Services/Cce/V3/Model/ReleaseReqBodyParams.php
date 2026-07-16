@@ -23,9 +23,9 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     * dryRun  开启后，仅验证模板参数，不进行安装
     * nameTemplate  实例名称模板
     * noHooks  安装时是否禁用hooks
-    * replace  是否替换同名实例
-    * recreate  是否重建实例
-    * resetValues  更新时是否重置values
+    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     * releaseVersion  回滚实例的版本
     * includeHooks  更新或者删除时启用hooks
     *
@@ -47,9 +47,9 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     * dryRun  开启后，仅验证模板参数，不进行安装
     * nameTemplate  实例名称模板
     * noHooks  安装时是否禁用hooks
-    * replace  是否替换同名实例
-    * recreate  是否重建实例
-    * resetValues  更新时是否重置values
+    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     * releaseVersion  回滚实例的版本
     * includeHooks  更新或者删除时启用hooks
     *
@@ -92,9 +92,9 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     * dryRun  开启后，仅验证模板参数，不进行安装
     * nameTemplate  实例名称模板
     * noHooks  安装时是否禁用hooks
-    * replace  是否替换同名实例
-    * recreate  是否重建实例
-    * resetValues  更新时是否重置values
+    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     * releaseVersion  回滚实例的版本
     * includeHooks  更新或者删除时启用hooks
     *
@@ -116,9 +116,9 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     * dryRun  开启后，仅验证模板参数，不进行安装
     * nameTemplate  实例名称模板
     * noHooks  安装时是否禁用hooks
-    * replace  是否替换同名实例
-    * recreate  是否重建实例
-    * resetValues  更新时是否重置values
+    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     * releaseVersion  回滚实例的版本
     * includeHooks  更新或者删除时启用hooks
     *
@@ -140,9 +140,9 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     * dryRun  开启后，仅验证模板参数，不进行安装
     * nameTemplate  实例名称模板
     * noHooks  安装时是否禁用hooks
-    * replace  是否替换同名实例
-    * recreate  是否重建实例
-    * resetValues  更新时是否重置values
+    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     * releaseVersion  回滚实例的版本
     * includeHooks  更新或者删除时启用hooks
     *
@@ -323,7 +323,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets replace
-    *  是否替换同名实例
+    *  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
     *
     * @return bool|null
     */
@@ -335,7 +335,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets replace
     *
-    * @param bool|null $replace 是否替换同名实例
+    * @param bool|null $replace 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets recreate
-    *  是否重建实例
+    *  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
     *
     * @return bool|null
     */
@@ -359,7 +359,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets recreate
     *
-    * @param bool|null $recreate 是否重建实例
+    * @param bool|null $recreate 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets resetValues
-    *  更新时是否重置values
+    *  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     *
     * @return bool|null
     */
@@ -383,7 +383,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets resetValues
     *
-    * @param bool|null $resetValues 更新时是否重置values
+    * @param bool|null $resetValues 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
     *
     * @return $this
     */

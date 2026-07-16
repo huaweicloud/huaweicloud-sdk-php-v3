@@ -21,7 +21,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * message  **参数解释：** prompt property name already exists
+    * message  **参数解释：** 解决冲突结果信息
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * message  **参数解释：** prompt property name already exists
+    * message  **参数解释：** 解决冲突结果信息
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * message  **参数解释：** prompt property name already exists
+    * message  **参数解释：** 解决冲突结果信息
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * message  **参数解释：** prompt property name already exists
+    * message  **参数解释：** 解决冲突结果信息
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * message  **参数解释：** prompt property name already exists
+    * message  **参数解释：** 解决冲突结果信息
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets message
-    *  **参数解释：** prompt property name already exists
+    *  **参数解释：** 解决冲突结果信息
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ResolveMergeRequestConflictsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets message
     *
-    * @param string|null $message **参数解释：** prompt property name already exists
+    * @param string|null $message **参数解释：** 解决冲突结果信息
     *
     * @return $this
     */

@@ -23,28 +23,28 @@ class ListDataArtsStudioInstancesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * billingCheck  是否需要账单
     * count  返回记录总数
-    * commodityOrderLists  返回实例列表
+    * commodityOrders  返回实例列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'billingCheck' => 'bool',
             'count' => 'int',
-            'commodityOrderLists' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigCommodityOrder[]'
+            'commodityOrders' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigCommodityOrder[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * billingCheck  是否需要账单
     * count  返回记录总数
-    * commodityOrderLists  返回实例列表
+    * commodityOrders  返回实例列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'billingCheck' => null,
         'count' => null,
-        'commodityOrderLists' => null
+        'commodityOrders' => null
     ];
 
     /**
@@ -72,42 +72,42 @@ class ListDataArtsStudioInstancesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * billingCheck  是否需要账单
     * count  返回记录总数
-    * commodityOrderLists  返回实例列表
+    * commodityOrders  返回实例列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'billingCheck' => 'billing_check',
             'count' => 'count',
-            'commodityOrderLists' => 'commodity_order_lists'
+            'commodityOrders' => 'commodity_orders'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * billingCheck  是否需要账单
     * count  返回记录总数
-    * commodityOrderLists  返回实例列表
+    * commodityOrders  返回实例列表
     *
     * @var string[]
     */
     protected static $setters = [
             'billingCheck' => 'setBillingCheck',
             'count' => 'setCount',
-            'commodityOrderLists' => 'setCommodityOrderLists'
+            'commodityOrders' => 'setCommodityOrders'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * billingCheck  是否需要账单
     * count  返回记录总数
-    * commodityOrderLists  返回实例列表
+    * commodityOrders  返回实例列表
     *
     * @var string[]
     */
     protected static $getters = [
             'billingCheck' => 'getBillingCheck',
             'count' => 'getCount',
-            'commodityOrderLists' => 'getCommodityOrderLists'
+            'commodityOrders' => 'getCommodityOrders'
     ];
 
     /**
@@ -170,7 +170,7 @@ class ListDataArtsStudioInstancesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['billingCheck'] = isset($data['billingCheck']) ? $data['billingCheck'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['commodityOrderLists'] = isset($data['commodityOrderLists']) ? $data['commodityOrderLists'] : null;
+        $this->container['commodityOrders'] = isset($data['commodityOrders']) ? $data['commodityOrders'] : null;
     }
 
     /**
@@ -250,26 +250,26 @@ class ListDataArtsStudioInstancesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets commodityOrderLists
+    * Gets commodityOrders
     *  返回实例列表
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigCommodityOrder[]|null
     */
-    public function getCommodityOrderLists()
+    public function getCommodityOrders()
     {
-        return $this->container['commodityOrderLists'];
+        return $this->container['commodityOrders'];
     }
 
     /**
-    * Sets commodityOrderLists
+    * Sets commodityOrders
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigCommodityOrder[]|null $commodityOrderLists 返回实例列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApigCommodityOrder[]|null $commodityOrders 返回实例列表
     *
     * @return $this
     */
-    public function setCommodityOrderLists($commodityOrderLists)
+    public function setCommodityOrders($commodityOrders)
     {
-        $this->container['commodityOrderLists'] = $commodityOrderLists;
+        $this->container['commodityOrders'] = $commodityOrders;
         return $this;
     }
 

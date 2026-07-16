@@ -33,7 +33,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * adminUserName  账号。
     * adminUserPassword  密码。
-    * chargeInfo  付费信息。
+    * chargeInfo  chargeInfo
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
             'timeZone' => 'string',
             'adminUserName' => 'string',
             'adminUserPassword' => 'string',
-            'chargeInfo' => 'object'
+            'chargeInfo' => '\HuaweiCloud\SDK\Ddm\V1\Model\ChargeInfo'
     ];
 
     /**
@@ -69,7 +69,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * adminUserName  账号。
     * adminUserPassword  密码。
-    * chargeInfo  付费信息。
+    * chargeInfo  chargeInfo
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * adminUserName  账号。
     * adminUserPassword  密码。
-    * chargeInfo  付费信息。
+    * chargeInfo  chargeInfo
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * adminUserName  账号。
     * adminUserPassword  密码。
-    * chargeInfo  付费信息。
+    * chargeInfo  chargeInfo
     *
     * @var string[]
     */
@@ -198,7 +198,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * timeZone  时区。
     * adminUserName  账号。
     * adminUserPassword  密码。
-    * chargeInfo  付费信息。
+    * chargeInfo  chargeInfo
     *
     * @var string[]
     */
@@ -301,46 +301,70 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 2147483647)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] > 2147483647)) {
+        if ($this->container['availableZones'] === null) {
+            $invalidProperties[] = "'availableZones' can't be null";
+        }
+        if ($this->container['nodeNum'] === null) {
+            $invalidProperties[] = "'nodeNum' can't be null";
+        }
+            if (($this->container['nodeNum'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'nodeNum', must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['nodeNum']) && ($this->container['nodeNum'] < 1)) {
+            if (($this->container['nodeNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'nodeNum', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['engineVersion']) && (mb_strlen($this->container['engineVersion']) > 2147483647)) {
+        if ($this->container['engineVersion'] === null) {
+            $invalidProperties[] = "'engineVersion' can't be null";
+        }
+            if ((mb_strlen($this->container['engineVersion']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'engineVersion', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['engineVersion']) && (mb_strlen($this->container['engineVersion']) < 1)) {
+            if ((mb_strlen($this->container['engineVersion']) < 1)) {
                 $invalidProperties[] = "invalid value for 'engineVersion', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['flavorRef']) && (mb_strlen($this->container['flavorRef']) > 2147483647)) {
+        if ($this->container['flavorRef'] === null) {
+            $invalidProperties[] = "'flavorRef' can't be null";
+        }
+            if ((mb_strlen($this->container['flavorRef']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'flavorRef', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['flavorRef']) && (mb_strlen($this->container['flavorRef']) < 1)) {
+            if ((mb_strlen($this->container['flavorRef']) < 1)) {
                 $invalidProperties[] = "invalid value for 'flavorRef', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) > 2147483647)) {
+        if ($this->container['vpcId'] === null) {
+            $invalidProperties[] = "'vpcId' can't be null";
+        }
+            if ((mb_strlen($this->container['vpcId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'vpcId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['vpcId']) && (mb_strlen($this->container['vpcId']) < 1)) {
+            if ((mb_strlen($this->container['vpcId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'vpcId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['subnetId']) && (mb_strlen($this->container['subnetId']) > 2147483647)) {
+        if ($this->container['subnetId'] === null) {
+            $invalidProperties[] = "'subnetId' can't be null";
+        }
+            if ((mb_strlen($this->container['subnetId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'subnetId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['subnetId']) && (mb_strlen($this->container['subnetId']) < 1)) {
+            if ((mb_strlen($this->container['subnetId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'subnetId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['securityGroupId']) && (mb_strlen($this->container['securityGroupId']) > 2147483647)) {
+        if ($this->container['securityGroupId'] === null) {
+            $invalidProperties[] = "'securityGroupId' can't be null";
+        }
+            if ((mb_strlen($this->container['securityGroupId']) > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'securityGroupId', the character length must be smaller than or equal to 2147483647.";
             }
-            if (!is_null($this->container['securityGroupId']) && (mb_strlen($this->container['securityGroupId']) < 1)) {
+            if ((mb_strlen($this->container['securityGroupId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'securityGroupId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['paramGroupId']) && (mb_strlen($this->container['paramGroupId']) > 2147483647)) {
@@ -391,7 +415,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets name
     *  实例名称。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -401,7 +425,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名称。
+    * @param string $name 实例名称。
     *
     * @return $this
     */
@@ -415,7 +439,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets availableZones
     *  可用区。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getAvailableZones()
     {
@@ -425,7 +449,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 可用区。
+    * @param string[] $availableZones 可用区。
     *
     * @return $this
     */
@@ -439,7 +463,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets nodeNum
     *  节点数量。
     *
-    * @return int|null
+    * @return int
     */
     public function getNodeNum()
     {
@@ -449,7 +473,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeNum
     *
-    * @param int|null $nodeNum 节点数量。
+    * @param int $nodeNum 节点数量。
     *
     * @return $this
     */
@@ -463,7 +487,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets engineVersion
     *  引擎版本。
     *
-    * @return string|null
+    * @return string
     */
     public function getEngineVersion()
     {
@@ -473,7 +497,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string|null $engineVersion 引擎版本。
+    * @param string $engineVersion 引擎版本。
     *
     * @return $this
     */
@@ -487,7 +511,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets flavorRef
     *  规格。
     *
-    * @return string|null
+    * @return string
     */
     public function getFlavorRef()
     {
@@ -497,7 +521,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets flavorRef
     *
-    * @param string|null $flavorRef 规格。
+    * @param string $flavorRef 规格。
     *
     * @return $this
     */
@@ -511,7 +535,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets vpcId
     *  虚拟私有云id。
     *
-    * @return string|null
+    * @return string
     */
     public function getVpcId()
     {
@@ -521,7 +545,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 虚拟私有云id。
+    * @param string $vpcId 虚拟私有云id。
     *
     * @return $this
     */
@@ -535,7 +559,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets subnetId
     *  子网id。
     *
-    * @return string|null
+    * @return string
     */
     public function getSubnetId()
     {
@@ -545,7 +569,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId 子网id。
+    * @param string $subnetId 子网id。
     *
     * @return $this
     */
@@ -559,7 +583,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     * Gets securityGroupId
     *  安全组id。
     *
-    * @return string|null
+    * @return string
     */
     public function getSecurityGroupId()
     {
@@ -569,7 +593,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroupId
     *
-    * @param string|null $securityGroupId 安全组id。
+    * @param string $securityGroupId 安全组id。
     *
     * @return $this
     */
@@ -701,9 +725,9 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeInfo
-    *  付费信息。
+    *  chargeInfo
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Ddm\V1\Model\ChargeInfo|null
     */
     public function getChargeInfo()
     {
@@ -713,7 +737,7 @@ class CreateDdmInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets chargeInfo
     *
-    * @param object|null $chargeInfo 付费信息。
+    * @param \HuaweiCloud\SDK\Ddm\V1\Model\ChargeInfo|null $chargeInfo chargeInfo
     *
     * @return $this
     */

@@ -22,21 +22,25 @@ class ListConsumerGroupOfTopicResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groups  **参数解释**： 消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'groups' => 'string[]'
+            'groups' => 'string[]',
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groups  **参数解释**： 消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'groups' => null
+        'groups' => null,
+        'total' => 'int32'
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListConsumerGroupOfTopicResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groups  **参数解释**： 消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'groups' => 'groups'
+            'groups' => 'groups',
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groups  **参数解释**： 消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'groups' => 'setGroups'
+            'groups' => 'setGroups',
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groups  **参数解释**： 消费组列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * total  **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'groups' => 'getGroups'
+            'groups' => 'getGroups',
+            'total' => 'getTotal'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListConsumerGroupOfTopicResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListConsumerGroupOfTopicResponse implements ModelInterface, ArrayAccess
     public function setGroups($groups)
     {
         $this->container['groups'] = $groups;
+        return $this;
+    }
+
+    /**
+    * Gets total
+    *  **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total **参数解释**： Topic总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
         return $this;
     }
 

@@ -219,16 +219,28 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
             if (!is_null($this->container['action']) && ($this->container['action'] < 0)) {
                 $invalidProperties[] = "invalid value for 'action', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['ipsRuleType']) && ($this->container['ipsRuleType'] > 1)) {
+        if ($this->container['ipsRuleId'] === null) {
+            $invalidProperties[] = "'ipsRuleId' can't be null";
+        }
+        if ($this->container['ipsRuleType'] === null) {
+            $invalidProperties[] = "'ipsRuleType' can't be null";
+        }
+            if (($this->container['ipsRuleType'] > 1)) {
                 $invalidProperties[] = "invalid value for 'ipsRuleType', must be smaller than or equal to 1.";
             }
-            if (!is_null($this->container['ipsRuleType']) && ($this->container['ipsRuleType'] < 0)) {
+            if (($this->container['ipsRuleType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'ipsRuleType', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['status']) && ($this->container['status'] > 1)) {
+        if ($this->container['objectId'] === null) {
+            $invalidProperties[] = "'objectId' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+            if (($this->container['status'] > 1)) {
                 $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 1.";
             }
-            if (!is_null($this->container['status']) && ($this->container['status'] < 0)) {
+            if (($this->container['status'] < 0)) {
                 $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -273,7 +285,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * Gets ipsRuleId
     *  高级ips规则id
     *
-    * @return string|null
+    * @return string
     */
     public function getIpsRuleId()
     {
@@ -283,7 +295,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipsRuleId
     *
-    * @param string|null $ipsRuleId 高级ips规则id
+    * @param string $ipsRuleId 高级ips规则id
     *
     * @return $this
     */
@@ -297,7 +309,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * Gets ipsRuleType
     *  ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     *
-    * @return int|null
+    * @return int
     */
     public function getIpsRuleType()
     {
@@ -307,7 +319,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets ipsRuleType
     *
-    * @param int|null $ipsRuleType ips规则类型：0表示敏感目录扫描、1表示反弹xshell
+    * @param int $ipsRuleType ips规则类型：0表示敏感目录扫描、1表示反弹xshell
     *
     * @return $this
     */
@@ -321,7 +333,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * Gets objectId
     *  防护对象id
     *
-    * @return string|null
+    * @return string
     */
     public function getObjectId()
     {
@@ -331,7 +343,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id
+    * @param string $objectId 防护对象id
     *
     * @return $this
     */
@@ -369,7 +381,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     * Gets status
     *  频率ips规则状态，0表示关闭，1表示打开
     *
-    * @return int|null
+    * @return int
     */
     public function getStatus()
     {
@@ -379,7 +391,7 @@ class AdvancedIpsRuleDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 频率ips规则状态，0表示关闭，1表示打开
+    * @param int $status 频率ips规则状态，0表示关闭，1表示打开
     *
     * @return $this
     */

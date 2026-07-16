@@ -21,8 +21,8 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  总记录数。
-    * instances  实例信息。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * instances  **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  总记录数。
-    * instances  实例信息。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * instances  **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  总记录数。
-    * instances  实例信息。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * instances  **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  总记录数。
-    * instances  实例信息。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * instances  **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  总记录数。
-    * instances  实例信息。
+    * totalCount  **参数解释：** 总记录数。 **取值范围：** 不涉及。
+    * instances  **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  总记录数。
+    *  **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 总记录数。
+    * @param int|null $totalCount **参数解释：** 总记录数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  实例信息。
+    *  **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RecycleInstance[]|null
     */
@@ -222,7 +222,7 @@ class ListRecycleInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RecycleInstance[]|null $instances 实例信息。
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RecycleInstance[]|null $instances **参数解释：** 实例信息。 **取值范围：** 不涉及。
     *
     * @return $this
     */

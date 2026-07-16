@@ -158,9 +158,6 @@ class BatchDeleteCertificatesRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['certificates'] === null) {
-            $invalidProperties[] = "'certificates' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class BatchDeleteCertificatesRequestBody implements ModelInterface, ArrayAccess
     * Gets certificates
     *  待删除的证书id列表。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getCertificates()
     {
@@ -189,7 +186,7 @@ class BatchDeleteCertificatesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificates
     *
-    * @param string[] $certificates 待删除的证书id列表。
+    * @param string[]|null $certificates 待删除的证书id列表。
     *
     * @return $this
     */

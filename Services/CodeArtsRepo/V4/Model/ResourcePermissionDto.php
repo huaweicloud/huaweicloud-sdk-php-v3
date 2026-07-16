@@ -24,8 +24,8 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     * action  **参数解释：** 操作。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayName  **参数解释：** 操作名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayNameCn  **参数解释：** 操作中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * enabled  **参数解释：** 是否开启。
-    * editable  **参数解释：** 是否编辑。
+    * enabled  **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
+    * editable  **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     * action  **参数解释：** 操作。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayName  **参数解释：** 操作名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayNameCn  **参数解释：** 操作中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * enabled  **参数解释：** 是否开启。
-    * editable  **参数解释：** 是否编辑。
+    * enabled  **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
+    * editable  **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     * action  **参数解释：** 操作。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayName  **参数解释：** 操作名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayNameCn  **参数解释：** 操作中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * enabled  **参数解释：** 是否开启。
-    * editable  **参数解释：** 是否编辑。
+    * enabled  **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
+    * editable  **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     * action  **参数解释：** 操作。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayName  **参数解释：** 操作名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayNameCn  **参数解释：** 操作中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * enabled  **参数解释：** 是否开启。
-    * editable  **参数解释：** 是否编辑。
+    * enabled  **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
+    * editable  **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     * action  **参数解释：** 操作。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayName  **参数解释：** 操作名称。 **取值范围：** 字符串长度不少于1，不超过1000。
     * displayNameCn  **参数解释：** 操作中文名称。 **取值范围：** 字符串长度不少于1，不超过1000。
-    * enabled  **参数解释：** 是否开启。
-    * editable  **参数解释：** 是否编辑。
+    * enabled  **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
+    * editable  **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  **参数解释：** 是否开启。
+    *  **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
     *
     * @return bool|null
     */
@@ -361,7 +361,7 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled **参数解释：** 是否开启。
+    * @param bool|null $enabled **参数解释：** 角色是否有该权限点的权限。 **取值范围：** true, false。
     *
     * @return $this
     */
@@ -373,7 +373,7 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets editable
-    *  **参数解释：** 是否编辑。
+    *  **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @return bool|null
     */
@@ -385,7 +385,7 @@ class ResourcePermissionDto implements ModelInterface, ArrayAccess
     /**
     * Sets editable
     *
-    * @param bool|null $editable **参数解释：** 是否编辑。
+    * @param bool|null $editable **参数解释：** 角色在该权限点的权限是否可编辑。 **取值范围：** true, false。
     *
     * @return $this
     */

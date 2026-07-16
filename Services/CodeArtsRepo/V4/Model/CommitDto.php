@@ -45,6 +45,7 @@ class CommitDto implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     *
     * @var string[]
     */
@@ -73,7 +74,8 @@ class CommitDto implements ModelInterface, ArrayAccess
             'relateUrl' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\RelatedCommitSimpleDto[]',
             'nickName' => 'string',
             'tenantName' => 'string',
-            'userName' => 'string'
+            'userName' => 'string',
+            'authorId' => 'int'
     ];
 
     /**
@@ -103,6 +105,7 @@ class CommitDto implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     *
     * @var string[]
     */
@@ -131,7 +134,8 @@ class CommitDto implements ModelInterface, ArrayAccess
         'relateUrl' => null,
         'nickName' => null,
         'tenantName' => null,
-        'userName' => null
+        'userName' => null,
+        'authorId' => 'int32'
     ];
 
     /**
@@ -182,6 +186,7 @@ class CommitDto implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     *
     * @var string[]
     */
@@ -210,7 +215,8 @@ class CommitDto implements ModelInterface, ArrayAccess
             'relateUrl' => 'relate_url',
             'nickName' => 'nick_name',
             'tenantName' => 'tenant_name',
-            'userName' => 'user_name'
+            'userName' => 'user_name',
+            'authorId' => 'author_id'
     ];
 
     /**
@@ -240,6 +246,7 @@ class CommitDto implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     *
     * @var string[]
     */
@@ -268,7 +275,8 @@ class CommitDto implements ModelInterface, ArrayAccess
             'relateUrl' => 'setRelateUrl',
             'nickName' => 'setNickName',
             'tenantName' => 'setTenantName',
-            'userName' => 'setUserName'
+            'userName' => 'setUserName',
+            'authorId' => 'setAuthorId'
     ];
 
     /**
@@ -298,6 +306,7 @@ class CommitDto implements ModelInterface, ArrayAccess
     * nickName  标题
     * tenantName  tenant_name
     * userName  用户名
+    * authorId  作者id
     *
     * @var string[]
     */
@@ -326,7 +335,8 @@ class CommitDto implements ModelInterface, ArrayAccess
             'relateUrl' => 'getRelateUrl',
             'nickName' => 'getNickName',
             'tenantName' => 'getTenantName',
-            'userName' => 'getUserName'
+            'userName' => 'getUserName',
+            'authorId' => 'getAuthorId'
     ];
 
     /**
@@ -412,6 +422,7 @@ class CommitDto implements ModelInterface, ArrayAccess
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
         $this->container['tenantName'] = isset($data['tenantName']) ? $data['tenantName'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['authorId'] = isset($data['authorId']) ? $data['authorId'] : null;
     }
 
     /**
@@ -553,6 +564,12 @@ class CommitDto implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['authorId']) && ($this->container['authorId'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'authorId', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['authorId']) && ($this->container['authorId'] < 1)) {
+                $invalidProperties[] = "invalid value for 'authorId', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1165,6 +1182,30 @@ class CommitDto implements ModelInterface, ArrayAccess
     public function setUserName($userName)
     {
         $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets authorId
+    *  作者id
+    *
+    * @return int|null
+    */
+    public function getAuthorId()
+    {
+        return $this->container['authorId'];
+    }
+
+    /**
+    * Sets authorId
+    *
+    * @param int|null $authorId 作者id
+    *
+    * @return $this
+    */
+    public function setAuthorId($authorId)
+    {
+        $this->container['authorId'] = $authorId;
         return $this;
     }
 

@@ -28,8 +28,8 @@ class ListMergeRequestReviewersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'requiredReviewersList' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]',
-            'optionalReviewersList' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]',
+            'requiredReviewersList' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestApprovalUserDto[]',
+            'optionalReviewersList' => '\HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestApprovalUserDto[]',
             'xTotal' => 'string'
     ];
 
@@ -199,7 +199,7 @@ class ListMergeRequestReviewersResponse implements ModelInterface, ArrayAccess
     * Gets requiredReviewersList
     *  **参数解释：** 必选检视人列表。 **取值范围：** 不涉及。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestApprovalUserDto[]|null
     */
     public function getRequiredReviewersList()
     {
@@ -209,7 +209,7 @@ class ListMergeRequestReviewersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requiredReviewersList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]|null $requiredReviewersList **参数解释：** 必选检视人列表。 **取值范围：** 不涉及。
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestApprovalUserDto[]|null $requiredReviewersList **参数解释：** 必选检视人列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class ListMergeRequestReviewersResponse implements ModelInterface, ArrayAccess
     * Gets optionalReviewersList
     *  **参数解释：** 可选检视人列表。 **取值范围：** 不涉及。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestApprovalUserDto[]|null
     */
     public function getOptionalReviewersList()
     {
@@ -233,7 +233,7 @@ class ListMergeRequestReviewersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets optionalReviewersList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\UserBasicDto[]|null $optionalReviewersList **参数解释：** 可选检视人列表。 **取值范围：** 不涉及。
+    * @param \HuaweiCloud\SDK\CodeArtsRepo\V4\Model\MergeRequestApprovalUserDto[]|null $optionalReviewersList **参数解释：** 可选检视人列表。 **取值范围：** 不涉及。
     *
     * @return $this
     */

@@ -29,8 +29,8 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
-    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
-    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -61,8 +61,8 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
-    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
-    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -114,8 +114,8 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
-    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
-    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -146,8 +146,8 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
-    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
-    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -178,8 +178,8 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     * useft  **参数解释**： 访问外表权限。 **取值范围**： 不涉及。
     * connLimit  **参数解释**： 连接数限制。 **取值范围**： 不涉及。
     * replication  **参数解释**： 是否允许流复制。 **取值范围**： 不涉及。
-    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
-    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * validBegin  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
+    * validUntil  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     * lock  **参数解释**： 是否锁定。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -511,7 +511,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets validBegin
-    *  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    *  **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets validBegin
     *
-    * @param string|null $validBegin **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * @param string|null $validBegin **参数解释**： 角色生效时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets validUntil
-    *  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    *  **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class DatabaseUserInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets validUntil
     *
-    * @param string|null $validUntil **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ssZ。 **取值范围**： 不涉及。
+    * @param string|null $validUntil **参数解释**： 角色过期时间。格式：yyyy-MM-ddTHH:mm:ss。 **取值范围**： 不涉及。
     *
     * @return $this
     */

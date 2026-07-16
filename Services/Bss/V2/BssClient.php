@@ -3924,6 +3924,71 @@ class BssClient extends Client
     }
 
     /**
+     * 查询云服务类型资源规格
+     *
+     * 功能描述：根据云服务类型、资源类型、区域等条件查询资源规格列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourceSpecs($request)
+    {
+        return $this->listResourceSpecsWithHttpInfo($request);
+    }
+
+    public function listResourceSpecsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/products/resource-specs-query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListResourceSpecsResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListResourceSpecsRequest');
+    }
+
+    /**
      * 查询资源类型列表
      *
      * 伙伴在伙伴销售平台查询资源类型的列表。
@@ -5880,6 +5945,124 @@ class BssClient extends Client
     }
 
     /**
+     * 获取人脸实名认证二维码
+     *
+     * 功能描述：客户在agent使用时获取人脸实名认证二维码地址，扫码完成实名认证
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRealNameAuthQrCode($request)
+    {
+        return $this->showRealNameAuthQrCodeWithHttpInfo($request);
+    }
+
+    public function showRealNameAuthQrCodeWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/customers/real-name-auth-qrcode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ShowRealNameAuthQrCodeResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ShowRealNameAuthQrCodeRequest');
+    }
+
+    /**
+     * 查询实名认证状态
+     *
+     * 功能描述：客户在agent使用时查询自己的实名认证状态和类型
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRealNameAuthStatus($request)
+    {
+        return $this->showRealNameAuthStatusWithHttpInfo($request);
+    }
+
+    public function showRealNameAuthStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/customers/real-name-auth-status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ShowRealNameAuthStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ShowRealNameAuthStatusRequest');
+    }
+
+    /**
      * 查询实名认证审核结果
      *
      * 如果实名认证申请或实名认证变更申请的响应中，显示需要人工审核，使用该接口查询审核结果。
@@ -6270,6 +6453,68 @@ class BssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Bss\V2\Model\UpdatePeriodToOnDemandResponse',
             $requestType='\HuaweiCloud\SDK\Bss\V2\Model\UpdatePeriodToOnDemandRequest');
+    }
+
+    /**
+     * 设置包年/包月资源即时转按需
+     *
+     * 功能描述：客户在自建平台完成包年/包月资源即时转为按需资源计费
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePeriodToOnDemandInstantly($request)
+    {
+        return $this->updatePeriodToOnDemandInstantlyWithHttpInfo($request);
+    }
+
+    public function updatePeriodToOnDemandInstantlyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/orders/subscriptions/resources/to-on-demand/instantly';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\UpdatePeriodToOnDemandInstantlyResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\UpdatePeriodToOnDemandInstantlyRequest');
     }
 
     /**

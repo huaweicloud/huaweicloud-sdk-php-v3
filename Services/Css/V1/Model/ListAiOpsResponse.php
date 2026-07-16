@@ -21,8 +21,8 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * aiopsList  aiopsList
-    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    * aiopsList  智能运维任务列表及详情
+    * totalSize  **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -33,14 +33,14 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * aiopsList  aiopsList
-    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    * aiopsList  智能运维任务列表及详情
+    * totalSize  **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'aiopsList' => null,
-        'totalSize' => 'int32'
+        'totalSize' => null
     ];
 
     /**
@@ -66,8 +66,8 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * aiopsList  aiopsList
-    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    * aiopsList  智能运维任务列表及详情
+    * totalSize  **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * aiopsList  aiopsList
-    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    * aiopsList  智能运维任务列表及详情
+    * totalSize  **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * aiopsList  aiopsList
-    * totalSize  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    * aiopsList  智能运维任务列表及详情
+    * totalSize  **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiopsList
-    *  aiopsList
+    *  智能运维任务列表及详情
     *
     * @return \HuaweiCloud\SDK\Css\V1\Model\AiOps[]|null
     */
@@ -198,7 +198,7 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets aiopsList
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\AiOps[]|null $aiopsList aiopsList
+    * @param \HuaweiCloud\SDK\Css\V1\Model\AiOps[]|null $aiopsList 智能运维任务列表及详情
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalSize
-    *  参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    *  **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListAiOpsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalSize
     *
-    * @param int|null $totalSize 参数解释： 集群风险检测任务总数。 取值范围： 不涉及
+    * @param int|null $totalSize **参数解释**： 集群智能诊断任务总数。 **取值范围**： 不涉及
     *
     * @return $this
     */
