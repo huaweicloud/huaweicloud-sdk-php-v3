@@ -71,6 +71,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * extendParams  extendParams
     * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     * periodNum  |参数名称：周期数量| |参数的约束及描述：该参数非必填|
+    * isSpot  是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * promotionType  优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * paymentType  付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
     *
     * @var string[]
     */
@@ -125,7 +128,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'beId' => 'string',
             'extendParams' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ResRelation',
             'accountName' => 'string',
-            'periodNum' => 'float'
+            'periodNum' => 'float',
+            'isSpot' => 'string',
+            'promotionType' => 'string',
+            'paymentType' => 'string'
     ];
 
     /**
@@ -181,6 +187,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * extendParams  extendParams
     * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     * periodNum  |参数名称：周期数量| |参数的约束及描述：该参数非必填|
+    * isSpot  是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * promotionType  优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * paymentType  付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
     *
     * @var string[]
     */
@@ -235,7 +244,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'beId' => null,
         'extendParams' => null,
         'accountName' => null,
-        'periodNum' => 'bigdecimal'
+        'periodNum' => 'bigdecimal',
+        'isSpot' => null,
+        'promotionType' => null,
+        'paymentType' => null
     ];
 
     /**
@@ -312,6 +324,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * extendParams  extendParams
     * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     * periodNum  |参数名称：周期数量| |参数的约束及描述：该参数非必填|
+    * isSpot  是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * promotionType  优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * paymentType  付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
     *
     * @var string[]
     */
@@ -366,7 +381,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'beId' => 'be_id',
             'extendParams' => 'extend_params',
             'accountName' => 'account_name',
-            'periodNum' => 'period_num'
+            'periodNum' => 'period_num',
+            'isSpot' => 'is_spot',
+            'promotionType' => 'promotion_type',
+            'paymentType' => 'payment_type'
     ];
 
     /**
@@ -422,6 +440,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * extendParams  extendParams
     * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     * periodNum  |参数名称：周期数量| |参数的约束及描述：该参数非必填|
+    * isSpot  是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * promotionType  优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * paymentType  付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
     *
     * @var string[]
     */
@@ -476,7 +497,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'beId' => 'setBeId',
             'extendParams' => 'setExtendParams',
             'accountName' => 'setAccountName',
-            'periodNum' => 'setPeriodNum'
+            'periodNum' => 'setPeriodNum',
+            'isSpot' => 'setIsSpot',
+            'promotionType' => 'setPromotionType',
+            'paymentType' => 'setPaymentType'
     ];
 
     /**
@@ -532,6 +556,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * extendParams  extendParams
     * accountName  |参数名称：消费的客户登录名称。| |参数约束及描述：范围限制：0-128，如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户登录名称。 如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户登录名称。如果是企业主自己的消费记录，则为企业主的客户登录名称；如果是某个企业子客户的消费记录，则此处为企业子的客户登录名称。|
     * periodNum  |参数名称：周期数量| |参数的约束及描述：该参数非必填|
+    * isSpot  是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * promotionType  优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    * paymentType  付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
     *
     * @var string[]
     */
@@ -586,7 +613,10 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'beId' => 'getBeId',
             'extendParams' => 'getExtendParams',
             'accountName' => 'getAccountName',
-            'periodNum' => 'getPeriodNum'
+            'periodNum' => 'getPeriodNum',
+            'isSpot' => 'getIsSpot',
+            'promotionType' => 'getPromotionType',
+            'paymentType' => 'getPaymentType'
     ];
 
     /**
@@ -698,6 +728,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['extendParams'] = isset($data['extendParams']) ? $data['extendParams'] : null;
         $this->container['accountName'] = isset($data['accountName']) ? $data['accountName'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
+        $this->container['isSpot'] = isset($data['isSpot']) ? $data['isSpot'] : null;
+        $this->container['promotionType'] = isset($data['promotionType']) ? $data['promotionType'] : null;
+        $this->container['paymentType'] = isset($data['paymentType']) ? $data['paymentType'] : null;
     }
 
     /**
@@ -755,6 +788,24 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['beId']) && (mb_strlen($this->container['beId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'beId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['isSpot']) && (mb_strlen($this->container['isSpot']) > 8)) {
+                $invalidProperties[] = "invalid value for 'isSpot', the character length must be smaller than or equal to 8.";
+            }
+            if (!is_null($this->container['isSpot']) && (mb_strlen($this->container['isSpot']) < 0)) {
+                $invalidProperties[] = "invalid value for 'isSpot', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['promotionType']) && (mb_strlen($this->container['promotionType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'promotionType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['promotionType']) && (mb_strlen($this->container['promotionType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'promotionType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['paymentType']) && (mb_strlen($this->container['paymentType']) > 256)) {
+                $invalidProperties[] = "invalid value for 'paymentType', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['paymentType']) && (mb_strlen($this->container['paymentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'paymentType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1991,6 +2042,78 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setPeriodNum($periodNum)
     {
         $this->container['periodNum'] = $periodNum;
+        return $this;
+    }
+
+    /**
+    * Gets isSpot
+    *  是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    *
+    * @return string|null
+    */
+    public function getIsSpot()
+    {
+        return $this->container['isSpot'];
+    }
+
+    /**
+    * Sets isSpot
+    *
+    * @param string|null $isSpot 是否竞价实例。该参数非必填，Y：是；N：否；--：不涉及（例如：包周期和预留实例不涉及此特性展示为\"--\"）。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    *
+    * @return $this
+    */
+    public function setIsSpot($isSpot)
+    {
+        $this->container['isSpot'] = $isSpot;
+        return $this;
+    }
+
+    /**
+    * Gets promotionType
+    *  优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    *
+    * @return string|null
+    */
+    public function getPromotionType()
+    {
+        return $this->container['promotionType'];
+    }
+
+    /**
+    * Sets promotionType
+    *
+    * @param string|null $promotionType 优惠类型。该参数非必填，优惠类型。不含折扣返回null或空串，多种折扣，逗号拼接，举例：300,500。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    *
+    * @return $this
+    */
+    public function setPromotionType($promotionType)
+    {
+        $this->container['promotionType'] = $promotionType;
+        return $this;
+    }
+
+    /**
+    * Gets paymentType
+    *  付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    *
+    * @return string|null
+    */
+    public function getPaymentType()
+    {
+        return $this->container['paymentType'];
+    }
+
+    /**
+    * Sets paymentType
+    *
+    * @param string|null $paymentType 付款方式。该参数非必填，付款方式，节省计划和预留实例有值；枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付。 说明：statistic_type=3有效，statistic_type=1或者2该字段保留。
+    *
+    * @return $this
+    */
+    public function setPaymentType($paymentType)
+    {
+        $this->container['paymentType'] = $paymentType;
         return $this;
     }
 

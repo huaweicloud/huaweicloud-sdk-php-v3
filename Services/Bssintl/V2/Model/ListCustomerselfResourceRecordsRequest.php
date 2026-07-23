@@ -36,7 +36,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    * statisticType  统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    * statisticType  统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    * statisticType  统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    * statisticType  统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
-    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    * statisticType  统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @var string[]
     */
@@ -767,7 +767,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets statisticType
-    *  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    *  统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @return int|null
     */
@@ -779,7 +779,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets statisticType
     *
-    * @param int|null $statisticType |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    * @param int|null $statisticType 统计类型。1：按账期 2：按天 3：按明细。该参数不携带或携带值为空时，取默认值3。
     *
     * @return $this
     */

@@ -31,6 +31,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
     * owner  责任人名称。
+    * modifyTime  脚本最后修改时间。
     * version  脚本最新提交版本。
     *
     * @var string[]
@@ -47,6 +48,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'configuration' => 'object',
             'description' => 'string',
             'owner' => 'string',
+            'modifyTime' => 'int',
             'version' => 'int'
     ];
 
@@ -63,6 +65,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
     * owner  责任人名称。
+    * modifyTime  脚本最后修改时间。
     * version  脚本最新提交版本。
     *
     * @var string[]
@@ -79,6 +82,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
         'configuration' => null,
         'description' => null,
         'owner' => null,
+        'modifyTime' => 'int64',
         'version' => null
     ];
 
@@ -116,6 +120,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
     * owner  责任人名称。
+    * modifyTime  脚本最后修改时间。
     * version  脚本最新提交版本。
     *
     * @var string[]
@@ -132,6 +137,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'configuration' => 'configuration',
             'description' => 'description',
             'owner' => 'owner',
+            'modifyTime' => 'modify_time',
             'version' => 'version'
     ];
 
@@ -148,6 +154,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
     * owner  责任人名称。
+    * modifyTime  脚本最后修改时间。
     * version  脚本最新提交版本。
     *
     * @var string[]
@@ -164,6 +171,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'configuration' => 'setConfiguration',
             'description' => 'setDescription',
             'owner' => 'setOwner',
+            'modifyTime' => 'setModifyTime',
             'version' => 'setVersion'
     ];
 
@@ -180,6 +188,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     * configuration  用户定义适用于此作业的配置参数，当type参数值为DLISQL时存在。当前支持的配置项列表请参考DLI的conf参数说明。默认值为空。
     * description  描述，长度不能超过255个字符。
     * owner  责任人名称。
+    * modifyTime  脚本最后修改时间。
     * version  脚本最新提交版本。
     *
     * @var string[]
@@ -196,6 +205,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
             'configuration' => 'getConfiguration',
             'description' => 'getDescription',
             'owner' => 'getOwner',
+            'modifyTime' => 'getModifyTime',
             'version' => 'getVersion'
     ];
 
@@ -305,6 +315,7 @@ class ScriptInfo implements ModelInterface, ArrayAccess
         $this->container['configuration'] = isset($data['configuration']) ? $data['configuration'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['modifyTime'] = isset($data['modifyTime']) ? $data['modifyTime'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
@@ -602,6 +613,30 @@ class ScriptInfo implements ModelInterface, ArrayAccess
     public function setOwner($owner)
     {
         $this->container['owner'] = $owner;
+        return $this;
+    }
+
+    /**
+    * Gets modifyTime
+    *  脚本最后修改时间。
+    *
+    * @return int|null
+    */
+    public function getModifyTime()
+    {
+        return $this->container['modifyTime'];
+    }
+
+    /**
+    * Sets modifyTime
+    *
+    * @param int|null $modifyTime 脚本最后修改时间。
+    *
+    * @return $this
+    */
+    public function setModifyTime($modifyTime)
+    {
+        $this->container['modifyTime'] = $modifyTime;
         return $this;
     }
 

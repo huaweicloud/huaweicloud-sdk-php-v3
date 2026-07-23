@@ -18672,6 +18672,68 @@ class RdsClient extends Client
     }
 
     /**
+     * 创建数据库定时任务策略
+     *
+     * 创建数据库定时任务策略。每个类型最多只能创建100个自定义策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createJobSchedule($request)
+    {
+        return $this->createJobScheduleWithHttpInfo($request);
+    }
+
+    public function createJobScheduleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/db-job/schedules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\CreateJobScheduleResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\CreateJobScheduleRequest');
+    }
+
+    /**
      * 创建发布
      *
      * 创建发布
@@ -19003,6 +19065,68 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteDistributionResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteDistributionRequest');
+    }
+
+    /**
+     * 删除数据库定时任务策略
+     *
+     * 删除数据库定时任务策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteJobSchedule($request)
+    {
+        return $this->deleteJobScheduleWithHttpInfo($request);
+    }
+
+    public function deleteJobScheduleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/db-job/schedules/{schedule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scheduleId'] !== null) {
+            $pathParams['schedule_id'] = $localVarParams['scheduleId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteJobScheduleResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteJobScheduleRequest');
     }
 
     /**
@@ -19917,6 +20041,77 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListDistributorInstancesResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListDistributorInstancesRequest');
+    }
+
+    /**
+     * 查询数据库定时任务策略
+     *
+     * 查询数据库定时任务策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listJobSchedules($request)
+    {
+        return $this->listJobSchedulesWithHttpInfo($request);
+    }
+
+    public function listJobSchedulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/db-job/schedules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scheduleType'] !== null) {
+            $queryParams['schedule_type'] = $localVarParams['scheduleType'];
+        }
+        if ($localVarParams['scheduleId'] !== null) {
+            $queryParams['schedule_id'] = $localVarParams['scheduleId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListJobSchedulesResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListJobSchedulesRequest');
     }
 
     /**
@@ -20864,6 +21059,71 @@ class RdsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ModifyDbAgentJobResponse',
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ModifyDbAgentJobRequest');
+    }
+
+    /**
+     * 修改数据库定时任务策略
+     *
+     * 修改数据库定时任务策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyJobSchedule($request)
+    {
+        return $this->modifyJobScheduleWithHttpInfo($request);
+    }
+
+    public function modifyJobScheduleWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/db-job/schedules/{schedule_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['scheduleId'] !== null) {
+            $pathParams['schedule_id'] = $localVarParams['scheduleId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ModifyJobScheduleResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ModifyJobScheduleRequest');
     }
 
     /**

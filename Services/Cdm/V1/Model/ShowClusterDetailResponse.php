@@ -56,6 +56,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * actions  集群配置状态：In-Sync：配置已同步。Applying：配置中。Sync-Failure：配置失败
     * updated  集群更新时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * status  集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
+    * epsId  企业项目ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -94,7 +96,9 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'isFrozen' => 'string',
             'actions' => 'string[]',
             'updated' => 'string',
-            'status' => 'string'
+            'status' => 'string',
+            'epsId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Cdm\V1\Model\ClusterTag[]'
     ];
 
     /**
@@ -134,6 +138,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * actions  集群配置状态：In-Sync：配置已同步。Applying：配置中。Sync-Failure：配置失败
     * updated  集群更新时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * status  集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
+    * epsId  企业项目ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -172,7 +178,9 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         'isFrozen' => null,
         'actions' => null,
         'updated' => null,
-        'status' => null
+        'status' => null,
+        'epsId' => null,
+        'tags' => null
     ];
 
     /**
@@ -233,6 +241,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * actions  集群配置状态：In-Sync：配置已同步。Applying：配置中。Sync-Failure：配置失败
     * updated  集群更新时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * status  集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
+    * epsId  企业项目ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -271,7 +281,9 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'isFrozen' => 'isFrozen',
             'actions' => 'actions',
             'updated' => 'updated',
-            'status' => 'status'
+            'status' => 'status',
+            'epsId' => 'eps_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -311,6 +323,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * actions  集群配置状态：In-Sync：配置已同步。Applying：配置中。Sync-Failure：配置失败
     * updated  集群更新时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * status  集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
+    * epsId  企业项目ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -349,7 +363,9 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'isFrozen' => 'setIsFrozen',
             'actions' => 'setActions',
             'updated' => 'setUpdated',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'epsId' => 'setEpsId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -389,6 +405,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     * actions  集群配置状态：In-Sync：配置已同步。Applying：配置中。Sync-Failure：配置失败
     * updated  集群更新时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * status  集群状态： - 100：创建中 - 200：正常 - 300：失败 - 303：创建失败 - 800：冻结 - 900：已关机 - 910：正在关机 - 920：正在开机
+    * epsId  企业项目ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -427,7 +445,9 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
             'isFrozen' => 'getIsFrozen',
             'actions' => 'getActions',
             'updated' => 'getUpdated',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'epsId' => 'getEpsId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -523,6 +543,8 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['epsId'] = isset($data['epsId']) ? $data['epsId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -1384,6 +1406,54 @@ class ShowClusterDetailResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets epsId
+    *  企业项目ID
+    *
+    * @return string|null
+    */
+    public function getEpsId()
+    {
+        return $this->container['epsId'];
+    }
+
+    /**
+    * Sets epsId
+    *
+    * @param string|null $epsId 企业项目ID
+    *
+    * @return $this
+    */
+    public function setEpsId($epsId)
+    {
+        $this->container['epsId'] = $epsId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Cdm\V1\Model\ClusterTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Cdm\V1\Model\ClusterTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

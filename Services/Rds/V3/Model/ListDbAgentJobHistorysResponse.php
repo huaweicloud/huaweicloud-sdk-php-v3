@@ -21,25 +21,25 @@ class ListDbAgentJobHistorysResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * historys  执行历史列表。
+    * histories  执行历史列表。
     * totalCount  执行历史总数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'historys' => '\HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysResult[]',
+            'histories' => '\HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysResult[]',
             'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * historys  执行历史列表。
+    * histories  执行历史列表。
     * totalCount  执行历史总数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'historys' => null,
+        'histories' => null,
         'totalCount' => null
     ];
 
@@ -66,37 +66,37 @@ class ListDbAgentJobHistorysResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * historys  执行历史列表。
+    * histories  执行历史列表。
     * totalCount  执行历史总数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'historys' => 'historys',
+            'histories' => 'histories',
             'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * historys  执行历史列表。
+    * histories  执行历史列表。
     * totalCount  执行历史总数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'historys' => 'setHistorys',
+            'histories' => 'setHistories',
             'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * historys  执行历史列表。
+    * histories  执行历史列表。
     * totalCount  执行历史总数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'historys' => 'getHistorys',
+            'histories' => 'getHistories',
             'totalCount' => 'getTotalCount'
     ];
 
@@ -158,7 +158,7 @@ class ListDbAgentJobHistorysResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['historys'] = isset($data['historys']) ? $data['historys'] : null;
+        $this->container['histories'] = isset($data['histories']) ? $data['histories'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
@@ -185,26 +185,26 @@ class ListDbAgentJobHistorysResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets historys
+    * Gets histories
     *  执行历史列表。
     *
     * @return \HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysResult[]|null
     */
-    public function getHistorys()
+    public function getHistories()
     {
-        return $this->container['historys'];
+        return $this->container['histories'];
     }
 
     /**
-    * Sets historys
+    * Sets histories
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysResult[]|null $historys 执行历史列表。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ListDbAgentJobHistorysResult[]|null $histories 执行历史列表。
     *
     * @return $this
     */
-    public function setHistorys($historys)
+    public function setHistories($histories)
     {
-        $this->container['historys'] = $historys;
+        $this->container['histories'] = $histories;
         return $this;
     }
 
