@@ -641,8 +641,8 @@ class ProcessEventResourceResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'clusterName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
-                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 20)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";

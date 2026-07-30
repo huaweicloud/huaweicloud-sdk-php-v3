@@ -190,7 +190,7 @@ class ModelArtsClient extends Client
         $headerParams = [];
         $pathParams = [];
         $httpBody = null;
-        $multipart = true;
+        $multipart = false;
         $localVarParams = [];
         $arr = $request::attributeMap();
         foreach ($arr as $k => $v) {
@@ -207,11 +207,6 @@ class ModelArtsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-        foreach ($httpBody::attributeMap() as $k => $v) {
-            $getter = $httpBody::getters()[$k];
-            $value = $httpBody->$getter();
-            $formParams[$k] = $value;
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -219,7 +214,7 @@ class ModelArtsClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json;charset=UTF-8', 'application/json'],
-                ['application/x-www-form-urlencoded']
+                ['application/json', 'application/x-www-form-urlencoded']
             );
         }
         $headers = array_merge(
@@ -975,7 +970,7 @@ class ModelArtsClient extends Client
         $headerParams = [];
         $pathParams = [];
         $httpBody = null;
-        $multipart = true;
+        $multipart = false;
         $localVarParams = [];
         $arr = $request::attributeMap();
         foreach ($arr as $k => $v) {
@@ -992,11 +987,6 @@ class ModelArtsClient extends Client
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
-        foreach ($httpBody::attributeMap() as $k => $v) {
-            $getter = $httpBody::getters()[$k];
-            $value = $httpBody->$getter();
-            $formParams[$k] = $value;
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -1004,7 +994,7 @@ class ModelArtsClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json;charset=UTF-8', 'application/json'],
-                ['application/x-www-form-urlencoded']
+                ['application/json', 'application/x-www-form-urlencoded']
             );
         }
         $headers = array_merge(

@@ -24,7 +24,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
     * total  **参数解释**：查询到所有训练实验总数。 **取值范围**：不涉及。
     * count  **参数解释**：查询到所有符合查询条件的训练实验总数。 **取值范围**：不涉及。
     * limit  **参数解释**：查询到所有训练实验限制个数。 **取值范围**：不涉及。
-    * offset  **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     * sortBy  **参数解释**：查询到所有训练实验排序依赖字段。 **取值范围**：不涉及。
     * order  **参数解释**：查询到所有训练实验排序方式。  **取值范围**： - asc：升序 - desc：降序
     * items  **参数解释**：查询到所有符合查询条件的训练实验详情。
@@ -46,7 +46,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
     * total  **参数解释**：查询到所有训练实验总数。 **取值范围**：不涉及。
     * count  **参数解释**：查询到所有符合查询条件的训练实验总数。 **取值范围**：不涉及。
     * limit  **参数解释**：查询到所有训练实验限制个数。 **取值范围**：不涉及。
-    * offset  **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     * sortBy  **参数解释**：查询到所有训练实验排序依赖字段。 **取值范围**：不涉及。
     * order  **参数解释**：查询到所有训练实验排序方式。  **取值范围**： - asc：升序 - desc：降序
     * items  **参数解释**：查询到所有符合查询条件的训练实验详情。
@@ -89,7 +89,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
     * total  **参数解释**：查询到所有训练实验总数。 **取值范围**：不涉及。
     * count  **参数解释**：查询到所有符合查询条件的训练实验总数。 **取值范围**：不涉及。
     * limit  **参数解释**：查询到所有训练实验限制个数。 **取值范围**：不涉及。
-    * offset  **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     * sortBy  **参数解释**：查询到所有训练实验排序依赖字段。 **取值范围**：不涉及。
     * order  **参数解释**：查询到所有训练实验排序方式。  **取值范围**： - asc：升序 - desc：降序
     * items  **参数解释**：查询到所有符合查询条件的训练实验详情。
@@ -111,7 +111,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
     * total  **参数解释**：查询到所有训练实验总数。 **取值范围**：不涉及。
     * count  **参数解释**：查询到所有符合查询条件的训练实验总数。 **取值范围**：不涉及。
     * limit  **参数解释**：查询到所有训练实验限制个数。 **取值范围**：不涉及。
-    * offset  **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     * sortBy  **参数解释**：查询到所有训练实验排序依赖字段。 **取值范围**：不涉及。
     * order  **参数解释**：查询到所有训练实验排序方式。  **取值范围**： - asc：升序 - desc：降序
     * items  **参数解释**：查询到所有符合查询条件的训练实验详情。
@@ -133,7 +133,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
     * total  **参数解释**：查询到所有训练实验总数。 **取值范围**：不涉及。
     * count  **参数解释**：查询到所有符合查询条件的训练实验总数。 **取值范围**：不涉及。
     * limit  **参数解释**：查询到所有训练实验限制个数。 **取值范围**：不涉及。
-    * offset  **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     * sortBy  **参数解释**：查询到所有训练实验排序依赖字段。 **取值范围**：不涉及。
     * order  **参数解释**：查询到所有训练实验排序方式。  **取值范围**： - asc：升序 - desc：降序
     * items  **参数解释**：查询到所有符合查询条件的训练实验详情。
@@ -313,7 +313,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    *  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     *
     * @return int|null
     */
@@ -325,7 +325,7 @@ class ListTrainingExperimentsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset **参数解释**：查询到所有训练实验查询偏移量。  **取值范围**：不涉及。
+    * @param int|null $offset **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。  **取值范围**：不涉及。
     *
     * @return $this
     */

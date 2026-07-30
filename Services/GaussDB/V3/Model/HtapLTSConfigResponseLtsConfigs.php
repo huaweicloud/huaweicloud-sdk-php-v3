@@ -31,7 +31,7 @@ class HtapLTSConfigResponseLtsConfigs implements ModelInterface, ArrayAccess
             'logType' => 'string',
             'ltsGroupId' => 'string',
             'ltsStreamId' => 'string',
-            'enabled' => 'string'
+            'enabled' => 'bool'
     ];
 
     /**
@@ -221,12 +221,6 @@ class HtapLTSConfigResponseLtsConfigs implements ModelInterface, ArrayAccess
         if ($this->container['enabled'] === null) {
             $invalidProperties[] = "'enabled' can't be null";
         }
-            if ((mb_strlen($this->container['enabled']) > 16)) {
-                $invalidProperties[] = "invalid value for 'enabled', the character length must be smaller than or equal to 16.";
-            }
-            if ((mb_strlen($this->container['enabled']) < 2)) {
-                $invalidProperties[] = "invalid value for 'enabled', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -317,7 +311,7 @@ class HtapLTSConfigResponseLtsConfigs implements ModelInterface, ArrayAccess
     * Gets enabled
     *  **参数解释**： LTS配置开关状态。  **取值范围**：  不涉及。
     *
-    * @return string
+    * @return bool
     */
     public function getEnabled()
     {
@@ -327,7 +321,7 @@ class HtapLTSConfigResponseLtsConfigs implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param string $enabled **参数解释**： LTS配置开关状态。  **取值范围**：  不涉及。
+    * @param bool $enabled **参数解释**： LTS配置开关状态。  **取值范围**：  不涉及。
     *
     * @return $this
     */

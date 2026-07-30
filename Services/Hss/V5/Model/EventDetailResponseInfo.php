@@ -277,6 +277,12 @@ class EventDetailResponseInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['processPid']) && ($this->container['processPid'] < 0)) {
                 $invalidProperties[] = "invalid value for 'processPid', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['fileHash']) && (mb_strlen($this->container['fileHash']) > 64)) {
+                $invalidProperties[] = "invalid value for 'fileHash', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['fileHash']) && (mb_strlen($this->container['fileHash']) < 1)) {
+                $invalidProperties[] = "invalid value for 'fileHash', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['fileHash']) && !preg_match("/^.*$/", $this->container['fileHash'])) {
                 $invalidProperties[] = "invalid value for 'fileHash', must be conform to the pattern /^.*$/.";
             }

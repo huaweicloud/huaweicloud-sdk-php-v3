@@ -23,28 +23,24 @@ class ShowInstanceDatabasesForHtapResponse implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * databases  数据库名称。
     * totalCount  数据库数量。
-    * timestamp  查询时间戳。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'databases' => 'string[]',
-            'totalCount' => 'int',
-            'timestamp' => 'int'
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * databases  数据库名称。
     * totalCount  数据库数量。
-    * timestamp  查询时间戳。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'databases' => null,
-        'totalCount' => 'int32',
-        'timestamp' => 'int32'
+        'totalCount' => 'int32'
     ];
 
     /**
@@ -72,42 +68,36 @@ class ShowInstanceDatabasesForHtapResponse implements ModelInterface, ArrayAcces
     * and the value is the original name
     * databases  数据库名称。
     * totalCount  数据库数量。
-    * timestamp  查询时间戳。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'databases' => 'databases',
-            'totalCount' => 'total_count',
-            'timestamp' => 'timestamp'
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * databases  数据库名称。
     * totalCount  数据库数量。
-    * timestamp  查询时间戳。
     *
     * @var string[]
     */
     protected static $setters = [
             'databases' => 'setDatabases',
-            'totalCount' => 'setTotalCount',
-            'timestamp' => 'setTimestamp'
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * databases  数据库名称。
     * totalCount  数据库数量。
-    * timestamp  查询时间戳。
     *
     * @var string[]
     */
     protected static $getters = [
             'databases' => 'getDatabases',
-            'totalCount' => 'getTotalCount',
-            'timestamp' => 'getTimestamp'
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -170,7 +160,6 @@ class ShowInstanceDatabasesForHtapResponse implements ModelInterface, ArrayAcces
     {
         $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
-        $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
     }
 
     /**
@@ -186,12 +175,6 @@ class ShowInstanceDatabasesForHtapResponse implements ModelInterface, ArrayAcces
             }
             if (!is_null($this->container['totalCount']) && ($this->container['totalCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalCount', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['timestamp']) && ($this->container['timestamp'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'timestamp', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['timestamp']) && ($this->container['timestamp'] < 0)) {
-                $invalidProperties[] = "invalid value for 'timestamp', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -252,30 +235,6 @@ class ShowInstanceDatabasesForHtapResponse implements ModelInterface, ArrayAcces
     public function setTotalCount($totalCount)
     {
         $this->container['totalCount'] = $totalCount;
-        return $this;
-    }
-
-    /**
-    * Gets timestamp
-    *  查询时间戳。
-    *
-    * @return int|null
-    */
-    public function getTimestamp()
-    {
-        return $this->container['timestamp'];
-    }
-
-    /**
-    * Sets timestamp
-    *
-    * @param int|null $timestamp 查询时间戳。
-    *
-    * @return $this
-    */
-    public function setTimestamp($timestamp)
-    {
-        $this->container['timestamp'] = $timestamp;
         return $this;
     }
 

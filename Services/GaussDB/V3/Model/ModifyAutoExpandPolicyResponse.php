@@ -21,22 +21,20 @@ class ModifyAutoExpandPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  修改结果。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  修改结果。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'result' => null
     ];
 
     /**
@@ -62,32 +60,29 @@ class ModifyAutoExpandPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  修改结果。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'result' => 'result'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  修改结果。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'result' => 'setResult'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  修改结果。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'result' => 'getResult'
     ];
 
     /**
@@ -148,7 +143,6 @@ class ModifyAutoExpandPolicyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -171,30 +165,6 @@ class ModifyAutoExpandPolicyResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets result
-    *  修改结果。
-    *
-    * @return string|null
-    */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-    * Sets result
-    *
-    * @param string|null $result 修改结果。
-    *
-    * @return $this
-    */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
-        return $this;
     }
 
     /**

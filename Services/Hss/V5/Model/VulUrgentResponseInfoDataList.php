@@ -31,7 +31,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**: 服务器公网IP **取值范围**: 字符长度0-128
     * privateIp  **参数解释**: 服务器私网IP **取值范围**: 字符长度0-128
     * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度1-128位
-    * assetValue  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     * status  **参数解释**： 漏洞状态 **取值范围**： 字符长度0-32位
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
@@ -71,7 +71,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**: 服务器公网IP **取值范围**: 字符长度0-128
     * privateIp  **参数解释**: 服务器私网IP **取值范围**: 字符长度0-128
     * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度1-128位
-    * assetValue  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     * status  **参数解释**： 漏洞状态 **取值范围**： 字符长度0-32位
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
@@ -132,7 +132,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**: 服务器公网IP **取值范围**: 字符长度0-128
     * privateIp  **参数解释**: 服务器私网IP **取值范围**: 字符长度0-128
     * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度1-128位
-    * assetValue  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     * status  **参数解释**： 漏洞状态 **取值范围**： 字符长度0-32位
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
@@ -172,7 +172,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**: 服务器公网IP **取值范围**: 字符长度0-128
     * privateIp  **参数解释**: 服务器私网IP **取值范围**: 字符长度0-128
     * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度1-128位
-    * assetValue  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     * status  **参数解释**： 漏洞状态 **取值范围**： 字符长度0-32位
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
@@ -212,7 +212,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
     * publicIp  **参数解释**: 服务器公网IP **取值范围**: 字符长度0-128
     * privateIp  **参数解释**: 服务器私网IP **取值范围**: 字符长度0-128
     * hostName  **参数解释**: 主机名称 **取值范围**: 字符长度1-128位
-    * assetValue  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    * assetValue  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     * status  **参数解释**： 漏洞状态 **取值范围**： 字符长度0-32位
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 最近扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
@@ -675,7 +675,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    *  **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     *
     * @return string|null
     */
@@ -687,7 +687,7 @@ class VulUrgentResponseInfoDataList implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string|null $assetValue **参数解释**: 修复优先级 **取值范围**: - Critical：紧急。 - High：高。 - Medium：中。 - Low：低。
+    * @param string|null $assetValue **参数解释**: 主机的资产重要性 **取值范围**: - important：重要资产 - common：一般资产 - test：测试资产
     *
     * @return $this
     */

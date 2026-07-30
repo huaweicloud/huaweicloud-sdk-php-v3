@@ -22,24 +22,28 @@ class NodeConfigTemplateSpec implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * dockerBaseSize  **参数解释**： 资源池节点上单容器的可用磁盘空间大小，单位G。 **取值范围**： 不涉及。
     * dockerLvmConfig  dockerLvmConfig
+    * osList  **参数解释**：该规格支持的Modelarts内置操作系统列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'dockerBaseSize' => 'int',
-            'dockerLvmConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\DockerLvmConfig'
+            'dockerLvmConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\DockerLvmConfig',
+            'osList' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AffinityOS[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * dockerBaseSize  **参数解释**： 资源池节点上单容器的可用磁盘空间大小，单位G。 **取值范围**： 不涉及。
     * dockerLvmConfig  dockerLvmConfig
+    * osList  **参数解释**：该规格支持的Modelarts内置操作系统列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'dockerBaseSize' => 'int32',
-        'dockerLvmConfig' => null
+        'dockerLvmConfig' => null,
+        'osList' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class NodeConfigTemplateSpec implements ModelInterface, ArrayAccess
     * and the value is the original name
     * dockerBaseSize  **参数解释**： 资源池节点上单容器的可用磁盘空间大小，单位G。 **取值范围**： 不涉及。
     * dockerLvmConfig  dockerLvmConfig
+    * osList  **参数解释**：该规格支持的Modelarts内置操作系统列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'dockerBaseSize' => 'dockerBaseSize',
-            'dockerLvmConfig' => 'dockerLvmConfig'
+            'dockerLvmConfig' => 'dockerLvmConfig',
+            'osList' => 'osList'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * dockerBaseSize  **参数解释**： 资源池节点上单容器的可用磁盘空间大小，单位G。 **取值范围**： 不涉及。
     * dockerLvmConfig  dockerLvmConfig
+    * osList  **参数解释**：该规格支持的Modelarts内置操作系统列表。
     *
     * @var string[]
     */
     protected static $setters = [
             'dockerBaseSize' => 'setDockerBaseSize',
-            'dockerLvmConfig' => 'setDockerLvmConfig'
+            'dockerLvmConfig' => 'setDockerLvmConfig',
+            'osList' => 'setOsList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * dockerBaseSize  **参数解释**： 资源池节点上单容器的可用磁盘空间大小，单位G。 **取值范围**： 不涉及。
     * dockerLvmConfig  dockerLvmConfig
+    * osList  **参数解释**：该规格支持的Modelarts内置操作系统列表。
     *
     * @var string[]
     */
     protected static $getters = [
             'dockerBaseSize' => 'getDockerBaseSize',
-            'dockerLvmConfig' => 'getDockerLvmConfig'
+            'dockerLvmConfig' => 'getDockerLvmConfig',
+            'osList' => 'getOsList'
     ];
 
     /**
@@ -159,6 +169,7 @@ class NodeConfigTemplateSpec implements ModelInterface, ArrayAccess
     {
         $this->container['dockerBaseSize'] = isset($data['dockerBaseSize']) ? $data['dockerBaseSize'] : null;
         $this->container['dockerLvmConfig'] = isset($data['dockerLvmConfig']) ? $data['dockerLvmConfig'] : null;
+        $this->container['osList'] = isset($data['osList']) ? $data['osList'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class NodeConfigTemplateSpec implements ModelInterface, ArrayAccess
     public function setDockerLvmConfig($dockerLvmConfig)
     {
         $this->container['dockerLvmConfig'] = $dockerLvmConfig;
+        return $this;
+    }
+
+    /**
+    * Gets osList
+    *  **参数解释**：该规格支持的Modelarts内置操作系统列表。
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\AffinityOS[]|null
+    */
+    public function getOsList()
+    {
+        return $this->container['osList'];
+    }
+
+    /**
+    * Sets osList
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\AffinityOS[]|null $osList **参数解释**：该规格支持的Modelarts内置操作系统列表。
+    *
+    * @return $this
+    */
+    public function setOsList($osList)
+    {
+        $this->container['osList'] = $osList;
         return $this;
     }
 

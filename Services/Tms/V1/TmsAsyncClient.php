@@ -26,6 +26,136 @@ class TmsAsyncClient extends Client
     }
 
     /**
+     * 开通或关闭关联资源标签继承能力
+     *
+     * 开通或关闭关联资源标签继承能力
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeAssociatedResourceOpenStatusAsync($request)
+    {
+        return $this->changeAssociatedResourceOpenStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function changeAssociatedResourceOpenStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ChangeAssociatedResourceOpenStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ChangeAssociatedResourceOpenStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量启用规则
+     *
+     * 按照规则和region来批量启用规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAssociatedResourceRulesAsync($request)
+    {
+        return $this->createAssociatedResourceRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function createAssociatedResourceRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/rules/batch-create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\CreateAssociatedResourceRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\CreateAssociatedResourceRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建预定义标签
      *
      * 用于创建预定标签。用户创建预定义标签后，可以使用预定义标签来给资源创建标签。该接口支持幂等特性和处理批量数据。
@@ -152,6 +282,74 @@ class TmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\CreateResourceTagResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\CreateResourceTagRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 关闭规则
+     *
+     * 通过指定setting_name和region_id来关闭指定的规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAssociatedResourceRuleAsync($request)
+    {
+        return $this->deleteAssociatedResourceRuleAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAssociatedResourceRuleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/rules/{setting_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['settingName'] !== null) {
+            $pathParams['setting_name'] = $localVarParams['settingName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\DeleteAssociatedResourceRuleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\DeleteAssociatedResourceRuleRequest',
             $asyncRequest = true);
     }
 
@@ -344,6 +542,151 @@ class TmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListApiVersionsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListApiVersionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询当前规则列表
+     *
+     * 查询当前规则列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAssociatedResourceRulesAsync($request)
+    {
+        return $this->listAssociatedResourceRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAssociatedResourceRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['settingName'] !== null) {
+            $queryParams['setting_name'] = $localVarParams['settingName'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListAssociatedResourceRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListAssociatedResourceRulesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询当前规则的配置列表
+     *
+     * 查询当前规则的配置列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAssociatedResourceSettingsAsync($request)
+    {
+        return $this->listAssociatedResourceSettingsAsyncWithHttpInfo($request);
+    }
+    
+    public function listAssociatedResourceSettingsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ListAssociatedResourceSettingsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ListAssociatedResourceSettingsRequest',
             $asyncRequest = true);
     }
 
@@ -848,6 +1191,68 @@ class TmsAsyncClient extends Client
     }
 
     /**
+     * 查询当前用户的关联资源标签继承能力的开通状态
+     *
+     * 查询当前用户的关联资源标签继承能力的开通状态
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAssociatedResourceOpenStatusAsync($request)
+    {
+        return $this->showAssociatedResourceOpenStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function showAssociatedResourceOpenStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ShowAssociatedResourceOpenStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ShowAssociatedResourceOpenStatusRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询资源标签
      *
      * 查询单个资源上的标签。
@@ -977,6 +1382,71 @@ class TmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Tms\V1\Model\ShowTagQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Tms\V1\Model\ShowTagQuotaRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新规则
+     *
+     * 更新规则。规则更新的信息会覆盖原有内容
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAssociatedResourceRulesAsync($request)
+    {
+        return $this->updateAssociatedResourceRulesAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAssociatedResourceRulesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/tms/associated-resources/rules/batch-update';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Tms\V1\Model\UpdateAssociatedResourceRulesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Tms\V1\Model\UpdateAssociatedResourceRulesRequest',
             $asyncRequest = true);
     }
 

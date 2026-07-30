@@ -27,8 +27,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
-    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
-    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -53,8 +53,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
-    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
-    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -100,8 +100,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
-    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
-    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -126,8 +126,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
-    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
-    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -152,8 +152,8 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **取值范围**: 字符长度1-256位
     * hostIp  **参数解释**: 服务器IP **取值范围**: 字符长度1-128位
     * version  **参数解释**: 版本号 **取值范围**: 字符长度1-128位
-    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
-    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * updateTime  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
+    * recentScanTime  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @var string[]
     */
@@ -490,7 +490,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    *  **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -502,7 +502,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * @param int|null $updateTime **参数解释**: 软件更新时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets recentScanTime
-    *  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    *  **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -526,7 +526,7 @@ class AppChangeResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets recentScanTime
     *
-    * @param int|null $recentScanTime **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值10000
+    * @param int|null $recentScanTime **参数解释**: 最近扫描时间，单位毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */

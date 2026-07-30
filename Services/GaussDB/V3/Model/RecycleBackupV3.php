@@ -36,8 +36,8 @@ class RecycleBackupV3 implements ModelInterface, ArrayAccess
             'backupName' => 'string',
             'size' => 'int',
             'status' => 'string',
-            'beginTime' => 'string',
-            'endTime' => 'string'
+            'beginTime' => 'int',
+            'endTime' => 'int'
     ];
 
     /**
@@ -58,8 +58,8 @@ class RecycleBackupV3 implements ModelInterface, ArrayAccess
         'backupName' => null,
         'size' => null,
         'status' => null,
-        'beginTime' => null,
-        'endTime' => null
+        'beginTime' => 'int64',
+        'endTime' => 'int64'
     ];
 
     /**
@@ -362,7 +362,7 @@ class RecycleBackupV3 implements ModelInterface, ArrayAccess
     * Gets beginTime
     *  备份开始时间。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getBeginTime()
     {
@@ -372,7 +372,7 @@ class RecycleBackupV3 implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 备份开始时间。
+    * @param int|null $beginTime 备份开始时间。
     *
     * @return $this
     */
@@ -386,7 +386,7 @@ class RecycleBackupV3 implements ModelInterface, ArrayAccess
     * Gets endTime
     *  备份结束时间。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEndTime()
     {
@@ -396,7 +396,7 @@ class RecycleBackupV3 implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 备份结束时间。
+    * @param int|null $endTime 备份结束时间。
     *
     * @return $this
     */

@@ -33,7 +33,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * agentSupportAutoAttach  agent是否支持动态加载
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
-    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
     * protectEventNum  防护事件数
@@ -77,7 +77,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * agentSupportAutoAttach  agent是否支持动态加载
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
-    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
     * protectEventNum  防护事件数
@@ -142,7 +142,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * agentSupportAutoAttach  agent是否支持动态加载
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
-    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
     * protectEventNum  防护事件数
@@ -186,7 +186,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * agentSupportAutoAttach  agent是否支持动态加载
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
-    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
     * protectEventNum  防护事件数
@@ -230,7 +230,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * agentSupportAutoAttach  agent是否支持动态加载
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
-    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
     * groupName  服务器组名称
     * protectEventNum  防护事件数
@@ -766,7 +766,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectStatus
-    *  防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    *  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     *
     * @return string|null
     */
@@ -778,7 +778,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectStatus
     *
-    * @param string|null $protectStatus 防护状态 |- agent防护状态，包含如下2种。 - 0 ：关闭。 - 1 ：开启。
+    * @param string|null $protectStatus 防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     *
     * @return $this
     */

@@ -58,6 +58,7 @@ class Configs implements ModelInterface, ArrayAccess
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
+    * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -99,7 +100,8 @@ class Configs implements ModelInterface, ArrayAccess
             'browserCacheRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]',
             'accessAreaFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]',
             'clientCert' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCert',
-            'httpsTlsVersion' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsTlsVersion'
+            'httpsTlsVersion' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsTlsVersion',
+            'flowLimitStrategy' => '\HuaweiCloud\SDK\Cdn\V2\Model\FlowLimitStrategy[]'
     ];
 
     /**
@@ -142,6 +144,7 @@ class Configs implements ModelInterface, ArrayAccess
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
+    * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -183,7 +186,8 @@ class Configs implements ModelInterface, ArrayAccess
         'browserCacheRules' => null,
         'accessAreaFilter' => null,
         'clientCert' => null,
-        'httpsTlsVersion' => null
+        'httpsTlsVersion' => null,
+        'flowLimitStrategy' => null
     ];
 
     /**
@@ -247,6 +251,7 @@ class Configs implements ModelInterface, ArrayAccess
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
+    * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -288,7 +293,8 @@ class Configs implements ModelInterface, ArrayAccess
             'browserCacheRules' => 'browser_cache_rules',
             'accessAreaFilter' => 'access_area_filter',
             'clientCert' => 'client_cert',
-            'httpsTlsVersion' => 'https_tls_version'
+            'httpsTlsVersion' => 'https_tls_version',
+            'flowLimitStrategy' => 'flow_limit_strategy'
     ];
 
     /**
@@ -331,6 +337,7 @@ class Configs implements ModelInterface, ArrayAccess
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
+    * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -372,7 +379,8 @@ class Configs implements ModelInterface, ArrayAccess
             'browserCacheRules' => 'setBrowserCacheRules',
             'accessAreaFilter' => 'setAccessAreaFilter',
             'clientCert' => 'setClientCert',
-            'httpsTlsVersion' => 'setHttpsTlsVersion'
+            'httpsTlsVersion' => 'setHttpsTlsVersion',
+            'flowLimitStrategy' => 'setFlowLimitStrategy'
     ];
 
     /**
@@ -415,6 +423,7 @@ class Configs implements ModelInterface, ArrayAccess
     * accessAreaFilter  accessAreaFilter
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
+    * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -456,7 +465,8 @@ class Configs implements ModelInterface, ArrayAccess
             'browserCacheRules' => 'getBrowserCacheRules',
             'accessAreaFilter' => 'getAccessAreaFilter',
             'clientCert' => 'getClientCert',
-            'httpsTlsVersion' => 'getHttpsTlsVersion'
+            'httpsTlsVersion' => 'getHttpsTlsVersion',
+            'flowLimitStrategy' => 'getFlowLimitStrategy'
     ];
 
     /**
@@ -555,6 +565,7 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['accessAreaFilter'] = isset($data['accessAreaFilter']) ? $data['accessAreaFilter'] : null;
         $this->container['clientCert'] = isset($data['clientCert']) ? $data['clientCert'] : null;
         $this->container['httpsTlsVersion'] = isset($data['httpsTlsVersion']) ? $data['httpsTlsVersion'] : null;
+        $this->container['flowLimitStrategy'] = isset($data['flowLimitStrategy']) ? $data['flowLimitStrategy'] : null;
     }
 
     /**
@@ -1488,6 +1499,30 @@ class Configs implements ModelInterface, ArrayAccess
     public function setHttpsTlsVersion($httpsTlsVersion)
     {
         $this->container['httpsTlsVersion'] = $httpsTlsVersion;
+        return $this;
+    }
+
+    /**
+    * Gets flowLimitStrategy
+    *  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\FlowLimitStrategy[]|null
+    */
+    public function getFlowLimitStrategy()
+    {
+        return $this->container['flowLimitStrategy'];
+    }
+
+    /**
+    * Sets flowLimitStrategy
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\FlowLimitStrategy[]|null $flowLimitStrategy **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    *
+    * @return $this
+    */
+    public function setFlowLimitStrategy($flowLimitStrategy)
+    {
+        $this->container['flowLimitStrategy'] = $flowLimitStrategy;
         return $this;
     }
 

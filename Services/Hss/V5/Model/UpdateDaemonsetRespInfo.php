@@ -20,25 +20,29 @@ class UpdateDaemonsetRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * failedReson  失败原因
+    * failedReson  失败原因（已废弃，请使用failed_reason）
+    * failedReason  失败原因
     * clusterId  集群Id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'failedReson' => 'string',
+            'failedReason' => 'string',
             'clusterId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * failedReson  失败原因
+    * failedReson  失败原因（已废弃，请使用failed_reason）
+    * failedReason  失败原因
     * clusterId  集群Id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'failedReson' => null,
+        'failedReason' => null,
         'clusterId' => null
     ];
 
@@ -65,37 +69,43 @@ class UpdateDaemonsetRespInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * failedReson  失败原因
+    * failedReson  失败原因（已废弃，请使用failed_reason）
+    * failedReason  失败原因
     * clusterId  集群Id
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'failedReson' => 'failed_reson',
+            'failedReason' => 'failed_reason',
             'clusterId' => 'cluster_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * failedReson  失败原因
+    * failedReson  失败原因（已废弃，请使用failed_reason）
+    * failedReason  失败原因
     * clusterId  集群Id
     *
     * @var string[]
     */
     protected static $setters = [
             'failedReson' => 'setFailedReson',
+            'failedReason' => 'setFailedReason',
             'clusterId' => 'setClusterId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * failedReson  失败原因
+    * failedReson  失败原因（已废弃，请使用failed_reason）
+    * failedReason  失败原因
     * clusterId  集群Id
     *
     * @var string[]
     */
     protected static $getters = [
             'failedReson' => 'getFailedReson',
+            'failedReason' => 'getFailedReason',
             'clusterId' => 'getClusterId'
     ];
 
@@ -158,6 +168,7 @@ class UpdateDaemonsetRespInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['failedReson'] = isset($data['failedReson']) ? $data['failedReson'] : null;
+        $this->container['failedReason'] = isset($data['failedReason']) ? $data['failedReason'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
     }
 
@@ -174,6 +185,12 @@ class UpdateDaemonsetRespInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['failedReson']) && (mb_strlen($this->container['failedReson']) < 0)) {
                 $invalidProperties[] = "invalid value for 'failedReson', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['failedReason']) && (mb_strlen($this->container['failedReason']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'failedReason', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['failedReason']) && (mb_strlen($this->container['failedReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'failedReason', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['clusterId']) && (mb_strlen($this->container['clusterId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'clusterId', the character length must be smaller than or equal to 256.";
@@ -197,7 +214,7 @@ class UpdateDaemonsetRespInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReson
-    *  失败原因
+    *  失败原因（已废弃，请使用failed_reason）
     *
     * @return string|null
     */
@@ -209,13 +226,37 @@ class UpdateDaemonsetRespInfo implements ModelInterface, ArrayAccess
     /**
     * Sets failedReson
     *
-    * @param string|null $failedReson 失败原因
+    * @param string|null $failedReson 失败原因（已废弃，请使用failed_reason）
     *
     * @return $this
     */
     public function setFailedReson($failedReson)
     {
         $this->container['failedReson'] = $failedReson;
+        return $this;
+    }
+
+    /**
+    * Gets failedReason
+    *  失败原因
+    *
+    * @return string|null
+    */
+    public function getFailedReason()
+    {
+        return $this->container['failedReason'];
+    }
+
+    /**
+    * Sets failedReason
+    *
+    * @param string|null $failedReason 失败原因
+    *
+    * @return $this
+    */
+    public function setFailedReason($failedReason)
+    {
+        $this->container['failedReason'] = $failedReason;
         return $this;
     }
 

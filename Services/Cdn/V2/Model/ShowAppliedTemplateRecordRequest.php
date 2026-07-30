@@ -21,7 +21,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tmlId  **参数解释：** 域名模板ID，可以通过查询域名模板列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     * operatorId  **参数解释：** 域名模板操作ID，可以通过本接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * offset  **参数解释：** 查询的页码 **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     * limit  **参数解释：** 每页应用记录的数量 **约束限制：** 不涉及 **取值范围：** 1-10000 **默认取值：** 30
@@ -39,7 +39,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tmlId  **参数解释：** 域名模板ID，可以通过查询域名模板列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     * operatorId  **参数解释：** 域名模板操作ID，可以通过本接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * offset  **参数解释：** 查询的页码 **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     * limit  **参数解释：** 每页应用记录的数量 **约束限制：** 不涉及 **取值范围：** 1-10000 **默认取值：** 30
@@ -78,7 +78,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tmlId  **参数解释：** 域名模板ID，可以通过查询域名模板列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     * operatorId  **参数解释：** 域名模板操作ID，可以通过本接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * offset  **参数解释：** 查询的页码 **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     * limit  **参数解释：** 每页应用记录的数量 **约束限制：** 不涉及 **取值范围：** 1-10000 **默认取值：** 30
@@ -96,7 +96,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tmlId  **参数解释：** 域名模板ID，可以通过查询域名模板列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     * operatorId  **参数解释：** 域名模板操作ID，可以通过本接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * offset  **参数解释：** 查询的页码 **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     * limit  **参数解释：** 每页应用记录的数量 **约束限制：** 不涉及 **取值范围：** 1-10000 **默认取值：** 30
@@ -114,7 +114,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tmlId  **参数解释：** 域名模板ID，可以通过查询域名模板列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    * tmlName  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     * operatorId  **参数解释：** 域名模板操作ID，可以通过本接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * offset  **参数解释：** 查询的页码 **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     * limit  **参数解释：** 每页应用记录的数量 **约束限制：** 不涉及 **取值范围：** 1-10000 **默认取值：** 30
@@ -242,7 +242,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tmlName
-    *  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    *  **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ShowAppliedTemplateRecordRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tmlName
     *
-    * @param string|null $tmlName **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-） **默认取值：** 不涉及
+    * @param string|null $tmlName **参数解释：** 域名模板名称 **约束限制：** 不涉及 **取值范围：** - 1-100个字符 - 仅支持字母、数字、中文、下划线（_）、中横线（-）  **默认取值：** 不涉及
     *
     * @return $this
     */

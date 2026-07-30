@@ -22,6 +22,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * configurationId  **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * updated  更新时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     *
@@ -30,6 +31,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'datastoreVersionName' => 'string',
             'datastoreName' => 'string',
+            'configurationId' => 'string',
             'created' => 'string',
             'updated' => 'string'
     ];
@@ -38,6 +40,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * configurationId  **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * updated  更新时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     *
@@ -46,6 +49,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'datastoreVersionName' => null,
         'datastoreName' => null,
+        'configurationId' => null,
         'created' => null,
         'updated' => null
     ];
@@ -75,6 +79,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * configurationId  **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * updated  更新时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     *
@@ -83,6 +88,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'datastoreVersionName' => 'datastore_version_name',
             'datastoreName' => 'datastore_name',
+            'configurationId' => 'configuration_id',
             'created' => 'created',
             'updated' => 'updated'
     ];
@@ -91,6 +97,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * configurationId  **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * updated  更新时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     *
@@ -99,6 +106,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'datastoreVersionName' => 'setDatastoreVersionName',
             'datastoreName' => 'setDatastoreName',
+            'configurationId' => 'setConfigurationId',
             'created' => 'setCreated',
             'updated' => 'setUpdated'
     ];
@@ -107,6 +115,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * datastoreVersionName  数据库版本名称。
     * datastoreName  数据库名称。
+    * configurationId  **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
     * created  创建时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * updated  更新时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     *
@@ -115,6 +124,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'datastoreVersionName' => 'getDatastoreVersionName',
             'datastoreName' => 'getDatastoreName',
+            'configurationId' => 'getConfigurationId',
             'created' => 'getCreated',
             'updated' => 'getUpdated'
     ];
@@ -179,6 +189,7 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     {
         $this->container['datastoreVersionName'] = isset($data['datastoreVersionName']) ? $data['datastoreVersionName'] : null;
         $this->container['datastoreName'] = isset($data['datastoreName']) ? $data['datastoreName'] : null;
+        $this->container['configurationId'] = isset($data['configurationId']) ? $data['configurationId'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
@@ -250,6 +261,30 @@ class ParameterConfigurationInfo implements ModelInterface, ArrayAccess
     public function setDatastoreName($datastoreName)
     {
         $this->container['datastoreName'] = $datastoreName;
+        return $this;
+    }
+
+    /**
+    * Gets configurationId
+    *  **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
+    *
+    * @return string|null
+    */
+    public function getConfigurationId()
+    {
+        return $this->container['configurationId'];
+    }
+
+    /**
+    * Sets configurationId
+    *
+    * @param string|null $configurationId **参数解释**：  参数组ID。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为pr07，长度为36个字符。
+    *
+    * @return $this
+    */
+    public function setConfigurationId($configurationId)
+    {
+        $this->container['configurationId'] = $configurationId;
         return $this;
     }
 

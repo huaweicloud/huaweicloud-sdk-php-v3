@@ -22,7 +22,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * workspaceId  工作空间ID。[获取方法请参见[查询工作空间列表](ListWorkspace.xml)。](tag:hc)未创建工作空间时默认值为“0”，存在创建并使用的工作空间，以实际取值为准。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     * sortBy  **参数解释**：排序依据字段，例如sort_by=update_time，则表示以条目的更新时间进行排序。 **约束限制**：不涉及。 **取值范围**： - update_time：更新时间。 - name：实验名称。 - create_time：创建时间。 **默认取值**：不涉及。
     * order  排序的方式。该字段必须与sort_by同时使用。 缺省值: desc 枚举值： - asc：表示升序排列， - desc：降序排列。
     *
@@ -40,7 +40,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * workspaceId  工作空间ID。[获取方法请参见[查询工作空间列表](ListWorkspace.xml)。](tag:hc)未创建工作空间时默认值为“0”，存在创建并使用的工作空间，以实际取值为准。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     * sortBy  **参数解释**：排序依据字段，例如sort_by=update_time，则表示以条目的更新时间进行排序。 **约束限制**：不涉及。 **取值范围**： - update_time：更新时间。 - name：实验名称。 - create_time：创建时间。 **默认取值**：不涉及。
     * order  排序的方式。该字段必须与sort_by同时使用。 缺省值: desc 枚举值： - asc：表示升序排列， - desc：降序排列。
     *
@@ -79,7 +79,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * workspaceId  工作空间ID。[获取方法请参见[查询工作空间列表](ListWorkspace.xml)。](tag:hc)未创建工作空间时默认值为“0”，存在创建并使用的工作空间，以实际取值为准。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     * sortBy  **参数解释**：排序依据字段，例如sort_by=update_time，则表示以条目的更新时间进行排序。 **约束限制**：不涉及。 **取值范围**： - update_time：更新时间。 - name：实验名称。 - create_time：创建时间。 **默认取值**：不涉及。
     * order  排序的方式。该字段必须与sort_by同时使用。 缺省值: desc 枚举值： - asc：表示升序排列， - desc：降序排列。
     *
@@ -97,7 +97,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * workspaceId  工作空间ID。[获取方法请参见[查询工作空间列表](ListWorkspace.xml)。](tag:hc)未创建工作空间时默认值为“0”，存在创建并使用的工作空间，以实际取值为准。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     * sortBy  **参数解释**：排序依据字段，例如sort_by=update_time，则表示以条目的更新时间进行排序。 **约束限制**：不涉及。 **取值范围**： - update_time：更新时间。 - name：实验名称。 - create_time：创建时间。 **默认取值**：不涉及。
     * order  排序的方式。该字段必须与sort_by同时使用。 缺省值: desc 枚举值： - asc：表示升序排列， - desc：降序排列。
     *
@@ -115,7 +115,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * workspaceId  工作空间ID。[获取方法请参见[查询工作空间列表](ListWorkspace.xml)。](tag:hc)未创建工作空间时默认值为“0”，存在创建并使用的工作空间，以实际取值为准。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     * sortBy  **参数解释**：排序依据字段，例如sort_by=update_time，则表示以条目的更新时间进行排序。 **约束限制**：不涉及。 **取值范围**： - update_time：更新时间。 - name：实验名称。 - create_time：创建时间。 **默认取值**：不涉及。
     * order  排序的方式。该字段必须与sort_by同时使用。 缺省值: desc 枚举值： - asc：表示升序排列， - desc：降序排列。
     *
@@ -295,7 +295,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  数据条目偏移量。
+    *  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @return int|null
     */
@@ -307,7 +307,7 @@ class ListTrainingExperimentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 数据条目偏移量。
+    * @param int|null $offset **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @return $this
     */

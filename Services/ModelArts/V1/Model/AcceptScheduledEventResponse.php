@@ -36,7 +36,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
     * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -57,7 +59,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
             'finishTime' => 'string',
             'notBefore' => 'string',
             'probeMsg' => 'string',
+            'jobProgress' => 'string',
             'redeployType' => 'string[]',
+            'underLyingInstanceId' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -78,7 +82,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
     * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -99,7 +105,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
         'finishTime' => null,
         'notBefore' => null,
         'probeMsg' => null,
+        'jobProgress' => null,
         'redeployType' => null,
+        'underLyingInstanceId' => null,
         'xRequestId' => null
     ];
 
@@ -141,7 +149,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
     * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -162,7 +172,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
             'finishTime' => 'finishTime',
             'notBefore' => 'notBefore',
             'probeMsg' => 'probeMsg',
+            'jobProgress' => 'jobProgress',
             'redeployType' => 'redeployType',
+            'underLyingInstanceId' => 'underLyingInstanceId',
             'xRequestId' => 'X-request-id'
     ];
 
@@ -183,7 +195,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
     * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -204,7 +218,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
             'finishTime' => 'setFinishTime',
             'notBefore' => 'setNotBefore',
             'probeMsg' => 'setProbeMsg',
+            'jobProgress' => 'setJobProgress',
             'redeployType' => 'setRedeployType',
+            'underLyingInstanceId' => 'setUnderLyingInstanceId',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -225,7 +241,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
     * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -246,7 +264,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
             'finishTime' => 'getFinishTime',
             'notBefore' => 'getNotBefore',
             'probeMsg' => 'getProbeMsg',
+            'jobProgress' => 'getJobProgress',
             'redeployType' => 'getRedeployType',
+            'underLyingInstanceId' => 'getUnderLyingInstanceId',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -403,7 +423,9 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
         $this->container['finishTime'] = isset($data['finishTime']) ? $data['finishTime'] : null;
         $this->container['notBefore'] = isset($data['notBefore']) ? $data['notBefore'] : null;
         $this->container['probeMsg'] = isset($data['probeMsg']) ? $data['probeMsg'] : null;
+        $this->container['jobProgress'] = isset($data['jobProgress']) ? $data['jobProgress'] : null;
         $this->container['redeployType'] = isset($data['redeployType']) ? $data['redeployType'] : null;
+        $this->container['underLyingInstanceId'] = isset($data['underLyingInstanceId']) ? $data['underLyingInstanceId'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -822,6 +844,30 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets jobProgress
+    *  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getJobProgress()
+    {
+        return $this->container['jobProgress'];
+    }
+
+    /**
+    * Sets jobProgress
+    *
+    * @param string|null $jobProgress **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setJobProgress($jobProgress)
+    {
+        $this->container['jobProgress'] = $jobProgress;
+        return $this;
+    }
+
+    /**
     * Gets redeployType
     *  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
     *
@@ -842,6 +888,30 @@ class AcceptScheduledEventResponse implements ModelInterface, ArrayAccess
     public function setRedeployType($redeployType)
     {
         $this->container['redeployType'] = $redeployType;
+        return $this;
+    }
+
+    /**
+    * Gets underLyingInstanceId
+    *  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    *
+    * @return string|null
+    */
+    public function getUnderLyingInstanceId()
+    {
+        return $this->container['underLyingInstanceId'];
+    }
+
+    /**
+    * Sets underLyingInstanceId
+    *
+    * @param string|null $underLyingInstanceId **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    *
+    * @return $this
+    */
+    public function setUnderLyingInstanceId($underLyingInstanceId)
+    {
+        $this->container['underLyingInstanceId'] = $underLyingInstanceId;
         return $this;
     }
 

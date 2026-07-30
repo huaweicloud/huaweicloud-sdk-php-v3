@@ -27,7 +27,7 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'databasesInstanceInfos' => '\HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeDatabasesSingleInstance[]',
-            'delay' => 'string'
+            'delay' => 'bool'
     ];
 
     /**
@@ -217,7 +217,7 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     * Gets delay
     *  是否延迟升级。
     *
-    * @return string
+    * @return bool
     */
     public function getDelay()
     {
@@ -227,7 +227,7 @@ class BatchUpgradeDatabasesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets delay
     *
-    * @param string $delay 是否延迟升级。
+    * @param bool $delay 是否延迟升级。
     *
     * @return $this
     */

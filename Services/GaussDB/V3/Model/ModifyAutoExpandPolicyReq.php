@@ -208,6 +208,9 @@ class ModifyAutoExpandPolicyReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['switchOption'] === null) {
+            $invalidProperties[] = "'switchOption' can't be null";
+        }
             if (!is_null($this->container['limitSize']) && ($this->container['limitSize'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'limitSize', must be smaller than or equal to 2147483647.";
             }
@@ -246,7 +249,7 @@ class ModifyAutoExpandPolicyReq implements ModelInterface, ArrayAccess
     * Gets switchOption
     *  **参数解释**：  自动扩容策略开关。  **取值范围**：  - true：表示开启。 - false：表示关闭。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getSwitchOption()
     {
@@ -256,7 +259,7 @@ class ModifyAutoExpandPolicyReq implements ModelInterface, ArrayAccess
     /**
     * Sets switchOption
     *
-    * @param bool|null $switchOption **参数解释**：  自动扩容策略开关。  **取值范围**：  - true：表示开启。 - false：表示关闭。
+    * @param bool $switchOption **参数解释**：  自动扩容策略开关。  **取值范围**：  - true：表示开启。 - false：表示关闭。
     *
     * @return $this
     */

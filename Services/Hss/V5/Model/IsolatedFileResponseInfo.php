@@ -359,6 +359,12 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
         if ($this->container['fileHash'] === null) {
             $invalidProperties[] = "'fileHash' can't be null";
         }
+            if ((mb_strlen($this->container['fileHash']) > 64)) {
+                $invalidProperties[] = "invalid value for 'fileHash', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['fileHash']) < 1)) {
+                $invalidProperties[] = "invalid value for 'fileHash', the character length must be bigger than or equal to 1.";
+            }
             if (!preg_match("/^.*$/", $this->container['fileHash'])) {
                 $invalidProperties[] = "invalid value for 'fileHash', must be conform to the pattern /^.*$/.";
             }
@@ -404,8 +410,8 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
         if ($this->container['assetValue'] === null) {
             $invalidProperties[] = "'assetValue' can't be null";
         }
-            if ((mb_strlen($this->container['assetValue']) > 128)) {
-                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            if ((mb_strlen($this->container['assetValue']) > 20)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 20.";
             }
             if ((mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";

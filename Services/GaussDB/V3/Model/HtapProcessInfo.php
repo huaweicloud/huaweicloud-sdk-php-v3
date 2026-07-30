@@ -38,7 +38,7 @@ class HtapProcessInfo implements ModelInterface, ArrayAccess
             'state' => 'string',
             'database' => 'string',
             'sqlStatement' => 'string',
-            'duration' => 'string',
+            'duration' => 'double',
             'command' => 'string'
     ];
 
@@ -62,7 +62,7 @@ class HtapProcessInfo implements ModelInterface, ArrayAccess
         'state' => null,
         'database' => null,
         'sqlStatement' => null,
-        'duration' => null,
+        'duration' => 'double',
         'command' => null
     ];
 
@@ -397,7 +397,7 @@ class HtapProcessInfo implements ModelInterface, ArrayAccess
     * Gets duration
     *  **参数解释**：  会话持续时间，单位是秒。  **取值范围**：  不涉及。
     *
-    * @return string|null
+    * @return double|null
     */
     public function getDuration()
     {
@@ -407,7 +407,7 @@ class HtapProcessInfo implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param string|null $duration **参数解释**：  会话持续时间，单位是秒。  **取值范围**：  不涉及。
+    * @param double|null $duration **参数解释**：  会话持续时间，单位是秒。  **取值范围**：  不涉及。
     *
     * @return $this
     */

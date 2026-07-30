@@ -30,8 +30,8 @@ class UpdateServerlessComputeAbilityPolicy implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $openAPITypes = [
-            'minVcpus' => 'int',
-            'maxVcpus' => 'int',
+            'minVcpus' => 'string',
+            'maxVcpus' => 'string',
             'needUpdateNodesComputeAbility' => 'bool',
             'scaleOutSwitch' => 'bool',
             'maxReadonlyNodeCount' => 'int',
@@ -50,8 +50,8 @@ class UpdateServerlessComputeAbilityPolicy implements ModelInterface, ArrayAcces
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'minVcpus' => 'int32',
-        'maxVcpus' => 'int32',
+        'minVcpus' => null,
+        'maxVcpus' => null,
         'needUpdateNodesComputeAbility' => null,
         'scaleOutSwitch' => null,
         'maxReadonlyNodeCount' => 'int32',
@@ -237,7 +237,7 @@ class UpdateServerlessComputeAbilityPolicy implements ModelInterface, ArrayAcces
     * Gets minVcpus
     *  **参数解释**：  单节点VCPUs伸缩下限。  **约束限制**：  不涉及。  **取值范围**：  取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
     *
-    * @return int
+    * @return string
     */
     public function getMinVcpus()
     {
@@ -247,7 +247,7 @@ class UpdateServerlessComputeAbilityPolicy implements ModelInterface, ArrayAcces
     /**
     * Sets minVcpus
     *
-    * @param int $minVcpus **参数解释**：  单节点VCPUs伸缩下限。  **约束限制**：  不涉及。  **取值范围**：  取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
+    * @param string $minVcpus **参数解释**：  单节点VCPUs伸缩下限。  **约束限制**：  不涉及。  **取值范围**：  取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class UpdateServerlessComputeAbilityPolicy implements ModelInterface, ArrayAcces
     * Gets maxVcpus
     *  **参数解释**：  单节点VCPUs伸缩上限。  **约束限制**：  不涉及。  **取值范围**：  ≥4。取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
     *
-    * @return int
+    * @return string
     */
     public function getMaxVcpus()
     {
@@ -271,7 +271,7 @@ class UpdateServerlessComputeAbilityPolicy implements ModelInterface, ArrayAcces
     /**
     * Sets maxVcpus
     *
-    * @param int $maxVcpus **参数解释**：  单节点VCPUs伸缩上限。  **约束限制**：  不涉及。  **取值范围**：  ≥4。取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
+    * @param string $maxVcpus **参数解释**：  单节点VCPUs伸缩上限。  **约束限制**：  不涉及。  **取值范围**：  ≥4。取值范围可根据[查询数据库规格](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlFlavors.html)接口获取。  **默认取值**：  不涉及。
     *
     * @return $this
     */

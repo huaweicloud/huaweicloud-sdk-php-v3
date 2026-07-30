@@ -25,6 +25,7 @@ class JobEngine implements ModelInterface, ArrayAccess
     * engineVersion  训练作业选择的引擎版本名称。如果已填写engine_id，则此参数无需填写。
     * imageUrl  训练作业选择的自定义镜像地址，地址从swr服务获取。
     * installSysPackages  是否需要安装训练平台指定的 moxing 版本。true为需要。只有填写了engine_name，engine_version，image_url参数时支持该设置。
+    * imageRepoId  **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class JobEngine implements ModelInterface, ArrayAccess
             'engineName' => 'string',
             'engineVersion' => 'string',
             'imageUrl' => 'string',
-            'installSysPackages' => 'bool'
+            'installSysPackages' => 'bool',
+            'imageRepoId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class JobEngine implements ModelInterface, ArrayAccess
     * engineVersion  训练作业选择的引擎版本名称。如果已填写engine_id，则此参数无需填写。
     * imageUrl  训练作业选择的自定义镜像地址，地址从swr服务获取。
     * installSysPackages  是否需要安装训练平台指定的 moxing 版本。true为需要。只有填写了engine_name，engine_version，image_url参数时支持该设置。
+    * imageRepoId  **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class JobEngine implements ModelInterface, ArrayAccess
         'engineName' => null,
         'engineVersion' => null,
         'imageUrl' => null,
-        'installSysPackages' => null
+        'installSysPackages' => null,
+        'imageRepoId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class JobEngine implements ModelInterface, ArrayAccess
     * engineVersion  训练作业选择的引擎版本名称。如果已填写engine_id，则此参数无需填写。
     * imageUrl  训练作业选择的自定义镜像地址，地址从swr服务获取。
     * installSysPackages  是否需要安装训练平台指定的 moxing 版本。true为需要。只有填写了engine_name，engine_version，image_url参数时支持该设置。
+    * imageRepoId  **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class JobEngine implements ModelInterface, ArrayAccess
             'engineName' => 'engine_name',
             'engineVersion' => 'engine_version',
             'imageUrl' => 'image_url',
-            'installSysPackages' => 'install_sys_packages'
+            'installSysPackages' => 'install_sys_packages',
+            'imageRepoId' => 'image_repo_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class JobEngine implements ModelInterface, ArrayAccess
     * engineVersion  训练作业选择的引擎版本名称。如果已填写engine_id，则此参数无需填写。
     * imageUrl  训练作业选择的自定义镜像地址，地址从swr服务获取。
     * installSysPackages  是否需要安装训练平台指定的 moxing 版本。true为需要。只有填写了engine_name，engine_version，image_url参数时支持该设置。
+    * imageRepoId  **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class JobEngine implements ModelInterface, ArrayAccess
             'engineName' => 'setEngineName',
             'engineVersion' => 'setEngineVersion',
             'imageUrl' => 'setImageUrl',
-            'installSysPackages' => 'setInstallSysPackages'
+            'installSysPackages' => 'setInstallSysPackages',
+            'imageRepoId' => 'setImageRepoId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class JobEngine implements ModelInterface, ArrayAccess
     * engineVersion  训练作业选择的引擎版本名称。如果已填写engine_id，则此参数无需填写。
     * imageUrl  训练作业选择的自定义镜像地址，地址从swr服务获取。
     * installSysPackages  是否需要安装训练平台指定的 moxing 版本。true为需要。只有填写了engine_name，engine_version，image_url参数时支持该设置。
+    * imageRepoId  **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class JobEngine implements ModelInterface, ArrayAccess
             'engineName' => 'getEngineName',
             'engineVersion' => 'getEngineVersion',
             'imageUrl' => 'getImageUrl',
-            'installSysPackages' => 'getInstallSysPackages'
+            'installSysPackages' => 'getInstallSysPackages',
+            'imageRepoId' => 'getImageRepoId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class JobEngine implements ModelInterface, ArrayAccess
         $this->container['engineVersion'] = isset($data['engineVersion']) ? $data['engineVersion'] : null;
         $this->container['imageUrl'] = isset($data['imageUrl']) ? $data['imageUrl'] : null;
         $this->container['installSysPackages'] = isset($data['installSysPackages']) ? $data['installSysPackages'] : null;
+        $this->container['imageRepoId'] = isset($data['imageRepoId']) ? $data['imageRepoId'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class JobEngine implements ModelInterface, ArrayAccess
     public function setInstallSysPackages($installSysPackages)
     {
         $this->container['installSysPackages'] = $installSysPackages;
+        return $this;
+    }
+
+    /**
+    * Gets imageRepoId
+    *  **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getImageRepoId()
+    {
+        return $this->container['imageRepoId'];
+    }
+
+    /**
+    * Sets imageRepoId
+    *
+    * @param string|null $imageRepoId **参数解释**：SWR企业仓实例ID，使用企业仓镜像时需传入。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setImageRepoId($imageRepoId)
+    {
+        $this->container['imageRepoId'] = $imageRepoId;
         return $this;
     }
 

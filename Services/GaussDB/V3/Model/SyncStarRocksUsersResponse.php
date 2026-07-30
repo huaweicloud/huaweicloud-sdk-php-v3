@@ -26,7 +26,7 @@ class SyncStarRocksUsersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'success' => 'string'
+            'success' => 'bool'
     ];
 
     /**
@@ -177,7 +177,7 @@ class SyncStarRocksUsersResponse implements ModelInterface, ArrayAccess
     * Gets success
     *  开启行列分流是否成功。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getSuccess()
     {
@@ -187,7 +187,7 @@ class SyncStarRocksUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param string|null $success 开启行列分流是否成功。
+    * @param bool|null $success 开启行列分流是否成功。
     *
     * @return $this
     */

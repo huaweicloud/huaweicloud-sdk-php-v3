@@ -26,7 +26,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * groupBy  数据分组方式，可选domain，默认不分组
     * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
@@ -58,7 +58,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * groupBy  数据分组方式，可选domain，默认不分组
     * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
@@ -111,7 +111,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * groupBy  数据分组方式，可选domain，默认不分组
     * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
@@ -143,7 +143,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * groupBy  数据分组方式，可选domain，默认不分组
     * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
@@ -175,7 +175,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * groupBy  数据分组方式，可选domain，默认不分组
     * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     * statType  参数类型支持：flux(流量)，req_num(请求总数)。
     * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
     * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
@@ -439,7 +439,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    *  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球 **默认取值：** mainland_china: 中国大陆
+    * @param string|null $serviceArea **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  **参数解释**：总条数。 **取值范围**：不涉及。
     * limit  **参数解释**：最大显示条数。 **取值范围**：不涉及。
-    * offset  **参数解释**：开始的条数。 **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     * order  **参数解释**：排序方式。 **取值范围**：不涉及。
     * startTime  **参数解释**：事件的开始时间。 **取值范围**：不涉及。
     * endTime  **参数解释**：事件的结束时间。 **取值范围**：不涉及。
@@ -45,7 +45,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * total  **参数解释**：总条数。 **取值范围**：不涉及。
     * limit  **参数解释**：最大显示条数。 **取值范围**：不涉及。
-    * offset  **参数解释**：开始的条数。 **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     * order  **参数解释**：排序方式。 **取值范围**：不涉及。
     * startTime  **参数解释**：事件的开始时间。 **取值范围**：不涉及。
     * endTime  **参数解释**：事件的结束时间。 **取值范围**：不涉及。
@@ -88,7 +88,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  **参数解释**：总条数。 **取值范围**：不涉及。
     * limit  **参数解释**：最大显示条数。 **取值范围**：不涉及。
-    * offset  **参数解释**：开始的条数。 **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     * order  **参数解释**：排序方式。 **取值范围**：不涉及。
     * startTime  **参数解释**：事件的开始时间。 **取值范围**：不涉及。
     * endTime  **参数解释**：事件的结束时间。 **取值范围**：不涉及。
@@ -110,7 +110,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * total  **参数解释**：总条数。 **取值范围**：不涉及。
     * limit  **参数解释**：最大显示条数。 **取值范围**：不涉及。
-    * offset  **参数解释**：开始的条数。 **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     * order  **参数解释**：排序方式。 **取值范围**：不涉及。
     * startTime  **参数解释**：事件的开始时间。 **取值范围**：不涉及。
     * endTime  **参数解释**：事件的结束时间。 **取值范围**：不涉及。
@@ -132,7 +132,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * total  **参数解释**：总条数。 **取值范围**：不涉及。
     * limit  **参数解释**：最大显示条数。 **取值范围**：不涉及。
-    * offset  **参数解释**：开始的条数。 **取值范围**：不涉及。
+    * offset  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     * order  **参数解释**：排序方式。 **取值范围**：不涉及。
     * startTime  **参数解释**：事件的开始时间。 **取值范围**：不涉及。
     * endTime  **参数解释**：事件的结束时间。 **取值范围**：不涉及。
@@ -289,7 +289,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  **参数解释**：开始的条数。 **取值范围**：不涉及。
+    *  **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     *
     * @return int|null
     */
@@ -301,7 +301,7 @@ class ListTrainingJobEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset **参数解释**：开始的条数。 **取值范围**：不涉及。
+    * @param int|null $offset **参数解释**：查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。
     *
     * @return $this
     */

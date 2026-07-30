@@ -20,7 +20,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     * criteria  **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     * criteria  **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     * criteria  **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     * criteria  **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    * logic  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     * criteria  **参数解释：** 匹配条件列表 **约束限制：** 不涉及
     *
     * @var string[]
@@ -191,7 +191,7 @@ class Match implements ModelInterface, ArrayAccess
 
     /**
     * Gets logic
-    *  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    *  **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class Match implements ModelInterface, ArrayAccess
     /**
     * Sets logic
     *
-    * @param string $logic **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系 **默认取值：** 不涉及
+    * @param string $logic **参数解释：** 逻辑运算符 **约束限制：** 不涉及 **取值范围：** - and: 与关系 - or: 或关系  **默认取值：** 不涉及
     *
     * @return $this
     */

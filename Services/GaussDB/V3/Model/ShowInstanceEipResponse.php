@@ -50,7 +50,7 @@ class ShowInstanceEipResponse implements ModelInterface, ArrayAccess
             'createTime' => 'string',
             'bandwidthId' => 'string',
             'bandwidthName' => 'string',
-            'bandwidthSize' => 'string',
+            'bandwidthSize' => 'int',
             'bandwidthShareType' => 'string',
             'profile' => 'object'
     ];
@@ -86,7 +86,7 @@ class ShowInstanceEipResponse implements ModelInterface, ArrayAccess
         'createTime' => null,
         'bandwidthId' => null,
         'bandwidthName' => null,
-        'bandwidthSize' => null,
+        'bandwidthSize' => 'int32',
         'bandwidthShareType' => null,
         'profile' => null
     ];
@@ -584,7 +584,7 @@ class ShowInstanceEipResponse implements ModelInterface, ArrayAccess
     * Gets bandwidthSize
     *  带宽大小。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getBandwidthSize()
     {
@@ -594,7 +594,7 @@ class ShowInstanceEipResponse implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param string|null $bandwidthSize 带宽大小。
+    * @param int|null $bandwidthSize 带宽大小。
     *
     * @return $this
     */

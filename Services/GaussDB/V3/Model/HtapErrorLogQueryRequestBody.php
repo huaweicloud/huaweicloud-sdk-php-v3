@@ -34,7 +34,7 @@ class HtapErrorLogQueryRequestBody implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'endTime' => 'string',
             'level' => 'string',
-            'limit' => 'int',
+            'limit' => 'string',
             'lineNum' => 'string'
     ];
 
@@ -54,7 +54,7 @@ class HtapErrorLogQueryRequestBody implements ModelInterface, ArrayAccess
         'startTime' => null,
         'endTime' => null,
         'level' => null,
-        'limit' => 'int32',
+        'limit' => null,
         'lineNum' => null
     ];
 
@@ -255,12 +255,6 @@ class HtapErrorLogQueryRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
         }
-            if (($this->container['limit'] > 100)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
-            }
-            if (($this->container['limit'] < 0)) {
-                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['lineNum']) && (mb_strlen($this->container['lineNum']) > 20)) {
                 $invalidProperties[] = "invalid value for 'lineNum', the character length must be smaller than or equal to 20.";
             }
@@ -381,7 +375,7 @@ class HtapErrorLogQueryRequestBody implements ModelInterface, ArrayAccess
     * Gets limit
     *  **参数解释**： 查询记录数。  **约束限制**：  不涉及。  **取值范围**： 0-100。  **默认取值**： 不涉及。
     *
-    * @return int
+    * @return string
     */
     public function getLimit()
     {
@@ -391,7 +385,7 @@ class HtapErrorLogQueryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int $limit **参数解释**： 查询记录数。  **约束限制**：  不涉及。  **取值范围**： 0-100。  **默认取值**： 不涉及。
+    * @param string $limit **参数解释**： 查询记录数。  **约束限制**：  不涉及。  **取值范围**： 0-100。  **默认取值**： 不涉及。
     *
     * @return $this
     */

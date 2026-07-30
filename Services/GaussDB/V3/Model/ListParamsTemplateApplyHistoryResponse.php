@@ -27,7 +27,7 @@ class ListParamsTemplateApplyHistoryResponse implements ModelInterface, ArrayAcc
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'string',
+            'totalCount' => 'int',
             'histories' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TemplateApplyHistory[]'
     ];
 
@@ -39,7 +39,7 @@ class ListParamsTemplateApplyHistoryResponse implements ModelInterface, ArrayAcc
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => null,
+        'totalCount' => 'int32',
         'histories' => null
     ];
 
@@ -188,7 +188,7 @@ class ListParamsTemplateApplyHistoryResponse implements ModelInterface, ArrayAcc
     * Gets totalCount
     *  应用记录数量。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTotalCount()
     {
@@ -198,7 +198,7 @@ class ListParamsTemplateApplyHistoryResponse implements ModelInterface, ArrayAcc
     /**
     * Sets totalCount
     *
-    * @param string|null $totalCount 应用记录数量。
+    * @param int|null $totalCount 应用记录数量。
     *
     * @return $this
     */

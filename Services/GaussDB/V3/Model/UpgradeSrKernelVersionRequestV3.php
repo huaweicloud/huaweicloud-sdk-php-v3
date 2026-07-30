@@ -26,8 +26,8 @@ class UpgradeSrKernelVersionRequestV3 implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'delay' => 'string',
-            'isSkipValidate' => 'string'
+            'delay' => 'bool',
+            'isSkipValidate' => 'bool'
     ];
 
     /**
@@ -187,7 +187,7 @@ class UpgradeSrKernelVersionRequestV3 implements ModelInterface, ArrayAccess
     * Gets delay
     *  **参数解释**： 是否延时升级。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getDelay()
     {
@@ -197,7 +197,7 @@ class UpgradeSrKernelVersionRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets delay
     *
-    * @param string|null $delay **参数解释**： 是否延时升级。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
+    * @param bool|null $delay **参数解释**： 是否延时升级。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
     *
     * @return $this
     */
@@ -211,7 +211,7 @@ class UpgradeSrKernelVersionRequestV3 implements ModelInterface, ArrayAccess
     * Gets isSkipValidate
     *  **参数解释**： 是否跳过升级校验。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getIsSkipValidate()
     {
@@ -221,7 +221,7 @@ class UpgradeSrKernelVersionRequestV3 implements ModelInterface, ArrayAccess
     /**
     * Sets isSkipValidate
     *
-    * @param string|null $isSkipValidate **参数解释**： 是否跳过升级校验。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
+    * @param bool|null $isSkipValidate **参数解释**： 是否跳过升级校验。  **约束限制**： 不涉及  **取值范围**： - true - false  **默认取值**： false。
     *
     * @return $this
     */

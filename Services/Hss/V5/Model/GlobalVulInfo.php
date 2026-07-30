@@ -23,7 +23,8 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  **参数解释** 漏洞ID **取值范围** 字符长度0-65535位
     * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：需尽快修复。 - delay_repair：可延后修复。 - not_needed_repair：暂可不修复。
-    * decription  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    * decription  **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
+    * description  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
     * solution  **参数解释** 解决方案 **取值范围** 字符长度0-65535位
     * url  **参数解释** URL链接 **取值范围** 字符长度0-65535位
     * historyNumber  **参数解释** 历史受影响镜像的个数 **取值范围** 取值0-65535
@@ -37,6 +38,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
             'vulId' => 'string',
             'repairNecessity' => 'string',
             'decription' => 'string',
+            'description' => 'string',
             'solution' => 'string',
             'url' => 'string',
             'historyNumber' => 'int',
@@ -49,7 +51,8 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  **参数解释** 漏洞ID **取值范围** 字符长度0-65535位
     * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：需尽快修复。 - delay_repair：可延后修复。 - not_needed_repair：暂可不修复。
-    * decription  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    * decription  **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
+    * description  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
     * solution  **参数解释** 解决方案 **取值范围** 字符长度0-65535位
     * url  **参数解释** URL链接 **取值范围** 字符长度0-65535位
     * historyNumber  **参数解释** 历史受影响镜像的个数 **取值范围** 取值0-65535
@@ -63,6 +66,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
         'vulId' => null,
         'repairNecessity' => null,
         'decription' => null,
+        'description' => null,
         'solution' => null,
         'url' => null,
         'historyNumber' => 'int32',
@@ -96,7 +100,8 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  **参数解释** 漏洞ID **取值范围** 字符长度0-65535位
     * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：需尽快修复。 - delay_repair：可延后修复。 - not_needed_repair：暂可不修复。
-    * decription  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    * decription  **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
+    * description  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
     * solution  **参数解释** 解决方案 **取值范围** 字符长度0-65535位
     * url  **参数解释** URL链接 **取值范围** 字符长度0-65535位
     * historyNumber  **参数解释** 历史受影响镜像的个数 **取值范围** 取值0-65535
@@ -110,6 +115,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
             'vulId' => 'vul_id',
             'repairNecessity' => 'repair_necessity',
             'decription' => 'decription',
+            'description' => 'description',
             'solution' => 'solution',
             'url' => 'url',
             'historyNumber' => 'history_number',
@@ -122,7 +128,8 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  **参数解释** 漏洞ID **取值范围** 字符长度0-65535位
     * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：需尽快修复。 - delay_repair：可延后修复。 - not_needed_repair：暂可不修复。
-    * decription  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    * decription  **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
+    * description  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
     * solution  **参数解释** 解决方案 **取值范围** 字符长度0-65535位
     * url  **参数解释** URL链接 **取值范围** 字符长度0-65535位
     * historyNumber  **参数解释** 历史受影响镜像的个数 **取值范围** 取值0-65535
@@ -136,6 +143,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
             'vulId' => 'setVulId',
             'repairNecessity' => 'setRepairNecessity',
             'decription' => 'setDecription',
+            'description' => 'setDescription',
             'solution' => 'setSolution',
             'url' => 'setUrl',
             'historyNumber' => 'setHistoryNumber',
@@ -148,7 +156,8 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
     * vulName  漏洞名称
     * vulId  **参数解释** 漏洞ID **取值范围** 字符长度0-65535位
     * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：需尽快修复。 - delay_repair：可延后修复。 - not_needed_repair：暂可不修复。
-    * decription  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    * decription  **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
+    * description  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
     * solution  **参数解释** 解决方案 **取值范围** 字符长度0-65535位
     * url  **参数解释** URL链接 **取值范围** 字符长度0-65535位
     * historyNumber  **参数解释** 历史受影响镜像的个数 **取值范围** 取值0-65535
@@ -162,6 +171,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
             'vulId' => 'getVulId',
             'repairNecessity' => 'getRepairNecessity',
             'decription' => 'getDecription',
+            'description' => 'getDescription',
             'solution' => 'getSolution',
             'url' => 'getUrl',
             'historyNumber' => 'getHistoryNumber',
@@ -231,6 +241,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
         $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
         $this->container['repairNecessity'] = isset($data['repairNecessity']) ? $data['repairNecessity'] : null;
         $this->container['decription'] = isset($data['decription']) ? $data['decription'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['solution'] = isset($data['solution']) ? $data['solution'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['historyNumber'] = isset($data['historyNumber']) ? $data['historyNumber'] : null;
@@ -269,6 +280,12 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['decription']) && (mb_strlen($this->container['decription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'decription', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 65535)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['solution']) && (mb_strlen($this->container['solution']) > 65535)) {
                 $invalidProperties[] = "invalid value for 'solution', the character length must be smaller than or equal to 65535.";
@@ -382,7 +399,7 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets decription
-    *  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    *  **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
     *
     * @return string|null
     */
@@ -394,13 +411,37 @@ class GlobalVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets decription
     *
-    * @param string|null $decription **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    * @param string|null $decription **参数解释** 漏洞描述（已废弃，请使用description） **取值范围** 字符长度0-65535位
     *
     * @return $this
     */
     public function setDecription($decription)
     {
         $this->container['decription'] = $decription;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description **参数解释** 漏洞描述 **取值范围** 字符长度0-65535位
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

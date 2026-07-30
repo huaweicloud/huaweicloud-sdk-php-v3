@@ -21,26 +21,20 @@ class UpdateServerlessScalingPolicyResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enlargeStepSize  **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    * customScalingConfig  customScalingConfig
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'enlargeStepSize' => 'string',
-            'customScalingConfig' => '\HuaweiCloud\SDK\GaussDB\V3\Model\CustomScalingConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enlargeStepSize  **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    * customScalingConfig  customScalingConfig
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'enlargeStepSize' => null,
-        'customScalingConfig' => null
     ];
 
     /**
@@ -66,38 +60,29 @@ class UpdateServerlessScalingPolicyResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enlargeStepSize  **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    * customScalingConfig  customScalingConfig
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'enlargeStepSize' => 'enlarge_step_size',
-            'customScalingConfig' => 'custom_scaling_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enlargeStepSize  **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    * customScalingConfig  customScalingConfig
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'enlargeStepSize' => 'setEnlargeStepSize',
-            'customScalingConfig' => 'setCustomScalingConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enlargeStepSize  **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    * customScalingConfig  customScalingConfig
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'enlargeStepSize' => 'getEnlargeStepSize',
-            'customScalingConfig' => 'getCustomScalingConfig'
     ];
 
     /**
@@ -158,8 +143,6 @@ class UpdateServerlessScalingPolicyResponse implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
-        $this->container['enlargeStepSize'] = isset($data['enlargeStepSize']) ? $data['enlargeStepSize'] : null;
-        $this->container['customScalingConfig'] = isset($data['customScalingConfig']) ? $data['customScalingConfig'] : null;
     }
 
     /**
@@ -182,54 +165,6 @@ class UpdateServerlessScalingPolicyResponse implements ModelInterface, ArrayAcce
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets enlargeStepSize
-    *  **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    *
-    * @return string|null
-    */
-    public function getEnlargeStepSize()
-    {
-        return $this->container['enlargeStepSize'];
-    }
-
-    /**
-    * Sets enlargeStepSize
-    *
-    * @param string|null $enlargeStepSize **参数描述**：  自定义扩容步长。  **约束限制**：  不涉及。  **取值范围**：  2-算力上限的一半。  **默认取值**：  不涉及。
-    *
-    * @return $this
-    */
-    public function setEnlargeStepSize($enlargeStepSize)
-    {
-        $this->container['enlargeStepSize'] = $enlargeStepSize;
-        return $this;
-    }
-
-    /**
-    * Gets customScalingConfig
-    *  customScalingConfig
-    *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\CustomScalingConfig|null
-    */
-    public function getCustomScalingConfig()
-    {
-        return $this->container['customScalingConfig'];
-    }
-
-    /**
-    * Sets customScalingConfig
-    *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\CustomScalingConfig|null $customScalingConfig customScalingConfig
-    *
-    * @return $this
-    */
-    public function setCustomScalingConfig($customScalingConfig)
-    {
-        $this->container['customScalingConfig'] = $customScalingConfig;
-        return $this;
     }
 
     /**

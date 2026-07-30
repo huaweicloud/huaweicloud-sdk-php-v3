@@ -21,7 +21,8 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * local  本地镜像
-    * registriy  仓库镜像
+    * registriy  仓库镜像（已废弃，请使用registry）
+    * registry  仓库镜像
     * cicd  cicd镜像
     *
     * @var string[]
@@ -29,13 +30,15 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'local' => 'int',
             'registriy' => 'int',
+            'registry' => 'int',
             'cicd' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * local  本地镜像
-    * registriy  仓库镜像
+    * registriy  仓库镜像（已废弃，请使用registry）
+    * registry  仓库镜像
     * cicd  cicd镜像
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'local' => 'int32',
         'registriy' => 'int32',
+        'registry' => 'int32',
         'cicd' => 'int32'
     ];
 
@@ -70,7 +74,8 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * local  本地镜像
-    * registriy  仓库镜像
+    * registriy  仓库镜像（已废弃，请使用registry）
+    * registry  仓库镜像
     * cicd  cicd镜像
     *
     * @var string[]
@@ -78,13 +83,15 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'local' => 'local',
             'registriy' => 'registriy',
+            'registry' => 'registry',
             'cicd' => 'cicd'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * local  本地镜像
-    * registriy  仓库镜像
+    * registriy  仓库镜像（已废弃，请使用registry）
+    * registry  仓库镜像
     * cicd  cicd镜像
     *
     * @var string[]
@@ -92,13 +99,15 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'local' => 'setLocal',
             'registriy' => 'setRegistriy',
+            'registry' => 'setRegistry',
             'cicd' => 'setCicd'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * local  本地镜像
-    * registriy  仓库镜像
+    * registriy  仓库镜像（已废弃，请使用registry）
+    * registry  仓库镜像
     * cicd  cicd镜像
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'local' => 'getLocal',
             'registriy' => 'getRegistriy',
+            'registry' => 'getRegistry',
             'cicd' => 'getCicd'
     ];
 
@@ -169,6 +179,7 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     {
         $this->container['local'] = isset($data['local']) ? $data['local'] : null;
         $this->container['registriy'] = isset($data['registriy']) ? $data['registriy'] : null;
+        $this->container['registry'] = isset($data['registry']) ? $data['registry'] : null;
         $this->container['cicd'] = isset($data['cicd']) ? $data['cicd'] : null;
     }
 
@@ -191,6 +202,12 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['registriy']) && ($this->container['registriy'] < 0)) {
                 $invalidProperties[] = "invalid value for 'registriy', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['registry']) && ($this->container['registry'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'registry', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['registry']) && ($this->container['registry'] < 0)) {
+                $invalidProperties[] = "invalid value for 'registry', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['cicd']) && ($this->container['cicd'] > 65535)) {
                 $invalidProperties[] = "invalid value for 'cicd', must be smaller than or equal to 65535.";
@@ -238,7 +255,7 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets registriy
-    *  仓库镜像
+    *  仓库镜像（已废弃，请使用registry）
     *
     * @return int|null
     */
@@ -250,13 +267,37 @@ class ImageTypeRiskInfo implements ModelInterface, ArrayAccess
     /**
     * Sets registriy
     *
-    * @param int|null $registriy 仓库镜像
+    * @param int|null $registriy 仓库镜像（已废弃，请使用registry）
     *
     * @return $this
     */
     public function setRegistriy($registriy)
     {
         $this->container['registriy'] = $registriy;
+        return $this;
+    }
+
+    /**
+    * Gets registry
+    *  仓库镜像
+    *
+    * @return int|null
+    */
+    public function getRegistry()
+    {
+        return $this->container['registry'];
+    }
+
+    /**
+    * Sets registry
+    *
+    * @param int|null $registry 仓库镜像
+    *
+    * @return $this
+    */
+    public function setRegistry($registry)
+    {
+        $this->container['registry'] = $registry;
         return $this;
     }
 

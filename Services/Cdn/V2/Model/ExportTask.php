@@ -22,7 +22,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskId  导出任务id
     * taskName  导出任务名称
-    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     * downloadLink  下载链接
     * createTime  创建时间
     * updateTime  最近更新时间
@@ -42,7 +42,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * taskId  导出任务id
     * taskName  导出任务名称
-    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     * downloadLink  下载链接
     * createTime  创建时间
     * updateTime  最近更新时间
@@ -83,7 +83,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskId  导出任务id
     * taskName  导出任务名称
-    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     * downloadLink  下载链接
     * createTime  创建时间
     * updateTime  最近更新时间
@@ -103,7 +103,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  导出任务id
     * taskName  导出任务名称
-    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     * downloadLink  下载链接
     * createTime  创建时间
     * updateTime  最近更新时间
@@ -123,7 +123,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  导出任务id
     * taskName  导出任务名称
-    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    * status  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     * downloadLink  下载链接
     * createTime  创建时间
     * updateTime  最近更新时间
@@ -289,7 +289,7 @@ class ExportTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    *  **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败 **默认取值：** 不涉及
+    * @param string|null $status **参数解释：** 应用模板状态（域名粒度） **约束限制：** 不涉及 **取值范围：** - success: 应用模板成功 - fail: 应用模板失败  **默认取值：** 不涉及
     *
     * @return $this
     */

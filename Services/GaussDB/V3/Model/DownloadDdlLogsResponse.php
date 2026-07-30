@@ -21,22 +21,22 @@ class DownloadDdlLogsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * list  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
+    * downloadFiles  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'list' => '\HuaweiCloud\SDK\GaussDB\V3\Model\DownLoadFileInfoItem[]'
+            'downloadFiles' => '\HuaweiCloud\SDK\GaussDB\V3\Model\DownLoadFileInfoItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * list  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
+    * downloadFiles  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'list' => null
+        'downloadFiles' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class DownloadDdlLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * list  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
+    * downloadFiles  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'list' => 'list'
+            'downloadFiles' => 'download_files'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * list  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
+    * downloadFiles  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'list' => 'setList'
+            'downloadFiles' => 'setDownloadFiles'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * list  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
+    * downloadFiles  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'list' => 'getList'
+            'downloadFiles' => 'getDownloadFiles'
     ];
 
     /**
@@ -148,7 +148,7 @@ class DownloadDdlLogsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['list'] = isset($data['list']) ? $data['list'] : null;
+        $this->container['downloadFiles'] = isset($data['downloadFiles']) ? $data['downloadFiles'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class DownloadDdlLogsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets list
+    * Gets downloadFiles
     *  **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DownLoadFileInfoItem[]|null
     */
-    public function getList()
+    public function getDownloadFiles()
     {
-        return $this->container['list'];
+        return $this->container['downloadFiles'];
     }
 
     /**
-    * Sets list
+    * Sets downloadFiles
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DownLoadFileInfoItem[]|null $list **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DownLoadFileInfoItem[]|null $downloadFiles **参数解释**：  每个日志文件的下载链接详情。  **取值范围**：  不涉及。
     *
     * @return $this
     */
-    public function setList($list)
+    public function setDownloadFiles($downloadFiles)
     {
-        $this->container['list'] = $list;
+        $this->container['downloadFiles'] = $downloadFiles;
         return $this;
     }
 

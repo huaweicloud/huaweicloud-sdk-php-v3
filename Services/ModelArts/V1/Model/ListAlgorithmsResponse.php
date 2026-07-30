@@ -24,7 +24,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
     * total  查询到当前用户名下的所有算法总数。
     * count  查询到当前用户名下的所有符合查询条件的算法总数。
     * limit  查询到当前用户名下的所有算法限制个数。
-    * offset  查询到当前用户名下的所有算法查询偏移量。
+    * offset  查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     * sortBy  查询到当前用户名下的所有算法排序依赖字段。
     * order  查询到当前用户名下的所有算法排序方式，默认为“desc”，降序排序。也可以选择对应的“asc”，升序排序。
     * groupBy  查询到当前用户名下的所有算法分组方式。
@@ -48,7 +48,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
     * total  查询到当前用户名下的所有算法总数。
     * count  查询到当前用户名下的所有符合查询条件的算法总数。
     * limit  查询到当前用户名下的所有算法限制个数。
-    * offset  查询到当前用户名下的所有算法查询偏移量。
+    * offset  查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     * sortBy  查询到当前用户名下的所有算法排序依赖字段。
     * order  查询到当前用户名下的所有算法排序方式，默认为“desc”，降序排序。也可以选择对应的“asc”，升序排序。
     * groupBy  查询到当前用户名下的所有算法分组方式。
@@ -93,7 +93,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
     * total  查询到当前用户名下的所有算法总数。
     * count  查询到当前用户名下的所有符合查询条件的算法总数。
     * limit  查询到当前用户名下的所有算法限制个数。
-    * offset  查询到当前用户名下的所有算法查询偏移量。
+    * offset  查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     * sortBy  查询到当前用户名下的所有算法排序依赖字段。
     * order  查询到当前用户名下的所有算法排序方式，默认为“desc”，降序排序。也可以选择对应的“asc”，升序排序。
     * groupBy  查询到当前用户名下的所有算法分组方式。
@@ -117,7 +117,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
     * total  查询到当前用户名下的所有算法总数。
     * count  查询到当前用户名下的所有符合查询条件的算法总数。
     * limit  查询到当前用户名下的所有算法限制个数。
-    * offset  查询到当前用户名下的所有算法查询偏移量。
+    * offset  查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     * sortBy  查询到当前用户名下的所有算法排序依赖字段。
     * order  查询到当前用户名下的所有算法排序方式，默认为“desc”，降序排序。也可以选择对应的“asc”，升序排序。
     * groupBy  查询到当前用户名下的所有算法分组方式。
@@ -141,7 +141,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
     * total  查询到当前用户名下的所有算法总数。
     * count  查询到当前用户名下的所有符合查询条件的算法总数。
     * limit  查询到当前用户名下的所有算法限制个数。
-    * offset  查询到当前用户名下的所有算法查询偏移量。
+    * offset  查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     * sortBy  查询到当前用户名下的所有算法排序依赖字段。
     * order  查询到当前用户名下的所有算法排序方式，默认为“desc”，降序排序。也可以选择对应的“asc”，升序排序。
     * groupBy  查询到当前用户名下的所有算法分组方式。
@@ -324,7 +324,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询到当前用户名下的所有算法查询偏移量。
+    *  查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     *
     * @return int|null
     */
@@ -336,7 +336,7 @@ class ListAlgorithmsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询到当前用户名下的所有算法查询偏移量。
+    * @param int|null $offset 查询作业的页数，最小为0。例如设置为0，则表示从第一页开始查询。
     *
     * @return $this
     */

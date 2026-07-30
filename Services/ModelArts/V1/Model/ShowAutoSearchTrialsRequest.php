@@ -22,7 +22,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
     * limit  返回的数据条目数。
-    * offset  数据条目偏移量。
+    * offset  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  数据条目偏移量。
+    *  **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class ShowAutoSearchTrialsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 数据条目偏移量。
+    * @param int|null $offset **参数解释**：分页列表的起始页。 **约束限制**：最小为0。例如设置为0，则表示从第一页开始查询。 **取值范围**：不涉及。 **默认取值**：默认为0。
     *
     * @return $this
     */

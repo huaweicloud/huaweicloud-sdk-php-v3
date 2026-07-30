@@ -22,7 +22,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度1-256
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度1-256
-    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度1-256
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度1-256
-    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度1-256
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度1-256
-    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度1-256
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度1-256
-    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * fileName  **参数解释**: 文件名称 **取值范围**: 字符长度1-256
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度1-256
-    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    * size  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @var string[]
     */
@@ -192,8 +192,8 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['filePath']) && (mb_strlen($this->container['filePath']) < 0)) {
                 $invalidProperties[] = "invalid value for 'filePath', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['size']) && ($this->container['size'] > 65535)) {
-                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 65535.";
+            if (!is_null($this->container['size']) && ($this->container['size'] > 2147483547)) {
+                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 2147483547.";
             }
             if (!is_null($this->container['size']) && ($this->container['size'] < 0)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 0.";
@@ -262,7 +262,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    *  **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class ImageFileInfo implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size **参数解释**: 文件大小 **取值范围**: 最小值0，最大值65535
+    * @param int|null $size **参数解释**: 文件大小 **取值范围**: 最小值0，最大值2147483547
     *
     * @return $this
     */

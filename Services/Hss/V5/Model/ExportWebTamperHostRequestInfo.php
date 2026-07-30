@@ -379,8 +379,8 @@ class ExportWebTamperHostRequestInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 128)) {
-                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) > 20)) {
+                $invalidProperties[] = "invalid value for 'assetValue', the character length must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['assetValue']) && (mb_strlen($this->container['assetValue']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetValue', the character length must be bigger than or equal to 0.";

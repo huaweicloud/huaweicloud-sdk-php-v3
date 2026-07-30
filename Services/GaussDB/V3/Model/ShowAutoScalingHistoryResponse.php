@@ -27,7 +27,7 @@ class ShowAutoScalingHistoryResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'string',
+            'totalCount' => 'int',
             'records' => '\HuaweiCloud\SDK\GaussDB\V3\Model\AutoScalingRecordInfo[]'
     ];
 
@@ -39,7 +39,7 @@ class ShowAutoScalingHistoryResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => null,
+        'totalCount' => 'int32',
         'records' => null
     ];
 
@@ -188,7 +188,7 @@ class ShowAutoScalingHistoryResponse implements ModelInterface, ArrayAccess
     * Gets totalCount
     *  记录总数。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTotalCount()
     {
@@ -198,7 +198,7 @@ class ShowAutoScalingHistoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param string|null $totalCount 记录总数。
+    * @param int|null $totalCount 记录总数。
     *
     * @return $this
     */

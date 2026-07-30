@@ -25,7 +25,7 @@ class FullUpdateRulesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'rules' => '\HuaweiCloud\SDK\Cdn\V2\Model\CreateRuleRequest[]'
+            'rules' => '\HuaweiCloud\SDK\Cdn\V2\Model\FullUpdateRuleRequest[]'
     ];
 
     /**
@@ -179,7 +179,7 @@ class FullUpdateRulesRequest implements ModelInterface, ArrayAccess
     * Gets rules
     *  **参数解释：** 规则配置内容，可以配置多个规则 **约束限制：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CreateRuleRequest[]
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\FullUpdateRuleRequest[]
     */
     public function getRules()
     {
@@ -189,7 +189,7 @@ class FullUpdateRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets rules
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CreateRuleRequest[] $rules **参数解释：** 规则配置内容，可以配置多个规则 **约束限制：** 不涉及
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\FullUpdateRuleRequest[] $rules **参数解释：** 规则配置内容，可以配置多个规则 **约束限制：** 不涉及
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class EventUpdate implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
+    * redeployConfig  redeployConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'notBefore' => 'string'
+            'notBefore' => 'string',
+            'redeployConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RedeployConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
+    * redeployConfig  redeployConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'notBefore' => null
+        'notBefore' => null,
+        'redeployConfig' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class EventUpdate implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
+    * redeployConfig  redeployConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'notBefore' => 'notBefore'
+            'notBefore' => 'notBefore',
+            'redeployConfig' => 'redeployConfig'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
+    * redeployConfig  redeployConfig
     *
     * @var string[]
     */
     protected static $setters = [
-            'notBefore' => 'setNotBefore'
+            'notBefore' => 'setNotBefore',
+            'redeployConfig' => 'setRedeployConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
+    * redeployConfig  redeployConfig
     *
     * @var string[]
     */
     protected static $getters = [
-            'notBefore' => 'getNotBefore'
+            'notBefore' => 'getNotBefore',
+            'redeployConfig' => 'getRedeployConfig'
     ];
 
     /**
@@ -148,6 +158,7 @@ class EventUpdate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['notBefore'] = isset($data['notBefore']) ? $data['notBefore'] : null;
+        $this->container['redeployConfig'] = isset($data['redeployConfig']) ? $data['redeployConfig'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class EventUpdate implements ModelInterface, ArrayAccess
     public function setNotBefore($notBefore)
     {
         $this->container['notBefore'] = $notBefore;
+        return $this;
+    }
+
+    /**
+    * Gets redeployConfig
+    *  redeployConfig
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\RedeployConfig|null
+    */
+    public function getRedeployConfig()
+    {
+        return $this->container['redeployConfig'];
+    }
+
+    /**
+    * Sets redeployConfig
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\RedeployConfig|null $redeployConfig redeployConfig
+    *
+    * @return $this
+    */
+    public function setRedeployConfig($redeployConfig)
+    {
+        $this->container['redeployConfig'] = $redeployConfig;
         return $this;
     }
 

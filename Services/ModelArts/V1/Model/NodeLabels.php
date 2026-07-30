@@ -27,6 +27,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
     * osModelartsNodeBatchName  **参数解释**：批量创建批次名称。 **取值范围**：不涉及。
     * osModelartsNodeBatchType  **参数解释**：批量创建批次类型。 **取值范围**：可选值如下：   - hyperinstance：超节点。
     * osModelartsNodeBatchCount  **参数解释**：批量创建的节点个数。 **取值范围**：不涉及。
+    * osModelartsNodeSpodId  **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
     * osModelartsResourceId  **参数解释**：节点的资源id。 **取值范围**：不涉及。
     * osModelartsTenantDomainId  **参数解释**：节点的租户id，记录节点创建在哪个租户账号下。 **取值范围**：不涉及。
     * osModelartsTenantProjectId  **参数解释**：节点的项目id，记录节点创建在租户账号下哪个项目中。 **取值范围**：不涉及。
@@ -47,6 +48,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
             'osModelartsNodeBatchName' => 'string',
             'osModelartsNodeBatchType' => 'string',
             'osModelartsNodeBatchCount' => 'string',
+            'osModelartsNodeSpodId' => 'string',
             'osModelartsResourceId' => 'string',
             'osModelartsTenantDomainId' => 'string',
             'osModelartsTenantProjectId' => 'string',
@@ -67,6 +69,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
     * osModelartsNodeBatchName  **参数解释**：批量创建批次名称。 **取值范围**：不涉及。
     * osModelartsNodeBatchType  **参数解释**：批量创建批次类型。 **取值范围**：可选值如下：   - hyperinstance：超节点。
     * osModelartsNodeBatchCount  **参数解释**：批量创建的节点个数。 **取值范围**：不涉及。
+    * osModelartsNodeSpodId  **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
     * osModelartsResourceId  **参数解释**：节点的资源id。 **取值范围**：不涉及。
     * osModelartsTenantDomainId  **参数解释**：节点的租户id，记录节点创建在哪个租户账号下。 **取值范围**：不涉及。
     * osModelartsTenantProjectId  **参数解释**：节点的项目id，记录节点创建在租户账号下哪个项目中。 **取值范围**：不涉及。
@@ -87,6 +90,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
         'osModelartsNodeBatchName' => null,
         'osModelartsNodeBatchType' => null,
         'osModelartsNodeBatchCount' => null,
+        'osModelartsNodeSpodId' => null,
         'osModelartsResourceId' => null,
         'osModelartsTenantDomainId' => null,
         'osModelartsTenantProjectId' => null,
@@ -128,6 +132,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
     * osModelartsNodeBatchName  **参数解释**：批量创建批次名称。 **取值范围**：不涉及。
     * osModelartsNodeBatchType  **参数解释**：批量创建批次类型。 **取值范围**：可选值如下：   - hyperinstance：超节点。
     * osModelartsNodeBatchCount  **参数解释**：批量创建的节点个数。 **取值范围**：不涉及。
+    * osModelartsNodeSpodId  **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
     * osModelartsResourceId  **参数解释**：节点的资源id。 **取值范围**：不涉及。
     * osModelartsTenantDomainId  **参数解释**：节点的租户id，记录节点创建在哪个租户账号下。 **取值范围**：不涉及。
     * osModelartsTenantProjectId  **参数解释**：节点的项目id，记录节点创建在租户账号下哪个项目中。 **取值范围**：不涉及。
@@ -148,6 +153,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
             'osModelartsNodeBatchName' => 'os.modelarts.node/batch.name',
             'osModelartsNodeBatchType' => 'os.modelarts.node/batch.type',
             'osModelartsNodeBatchCount' => 'os.modelarts.node/batch.count',
+            'osModelartsNodeSpodId' => 'os.modelarts.node/spod.id',
             'osModelartsResourceId' => 'os.modelarts/resource.id',
             'osModelartsTenantDomainId' => 'os.modelarts/tenant.domain.id',
             'osModelartsTenantProjectId' => 'os.modelarts/tenant.project.id',
@@ -168,6 +174,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
     * osModelartsNodeBatchName  **参数解释**：批量创建批次名称。 **取值范围**：不涉及。
     * osModelartsNodeBatchType  **参数解释**：批量创建批次类型。 **取值范围**：可选值如下：   - hyperinstance：超节点。
     * osModelartsNodeBatchCount  **参数解释**：批量创建的节点个数。 **取值范围**：不涉及。
+    * osModelartsNodeSpodId  **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
     * osModelartsResourceId  **参数解释**：节点的资源id。 **取值范围**：不涉及。
     * osModelartsTenantDomainId  **参数解释**：节点的租户id，记录节点创建在哪个租户账号下。 **取值范围**：不涉及。
     * osModelartsTenantProjectId  **参数解释**：节点的项目id，记录节点创建在租户账号下哪个项目中。 **取值范围**：不涉及。
@@ -188,6 +195,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
             'osModelartsNodeBatchName' => 'setOsModelartsNodeBatchName',
             'osModelartsNodeBatchType' => 'setOsModelartsNodeBatchType',
             'osModelartsNodeBatchCount' => 'setOsModelartsNodeBatchCount',
+            'osModelartsNodeSpodId' => 'setOsModelartsNodeSpodId',
             'osModelartsResourceId' => 'setOsModelartsResourceId',
             'osModelartsTenantDomainId' => 'setOsModelartsTenantDomainId',
             'osModelartsTenantProjectId' => 'setOsModelartsTenantProjectId',
@@ -208,6 +216,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
     * osModelartsNodeBatchName  **参数解释**：批量创建批次名称。 **取值范围**：不涉及。
     * osModelartsNodeBatchType  **参数解释**：批量创建批次类型。 **取值范围**：可选值如下：   - hyperinstance：超节点。
     * osModelartsNodeBatchCount  **参数解释**：批量创建的节点个数。 **取值范围**：不涉及。
+    * osModelartsNodeSpodId  **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
     * osModelartsResourceId  **参数解释**：节点的资源id。 **取值范围**：不涉及。
     * osModelartsTenantDomainId  **参数解释**：节点的租户id，记录节点创建在哪个租户账号下。 **取值范围**：不涉及。
     * osModelartsTenantProjectId  **参数解释**：节点的项目id，记录节点创建在租户账号下哪个项目中。 **取值范围**：不涉及。
@@ -228,6 +237,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
             'osModelartsNodeBatchName' => 'getOsModelartsNodeBatchName',
             'osModelartsNodeBatchType' => 'getOsModelartsNodeBatchType',
             'osModelartsNodeBatchCount' => 'getOsModelartsNodeBatchCount',
+            'osModelartsNodeSpodId' => 'getOsModelartsNodeSpodId',
             'osModelartsResourceId' => 'getOsModelartsResourceId',
             'osModelartsTenantDomainId' => 'getOsModelartsTenantDomainId',
             'osModelartsTenantProjectId' => 'getOsModelartsTenantProjectId',
@@ -304,6 +314,7 @@ class NodeLabels implements ModelInterface, ArrayAccess
         $this->container['osModelartsNodeBatchName'] = isset($data['osModelartsNodeBatchName']) ? $data['osModelartsNodeBatchName'] : null;
         $this->container['osModelartsNodeBatchType'] = isset($data['osModelartsNodeBatchType']) ? $data['osModelartsNodeBatchType'] : null;
         $this->container['osModelartsNodeBatchCount'] = isset($data['osModelartsNodeBatchCount']) ? $data['osModelartsNodeBatchCount'] : null;
+        $this->container['osModelartsNodeSpodId'] = isset($data['osModelartsNodeSpodId']) ? $data['osModelartsNodeSpodId'] : null;
         $this->container['osModelartsResourceId'] = isset($data['osModelartsResourceId']) ? $data['osModelartsResourceId'] : null;
         $this->container['osModelartsTenantDomainId'] = isset($data['osModelartsTenantDomainId']) ? $data['osModelartsTenantDomainId'] : null;
         $this->container['osModelartsTenantProjectId'] = isset($data['osModelartsTenantProjectId']) ? $data['osModelartsTenantProjectId'] : null;
@@ -502,6 +513,30 @@ class NodeLabels implements ModelInterface, ArrayAccess
     public function setOsModelartsNodeBatchCount($osModelartsNodeBatchCount)
     {
         $this->container['osModelartsNodeBatchCount'] = $osModelartsNodeBatchCount;
+        return $this;
+    }
+
+    /**
+    * Gets osModelartsNodeSpodId
+    *  **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getOsModelartsNodeSpodId()
+    {
+        return $this->container['osModelartsNodeSpodId'];
+    }
+
+    /**
+    * Sets osModelartsNodeSpodId
+    *
+    * @param string|null $osModelartsNodeSpodId **参数解释**：HPS超节点ID。该值相同的节点，A5代表在同一框内，A3代表在同一个超节点内。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setOsModelartsNodeSpodId($osModelartsNodeSpodId)
+    {
+        $this->container['osModelartsNodeSpodId'] = $osModelartsNodeSpodId;
         return $this;
     }
 

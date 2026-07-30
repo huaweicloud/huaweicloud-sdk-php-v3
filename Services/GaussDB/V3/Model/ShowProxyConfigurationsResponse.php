@@ -27,7 +27,7 @@ class ShowProxyConfigurationsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'string',
+            'totalCount' => 'int',
             'configurations' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ProxyConfiguration[]'
     ];
 
@@ -39,7 +39,7 @@ class ShowProxyConfigurationsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => null,
+        'totalCount' => 'int32',
         'configurations' => null
     ];
 
@@ -188,7 +188,7 @@ class ShowProxyConfigurationsResponse implements ModelInterface, ArrayAccess
     * Gets totalCount
     *  数据总数
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTotalCount()
     {
@@ -198,7 +198,7 @@ class ShowProxyConfigurationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param string|null $totalCount 数据总数
+    * @param int|null $totalCount 数据总数
     *
     * @return $this
     */
