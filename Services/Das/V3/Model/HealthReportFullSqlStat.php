@@ -213,24 +213,6 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['collectFullSql'] === null) {
-            $invalidProperties[] = "'collectFullSql' can't be null";
-        }
-        if ($this->container['executeTopTemplates'] === null) {
-            $invalidProperties[] = "'executeTopTemplates' can't be null";
-        }
-        if ($this->container['sumRowsExaminedTopTemplates'] === null) {
-            $invalidProperties[] = "'sumRowsExaminedTopTemplates' can't be null";
-        }
-        if ($this->container['avgCostTopTemplates'] === null) {
-            $invalidProperties[] = "'avgCostTopTemplates' can't be null";
-        }
-        if ($this->container['analyzeSuccess'] === null) {
-            $invalidProperties[] = "'analyzeSuccess' can't be null";
-        }
-        if ($this->container['errorMessage'] === null) {
-            $invalidProperties[] = "'errorMessage' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -249,7 +231,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     * Gets collectFullSql
     *  是否收集全量SQL。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getCollectFullSql()
     {
@@ -259,7 +241,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     /**
     * Sets collectFullSql
     *
-    * @param bool $collectFullSql 是否收集全量SQL。
+    * @param bool|null $collectFullSql 是否收集全量SQL。
     *
     * @return $this
     */
@@ -273,7 +255,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     * Gets executeTopTemplates
     *  全量SQL Top总执行次数列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getExecuteTopTemplates()
     {
@@ -283,7 +265,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     /**
     * Sets executeTopTemplates
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $executeTopTemplates 全量SQL Top总执行次数列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $executeTopTemplates 全量SQL Top总执行次数列表。
     *
     * @return $this
     */
@@ -297,7 +279,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     * Gets sumRowsExaminedTopTemplates
     *  全量SQL Top总扫描行数列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getSumRowsExaminedTopTemplates()
     {
@@ -307,7 +289,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     /**
     * Sets sumRowsExaminedTopTemplates
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $sumRowsExaminedTopTemplates 全量SQL Top总扫描行数列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $sumRowsExaminedTopTemplates 全量SQL Top总扫描行数列表。
     *
     * @return $this
     */
@@ -321,7 +303,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     * Gets avgCostTopTemplates
     *  全量SQL Top平均执行耗时列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getAvgCostTopTemplates()
     {
@@ -331,7 +313,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     /**
     * Sets avgCostTopTemplates
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $avgCostTopTemplates 全量SQL Top平均执行耗时列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $avgCostTopTemplates 全量SQL Top平均执行耗时列表。
     *
     * @return $this
     */
@@ -345,7 +327,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     * Gets analyzeSuccess
     *  统计分析是否成功。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getAnalyzeSuccess()
     {
@@ -355,7 +337,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     /**
     * Sets analyzeSuccess
     *
-    * @param bool $analyzeSuccess 统计分析是否成功。
+    * @param bool|null $analyzeSuccess 统计分析是否成功。
     *
     * @return $this
     */
@@ -369,7 +351,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     * Gets errorMessage
     *  错误信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getErrorMessage()
     {
@@ -379,7 +361,7 @@ class HealthReportFullSqlStat implements ModelInterface, ArrayAccess
     /**
     * Sets errorMessage
     *
-    * @param string $errorMessage 错误信息。
+    * @param string|null $errorMessage 错误信息。
     *
     * @return $this
     */

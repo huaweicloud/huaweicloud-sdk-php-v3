@@ -38,6 +38,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - allowed_address_pairs=ip_address={ip_address}，其中{ip_address}填IP地址，如192.168.21.22。 - allowed_address_pairs=mac_address={mac_address}，其中{mac_address}填MAC地址，如fa:16:3e:b1:da:62。
     * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -59,7 +61,9 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'string[]',
             'allowedAddressPairs' => 'string[]',
             'instanceId' => 'string',
-            'instanceType' => 'string'
+            'instanceType' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
@@ -82,6 +86,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - allowed_address_pairs=ip_address={ip_address}，其中{ip_address}填IP地址，如192.168.21.22。 - allowed_address_pairs=mac_address={mac_address}，其中{mac_address}填MAC地址，如fa:16:3e:b1:da:62。
     * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -103,7 +109,9 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         'vpcId' => null,
         'allowedAddressPairs' => null,
         'instanceId' => null,
-        'instanceType' => null
+        'instanceType' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -147,6 +155,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - allowed_address_pairs=ip_address={ip_address}，其中{ip_address}填IP地址，如192.168.21.22。 - allowed_address_pairs=mac_address={mac_address}，其中{mac_address}填MAC地址，如fa:16:3e:b1:da:62。
     * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -168,7 +178,9 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'vpc_id',
             'allowedAddressPairs' => 'allowed_address_pairs',
             'instanceId' => 'instance_id',
-            'instanceType' => 'instance_type'
+            'instanceType' => 'instance_type',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
@@ -191,6 +203,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - allowed_address_pairs=ip_address={ip_address}，其中{ip_address}填IP地址，如192.168.21.22。 - allowed_address_pairs=mac_address={mac_address}，其中{mac_address}填MAC地址，如fa:16:3e:b1:da:62。
     * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -212,7 +226,9 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'setVpcId',
             'allowedAddressPairs' => 'setAllowedAddressPairs',
             'instanceId' => 'setInstanceId',
-            'instanceType' => 'setInstanceType'
+            'instanceType' => 'setInstanceType',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -235,6 +251,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     * allowedAddressPairs  **参数解释**： 端口的IP/Mac对列表。 **取值范围**： - allowed_address_pairs=ip_address={ip_address}，其中{ip_address}填IP地址，如192.168.21.22。 - allowed_address_pairs=mac_address={mac_address}，其中{mac_address}填MAC地址，如fa:16:3e:b1:da:62。
     * instanceId  **参数解释**： 端口所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     * instanceType  **参数解释**： 端口所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -256,7 +274,9 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'getVpcId',
             'allowedAddressPairs' => 'getAllowedAddressPairs',
             'instanceId' => 'getInstanceId',
-            'instanceType' => 'getInstanceType'
+            'instanceType' => 'getInstanceType',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -335,6 +355,8 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -791,6 +813,54 @@ class ListPortsRequest implements ModelInterface, ArrayAccess
     public function setInstanceType($instanceType)
     {
         $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

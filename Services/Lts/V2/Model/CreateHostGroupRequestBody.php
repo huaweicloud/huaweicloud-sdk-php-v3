@@ -24,6 +24,8 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
     * hostGroupType  主机组类型。windows：windows类型，linux：linux类型
     * hostIdList  主机组ID列表。主机类型必须与主机组类型一致
     * hostGroupTag  标签信息。KEY不能重复
+    * agentAccessType  **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    * labels  **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
             'hostGroupName' => 'string',
             'hostGroupType' => 'string',
             'hostIdList' => 'string[]',
-            'hostGroupTag' => '\HuaweiCloud\SDK\Lts\V2\Model\HostGroupTag[]'
+            'hostGroupTag' => '\HuaweiCloud\SDK\Lts\V2\Model\HostGroupTag[]',
+            'agentAccessType' => 'string',
+            'labels' => 'string[]'
     ];
 
     /**
@@ -40,6 +44,8 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
     * hostGroupType  主机组类型。windows：windows类型，linux：linux类型
     * hostIdList  主机组ID列表。主机类型必须与主机组类型一致
     * hostGroupTag  标签信息。KEY不能重复
+    * agentAccessType  **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    * labels  **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
         'hostGroupName' => null,
         'hostGroupType' => null,
         'hostIdList' => null,
-        'hostGroupTag' => null
+        'hostGroupTag' => null,
+        'agentAccessType' => null,
+        'labels' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
     * hostGroupType  主机组类型。windows：windows类型，linux：linux类型
     * hostIdList  主机组ID列表。主机类型必须与主机组类型一致
     * hostGroupTag  标签信息。KEY不能重复
+    * agentAccessType  **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    * labels  **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
             'hostGroupName' => 'host_group_name',
             'hostGroupType' => 'host_group_type',
             'hostIdList' => 'host_id_list',
-            'hostGroupTag' => 'host_group_tag'
+            'hostGroupTag' => 'host_group_tag',
+            'agentAccessType' => 'agent_access_type',
+            'labels' => 'labels'
     ];
 
     /**
@@ -93,6 +105,8 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
     * hostGroupType  主机组类型。windows：windows类型，linux：linux类型
     * hostIdList  主机组ID列表。主机类型必须与主机组类型一致
     * hostGroupTag  标签信息。KEY不能重复
+    * agentAccessType  **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    * labels  **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
             'hostGroupName' => 'setHostGroupName',
             'hostGroupType' => 'setHostGroupType',
             'hostIdList' => 'setHostIdList',
-            'hostGroupTag' => 'setHostGroupTag'
+            'hostGroupTag' => 'setHostGroupTag',
+            'agentAccessType' => 'setAgentAccessType',
+            'labels' => 'setLabels'
     ];
 
     /**
@@ -109,6 +125,8 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
     * hostGroupType  主机组类型。windows：windows类型，linux：linux类型
     * hostIdList  主机组ID列表。主机类型必须与主机组类型一致
     * hostGroupTag  标签信息。KEY不能重复
+    * agentAccessType  **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    * labels  **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
             'hostGroupName' => 'getHostGroupName',
             'hostGroupType' => 'getHostGroupType',
             'hostIdList' => 'getHostIdList',
-            'hostGroupTag' => 'getHostGroupTag'
+            'hostGroupTag' => 'getHostGroupTag',
+            'agentAccessType' => 'getAgentAccessType',
+            'labels' => 'getLabels'
     ];
 
     /**
@@ -196,6 +216,8 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
         $this->container['hostGroupType'] = isset($data['hostGroupType']) ? $data['hostGroupType'] : null;
         $this->container['hostIdList'] = isset($data['hostIdList']) ? $data['hostIdList'] : null;
         $this->container['hostGroupTag'] = isset($data['hostGroupTag']) ? $data['hostGroupTag'] : null;
+        $this->container['agentAccessType'] = isset($data['agentAccessType']) ? $data['agentAccessType'] : null;
+        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
     }
 
     /**
@@ -336,6 +358,54 @@ class CreateHostGroupRequestBody implements ModelInterface, ArrayAccess
     public function setHostGroupTag($hostGroupTag)
     {
         $this->container['hostGroupTag'] = $hostGroupTag;
+        return $this;
+    }
+
+    /**
+    * Gets agentAccessType
+    *  **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    *
+    * @return string|null
+    */
+    public function getAgentAccessType()
+    {
+        return $this->container['agentAccessType'];
+    }
+
+    /**
+    * Sets agentAccessType
+    *
+    * @param string|null $agentAccessType **参数解释：** 主机组类型。支持两种主机组类型，分别为IP类型和LABEL类型。 **约束限制：** 不涉及 **取值范围：** - IP - LABEL **默认取值：** IP。
+    *
+    * @return $this
+    */
+    public function setAgentAccessType($agentAccessType)
+    {
+        $this->container['agentAccessType'] = $agentAccessType;
+        return $this;
+    }
+
+    /**
+    * Gets labels
+    *  **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getLabels()
+    {
+        return $this->container['labels'];
+    }
+
+    /**
+    * Sets labels
+    *
+    * @param string[]|null $labels **参数解释：** 自定义标识。主机组类型为LABEL类型，该字段必填。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLabels($labels)
+    {
+        $this->container['labels'] = $labels;
         return $this;
     }
 

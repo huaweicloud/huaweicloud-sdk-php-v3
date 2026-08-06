@@ -25,6 +25,7 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
     * type  数据连接类型,有HIVE,MYSQL,ORALCLE,DWS,HBASE等。
     * limit  数据条数限制
     * offset  偏移量
+    * ip  数据连接中数据库的ip，支持模糊搜索
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'type' => 'string',
             'limit' => 'string',
-            'offset' => 'string'
+            'offset' => 'string',
+            'ip' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
     * type  数据连接类型,有HIVE,MYSQL,ORALCLE,DWS,HBASE等。
     * limit  数据条数限制
     * offset  偏移量
+    * ip  数据连接中数据库的ip，支持模糊搜索
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'type' => null,
         'limit' => null,
-        'offset' => null
+        'offset' => null,
+        'ip' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
     * type  数据连接类型,有HIVE,MYSQL,ORALCLE,DWS,HBASE等。
     * limit  数据条数限制
     * offset  偏移量
+    * ip  数据连接中数据库的ip，支持模糊搜索
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'type' => 'type',
             'limit' => 'limit',
-            'offset' => 'offset'
+            'offset' => 'offset',
+            'ip' => 'ip'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
     * type  数据连接类型,有HIVE,MYSQL,ORALCLE,DWS,HBASE等。
     * limit  数据条数限制
     * offset  偏移量
+    * ip  数据连接中数据库的ip，支持模糊搜索
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'type' => 'setType',
             'limit' => 'setLimit',
-            'offset' => 'setOffset'
+            'offset' => 'setOffset',
+            'ip' => 'setIp'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
     * type  数据连接类型,有HIVE,MYSQL,ORALCLE,DWS,HBASE等。
     * limit  数据条数限制
     * offset  偏移量
+    * ip  数据连接中数据库的ip，支持模糊搜索
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'type' => 'getType',
             'limit' => 'getLimit',
-            'offset' => 'getOffset'
+            'offset' => 'getOffset',
+            'ip' => 'getIp'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
     }
 
     /**
@@ -363,6 +374,30 @@ class ListDataconnectionsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  数据连接中数据库的ip，支持模糊搜索
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 数据连接中数据库的ip，支持模糊搜索
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

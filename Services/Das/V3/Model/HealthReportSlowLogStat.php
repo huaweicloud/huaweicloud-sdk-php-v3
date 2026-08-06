@@ -224,27 +224,6 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['collectSlowLog'] === null) {
-            $invalidProperties[] = "'collectSlowLog' can't be null";
-        }
-        if ($this->container['topExecuteSlowLogs'] === null) {
-            $invalidProperties[] = "'topExecuteSlowLogs' can't be null";
-        }
-        if ($this->container['topAvgQueryTimeSlowLogs'] === null) {
-            $invalidProperties[] = "'topAvgQueryTimeSlowLogs' can't be null";
-        }
-        if ($this->container['topMaxQueryTimeSlowLogs'] === null) {
-            $invalidProperties[] = "'topMaxQueryTimeSlowLogs' can't be null";
-        }
-        if ($this->container['rowsExaminedExceeding'] === null) {
-            $invalidProperties[] = "'rowsExaminedExceeding' can't be null";
-        }
-        if ($this->container['analyzeSuccess'] === null) {
-            $invalidProperties[] = "'analyzeSuccess' can't be null";
-        }
-        if ($this->container['errorMessage'] === null) {
-            $invalidProperties[] = "'errorMessage' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -263,7 +242,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets collectSlowLog
     *  是否收集慢SQL。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getCollectSlowLog()
     {
@@ -273,7 +252,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets collectSlowLog
     *
-    * @param bool $collectSlowLog 是否收集慢SQL。
+    * @param bool|null $collectSlowLog 是否收集慢SQL。
     *
     * @return $this
     */
@@ -287,7 +266,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets topExecuteSlowLogs
     *  慢SQL Top执行次数列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getTopExecuteSlowLogs()
     {
@@ -297,7 +276,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets topExecuteSlowLogs
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $topExecuteSlowLogs 慢SQL Top执行次数列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $topExecuteSlowLogs 慢SQL Top执行次数列表。
     *
     * @return $this
     */
@@ -311,7 +290,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets topAvgQueryTimeSlowLogs
     *  慢SQL Top平均执行时间列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getTopAvgQueryTimeSlowLogs()
     {
@@ -321,7 +300,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets topAvgQueryTimeSlowLogs
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $topAvgQueryTimeSlowLogs 慢SQL Top平均执行时间列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $topAvgQueryTimeSlowLogs 慢SQL Top平均执行时间列表。
     *
     * @return $this
     */
@@ -335,7 +314,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets topMaxQueryTimeSlowLogs
     *  慢SQL Top最大执行时间列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getTopMaxQueryTimeSlowLogs()
     {
@@ -345,7 +324,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets topMaxQueryTimeSlowLogs
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $topMaxQueryTimeSlowLogs 慢SQL Top最大执行时间列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $topMaxQueryTimeSlowLogs 慢SQL Top最大执行时间列表。
     *
     * @return $this
     */
@@ -359,7 +338,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets rowsExaminedExceeding
     *  慢SQL Top扫描返回比列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null
     */
     public function getRowsExaminedExceeding()
     {
@@ -369,7 +348,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets rowsExaminedExceeding
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[] $rowsExaminedExceeding 慢SQL Top扫描返回比列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSqlTemplate[]|null $rowsExaminedExceeding 慢SQL Top扫描返回比列表。
     *
     * @return $this
     */
@@ -383,7 +362,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets analyzeSuccess
     *  统计分析是否成功。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getAnalyzeSuccess()
     {
@@ -393,7 +372,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets analyzeSuccess
     *
-    * @param bool $analyzeSuccess 统计分析是否成功。
+    * @param bool|null $analyzeSuccess 统计分析是否成功。
     *
     * @return $this
     */
@@ -407,7 +386,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     * Gets errorMessage
     *  错误信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getErrorMessage()
     {
@@ -417,7 +396,7 @@ class HealthReportSlowLogStat implements ModelInterface, ArrayAccess
     /**
     * Sets errorMessage
     *
-    * @param string $errorMessage 错误信息。
+    * @param string|null $errorMessage 错误信息。
     *
     * @return $this
     */

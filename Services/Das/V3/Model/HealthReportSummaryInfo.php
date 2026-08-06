@@ -158,9 +158,6 @@ class HealthReportSummaryInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['analysisResults'] === null) {
-            $invalidProperties[] = "'analysisResults' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class HealthReportSummaryInfo implements ModelInterface, ArrayAccess
     * Gets analysisResults
     *  分析结果列表
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportAnalysisResult[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportAnalysisResult[]|null
     */
     public function getAnalysisResults()
     {
@@ -189,7 +186,7 @@ class HealthReportSummaryInfo implements ModelInterface, ArrayAccess
     /**
     * Sets analysisResults
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportAnalysisResult[] $analysisResults 分析结果列表
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportAnalysisResult[]|null $analysisResults 分析结果列表
     *
     * @return $this
     */

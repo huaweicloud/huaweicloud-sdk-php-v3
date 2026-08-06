@@ -202,21 +202,6 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['metric'] === null) {
-            $invalidProperties[] = "'metric' can't be null";
-        }
-        if ($this->container['maxValue'] === null) {
-            $invalidProperties[] = "'maxValue' can't be null";
-        }
-        if ($this->container['criticalRatio'] === null) {
-            $invalidProperties[] = "'criticalRatio' can't be null";
-        }
-        if ($this->container['mediumRatio'] === null) {
-            $invalidProperties[] = "'mediumRatio' can't be null";
-        }
-        if ($this->container['lightRatio'] === null) {
-            $invalidProperties[] = "'lightRatio' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -235,7 +220,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     * Gets metric
     *  指标名。
     *
-    * @return string
+    * @return string|null
     */
     public function getMetric()
     {
@@ -245,7 +230,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param string $metric 指标名。
+    * @param string|null $metric 指标名。
     *
     * @return $this
     */
@@ -259,7 +244,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     * Gets maxValue
     *  最大值。
     *
-    * @return double
+    * @return double|null
     */
     public function getMaxValue()
     {
@@ -269,7 +254,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     /**
     * Sets maxValue
     *
-    * @param double $maxValue 最大值。
+    * @param double|null $maxValue 最大值。
     *
     * @return $this
     */
@@ -283,7 +268,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     * Gets criticalRatio
     *  高水位占比。
     *
-    * @return double
+    * @return double|null
     */
     public function getCriticalRatio()
     {
@@ -293,7 +278,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     /**
     * Sets criticalRatio
     *
-    * @param double $criticalRatio 高水位占比。
+    * @param double|null $criticalRatio 高水位占比。
     *
     * @return $this
     */
@@ -307,7 +292,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     * Gets mediumRatio
     *  中水位占比。
     *
-    * @return double
+    * @return double|null
     */
     public function getMediumRatio()
     {
@@ -317,7 +302,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     /**
     * Sets mediumRatio
     *
-    * @param double $mediumRatio 中水位占比。
+    * @param double|null $mediumRatio 中水位占比。
     *
     * @return $this
     */
@@ -331,7 +316,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     * Gets lightRatio
     *  低水位占比。
     *
-    * @return double
+    * @return double|null
     */
     public function getLightRatio()
     {
@@ -341,7 +326,7 @@ class HealthReportRatioStat implements ModelInterface, ArrayAccess
     /**
     * Sets lightRatio
     *
-    * @param double $lightRatio 低水位占比。
+    * @param double|null $lightRatio 低水位占比。
     *
     * @return $this
     */

@@ -24,6 +24,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     * count  日志条数。
     * logs  日志信息。
     * isQueryComplete  是否查询完成。
+    * scrollId  **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
     * analysisLogs  分析日志返回响应体
     *
     * @var string[]
@@ -32,6 +33,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
             'count' => 'int',
             'logs' => '\HuaweiCloud\SDK\Lts\V2\Model\LogContents[]',
             'isQueryComplete' => 'bool',
+            'scrollId' => 'string',
             'analysisLogs' => 'object[]'
     ];
 
@@ -40,6 +42,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     * count  日志条数。
     * logs  日志信息。
     * isQueryComplete  是否查询完成。
+    * scrollId  **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
     * analysisLogs  分析日志返回响应体
     *
     * @var string[]
@@ -48,6 +51,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
         'count' => null,
         'logs' => null,
         'isQueryComplete' => null,
+        'scrollId' => null,
         'analysisLogs' => null
     ];
 
@@ -77,6 +81,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     * count  日志条数。
     * logs  日志信息。
     * isQueryComplete  是否查询完成。
+    * scrollId  **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
     * analysisLogs  分析日志返回响应体
     *
     * @var string[]
@@ -85,6 +90,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
             'count' => 'count',
             'logs' => 'logs',
             'isQueryComplete' => 'isQueryComplete',
+            'scrollId' => 'scrollId',
             'analysisLogs' => 'analysisLogs'
     ];
 
@@ -93,6 +99,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     * count  日志条数。
     * logs  日志信息。
     * isQueryComplete  是否查询完成。
+    * scrollId  **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
     * analysisLogs  分析日志返回响应体
     *
     * @var string[]
@@ -101,6 +108,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
             'count' => 'setCount',
             'logs' => 'setLogs',
             'isQueryComplete' => 'setIsQueryComplete',
+            'scrollId' => 'setScrollId',
             'analysisLogs' => 'setAnalysisLogs'
     ];
 
@@ -109,6 +117,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     * count  日志条数。
     * logs  日志信息。
     * isQueryComplete  是否查询完成。
+    * scrollId  **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
     * analysisLogs  分析日志返回响应体
     *
     * @var string[]
@@ -117,6 +126,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
             'count' => 'getCount',
             'logs' => 'getLogs',
             'isQueryComplete' => 'getIsQueryComplete',
+            'scrollId' => 'getScrollId',
             'analysisLogs' => 'getAnalysisLogs'
     ];
 
@@ -181,6 +191,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['logs'] = isset($data['logs']) ? $data['logs'] : null;
         $this->container['isQueryComplete'] = isset($data['isQueryComplete']) ? $data['isQueryComplete'] : null;
+        $this->container['scrollId'] = isset($data['scrollId']) ? $data['scrollId'] : null;
         $this->container['analysisLogs'] = isset($data['analysisLogs']) ? $data['analysisLogs'] : null;
     }
 
@@ -275,6 +286,30 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     public function setIsQueryComplete($isQueryComplete)
     {
         $this->container['isQueryComplete'] = $isQueryComplete;
+        return $this;
+    }
+
+    /**
+    * Gets scrollId
+    *  **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getScrollId()
+    {
+        return $this->container['scrollId'];
+    }
+
+    /**
+    * Sets scrollId
+    *
+    * @param string|null $scrollId **参数解释：** 分页查询时，若返回结果中包含该字段，下一次请求体需要增加scroll_Id参数参与分页查询。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setScrollId($scrollId)
+    {
+        $this->container['scrollId'] = $scrollId;
         return $this;
     }
 

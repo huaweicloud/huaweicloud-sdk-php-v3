@@ -22,6 +22,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     * Array of property to type mappings. Used for (de)serialization
     * rawSql  rawSql
     * averageTime  平均时间
+    * keyword  限流关键字
+    * recommendType  推荐类型
     * count  数量
     * maxTime  mysql 提供， taurus不提供
     * exeTime  执行时间
@@ -31,6 +33,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     protected static $openAPITypes = [
             'rawSql' => '\HuaweiCloud\SDK\Das\V3\Model\RecommendSqlLimitRuleRespRawSql',
             'averageTime' => 'double',
+            'keyword' => 'string',
+            'recommendType' => 'string',
             'count' => 'double',
             'maxTime' => 'int',
             'exeTime' => 'int'
@@ -40,6 +44,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     * Array of property to format mappings. Used for (de)serialization
     * rawSql  rawSql
     * averageTime  平均时间
+    * keyword  限流关键字
+    * recommendType  推荐类型
     * count  数量
     * maxTime  mysql 提供， taurus不提供
     * exeTime  执行时间
@@ -49,6 +55,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     protected static $openAPIFormats = [
         'rawSql' => null,
         'averageTime' => 'double',
+        'keyword' => null,
+        'recommendType' => null,
         'count' => 'double',
         'maxTime' => 'int64',
         'exeTime' => 'int64'
@@ -79,6 +87,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     * and the value is the original name
     * rawSql  rawSql
     * averageTime  平均时间
+    * keyword  限流关键字
+    * recommendType  推荐类型
     * count  数量
     * maxTime  mysql 提供， taurus不提供
     * exeTime  执行时间
@@ -88,8 +98,10 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     protected static $attributeMap = [
             'rawSql' => 'raw_sql',
             'averageTime' => 'average_time',
+            'keyword' => 'keyword',
+            'recommendType' => 'recommend_type',
             'count' => 'count',
-            'maxTime' => 'maxTime',
+            'maxTime' => 'max_time',
             'exeTime' => 'exe_time'
     ];
 
@@ -97,6 +109,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     * Array of attributes to setter functions (for deserialization of responses)
     * rawSql  rawSql
     * averageTime  平均时间
+    * keyword  限流关键字
+    * recommendType  推荐类型
     * count  数量
     * maxTime  mysql 提供， taurus不提供
     * exeTime  执行时间
@@ -106,6 +120,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     protected static $setters = [
             'rawSql' => 'setRawSql',
             'averageTime' => 'setAverageTime',
+            'keyword' => 'setKeyword',
+            'recommendType' => 'setRecommendType',
             'count' => 'setCount',
             'maxTime' => 'setMaxTime',
             'exeTime' => 'setExeTime'
@@ -115,6 +131,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     * Array of attributes to getter functions (for serialization of requests)
     * rawSql  rawSql
     * averageTime  平均时间
+    * keyword  限流关键字
+    * recommendType  推荐类型
     * count  数量
     * maxTime  mysql 提供， taurus不提供
     * exeTime  执行时间
@@ -124,6 +142,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     protected static $getters = [
             'rawSql' => 'getRawSql',
             'averageTime' => 'getAverageTime',
+            'keyword' => 'getKeyword',
+            'recommendType' => 'getRecommendType',
             'count' => 'getCount',
             'maxTime' => 'getMaxTime',
             'exeTime' => 'getExeTime'
@@ -189,6 +209,8 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     {
         $this->container['rawSql'] = isset($data['rawSql']) ? $data['rawSql'] : null;
         $this->container['averageTime'] = isset($data['averageTime']) ? $data['averageTime'] : null;
+        $this->container['keyword'] = isset($data['keyword']) ? $data['keyword'] : null;
+        $this->container['recommendType'] = isset($data['recommendType']) ? $data['recommendType'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['maxTime'] = isset($data['maxTime']) ? $data['maxTime'] : null;
         $this->container['exeTime'] = isset($data['exeTime']) ? $data['exeTime'] : null;
@@ -261,6 +283,54 @@ class RecommendSqlLimitRuleRespSqlLimitInfos implements ModelInterface, ArrayAcc
     public function setAverageTime($averageTime)
     {
         $this->container['averageTime'] = $averageTime;
+        return $this;
+    }
+
+    /**
+    * Gets keyword
+    *  限流关键字
+    *
+    * @return string|null
+    */
+    public function getKeyword()
+    {
+        return $this->container['keyword'];
+    }
+
+    /**
+    * Sets keyword
+    *
+    * @param string|null $keyword 限流关键字
+    *
+    * @return $this
+    */
+    public function setKeyword($keyword)
+    {
+        $this->container['keyword'] = $keyword;
+        return $this;
+    }
+
+    /**
+    * Gets recommendType
+    *  推荐类型
+    *
+    * @return string|null
+    */
+    public function getRecommendType()
+    {
+        return $this->container['recommendType'];
+    }
+
+    /**
+    * Sets recommendType
+    *
+    * @param string|null $recommendType 推荐类型
+    *
+    * @return $this
+    */
+    public function setRecommendType($recommendType)
+    {
+        $this->container['recommendType'] = $recommendType;
         return $this;
     }
 

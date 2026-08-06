@@ -180,15 +180,6 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['metric'] === null) {
-            $invalidProperties[] = "'metric' can't be null";
-        }
-        if ($this->container['lostPoints'] === null) {
-            $invalidProperties[] = "'lostPoints' can't be null";
-        }
-        if ($this->container['riskLevel'] === null) {
-            $invalidProperties[] = "'riskLevel' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -207,7 +198,7 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     * Gets metric
     *  扣分项。
     *
-    * @return string
+    * @return string|null
     */
     public function getMetric()
     {
@@ -217,7 +208,7 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param string $metric 扣分项。
+    * @param string|null $metric 扣分项。
     *
     * @return $this
     */
@@ -231,7 +222,7 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     * Gets lostPoints
     *  所扣分数。
     *
-    * @return double
+    * @return double|null
     */
     public function getLostPoints()
     {
@@ -241,7 +232,7 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets lostPoints
     *
-    * @param double $lostPoints 所扣分数。
+    * @param double|null $lostPoints 所扣分数。
     *
     * @return $this
     */
@@ -255,7 +246,7 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     * Gets riskLevel
     *  事件等级。
     *
-    * @return string
+    * @return string|null
     */
     public function getRiskLevel()
     {
@@ -265,7 +256,7 @@ class HealthReportLostPointsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string $riskLevel 事件等级。
+    * @param string|null $riskLevel 事件等级。
     *
     * @return $this
     */

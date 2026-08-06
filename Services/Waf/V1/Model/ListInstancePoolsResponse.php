@@ -21,8 +21,8 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  实例组总数
-    * items  实例组列表
+    * total  **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
+    * items  **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  实例组总数
-    * items  实例组列表
+    * total  **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
+    * items  **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  实例组总数
-    * items  实例组列表
+    * total  **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
+    * items  **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  实例组总数
-    * items  实例组列表
+    * total  **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
+    * items  **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  实例组总数
-    * items  实例组列表
+    * total  **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
+    * items  **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  实例组总数
+    *  **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 实例组总数
+    * @param int|null $total **参数解释：** 符合条件的实例组总数。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  实例组列表
+    *  **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\PremiumWafPoolResponse[]|null
     */
@@ -222,7 +222,7 @@ class ListInstancePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\PremiumWafPoolResponse[]|null $items 实例组列表
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\PremiumWafPoolResponse[]|null $items **参数解释：** 实例组列表，详细字段说明请参见PremiumWafPoolResponse object。 **取值范围：** 不涉及
     *
     * @return $this
     */

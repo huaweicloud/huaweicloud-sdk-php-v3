@@ -202,6 +202,12 @@ class ShowRecommendSqlLimitRuleRequestBody implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['engineType'] === null) {
+            $invalidProperties[] = "'engineType' can't be null";
+        }
+        if ($this->container['recommendCount'] === null) {
+            $invalidProperties[] = "'recommendCount' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +226,7 @@ class ShowRecommendSqlLimitRuleRequestBody implements ModelInterface, ArrayAcces
     * Gets engineType
     *  引擎类型，目前只支持mysql或者taurus
     *
-    * @return string|null
+    * @return string
     */
     public function getEngineType()
     {
@@ -230,7 +236,7 @@ class ShowRecommendSqlLimitRuleRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets engineType
     *
-    * @param string|null $engineType 引擎类型，目前只支持mysql或者taurus
+    * @param string $engineType 引擎类型，目前只支持mysql或者taurus
     *
     * @return $this
     */
@@ -292,7 +298,7 @@ class ShowRecommendSqlLimitRuleRequestBody implements ModelInterface, ArrayAcces
     * Gets recommendCount
     *  推荐数量
     *
-    * @return int|null
+    * @return int
     */
     public function getRecommendCount()
     {
@@ -302,7 +308,7 @@ class ShowRecommendSqlLimitRuleRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets recommendCount
     *
-    * @param int|null $recommendCount 推荐数量
+    * @param int $recommendCount 推荐数量
     *
     * @return $this
     */

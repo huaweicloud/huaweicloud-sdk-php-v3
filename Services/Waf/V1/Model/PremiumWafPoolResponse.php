@@ -20,16 +20,16 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  实例组id
-    * name  实例组名称
-    * region  实例组所在region
-    * type  实例组类型
-    * vpcId  实例组关联的vpc_id
-    * description  实例组描述
-    * hosts  实例组关联的防护域名
-    * instances  实例组关联的引擎实例
-    * enterpriseProjectId  实例组关联的企业计划id
-    * createTime  实例组创建时间
+    * id  **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
+    * name  **参数解释：** 实例组名称。 **取值范围：** 不涉及
+    * region  **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
+    * type  **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
+    * vpcId  **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
+    * description  **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
+    * hosts  **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
+    * instances  **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
+    * createTime  **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  实例组id
-    * name  实例组名称
-    * region  实例组所在region
-    * type  实例组类型
-    * vpcId  实例组关联的vpc_id
-    * description  实例组描述
-    * hosts  实例组关联的防护域名
-    * instances  实例组关联的引擎实例
-    * enterpriseProjectId  实例组关联的企业计划id
-    * createTime  实例组创建时间
+    * id  **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
+    * name  **参数解释：** 实例组名称。 **取值范围：** 不涉及
+    * region  **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
+    * type  **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
+    * vpcId  **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
+    * description  **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
+    * hosts  **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
+    * instances  **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
+    * createTime  **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  实例组id
-    * name  实例组名称
-    * region  实例组所在region
-    * type  实例组类型
-    * vpcId  实例组关联的vpc_id
-    * description  实例组描述
-    * hosts  实例组关联的防护域名
-    * instances  实例组关联的引擎实例
-    * enterpriseProjectId  实例组关联的企业计划id
-    * createTime  实例组创建时间
+    * id  **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
+    * name  **参数解释：** 实例组名称。 **取值范围：** 不涉及
+    * region  **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
+    * type  **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
+    * vpcId  **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
+    * description  **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
+    * hosts  **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
+    * instances  **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
+    * createTime  **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  实例组id
-    * name  实例组名称
-    * region  实例组所在region
-    * type  实例组类型
-    * vpcId  实例组关联的vpc_id
-    * description  实例组描述
-    * hosts  实例组关联的防护域名
-    * instances  实例组关联的引擎实例
-    * enterpriseProjectId  实例组关联的企业计划id
-    * createTime  实例组创建时间
+    * id  **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
+    * name  **参数解释：** 实例组名称。 **取值范围：** 不涉及
+    * region  **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
+    * type  **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
+    * vpcId  **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
+    * description  **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
+    * hosts  **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
+    * instances  **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
+    * createTime  **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  实例组id
-    * name  实例组名称
-    * region  实例组所在region
-    * type  实例组类型
-    * vpcId  实例组关联的vpc_id
-    * description  实例组描述
-    * hosts  实例组关联的防护域名
-    * instances  实例组关联的引擎实例
-    * enterpriseProjectId  实例组关联的企业计划id
-    * createTime  实例组创建时间
+    * id  **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
+    * name  **参数解释：** 实例组名称。 **取值范围：** 不涉及
+    * region  **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
+    * type  **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
+    * vpcId  **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
+    * description  **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
+    * hosts  **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
+    * instances  **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
+    * createTime  **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实例组id
+    *  **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 实例组id
+    * @param string|null $id **参数解释：** 实例组ID，用于唯一标识一个实例组。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  实例组名称
+    *  **参数解释：** 实例组名称。 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例组名称
+    * @param string|null $name **参数解释：** 实例组名称。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  实例组所在region
+    *  **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 实例组所在region
+    * @param string|null $region **参数解释：** 实例组所在的区域（Region）。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  实例组类型
+    *  **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 实例组类型
+    * @param string|null $type **参数解释：** 实例组类型。 **取值范围：** - elb：基础elb类型 - elb-v2：elb-v2类型 - elb-shadow：saas化elb类型 - standard-container：反向代理独享引擎组（云内，承载租户专用） - standard-cloud：反向代理独享引擎组（云内） - standard：反向代理独享引擎组（云外） - detector-cloud：旁路检测独享引擎组（云内） - detector：旁路检测独享引擎组（云外）
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  实例组关联的vpc_id
+    *  **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId 实例组关联的vpc_id
+    * @param string|null $vpcId **参数解释：** 实例组关联的虚拟私有云ID。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  实例组描述
+    *  **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 实例组描述
+    * @param string|null $description **参数解释：** 实例组的描述信息。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hosts
-    *  实例组关联的防护域名
+    *  **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\IdNameEntry[]|null
     */
@@ -429,7 +429,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\IdNameEntry[]|null $hosts 实例组关联的防护域名
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\IdNameEntry[]|null $hosts **参数解释：** 实例组关联的防护域名列表。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instances
-    *  实例组关联的引擎实例
+    *  **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Waf\V1\Model\IdNameEntry[]|null
     */
@@ -453,7 +453,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instances
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\IdNameEntry[]|null $instances 实例组关联的引擎实例
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\IdNameEntry[]|null $instances **参数解释：** 实例组关联的引擎实例列表。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  实例组关联的企业计划id
+    *  **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 实例组关联的企业计划id
+    * @param string|null $enterpriseProjectId **参数解释：** 实例组关联的企业项目ID。 **取值范围：** - 0：代表default企业项目 - 其他为企业项目ID，长度为36个字符
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  实例组创建时间
+    *  **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -501,7 +501,7 @@ class PremiumWafPoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 实例组创建时间
+    * @param int|null $createTime **参数解释：** 实例组创建时间。Unix时间戳格式，单位为毫秒（ms）。 **取值范围：** 不涉及
     *
     * @return $this
     */

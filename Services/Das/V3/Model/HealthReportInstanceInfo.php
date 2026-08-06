@@ -268,39 +268,6 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['tenantId'] === null) {
-            $invalidProperties[] = "'tenantId' can't be null";
-        }
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
-        }
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
-        if ($this->container['masterNodeId'] === null) {
-            $invalidProperties[] = "'masterNodeId' can't be null";
-        }
-        if ($this->container['instanceName'] === null) {
-            $invalidProperties[] = "'instanceName' can't be null";
-        }
-        if ($this->container['cpu'] === null) {
-            $invalidProperties[] = "'cpu' can't be null";
-        }
-        if ($this->container['mem'] === null) {
-            $invalidProperties[] = "'mem' can't be null";
-        }
-        if ($this->container['diskSize'] === null) {
-            $invalidProperties[] = "'diskSize' can't be null";
-        }
-        if ($this->container['diskType'] === null) {
-            $invalidProperties[] = "'diskType' can't be null";
-        }
-        if ($this->container['engine'] === null) {
-            $invalidProperties[] = "'engine' can't be null";
-        }
-        if ($this->container['engineVersion'] === null) {
-            $invalidProperties[] = "'engineVersion' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -319,7 +286,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets tenantId
     *  账号ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getTenantId()
     {
@@ -329,7 +296,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string $tenantId 账号ID。
+    * @param string|null $tenantId 账号ID。
     *
     * @return $this
     */
@@ -343,7 +310,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets projectId
     *  项目ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getProjectId()
     {
@@ -353,7 +320,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID。
+    * @param string|null $projectId 项目ID。
     *
     * @return $this
     */
@@ -367,7 +334,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  实例ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getInstanceId()
     {
@@ -377,7 +344,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string|null $instanceId 实例ID。
     *
     * @return $this
     */
@@ -391,7 +358,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets masterNodeId
     *  主节点ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getMasterNodeId()
     {
@@ -401,7 +368,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets masterNodeId
     *
-    * @param string $masterNodeId 主节点ID。
+    * @param string|null $masterNodeId 主节点ID。
     *
     * @return $this
     */
@@ -415,7 +382,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets instanceName
     *  实例名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getInstanceName()
     {
@@ -425,7 +392,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets instanceName
     *
-    * @param string $instanceName 实例名称。
+    * @param string|null $instanceName 实例名称。
     *
     * @return $this
     */
@@ -439,7 +406,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets cpu
     *  实例cpu核数。
     *
-    * @return int
+    * @return int|null
     */
     public function getCpu()
     {
@@ -449,7 +416,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cpu
     *
-    * @param int $cpu 实例cpu核数。
+    * @param int|null $cpu 实例cpu核数。
     *
     * @return $this
     */
@@ -463,7 +430,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets mem
     *  实例内存大小。
     *
-    * @return int
+    * @return int|null
     */
     public function getMem()
     {
@@ -473,7 +440,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets mem
     *
-    * @param int $mem 实例内存大小。
+    * @param int|null $mem 实例内存大小。
     *
     * @return $this
     */
@@ -487,7 +454,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets diskSize
     *  磁盘大小。
     *
-    * @return int
+    * @return int|null
     */
     public function getDiskSize()
     {
@@ -497,7 +464,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets diskSize
     *
-    * @param int $diskSize 磁盘大小。
+    * @param int|null $diskSize 磁盘大小。
     *
     * @return $this
     */
@@ -511,7 +478,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets diskType
     *  磁盘类型。
     *
-    * @return string
+    * @return string|null
     */
     public function getDiskType()
     {
@@ -521,7 +488,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets diskType
     *
-    * @param string $diskType 磁盘类型。
+    * @param string|null $diskType 磁盘类型。
     *
     * @return $this
     */
@@ -535,7 +502,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets engine
     *  实例引擎类型。
     *
-    * @return string
+    * @return string|null
     */
     public function getEngine()
     {
@@ -545,7 +512,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string $engine 实例引擎类型。
+    * @param string|null $engine 实例引擎类型。
     *
     * @return $this
     */
@@ -559,7 +526,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     * Gets engineVersion
     *  引擎内核版本。
     *
-    * @return string
+    * @return string|null
     */
     public function getEngineVersion()
     {
@@ -569,7 +536,7 @@ class HealthReportInstanceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion 引擎内核版本。
+    * @param string|null $engineVersion 引擎内核版本。
     *
     * @return $this
     */

@@ -25,7 +25,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
     * jobName  作业名称
-    * tags  作业标签
+    * jobId  作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    * status  作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    * needAlarms  是否返回作业告警信息，默认为false。
+    * tags  作业标签，多个标签逗号分隔。
+    * matchAllTags  标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    * connectionName  数据连接名称，按数据连接筛选作业。
+    * sourceType  源端数据连接类型，按源端数据类型筛选作业。
+    * sourceName  源端数据连接名称，按源端数据名称筛选作业。
+    * sinkType  目的端数据连接类型，按目的端数据类型筛选作业。
+    * sinkName  目的端数据连接名称，按目的端数据名称筛选作业。
     *
     * @var string[]
     */
@@ -35,7 +44,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'jobType' => 'string',
             'jobName' => 'string',
-            'tags' => 'string'
+            'jobId' => 'string',
+            'status' => 'string',
+            'needAlarms' => 'bool',
+            'tags' => 'string',
+            'matchAllTags' => 'bool',
+            'connectionName' => 'string',
+            'sourceType' => 'string',
+            'sourceName' => 'string',
+            'sinkType' => 'string',
+            'sinkName' => 'string'
     ];
 
     /**
@@ -45,17 +63,35 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
     * jobName  作业名称
-    * tags  作业标签
+    * jobId  作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    * status  作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    * needAlarms  是否返回作业告警信息，默认为false。
+    * tags  作业标签，多个标签逗号分隔。
+    * matchAllTags  标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    * connectionName  数据连接名称，按数据连接筛选作业。
+    * sourceType  源端数据连接类型，按源端数据类型筛选作业。
+    * sourceName  源端数据连接名称，按源端数据名称筛选作业。
+    * sinkType  目的端数据连接类型，按目的端数据类型筛选作业。
+    * sinkName  目的端数据连接名称，按目的端数据名称筛选作业。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspace' => null,
-        'limit' => null,
-        'offset' => null,
+        'limit' => 'int32',
+        'offset' => 'int32',
         'jobType' => null,
         'jobName' => null,
-        'tags' => null
+        'jobId' => null,
+        'status' => null,
+        'needAlarms' => null,
+        'tags' => null,
+        'matchAllTags' => null,
+        'connectionName' => null,
+        'sourceType' => null,
+        'sourceName' => null,
+        'sinkType' => null,
+        'sinkName' => null
     ];
 
     /**
@@ -86,7 +122,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
     * jobName  作业名称
-    * tags  作业标签
+    * jobId  作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    * status  作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    * needAlarms  是否返回作业告警信息，默认为false。
+    * tags  作业标签，多个标签逗号分隔。
+    * matchAllTags  标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    * connectionName  数据连接名称，按数据连接筛选作业。
+    * sourceType  源端数据连接类型，按源端数据类型筛选作业。
+    * sourceName  源端数据连接名称，按源端数据名称筛选作业。
+    * sinkType  目的端数据连接类型，按目的端数据类型筛选作业。
+    * sinkName  目的端数据连接名称，按目的端数据名称筛选作业。
     *
     * @var string[]
     */
@@ -96,7 +141,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'jobType' => 'job_type',
             'jobName' => 'job_name',
-            'tags' => 'tags'
+            'jobId' => 'job_id',
+            'status' => 'status',
+            'needAlarms' => 'need_alarms',
+            'tags' => 'tags',
+            'matchAllTags' => 'match_all_tags',
+            'connectionName' => 'connection_name',
+            'sourceType' => 'source_type',
+            'sourceName' => 'source_name',
+            'sinkType' => 'sink_type',
+            'sinkName' => 'sink_name'
     ];
 
     /**
@@ -106,7 +160,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
     * jobName  作业名称
-    * tags  作业标签
+    * jobId  作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    * status  作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    * needAlarms  是否返回作业告警信息，默认为false。
+    * tags  作业标签，多个标签逗号分隔。
+    * matchAllTags  标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    * connectionName  数据连接名称，按数据连接筛选作业。
+    * sourceType  源端数据连接类型，按源端数据类型筛选作业。
+    * sourceName  源端数据连接名称，按源端数据名称筛选作业。
+    * sinkType  目的端数据连接类型，按目的端数据类型筛选作业。
+    * sinkName  目的端数据连接名称，按目的端数据名称筛选作业。
     *
     * @var string[]
     */
@@ -116,7 +179,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'jobType' => 'setJobType',
             'jobName' => 'setJobName',
-            'tags' => 'setTags'
+            'jobId' => 'setJobId',
+            'status' => 'setStatus',
+            'needAlarms' => 'setNeedAlarms',
+            'tags' => 'setTags',
+            'matchAllTags' => 'setMatchAllTags',
+            'connectionName' => 'setConnectionName',
+            'sourceType' => 'setSourceType',
+            'sourceName' => 'setSourceName',
+            'sinkType' => 'setSinkType',
+            'sinkName' => 'setSinkName'
     ];
 
     /**
@@ -126,7 +198,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
     * jobName  作业名称
-    * tags  作业标签
+    * jobId  作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    * status  作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    * needAlarms  是否返回作业告警信息，默认为false。
+    * tags  作业标签，多个标签逗号分隔。
+    * matchAllTags  标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    * connectionName  数据连接名称，按数据连接筛选作业。
+    * sourceType  源端数据连接类型，按源端数据类型筛选作业。
+    * sourceName  源端数据连接名称，按源端数据名称筛选作业。
+    * sinkType  目的端数据连接类型，按目的端数据类型筛选作业。
+    * sinkName  目的端数据连接名称，按目的端数据名称筛选作业。
     *
     * @var string[]
     */
@@ -136,7 +217,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'jobType' => 'getJobType',
             'jobName' => 'getJobName',
-            'tags' => 'getTags'
+            'jobId' => 'getJobId',
+            'status' => 'getStatus',
+            'needAlarms' => 'getNeedAlarms',
+            'tags' => 'getTags',
+            'matchAllTags' => 'getMatchAllTags',
+            'connectionName' => 'getConnectionName',
+            'sourceType' => 'getSourceType',
+            'sourceName' => 'getSourceName',
+            'sinkType' => 'getSinkType',
+            'sinkName' => 'getSinkName'
     ];
 
     /**
@@ -217,7 +307,16 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['jobName'] = isset($data['jobName']) ? $data['jobName'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['needAlarms'] = isset($data['needAlarms']) ? $data['needAlarms'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['matchAllTags'] = isset($data['matchAllTags']) ? $data['matchAllTags'] : null;
+        $this->container['connectionName'] = isset($data['connectionName']) ? $data['connectionName'] : null;
+        $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
+        $this->container['sourceName'] = isset($data['sourceName']) ? $data['sourceName'] : null;
+        $this->container['sinkType'] = isset($data['sinkType']) ? $data['sinkType'] : null;
+        $this->container['sinkName'] = isset($data['sinkName']) ? $data['sinkName'] : null;
     }
 
     /**
@@ -245,6 +344,9 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'jobId', the character length must be smaller than or equal to 1000.";
+            }
         return $invalidProperties;
     }
 
@@ -380,8 +482,80 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets jobId
+    *  作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 作业ID，支持多个ID逗号分隔查询，最多50个ID，总长度不超过1000字符。 每个ID必须为纯数字。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 作业状态，支持多个状态逗号分隔查询。 批处理作业状态：  - SCHEDULING: 调度中  - STOPPED: 停止  - PAUSED: 暂停 实时作业状态：  - STARTING: 启动中  - NORMAL: 正常  - EXCEPTION: 异常  - STOPPING: 停止中  - STOPPED: 停止  - PAUSE: 暂停  - ABNORMAL: 异常
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets needAlarms
+    *  是否返回作业告警信息，默认为false。
+    *
+    * @return bool|null
+    */
+    public function getNeedAlarms()
+    {
+        return $this->container['needAlarms'];
+    }
+
+    /**
+    * Sets needAlarms
+    *
+    * @param bool|null $needAlarms 是否返回作业告警信息，默认为false。
+    *
+    * @return $this
+    */
+    public function setNeedAlarms($needAlarms)
+    {
+        $this->container['needAlarms'] = $needAlarms;
+        return $this;
+    }
+
+    /**
     * Gets tags
-    *  作业标签
+    *  作业标签，多个标签逗号分隔。
     *
     * @return string|null
     */
@@ -393,13 +567,157 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags 作业标签
+    * @param string|null $tags 作业标签，多个标签逗号分隔。
     *
     * @return $this
     */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets matchAllTags
+    *  标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    *
+    * @return bool|null
+    */
+    public function getMatchAllTags()
+    {
+        return $this->container['matchAllTags'];
+    }
+
+    /**
+    * Sets matchAllTags
+    *
+    * @param bool|null $matchAllTags 标签匹配模式：  - false: 任一标签匹配即返回（OR模式）  - true: 所有标签都匹配才返回（AND模式）
+    *
+    * @return $this
+    */
+    public function setMatchAllTags($matchAllTags)
+    {
+        $this->container['matchAllTags'] = $matchAllTags;
+        return $this;
+    }
+
+    /**
+    * Gets connectionName
+    *  数据连接名称，按数据连接筛选作业。
+    *
+    * @return string|null
+    */
+    public function getConnectionName()
+    {
+        return $this->container['connectionName'];
+    }
+
+    /**
+    * Sets connectionName
+    *
+    * @param string|null $connectionName 数据连接名称，按数据连接筛选作业。
+    *
+    * @return $this
+    */
+    public function setConnectionName($connectionName)
+    {
+        $this->container['connectionName'] = $connectionName;
+        return $this;
+    }
+
+    /**
+    * Gets sourceType
+    *  源端数据连接类型，按源端数据类型筛选作业。
+    *
+    * @return string|null
+    */
+    public function getSourceType()
+    {
+        return $this->container['sourceType'];
+    }
+
+    /**
+    * Sets sourceType
+    *
+    * @param string|null $sourceType 源端数据连接类型，按源端数据类型筛选作业。
+    *
+    * @return $this
+    */
+    public function setSourceType($sourceType)
+    {
+        $this->container['sourceType'] = $sourceType;
+        return $this;
+    }
+
+    /**
+    * Gets sourceName
+    *  源端数据连接名称，按源端数据名称筛选作业。
+    *
+    * @return string|null
+    */
+    public function getSourceName()
+    {
+        return $this->container['sourceName'];
+    }
+
+    /**
+    * Sets sourceName
+    *
+    * @param string|null $sourceName 源端数据连接名称，按源端数据名称筛选作业。
+    *
+    * @return $this
+    */
+    public function setSourceName($sourceName)
+    {
+        $this->container['sourceName'] = $sourceName;
+        return $this;
+    }
+
+    /**
+    * Gets sinkType
+    *  目的端数据连接类型，按目的端数据类型筛选作业。
+    *
+    * @return string|null
+    */
+    public function getSinkType()
+    {
+        return $this->container['sinkType'];
+    }
+
+    /**
+    * Sets sinkType
+    *
+    * @param string|null $sinkType 目的端数据连接类型，按目的端数据类型筛选作业。
+    *
+    * @return $this
+    */
+    public function setSinkType($sinkType)
+    {
+        $this->container['sinkType'] = $sinkType;
+        return $this;
+    }
+
+    /**
+    * Gets sinkName
+    *  目的端数据连接名称，按目的端数据名称筛选作业。
+    *
+    * @return string|null
+    */
+    public function getSinkName()
+    {
+        return $this->container['sinkName'];
+    }
+
+    /**
+    * Sets sinkName
+    *
+    * @param string|null $sinkName 目的端数据连接名称，按目的端数据名称筛选作业。
+    *
+    * @return $this
+    */
+    public function setSinkName($sinkName)
+    {
+        $this->container['sinkName'] = $sinkName;
         return $this;
     }
 

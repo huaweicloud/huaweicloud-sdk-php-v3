@@ -180,15 +180,6 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['inspectionScore'] === null) {
-            $invalidProperties[] = "'inspectionScore' can't be null";
-        }
-        if ($this->container['analyzeSuccess'] === null) {
-            $invalidProperties[] = "'analyzeSuccess' can't be null";
-        }
-        if ($this->container['errorMessage'] === null) {
-            $invalidProperties[] = "'errorMessage' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -207,7 +198,7 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     * Gets inspectionScore
     *  巡检评分。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportInspectionScore[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportInspectionScore[]|null
     */
     public function getInspectionScore()
     {
@@ -217,7 +208,7 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     /**
     * Sets inspectionScore
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportInspectionScore[] $inspectionScore 巡检评分。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportInspectionScore[]|null $inspectionScore 巡检评分。
     *
     * @return $this
     */
@@ -231,7 +222,7 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     * Gets analyzeSuccess
     *  统计分析是否成功。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getAnalyzeSuccess()
     {
@@ -241,7 +232,7 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     /**
     * Sets analyzeSuccess
     *
-    * @param bool $analyzeSuccess 统计分析是否成功。
+    * @param bool|null $analyzeSuccess 统计分析是否成功。
     *
     * @return $this
     */
@@ -255,7 +246,7 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     * Gets errorMessage
     *  错误信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getErrorMessage()
     {
@@ -265,7 +256,7 @@ class HealthReportInspectionStat implements ModelInterface, ArrayAccess
     /**
     * Sets errorMessage
     *
-    * @param string $errorMessage 错误信息。
+    * @param string|null $errorMessage 错误信息。
     *
     * @return $this
     */

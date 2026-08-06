@@ -20,11 +20,13 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     * logType  **参数解释**： 日志类型。 **取值范围**： - messages：系统日志。 - expand：扩容日志。 - roach-controller：roach服务端日志。 - audit：审计日志。 - gtm：gtm日志。 - roach-agent：roach客户端日志。 - cms：cms日志。 - CN：dws-CN节点日志。 - upgrade: 升级日志。 - DN: dws-DN节点日志。
     * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
     * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
+    * reportInterval  **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    * maxReportSize  **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
     *
     * @var string[]
     */
@@ -33,16 +35,20 @@ class LtslogInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'logType' => 'string',
             'logDesc' => 'string',
-            'accessUrl' => 'string'
+            'accessUrl' => 'string',
+            'reportInterval' => 'int',
+            'maxReportSize' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     * logType  **参数解释**： 日志类型。 **取值范围**： - messages：系统日志。 - expand：扩容日志。 - roach-controller：roach服务端日志。 - audit：审计日志。 - gtm：gtm日志。 - roach-agent：roach客户端日志。 - cms：cms日志。 - CN：dws-CN节点日志。 - upgrade: 升级日志。 - DN: dws-DN节点日志。
     * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
     * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
+    * reportInterval  **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    * maxReportSize  **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class LtslogInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'logType' => null,
         'logDesc' => null,
-        'accessUrl' => null
+        'accessUrl' => null,
+        'reportInterval' => null,
+        'maxReportSize' => null
     ];
 
     /**
@@ -77,11 +85,13 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     * logType  **参数解释**： 日志类型。 **取值范围**： - messages：系统日志。 - expand：扩容日志。 - roach-controller：roach服务端日志。 - audit：审计日志。 - gtm：gtm日志。 - roach-agent：roach客户端日志。 - cms：cms日志。 - CN：dws-CN节点日志。 - upgrade: 升级日志。 - DN: dws-DN节点日志。
     * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
     * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
+    * reportInterval  **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    * maxReportSize  **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
     *
     * @var string[]
     */
@@ -90,16 +100,20 @@ class LtslogInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'logType' => 'log_type',
             'logDesc' => 'log_desc',
-            'accessUrl' => 'access_url'
+            'accessUrl' => 'access_url',
+            'reportInterval' => 'report_interval',
+            'maxReportSize' => 'max_report_size'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     * logType  **参数解释**： 日志类型。 **取值范围**： - messages：系统日志。 - expand：扩容日志。 - roach-controller：roach服务端日志。 - audit：审计日志。 - gtm：gtm日志。 - roach-agent：roach客户端日志。 - cms：cms日志。 - CN：dws-CN节点日志。 - upgrade: 升级日志。 - DN: dws-DN节点日志。
     * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
     * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
+    * reportInterval  **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    * maxReportSize  **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
     *
     * @var string[]
     */
@@ -108,16 +122,20 @@ class LtslogInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'logType' => 'setLogType',
             'logDesc' => 'setLogDesc',
-            'accessUrl' => 'setAccessUrl'
+            'accessUrl' => 'setAccessUrl',
+            'reportInterval' => 'setReportInterval',
+            'maxReportSize' => 'setMaxReportSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    * status  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     * logType  **参数解释**： 日志类型。 **取值范围**： - messages：系统日志。 - expand：扩容日志。 - roach-controller：roach服务端日志。 - audit：审计日志。 - gtm：gtm日志。 - roach-agent：roach客户端日志。 - cms：cms日志。 - CN：dws-CN节点日志。 - upgrade: 升级日志。 - DN: dws-DN节点日志。
     * logDesc  **参数解释**： 日志描述。 **取值范围**： 不涉及。
     * accessUrl  **参数解释**： LTS日志访问URL。 **取值范围**： 不涉及。
+    * reportInterval  **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    * maxReportSize  **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class LtslogInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'logType' => 'getLogType',
             'logDesc' => 'getLogDesc',
-            'accessUrl' => 'getAccessUrl'
+            'accessUrl' => 'getAccessUrl',
+            'reportInterval' => 'getReportInterval',
+            'maxReportSize' => 'getMaxReportSize'
     ];
 
     /**
@@ -192,6 +212,8 @@ class LtslogInfo implements ModelInterface, ArrayAccess
         $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
         $this->container['logDesc'] = isset($data['logDesc']) ? $data['logDesc'] : null;
         $this->container['accessUrl'] = isset($data['accessUrl']) ? $data['accessUrl'] : null;
+        $this->container['reportInterval'] = isset($data['reportInterval']) ? $data['reportInterval'] : null;
+        $this->container['maxReportSize'] = isset($data['maxReportSize']) ? $data['maxReportSize'] : null;
     }
 
     /**
@@ -233,7 +255,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    *  **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     *
     * @return string
     */
@@ -245,7 +267,7 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。
+    * @param string $status **参数解释**： 配置状态。 **取值范围**： - OPEN：开启。 - CLOSE：关闭。 - ARCHIVED：历史日志流，不再上报但仍保留LTS访问入口。
     *
     * @return $this
     */
@@ -348,6 +370,54 @@ class LtslogInfo implements ModelInterface, ArrayAccess
     public function setAccessUrl($accessUrl)
     {
         $this->container['accessUrl'] = $accessUrl;
+        return $this;
+    }
+
+    /**
+    * Gets reportInterval
+    *  **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    *
+    * @return int|null
+    */
+    public function getReportInterval()
+    {
+        return $this->container['reportInterval'];
+    }
+
+    /**
+    * Sets reportInterval
+    *
+    * @param int|null $reportInterval **参数解释**： 日志上报频率，单位秒。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 5~60。
+    *
+    * @return $this
+    */
+    public function setReportInterval($reportInterval)
+    {
+        $this->container['reportInterval'] = $reportInterval;
+        return $this;
+    }
+
+    /**
+    * Gets maxReportSize
+    *  **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
+    *
+    * @return int|null
+    */
+    public function getMaxReportSize()
+    {
+        return $this->container['maxReportSize'];
+    }
+
+    /**
+    * Sets maxReportSize
+    *
+    * @param int|null $maxReportSize **参数解释**： 单次上报大小，单位字节。 **约束限制**： 仅 status=OPEN 的日志流返回此字段，ARCHIVED 状态不返回。 **取值范围**： 51200~1048576。
+    *
+    * @return $this
+    */
+    public function setMaxReportSize($maxReportSize)
+    {
+        $this->container['maxReportSize'] = $maxReportSize;
         return $this;
     }
 

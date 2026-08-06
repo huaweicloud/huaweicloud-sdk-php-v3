@@ -24,15 +24,19 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * host  主机ip
     * sql  sql
     * db  数据库名称
+    * user  会话用户名
+    * sqlType  SQL类型
     * time  时间
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'sessionId' => 'string',
+            'sessionId' => 'float',
             'host' => 'string',
             'sql' => 'string',
             'db' => 'string',
+            'user' => 'string',
+            'sqlType' => 'string',
             'time' => 'int'
     ];
 
@@ -42,6 +46,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * host  主机ip
     * sql  sql
     * db  数据库名称
+    * user  会话用户名
+    * sqlType  SQL类型
     * time  时间
     *
     * @var string[]
@@ -51,6 +57,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
         'host' => null,
         'sql' => null,
         'db' => null,
+        'user' => null,
+        'sqlType' => null,
         'time' => 'int64'
     ];
 
@@ -81,6 +89,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * host  主机ip
     * sql  sql
     * db  数据库名称
+    * user  会话用户名
+    * sqlType  SQL类型
     * time  时间
     *
     * @var string[]
@@ -90,6 +100,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
             'host' => 'host',
             'sql' => 'sql',
             'db' => 'db',
+            'user' => 'user',
+            'sqlType' => 'sql_type',
             'time' => 'time'
     ];
 
@@ -99,6 +111,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * host  主机ip
     * sql  sql
     * db  数据库名称
+    * user  会话用户名
+    * sqlType  SQL类型
     * time  时间
     *
     * @var string[]
@@ -108,6 +122,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
             'host' => 'setHost',
             'sql' => 'setSql',
             'db' => 'setDb',
+            'user' => 'setUser',
+            'sqlType' => 'setSqlType',
             'time' => 'setTime'
     ];
 
@@ -117,6 +133,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * host  主机ip
     * sql  sql
     * db  数据库名称
+    * user  会话用户名
+    * sqlType  SQL类型
     * time  时间
     *
     * @var string[]
@@ -126,6 +144,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
             'host' => 'getHost',
             'sql' => 'getSql',
             'db' => 'getDb',
+            'user' => 'getUser',
+            'sqlType' => 'getSqlType',
             'time' => 'getTime'
     ];
 
@@ -191,6 +211,8 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
         $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
         $this->container['db'] = isset($data['db']) ? $data['db'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['sqlType'] = isset($data['sqlType']) ? $data['sqlType'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
     }
 
@@ -220,7 +242,7 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * Gets sessionId
     *  会话id
     *
-    * @return string|null
+    * @return float|null
     */
     public function getSessionId()
     {
@@ -230,7 +252,7 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     /**
     * Sets sessionId
     *
-    * @param string|null $sessionId 会话id
+    * @param float|null $sessionId 会话id
     *
     * @return $this
     */
@@ -309,6 +331,54 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     public function setDb($db)
     {
         $this->container['db'] = $db;
+        return $this;
+    }
+
+    /**
+    * Gets user
+    *  会话用户名
+    *
+    * @return string|null
+    */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+    * Sets user
+    *
+    * @param string|null $user 会话用户名
+    *
+    * @return $this
+    */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
+        return $this;
+    }
+
+    /**
+    * Gets sqlType
+    *  SQL类型
+    *
+    * @return string|null
+    */
+    public function getSqlType()
+    {
+        return $this->container['sqlType'];
+    }
+
+    /**
+    * Sets sqlType
+    *
+    * @param string|null $sqlType SQL类型
+    *
+    * @return $this
+    */
+    public function setSqlType($sqlType)
+    {
+        $this->container['sqlType'] = $sqlType;
         return $this;
     }
 

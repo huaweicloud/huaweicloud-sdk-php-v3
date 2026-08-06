@@ -268,39 +268,6 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['templateId'] === null) {
-            $invalidProperties[] = "'templateId' can't be null";
-        }
-        if ($this->container['template'] === null) {
-            $invalidProperties[] = "'template' can't be null";
-        }
-        if ($this->container['databases'] === null) {
-            $invalidProperties[] = "'databases' can't be null";
-        }
-        if ($this->container['times'] === null) {
-            $invalidProperties[] = "'times' can't be null";
-        }
-        if ($this->container['avgQueryTime'] === null) {
-            $invalidProperties[] = "'avgQueryTime' can't be null";
-        }
-        if ($this->container['maxQueryTime'] === null) {
-            $invalidProperties[] = "'maxQueryTime' can't be null";
-        }
-        if ($this->container['avgRowsExamined'] === null) {
-            $invalidProperties[] = "'avgRowsExamined' can't be null";
-        }
-        if ($this->container['maxRowsExamined'] === null) {
-            $invalidProperties[] = "'maxRowsExamined' can't be null";
-        }
-        if ($this->container['sumRowsExamined'] === null) {
-            $invalidProperties[] = "'sumRowsExamined' can't be null";
-        }
-        if ($this->container['avgRowsSent'] === null) {
-            $invalidProperties[] = "'avgRowsSent' can't be null";
-        }
-        if ($this->container['maxRowsSent'] === null) {
-            $invalidProperties[] = "'maxRowsSent' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -319,7 +286,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets templateId
     *  模版ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getTemplateId()
     {
@@ -329,7 +296,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string $templateId 模版ID。
+    * @param string|null $templateId 模版ID。
     *
     * @return $this
     */
@@ -343,7 +310,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets template
     *  模版内容。
     *
-    * @return string
+    * @return string|null
     */
     public function getTemplate()
     {
@@ -353,7 +320,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets template
     *
-    * @param string $template 模版内容。
+    * @param string|null $template 模版内容。
     *
     * @return $this
     */
@@ -367,7 +334,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets databases
     *  数据库列表。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getDatabases()
     {
@@ -377,7 +344,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets databases
     *
-    * @param string[] $databases 数据库列表。
+    * @param string[]|null $databases 数据库列表。
     *
     * @return $this
     */
@@ -391,7 +358,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets times
     *  执行次数。
     *
-    * @return int
+    * @return int|null
     */
     public function getTimes()
     {
@@ -401,7 +368,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets times
     *
-    * @param int $times 执行次数。
+    * @param int|null $times 执行次数。
     *
     * @return $this
     */
@@ -415,7 +382,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets avgQueryTime
     *  平均执行时间。
     *
-    * @return double
+    * @return double|null
     */
     public function getAvgQueryTime()
     {
@@ -425,7 +392,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets avgQueryTime
     *
-    * @param double $avgQueryTime 平均执行时间。
+    * @param double|null $avgQueryTime 平均执行时间。
     *
     * @return $this
     */
@@ -439,7 +406,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets maxQueryTime
     *  最大执行时间。
     *
-    * @return double
+    * @return double|null
     */
     public function getMaxQueryTime()
     {
@@ -449,7 +416,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets maxQueryTime
     *
-    * @param double $maxQueryTime 最大执行时间。
+    * @param double|null $maxQueryTime 最大执行时间。
     *
     * @return $this
     */
@@ -463,7 +430,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets avgRowsExamined
     *  平均扫描行数。
     *
-    * @return double
+    * @return double|null
     */
     public function getAvgRowsExamined()
     {
@@ -473,7 +440,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets avgRowsExamined
     *
-    * @param double $avgRowsExamined 平均扫描行数。
+    * @param double|null $avgRowsExamined 平均扫描行数。
     *
     * @return $this
     */
@@ -487,7 +454,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets maxRowsExamined
     *  最大扫描行数。
     *
-    * @return double
+    * @return double|null
     */
     public function getMaxRowsExamined()
     {
@@ -497,7 +464,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets maxRowsExamined
     *
-    * @param double $maxRowsExamined 最大扫描行数。
+    * @param double|null $maxRowsExamined 最大扫描行数。
     *
     * @return $this
     */
@@ -511,7 +478,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets sumRowsExamined
     *  总扫描行数。
     *
-    * @return double
+    * @return double|null
     */
     public function getSumRowsExamined()
     {
@@ -521,7 +488,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets sumRowsExamined
     *
-    * @param double $sumRowsExamined 总扫描行数。
+    * @param double|null $sumRowsExamined 总扫描行数。
     *
     * @return $this
     */
@@ -535,7 +502,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets avgRowsSent
     *  平均返回行数。
     *
-    * @return double
+    * @return double|null
     */
     public function getAvgRowsSent()
     {
@@ -545,7 +512,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets avgRowsSent
     *
-    * @param double $avgRowsSent 平均返回行数。
+    * @param double|null $avgRowsSent 平均返回行数。
     *
     * @return $this
     */
@@ -559,7 +526,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     * Gets maxRowsSent
     *  最大返回行数。
     *
-    * @return double
+    * @return double|null
     */
     public function getMaxRowsSent()
     {
@@ -569,7 +536,7 @@ class HealthReportSqlTemplate implements ModelInterface, ArrayAccess
     /**
     * Sets maxRowsSent
     *
-    * @param double $maxRowsSent 最大返回行数。
+    * @param double|null $maxRowsSent 最大返回行数。
     *
     * @return $this
     */

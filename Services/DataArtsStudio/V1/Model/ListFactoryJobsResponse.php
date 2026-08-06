@@ -21,25 +21,25 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  作业数量
-    * jobs  作业列表
+    * total  作业总数。
+    * jobs  作业列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'jobs' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\JobResp[]'
+            'jobs' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\JobResultV2[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  作业数量
-    * jobs  作业列表
+    * total  作业总数。
+    * jobs  作业列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'total' => null,
+        'total' => 'int32',
         'jobs' => null
     ];
 
@@ -66,8 +66,8 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  作业数量
-    * jobs  作业列表
+    * total  作业总数。
+    * jobs  作业列表。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  作业数量
-    * jobs  作业列表
+    * total  作业总数。
+    * jobs  作业列表。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  作业数量
-    * jobs  作业列表
+    * total  作业总数。
+    * jobs  作业列表。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  作业数量
+    *  作业总数。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 作业数量
+    * @param int|null $total 作业总数。
     *
     * @return $this
     */
@@ -210,9 +210,9 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobs
-    *  作业列表
+    *  作业列表。
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\JobResp[]|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\JobResultV2[]|null
     */
     public function getJobs()
     {
@@ -222,7 +222,7 @@ class ListFactoryJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\JobResp[]|null $jobs 作业列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\JobResultV2[]|null $jobs 作业列表。
     *
     * @return $this
     */

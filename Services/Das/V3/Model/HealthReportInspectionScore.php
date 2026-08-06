@@ -279,42 +279,6 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['score'] === null) {
-            $invalidProperties[] = "'score' can't be null";
-        }
-        if ($this->container['critical'] === null) {
-            $invalidProperties[] = "'critical' can't be null";
-        }
-        if ($this->container['medium'] === null) {
-            $invalidProperties[] = "'medium' can't be null";
-        }
-        if ($this->container['light'] === null) {
-            $invalidProperties[] = "'light' can't be null";
-        }
-        if ($this->container['cpuUsage'] === null) {
-            $invalidProperties[] = "'cpuUsage' can't be null";
-        }
-        if ($this->container['memUsage'] === null) {
-            $invalidProperties[] = "'memUsage' can't be null";
-        }
-        if ($this->container['spaceUsage'] === null) {
-            $invalidProperties[] = "'spaceUsage' can't be null";
-        }
-        if ($this->container['connectionRate'] === null) {
-            $invalidProperties[] = "'connectionRate' can't be null";
-        }
-        if ($this->container['iopsUsage'] === null) {
-            $invalidProperties[] = "'iopsUsage' can't be null";
-        }
-        if ($this->container['threadRunning'] === null) {
-            $invalidProperties[] = "'threadRunning' can't be null";
-        }
-        if ($this->container['slowSqlTotal'] === null) {
-            $invalidProperties[] = "'slowSqlTotal' can't be null";
-        }
-        if ($this->container['lostPointsDetailList'] === null) {
-            $invalidProperties[] = "'lostPointsDetailList' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -333,7 +297,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets score
     *  得分。
     *
-    * @return double
+    * @return double|null
     */
     public function getScore()
     {
@@ -343,7 +307,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets score
     *
-    * @param double $score 得分。
+    * @param double|null $score 得分。
     *
     * @return $this
     */
@@ -357,7 +321,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets critical
     *  严重事件。
     *
-    * @return int
+    * @return int|null
     */
     public function getCritical()
     {
@@ -367,7 +331,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets critical
     *
-    * @param int $critical 严重事件。
+    * @param int|null $critical 严重事件。
     *
     * @return $this
     */
@@ -381,7 +345,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets medium
     *  警告事件。
     *
-    * @return int
+    * @return int|null
     */
     public function getMedium()
     {
@@ -391,7 +355,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets medium
     *
-    * @param int $medium 警告事件。
+    * @param int|null $medium 警告事件。
     *
     * @return $this
     */
@@ -405,7 +369,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets light
     *  优化事件。
     *
-    * @return int
+    * @return int|null
     */
     public function getLight()
     {
@@ -415,7 +379,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets light
     *
-    * @param int $light 优化事件。
+    * @param int|null $light 优化事件。
     *
     * @return $this
     */
@@ -429,7 +393,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets cpuUsage
     *  CPU使用率。
     *
-    * @return double
+    * @return double|null
     */
     public function getCpuUsage()
     {
@@ -439,7 +403,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets cpuUsage
     *
-    * @param double $cpuUsage CPU使用率。
+    * @param double|null $cpuUsage CPU使用率。
     *
     * @return $this
     */
@@ -453,7 +417,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets memUsage
     *  内存使用率。
     *
-    * @return double
+    * @return double|null
     */
     public function getMemUsage()
     {
@@ -463,7 +427,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets memUsage
     *
-    * @param double $memUsage 内存使用率。
+    * @param double|null $memUsage 内存使用率。
     *
     * @return $this
     */
@@ -477,7 +441,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets spaceUsage
     *  空间使用率。
     *
-    * @return double
+    * @return double|null
     */
     public function getSpaceUsage()
     {
@@ -487,7 +451,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets spaceUsage
     *
-    * @param double $spaceUsage 空间使用率。
+    * @param double|null $spaceUsage 空间使用率。
     *
     * @return $this
     */
@@ -501,7 +465,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets connectionRate
     *  连接使用率。
     *
-    * @return double
+    * @return double|null
     */
     public function getConnectionRate()
     {
@@ -511,7 +475,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets connectionRate
     *
-    * @param double $connectionRate 连接使用率。
+    * @param double|null $connectionRate 连接使用率。
     *
     * @return $this
     */
@@ -525,7 +489,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets iopsUsage
     *  IOPS使用率。
     *
-    * @return double
+    * @return double|null
     */
     public function getIopsUsage()
     {
@@ -535,7 +499,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets iopsUsage
     *
-    * @param double $iopsUsage IOPS使用率。
+    * @param double|null $iopsUsage IOPS使用率。
     *
     * @return $this
     */
@@ -549,7 +513,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets threadRunning
     *  活跃会话。
     *
-    * @return double
+    * @return double|null
     */
     public function getThreadRunning()
     {
@@ -559,7 +523,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets threadRunning
     *
-    * @param double $threadRunning 活跃会话。
+    * @param double|null $threadRunning 活跃会话。
     *
     * @return $this
     */
@@ -573,7 +537,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets slowSqlTotal
     *  慢SQL数量。
     *
-    * @return int
+    * @return int|null
     */
     public function getSlowSqlTotal()
     {
@@ -583,7 +547,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets slowSqlTotal
     *
-    * @param int $slowSqlTotal 慢SQL数量。
+    * @param int|null $slowSqlTotal 慢SQL数量。
     *
     * @return $this
     */
@@ -597,7 +561,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     * Gets lostPointsDetailList
     *  扣分详情。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportLostPointsDetail[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportLostPointsDetail[]|null
     */
     public function getLostPointsDetailList()
     {
@@ -607,7 +571,7 @@ class HealthReportInspectionScore implements ModelInterface, ArrayAccess
     /**
     * Sets lostPointsDetailList
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportLostPointsDetail[] $lostPointsDetailList 扣分详情。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportLostPointsDetail[]|null $lostPointsDetailList 扣分详情。
     *
     * @return $this
     */

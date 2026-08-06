@@ -21,7 +21,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * keyAlias  非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
-    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     * keyUsage  密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
     * keyDescription  密钥描述，取值0到255字符。
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
@@ -47,7 +47,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * keyAlias  非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
-    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     * keyUsage  密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
     * keyDescription  密钥描述，取值0到255字符。
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
@@ -94,7 +94,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * keyAlias  非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
-    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     * keyUsage  密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
     * keyDescription  密钥描述，取值0到255字符。
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
@@ -120,7 +120,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * keyAlias  非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
-    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     * keyUsage  密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
     * keyDescription  密钥描述，取值0到255字符。
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
@@ -146,7 +146,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * keyAlias  非默认主密钥别名，取值范围为1到255个字符，满足正则匹配“^[a-zA-Z0-9:/_-]{1,255}$”，且不与系统服务创建的默认主密钥别名重名。
-    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    * keySpec  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     * keyUsage  密钥用途，对称密钥默认为“ENCRYPT_DECRYPT”，非对称密钥默认为“SIGN_VERIFY”，枚举如下： - ENCRYPT_DECRYPT - SIGN_VERIFY
     * keyDescription  密钥描述，取值0到255字符。
     * origin  密钥来源，默认为“kms”，枚举如下： - kms：表示密钥材料由kms生成。 - external：表示密钥材料由外部导入。
@@ -218,6 +218,11 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     const KEY_SPEC_EC_P384 = 'EC_P384';
     const KEY_SPEC_SECP256_K1 = 'SECP256K1';
     const KEY_SPEC_SM2 = 'SM2';
+    const KEY_SPEC_ED25519 = 'ED25519';
+    const KEY_SPEC_HMAC_256 = 'HMAC_256';
+    const KEY_SPEC_HMAC_384 = 'HMAC_384';
+    const KEY_SPEC_HMAC_512 = 'HMAC_512';
+    const KEY_SPEC_HMAC_SM3 = 'HMAC_SM3';
     const KEY_USAGE_ENCRYPT_DECRYPT = 'ENCRYPT_DECRYPT';
     const KEY_USAGE_SIGN_VERIFY = 'SIGN_VERIFY';
     const ORIGIN_KMS = 'kms';
@@ -241,6 +246,11 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
             self::KEY_SPEC_EC_P384,
             self::KEY_SPEC_SECP256_K1,
             self::KEY_SPEC_SM2,
+            self::KEY_SPEC_ED25519,
+            self::KEY_SPEC_HMAC_256,
+            self::KEY_SPEC_HMAC_384,
+            self::KEY_SPEC_HMAC_512,
+            self::KEY_SPEC_HMAC_SM3,
         ];
     }
 
@@ -396,7 +406,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keySpec
-    *  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    *  密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     *
     * @return string|null
     */
@@ -408,7 +418,7 @@ class CreateKeyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keySpec
     *
-    * @param string|null $keySpec 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2
+    * @param string|null $keySpec 密钥生成算法，默认为“AES_256”，枚举如下： - AES_256 - SM4 - RSA_2048 - RSA_3072 - RSA_4096 - EC_P256 - EC_P384 - SECP256K1 - SM2 - ED25519 - HMAC_256 - HMAC_384 - HMAC_512 - HMAC_SM3
     *
     * @return $this
     */

@@ -20,9 +20,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reasonCode  可能原因编码。
-    * reasonContent  可能原因内容。
-    * suggestions  建议优化措施列表。
+    * reasonCode  可能原因编码
+    * reasonContent  可能原因内容
+    * suggestions  建议优化措施列表
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reasonCode  可能原因编码。
-    * reasonContent  可能原因内容。
-    * suggestions  建议优化措施列表。
+    * reasonCode  可能原因编码
+    * reasonContent  可能原因内容
+    * suggestions  建议优化措施列表
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reasonCode  可能原因编码。
-    * reasonContent  可能原因内容。
-    * suggestions  建议优化措施列表。
+    * reasonCode  可能原因编码
+    * reasonContent  可能原因内容
+    * suggestions  建议优化措施列表
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reasonCode  可能原因编码。
-    * reasonContent  可能原因内容。
-    * suggestions  建议优化措施列表。
+    * reasonCode  可能原因编码
+    * reasonContent  可能原因内容
+    * suggestions  建议优化措施列表
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reasonCode  可能原因编码。
-    * reasonContent  可能原因内容。
-    * suggestions  建议优化措施列表。
+    * reasonCode  可能原因编码
+    * reasonContent  可能原因内容
+    * suggestions  建议优化措施列表
     *
     * @var string[]
     */
@@ -180,15 +180,6 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['reasonCode'] === null) {
-            $invalidProperties[] = "'reasonCode' can't be null";
-        }
-        if ($this->container['reasonContent'] === null) {
-            $invalidProperties[] = "'reasonContent' can't be null";
-        }
-        if ($this->container['suggestions'] === null) {
-            $invalidProperties[] = "'suggestions' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -205,9 +196,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Gets reasonCode
-    *  可能原因编码。
+    *  可能原因编码
     *
-    * @return string
+    * @return string|null
     */
     public function getReasonCode()
     {
@@ -217,7 +208,7 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
     /**
     * Sets reasonCode
     *
-    * @param string $reasonCode 可能原因编码。
+    * @param string|null $reasonCode 可能原因编码
     *
     * @return $this
     */
@@ -229,9 +220,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Gets reasonContent
-    *  可能原因内容。
+    *  可能原因内容
     *
-    * @return string
+    * @return string|null
     */
     public function getReasonContent()
     {
@@ -241,7 +232,7 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
     /**
     * Sets reasonContent
     *
-    * @param string $reasonContent 可能原因内容。
+    * @param string|null $reasonContent 可能原因内容
     *
     * @return $this
     */
@@ -253,9 +244,9 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestions
-    *  建议优化措施列表。
+    *  建议优化措施列表
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskSuggestion[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskSuggestion[]|null
     */
     public function getSuggestions()
     {
@@ -265,7 +256,7 @@ class HealthReportRiskReason implements ModelInterface, ArrayAccess
     /**
     * Sets suggestions
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskSuggestion[] $suggestions 建议优化措施列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskSuggestion[]|null $suggestions 建议优化措施列表
     *
     * @return $this
     */

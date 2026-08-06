@@ -25,6 +25,7 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
     * rotationInterval  轮换周期，取值范围为30~365的整数。 周期范围设置根据密钥使用频率进行，若密钥使用频率高，建议设置为短周期；反之，则设置为长周期。
     * lastRotationTime  上一次密钥轮换时间。时间戳，即从1970年1月1日至该时间的总秒数。
     * numberOfRotations  密钥轮换次数。
+    * keyMaterials  **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -32,7 +33,8 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'bool',
             'rotationInterval' => 'int',
             'lastRotationTime' => 'string',
-            'numberOfRotations' => 'int'
+            'numberOfRotations' => 'int',
+            'keyMaterials' => '\HuaweiCloud\SDK\Kms\V2\Model\GetkeyRotationStatusResponseBodyKeyMaterials[]'
     ];
 
     /**
@@ -41,6 +43,7 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
     * rotationInterval  轮换周期，取值范围为30~365的整数。 周期范围设置根据密钥使用频率进行，若密钥使用频率高，建议设置为短周期；反之，则设置为长周期。
     * lastRotationTime  上一次密钥轮换时间。时间戳，即从1970年1月1日至该时间的总秒数。
     * numberOfRotations  密钥轮换次数。
+    * keyMaterials  **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
         'keyRotationEnabled' => null,
         'rotationInterval' => 'int32',
         'lastRotationTime' => null,
-        'numberOfRotations' => 'int32'
+        'numberOfRotations' => 'int32',
+        'keyMaterials' => null
     ];
 
     /**
@@ -78,6 +82,7 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
     * rotationInterval  轮换周期，取值范围为30~365的整数。 周期范围设置根据密钥使用频率进行，若密钥使用频率高，建议设置为短周期；反之，则设置为长周期。
     * lastRotationTime  上一次密钥轮换时间。时间戳，即从1970年1月1日至该时间的总秒数。
     * numberOfRotations  密钥轮换次数。
+    * keyMaterials  **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -85,7 +90,8 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'key_rotation_enabled',
             'rotationInterval' => 'rotation_interval',
             'lastRotationTime' => 'last_rotation_time',
-            'numberOfRotations' => 'number_of_rotations'
+            'numberOfRotations' => 'number_of_rotations',
+            'keyMaterials' => 'key_materials'
     ];
 
     /**
@@ -94,6 +100,7 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
     * rotationInterval  轮换周期，取值范围为30~365的整数。 周期范围设置根据密钥使用频率进行，若密钥使用频率高，建议设置为短周期；反之，则设置为长周期。
     * lastRotationTime  上一次密钥轮换时间。时间戳，即从1970年1月1日至该时间的总秒数。
     * numberOfRotations  密钥轮换次数。
+    * keyMaterials  **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -101,7 +108,8 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'setKeyRotationEnabled',
             'rotationInterval' => 'setRotationInterval',
             'lastRotationTime' => 'setLastRotationTime',
-            'numberOfRotations' => 'setNumberOfRotations'
+            'numberOfRotations' => 'setNumberOfRotations',
+            'keyMaterials' => 'setKeyMaterials'
     ];
 
     /**
@@ -110,6 +118,7 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
     * rotationInterval  轮换周期，取值范围为30~365的整数。 周期范围设置根据密钥使用频率进行，若密钥使用频率高，建议设置为短周期；反之，则设置为长周期。
     * lastRotationTime  上一次密钥轮换时间。时间戳，即从1970年1月1日至该时间的总秒数。
     * numberOfRotations  密钥轮换次数。
+    * keyMaterials  **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'getKeyRotationEnabled',
             'rotationInterval' => 'getRotationInterval',
             'lastRotationTime' => 'getLastRotationTime',
-            'numberOfRotations' => 'getNumberOfRotations'
+            'numberOfRotations' => 'getNumberOfRotations',
+            'keyMaterials' => 'getKeyMaterials'
     ];
 
     /**
@@ -182,6 +192,7 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
         $this->container['rotationInterval'] = isset($data['rotationInterval']) ? $data['rotationInterval'] : null;
         $this->container['lastRotationTime'] = isset($data['lastRotationTime']) ? $data['lastRotationTime'] : null;
         $this->container['numberOfRotations'] = isset($data['numberOfRotations']) ? $data['numberOfRotations'] : null;
+        $this->container['keyMaterials'] = isset($data['keyMaterials']) ? $data['keyMaterials'] : null;
     }
 
     /**
@@ -317,6 +328,30 @@ class ShowKeyRotationStatusResponse implements ModelInterface, ArrayAccess
     public function setNumberOfRotations($numberOfRotations)
     {
         $this->container['numberOfRotations'] = $numberOfRotations;
+        return $this;
+    }
+
+    /**
+    * Gets keyMaterials
+    *  **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Kms\V2\Model\GetkeyRotationStatusResponseBodyKeyMaterials[]|null
+    */
+    public function getKeyMaterials()
+    {
+        return $this->container['keyMaterials'];
+    }
+
+    /**
+    * Sets keyMaterials
+    *
+    * @param \HuaweiCloud\SDK\Kms\V2\Model\GetkeyRotationStatusResponseBodyKeyMaterials[]|null $keyMaterials **参数解释：** 密钥下的密钥材料信息 **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setKeyMaterials($keyMaterials)
+    {
+        $this->container['keyMaterials'] = $keyMaterials;
         return $this;
     }
 

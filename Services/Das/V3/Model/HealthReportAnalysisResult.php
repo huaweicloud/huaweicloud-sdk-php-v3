@@ -20,10 +20,10 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * riskCode  风险点编码。
-    * riskLevel  风险点级别。
-    * riskContent  风险点内容。
-    * reasons  可能原因列表。
+    * riskCode  风险点编码
+    * riskLevel  风险点级别
+    * riskContent  风险点内容
+    * reasons  可能原因列表
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * riskCode  风险点编码。
-    * riskLevel  风险点级别。
-    * riskContent  风险点内容。
-    * reasons  可能原因列表。
+    * riskCode  风险点编码
+    * riskLevel  风险点级别
+    * riskContent  风险点内容
+    * reasons  可能原因列表
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * riskCode  风险点编码。
-    * riskLevel  风险点级别。
-    * riskContent  风险点内容。
-    * reasons  可能原因列表。
+    * riskCode  风险点编码
+    * riskLevel  风险点级别
+    * riskContent  风险点内容
+    * reasons  可能原因列表
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * riskCode  风险点编码。
-    * riskLevel  风险点级别。
-    * riskContent  风险点内容。
-    * reasons  可能原因列表。
+    * riskCode  风险点编码
+    * riskLevel  风险点级别
+    * riskContent  风险点内容
+    * reasons  可能原因列表
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * riskCode  风险点编码。
-    * riskLevel  风险点级别。
-    * riskContent  风险点内容。
-    * reasons  可能原因列表。
+    * riskCode  风险点编码
+    * riskLevel  风险点级别
+    * riskContent  风险点内容
+    * reasons  可能原因列表
     *
     * @var string[]
     */
@@ -191,18 +191,6 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['riskCode'] === null) {
-            $invalidProperties[] = "'riskCode' can't be null";
-        }
-        if ($this->container['riskLevel'] === null) {
-            $invalidProperties[] = "'riskLevel' can't be null";
-        }
-        if ($this->container['riskContent'] === null) {
-            $invalidProperties[] = "'riskContent' can't be null";
-        }
-        if ($this->container['reasons'] === null) {
-            $invalidProperties[] = "'reasons' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -219,9 +207,9 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskCode
-    *  风险点编码。
+    *  风险点编码
     *
-    * @return string
+    * @return string|null
     */
     public function getRiskCode()
     {
@@ -231,7 +219,7 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
     /**
     * Sets riskCode
     *
-    * @param string $riskCode 风险点编码。
+    * @param string|null $riskCode 风险点编码
     *
     * @return $this
     */
@@ -243,9 +231,9 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  风险点级别。
+    *  风险点级别
     *
-    * @return string
+    * @return string|null
     */
     public function getRiskLevel()
     {
@@ -255,7 +243,7 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string $riskLevel 风险点级别。
+    * @param string|null $riskLevel 风险点级别
     *
     * @return $this
     */
@@ -267,9 +255,9 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskContent
-    *  风险点内容。
+    *  风险点内容
     *
-    * @return string
+    * @return string|null
     */
     public function getRiskContent()
     {
@@ -279,7 +267,7 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
     /**
     * Sets riskContent
     *
-    * @param string $riskContent 风险点内容。
+    * @param string|null $riskContent 风险点内容
     *
     * @return $this
     */
@@ -291,9 +279,9 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets reasons
-    *  可能原因列表。
+    *  可能原因列表
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskReason[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskReason[]|null
     */
     public function getReasons()
     {
@@ -303,7 +291,7 @@ class HealthReportAnalysisResult implements ModelInterface, ArrayAccess
     /**
     * Sets reasons
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskReason[] $reasons 可能原因列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportRiskReason[]|null $reasons 可能原因列表
     *
     * @return $this
     */

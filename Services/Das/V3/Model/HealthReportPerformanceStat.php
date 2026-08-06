@@ -21,6 +21,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * peakStats  峰值统计信息列表。
+    * lastValues  最新统计信息列表。
     * ratioStats  比率值数据列表。
     * analyzeSuccess  统计分析是否成功。
     * errorMessage  错误信息。
@@ -29,6 +30,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'peakStats' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]',
+            'lastValues' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]',
             'ratioStats' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportRatioStat[]',
             'analyzeSuccess' => 'bool',
             'errorMessage' => 'string'
@@ -37,6 +39,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * peakStats  峰值统计信息列表。
+    * lastValues  最新统计信息列表。
     * ratioStats  比率值数据列表。
     * analyzeSuccess  统计分析是否成功。
     * errorMessage  错误信息。
@@ -45,6 +48,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'peakStats' => null,
+        'lastValues' => null,
         'ratioStats' => null,
         'analyzeSuccess' => null,
         'errorMessage' => null
@@ -74,6 +78,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * peakStats  峰值统计信息列表。
+    * lastValues  最新统计信息列表。
     * ratioStats  比率值数据列表。
     * analyzeSuccess  统计分析是否成功。
     * errorMessage  错误信息。
@@ -82,6 +87,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'peakStats' => 'peak_stats',
+            'lastValues' => 'last_values',
             'ratioStats' => 'ratio_stats',
             'analyzeSuccess' => 'analyze_success',
             'errorMessage' => 'error_message'
@@ -90,6 +96,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * peakStats  峰值统计信息列表。
+    * lastValues  最新统计信息列表。
     * ratioStats  比率值数据列表。
     * analyzeSuccess  统计分析是否成功。
     * errorMessage  错误信息。
@@ -98,6 +105,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'peakStats' => 'setPeakStats',
+            'lastValues' => 'setLastValues',
             'ratioStats' => 'setRatioStats',
             'analyzeSuccess' => 'setAnalyzeSuccess',
             'errorMessage' => 'setErrorMessage'
@@ -106,6 +114,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * peakStats  峰值统计信息列表。
+    * lastValues  最新统计信息列表。
     * ratioStats  比率值数据列表。
     * analyzeSuccess  统计分析是否成功。
     * errorMessage  错误信息。
@@ -114,6 +123,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'peakStats' => 'getPeakStats',
+            'lastValues' => 'getLastValues',
             'ratioStats' => 'getRatioStats',
             'analyzeSuccess' => 'getAnalyzeSuccess',
             'errorMessage' => 'getErrorMessage'
@@ -178,6 +188,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['peakStats'] = isset($data['peakStats']) ? $data['peakStats'] : null;
+        $this->container['lastValues'] = isset($data['lastValues']) ? $data['lastValues'] : null;
         $this->container['ratioStats'] = isset($data['ratioStats']) ? $data['ratioStats'] : null;
         $this->container['analyzeSuccess'] = isset($data['analyzeSuccess']) ? $data['analyzeSuccess'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
@@ -191,18 +202,6 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['peakStats'] === null) {
-            $invalidProperties[] = "'peakStats' can't be null";
-        }
-        if ($this->container['ratioStats'] === null) {
-            $invalidProperties[] = "'ratioStats' can't be null";
-        }
-        if ($this->container['analyzeSuccess'] === null) {
-            $invalidProperties[] = "'analyzeSuccess' can't be null";
-        }
-        if ($this->container['errorMessage'] === null) {
-            $invalidProperties[] = "'errorMessage' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -221,7 +220,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     * Gets peakStats
     *  峰值统计信息列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]|null
     */
     public function getPeakStats()
     {
@@ -231,7 +230,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Sets peakStats
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[] $peakStats 峰值统计信息列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]|null $peakStats 峰值统计信息列表。
     *
     * @return $this
     */
@@ -242,10 +241,34 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets lastValues
+    *  最新统计信息列表。
+    *
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]|null
+    */
+    public function getLastValues()
+    {
+        return $this->container['lastValues'];
+    }
+
+    /**
+    * Sets lastValues
+    *
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportSingleValueStat[]|null $lastValues 最新统计信息列表。
+    *
+    * @return $this
+    */
+    public function setLastValues($lastValues)
+    {
+        $this->container['lastValues'] = $lastValues;
+        return $this;
+    }
+
+    /**
     * Gets ratioStats
     *  比率值数据列表。
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportRatioStat[]
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportRatioStat[]|null
     */
     public function getRatioStats()
     {
@@ -255,7 +278,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Sets ratioStats
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportRatioStat[] $ratioStats 比率值数据列表。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportRatioStat[]|null $ratioStats 比率值数据列表。
     *
     * @return $this
     */
@@ -269,7 +292,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     * Gets analyzeSuccess
     *  统计分析是否成功。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getAnalyzeSuccess()
     {
@@ -279,7 +302,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Sets analyzeSuccess
     *
-    * @param bool $analyzeSuccess 统计分析是否成功。
+    * @param bool|null $analyzeSuccess 统计分析是否成功。
     *
     * @return $this
     */
@@ -293,7 +316,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     * Gets errorMessage
     *  错误信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getErrorMessage()
     {
@@ -303,7 +326,7 @@ class HealthReportPerformanceStat implements ModelInterface, ArrayAccess
     /**
     * Sets errorMessage
     *
-    * @param string $errorMessage 错误信息。
+    * @param string|null $errorMessage 错误信息。
     *
     * @return $this
     */

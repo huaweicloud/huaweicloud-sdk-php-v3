@@ -213,24 +213,6 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['metric'] === null) {
-            $invalidProperties[] = "'metric' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-        if ($this->container['maxValue'] === null) {
-            $invalidProperties[] = "'maxValue' can't be null";
-        }
-        if ($this->container['normalized'] === null) {
-            $invalidProperties[] = "'normalized' can't be null";
-        }
-        if ($this->container['stage'] === null) {
-            $invalidProperties[] = "'stage' can't be null";
-        }
-        if ($this->container['timestamp'] === null) {
-            $invalidProperties[] = "'timestamp' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -249,7 +231,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     * Gets metric
     *  指标名。
     *
-    * @return string
+    * @return string|null
     */
     public function getMetric()
     {
@@ -259,7 +241,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     /**
     * Sets metric
     *
-    * @param string $metric 指标名。
+    * @param string|null $metric 指标名。
     *
     * @return $this
     */
@@ -273,7 +255,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     * Gets value
     *  数值。
     *
-    * @return double
+    * @return double|null
     */
     public function getValue()
     {
@@ -283,7 +265,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param double $value 数值。
+    * @param double|null $value 数值。
     *
     * @return $this
     */
@@ -297,7 +279,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     * Gets maxValue
     *  最大值。
     *
-    * @return double
+    * @return double|null
     */
     public function getMaxValue()
     {
@@ -307,7 +289,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     /**
     * Sets maxValue
     *
-    * @param double $maxValue 最大值。
+    * @param double|null $maxValue 最大值。
     *
     * @return $this
     */
@@ -321,7 +303,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     * Gets normalized
     *  归一化值。
     *
-    * @return double
+    * @return double|null
     */
     public function getNormalized()
     {
@@ -331,7 +313,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     /**
     * Sets normalized
     *
-    * @param double $normalized 归一化值。
+    * @param double|null $normalized 归一化值。
     *
     * @return $this
     */
@@ -345,7 +327,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     * Gets stage
     *  当前状态。
     *
-    * @return string
+    * @return string|null
     */
     public function getStage()
     {
@@ -355,7 +337,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     /**
     * Sets stage
     *
-    * @param string $stage 当前状态。
+    * @param string|null $stage 当前状态。
     *
     * @return $this
     */
@@ -369,7 +351,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     * Gets timestamp
     *  指标采集时间。
     *
-    * @return int
+    * @return int|null
     */
     public function getTimestamp()
     {
@@ -379,7 +361,7 @@ class HealthReportSingleValueStat implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param int $timestamp 指标采集时间。
+    * @param int|null $timestamp 指标采集时间。
     *
     * @return $this
     */

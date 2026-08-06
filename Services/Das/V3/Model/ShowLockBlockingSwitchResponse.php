@@ -21,32 +21,44 @@ class ShowLockBlockingSwitchResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * success  是否成功
     * switchOn  开关状态
     * retentionHours  保存时长
+    * retry  是否需要重试
+    * errorMsg  错误信息
     * canOpen  是否可以开启
     * cantOpenMsg  无法开启原因
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'success' => 'bool',
             'switchOn' => 'bool',
             'retentionHours' => 'int',
+            'retry' => 'bool',
+            'errorMsg' => 'string',
             'canOpen' => 'bool',
             'cantOpenMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * success  是否成功
     * switchOn  开关状态
     * retentionHours  保存时长
+    * retry  是否需要重试
+    * errorMsg  错误信息
     * canOpen  是否可以开启
     * cantOpenMsg  无法开启原因
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'success' => null,
         'switchOn' => null,
         'retentionHours' => 'int64',
+        'retry' => null,
+        'errorMsg' => null,
         'canOpen' => null,
         'cantOpenMsg' => null
     ];
@@ -74,48 +86,66 @@ class ShowLockBlockingSwitchResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * success  是否成功
     * switchOn  开关状态
     * retentionHours  保存时长
+    * retry  是否需要重试
+    * errorMsg  错误信息
     * canOpen  是否可以开启
     * cantOpenMsg  无法开启原因
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'success' => 'success',
             'switchOn' => 'switch_on',
             'retentionHours' => 'retention_hours',
+            'retry' => 'retry',
+            'errorMsg' => 'error_msg',
             'canOpen' => 'can_open',
             'cantOpenMsg' => 'cant_open_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * success  是否成功
     * switchOn  开关状态
     * retentionHours  保存时长
+    * retry  是否需要重试
+    * errorMsg  错误信息
     * canOpen  是否可以开启
     * cantOpenMsg  无法开启原因
     *
     * @var string[]
     */
     protected static $setters = [
+            'success' => 'setSuccess',
             'switchOn' => 'setSwitchOn',
             'retentionHours' => 'setRetentionHours',
+            'retry' => 'setRetry',
+            'errorMsg' => 'setErrorMsg',
             'canOpen' => 'setCanOpen',
             'cantOpenMsg' => 'setCantOpenMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * success  是否成功
     * switchOn  开关状态
     * retentionHours  保存时长
+    * retry  是否需要重试
+    * errorMsg  错误信息
     * canOpen  是否可以开启
     * cantOpenMsg  无法开启原因
     *
     * @var string[]
     */
     protected static $getters = [
+            'success' => 'getSuccess',
             'switchOn' => 'getSwitchOn',
             'retentionHours' => 'getRetentionHours',
+            'retry' => 'getRetry',
+            'errorMsg' => 'getErrorMsg',
             'canOpen' => 'getCanOpen',
             'cantOpenMsg' => 'getCantOpenMsg'
     ];
@@ -178,8 +208,11 @@ class ShowLockBlockingSwitchResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['switchOn'] = isset($data['switchOn']) ? $data['switchOn'] : null;
         $this->container['retentionHours'] = isset($data['retentionHours']) ? $data['retentionHours'] : null;
+        $this->container['retry'] = isset($data['retry']) ? $data['retry'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['canOpen'] = isset($data['canOpen']) ? $data['canOpen'] : null;
         $this->container['cantOpenMsg'] = isset($data['cantOpenMsg']) ? $data['cantOpenMsg'] : null;
     }
@@ -216,6 +249,30 @@ class ShowLockBlockingSwitchResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets success
+    *  是否成功
+    *
+    * @return bool|null
+    */
+    public function getSuccess()
+    {
+        return $this->container['success'];
+    }
+
+    /**
+    * Sets success
+    *
+    * @param bool|null $success 是否成功
+    *
+    * @return $this
+    */
+    public function setSuccess($success)
+    {
+        $this->container['success'] = $success;
+        return $this;
     }
 
     /**
@@ -263,6 +320,54 @@ class ShowLockBlockingSwitchResponse implements ModelInterface, ArrayAccess
     public function setRetentionHours($retentionHours)
     {
         $this->container['retentionHours'] = $retentionHours;
+        return $this;
+    }
+
+    /**
+    * Gets retry
+    *  是否需要重试
+    *
+    * @return bool|null
+    */
+    public function getRetry()
+    {
+        return $this->container['retry'];
+    }
+
+    /**
+    * Sets retry
+    *
+    * @param bool|null $retry 是否需要重试
+    *
+    * @return $this
+    */
+    public function setRetry($retry)
+    {
+        $this->container['retry'] = $retry;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  错误信息
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg 错误信息
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

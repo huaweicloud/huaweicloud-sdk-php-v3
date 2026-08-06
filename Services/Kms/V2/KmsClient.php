@@ -351,6 +351,68 @@ class KmsClient extends Client
     }
 
     /**
+     * 创建接入点
+     *
+     * 用于创建接入点
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAccessPoint($request)
+    {
+        return $this->createAccessPointWithHttpInfo($request);
+    }
+
+    public function createAccessPointWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/access-points';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateAccessPointResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateAccessPointRequest');
+    }
+
+    /**
      * 
      *
      * 
@@ -471,6 +533,68 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateDatakeyResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateDatakeyRequest');
+    }
+
+    /**
+     * 创建密钥胶囊
+     *
+     * 创建密钥胶囊
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDatakeyCapsule($request)
+    {
+        return $this->createDatakeyCapsuleWithHttpInfo($request);
+    }
+
+    public function createDatakeyCapsuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/datakey-capsule/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateDatakeyCapsuleResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateDatakeyCapsuleRequest');
     }
 
     /**
@@ -723,6 +847,68 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateKeyResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateKeyRequest');
+    }
+
+    /**
+     * 创建密钥策略
+     *
+     * 创建密钥策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createKeyPolicy($request)
+    {
+        return $this->createKeyPolicyWithHttpInfo($request);
+    }
+
+    public function createKeyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateKeyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateKeyPolicyRequest');
     }
 
     /**
@@ -1227,6 +1413,130 @@ class KmsClient extends Client
     }
 
     /**
+     * 解密密钥胶囊
+     *
+     * 解密密钥胶囊
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function decryptDatakeyCapsule($request)
+    {
+        return $this->decryptDatakeyCapsuleWithHttpInfo($request);
+    }
+
+    public function decryptDatakeyCapsuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/datakey-capsule/decrypt';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DecryptDatakeyCapsuleResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DecryptDatakeyCapsuleRequest');
+    }
+
+    /**
+     * 删除接入点
+     *
+     * 删除接入点
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAccessPoint($request)
+    {
+        return $this->deleteAccessPointWithHttpInfo($request);
+    }
+
+    public function deleteAccessPointWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/access-points/{access_point_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessPointId'] !== null) {
+            $pathParams['access_point_id'] = $localVarParams['accessPointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteAccessPointResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteAccessPointRequest');
+    }
+
+    /**
      * 
      *
      * 删除别名
@@ -1410,6 +1720,68 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteKeyResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteKeyRequest');
+    }
+
+    /**
+     * 删除密钥策略
+     *
+     * 删除密钥策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteKeyPolicy($request)
+    {
+        return $this->deleteKeyPolicyWithHttpInfo($request);
+    }
+
+    public function deleteKeyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteKeyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteKeyPolicyRequest');
     }
 
     /**
@@ -1602,6 +1974,68 @@ class KmsClient extends Client
     }
 
     /**
+     * 禁用接入点
+     *
+     * 禁用接入点
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disableAccessPoint($request)
+    {
+        return $this->disableAccessPointWithHttpInfo($request);
+    }
+
+    public function disableAccessPointWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/access-points/{access_point_id}/disable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessPointId'] !== null) {
+            $pathParams['access_point_id'] = $localVarParams['accessPointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DisableAccessPointResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DisableAccessPointRequest');
+    }
+
+    /**
      * 禁用密钥
      *
      * - 功能介绍：禁用密钥，密钥禁用后不可以使用。
@@ -1786,6 +2220,130 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DisableKeyStoreResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DisableKeyStoreRequest');
+    }
+
+    /**
+     * 下载通用接入点私钥
+     *
+     * 用于下载通用接入点私钥
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadAccessPointPrivateKey($request)
+    {
+        return $this->downloadAccessPointPrivateKeyWithHttpInfo($request);
+    }
+
+    public function downloadAccessPointPrivateKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/access-points/{access_point_id}/get-privatekey';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessPointId'] !== null) {
+            $pathParams['access_point_id'] = $localVarParams['accessPointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DownloadAccessPointPrivateKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DownloadAccessPointPrivateKeyRequest');
+    }
+
+    /**
+     * 启用接入点
+     *
+     * 启用接入点
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function enableAccessPoint($request)
+    {
+        return $this->enableAccessPointWithHttpInfo($request);
+    }
+
+    public function enableAccessPointWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/access-points/{access_point_id}/enable';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessPointId'] !== null) {
+            $pathParams['access_point_id'] = $localVarParams['accessPointId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\EnableAccessPointResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\EnableAccessPointRequest');
     }
 
     /**
@@ -2227,6 +2785,74 @@ class KmsClient extends Client
     }
 
     /**
+     * 查询接入点列表
+     *
+     * 用于查询接入点
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAccessPoint($request)
+    {
+        return $this->listAccessPointWithHttpInfo($request);
+    }
+
+    public function listAccessPointWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/access-points';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyspaceId'] !== null) {
+            $queryParams['keyspace_id'] = $localVarParams['keyspaceId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ListAccessPointResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ListAccessPointRequest');
+    }
+
+    /**
      * 
      *
      * 查询一个密钥关联的所有别名
@@ -2416,6 +3042,74 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ListKeyDetailResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ListKeyDetailRequest');
+    }
+
+    /**
+     * 查询密钥策略列表
+     *
+     * 查询密钥策略列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listKeyPolicy($request)
+    {
+        return $this->listKeyPolicyWithHttpInfo($request);
+    }
+
+    public function listKeyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyspaceId'] !== null) {
+            $queryParams['keyspace_id'] = $localVarParams['keyspaceId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ListKeyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ListKeyPolicyRequest');
     }
 
     /**
@@ -2923,6 +3617,130 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ReplicateKeyResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ReplicateKeyRequest');
+    }
+
+    /**
+     * 按需轮转密钥
+     *
+     * 用于外部密钥的密钥材料，需要用户提前导入密钥材料后才能执行轮转
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function rotateOnDemand($request)
+    {
+        return $this->rotateOnDemandWithHttpInfo($request);
+    }
+
+    public function rotateOnDemandWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/rotate-on-demand';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\RotateOnDemandResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\RotateOnDemandRequest');
+    }
+
+    /**
+     * 查询密钥策略
+     *
+     * 查询密钥策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showKeyPolicy($request)
+    {
+        return $this->showKeyPolicyWithHttpInfo($request);
+    }
+
+    public function showKeyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ShowKeyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ShowKeyPolicyRequest');
     }
 
     /**
@@ -3481,6 +4299,71 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyDescriptionResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyDescriptionRequest');
+    }
+
+    /**
+     * 更新密钥策略
+     *
+     * 更新密钥策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateKeyPolicy($request)
+    {
+        return $this->updateKeyPolicyWithHttpInfo($request);
+    }
+
+    public function updateKeyPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyPolicyRequest');
     }
 
     /**

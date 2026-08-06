@@ -31,6 +31,7 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
     * inspectionTime  诊断时间，12:00-12:00（默认）或00:00-00:00
     * sendTime  发送时间
     * timeZone  时区
+    * serviceUri  服务地址
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
             'obsBucketName' => 'string',
             'inspectionTime' => 'string',
             'sendTime' => 'string',
-            'timeZone' => 'string'
+            'timeZone' => 'string',
+            'serviceUri' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
     * inspectionTime  诊断时间，12:00-12:00（默认）或00:00-00:00
     * sendTime  发送时间
     * timeZone  时区
+    * serviceUri  服务地址
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
         'obsBucketName' => null,
         'inspectionTime' => null,
         'sendTime' => null,
-        'timeZone' => null
+        'timeZone' => null,
+        'serviceUri' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
     * inspectionTime  诊断时间，12:00-12:00（默认）或00:00-00:00
     * sendTime  发送时间
     * timeZone  时区
+    * serviceUri  服务地址
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
             'obsBucketName' => 'obs_bucket_name',
             'inspectionTime' => 'inspection_time',
             'sendTime' => 'send_time',
-            'timeZone' => 'time_zone'
+            'timeZone' => 'time_zone',
+            'serviceUri' => 'service_uri'
     ];
 
     /**
@@ -142,6 +148,7 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
     * inspectionTime  诊断时间，12:00-12:00（默认）或00:00-00:00
     * sendTime  发送时间
     * timeZone  时区
+    * serviceUri  服务地址
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
             'obsBucketName' => 'setObsBucketName',
             'inspectionTime' => 'setInspectionTime',
             'sendTime' => 'setSendTime',
-            'timeZone' => 'setTimeZone'
+            'timeZone' => 'setTimeZone',
+            'serviceUri' => 'setServiceUri'
     ];
 
     /**
@@ -172,6 +180,7 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
     * inspectionTime  诊断时间，12:00-12:00（默认）或00:00-00:00
     * sendTime  发送时间
     * timeZone  时区
+    * serviceUri  服务地址
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
             'obsBucketName' => 'getObsBucketName',
             'inspectionTime' => 'getInspectionTime',
             'sendTime' => 'getSendTime',
-            'timeZone' => 'getTimeZone'
+            'timeZone' => 'getTimeZone',
+            'serviceUri' => 'getServiceUri'
     ];
 
     /**
@@ -258,6 +268,7 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
         $this->container['inspectionTime'] = isset($data['inspectionTime']) ? $data['inspectionTime'] : null;
         $this->container['sendTime'] = isset($data['sendTime']) ? $data['sendTime'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
+        $this->container['serviceUri'] = isset($data['serviceUri']) ? $data['serviceUri'] : null;
     }
 
     /**
@@ -600,6 +611,30 @@ class UpdateEmailTemplateRequestBody implements ModelInterface, ArrayAccess
     public function setTimeZone($timeZone)
     {
         $this->container['timeZone'] = $timeZone;
+        return $this;
+    }
+
+    /**
+    * Gets serviceUri
+    *  服务地址
+    *
+    * @return string|null
+    */
+    public function getServiceUri()
+    {
+        return $this->container['serviceUri'];
+    }
+
+    /**
+    * Sets serviceUri
+    *
+    * @param string|null $serviceUri 服务地址
+    *
+    * @return $this
+    */
+    public function setServiceUri($serviceUri)
+    {
+        $this->container['serviceUri'] = $serviceUri;
         return $this;
     }
 

@@ -12270,6 +12270,9 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
+        if ($localVarParams['ip'] !== null) {
+            $queryParams['ip'] = $localVarParams['ip'];
+        }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
@@ -13322,7 +13325,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询作业列表
      *
-     * 查询作业列表清单
+     * 查询作业列表清单，支持按作业类型、名称、ID、状态、标签、数据连接等条件筛选。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13362,8 +13365,35 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['jobName'] !== null) {
             $queryParams['job_name'] = $localVarParams['jobName'];
         }
+        if ($localVarParams['jobId'] !== null) {
+            $queryParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['needAlarms'] !== null) {
+            $queryParams['need_alarms'] = $localVarParams['needAlarms'];
+        }
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['matchAllTags'] !== null) {
+            $queryParams['match_all_tags'] = $localVarParams['matchAllTags'];
+        }
+        if ($localVarParams['connectionName'] !== null) {
+            $queryParams['connection_name'] = $localVarParams['connectionName'];
+        }
+        if ($localVarParams['sourceType'] !== null) {
+            $queryParams['source_type'] = $localVarParams['sourceType'];
+        }
+        if ($localVarParams['sourceName'] !== null) {
+            $queryParams['source_name'] = $localVarParams['sourceName'];
+        }
+        if ($localVarParams['sinkType'] !== null) {
+            $queryParams['sink_type'] = $localVarParams['sinkType'];
+        }
+        if ($localVarParams['sinkName'] !== null) {
+            $queryParams['sink_name'] = $localVarParams['sinkName'];
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
@@ -17276,6 +17306,107 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListTableModelsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListTableModelsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询单表的作业表引用详情
+     *
+     * 根据表名查询该表被哪些作业引用的详细信息，支持按输入输出类型、工作空间等条件筛选。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTaskTableReferenceDetailAsync($request)
+    {
+        return $this->listTaskTableReferenceDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function listTaskTableReferenceDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/factory/task-table-references';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['dbType'] !== null) {
+            $queryParams['db_type'] = $localVarParams['dbType'];
+        }
+        if ($localVarParams['dataBaseName'] !== null) {
+            $queryParams['data_base_name'] = $localVarParams['dataBaseName'];
+        }
+        if ($localVarParams['clusterName'] !== null) {
+            $queryParams['cluster_name'] = $localVarParams['clusterName'];
+        }
+        if ($localVarParams['ioType'] !== null) {
+            $queryParams['io_type'] = $localVarParams['ioType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['workspaceName'] !== null) {
+            $queryParams['workspace_name'] = $localVarParams['workspaceName'];
+        }
+        if ($localVarParams['owner'] !== null) {
+            $queryParams['owner'] = $localVarParams['owner'];
+        }
+        if ($localVarParams['executeUser'] !== null) {
+            $queryParams['execute_user'] = $localVarParams['executeUser'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListTaskTableReferenceDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListTaskTableReferenceDetailRequest',
             $asyncRequest = true);
     }
 

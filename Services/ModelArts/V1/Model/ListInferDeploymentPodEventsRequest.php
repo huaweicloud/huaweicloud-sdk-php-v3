@@ -24,6 +24,8 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
     * deploymentName  **参数解释：** 部署名称，在创建部署时即可在返回体中获取，也可通过查询服务部署列表获取当前用户拥有的部署，其name字段即为部署名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * instanceName  **参数解释：** 服务实例名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
     * name  **参数解释：** 服务实例pod名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
+    * startTime  **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * endTime  **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
             'id' => 'string',
             'deploymentName' => 'string',
             'instanceName' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'startTime' => 'string',
+            'endTime' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
     * deploymentName  **参数解释：** 部署名称，在创建部署时即可在返回体中获取，也可通过查询服务部署列表获取当前用户拥有的部署，其name字段即为部署名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * instanceName  **参数解释：** 服务实例名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
     * name  **参数解释：** 服务实例pod名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
+    * startTime  **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * endTime  **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'deploymentName' => null,
         'instanceName' => null,
-        'name' => null
+        'name' => null,
+        'startTime' => null,
+        'endTime' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
     * deploymentName  **参数解释：** 部署名称，在创建部署时即可在返回体中获取，也可通过查询服务部署列表获取当前用户拥有的部署，其name字段即为部署名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * instanceName  **参数解释：** 服务实例名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
     * name  **参数解释：** 服务实例pod名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
+    * startTime  **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * endTime  **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'deploymentName' => 'deployment_name',
             'instanceName' => 'instance_name',
-            'name' => 'name'
+            'name' => 'name',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
     * deploymentName  **参数解释：** 部署名称，在创建部署时即可在返回体中获取，也可通过查询服务部署列表获取当前用户拥有的部署，其name字段即为部署名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * instanceName  **参数解释：** 服务实例名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
     * name  **参数解释：** 服务实例pod名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
+    * startTime  **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * endTime  **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'deploymentName' => 'setDeploymentName',
             'instanceName' => 'setInstanceName',
-            'name' => 'setName'
+            'name' => 'setName',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
     * deploymentName  **参数解释：** 部署名称，在创建部署时即可在返回体中获取，也可通过查询服务部署列表获取当前用户拥有的部署，其name字段即为部署名称。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * instanceName  **参数解释：** 服务实例名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
     * name  **参数解释：** 服务实例pod名字，可以为all，为all时去查询所有的服务实例。 **约束限制：** 不涉及。 **取值范围：** 服务实例名字。 **默认取值：** 不涉及。
+    * startTime  **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * endTime  **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'deploymentName' => 'getDeploymentName',
             'instanceName' => 'getInstanceName',
-            'name' => 'getName'
+            'name' => 'getName',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
         $this->container['deploymentName'] = isset($data['deploymentName']) ? $data['deploymentName'] : null;
         $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
 
     /**
@@ -310,6 +332,54 @@ class ListInferDeploymentPodEventsRequest implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime **参数解释：** 查询开始时间，Unix时间戳（毫秒）。 **约束限制：** 需要与end_time同时传入或同时为空。不能早于end_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime **参数解释：** 查询结束时间，Unix时间戳（毫秒）。 **约束限制：** 需要与start_time同时传入或同时为空。不能早于start_time。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

@@ -1767,6 +1767,12 @@ class VpcAsyncClient extends Client
         if ($localVarParams['instanceType'] !== null) {
             $queryParams['instance_type'] = $localVarParams['instanceType'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }

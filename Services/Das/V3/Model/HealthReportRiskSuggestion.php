@@ -20,8 +20,8 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * suggestionCode  建议优化措施编码。
-    * suggestionContent  建议优化措施。
+    * suggestionCode  建议优化措施编码
+    * suggestionContent  建议优化措施
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * suggestionCode  建议优化措施编码。
-    * suggestionContent  建议优化措施。
+    * suggestionCode  建议优化措施编码
+    * suggestionContent  建议优化措施
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * suggestionCode  建议优化措施编码。
-    * suggestionContent  建议优化措施。
+    * suggestionCode  建议优化措施编码
+    * suggestionContent  建议优化措施
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * suggestionCode  建议优化措施编码。
-    * suggestionContent  建议优化措施。
+    * suggestionCode  建议优化措施编码
+    * suggestionContent  建议优化措施
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * suggestionCode  建议优化措施编码。
-    * suggestionContent  建议优化措施。
+    * suggestionCode  建议优化措施编码
+    * suggestionContent  建议优化措施
     *
     * @var string[]
     */
@@ -169,12 +169,6 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['suggestionCode'] === null) {
-            $invalidProperties[] = "'suggestionCode' can't be null";
-        }
-        if ($this->container['suggestionContent'] === null) {
-            $invalidProperties[] = "'suggestionContent' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -191,9 +185,9 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestionCode
-    *  建议优化措施编码。
+    *  建议优化措施编码
     *
-    * @return string
+    * @return string|null
     */
     public function getSuggestionCode()
     {
@@ -203,7 +197,7 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
     /**
     * Sets suggestionCode
     *
-    * @param string $suggestionCode 建议优化措施编码。
+    * @param string|null $suggestionCode 建议优化措施编码
     *
     * @return $this
     */
@@ -215,9 +209,9 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestionContent
-    *  建议优化措施。
+    *  建议优化措施
     *
-    * @return string
+    * @return string|null
     */
     public function getSuggestionContent()
     {
@@ -227,7 +221,7 @@ class HealthReportRiskSuggestion implements ModelInterface, ArrayAccess
     /**
     * Sets suggestionContent
     *
-    * @param string $suggestionContent 建议优化措施。
+    * @param string|null $suggestionContent 建议优化措施
     *
     * @return $this
     */
