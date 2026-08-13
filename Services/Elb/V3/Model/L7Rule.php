@@ -20,7 +20,7 @@ class L7Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * adminStateUp  **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    * adminStateUp  **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     * compareType  **参数解释**：转发规则的匹配方式。  **取值范围**：type为HOST_NAME时可以为EQUAL_TO。type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
@@ -52,7 +52,7 @@ class L7Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * adminStateUp  **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    * adminStateUp  **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     * compareType  **参数解释**：转发规则的匹配方式。  **取值范围**：type为HOST_NAME时可以为EQUAL_TO。type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
@@ -105,7 +105,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * adminStateUp  **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    * adminStateUp  **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     * compareType  **参数解释**：转发规则的匹配方式。  **取值范围**：type为HOST_NAME时可以为EQUAL_TO。type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
@@ -137,7 +137,7 @@ class L7Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * adminStateUp  **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    * adminStateUp  **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     * compareType  **参数解释**：转发规则的匹配方式。  **取值范围**：type为HOST_NAME时可以为EQUAL_TO。type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
@@ -169,7 +169,7 @@ class L7Rule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * adminStateUp  **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    * adminStateUp  **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     * compareType  **参数解释**：转发规则的匹配方式。  **取值范围**：type为HOST_NAME时可以为EQUAL_TO。type为PATH时可以为REGEX，STARTS_WITH，EQUAL_TO。
     * key  **参数解释**：匹配内容的键值。  **取值范围**：不涉及  [不支持该字段，请勿使用。](tag:hcso_dt)
     * projectId  **参数解释**：转发规则所在的项目ID。  **取值范围**：不涉及
@@ -368,7 +368,7 @@ class L7Rule implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    *  **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     *
     * @return bool
     */
@@ -380,7 +380,7 @@ class L7Rule implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool $adminStateUp **参数解释**：转发规则的管理状。  **取值范围**：固定为true。  不支持该字段，请勿使用。
+    * @param bool $adminStateUp **参数解释**：转发规则的管理状态。  **取值范围**：固定为true。  不支持该字段，请勿使用。
     *
     * @return $this
     */

@@ -34,7 +34,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：IP类型的后端场景）。  **取值范围**：不涉及
     * role  **参数解释**：后端服务器的主备状态。  **取值范围**：不涉及
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：IP类型的后端场景）。  **取值范围**：不涉及
     * role  **参数解释**：后端服务器的主备状态。  **取值范围**：不涉及
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：IP类型的后端场景）。  **取值范围**：不涉及
     * role  **参数解释**：后端服务器的主备状态。  **取值范围**：不涉及
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：IP类型的后端场景）。  **取值范围**：不涉及
     * role  **参数解释**：后端服务器的主备状态。  **取值范围**：不涉及
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID。空表示member关联的实例为非真实设备 （如：IP类型的后端场景）。  **取值范围**：不涉及
     * role  **参数解释**：后端服务器的主备状态。  **取值范围**：不涉及
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @var string[]
     */
@@ -712,7 +712,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    *  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerMemberInfo[]
     */
@@ -724,7 +724,7 @@ class MasterSlaveMember implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerMemberInfo[] $status **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerMemberInfo[] $status **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。  **取值范围**：不涉及
     *
     * @return $this
     */

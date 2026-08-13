@@ -22,6 +22,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
+    * audioCodec  音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
     * duration  视频时长，单位：秒。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
@@ -38,6 +39,7 @@ class MetaData implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'packType' => 'string',
             'codec' => 'string',
+            'audioCodec' => 'string',
             'duration' => 'int',
             'durationMs' => 'int',
             'videoSize' => 'int',
@@ -54,6 +56,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
+    * audioCodec  音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
     * duration  视频时长，单位：秒。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
@@ -70,6 +73,7 @@ class MetaData implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'packType' => null,
         'codec' => null,
+        'audioCodec' => null,
         'duration' => 'int64',
         'durationMs' => 'int64',
         'videoSize' => 'int64',
@@ -107,6 +111,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
+    * audioCodec  音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
     * duration  视频时长，单位：秒。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
@@ -123,6 +128,7 @@ class MetaData implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'packType' => 'pack_type',
             'codec' => 'codec',
+            'audioCodec' => 'audio_codec',
             'duration' => 'duration',
             'durationMs' => 'duration_ms',
             'videoSize' => 'video_size',
@@ -139,6 +145,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
+    * audioCodec  音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
     * duration  视频时长，单位：秒。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
@@ -155,6 +162,7 @@ class MetaData implements ModelInterface, ArrayAccess
     protected static $setters = [
             'packType' => 'setPackType',
             'codec' => 'setCodec',
+            'audioCodec' => 'setAudioCodec',
             'duration' => 'setDuration',
             'durationMs' => 'setDurationMs',
             'videoSize' => 'setVideoSize',
@@ -171,6 +179,7 @@ class MetaData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * packType  视频封装格式。  取值如下： - MP4 - TS - MOV - MXF - MPG - FLV - WMV - MP3 - WMA - APE - FLAC - AAC - AC3 - MMF - AMR - M4A - M4R - OGG - WAV - WV - MP2 - AVI - F4V - M4V - MPEG - HLS - DASH
     * codec  视频编码格式。  取值如下： - MPEG-2 - MPEG-4 - H.264 - H.265 - WMV - Vorbis - AAC - AC-3 - AMR - APE - FLAC - MP3 - MP2 - WMA - PCM - ADPCM - WavPack
+    * audioCodec  音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
     * duration  视频时长，单位：秒。  若视频的原时长为非整数，则该字段值为原时长的向下取整。 若视频的原时长小于1，则该字段值为1。
     * durationMs  视频时长，单位毫秒。
     * videoSize  视频文件大小。  单位：字节。
@@ -187,6 +196,7 @@ class MetaData implements ModelInterface, ArrayAccess
     protected static $getters = [
             'packType' => 'getPackType',
             'codec' => 'getCodec',
+            'audioCodec' => 'getAudioCodec',
             'duration' => 'getDuration',
             'durationMs' => 'getDurationMs',
             'videoSize' => 'getVideoSize',
@@ -375,6 +385,7 @@ class MetaData implements ModelInterface, ArrayAccess
     {
         $this->container['packType'] = isset($data['packType']) ? $data['packType'] : null;
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
+        $this->container['audioCodec'] = isset($data['audioCodec']) ? $data['audioCodec'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['durationMs'] = isset($data['durationMs']) ? $data['durationMs'] : null;
         $this->container['videoSize'] = isset($data['videoSize']) ? $data['videoSize'] : null;
@@ -470,6 +481,30 @@ class MetaData implements ModelInterface, ArrayAccess
     public function setCodec($codec)
     {
         $this->container['codec'] = $codec;
+        return $this;
+    }
+
+    /**
+    * Gets audioCodec
+    *  音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
+    *
+    * @return string|null
+    */
+    public function getAudioCodec()
+    {
+        return $this->container['audioCodec'];
+    }
+
+    /**
+    * Sets audioCodec
+    *
+    * @param string|null $audioCodec 音频编码格式。 须知：仅在2025/01/01之后创建的媒资元数据/转码产物包含该参数。
+    *
+    * @return $this
+    */
+    public function setAudioCodec($audioCodec)
+    {
+        $this->container['audioCodec'] = $audioCodec;
         return $this;
     }
 

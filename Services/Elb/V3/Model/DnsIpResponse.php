@@ -20,9 +20,9 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    * enable  **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     * ipAddress  **参数解释**：IPv4或IPv6地址。  **约束限制**：必须是当前负载均衡器绑定的私网地址或者公网地址。
-    * type  **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    * type  **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     * domainName  **参数解释**：当前IP地址关联的负载均衡实例域名。  **约束限制**： - 如果IP为私网类型，则这里为负载均衡实例的私网域名。 - 如果IP为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
@@ -40,9 +40,9 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    * enable  **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     * ipAddress  **参数解释**：IPv4或IPv6地址。  **约束限制**：必须是当前负载均衡器绑定的私网地址或者公网地址。
-    * type  **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    * type  **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     * domainName  **参数解释**：当前IP地址关联的负载均衡实例域名。  **约束限制**： - 如果IP为私网类型，则这里为负载均衡实例的私网域名。 - 如果IP为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
@@ -81,9 +81,9 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    * enable  **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     * ipAddress  **参数解释**：IPv4或IPv6地址。  **约束限制**：必须是当前负载均衡器绑定的私网地址或者公网地址。
-    * type  **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    * type  **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     * domainName  **参数解释**：当前IP地址关联的负载均衡实例域名。  **约束限制**： - 如果IP为私网类型，则这里为负载均衡实例的私网域名。 - 如果IP为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
@@ -101,9 +101,9 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    * enable  **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     * ipAddress  **参数解释**：IPv4或IPv6地址。  **约束限制**：必须是当前负载均衡器绑定的私网地址或者公网地址。
-    * type  **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    * type  **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     * domainName  **参数解释**：当前IP地址关联的负载均衡实例域名。  **约束限制**： - 如果IP为私网类型，则这里为负载均衡实例的私网域名。 - 如果IP为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
@@ -121,9 +121,9 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    * enable  **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     * ipAddress  **参数解释**：IPv4或IPv6地址。  **约束限制**：必须是当前负载均衡器绑定的私网地址或者公网地址。
-    * type  **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    * type  **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     * domainName  **参数解释**：当前IP地址关联的负载均衡实例域名。  **约束限制**： - 如果IP为私网类型，则这里为负载均衡实例的私网域名。 - 如果IP为公网类型，则这里为负载均衡实例的公网域名。
     * createdAt  **参数解释**：创建时间。  **取值范围**：不涉及
     * updatedAt  **参数解释**：更新时间。  **取值范围**：不涉及
@@ -229,7 +229,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    *  **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     *
     * @return bool|null
     */
@@ -241,7 +241,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable **参数解释**：是否已加入到域名解析。  **取值范围**： true：已加入域名解析。 false：未加入域名解析。
+    * @param bool|null $enable **参数解释**：IP地址是否已加入到域名解析。  **取值范围**： - true：已加入域名解析。 - false：未加入域名解析。
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    *  **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class DnsIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**：IP地址类型。  **取值范围**： vip：私网IP。 eip：公网IP。
+    * @param string|null $type **参数解释**：IP地址类型。  **取值范围**： - vip：私网IP。 - eip：公网IP。
     *
     * @return $this
     */

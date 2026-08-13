@@ -22,24 +22,28 @@ class ChangeChargeModeBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceIdList  实例ID列表
     * datastoreType  引擎类型
+    * paymentMode  true: 设置为付费, false: 设置为免费
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'instanceIdList' => 'string[]',
-            'datastoreType' => 'string'
+            'datastoreType' => 'string',
+            'paymentMode' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceIdList  实例ID列表
     * datastoreType  引擎类型
+    * paymentMode  true: 设置为付费, false: 设置为免费
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'instanceIdList' => null,
-        'datastoreType' => null
+        'datastoreType' => null,
+        'paymentMode' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ChangeChargeModeBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceIdList  实例ID列表
     * datastoreType  引擎类型
+    * paymentMode  true: 设置为付费, false: 设置为免费
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'instanceIdList' => 'instance_id_list',
-            'datastoreType' => 'datastore_type'
+            'datastoreType' => 'datastore_type',
+            'paymentMode' => 'payment_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceIdList  实例ID列表
     * datastoreType  引擎类型
+    * paymentMode  true: 设置为付费, false: 设置为免费
     *
     * @var string[]
     */
     protected static $setters = [
             'instanceIdList' => 'setInstanceIdList',
-            'datastoreType' => 'setDatastoreType'
+            'datastoreType' => 'setDatastoreType',
+            'paymentMode' => 'setPaymentMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceIdList  实例ID列表
     * datastoreType  引擎类型
+    * paymentMode  true: 设置为付费, false: 设置为免费
     *
     * @var string[]
     */
     protected static $getters = [
             'instanceIdList' => 'getInstanceIdList',
-            'datastoreType' => 'getDatastoreType'
+            'datastoreType' => 'getDatastoreType',
+            'paymentMode' => 'getPaymentMode'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ChangeChargeModeBody implements ModelInterface, ArrayAccess
     {
         $this->container['instanceIdList'] = isset($data['instanceIdList']) ? $data['instanceIdList'] : null;
         $this->container['datastoreType'] = isset($data['datastoreType']) ? $data['datastoreType'] : null;
+        $this->container['paymentMode'] = isset($data['paymentMode']) ? $data['paymentMode'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class ChangeChargeModeBody implements ModelInterface, ArrayAccess
     public function setDatastoreType($datastoreType)
     {
         $this->container['datastoreType'] = $datastoreType;
+        return $this;
+    }
+
+    /**
+    * Gets paymentMode
+    *  true: 设置为付费, false: 设置为免费
+    *
+    * @return bool|null
+    */
+    public function getPaymentMode()
+    {
+        return $this->container['paymentMode'];
+    }
+
+    /**
+    * Sets paymentMode
+    *
+    * @param bool|null $paymentMode true: 设置为付费, false: 设置为免费
+    *
+    * @return $this
+    */
+    public function setPaymentMode($paymentMode)
+    {
+        $this->container['paymentMode'] = $paymentMode;
         return $this;
     }
 

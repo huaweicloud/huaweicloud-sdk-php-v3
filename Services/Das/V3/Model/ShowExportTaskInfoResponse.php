@@ -34,14 +34,14 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'createAt' => 'float',
+            'createAt' => 'int',
             'downloadUrl' => 'string',
-            'endTime' => 'float',
-            'exportLineNum' => 'float',
+            'endTime' => 'int',
+            'exportLineNum' => 'int',
             'instanceId' => 'string',
-            'lastRecordTime' => 'float',
-            'startTime' => 'float',
-            'taskId' => 'float',
+            'lastRecordTime' => 'int',
+            'startTime' => 'int',
+            'taskId' => 'int',
             'taskStatus' => 'int'
     ];
 
@@ -60,14 +60,14 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'createAt' => null,
+        'createAt' => 'int64',
         'downloadUrl' => null,
-        'endTime' => null,
-        'exportLineNum' => null,
+        'endTime' => 'int64',
+        'exportLineNum' => 'int64',
         'instanceId' => null,
-        'lastRecordTime' => null,
-        'startTime' => null,
-        'taskId' => null,
+        'lastRecordTime' => 'int64',
+        'startTime' => 'int64',
+        'taskId' => 'int64',
         'taskStatus' => null
     ];
 
@@ -265,7 +265,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * Gets createAt
     *  创建时间
     *
-    * @return float|null
+    * @return int|null
     */
     public function getCreateAt()
     {
@@ -275,7 +275,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param float|null $createAt 创建时间
+    * @param int|null $createAt 创建时间
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * Gets endTime
     *  结束时间
     *
-    * @return float|null
+    * @return int|null
     */
     public function getEndTime()
     {
@@ -323,7 +323,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param float|null $endTime 结束时间
+    * @param int|null $endTime 结束时间
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * Gets exportLineNum
     *  导出条数
     *
-    * @return float|null
+    * @return int|null
     */
     public function getExportLineNum()
     {
@@ -347,7 +347,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exportLineNum
     *
-    * @param float|null $exportLineNum 导出条数
+    * @param int|null $exportLineNum 导出条数
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * Gets lastRecordTime
     *  最新SQL执行时间
     *
-    * @return float|null
+    * @return int|null
     */
     public function getLastRecordTime()
     {
@@ -395,7 +395,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastRecordTime
     *
-    * @param float|null $lastRecordTime 最新SQL执行时间
+    * @param int|null $lastRecordTime 最新SQL执行时间
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * Gets startTime
     *  开始时间
     *
-    * @return float|null
+    * @return int|null
     */
     public function getStartTime()
     {
@@ -419,7 +419,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param float|null $startTime 开始时间
+    * @param int|null $startTime 开始时间
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     * Gets taskId
     *  任务ID
     *
-    * @return float|null
+    * @return int|null
     */
     public function getTaskId()
     {
@@ -443,7 +443,7 @@ class ShowExportTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param float|null $taskId 任务ID
+    * @param int|null $taskId 任务ID
     *
     * @return $this
     */

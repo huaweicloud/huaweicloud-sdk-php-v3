@@ -22,24 +22,28 @@ class SpecResizeRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * targetFlavorId  **参数解释**： 目标规格ID。 **取值范围**： 不涉及。
     * forceBackup  **参数解释**： 强制备份。字段已废弃，不再生效。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'targetFlavorId' => 'string',
-            'forceBackup' => 'bool'
+            'forceBackup' => 'bool',
+            'changeMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * targetFlavorId  **参数解释**： 目标规格ID。 **取值范围**： 不涉及。
     * forceBackup  **参数解释**： 强制备份。字段已废弃，不再生效。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'targetFlavorId' => null,
-        'forceBackup' => null
+        'forceBackup' => null,
+        'changeMode' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SpecResizeRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * targetFlavorId  **参数解释**： 目标规格ID。 **取值范围**： 不涉及。
     * forceBackup  **参数解释**： 强制备份。字段已废弃，不再生效。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'targetFlavorId' => 'target_flavor_id',
-            'forceBackup' => 'force_backup'
+            'forceBackup' => 'force_backup',
+            'changeMode' => 'change_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * targetFlavorId  **参数解释**： 目标规格ID。 **取值范围**： 不涉及。
     * forceBackup  **参数解释**： 强制备份。字段已废弃，不再生效。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
     *
     * @var string[]
     */
     protected static $setters = [
             'targetFlavorId' => 'setTargetFlavorId',
-            'forceBackup' => 'setForceBackup'
+            'forceBackup' => 'setForceBackup',
+            'changeMode' => 'setChangeMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * targetFlavorId  **参数解释**： 目标规格ID。 **取值范围**： 不涉及。
     * forceBackup  **参数解释**： 强制备份。字段已废弃，不再生效。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
     *
     * @var string[]
     */
     protected static $getters = [
             'targetFlavorId' => 'getTargetFlavorId',
-            'forceBackup' => 'getForceBackup'
+            'forceBackup' => 'getForceBackup',
+            'changeMode' => 'getChangeMode'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SpecResizeRequest implements ModelInterface, ArrayAccess
     {
         $this->container['targetFlavorId'] = isset($data['targetFlavorId']) ? $data['targetFlavorId'] : null;
         $this->container['forceBackup'] = isset($data['forceBackup']) ? $data['forceBackup'] : null;
+        $this->container['changeMode'] = isset($data['changeMode']) ? $data['changeMode'] : null;
     }
 
     /**
@@ -172,6 +183,12 @@ class SpecResizeRequest implements ModelInterface, ArrayAccess
         if ($this->container['targetFlavorId'] === null) {
             $invalidProperties[] = "'targetFlavorId' can't be null";
         }
+            if (!is_null($this->container['changeMode']) && (mb_strlen($this->container['changeMode']) > 16)) {
+                $invalidProperties[] = "invalid value for 'changeMode', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['changeMode']) && (mb_strlen($this->container['changeMode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'changeMode', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -231,6 +248,30 @@ class SpecResizeRequest implements ModelInterface, ArrayAccess
     public function setForceBackup($forceBackup)
     {
         $this->container['forceBackup'] = $forceBackup;
+        return $this;
+    }
+
+    /**
+    * Gets changeMode
+    *  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
+    *
+    * @return string|null
+    */
+    public function getChangeMode()
+    {
+        return $this->container['changeMode'];
+    }
+
+    /**
+    * Sets changeMode
+    *
+    * @param string|null $changeMode **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： online：在线模式； offline：离线模式； **默认取值**： offline
+    *
+    * @return $this
+    */
+    public function setChangeMode($changeMode)
+    {
+        $this->container['changeMode'] = $changeMode;
         return $this;
     }
 

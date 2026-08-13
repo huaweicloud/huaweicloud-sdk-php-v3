@@ -25,8 +25,8 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * nodeId  **参数解释**：  实例下的节点ID  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0  **默认取值**：  0
     * limit  **参数解释**：  每页显示条数。  **约束限制**：  不涉及。  **取值范围**：  1-100  **默认取值**：  10
-    * startTime  **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * endTime  **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * startTime  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endTime  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -36,8 +36,8 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
             'nodeId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'startTime' => 'string',
-            'endTime' => 'string'
+            'startTime' => 'int',
+            'endTime' => 'int'
     ];
 
     /**
@@ -47,8 +47,8 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * nodeId  **参数解释**：  实例下的节点ID  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0  **默认取值**：  0
     * limit  **参数解释**：  每页显示条数。  **约束限制**：  不涉及。  **取值范围**：  1-100  **默认取值**：  10
-    * startTime  **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * endTime  **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * startTime  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endTime  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -56,10 +56,10 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'instanceId' => null,
         'nodeId' => null,
-        'offset' => null,
-        'limit' => null,
-        'startTime' => null,
-        'endTime' => null
+        'offset' => 'int32',
+        'limit' => 'int32',
+        'startTime' => 'int64',
+        'endTime' => 'int64'
     ];
 
     /**
@@ -90,8 +90,8 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * nodeId  **参数解释**：  实例下的节点ID  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0  **默认取值**：  0
     * limit  **参数解释**：  每页显示条数。  **约束限制**：  不涉及。  **取值范围**：  1-100  **默认取值**：  10
-    * startTime  **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * endTime  **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * startTime  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endTime  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * nodeId  **参数解释**：  实例下的节点ID  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0  **默认取值**：  0
     * limit  **参数解释**：  每页显示条数。  **约束限制**：  不涉及。  **取值范围**：  1-100  **默认取值**：  10
-    * startTime  **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * endTime  **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * startTime  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endTime  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * nodeId  **参数解释**：  实例下的节点ID  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0  **默认取值**：  0
     * limit  **参数解释**：  每页显示条数。  **约束限制**：  不涉及。  **取值范围**：  1-100  **默认取值**：  10
-    * startTime  **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * endTime  **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * startTime  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * endTime  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -366,9 +366,9 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getStartTime()
     {
@@ -378,7 +378,7 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime **参数解释**：  开始日期。格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param int|null $startTime **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -390,9 +390,9 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEndTime()
     {
@@ -402,7 +402,7 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime **参数解释**：  结束时间，格式为\"yyyy-mm-ddThh:mm:ssZ\"。  其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。只能查询当前时间前一个月内的慢日志。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param int|null $endTime **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */

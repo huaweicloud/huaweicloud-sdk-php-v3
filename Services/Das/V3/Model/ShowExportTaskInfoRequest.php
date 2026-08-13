@@ -161,12 +161,6 @@ class ShowExportTaskInfoRequest implements ModelInterface, ArrayAccess
         if ($this->container['taskId'] === null) {
             $invalidProperties[] = "'taskId' can't be null";
         }
-            if (($this->container['taskId'] > 0)) {
-                $invalidProperties[] = "invalid value for 'taskId', must be smaller than or equal to 0.";
-            }
-            if (($this->container['taskId'] < 0)) {
-                $invalidProperties[] = "invalid value for 'taskId', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 

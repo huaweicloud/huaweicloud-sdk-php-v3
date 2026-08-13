@@ -32,7 +32,7 @@ class PolicyLabel implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'priority' => 'string',
+            'priority' => 'int',
             'action' => 'string',
             'adminStateUp' => 'bool',
             'rules' => '\HuaweiCloud\SDK\Elb\V3\Model\L7Rule[]'
@@ -52,7 +52,7 @@ class PolicyLabel implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'priority' => null,
+        'priority' => 'int32',
         'action' => null,
         'adminStateUp' => null,
         'rules' => null
@@ -294,7 +294,7 @@ class PolicyLabel implements ModelInterface, ArrayAccess
     * Gets priority
     *  **参数解释**：转发策略优先级。  **取值范围**：不涉及
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPriority()
     {
@@ -304,7 +304,7 @@ class PolicyLabel implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param string|null $priority **参数解释**：转发策略优先级。  **取值范围**：不涉及
+    * @param int|null $priority **参数解释**：转发策略优先级。  **取值范围**：不涉及
     *
     * @return $this
     */

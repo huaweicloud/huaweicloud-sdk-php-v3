@@ -1042,9 +1042,9 @@ class DasAsyncClient extends Client
     }
 
     /**
-     * 设置付费模式
+     * 设置实例付费/免费模式
      *
-     * 设置付费实例
+     * 设置实例付费/免费模式
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1177,6 +1177,71 @@ class DasAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Das\V3\Model\ChangeFullDeadLockSwitchResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Das\V3\Model\ChangeFullDeadLockSwitchRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 设置实例付费/免费模式
+     *
+     * 设置实例付费/免费模式
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changePaymentModeNewAsync($request)
+    {
+        return $this->changePaymentModeNewAsyncWithHttpInfo($request);
+    }
+    
+    public function changePaymentModeNewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/clouddba/change-payment-mode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Das\V3\Model\ChangePaymentModeNewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Das\V3\Model\ChangePaymentModeNewRequest',
             $asyncRequest = true);
     }
 
@@ -8972,7 +9037,7 @@ class DasAsyncClient extends Client
         );
 
         return $this->callApi(
-            $method='POST',
+            $method='GET',
             $resourcePath,
             $pathParams,
             $queryParams,

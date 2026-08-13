@@ -23,24 +23,28 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'flavors' => '\HuaweiCloud\SDK\Dws\V2\Model\FlavorInfoResponse[]'
+            'flavors' => '\HuaweiCloud\SDK\Dws\V2\Model\FlavorInfoResponse[]',
+            'changeMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'count' => 'int32',
-        'flavors' => null
+        'flavors' => null,
+        'changeMode' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'count' => 'count',
-            'flavors' => 'flavors'
+            'flavors' => 'flavors',
+            'changeMode' => 'change_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
     *
     * @var string[]
     */
     protected static $setters = [
             'count' => 'setCount',
-            'flavors' => 'setFlavors'
+            'flavors' => 'setFlavors',
+            'changeMode' => 'setChangeMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
+    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
     *
     * @var string[]
     */
     protected static $getters = [
             'count' => 'getCount',
-            'flavors' => 'getFlavors'
+            'flavors' => 'getFlavors',
+            'changeMode' => 'getChangeMode'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['flavors'] = isset($data['flavors']) ? $data['flavors'] : null;
+        $this->container['changeMode'] = isset($data['changeMode']) ? $data['changeMode'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     public function setFlavors($flavors)
     {
         $this->container['flavors'] = $flavors;
+        return $this;
+    }
+
+    /**
+    * Gets changeMode
+    *  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    *
+    * @return string|null
+    */
+    public function getChangeMode()
+    {
+        return $this->container['changeMode'];
+    }
+
+    /**
+    * Sets changeMode
+    *
+    * @param string|null $changeMode **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    *
+    * @return $this
+    */
+    public function setChangeMode($changeMode)
+    {
+        $this->container['changeMode'] = $changeMode;
         return $this;
     }
 

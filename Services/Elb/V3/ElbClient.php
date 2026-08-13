@@ -3465,6 +3465,21 @@ class ElbClient extends Client
         if ($localVarParams['pageReverse'] !== null) {
             $queryParams['page_reverse'] = $localVarParams['pageReverse'];
         }
+        if ($localVarParams['ipAddress'] !== null) {
+            $queryParams['ip_address'] = $localVarParams['ipAddress'];
+        }
+        if ($localVarParams['enable'] !== null) {
+            $queryParams['enable'] = $localVarParams['enable'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['loadbalancerId'] !== null) {
             $pathParams['loadbalancer_id'] = $localVarParams['loadbalancerId'];
         }
@@ -4087,11 +4102,11 @@ class ElbClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -4530,11 +4545,11 @@ class ElbClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -5969,11 +5984,11 @@ class ElbClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6315,11 +6330,11 @@ class ElbClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }

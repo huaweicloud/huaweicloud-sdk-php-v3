@@ -30,7 +30,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     * address  **参数解释**：后端服务器对应的IP地址。  **取值范围**：不涉及  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
@@ -72,7 +72,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     * address  **参数解释**：后端服务器对应的IP地址。  **取值范围**：不涉及  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
@@ -135,7 +135,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     * address  **参数解释**：后端服务器对应的IP地址。  **取值范围**：不涉及  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
@@ -177,7 +177,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     * address  **参数解释**：后端服务器对应的IP地址。  **取值范围**：不涉及  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
@@ -219,7 +219,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     * address  **参数解释**：后端服务器对应的IP地址。  **取值范围**：不涉及  [不支持IPv6，请勿设置为IPv6地址。](tag:dt)
     * operatingStatus  **参数解释**：后端服务器的健康状态。  **取值范围**： - NO_MONITOR：后端服务器所在的服务器组没有开启健康检查。 - INITIAL：初始化中，表示负载均衡实例配置了健康检查，但查不到数据。 - ONLINE：后端服务器正常。 - OFFLINE：后端服务器关联的ECS服务器不存在或已关机。 - UNKNOWN：未关联LB实例的pool下的member，或者创建后从未关联ECS的云服务器类型member，状态置为UNKNOWN。
     * reason  reason
-    * status  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * status  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     * memberType  **参数解释**：后端服务器的类型。  **取值范围**： - ip：IP类型的member。 - instance：关联到ECS的member。
     * instanceId  **参数解释**：member关联的实例ID，空表示IP类型场景的member。  **取值范围**：不涉及
     * portId  **参数解释**：IP地址对应的VPC port ID  **取值范围**：不涉及
@@ -632,7 +632,7 @@ class BatchMember implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    *  **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[]|null
     */
@@ -644,7 +644,7 @@ class BatchMember implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[]|null $status **参数解释**：后端服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[]|null $status **参数解释**：后端服务器监听器粒度的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_status为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
     *
     * @return $this
     */

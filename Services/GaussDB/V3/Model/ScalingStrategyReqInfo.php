@@ -21,7 +21,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * flavorSwitch  扩缩规格开关。 - ON：开启。 - OFF：关闭。
-    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * flavorSwitch  扩缩规格开关。 - ON：开启。 - OFF：关闭。
-    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * flavorSwitch  扩缩规格开关。 - ON：开启。 - OFF：关闭。
-    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * flavorSwitch  扩缩规格开关。 - ON：开启。 - OFF：关闭。
-    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * flavorSwitch  扩缩规格开关。 - ON：开启。 - OFF：关闭。
-    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    * readOnlySwitch  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets readOnlySwitch
-    *  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    *  增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ScalingStrategyReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets readOnlySwitch
     *
-    * @param string $readOnlySwitch 增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-gaussdbformysql/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
+    * @param string $readOnlySwitch 增删只读节点开关。自动增删只读节点功能需要先[开启数据库代理](https://support.huaweicloud.com/api-taurusdb/CreateGaussMySqlProxy.html)，且只能有一个代理。 - ON：开启。 - OFF：关闭。
     *
     * @return $this
     */
