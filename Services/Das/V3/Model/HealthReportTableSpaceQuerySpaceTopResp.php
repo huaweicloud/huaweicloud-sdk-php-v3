@@ -28,8 +28,8 @@ class HealthReportTableSpaceQuerySpaceTopResp implements ModelInterface, ArrayAc
     */
     protected static $openAPITypes = [
             'topDataList' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceTopDataDto[]',
-            'collectTimestamp' => 'float',
-            'totalCount' => 'float'
+            'collectTimestamp' => 'int',
+            'totalCount' => 'int'
     ];
 
     /**
@@ -42,8 +42,8 @@ class HealthReportTableSpaceQuerySpaceTopResp implements ModelInterface, ArrayAc
     */
     protected static $openAPIFormats = [
         'topDataList' => null,
-        'collectTimestamp' => null,
-        'totalCount' => null
+        'collectTimestamp' => 'int64',
+        'totalCount' => 'int64'
     ];
 
     /**
@@ -222,7 +222,7 @@ class HealthReportTableSpaceQuerySpaceTopResp implements ModelInterface, ArrayAc
     * Gets collectTimestamp
     *  采集时间
     *
-    * @return float|null
+    * @return int|null
     */
     public function getCollectTimestamp()
     {
@@ -232,7 +232,7 @@ class HealthReportTableSpaceQuerySpaceTopResp implements ModelInterface, ArrayAc
     /**
     * Sets collectTimestamp
     *
-    * @param float|null $collectTimestamp 采集时间
+    * @param int|null $collectTimestamp 采集时间
     *
     * @return $this
     */
@@ -246,7 +246,7 @@ class HealthReportTableSpaceQuerySpaceTopResp implements ModelInterface, ArrayAc
     * Gets totalCount
     *  总大小。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getTotalCount()
     {
@@ -256,7 +256,7 @@ class HealthReportTableSpaceQuerySpaceTopResp implements ModelInterface, ArrayAc
     /**
     * Sets totalCount
     *
-    * @param float|null $totalCount 总大小。
+    * @param int|null $totalCount 总大小。
     *
     * @return $this
     */

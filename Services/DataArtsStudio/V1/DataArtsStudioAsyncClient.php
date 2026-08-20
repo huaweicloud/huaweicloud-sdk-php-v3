@@ -15946,6 +15946,115 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 查询指定用户权限清单
+     *
+     * 查询指定用户权限清单。
+     * 
+     * 权限要求：dayu_admin / te_admin / 数据安全管理员可查询任意用户；普通用户仅可查询自身权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityMemberPermissionsByUserIdAsync($request)
+    {
+        return $this->listSecurityMemberPermissionsByUserIdAsyncWithHttpInfo($request);
+    }
+    
+    public function listSecurityMemberPermissionsByUserIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/security/member-permission/query/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['userName'] !== null) {
+            $queryParams['user_name'] = $localVarParams['userName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['datasourceType'] !== null) {
+            $queryParams['datasource_type'] = $localVarParams['datasourceType'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $queryParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['schemaName'] !== null) {
+            $queryParams['schema_name'] = $localVarParams['schemaName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['accountType'] !== null) {
+            $queryParams['account_type'] = $localVarParams['accountType'];
+        }
+        if ($localVarParams['expireStatus'] !== null) {
+            $queryParams['expire_status'] = $localVarParams['expireStatus'];
+        }
+        if ($localVarParams['startExpireTime'] !== null) {
+            $queryParams['start_expire_time'] = $localVarParams['startExpireTime'];
+        }
+        if ($localVarParams['endExpireTime'] !== null) {
+            $queryParams['end_expire_time'] = $localVarParams['endExpireTime'];
+        }
+        if ($localVarParams['orderBy'] !== null) {
+            $queryParams['order_by'] = $localVarParams['orderBy'];
+        }
+        if ($localVarParams['orderByAsc'] !== null) {
+            $queryParams['order_by_asc'] = $localVarParams['orderByAsc'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberPermissionsByUserIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityMemberPermissionsByUserIdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询用户同步列表
      *
      * 查询用户同步列表。

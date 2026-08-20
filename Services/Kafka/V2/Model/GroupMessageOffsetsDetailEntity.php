@@ -33,8 +33,8 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'partition' => 'string',
-            'messageCurrentOffset' => 'string',
+            'partition' => 'int',
+            'messageCurrentOffset' => 'int',
             'topic' => 'string',
             'messageLogStartOffset' => 'int',
             'lag' => 'int',
@@ -264,7 +264,7 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * Gets partition
     *  分区
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPartition()
     {
@@ -274,7 +274,7 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     /**
     * Sets partition
     *
-    * @param string|null $partition 分区
+    * @param int|null $partition 分区
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     * Gets messageCurrentOffset
     *  消息当前位点
     *
-    * @return string|null
+    * @return int|null
     */
     public function getMessageCurrentOffset()
     {
@@ -298,7 +298,7 @@ class GroupMessageOffsetsDetailEntity implements ModelInterface, ArrayAccess
     /**
     * Sets messageCurrentOffset
     *
-    * @param string|null $messageCurrentOffset 消息当前位点
+    * @param int|null $messageCurrentOffset 消息当前位点
     *
     * @return $this
     */

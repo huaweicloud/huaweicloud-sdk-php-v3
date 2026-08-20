@@ -20,8 +20,8 @@ class TopReferSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * refer  referer值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * refer  **参数解释：** referer值 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TopReferSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * refer  referer值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * refer  **参数解释：** referer值 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * refer  referer值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * refer  **参数解释：** referer值 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TopReferSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * refer  referer值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * refer  **参数解释：** referer值 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TopReferSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * refer  referer值。
-    * value  对应查询类型的值。（流量单位：Byte）
+    * refer  **参数解释：** referer值 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TopReferSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets refer
-    *  referer值。
+    *  **参数解释：** referer值 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     /**
     * Sets refer
     *
-    * @param string|null $refer referer值。
+    * @param string|null $refer **参数解释：** referer值 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TopReferSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  对应查询类型的值。（流量单位：Byte）
+    *  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param int|null $value 对应查询类型的值。（流量单位：Byte）
+    * @param int|null $value **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @return $this
     */

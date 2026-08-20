@@ -1419,8 +1419,8 @@ class RocketMQClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
+        if ($localVarParams['start'] !== null) {
+            $queryParams['start'] = $localVarParams['start'];
         }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
@@ -3119,6 +3119,71 @@ class RocketMQClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ResizeInstanceForRocketMqResponse',
             $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\ResizeInstanceForRocketMqRequest');
+    }
+
+    /**
+     * 重启指定实例
+     *
+     * 重启指定实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restartInstance($request)
+    {
+        return $this->restartInstanceWithHttpInfo($request);
+    }
+
+    public function restartInstanceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/{engine}/instances/{instance_id}/restart';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['engine'] !== null) {
+            $pathParams['engine'] = $localVarParams['engine'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RocketMQ\V2\Model\RestartInstanceResponse',
+            $requestType='\HuaweiCloud\SDK\RocketMQ\V2\Model\RestartInstanceRequest');
     }
 
     /**

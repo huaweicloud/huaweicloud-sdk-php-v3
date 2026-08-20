@@ -20,24 +20,25 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：**  状态Id。 **取值范围：**  不涉及。
-    * belonging  **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
-    * spaceId  **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
-    * name  **参数解释：**  状态名称。 **取值范围：**  不涉及。
-    * code  **参数解释：**  状态code值。 **取值范围：**  不涉及。
-    * definitionType  **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
-    * belongDefinitionType  **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
-    * displayValue  **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
-    * position  **参数解释：**  位置顺序。 **取值范围：**  不涉及。
-    * displayable  **参数解释：**  是否显示。 **取值范围：**  不涉及。
-    * editable  **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
-    * deletable  **参数解释：**  是否可删除。 **取值范围：**  不涉及。
-    * mutable  **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
-    * titlePy  **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
-    * createdBy  **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
-    * createdDate  **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedDate  **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedBy  **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    * id  状态ID。
+    * belonging  工作项的状态属性。
+    * spaceId  状态所属的项目空间ID。
+    * name  状态名称。
+    * code  状态code值。
+    * definitionType  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
+    * belongDefinitionType  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
+    * displayValue  状态名称，和name值相同。
+    * position  位置顺序。
+    * displayable  是否显示。
+    * editable  是否可编辑。
+    * deletable  是否可删除。
+    * mutable  是否可变，即是否为固定值。
+    * titlePy  标题的拼音首字母。
+    * createdBy  创建人用户ID。
+    * createdDate  创建时间。Unix时间戳，精度为毫秒。
+    * modifiedDate  最近修改时间。Unix时间戳，精度为毫秒。
+    * modifiedBy  最近修改人用户ID。
+    * linkageNodeFields  工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
     *
     * @var string[]
     */
@@ -59,29 +60,31 @@ class AlmStatus implements ModelInterface, ArrayAccess
             'createdBy' => 'string',
             'createdDate' => 'int',
             'modifiedDate' => 'int',
-            'modifiedBy' => 'string'
+            'modifiedBy' => 'string',
+            'linkageNodeFields' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：**  状态Id。 **取值范围：**  不涉及。
-    * belonging  **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
-    * spaceId  **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
-    * name  **参数解释：**  状态名称。 **取值范围：**  不涉及。
-    * code  **参数解释：**  状态code值。 **取值范围：**  不涉及。
-    * definitionType  **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
-    * belongDefinitionType  **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
-    * displayValue  **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
-    * position  **参数解释：**  位置顺序。 **取值范围：**  不涉及。
-    * displayable  **参数解释：**  是否显示。 **取值范围：**  不涉及。
-    * editable  **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
-    * deletable  **参数解释：**  是否可删除。 **取值范围：**  不涉及。
-    * mutable  **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
-    * titlePy  **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
-    * createdBy  **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
-    * createdDate  **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedDate  **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedBy  **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    * id  状态ID。
+    * belonging  工作项的状态属性。
+    * spaceId  状态所属的项目空间ID。
+    * name  状态名称。
+    * code  状态code值。
+    * definitionType  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
+    * belongDefinitionType  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
+    * displayValue  状态名称，和name值相同。
+    * position  位置顺序。
+    * displayable  是否显示。
+    * editable  是否可编辑。
+    * deletable  是否可删除。
+    * mutable  是否可变，即是否为固定值。
+    * titlePy  标题的拼音首字母。
+    * createdBy  创建人用户ID。
+    * createdDate  创建时间。Unix时间戳，精度为毫秒。
+    * modifiedDate  最近修改时间。Unix时间戳，精度为毫秒。
+    * modifiedBy  最近修改人用户ID。
+    * linkageNodeFields  工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class AlmStatus implements ModelInterface, ArrayAccess
         'createdBy' => null,
         'createdDate' => 'int64',
         'modifiedDate' => 'int64',
-        'modifiedBy' => null
+        'modifiedBy' => null,
+        'linkageNodeFields' => null
     ];
 
     /**
@@ -129,24 +133,25 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：**  状态Id。 **取值范围：**  不涉及。
-    * belonging  **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
-    * spaceId  **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
-    * name  **参数解释：**  状态名称。 **取值范围：**  不涉及。
-    * code  **参数解释：**  状态code值。 **取值范围：**  不涉及。
-    * definitionType  **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
-    * belongDefinitionType  **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
-    * displayValue  **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
-    * position  **参数解释：**  位置顺序。 **取值范围：**  不涉及。
-    * displayable  **参数解释：**  是否显示。 **取值范围：**  不涉及。
-    * editable  **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
-    * deletable  **参数解释：**  是否可删除。 **取值范围：**  不涉及。
-    * mutable  **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
-    * titlePy  **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
-    * createdBy  **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
-    * createdDate  **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedDate  **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedBy  **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    * id  状态ID。
+    * belonging  工作项的状态属性。
+    * spaceId  状态所属的项目空间ID。
+    * name  状态名称。
+    * code  状态code值。
+    * definitionType  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
+    * belongDefinitionType  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
+    * displayValue  状态名称，和name值相同。
+    * position  位置顺序。
+    * displayable  是否显示。
+    * editable  是否可编辑。
+    * deletable  是否可删除。
+    * mutable  是否可变，即是否为固定值。
+    * titlePy  标题的拼音首字母。
+    * createdBy  创建人用户ID。
+    * createdDate  创建时间。Unix时间戳，精度为毫秒。
+    * modifiedDate  最近修改时间。Unix时间戳，精度为毫秒。
+    * modifiedBy  最近修改人用户ID。
+    * linkageNodeFields  工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
     *
     * @var string[]
     */
@@ -168,29 +173,31 @@ class AlmStatus implements ModelInterface, ArrayAccess
             'createdBy' => 'created_by',
             'createdDate' => 'created_date',
             'modifiedDate' => 'modified_date',
-            'modifiedBy' => 'modified_by'
+            'modifiedBy' => 'modified_by',
+            'linkageNodeFields' => 'linkage_node_fields'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：**  状态Id。 **取值范围：**  不涉及。
-    * belonging  **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
-    * spaceId  **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
-    * name  **参数解释：**  状态名称。 **取值范围：**  不涉及。
-    * code  **参数解释：**  状态code值。 **取值范围：**  不涉及。
-    * definitionType  **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
-    * belongDefinitionType  **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
-    * displayValue  **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
-    * position  **参数解释：**  位置顺序。 **取值范围：**  不涉及。
-    * displayable  **参数解释：**  是否显示。 **取值范围：**  不涉及。
-    * editable  **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
-    * deletable  **参数解释：**  是否可删除。 **取值范围：**  不涉及。
-    * mutable  **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
-    * titlePy  **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
-    * createdBy  **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
-    * createdDate  **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedDate  **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedBy  **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    * id  状态ID。
+    * belonging  工作项的状态属性。
+    * spaceId  状态所属的项目空间ID。
+    * name  状态名称。
+    * code  状态code值。
+    * definitionType  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
+    * belongDefinitionType  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
+    * displayValue  状态名称，和name值相同。
+    * position  位置顺序。
+    * displayable  是否显示。
+    * editable  是否可编辑。
+    * deletable  是否可删除。
+    * mutable  是否可变，即是否为固定值。
+    * titlePy  标题的拼音首字母。
+    * createdBy  创建人用户ID。
+    * createdDate  创建时间。Unix时间戳，精度为毫秒。
+    * modifiedDate  最近修改时间。Unix时间戳，精度为毫秒。
+    * modifiedBy  最近修改人用户ID。
+    * linkageNodeFields  工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
     *
     * @var string[]
     */
@@ -212,29 +219,31 @@ class AlmStatus implements ModelInterface, ArrayAccess
             'createdBy' => 'setCreatedBy',
             'createdDate' => 'setCreatedDate',
             'modifiedDate' => 'setModifiedDate',
-            'modifiedBy' => 'setModifiedBy'
+            'modifiedBy' => 'setModifiedBy',
+            'linkageNodeFields' => 'setLinkageNodeFields'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：**  状态Id。 **取值范围：**  不涉及。
-    * belonging  **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
-    * spaceId  **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
-    * name  **参数解释：**  状态名称。 **取值范围：**  不涉及。
-    * code  **参数解释：**  状态code值。 **取值范围：**  不涉及。
-    * definitionType  **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
-    * belongDefinitionType  **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
-    * displayValue  **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
-    * position  **参数解释：**  位置顺序。 **取值范围：**  不涉及。
-    * displayable  **参数解释：**  是否显示。 **取值范围：**  不涉及。
-    * editable  **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
-    * deletable  **参数解释：**  是否可删除。 **取值范围：**  不涉及。
-    * mutable  **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
-    * titlePy  **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
-    * createdBy  **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
-    * createdDate  **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedDate  **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
-    * modifiedBy  **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    * id  状态ID。
+    * belonging  工作项的状态属性。
+    * spaceId  状态所属的项目空间ID。
+    * name  状态名称。
+    * code  状态code值。
+    * definitionType  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
+    * belongDefinitionType  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
+    * displayValue  状态名称，和name值相同。
+    * position  位置顺序。
+    * displayable  是否显示。
+    * editable  是否可编辑。
+    * deletable  是否可删除。
+    * mutable  是否可变，即是否为固定值。
+    * titlePy  标题的拼音首字母。
+    * createdBy  创建人用户ID。
+    * createdDate  创建时间。Unix时间戳，精度为毫秒。
+    * modifiedDate  最近修改时间。Unix时间戳，精度为毫秒。
+    * modifiedBy  最近修改人用户ID。
+    * linkageNodeFields  工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class AlmStatus implements ModelInterface, ArrayAccess
             'createdBy' => 'getCreatedBy',
             'createdDate' => 'getCreatedDate',
             'modifiedDate' => 'getModifiedDate',
-            'modifiedBy' => 'getModifiedBy'
+            'modifiedBy' => 'getModifiedBy',
+            'linkageNodeFields' => 'getLinkageNodeFields'
     ];
 
     /**
@@ -335,6 +345,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
         $this->container['createdDate'] = isset($data['createdDate']) ? $data['createdDate'] : null;
         $this->container['modifiedDate'] = isset($data['modifiedDate']) ? $data['modifiedDate'] : null;
         $this->container['modifiedBy'] = isset($data['modifiedBy']) ? $data['modifiedBy'] : null;
+        $this->container['linkageNodeFields'] = isset($data['linkageNodeFields']) ? $data['linkageNodeFields'] : null;
     }
 
     /**
@@ -361,7 +372,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：**  状态Id。 **取值范围：**  不涉及。
+    *  状态ID。
     *
     * @return string|null
     */
@@ -373,7 +384,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id **参数解释：**  状态Id。 **取值范围：**  不涉及。
+    * @param string|null $id 状态ID。
     *
     * @return $this
     */
@@ -385,7 +396,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets belonging
-    *  **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
+    *  工作项的状态属性。
     *
     * @return string|null
     */
@@ -397,7 +408,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets belonging
     *
-    * @param string|null $belonging **参数解释：**  工作项的状态属性。 **取值范围：**  - START - IN_PROGRESS - END
+    * @param string|null $belonging 工作项的状态属性。
     *
     * @return $this
     */
@@ -409,7 +420,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets spaceId
-    *  **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
+    *  状态所属的项目空间ID。
     *
     * @return string|null
     */
@@ -421,7 +432,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets spaceId
     *
-    * @param string|null $spaceId **参数解释：**  状态所属的项目空间id。 **取值范围：**  不涉及。
+    * @param string|null $spaceId 状态所属的项目空间ID。
     *
     * @return $this
     */
@@ -433,7 +444,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释：**  状态名称。 **取值范围：**  不涉及。
+    *  状态名称。
     *
     * @return string|null
     */
@@ -445,7 +456,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释：**  状态名称。 **取值范围：**  不涉及。
+    * @param string|null $name 状态名称。
     *
     * @return $this
     */
@@ -457,7 +468,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  **参数解释：**  状态code值。 **取值范围：**  不涉及。
+    *  状态code值。
     *
     * @return string|null
     */
@@ -469,7 +480,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code **参数解释：**  状态code值。 **取值范围：**  不涉及。
+    * @param string|null $code 状态code值。
     *
     * @return $this
     */
@@ -481,7 +492,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets definitionType
-    *  **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
+    *  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
     *
     * @return string|null
     */
@@ -493,7 +504,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets definitionType
     *
-    * @param string|null $definitionType **参数解释：**  状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。 **取值范围：**  不涉及。
+    * @param string|null $definitionType 状态定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。
     *
     * @return $this
     */
@@ -505,7 +516,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets belongDefinitionType
-    *  **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
+    *  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
     *
     * @return int|null
     */
@@ -517,7 +528,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets belongDefinitionType
     *
-    * @param int|null $belongDefinitionType **参数解释：**  状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。 **取值范围：**  不涉及。
+    * @param int|null $belongDefinitionType 状态归属定义级别，1,2,3为系统级，4为租户自定义，5为项目自定义。区别于definition_type。如果为系统级和租户自定义级，在项目中会复制一份元数据，归属于项目空间。
     *
     * @return $this
     */
@@ -529,7 +540,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayValue
-    *  **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
+    *  状态名称，和name值相同。
     *
     * @return string|null
     */
@@ -541,7 +552,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets displayValue
     *
-    * @param string|null $displayValue **参数解释：**  状态名称，和name值相同。 **取值范围：**  不涉及。
+    * @param string|null $displayValue 状态名称，和name值相同。
     *
     * @return $this
     */
@@ -553,7 +564,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets position
-    *  **参数解释：**  位置顺序。 **取值范围：**  不涉及。
+    *  位置顺序。
     *
     * @return int|null
     */
@@ -565,7 +576,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets position
     *
-    * @param int|null $position **参数解释：**  位置顺序。 **取值范围：**  不涉及。
+    * @param int|null $position 位置顺序。
     *
     * @return $this
     */
@@ -577,7 +588,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayable
-    *  **参数解释：**  是否显示。 **取值范围：**  不涉及。
+    *  是否显示。
     *
     * @return int|null
     */
@@ -589,7 +600,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets displayable
     *
-    * @param int|null $displayable **参数解释：**  是否显示。 **取值范围：**  不涉及。
+    * @param int|null $displayable 是否显示。
     *
     * @return $this
     */
@@ -601,7 +612,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets editable
-    *  **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
+    *  是否可编辑。
     *
     * @return int|null
     */
@@ -613,7 +624,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets editable
     *
-    * @param int|null $editable **参数解释：**  是否可编辑。 **取值范围：**  不涉及。
+    * @param int|null $editable 是否可编辑。
     *
     * @return $this
     */
@@ -625,7 +636,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets deletable
-    *  **参数解释：**  是否可删除。 **取值范围：**  不涉及。
+    *  是否可删除。
     *
     * @return int|null
     */
@@ -637,7 +648,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets deletable
     *
-    * @param int|null $deletable **参数解释：**  是否可删除。 **取值范围：**  不涉及。
+    * @param int|null $deletable 是否可删除。
     *
     * @return $this
     */
@@ -649,7 +660,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets mutable
-    *  **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
+    *  是否可变，即是否为固定值。
     *
     * @return int|null
     */
@@ -661,7 +672,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets mutable
     *
-    * @param int|null $mutable **参数解释：**  是否可变，即是否为固定值。 **取值范围：**  不涉及。
+    * @param int|null $mutable 是否可变，即是否为固定值。
     *
     * @return $this
     */
@@ -673,7 +684,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets titlePy
-    *  **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
+    *  标题的拼音首字母。
     *
     * @return string|null
     */
@@ -685,7 +696,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets titlePy
     *
-    * @param string|null $titlePy **参数解释：**  标题的拼音首字母。 **取值范围：**  不涉及。
+    * @param string|null $titlePy 标题的拼音首字母。
     *
     * @return $this
     */
@@ -697,7 +708,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdBy
-    *  **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
+    *  创建人用户ID。
     *
     * @return string|null
     */
@@ -709,7 +720,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets createdBy
     *
-    * @param string|null $createdBy **参数解释：**  创建人用户Id。 **取值范围：**  不涉及。
+    * @param string|null $createdBy 创建人用户ID。
     *
     * @return $this
     */
@@ -721,7 +732,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdDate
-    *  **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
+    *  创建时间。Unix时间戳，精度为毫秒。
     *
     * @return int|null
     */
@@ -733,7 +744,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets createdDate
     *
-    * @param int|null $createdDate **参数解释：**  创建时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
+    * @param int|null $createdDate 创建时间。Unix时间戳，精度为毫秒。
     *
     * @return $this
     */
@@ -745,7 +756,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifiedDate
-    *  **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
+    *  最近修改时间。Unix时间戳，精度为毫秒。
     *
     * @return int|null
     */
@@ -757,7 +768,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets modifiedDate
     *
-    * @param int|null $modifiedDate **参数解释：**  最近修改时间。Unix时间戳，精度为毫秒。 **取值范围：**  不涉及。
+    * @param int|null $modifiedDate 最近修改时间。Unix时间戳，精度为毫秒。
     *
     * @return $this
     */
@@ -769,7 +780,7 @@ class AlmStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifiedBy
-    *  **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    *  最近修改人用户ID。
     *
     * @return string|null
     */
@@ -781,13 +792,37 @@ class AlmStatus implements ModelInterface, ArrayAccess
     /**
     * Sets modifiedBy
     *
-    * @param string|null $modifiedBy **参数解释：**  最近修改人用户Id。 **取值范围：**    不涉及。
+    * @param string|null $modifiedBy 最近修改人用户ID。
     *
     * @return $this
     */
     public function setModifiedBy($modifiedBy)
     {
         $this->container['modifiedBy'] = $modifiedBy;
+        return $this;
+    }
+
+    /**
+    * Gets linkageNodeFields
+    *  工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
+    *
+    * @return bool|null
+    */
+    public function getLinkageNodeFields()
+    {
+        return $this->container['linkageNodeFields'];
+    }
+
+    /**
+    * Sets linkageNodeFields
+    *
+    * @param bool|null $linkageNodeFields 工作流配置中用于标识是否新增“节点责任人/节点结束时间”。
+    *
+    * @return $this
+    */
+    public function setLinkageNodeFields($linkageNodeFields)
+    {
+        $this->container['linkageNodeFields'] = $linkageNodeFields;
         return $this;
     }
 

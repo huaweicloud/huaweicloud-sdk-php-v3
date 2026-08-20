@@ -21,11 +21,11 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-    * renewInquiryResults  |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    * currency  币种。CNY：人民币。值为空代表人民币。
+    * renewInquiryResults  主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * failResourceInfos  |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
+    * failResourceInfos  失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-    * renewInquiryResults  |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    * currency  币种。CNY：人民币。值为空代表人民币。
+    * renewInquiryResults  主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * failResourceInfos  |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
+    * failResourceInfos  失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-    * renewInquiryResults  |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    * currency  币种。CNY：人民币。值为空代表人民币。
+    * renewInquiryResults  主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * failResourceInfos  |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
+    * failResourceInfos  失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-    * renewInquiryResults  |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    * currency  币种。CNY：人民币。值为空代表人民币。
+    * renewInquiryResults  主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * failResourceInfos  |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
+    * failResourceInfos  失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * currency  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
-    * renewInquiryResults  |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    * currency  币种。CNY：人民币。值为空代表人民币。
+    * renewInquiryResults  主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
-    * failResourceInfos  |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
+    * failResourceInfos  失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets currency
-    *  |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    *  币种。CNY：人民币。值为空代表人民币。
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
     /**
     * Sets currency
     *
-    * @param string|null $currency |参数名称：币种。CNY：人民币。USD：美元。| |参数约束及描述：币种。CNY：人民币。USD：美元。|
+    * @param string|null $currency 币种。CNY：人民币。值为空代表人民币。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets renewInquiryResults
-    *  |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    *  主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\RenewInquiryResultInfo[]|null
     */
@@ -255,7 +255,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
     /**
     * Sets renewInquiryResults
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\RenewInquiryResultInfo[]|null $renewInquiryResults |参数名称：主资源（包含从资源）询价结果| |参数约束以及描述：主资源（包含从资源）询价结果|
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\RenewInquiryResultInfo[]|null $renewInquiryResults 主资源（包含从资源）询价结果。具体请参见表RenewInquiryResultInfo。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionalDiscountRatingResults
-    *  |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
+    *  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\OptionalDiscountRatingResultV2[]|null
     */
@@ -303,7 +303,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
     /**
     * Sets optionalDiscountRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\OptionalDiscountRatingResultV2[]|null $optionalDiscountRatingResults |参数名称：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果| |参数约束以及描述：存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果|
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\OptionalDiscountRatingResultV2[]|null $optionalDiscountRatingResults 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表OptionalDiscountRatingResultV2。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failResourceInfos
-    *  |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    *  失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\FailResourceInfo[]|null
     */
@@ -327,7 +327,7 @@ class ListRenewRateOnPeriodResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failResourceInfos
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\FailResourceInfo[]|null $failResourceInfos |参数名称：失败的资源信息列表| |参数约束以及描述：失败的资源信息列表|
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\FailResourceInfo[]|null $failResourceInfos 失败的资源信息列表。具体请参见表FailResourceInfo。
     *
     * @return $this
     */

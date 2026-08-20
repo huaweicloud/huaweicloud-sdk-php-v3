@@ -20,8 +20,8 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
-    * amount  |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    * resourceId  资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
+    * amount  主资源（包含从资源）续订金额。单位为美元
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
-    * amount  |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    * resourceId  资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
+    * amount  主资源（包含从资源）续订金额。单位为美元
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
-    * amount  |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    * resourceId  资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
+    * amount  主资源（包含从资源）续订金额。单位为美元
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
-    * amount  |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    * resourceId  资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
+    * amount  主资源（包含从资源）续订金额。单位为美元
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
-    * amount  |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    * resourceId  资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
+    * amount  主资源（包含从资源）续订金额。单位为美元
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
+    *  资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId |参数名称：资源ID。| |参数约束及描述：资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额|
+    * @param string|null $resourceId 资源ID。请求携带“include_relative_resources”字段，会返回关联资源的主资源ID和续订金额
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets amount
-    *  |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    *  主资源（包含从资源）续订金额。单位为美元
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class RenewInquiryResultInfo implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param string|null $amount |参数名称：主资源（包含从资源）续订金额。单位为元| |参数约束及描述：主资源（包含从资源）续订金额。单位为元|
+    * @param string|null $amount 主资源（包含从资源）续订金额。单位为美元
     *
     * @return $this
     */

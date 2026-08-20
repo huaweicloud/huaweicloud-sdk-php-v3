@@ -29,7 +29,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例11：节省计划
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
-    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * id  唯一标识。
     * billDetailType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * resourceId  资源ID。
@@ -68,6 +68,9 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * periodNum  周期数量，该参数非必填
+    * enterpriseProjectId  企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    * orderType  订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    * paymentType  付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
     *
     * @var string[]
     */
@@ -119,7 +122,10 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'string',
             'subResourceId' => 'string',
             'subResourceName' => 'string',
-            'periodNum' => 'float'
+            'periodNum' => 'float',
+            'enterpriseProjectId' => 'string',
+            'orderType' => 'int',
+            'paymentType' => 'string'
     ];
 
     /**
@@ -133,7 +139,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例11：节省计划
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
-    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * id  唯一标识。
     * billDetailType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * resourceId  资源ID。
@@ -172,6 +178,9 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * periodNum  周期数量，该参数非必填
+    * enterpriseProjectId  企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    * orderType  订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    * paymentType  付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
     *
     * @var string[]
     */
@@ -223,7 +232,10 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         'subResourceTypeName' => null,
         'subResourceId' => null,
         'subResourceName' => null,
-        'periodNum' => 'bigdecimal'
+        'periodNum' => 'bigdecimal',
+        'enterpriseProjectId' => null,
+        'orderType' => 'int32',
+        'paymentType' => null
     ];
 
     /**
@@ -258,7 +270,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例11：节省计划
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
-    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * id  唯一标识。
     * billDetailType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * resourceId  资源ID。
@@ -297,6 +309,9 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * periodNum  周期数量，该参数非必填
+    * enterpriseProjectId  企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    * orderType  订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    * paymentType  付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
     *
     * @var string[]
     */
@@ -348,7 +363,10 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'sub_resource_type_name',
             'subResourceId' => 'sub_resource_id',
             'subResourceName' => 'sub_resource_name',
-            'periodNum' => 'period_num'
+            'periodNum' => 'period_num',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'orderType' => 'order_type',
+            'paymentType' => 'payment_type'
     ];
 
     /**
@@ -362,7 +380,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例11：节省计划
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
-    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * id  唯一标识。
     * billDetailType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * resourceId  资源ID。
@@ -401,6 +419,9 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * periodNum  周期数量，该参数非必填
+    * enterpriseProjectId  企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    * orderType  订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    * paymentType  付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
     *
     * @var string[]
     */
@@ -452,7 +473,10 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'setSubResourceTypeName',
             'subResourceId' => 'setSubResourceId',
             'subResourceName' => 'setSubResourceName',
-            'periodNum' => 'setPeriodNum'
+            'periodNum' => 'setPeriodNum',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'orderType' => 'setOrderType',
+            'paymentType' => 'setPaymentType'
     ];
 
     /**
@@ -466,7 +490,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * resourceTypeName  资源类型名称。例如ECS的资源类型名称为“云主机”。
     * chargingMode  计费模式。 1：包周期3：按需10：预留实例11：节省计划
     * tradeTime  交易时间，即某条消费记录对应的扣费时间。 示例：2020-11-17T06:43:38Z
-    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * tradeId  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     * id  唯一标识。
     * billDetailType  账单类型。1：消费-新购 2：消费-续订 3：消费-变更 4：退款-退订 5：消费-使用 8：消费-自动续订 9：调账-补偿 14：消费-服务支持计划月末扣费 16：调账-扣费 18：消费-按月付费 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 25：消费-抹零补扣 103：消费-按年付费
     * resourceId  资源ID。
@@ -505,6 +529,9 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * periodNum  周期数量，该参数非必填
+    * enterpriseProjectId  企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    * orderType  订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    * paymentType  付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
     *
     * @var string[]
     */
@@ -556,7 +583,10 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
             'subResourceTypeName' => 'getSubResourceTypeName',
             'subResourceId' => 'getSubResourceId',
             'subResourceName' => 'getSubResourceName',
-            'periodNum' => 'getPeriodNum'
+            'periodNum' => 'getPeriodNum',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'orderType' => 'getOrderType',
+            'paymentType' => 'getPaymentType'
     ];
 
     /**
@@ -665,6 +695,9 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
         $this->container['subResourceId'] = isset($data['subResourceId']) ? $data['subResourceId'] : null;
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
+        $this->container['paymentType'] = isset($data['paymentType']) ? $data['paymentType'] : null;
     }
 
     /**
@@ -675,6 +708,18 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['paymentType']) && (mb_strlen($this->container['paymentType']) > 256)) {
+                $invalidProperties[] = "invalid value for 'paymentType', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['paymentType']) && (mb_strlen($this->container['paymentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'paymentType', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -907,7 +952,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets tradeId
-    *  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    *  订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     *
     * @return string|null
     */
@@ -919,7 +964,7 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     /**
     * Sets tradeId
     *
-    * @param string|null $tradeId 订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
+    * @param string|null $tradeId 订单ID或交易ID，扣费维度的唯一标识。 账单类型为1，2，3，4，8和103时为订单ID。其它场景下为交易ID。非月末扣费：应收ID月末扣费：账单ID
     *
     * @return $this
     */
@@ -1838,6 +1883,78 @@ class SubCustomerMonthlyBillDetail implements ModelInterface, ArrayAccess
     public function setPeriodNum($periodNum)
     {
         $this->container['periodNum'] = $periodNum;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目标识（企业项目ID），该参数非必填，最大长度：64
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets orderType
+    *  订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    *
+    * @return int|null
+    */
+    public function getOrderType()
+    {
+        return $this->container['orderType'];
+    }
+
+    /**
+    * Sets orderType
+    *
+    * @param int|null $orderType 订单类型，该参数非必填，1：开通 2：续订 3：变更 4：退订 10：包年/包月转按需 11：按需转包年/包月 13：试用 14：转商用 15：费用调整
+    *
+    * @return $this
+    */
+    public function setOrderType($orderType)
+    {
+        $this->container['orderType'] = $orderType;
+        return $this;
+    }
+
+    /**
+    * Gets paymentType
+    *  付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
+    *
+    * @return string|null
+    */
+    public function getPaymentType()
+    {
+        return $this->container['paymentType'];
+    }
+
+    /**
+    * Sets paymentType
+    *
+    * @param string|null $paymentType 付款方式，节省计划和预留实例有值。枚举值：ALL_UPFRONT：全预付；PARTIAL_UPFRONT：部分预付；NO_UPFRONT：零预付
+    *
+    * @return $this
+    */
+    public function setPaymentType($paymentType)
+    {
+        $this->container['paymentType'] = $paymentType;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupBy  数据分组方式
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupBy  数据分组方式
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupBy  数据分组方式
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupBy  数据分组方式
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupBy  数据分组方式
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupBy
-    *  数据分组方式
+    *  **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
     *
     * @return string|null
     */
@@ -204,7 +204,7 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupBy
     *
-    * @param string|null $groupBy 数据分组方式
+    * @param string|null $groupBy **参数解释：** 数据分组方式 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  按指定的分组方式组织的数据
+    *  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @return map[string,object]|null
     */
@@ -228,7 +228,7 @@ class ShowDomainLocationStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param map[string,object]|null $result 按指定的分组方式组织的数据
+    * @param map[string,object]|null $result **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @return $this
     */

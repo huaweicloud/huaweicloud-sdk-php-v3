@@ -20,25 +20,25 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  报告删除结果
+    * success  报告删除结果
     * id  报告ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => 'bool',
+            'success' => 'bool',
             'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  报告删除结果
+    * success  报告删除结果
     * id  报告ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'result' => null,
+        'success' => null,
         'id' => null
     ];
 
@@ -65,37 +65,37 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  报告删除结果
+    * success  报告删除结果
     * id  报告ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'result' => 'result',
+            'success' => 'success',
             'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  报告删除结果
+    * success  报告删除结果
     * id  报告ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'result' => 'setResult',
+            'success' => 'setSuccess',
             'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  报告删除结果
+    * success  报告删除结果
     * id  报告ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'result' => 'getResult',
+            'success' => 'getSuccess',
             'id' => 'getId'
     ];
 
@@ -157,7 +157,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
@@ -169,9 +169,6 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['result'] === null) {
-            $invalidProperties[] = "'result' can't be null";
-        }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
@@ -190,26 +187,26 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     }
 
     /**
-    * Gets result
+    * Gets success
     *  报告删除结果
     *
-    * @return bool
+    * @return bool|null
     */
-    public function getResult()
+    public function getSuccess()
     {
-        return $this->container['result'];
+        return $this->container['success'];
     }
 
     /**
-    * Sets result
+    * Sets success
     *
-    * @param bool $result 报告删除结果
+    * @param bool|null $success 报告删除结果
     *
     * @return $this
     */
-    public function setResult($result)
+    public function setSuccess($success)
     {
-        $this->container['result'] = $result;
+        $this->container['success'] = $success;
         return $this;
     }
 

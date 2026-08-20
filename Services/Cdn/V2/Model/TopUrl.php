@@ -20,9 +20,9 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  配置开关
-    * limit  热点统计配置指标的上报数量。如top_url 100、top_url 1000
-    * sortByCode  热点统计类指标是否支持按状态码上报
+    * enable  **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
+    * limit  **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
+    * sortByCode  **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  配置开关
-    * limit  热点统计配置指标的上报数量。如top_url 100、top_url 1000
-    * sortByCode  热点统计类指标是否支持按状态码上报
+    * enable  **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
+    * limit  **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
+    * sortByCode  **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TopUrl implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  配置开关
-    * limit  热点统计配置指标的上报数量。如top_url 100、top_url 1000
-    * sortByCode  热点统计类指标是否支持按状态码上报
+    * enable  **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
+    * limit  **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
+    * sortByCode  **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  配置开关
-    * limit  热点统计配置指标的上报数量。如top_url 100、top_url 1000
-    * sortByCode  热点统计类指标是否支持按状态码上报
+    * enable  **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
+    * limit  **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
+    * sortByCode  **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  配置开关
-    * limit  热点统计配置指标的上报数量。如top_url 100、top_url 1000
-    * sortByCode  热点统计类指标是否支持按状态码上报
+    * enable  **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
+    * limit  **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
+    * sortByCode  **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -202,7 +202,7 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  配置开关
+    *  **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
     *
     * @return bool|null
     */
@@ -214,7 +214,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 配置开关
+    * @param bool|null $enable **参数解释：** 配置开关 **约束限制：** 不涉及 **取值范围：** - true：打开 - false：关闭 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  热点统计配置指标的上报数量。如top_url 100、top_url 1000
+    *  **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -238,7 +238,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 热点统计配置指标的上报数量。如top_url 100、top_url 1000
+    * @param int|null $limit **参数解释：** 热点统计配置指标的上报数量 > 如top_url 100、top_url 1000  **约束限制：** 不涉及 **取值范围：** 0-2000 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class TopUrl implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortByCode
-    *  热点统计类指标是否支持按状态码上报
+    *  **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @return bool|null
     */
@@ -262,7 +262,7 @@ class TopUrl implements ModelInterface, ArrayAccess
     /**
     * Sets sortByCode
     *
-    * @param bool|null $sortByCode 热点统计类指标是否支持按状态码上报
+    * @param bool|null $sortByCode **参数解释：** 热点统计类指标是否支持按状态码上报 **约束限制：** 不涉及 **取值范围：** - true：热点统计类指标支持按状态码上报 - false：热点统计类指标不支持按状态码上报 **默认取值：** 不涉及
     *
     * @return $this
     */

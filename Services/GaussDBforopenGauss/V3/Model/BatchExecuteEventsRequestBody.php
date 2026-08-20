@@ -21,7 +21,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * eventInstances  **参数解释**: 事件列表。 **约束限制**: 不涉及。
-    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eventInstances  **参数解释**: 事件列表。 **约束限制**: 不涉及。
-    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * eventInstances  **参数解释**: 事件列表。 **约束限制**: 不涉及。
-    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eventInstances  **参数解释**: 事件列表。 **约束限制**: 不涉及。
-    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eventInstances  **参数解释**: 事件列表。 **约束限制**: 不涉及。
-    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    * operationType  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
@@ -232,7 +232,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationType
-    *  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    *  **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class BatchExecuteEventsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets operationType
     *
-    * @param string $operationType **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口 **默认取值**: 不涉及。
+    * @param string $operationType **参数解释**: 事件操作类型。 **约束限制**: 不涉及。 **取值范围**: - cancel：取消事件 - execute：立即执行 - reservation：预约执行时间窗口  **默认取值**: 不涉及。
     *
     * @return $this
     */

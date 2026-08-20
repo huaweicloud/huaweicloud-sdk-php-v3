@@ -31,6 +31,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * createAt  **参数解释：** 资源池启用的时间，UTC毫秒。 **取值范围：** 不涉及。
     * updateAt  **参数解释：** 资源池最后更新的时间，UTC毫秒。 **取值范围：** 不涉及。
     * flavors  **参数解释：** 当前专属池支持的规格。
+    * poolType  **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    * physicalPoolId  **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -44,7 +46,9 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'createAt' => 'int',
             'updateAt' => 'int',
-            'flavors' => '\HuaweiCloud\SDK\ModelArts\V1\Model\InferFlavor[]'
+            'flavors' => '\HuaweiCloud\SDK\ModelArts\V1\Model\NotebookFlavor[]',
+            'poolType' => 'string',
+            'physicalPoolId' => 'string'
     ];
 
     /**
@@ -59,6 +63,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * createAt  **参数解释：** 资源池启用的时间，UTC毫秒。 **取值范围：** 不涉及。
     * updateAt  **参数解释：** 资源池最后更新的时间，UTC毫秒。 **取值范围：** 不涉及。
     * flavors  **参数解释：** 当前专属池支持的规格。
+    * poolType  **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    * physicalPoolId  **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -72,7 +78,9 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
         'projectId' => null,
         'createAt' => 'int64',
         'updateAt' => 'int64',
-        'flavors' => null
+        'flavors' => null,
+        'poolType' => null,
+        'physicalPoolId' => null
     ];
 
     /**
@@ -108,6 +116,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * createAt  **参数解释：** 资源池启用的时间，UTC毫秒。 **取值范围：** 不涉及。
     * updateAt  **参数解释：** 资源池最后更新的时间，UTC毫秒。 **取值范围：** 不涉及。
     * flavors  **参数解释：** 当前专属池支持的规格。
+    * poolType  **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    * physicalPoolId  **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -121,7 +131,9 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'createAt' => 'create_at',
             'updateAt' => 'update_at',
-            'flavors' => 'flavors'
+            'flavors' => 'flavors',
+            'poolType' => 'pool_type',
+            'physicalPoolId' => 'physical_pool_id'
     ];
 
     /**
@@ -136,6 +148,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * createAt  **参数解释：** 资源池启用的时间，UTC毫秒。 **取值范围：** 不涉及。
     * updateAt  **参数解释：** 资源池最后更新的时间，UTC毫秒。 **取值范围：** 不涉及。
     * flavors  **参数解释：** 当前专属池支持的规格。
+    * poolType  **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    * physicalPoolId  **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -149,7 +163,9 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'createAt' => 'setCreateAt',
             'updateAt' => 'setUpdateAt',
-            'flavors' => 'setFlavors'
+            'flavors' => 'setFlavors',
+            'poolType' => 'setPoolType',
+            'physicalPoolId' => 'setPhysicalPoolId'
     ];
 
     /**
@@ -164,6 +180,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * createAt  **参数解释：** 资源池启用的时间，UTC毫秒。 **取值范围：** 不涉及。
     * updateAt  **参数解释：** 资源池最后更新的时间，UTC毫秒。 **取值范围：** 不涉及。
     * flavors  **参数解释：** 当前专属池支持的规格。
+    * poolType  **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    * physicalPoolId  **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +195,9 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'createAt' => 'getCreateAt',
             'updateAt' => 'getUpdateAt',
-            'flavors' => 'getFlavors'
+            'flavors' => 'getFlavors',
+            'poolType' => 'getPoolType',
+            'physicalPoolId' => 'getPhysicalPoolId'
     ];
 
     /**
@@ -232,6 +252,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     const TYPE_MANAGED_ROMA = 'MANAGED_ROMA';
     const TYPE_DEDICATED = 'DEDICATED';
     const TYPE_DEDICATED_ROMA = 'DEDICATED_ROMA';
+    const POOL_TYPE_LOGICAL = 'LOGICAL';
+    const POOL_TYPE_PHYSICAL = 'PHYSICAL';
     
 
     /**
@@ -268,6 +290,19 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPoolTypeAllowableValues()
+    {
+        return [
+            self::POOL_TYPE_LOGICAL,
+            self::POOL_TYPE_PHYSICAL,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -294,6 +329,8 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
         $this->container['createAt'] = isset($data['createAt']) ? $data['createAt'] : null;
         $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
         $this->container['flavors'] = isset($data['flavors']) ? $data['flavors'] : null;
+        $this->container['poolType'] = isset($data['poolType']) ? $data['poolType'] : null;
+        $this->container['physicalPoolId'] = isset($data['physicalPoolId']) ? $data['physicalPoolId'] : null;
     }
 
     /**
@@ -316,6 +353,14 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getPoolTypeAllowableValues();
+                if (!is_null($this->container['poolType']) && !in_array($this->container['poolType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'poolType', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -554,7 +599,7 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * Gets flavors
     *  **参数解释：** 当前专属池支持的规格。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\InferFlavor[]|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\NotebookFlavor[]|null
     */
     public function getFlavors()
     {
@@ -564,13 +609,61 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flavors
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\InferFlavor[]|null $flavors **参数解释：** 当前专属池支持的规格。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\NotebookFlavor[]|null $flavors **参数解释：** 当前专属池支持的规格。
     *
     * @return $this
     */
     public function setFlavors($flavors)
     {
         $this->container['flavors'] = $flavors;
+        return $this;
+    }
+
+    /**
+    * Gets poolType
+    *  **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    *
+    * @return string|null
+    */
+    public function getPoolType()
+    {
+        return $this->container['poolType'];
+    }
+
+    /**
+    * Sets poolType
+    *
+    * @param string|null $poolType **参数解释：** 资源池类型。 **取值范围：** - LOGICAL ：逻辑池。 - PHYSICAL ：物理池。
+    *
+    * @return $this
+    */
+    public function setPoolType($poolType)
+    {
+        $this->container['poolType'] = $poolType;
+        return $this;
+    }
+
+    /**
+    * Gets physicalPoolId
+    *  **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPhysicalPoolId()
+    {
+        return $this->container['physicalPoolId'];
+    }
+
+    /**
+    * Sets physicalPoolId
+    *
+    * @param string|null $physicalPoolId **参数解释：** 物理资源池ID，逻辑子池对应的父池ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setPhysicalPoolId($physicalPoolId)
+    {
+        $this->container['physicalPoolId'] = $physicalPoolId;
         return $this;
     }
 

@@ -30,8 +30,8 @@ class StepDetail implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'statue' => 'string',
-            'startTime' => 'string',
-            'endTime' => 'string'
+            'startTime' => 'int',
+            'endTime' => 'int'
     ];
 
     /**
@@ -46,8 +46,8 @@ class StepDetail implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'statue' => null,
-        'startTime' => null,
-        'endTime' => null
+        'startTime' => 'int64',
+        'endTime' => 'int64'
     ];
 
     /**
@@ -257,7 +257,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     * Gets startTime
     *  **参数解释**： 开始时间。     **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getStartTime()
     {
@@ -267,7 +267,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime **参数解释**： 开始时间。     **取值范围**： 不涉及。
+    * @param int|null $startTime **参数解释**： 开始时间。     **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     * Gets endTime
     *  **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getEndTime()
     {
@@ -291,7 +291,7 @@ class StepDetail implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
+    * @param int|null $endTime **参数解释**： 结束时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

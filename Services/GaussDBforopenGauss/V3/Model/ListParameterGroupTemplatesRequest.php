@@ -20,9 +20,9 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * xLanguage  **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
+    * offset  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
+    * limit  **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * xLanguage  **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
+    * offset  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
+    * limit  **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * xLanguage  **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
+    * offset  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
+    * limit  **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * xLanguage  **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
+    * offset  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
+    * limit  **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言
-    * offset  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
-    * limit  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * xLanguage  **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
+    * offset  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
+    * limit  **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言
+    *  **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言
+    * @param string|null $xLanguage **参数解释**: 指定接口返回信息的语言类型。 **约束限制**: 不涉及。 **取值范围**: - zh-cn：中文 - en-us：英文  **默认取值**: en-us
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    *  **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
     *
     * @return int|null
     */
@@ -255,7 +255,7 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询），必须为数字，不能为负数。
+    * @param int|null $offset **参数解释**: 索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。例如：该参数指定为0，limit指定为10，则只展示第1~10条数据。 **约束限制**: 不涉及。 **取值范围**: [0, 2147483647] **默认取值**: 默认为0（偏移0条数据，表示从第一条数据开始查询）。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    *  **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @return int|null
     */
@@ -279,7 +279,7 @@ class ListParameterGroupTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询记录数。默认为100，不能为负数，最小值为1，最大值为100。
+    * @param int|null $limit **参数解释**: 查询记录数。例如该参数设定为10，则查询结果最多只显示10条记录。 **约束限制**: 不涉及。 **取值范围**: [1, 100] **默认取值**: 默认为100。
     *
     * @return $this
     */

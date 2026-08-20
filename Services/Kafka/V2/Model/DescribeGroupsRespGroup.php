@@ -20,7 +20,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
@@ -40,7 +40,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
@@ -81,7 +81,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
@@ -101,7 +101,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
@@ -121,7 +121,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * state  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * state  **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * groupId  **参数解释**： 消费组名称。 **取值范围**： 不涉及。
     * coordinatorId  **参数解释**： 协调器编号。 **取值范围**： 不涉及。
@@ -229,7 +229,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    *  **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class DescribeGroupsRespGroup implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state **参数解释**： 消费组状态。 **取值范围**： - Dead：消费组内没有任何成员，且没有任何元数据。 - Empty：消费组内没有任何成员，存在元数据。 - PreparingRebalance：准备开启rebalance。 - CompletingRebalance：所有成员加入group。 - Stable：消费组内成员可正常消费。
+    * @param string|null $state **参数解释**： 消费组状态。 **取值范围**： - DEAD：消费组内没有任何成员，且没有任何元数据。 - EMPTY：消费组内没有任何成员，存在元数据。 - PREPARING_REBALANCE：准备开启rebalance。 - COMPLETING_REBALANCE：所有成员加入group。 - STABLE：消费组内成员可正常消费。
     *
     * @return $this
     */

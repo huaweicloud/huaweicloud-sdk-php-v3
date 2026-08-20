@@ -20,10 +20,10 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configType  配置类别.0：热点统计类
-    * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
-    * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
-    * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * resourceType  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
+    * resourceName  **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
+    * configInfo  **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configType  配置类别.0：热点统计类
-    * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
-    * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
-    * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * resourceType  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
+    * resourceName  **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
+    * configInfo  **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configType  配置类别.0：热点统计类
-    * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
-    * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
-    * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * resourceType  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
+    * resourceName  **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
+    * configInfo  **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configType  配置类别.0：热点统计类
-    * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
-    * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
-    * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * resourceType  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
+    * resourceName  **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
+    * configInfo  **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configType  配置类别.0：热点统计类
-    * resourceType  资源类型。domain:resource_name为域名，account:resource_name为账号
-    * resourceName  资源名称为账号或域名。多个域名以英文逗号分隔
-    * configInfo  配置信息.top指标仅支持ua、refer、url、origin url
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * resourceType  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
+    * resourceName  **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
+    * configInfo  **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -234,7 +234,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets configType
-    *  配置类别.0：热点统计类
+    *  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -246,7 +246,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets configType
     *
-    * @param int|null $configType 配置类别.0：热点统计类
+    * @param int|null $configType **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。domain:resource_name为域名，account:resource_name为账号
+    *  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。domain:resource_name为域名，account:resource_name为账号
+    * @param string $resourceType **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - domain：域名，对应resource_name需配置为域名 - account：账号，对应resource_name需配置为账号 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceName
-    *  资源名称为账号或域名。多个域名以英文逗号分隔
+    *  **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceName
     *
-    * @param string $resourceName 资源名称为账号或域名。多个域名以英文逗号分隔
+    * @param string $resourceName **参数解释：** 资源名称 > 账号或域名  **约束限制：** 不涉及 **取值范围：** 多个资源名称以英文逗号分隔 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets configInfo
-    *  配置信息.top指标仅支持ua、refer、url、origin url
+    *  **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @return object
     */
@@ -318,7 +318,7 @@ class SetStatsConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets configInfo
     *
-    * @param object $configInfo 配置信息.top指标仅支持ua、refer、url、origin url
+    * @param object $configInfo **参数解释：** 配置信息 **约束限制：** 不涉及 **取值范围：** - ua：HTTP请求头User-Agent的值 - refer：HTTP请求头referer的值 - url：客户访问的http地址 - originurl：回源url **默认取值：** 不涉及
     *
     * @return $this
     */

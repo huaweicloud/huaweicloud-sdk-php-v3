@@ -24,6 +24,7 @@ class Spec implements ModelInterface, ArrayAccess
     * volumes  **参数解释**：训练作业挂载卷信息。 **约束限制**：不涉及。
     * logExportPath  logExportPath
     * autoStop  autoStop
+    * retention  retention
     * schedulePolicy  schedulePolicy
     * logExportConfig  logExportConfig
     * notification  notification
@@ -31,6 +32,7 @@ class Spec implements ModelInterface, ArrayAccess
     * outputModel  outputModel
     * assetModel  assetModel
     * assetId  **参数解释**：精调训练作业资产模型ID。
+    * reservedTime  reservedTime
     *
     * @var string[]
     */
@@ -39,13 +41,15 @@ class Spec implements ModelInterface, ArrayAccess
             'volumes' => '\HuaweiCloud\SDK\ModelArts\V1\Model\SpecVolumes[]',
             'logExportPath' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LogExportPath',
             'autoStop' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AutoStop',
+            'retention' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RetentionPolicy',
             'schedulePolicy' => '\HuaweiCloud\SDK\ModelArts\V1\Model\SchedulePolicy',
             'logExportConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LogExportConfig',
             'notification' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Notification',
             'customMetrics' => '\HuaweiCloud\SDK\ModelArts\V1\Model\CustomMetrics[]',
             'outputModel' => '\HuaweiCloud\SDK\ModelArts\V1\Model\OutputModel',
             'assetModel' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AssetModel',
-            'assetId' => 'string'
+            'assetId' => 'string',
+            'reservedTime' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ReserveTime'
     ];
 
     /**
@@ -54,6 +58,7 @@ class Spec implements ModelInterface, ArrayAccess
     * volumes  **参数解释**：训练作业挂载卷信息。 **约束限制**：不涉及。
     * logExportPath  logExportPath
     * autoStop  autoStop
+    * retention  retention
     * schedulePolicy  schedulePolicy
     * logExportConfig  logExportConfig
     * notification  notification
@@ -61,6 +66,7 @@ class Spec implements ModelInterface, ArrayAccess
     * outputModel  outputModel
     * assetModel  assetModel
     * assetId  **参数解释**：精调训练作业资产模型ID。
+    * reservedTime  reservedTime
     *
     * @var string[]
     */
@@ -69,13 +75,15 @@ class Spec implements ModelInterface, ArrayAccess
         'volumes' => null,
         'logExportPath' => null,
         'autoStop' => null,
+        'retention' => null,
         'schedulePolicy' => null,
         'logExportConfig' => null,
         'notification' => null,
         'customMetrics' => null,
         'outputModel' => null,
         'assetModel' => null,
-        'assetId' => null
+        'assetId' => null,
+        'reservedTime' => null
     ];
 
     /**
@@ -105,6 +113,7 @@ class Spec implements ModelInterface, ArrayAccess
     * volumes  **参数解释**：训练作业挂载卷信息。 **约束限制**：不涉及。
     * logExportPath  logExportPath
     * autoStop  autoStop
+    * retention  retention
     * schedulePolicy  schedulePolicy
     * logExportConfig  logExportConfig
     * notification  notification
@@ -112,6 +121,7 @@ class Spec implements ModelInterface, ArrayAccess
     * outputModel  outputModel
     * assetModel  assetModel
     * assetId  **参数解释**：精调训练作业资产模型ID。
+    * reservedTime  reservedTime
     *
     * @var string[]
     */
@@ -120,13 +130,15 @@ class Spec implements ModelInterface, ArrayAccess
             'volumes' => 'volumes',
             'logExportPath' => 'log_export_path',
             'autoStop' => 'auto_stop',
+            'retention' => 'retention',
             'schedulePolicy' => 'schedule_policy',
             'logExportConfig' => 'log_export_config',
             'notification' => 'notification',
             'customMetrics' => 'custom_metrics',
             'outputModel' => 'output_model',
             'assetModel' => 'asset_model',
-            'assetId' => 'asset_id'
+            'assetId' => 'asset_id',
+            'reservedTime' => 'reserved_time'
     ];
 
     /**
@@ -135,6 +147,7 @@ class Spec implements ModelInterface, ArrayAccess
     * volumes  **参数解释**：训练作业挂载卷信息。 **约束限制**：不涉及。
     * logExportPath  logExportPath
     * autoStop  autoStop
+    * retention  retention
     * schedulePolicy  schedulePolicy
     * logExportConfig  logExportConfig
     * notification  notification
@@ -142,6 +155,7 @@ class Spec implements ModelInterface, ArrayAccess
     * outputModel  outputModel
     * assetModel  assetModel
     * assetId  **参数解释**：精调训练作业资产模型ID。
+    * reservedTime  reservedTime
     *
     * @var string[]
     */
@@ -150,13 +164,15 @@ class Spec implements ModelInterface, ArrayAccess
             'volumes' => 'setVolumes',
             'logExportPath' => 'setLogExportPath',
             'autoStop' => 'setAutoStop',
+            'retention' => 'setRetention',
             'schedulePolicy' => 'setSchedulePolicy',
             'logExportConfig' => 'setLogExportConfig',
             'notification' => 'setNotification',
             'customMetrics' => 'setCustomMetrics',
             'outputModel' => 'setOutputModel',
             'assetModel' => 'setAssetModel',
-            'assetId' => 'setAssetId'
+            'assetId' => 'setAssetId',
+            'reservedTime' => 'setReservedTime'
     ];
 
     /**
@@ -165,6 +181,7 @@ class Spec implements ModelInterface, ArrayAccess
     * volumes  **参数解释**：训练作业挂载卷信息。 **约束限制**：不涉及。
     * logExportPath  logExportPath
     * autoStop  autoStop
+    * retention  retention
     * schedulePolicy  schedulePolicy
     * logExportConfig  logExportConfig
     * notification  notification
@@ -172,6 +189,7 @@ class Spec implements ModelInterface, ArrayAccess
     * outputModel  outputModel
     * assetModel  assetModel
     * assetId  **参数解释**：精调训练作业资产模型ID。
+    * reservedTime  reservedTime
     *
     * @var string[]
     */
@@ -180,13 +198,15 @@ class Spec implements ModelInterface, ArrayAccess
             'volumes' => 'getVolumes',
             'logExportPath' => 'getLogExportPath',
             'autoStop' => 'getAutoStop',
+            'retention' => 'getRetention',
             'schedulePolicy' => 'getSchedulePolicy',
             'logExportConfig' => 'getLogExportConfig',
             'notification' => 'getNotification',
             'customMetrics' => 'getCustomMetrics',
             'outputModel' => 'getOutputModel',
             'assetModel' => 'getAssetModel',
-            'assetId' => 'getAssetId'
+            'assetId' => 'getAssetId',
+            'reservedTime' => 'getReservedTime'
     ];
 
     /**
@@ -251,6 +271,7 @@ class Spec implements ModelInterface, ArrayAccess
         $this->container['volumes'] = isset($data['volumes']) ? $data['volumes'] : null;
         $this->container['logExportPath'] = isset($data['logExportPath']) ? $data['logExportPath'] : null;
         $this->container['autoStop'] = isset($data['autoStop']) ? $data['autoStop'] : null;
+        $this->container['retention'] = isset($data['retention']) ? $data['retention'] : null;
         $this->container['schedulePolicy'] = isset($data['schedulePolicy']) ? $data['schedulePolicy'] : null;
         $this->container['logExportConfig'] = isset($data['logExportConfig']) ? $data['logExportConfig'] : null;
         $this->container['notification'] = isset($data['notification']) ? $data['notification'] : null;
@@ -258,6 +279,7 @@ class Spec implements ModelInterface, ArrayAccess
         $this->container['outputModel'] = isset($data['outputModel']) ? $data['outputModel'] : null;
         $this->container['assetModel'] = isset($data['assetModel']) ? $data['assetModel'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
+        $this->container['reservedTime'] = isset($data['reservedTime']) ? $data['reservedTime'] : null;
     }
 
     /**
@@ -381,6 +403,30 @@ class Spec implements ModelInterface, ArrayAccess
     public function setAutoStop($autoStop)
     {
         $this->container['autoStop'] = $autoStop;
+        return $this;
+    }
+
+    /**
+    * Gets retention
+    *  retention
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\RetentionPolicy|null
+    */
+    public function getRetention()
+    {
+        return $this->container['retention'];
+    }
+
+    /**
+    * Sets retention
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\RetentionPolicy|null $retention retention
+    *
+    * @return $this
+    */
+    public function setRetention($retention)
+    {
+        $this->container['retention'] = $retention;
         return $this;
     }
 
@@ -549,6 +595,30 @@ class Spec implements ModelInterface, ArrayAccess
     public function setAssetId($assetId)
     {
         $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
+    * Gets reservedTime
+    *  reservedTime
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ReserveTime|null
+    */
+    public function getReservedTime()
+    {
+        return $this->container['reservedTime'];
+    }
+
+    /**
+    * Sets reservedTime
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ReserveTime|null $reservedTime reservedTime
+    *
+    * @return $this
+    */
+    public function setReservedTime($reservedTime)
+    {
+        $this->container['reservedTime'] = $reservedTime;
         return $this;
     }
 

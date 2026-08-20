@@ -21,22 +21,26 @@ class UpgradeInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  提交升级任务id
+    * jobId  **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
+    * scheduleId  **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'string'
+            'jobId' => 'string',
+            'scheduleId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  提交升级任务id
+    * jobId  **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
+    * scheduleId  **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'jobId' => null,
+        'scheduleId' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class UpgradeInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  提交升级任务id
+    * jobId  **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
+    * scheduleId  **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'jobId' => 'job_id',
+            'scheduleId' => 'schedule_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  提交升级任务id
+    * jobId  **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
+    * scheduleId  **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'jobId' => 'setJobId',
+            'scheduleId' => 'setScheduleId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  提交升级任务id
+    * jobId  **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
+    * scheduleId  **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'jobId' => 'getJobId',
+            'scheduleId' => 'getScheduleId'
     ];
 
     /**
@@ -148,7 +158,8 @@ class UpgradeInstanceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['scheduleId'] = isset($data['scheduleId']) ? $data['scheduleId'] : null;
     }
 
     /**
@@ -174,26 +185,50 @@ class UpgradeInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  提交升级任务id
+    * Gets jobId
+    *  **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
-    public function getBody()
+    public function getJobId()
     {
-        return $this->container['body'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets body
+    * Sets jobId
     *
-    * @param string|null $body 提交升级任务id
+    * @param string|null $jobId **参数解释**： 实例升级任务ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setJobId($jobId)
     {
-        $this->container['body'] = $body;
+        $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets scheduleId
+    *  **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getScheduleId()
+    {
+        return $this->container['scheduleId'];
+    }
+
+    /**
+    * Sets scheduleId
+    *
+    * @param string|null $scheduleId **参数解释**： 实例升级调度任务ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setScheduleId($scheduleId)
+    {
+        $this->container['scheduleId'] = $scheduleId;
         return $this;
     }
 

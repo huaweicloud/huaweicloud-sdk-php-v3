@@ -20,8 +20,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  top100 path访问路径
-    * value  top100path访问次数
+    * path  **参数解释：** top100 path访问路径 **取值范围：** 不涉及
+    * value  **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  top100 path访问路径
-    * value  top100path访问次数
+    * path  **参数解释：** top100 path访问路径 **取值范围：** 不涉及
+    * value  **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  top100 path访问路径
-    * value  top100path访问次数
+    * path  **参数解释：** top100 path访问路径 **取值范围：** 不涉及
+    * value  **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  top100 path访问路径
-    * value  top100path访问次数
+    * path  **参数解释：** top100 path访问路径 **取值范围：** 不涉及
+    * value  **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  top100 path访问路径
-    * value  top100path访问次数
+    * path  **参数解释：** top100 path访问路径 **取值范围：** 不涉及
+    * value  **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  top100 path访问路径
+    *  **参数解释：** top100 path访问路径 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path top100 path访问路径
+    * @param string|null $path **参数解释：** top100 path访问路径 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  top100path访问次数
+    *  **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class TopPathSummary implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param int|null $value top100path访问次数
+    * @param int|null $value **参数解释：** top100 path访问次数 **取值范围：** 不涉及
     *
     * @return $this
     */

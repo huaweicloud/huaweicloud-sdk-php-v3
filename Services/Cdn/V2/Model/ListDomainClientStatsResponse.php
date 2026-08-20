@@ -21,8 +21,8 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceArea  区域
-    * result  按域名维每天客户端访问详情统计
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
+    * result  **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceArea  区域
-    * result  按域名维每天客户端访问详情统计
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
+    * result  **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceArea  区域
-    * result  按域名维每天客户端访问详情统计
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
+    * result  **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceArea  区域
-    * result  按域名维每天客户端访问详情统计
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
+    * result  **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceArea  区域
-    * result  按域名维每天客户端访问详情统计
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
+    * result  **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  区域
+    *  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
     *
     * @return string|null
     */
@@ -204,7 +204,7 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 区域
+    * @param string|null $serviceArea **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  按域名维每天客户端访问详情统计
+    *  **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @return map[string,object][]|null
     */
@@ -228,7 +228,7 @@ class ListDomainClientStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param map[string,object][]|null $result 按域名维每天客户端访问详情统计
+    * @param map[string,object][]|null $result **参数解释：** 按域名维每天客户端访问详情统计 **取值范围：** 不涉及
     *
     * @return $this
     */

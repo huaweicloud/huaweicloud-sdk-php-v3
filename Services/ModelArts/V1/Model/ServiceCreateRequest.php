@@ -29,10 +29,10 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
     * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签。 **约束限制：** 上限20个。
     * workspaceId  **参数解释：** 工作空间ID。 **约束限制：** 不涉及。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。 **默认取值：** 不涉及。
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，比如：[http,8080,metrics]，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 长度不超过255。 **取值范围：** - 协议范围：http/https。 - 端口范围：1-65535。 - 地址范围：仅包含字母、数字、点号（.）、中划线（-)、下划线（_）、斜杠（/）的路径，非斜杠（/）开头。 **默认取值：** 不涉及。
     * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300 （860版本该参数在服务层级做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
@@ -47,10 +47,10 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
             'type' => 'string',
             'deployType' => 'string',
             'groupConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\GroupConfig[]',
-            'runtimeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfig',
+            'runtimeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigCreateRequest',
             'upgradeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UpgradeConfig',
             'ltsStrategy' => 'string',
-            'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfig[]',
+            'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]',
             'tags' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceCreateRequestTags[]',
             'workspaceId' => 'string',
             'schedule' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]',
@@ -71,10 +71,10 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
     * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签。 **约束限制：** 上限20个。
     * workspaceId  **参数解释：** 工作空间ID。 **约束限制：** 不涉及。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。 **默认取值：** 不涉及。
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，比如：[http,8080,metrics]，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 长度不超过255。 **取值范围：** - 协议范围：http/https。 - 端口范围：1-65535。 - 地址范围：仅包含字母、数字、点号（.）、中划线（-)、下划线（_）、斜杠（/）的路径，非斜杠（/）开头。 **默认取值：** 不涉及。
     * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300 （860版本该参数在服务层级做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
@@ -134,10 +134,10 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
     * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签。 **约束限制：** 上限20个。
     * workspaceId  **参数解释：** 工作空间ID。 **约束限制：** 不涉及。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。 **默认取值：** 不涉及。
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，比如：[http,8080,metrics]，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 长度不超过255。 **取值范围：** - 协议范围：http/https。 - 端口范围：1-65535。 - 地址范围：仅包含字母、数字、点号（.）、中划线（-)、下划线（_）、斜杠（/）的路径，非斜杠（/）开头。 **默认取值：** 不涉及。
     * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300 （860版本该参数在服务层级做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
@@ -176,10 +176,10 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
     * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签。 **约束限制：** 上限20个。
     * workspaceId  **参数解释：** 工作空间ID。 **约束限制：** 不涉及。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。 **默认取值：** 不涉及。
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，比如：[http,8080,metrics]，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 长度不超过255。 **取值范围：** - 协议范围：http/https。 - 端口范围：1-65535。 - 地址范围：仅包含字母、数字、点号（.）、中划线（-)、下划线（_）、斜杠（/）的路径，非斜杠（/）开头。 **默认取值：** 不涉及。
     * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300 （860版本该参数在服务层级做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
@@ -218,10 +218,10 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
     * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签。 **约束限制：** 上限20个。
     * workspaceId  **参数解释：** 工作空间ID。 **约束限制：** 不涉及。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。 **默认取值：** 不涉及。
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，比如：[http,8080,metrics]，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 长度不超过255。 **取值范围：** - 协议范围：http/https。 - 端口范围：1-65535。 - 地址范围：仅包含字母、数字、点号（.）、中划线（-)、下划线（_）、斜杠（/）的路径，非斜杠（/）开头。 **默认取值：** 不涉及。
     * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300 （860版本该参数在服务层级做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
@@ -514,7 +514,7 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     * Gets runtimeConfig
     *  runtimeConfig
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfig
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigCreateRequest
     */
     public function getRuntimeConfig()
     {
@@ -524,7 +524,7 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeConfig
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfig $runtimeConfig runtimeConfig
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigCreateRequest $runtimeConfig runtimeConfig
     *
     * @return $this
     */
@@ -584,9 +584,9 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logConfigs
-    *  **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    *  **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfig[]|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]|null
     */
     public function getLogConfigs()
     {
@@ -596,7 +596,7 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logConfigs
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfig[]|null $logConfigs **参数解释：** 日志配置。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]|null $logConfigs **参数解释：** 服务日志配置。 **约束限制：** 数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     *
     * @return $this
     */
@@ -656,7 +656,7 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets schedule
-    *  **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    *  **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     *
     * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null
     */
@@ -668,7 +668,7 @@ class ServiceCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets schedule
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null $schedule **参数解释：** 定时停止配置。 **约束限制：** 最多支持一个定时任务。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null $schedule **参数解释：**  定时停止配置。 **约束限制：**  最多支持一个定时任务。
     *
     * @return $this
     */

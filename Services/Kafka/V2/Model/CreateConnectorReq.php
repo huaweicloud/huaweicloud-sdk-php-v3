@@ -28,7 +28,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'specification' => 'string',
-            'nodeCnt' => 'string',
+            'nodeCnt' => 'int',
             'specCode' => 'string'
     ];
 
@@ -249,7 +249,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     * Gets nodeCnt
     *  Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getNodeCnt()
     {
@@ -259,7 +259,7 @@ class CreateConnectorReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeCnt
     *
-    * @param string|null $nodeCnt Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
+    * @param int|null $nodeCnt Smart Connect节点数量。不能小于2个。 如果不填，默认是2个。
     *
     * @return $this
     */

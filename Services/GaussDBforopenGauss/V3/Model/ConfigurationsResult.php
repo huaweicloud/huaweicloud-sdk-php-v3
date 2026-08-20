@@ -20,15 +20,16 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  参数组ID。
-    * name  参数组名称。
-    * description  参数组描述。
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * haMode  实例类型。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * userDefined  是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    * id  **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
+    * name  **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
+    * description  **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: GaussDB。
+    * nodeType  **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    * haMode  **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * userDefined  **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -38,6 +39,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
             'description' => 'string',
             'datastoreVersion' => 'string',
             'datastoreName' => 'string',
+            'nodeType' => 'string',
             'haMode' => 'string',
             'created' => 'string',
             'updated' => 'string',
@@ -46,15 +48,16 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  参数组ID。
-    * name  参数组名称。
-    * description  参数组描述。
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * haMode  实例类型。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * userDefined  是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    * id  **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
+    * name  **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
+    * description  **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: GaussDB。
+    * nodeType  **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    * haMode  **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * userDefined  **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -64,6 +67,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
         'description' => null,
         'datastoreVersion' => null,
         'datastoreName' => null,
+        'nodeType' => null,
         'haMode' => null,
         'created' => null,
         'updated' => null,
@@ -93,15 +97,16 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  参数组ID。
-    * name  参数组名称。
-    * description  参数组描述。
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * haMode  实例类型。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * userDefined  是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    * id  **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
+    * name  **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
+    * description  **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: GaussDB。
+    * nodeType  **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    * haMode  **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * userDefined  **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -111,6 +116,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
             'description' => 'description',
             'datastoreVersion' => 'datastore_version',
             'datastoreName' => 'datastore_name',
+            'nodeType' => 'node_type',
             'haMode' => 'ha_mode',
             'created' => 'created',
             'updated' => 'updated',
@@ -119,15 +125,16 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  参数组ID。
-    * name  参数组名称。
-    * description  参数组描述。
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * haMode  实例类型。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * userDefined  是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    * id  **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
+    * name  **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
+    * description  **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: GaussDB。
+    * nodeType  **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    * haMode  **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * userDefined  **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -137,6 +144,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'datastoreVersion' => 'setDatastoreVersion',
             'datastoreName' => 'setDatastoreName',
+            'nodeType' => 'setNodeType',
             'haMode' => 'setHaMode',
             'created' => 'setCreated',
             'updated' => 'setUpdated',
@@ -145,15 +153,16 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  参数组ID。
-    * name  参数组名称。
-    * description  参数组描述。
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * haMode  实例类型。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * userDefined  是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    * id  **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
+    * name  **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
+    * description  **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: GaussDB。
+    * nodeType  **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    * haMode  **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
+    * userDefined  **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @var string[]
     */
@@ -163,6 +172,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'datastoreVersion' => 'getDatastoreVersion',
             'datastoreName' => 'getDatastoreName',
+            'nodeType' => 'getNodeType',
             'haMode' => 'getHaMode',
             'created' => 'getCreated',
             'updated' => 'getUpdated',
@@ -232,6 +242,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['datastoreVersion'] = isset($data['datastoreVersion']) ? $data['datastoreVersion'] : null;
         $this->container['datastoreName'] = isset($data['datastoreName']) ? $data['datastoreName'] : null;
+        $this->container['nodeType'] = isset($data['nodeType']) ? $data['nodeType'] : null;
         $this->container['haMode'] = isset($data['haMode']) ? $data['haMode'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
@@ -257,6 +268,9 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['datastoreName'] === null) {
             $invalidProperties[] = "'datastoreName' can't be null";
+        }
+        if ($this->container['nodeType'] === null) {
+            $invalidProperties[] = "'nodeType' can't be null";
         }
         if ($this->container['haMode'] === null) {
             $invalidProperties[] = "'haMode' can't be null";
@@ -286,7 +300,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  参数组ID。
+    *  **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
     *
     * @return string
     */
@@ -298,7 +312,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 参数组ID。
+    * @param string $id **参数解释**: 参数模板ID。参数模板的唯一标识。 **取值范围**: 只能由英文字母、数字组成，且长度为36个字符。
     *
     * @return $this
     */
@@ -310,7 +324,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  参数组名称。
+    *  **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
     *
     * @return string
     */
@@ -322,7 +336,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 参数组名称。
+    * @param string $name **参数解释**: 参数模板名称。 **取值范围**: 参数模板名称在1到64个字符之间，区分大小写，可包含字母、数字、英文中划线、下划线或句点，不能包含其他特殊字符。
     *
     * @return $this
     */
@@ -334,7 +348,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  参数组描述。
+    *  **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
     *
     * @return string|null
     */
@@ -346,7 +360,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 参数组描述。
+    * @param string|null $description **参数解释**: 参数模板描述。 **取值范围**: 描述不能超过256个字符，且不能包含回车和 ! < \" = ' > &这些特殊字符。
     *
     * @return $this
     */
@@ -358,7 +372,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreVersion
-    *  引擎版本。
+    *  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -370,7 +384,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreVersion
     *
-    * @param string $datastoreVersion 引擎版本。
+    * @param string $datastoreVersion **参数解释**: 引擎版本。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -382,7 +396,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastoreName
-    *  引擎名称。
+    *  **参数解释**: 引擎名称。 **取值范围**: GaussDB。
     *
     * @return string
     */
@@ -394,7 +408,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets datastoreName
     *
-    * @param string $datastoreName 引擎名称。
+    * @param string $datastoreName **参数解释**: 引擎名称。 **取值范围**: GaussDB。
     *
     * @return $this
     */
@@ -405,8 +419,32 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets nodeType
+    *  **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    *
+    * @return string
+    */
+    public function getNodeType()
+    {
+        return $this->container['nodeType'];
+    }
+
+    /**
+    * Sets nodeType
+    *
+    * @param string $nodeType **参数解释**: 节点类型。 **取值范围**: - independent：独立部署。 - ha：集中式。 - combined：混合部署。
+    *
+    * @return $this
+    */
+    public function setNodeType($nodeType)
+    {
+        $this->container['nodeType'] = $nodeType;
+        return $this;
+    }
+
+    /**
     * Gets haMode
-    *  实例类型。
+    *  **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
     *
     * @return string
     */
@@ -418,7 +456,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets haMode
     *
-    * @param string $haMode 实例类型。
+    * @param string $haMode **参数解释**: 实例类型。 **取值范围**: - Enterprise：分布式实例（企业版）。 - centralization_standard：集中式版实例。  区分大小写。
     *
     * @return $this
     */
@@ -430,7 +468,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets created
-    *  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
+    *  **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -442,7 +480,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets created
     *
-    * @param string $created 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
+    * @param string $created **参数解释**: 创建时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -454,7 +492,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets updated
-    *  更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
+    *  **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
     *
     * @return string
     */
@@ -466,7 +504,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets updated
     *
-    * @param string $updated 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
+    * @param string $updated **参数解释**: 更新时间，格式为\"yyyy-MM-ddTHH:mm:ssZ\"。例如：2024-07-03T14:18:55。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -478,7 +516,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets userDefined
-    *  是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    *  **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @return bool
     */
@@ -490,7 +528,7 @@ class ConfigurationsResult implements ModelInterface, ArrayAccess
     /**
     * Sets userDefined
     *
-    * @param bool $userDefined 是否是用户自定义参数模板：  - false，表示为系统默认参数模板。 - true，表示为用户自定义参数模板。
+    * @param bool $userDefined **参数解释**: 是否是用户自定义参数模板。 **取值范围**: - false：表示为系统默认参数模板。 - true：表示为用户自定义参数模板。
     *
     * @return $this
     */

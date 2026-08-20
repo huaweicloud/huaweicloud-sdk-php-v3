@@ -44,8 +44,8 @@ class ShowInstanceHealthReportResponse implements ModelInterface, ArrayAccess
             'taskId' => 'string',
             'summaryInfo' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportSummaryInfo',
             'instanceInfo' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportInstanceInfo',
-            'performanceStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportPerformanceStat',
-            'diskStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportDiskStat',
+            'performanceStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportPerformanceStatInfo',
+            'diskStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportDiskStatInfo',
             'tableSpaceStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceStat',
             'slowLogStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportSlowLogStat',
             'fullSqlStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportFullSqlStat',
@@ -453,7 +453,7 @@ class ShowInstanceHealthReportResponse implements ModelInterface, ArrayAccess
     * Gets performanceStat
     *  performanceStat
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportPerformanceStat|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportPerformanceStatInfo|null
     */
     public function getPerformanceStat()
     {
@@ -463,7 +463,7 @@ class ShowInstanceHealthReportResponse implements ModelInterface, ArrayAccess
     /**
     * Sets performanceStat
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportPerformanceStat|null $performanceStat performanceStat
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportPerformanceStatInfo|null $performanceStat performanceStat
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class ShowInstanceHealthReportResponse implements ModelInterface, ArrayAccess
     * Gets diskStat
     *  diskStat
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportDiskStat|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\HealthReportDiskStatInfo|null
     */
     public function getDiskStat()
     {
@@ -487,7 +487,7 @@ class ShowInstanceHealthReportResponse implements ModelInterface, ArrayAccess
     /**
     * Sets diskStat
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportDiskStat|null $diskStat diskStat
+    * @param \HuaweiCloud\SDK\Das\V3\Model\HealthReportDiskStatInfo|null $diskStat diskStat
     *
     * @return $this
     */

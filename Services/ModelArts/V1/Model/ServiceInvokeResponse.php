@@ -35,6 +35,7 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
     * requestRetryCntMax  **参数解释：** proxy支持请求重调度的重试次数 **取值范围：** [1, 10]。
     * requestRetryIntervalMs  **参数解释：** proxy支持请求重调度的重试间隔，单位ms **取值范围：** [1, 10000]。
     * fuseConfigs  fuseConfigs
+    * elbConnection  elbConnection
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
             'requestRetryEnable' => 'bool',
             'requestRetryCntMax' => 'int',
             'requestRetryIntervalMs' => 'int',
-            'fuseConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FuseConfig'
+            'fuseConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FuseConfig',
+            'elbConnection' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ElbConnectionResponse'
     ];
 
     /**
@@ -73,6 +75,7 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
     * requestRetryCntMax  **参数解释：** proxy支持请求重调度的重试次数 **取值范围：** [1, 10]。
     * requestRetryIntervalMs  **参数解释：** proxy支持请求重调度的重试间隔，单位ms **取值范围：** [1, 10000]。
     * fuseConfigs  fuseConfigs
+    * elbConnection  elbConnection
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
         'requestRetryEnable' => null,
         'requestRetryCntMax' => 'int32',
         'requestRetryIntervalMs' => 'int32',
-        'fuseConfigs' => null
+        'fuseConfigs' => null,
+        'elbConnection' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
     * requestRetryCntMax  **参数解释：** proxy支持请求重调度的重试次数 **取值范围：** [1, 10]。
     * requestRetryIntervalMs  **参数解释：** proxy支持请求重调度的重试间隔，单位ms **取值范围：** [1, 10000]。
     * fuseConfigs  fuseConfigs
+    * elbConnection  elbConnection
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
             'requestRetryEnable' => 'request_retry_enable',
             'requestRetryCntMax' => 'request_retry_cnt_max',
             'requestRetryIntervalMs' => 'request_retry_interval_ms',
-            'fuseConfigs' => 'fuse_configs'
+            'fuseConfigs' => 'fuse_configs',
+            'elbConnection' => 'elb_connection'
     ];
 
     /**
@@ -170,6 +176,7 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
     * requestRetryCntMax  **参数解释：** proxy支持请求重调度的重试次数 **取值范围：** [1, 10]。
     * requestRetryIntervalMs  **参数解释：** proxy支持请求重调度的重试间隔，单位ms **取值范围：** [1, 10000]。
     * fuseConfigs  fuseConfigs
+    * elbConnection  elbConnection
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
             'requestRetryEnable' => 'setRequestRetryEnable',
             'requestRetryCntMax' => 'setRequestRetryCntMax',
             'requestRetryIntervalMs' => 'setRequestRetryIntervalMs',
-            'fuseConfigs' => 'setFuseConfigs'
+            'fuseConfigs' => 'setFuseConfigs',
+            'elbConnection' => 'setElbConnection'
     ];
 
     /**
@@ -208,6 +216,7 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
     * requestRetryCntMax  **参数解释：** proxy支持请求重调度的重试次数 **取值范围：** [1, 10]。
     * requestRetryIntervalMs  **参数解释：** proxy支持请求重调度的重试间隔，单位ms **取值范围：** [1, 10000]。
     * fuseConfigs  fuseConfigs
+    * elbConnection  elbConnection
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
             'requestRetryEnable' => 'getRequestRetryEnable',
             'requestRetryCntMax' => 'getRequestRetryCntMax',
             'requestRetryIntervalMs' => 'getRequestRetryIntervalMs',
-            'fuseConfigs' => 'getFuseConfigs'
+            'fuseConfigs' => 'getFuseConfigs',
+            'elbConnection' => 'getElbConnection'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
         $this->container['requestRetryCntMax'] = isset($data['requestRetryCntMax']) ? $data['requestRetryCntMax'] : null;
         $this->container['requestRetryIntervalMs'] = isset($data['requestRetryIntervalMs']) ? $data['requestRetryIntervalMs'] : null;
         $this->container['fuseConfigs'] = isset($data['fuseConfigs']) ? $data['fuseConfigs'] : null;
+        $this->container['elbConnection'] = isset($data['elbConnection']) ? $data['elbConnection'] : null;
     }
 
     /**
@@ -692,6 +703,30 @@ class ServiceInvokeResponse implements ModelInterface, ArrayAccess
     public function setFuseConfigs($fuseConfigs)
     {
         $this->container['fuseConfigs'] = $fuseConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets elbConnection
+    *  elbConnection
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ElbConnectionResponse|null
+    */
+    public function getElbConnection()
+    {
+        return $this->container['elbConnection'];
+    }
+
+    /**
+    * Sets elbConnection
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ElbConnectionResponse|null $elbConnection elbConnection
+    *
+    * @return $this
+    */
+    public function setElbConnection($elbConnection)
+    {
+        $this->container['elbConnection'] = $elbConnection;
         return $this;
     }
 

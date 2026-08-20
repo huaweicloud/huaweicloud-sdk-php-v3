@@ -232,7 +232,7 @@ class FullSqlComponetResult implements ModelInterface, ArrayAccess
         'lockTime' => 'int64',
         'lockWaitCount' => 'int64',
         'lockWaitTime' => 'int64',
-        'details' => 'int64',
+        'details' => null,
         'isSlowSql' => null,
         'advise' => null,
         'finishStatus' => null,

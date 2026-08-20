@@ -22,28 +22,32 @@ class ListPluginExtensionsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  查询实例插件拓展信息的实例ID
-    * body  body
+    * dbName  **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * pluginName  **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'instanceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListPluginExtensionsRequestBody'
+            'dbName' => 'string',
+            'pluginName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  查询实例插件拓展信息的实例ID
-    * body  body
+    * dbName  **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * pluginName  **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
         'instanceId' => null,
-        'body' => null
+        'dbName' => null,
+        'pluginName' => null
     ];
 
     /**
@@ -71,42 +75,48 @@ class ListPluginExtensionsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  查询实例插件拓展信息的实例ID
-    * body  body
+    * dbName  **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * pluginName  **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
             'instanceId' => 'instance_id',
-            'body' => 'body'
+            'dbName' => 'db_name',
+            'pluginName' => 'plugin_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  查询实例插件拓展信息的实例ID
-    * body  body
+    * dbName  **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * pluginName  **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
             'instanceId' => 'setInstanceId',
-            'body' => 'setBody'
+            'dbName' => 'setDbName',
+            'pluginName' => 'setPluginName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * instanceId  查询实例插件拓展信息的实例ID
-    * body  body
+    * dbName  **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    * pluginName  **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
             'instanceId' => 'getInstanceId',
-            'body' => 'getBody'
+            'dbName' => 'getDbName',
+            'pluginName' => 'getPluginName'
     ];
 
     /**
@@ -184,7 +194,8 @@ class ListPluginExtensionsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['dbName'] = isset($data['dbName']) ? $data['dbName'] : null;
+        $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
     }
 
     /**
@@ -205,6 +216,12 @@ class ListPluginExtensionsRequest implements ModelInterface, ArrayAccess
 
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['dbName'] === null) {
+            $invalidProperties[] = "'dbName' can't be null";
+        }
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
         }
         return $invalidProperties;
     }
@@ -269,26 +286,50 @@ class ListPluginExtensionsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets dbName
+    *  **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListPluginExtensionsRequestBody|null
+    * @return string
     */
-    public function getBody()
+    public function getDbName()
     {
-        return $this->container['body'];
+        return $this->container['dbName'];
     }
 
     /**
-    * Sets body
+    * Sets dbName
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ListPluginExtensionsRequestBody|null $body body
+    * @param string $dbName **参数解释**: 数据库名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setDbName($dbName)
     {
-        $this->container['body'] = $body;
+        $this->container['dbName'] = $dbName;
+        return $this;
+    }
+
+    /**
+    * Gets pluginName
+    *  **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return string
+    */
+    public function getPluginName()
+    {
+        return $this->container['pluginName'];
+    }
+
+    /**
+    * Sets pluginName
+    *
+    * @param string $pluginName **参数解释**: 插件名称。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setPluginName($pluginName)
+    {
+        $this->container['pluginName'] = $pluginName;
         return $this;
     }
 

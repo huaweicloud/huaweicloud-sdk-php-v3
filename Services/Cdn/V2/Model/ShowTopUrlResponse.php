@@ -21,8 +21,8 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
-    * topUrlSummary  详情数据对象。
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
+    * topUrlSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
-    * topUrlSummary  详情数据对象。
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
+    * topUrlSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
-    * topUrlSummary  详情数据对象。
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
+    * topUrlSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
-    * topUrlSummary  详情数据对象。
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
+    * topUrlSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceArea  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
-    * topUrlSummary  详情数据对象。
+    * serviceArea  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
+    * topUrlSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -192,7 +192,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    *  **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
     *
     * @return string|null
     */
@@ -204,7 +204,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 服务区域：mainland_china(中国大陆)，outside_mainland_china(中国大陆境外)，默认为mainland_china。
+    * @param string|null $serviceArea **参数解释：** 服务范围 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球
     *
     * @return $this
     */
@@ -216,7 +216,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topUrlSummary
-    *  详情数据对象。
+    *  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null
     */
@@ -228,7 +228,7 @@ class ShowTopUrlResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topUrlSummary
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null $topUrlSummary 详情数据对象。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopUrlSummary[]|null $topUrlSummary **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @return $this
     */

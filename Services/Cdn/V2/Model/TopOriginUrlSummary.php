@@ -20,9 +20,9 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originUrl  回源url名称
-    * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    * originUrl  **参数解释：** 回源url **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * ratio  **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originUrl  回源url名称
-    * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    * originUrl  **参数解释：** 回源url **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * ratio  **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originUrl  回源url名称
-    * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    * originUrl  **参数解释：** 回源url **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * ratio  **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originUrl  回源url名称
-    * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    * originUrl  **参数解释：** 回源url **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * ratio  **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originUrl  回源url名称
-    * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    * originUrl  **参数解释：** 回源url **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * ratio  **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets originUrl
-    *  回源url名称
+    *  **参数解释：** 回源url **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets originUrl
     *
-    * @param string|null $originUrl 回源url名称
+    * @param string|null $originUrl **参数解释：** 回源url **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  对应查询类型的值。（流量单位：Byte）
+    *  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param int|null $value 对应查询类型的值。（流量单位：Byte）
+    * @param int|null $value **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets ratio
-    *  该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    *  **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @return double|null
     */
@@ -256,7 +256,7 @@ class TopOriginUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets ratio
     *
-    * @param double|null $ratio 该origin url的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
+    * @param double|null $ratio **参数解释：** 该origin url的流量（或请求数）占当前查询条件下总流量（或请求数）的比例 **取值范围：** 保留4位小数
     *
     * @return $this
     */

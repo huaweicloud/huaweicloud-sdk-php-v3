@@ -20,11 +20,11 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  URL名称。
-    * value  对应查询类型的值。（流量单位：Byte）
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * url  **参数解释：** URL名称 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  URL名称。
-    * value  对应查询类型的值。（流量单位：Byte）
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * url  **参数解释：** URL名称 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  URL名称。
-    * value  对应查询类型的值。（流量单位：Byte）
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * url  **参数解释：** URL名称 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  URL名称。
-    * value  对应查询类型的值。（流量单位：Byte）
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * url  **参数解释：** URL名称 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  URL名称。
-    * value  对应查询类型的值。（流量单位：Byte）
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
+    * url  **参数解释：** URL名称 **取值范围：** 不涉及
+    * value  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  URL名称。
+    *  **参数解释：** URL名称 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url URL名称。
+    * @param string|null $url **参数解释：** URL名称 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  对应查询类型的值。（流量单位：Byte）
+    *  **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param int|null $value 对应查询类型的值。（流量单位：Byte）
+    * @param int|null $value **参数解释：** 对应查询类型的值 **取值范围：** 若值为流量，流量单位：Byte
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  查询起始时间戳。
+    *  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 查询起始时间戳。
+    * @param int|null $startTime **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询结束时间戳
+    *  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 查询结束时间戳
+    * @param int|null $endTime **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets statType
-    *  参数类型支持：flux(流量)，req_num(请求总数)。
+    *  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class TopUrlSummary implements ModelInterface, ArrayAccess
     /**
     * Sets statType
     *
-    * @param string|null $statType 参数类型支持：flux(流量)，req_num(请求总数)。
+    * @param string|null $statType **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @return $this
     */

@@ -20,18 +20,18 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * domainName  订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * groupBy  数据分组方式，可选domain，默认不分组
-    * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
-    * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
-    * isp  运营商名称。如果IP归属地未知，该字段返回null。
-    * language  语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    * action  **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
+    * domainName  **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
+    * startTime  **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * endTime  **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
+    * interval  **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
+    * statType  **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
+    * country  **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
+    * province  **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
+    * isp  **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * language  **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * domainName  订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * groupBy  数据分组方式，可选domain，默认不分组
-    * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
-    * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
-    * isp  运营商名称。如果IP归属地未知，该字段返回null。
-    * language  语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    * action  **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
+    * domainName  **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
+    * startTime  **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * endTime  **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
+    * interval  **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
+    * statType  **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
+    * country  **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
+    * province  **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
+    * isp  **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * language  **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * domainName  订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * groupBy  数据分组方式，可选domain，默认不分组
-    * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
-    * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
-    * isp  运营商名称。如果IP归属地未知，该字段返回null。
-    * language  语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    * action  **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
+    * domainName  **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
+    * startTime  **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * endTime  **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
+    * interval  **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
+    * statType  **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
+    * country  **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
+    * province  **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
+    * isp  **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * language  **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * domainName  订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * groupBy  数据分组方式，可选domain，默认不分组
-    * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
-    * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
-    * isp  运营商名称。如果IP归属地未知，该字段返回null。
-    * language  语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    * action  **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
+    * domainName  **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
+    * startTime  **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * endTime  **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
+    * interval  **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
+    * statType  **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
+    * country  **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
+    * province  **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
+    * isp  **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * language  **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * domainName  订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * groupBy  数据分组方式，可选domain，默认不分组
-    * interval  查询时间间隔，单位：秒
-    * serviceArea  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * country  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
-    * province  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
-    * isp  运营商名称。如果IP归属地未知，该字段返回null。
-    * language  语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    * action  **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
+    * domainName  **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
+    * startTime  **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * endTime  **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
+    * groupBy  **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
+    * interval  **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
+    * statType  **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
+    * country  **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
+    * province  **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
+    * isp  **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * language  **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @var string[]
     */
@@ -295,7 +295,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  **参数解释：** 规则行为 **约束限制：** 不涉及
+    *  **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action **参数解释：** 规则行为 **约束限制：** 不涉及
+    * @param string|null $action **参数解释：** 导出数据类型 **约束限制：** 不涉及 **取值范围：** - reports_detail：基础话单数据导出 - top_url_detail：TOP URL数据导出 - top_ua_detail：TOP UA数据导出 - top_referer_detail：TOP referer数据导出 - top_ip_detail：TOP IP数据导出 - isp_detail：运营商数据导出, - top_path_detail： TOP path数据导出, - uv：UV数据导出 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
+    *  **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 订阅的域名列表，支持同时输入多个域名，多个域名用半角逗号（,）分隔；说明：如果该参数为all，则为账号下的所有域名订阅运营报表。
+    * @param string|null $domainName **参数解释：** 订阅的域名列表 > 支持同时输入多个域名  **约束限制：** 不涉及 **取值范围：** - 多个域名用半角逗号（,）分隔 - 如果该参数为all，则为账号下的所有域名订阅运营报表 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    *  **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -355,7 +355,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * @param int|null $startTime **参数解释：** 导出起始时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -367,7 +367,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    *  **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -379,7 +379,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * @param int|null $endTime **参数解释：** 导出结束时间 **约束限制：** 不涉及 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupBy
-    *  数据分组方式，可选domain，默认不分组
+    *  **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
     *
     * @return string|null
     */
@@ -403,7 +403,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets groupBy
     *
-    * @param string|null $groupBy 数据分组方式，可选domain，默认不分组
+    * @param string|null $groupBy **参数解释：** 数据分组方式 **约束限制：** 不涉及 **取值范围：** domain：按域名分组 **默认取值：** 默认不分组
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets interval
-    *  查询时间间隔，单位：秒
+    *  **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -427,7 +427,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets interval
     *
-    * @param int|null $interval 查询时间间隔，单位：秒
+    * @param int|null $interval **参数解释：** 查询时间粒度 **约束限制：** 当导出时间跨度超过90天时，仅支持1小时粒度（3600） **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
+    *  **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
     *
     * @return string|null
     */
@@ -451,7 +451,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea **参数解释：** 域名服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china: 中国大陆 - outside_mainland_china: 中国大陆境外 - global: 全球  **默认取值：** mainland_china: 中国大陆
+    * @param string|null $serviceArea **参数解释：** 服务范围 **约束限制：** 服务范围为中国大陆或全球时，加速域名需要到工信部备案 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 - global：全球 **默认取值：** mainland_china：中国大陆
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets statType
-    *  参数类型支持：flux(流量)，req_num(请求总数)。
+    *  **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets statType
     *
-    * @param string|null $statType 参数类型支持：flux(流量)，req_num(请求总数)。
+    * @param string|null $statType **参数解释：** 统计指标类型 **约束限制：** 不涉及 **取值范围：** - flux：流量 - req_num：请求总数 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets country
-    *  - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
+    *  **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets country
     *
-    * @param string|null $country - 国家&地区编码，多个以英文逗号分隔，all表示全部，取值见附录 - 访问运营商统计数据时不能填写 - 访问top_url数据时不能填写 - 访问区域情况数据时只能填写cn(中国)
+    * @param string|null $country **参数解释：** 国家&地区编码 **约束限制：** - 查询运营商统计数据时，不传该参数 - 查询top_url数据时，不传该参数 - 查询区域情况数据时，该参数传cn（中国） **取值范围：** - 多个以英文逗号分隔 - all表示全部，取值见附录 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets province
-    *  省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
+    *  **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -523,7 +523,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets province
     *
-    * @param string|null $province 省份编码，当country为cn（中国）时有效，多个以英文逗号分隔，all表示全部，取值见附录
+    * @param string|null $province **参数解释：** 省份编码： **约束限制：** 当country为cn（中国）时，该参数有效 **取值范围：** all表示全部，取值见附录 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isp
-    *  运营商名称。如果IP归属地未知，该字段返回null。
+    *  **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets isp
     *
-    * @param string|null $isp 运营商名称。如果IP归属地未知，该字段返回null。
+    * @param string|null $isp **参数解释：** 运营商名称 > 如果IP归属地未知，该字段返回null  **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    *  **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class ExportTaskVo implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 语言，支持zh(中文)，en(英文)两种，如果不传默认为zh
+    * @param string|null $language **参数解释：** 语言 **约束限制：** 不涉及 **取值范围：** - zh：中文 - en：英文 **默认取值：** zh：中文
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * officialWebsiteRatingResult  officialWebsiteRatingResult
-    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * optionalDiscountRatingResults  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     * currency  币种。 USD：美元。 值为空代表美元。
     *
     * @var string[]
@@ -227,7 +227,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionalDiscountRatingResults
-    *  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    *  存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\OptionalDiscountRatingResult[]|null
     */
@@ -239,7 +239,7 @@ class ListRateOnPeriodDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets optionalDiscountRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OptionalDiscountRatingResult[]|null $optionalDiscountRatingResults 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见表4。
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\OptionalDiscountRatingResult[]|null $optionalDiscountRatingResults 存在可选折扣优惠时返回折扣优惠维度询价结果，每个折扣优惠一组询价结果，具体参见OptionalDiscountRatingResult。
     *
     * @return $this
     */

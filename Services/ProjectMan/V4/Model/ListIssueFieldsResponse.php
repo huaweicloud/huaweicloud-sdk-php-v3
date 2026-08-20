@@ -28,7 +28,7 @@ class ListIssueFieldsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'page' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\PageVO',
-            'result' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\FieldVO[]'
+            'result' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\FieldLongDateVO[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ListIssueFieldsResponse implements ModelInterface, ArrayAccess
     * Gets result
     *  返回数据
     *
-    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\FieldVO[]|null
+    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\FieldLongDateVO[]|null
     */
     public function getResult()
     {
@@ -222,7 +222,7 @@ class ListIssueFieldsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\FieldVO[]|null $result 返回数据
+    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\FieldLongDateVO[]|null $result 返回数据
     *
     * @return $this
     */

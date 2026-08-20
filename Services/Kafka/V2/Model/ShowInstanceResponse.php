@@ -34,7 +34,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -84,7 +84,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
-    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 0-16。
     * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
@@ -216,7 +216,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -266,7 +266,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
-    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 0-16。
     * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
@@ -419,7 +419,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -469,7 +469,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
-    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 0-16。
     * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
@@ -601,7 +601,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -651,7 +651,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
-    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 0-16。
     * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
@@ -783,7 +783,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  **参数解释**： 实例连接端口。 **取值范围**： 不涉及。
     * status  **参数解释**： 实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。 **取值范围**： 不涉及。
     * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
-    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    * resourceSpecCode  **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     * chargingMode  **参数解释**： 付费模式。 **取值范围**： [- 1表示按需计费。 - 0表示包年/包月计费。](tag:hws,hws_hk,ctc,cmcc,ax,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [- 1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs,fcs,sbc,hk_sbc)
     * vpcId  **参数解释**： VPC ID。 **取值范围**： 不涉及。
     * vpcName  **参数解释**： VPC的名称。 **取值范围**： 不涉及。
@@ -833,7 +833,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * ipv6Enable  **参数解释**： 是否开启IPv6。 **取值范围**： - true：开启 - false：不开启
     * ipv6ConnectAddresses  **参数解释**： IPv6的连接地址。
     * connectorEnable  **参数解释**： 是否开启转储。 **取值范围**： - true：开启 - false：不开启
-    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * connectorNodeNum  **参数解释**： connector节点数量。 **取值范围**： 0-16。
     * connectorId  **参数解释**： 转储任务ID。 **取值范围**： 不涉及。
     * restEnable  **参数解释**： 是否开启Kafka rest功能。 **取值范围**： - true：开启 - false：不开启
     * restConnectAddress  **参数解释**：  Kafka rest连接地址。 **取值范围**： 不涉及。
@@ -1494,7 +1494,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    *  **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1506,7 +1506,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。 - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。 - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。 - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt,ax) [不涉及。](tag:hcs)
+    * @param string|null $resourceSpecCode **参数解释**： 资源规格标识。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -2694,7 +2694,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets connectorNodeNum
-    *  **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    *  **参数解释**： connector节点数量。 **取值范围**： 0-16。
     *
     * @return int|null
     */
@@ -2706,7 +2706,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets connectorNodeNum
     *
-    * @param int|null $connectorNodeNum **参数解释**： connector节点数量。 **取值范围**： 2-16。
+    * @param int|null $connectorNodeNum **参数解释**： connector节点数量。 **取值范围**： 0-16。
     *
     * @return $this
     */

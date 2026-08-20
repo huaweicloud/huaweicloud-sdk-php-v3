@@ -38,9 +38,9 @@ class InstanceRecycleInfo implements ModelInterface, ArrayAccess
             'status' => 'string',
             'name' => 'string',
             'engine' => 'string',
-            'inRecycleTime' => 'string',
+            'inRecycleTime' => 'int',
             'saveTime' => 'int',
-            'autoDeleteTime' => 'string',
+            'autoDeleteTime' => 'int',
             'costPerHour' => 'double',
             'errorMessage' => 'string',
             'productId' => 'string'
@@ -66,9 +66,9 @@ class InstanceRecycleInfo implements ModelInterface, ArrayAccess
         'status' => null,
         'name' => null,
         'engine' => null,
-        'inRecycleTime' => null,
+        'inRecycleTime' => 'int64',
         'saveTime' => null,
-        'autoDeleteTime' => null,
+        'autoDeleteTime' => 'int64',
         'costPerHour' => 'double',
         'errorMessage' => null,
         'productId' => null
@@ -371,7 +371,7 @@ class InstanceRecycleInfo implements ModelInterface, ArrayAccess
     * Gets inRecycleTime
     *  **参数解释**： 回收时间。  **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getInRecycleTime()
     {
@@ -381,7 +381,7 @@ class InstanceRecycleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets inRecycleTime
     *
-    * @param string|null $inRecycleTime **参数解释**： 回收时间。  **取值范围**： 不涉及。
+    * @param int|null $inRecycleTime **参数解释**： 回收时间。  **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class InstanceRecycleInfo implements ModelInterface, ArrayAccess
     * Gets autoDeleteTime
     *  **参数解释**： 自动删除时间。  **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getAutoDeleteTime()
     {
@@ -429,7 +429,7 @@ class InstanceRecycleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets autoDeleteTime
     *
-    * @param string|null $autoDeleteTime **参数解释**： 自动删除时间。  **取值范围**： 不涉及。
+    * @param int|null $autoDeleteTime **参数解释**： 自动删除时间。  **取值范围**： 不涉及。
     *
     * @return $this
     */

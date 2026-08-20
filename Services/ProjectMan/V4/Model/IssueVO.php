@@ -185,7 +185,7 @@ class IssueVO implements ModelInterface, ArrayAccess
             'collaborativeStatus' => 'string[]',
             'project' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\DomainVO',
             'childIssues' => 'map[string,\HuaweiCloud\SDK\ProjectMan\V4\Model\IssueVO]',
-            'activateTimes' => 'int',
+            'activateTimes' => 'string',
             'baseline' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\OptionVO',
             'businessDomain' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\OptionVO',
             'children' => 'string',
@@ -219,14 +219,14 @@ class IssueVO implements ModelInterface, ArrayAccess
             'positionFloat' => 'string',
             'processingOwner' => 'string',
             'reasonAnalysis' => 'string',
-            'regressionFailureNumber' => 'int',
+            'regressionFailureNumber' => 'string',
             'relatedNetworkSecurity' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\OptionVO',
             'repairSolution' => 'string',
             'researchanddevelopOwner' => 'string',
             'severity' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\OptionVO',
             'sysActivationReason' => 'string',
             'sysNoRepairReason' => 'string',
-            'testFailuresTimes' => 'int',
+            'testFailuresTimes' => 'string',
             'testOwner' => 'string',
             'testReport' => 'string',
             'valFeature' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\OptionVO',
@@ -401,7 +401,7 @@ class IssueVO implements ModelInterface, ArrayAccess
         'collaborativeStatus' => null,
         'project' => null,
         'childIssues' => null,
-        'activateTimes' => 'int32',
+        'activateTimes' => null,
         'baseline' => null,
         'businessDomain' => null,
         'children' => null,
@@ -435,14 +435,14 @@ class IssueVO implements ModelInterface, ArrayAccess
         'positionFloat' => null,
         'processingOwner' => null,
         'reasonAnalysis' => null,
-        'regressionFailureNumber' => 'int32',
+        'regressionFailureNumber' => null,
         'relatedNetworkSecurity' => null,
         'repairSolution' => null,
         'researchanddevelopOwner' => null,
         'severity' => null,
         'sysActivationReason' => null,
         'sysNoRepairReason' => null,
-        'testFailuresTimes' => 'int32',
+        'testFailuresTimes' => null,
         'testOwner' => null,
         'testReport' => null,
         'valFeature' => null,
@@ -2677,7 +2677,7 @@ class IssueVO implements ModelInterface, ArrayAccess
     * Gets activateTimes
     *  **参数解释：**  激活次数。Bug激活时自动赋值。 **取值范围：**  不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getActivateTimes()
     {
@@ -2687,7 +2687,7 @@ class IssueVO implements ModelInterface, ArrayAccess
     /**
     * Sets activateTimes
     *
-    * @param int|null $activateTimes **参数解释：**  激活次数。Bug激活时自动赋值。 **取值范围：**  不涉及。
+    * @param string|null $activateTimes **参数解释：**  激活次数。Bug激活时自动赋值。 **取值范围：**  不涉及。
     *
     * @return $this
     */
@@ -3493,7 +3493,7 @@ class IssueVO implements ModelInterface, ArrayAccess
     * Gets regressionFailureNumber
     *  **参数解释：**  回归不通过次数。缺陷测试不通过时自动赋值。 **取值范围：**  不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getRegressionFailureNumber()
     {
@@ -3503,7 +3503,7 @@ class IssueVO implements ModelInterface, ArrayAccess
     /**
     * Sets regressionFailureNumber
     *
-    * @param int|null $regressionFailureNumber **参数解释：**  回归不通过次数。缺陷测试不通过时自动赋值。 **取值范围：**  不涉及。
+    * @param string|null $regressionFailureNumber **参数解释：**  回归不通过次数。缺陷测试不通过时自动赋值。 **取值范围：**  不涉及。
     *
     * @return $this
     */
@@ -3661,7 +3661,7 @@ class IssueVO implements ModelInterface, ArrayAccess
     * Gets testFailuresTimes
     *  **参数解释：**  测试不通过次数。 **取值范围：**  不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTestFailuresTimes()
     {
@@ -3671,7 +3671,7 @@ class IssueVO implements ModelInterface, ArrayAccess
     /**
     * Sets testFailuresTimes
     *
-    * @param int|null $testFailuresTimes **参数解释：**  测试不通过次数。 **取值范围：**  不涉及。
+    * @param string|null $testFailuresTimes **参数解释：**  测试不通过次数。 **取值范围：**  不涉及。
     *
     * @return $this
     */

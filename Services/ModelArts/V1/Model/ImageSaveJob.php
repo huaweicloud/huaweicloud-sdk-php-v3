@@ -191,10 +191,19 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && !preg_match("/^[a-z0-9._-]{1,512}$/", $this->container['name'])) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if (!preg_match("/^[a-z0-9._-]{1,512}$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-z0-9._-]{1,512}$/.";
             }
-            if (!is_null($this->container['tag']) && !preg_match("/^[a-z0-9._-]{1,64}$/", $this->container['tag'])) {
+        if ($this->container['namespace'] === null) {
+            $invalidProperties[] = "'namespace' can't be null";
+        }
+        if ($this->container['tag'] === null) {
+            $invalidProperties[] = "'tag' can't be null";
+        }
+            if (!preg_match("/^[a-z0-9._-]{1,64}$/", $this->container['tag'])) {
                 $invalidProperties[] = "invalid value for 'tag', must be conform to the pattern /^[a-z0-9._-]{1,64}$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
@@ -221,7 +230,7 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     * Gets name
     *  镜像名称，长度限制512个字符，支持小写字母、数字、中划线、下划线和点。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -231,7 +240,7 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 镜像名称，长度限制512个字符，支持小写字母、数字、中划线、下划线和点。
+    * @param string $name 镜像名称，长度限制512个字符，支持小写字母、数字、中划线、下划线和点。
     *
     * @return $this
     */
@@ -245,7 +254,7 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     * Gets namespace
     *  镜像所属组织，可以在SWR控制台“组织管理”创建和查看。
     *
-    * @return string|null
+    * @return string
     */
     public function getNamespace()
     {
@@ -255,7 +264,7 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 镜像所属组织，可以在SWR控制台“组织管理”创建和查看。
+    * @param string $namespace 镜像所属组织，可以在SWR控制台“组织管理”创建和查看。
     *
     * @return $this
     */
@@ -269,7 +278,7 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     * Gets tag
     *  镜像tag，长度限制64个字符， 支持大小写字母、数字、中划线、下划线和点。
     *
-    * @return string|null
+    * @return string
     */
     public function getTag()
     {
@@ -279,7 +288,7 @@ class ImageSaveJob implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag 镜像tag，长度限制64个字符， 支持大小写字母、数字、中划线、下划线和点。
+    * @param string $tag 镜像tag，长度限制64个字符， 支持大小写字母、数字、中划线、下划线和点。
     *
     * @return $this
     */

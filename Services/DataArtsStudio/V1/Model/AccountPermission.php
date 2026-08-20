@@ -37,6 +37,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * rowLevelSecurity  行级权限表达式
     * rowLevelSecurityDesc  行级权限描述
+    * renewalStatus  续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
     * schemaName  schema名称
     * tableName  表名
     * workspaceId  工作空间id
@@ -61,6 +62,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'rowLevelSecurity' => 'string',
             'rowLevelSecurityDesc' => 'string',
+            'renewalStatus' => 'string',
             'schemaName' => 'string',
             'tableName' => 'string',
             'workspaceId' => 'string'
@@ -85,6 +87,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * rowLevelSecurity  行级权限表达式
     * rowLevelSecurityDesc  行级权限描述
+    * renewalStatus  续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
     * schemaName  schema名称
     * tableName  表名
     * workspaceId  工作空间id
@@ -109,6 +112,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
         'projectId' => null,
         'rowLevelSecurity' => null,
         'rowLevelSecurityDesc' => null,
+        'renewalStatus' => null,
         'schemaName' => null,
         'tableName' => null,
         'workspaceId' => null
@@ -154,6 +158,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * rowLevelSecurity  行级权限表达式
     * rowLevelSecurityDesc  行级权限描述
+    * renewalStatus  续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
     * schemaName  schema名称
     * tableName  表名
     * workspaceId  工作空间id
@@ -178,6 +183,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'rowLevelSecurity' => 'row_level_security',
             'rowLevelSecurityDesc' => 'row_level_security_desc',
+            'renewalStatus' => 'renewal_status',
             'schemaName' => 'schema_name',
             'tableName' => 'table_name',
             'workspaceId' => 'workspace_id'
@@ -202,6 +208,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * rowLevelSecurity  行级权限表达式
     * rowLevelSecurityDesc  行级权限描述
+    * renewalStatus  续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
     * schemaName  schema名称
     * tableName  表名
     * workspaceId  工作空间id
@@ -226,6 +233,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'rowLevelSecurity' => 'setRowLevelSecurity',
             'rowLevelSecurityDesc' => 'setRowLevelSecurityDesc',
+            'renewalStatus' => 'setRenewalStatus',
             'schemaName' => 'setSchemaName',
             'tableName' => 'setTableName',
             'workspaceId' => 'setWorkspaceId'
@@ -250,6 +258,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
     * projectId  项目ID
     * rowLevelSecurity  行级权限表达式
     * rowLevelSecurityDesc  行级权限描述
+    * renewalStatus  续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
     * schemaName  schema名称
     * tableName  表名
     * workspaceId  工作空间id
@@ -274,6 +283,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'rowLevelSecurity' => 'getRowLevelSecurity',
             'rowLevelSecurityDesc' => 'getRowLevelSecurityDesc',
+            'renewalStatus' => 'getRenewalStatus',
             'schemaName' => 'getSchemaName',
             'tableName' => 'getTableName',
             'workspaceId' => 'getWorkspaceId'
@@ -336,6 +346,9 @@ class AccountPermission implements ModelInterface, ArrayAccess
     const PERMISSION_ACTION_LOCK = 'LOCK';
     const PERMISSION_ACTION_READ = 'READ';
     const PERMISSION_ACTION_WRITE = 'WRITE';
+    const RENEWAL_STATUS_ORDER_WAITING_APPROVE = 'ORDER_WAITING_APPROVE';
+    const RENEWAL_STATUS_NO_ORDER = 'NO_ORDER';
+    const RENEWAL_STATUS_ORDER_REJECT = 'ORDER_REJECT';
     
 
     /**
@@ -388,6 +401,20 @@ class AccountPermission implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRenewalStatusAllowableValues()
+    {
+        return [
+            self::RENEWAL_STATUS_ORDER_WAITING_APPROVE,
+            self::RENEWAL_STATUS_NO_ORDER,
+            self::RENEWAL_STATUS_ORDER_REJECT,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -421,6 +448,7 @@ class AccountPermission implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['rowLevelSecurity'] = isset($data['rowLevelSecurity']) ? $data['rowLevelSecurity'] : null;
         $this->container['rowLevelSecurityDesc'] = isset($data['rowLevelSecurityDesc']) ? $data['rowLevelSecurityDesc'] : null;
+        $this->container['renewalStatus'] = isset($data['renewalStatus']) ? $data['renewalStatus'] : null;
         $this->container['schemaName'] = isset($data['schemaName']) ? $data['schemaName'] : null;
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
@@ -563,6 +591,14 @@ class AccountPermission implements ModelInterface, ArrayAccess
             if (!is_null($this->container['rowLevelSecurityDesc']) && (mb_strlen($this->container['rowLevelSecurityDesc']) < 1)) {
                 $invalidProperties[] = "invalid value for 'rowLevelSecurityDesc', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getRenewalStatusAllowableValues();
+                if (!is_null($this->container['renewalStatus']) && !in_array($this->container['renewalStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'renewalStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['schemaName']) && (mb_strlen($this->container['schemaName']) > 128)) {
                 $invalidProperties[] = "invalid value for 'schemaName', the character length must be smaller than or equal to 128.";
             }
@@ -1003,6 +1039,30 @@ class AccountPermission implements ModelInterface, ArrayAccess
     public function setRowLevelSecurityDesc($rowLevelSecurityDesc)
     {
         $this->container['rowLevelSecurityDesc'] = $rowLevelSecurityDesc;
+        return $this;
+    }
+
+    /**
+    * Gets renewalStatus
+    *  续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
+    *
+    * @return string|null
+    */
+    public function getRenewalStatus()
+    {
+        return $this->container['renewalStatus'];
+    }
+
+    /**
+    * Sets renewalStatus
+    *
+    * @param string|null $renewalStatus 续期工单状态，可选值： * ORDER_WAITING_APPROVE  工单待审批 * NO_ORDER  无工单 * ORDER_REJECT  工单已拒绝
+    *
+    * @return $this
+    */
+    public function setRenewalStatus($renewalStatus)
+    {
+        $this->container['renewalStatus'] = $renewalStatus;
         return $this;
     }
 

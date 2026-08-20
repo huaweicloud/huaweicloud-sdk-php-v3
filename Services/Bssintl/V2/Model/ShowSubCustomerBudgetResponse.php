@@ -25,7 +25,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    * budgetType  预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @var string[]
     */
@@ -43,7 +43,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    * budgetType  预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    * budgetType  预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    * budgetType  预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @var string[]
     */
@@ -118,7 +118,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * usedAmount  已经使用的预算。该预算存在一定的时延和误差。
     * measureId  金额单位。 1：元
     * currency  币种。 USD：美金
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    * budgetType  预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @var string[]
     */
@@ -338,7 +338,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets budgetType
-    *  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    *  预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets budgetType
     *
-    * @param string|null $budgetType |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算|
+    * @param string|null $budgetType 预算模式。 MONTHLY：月度预算 PACKAGE：一次性预算
     *
     * @return $this
     */

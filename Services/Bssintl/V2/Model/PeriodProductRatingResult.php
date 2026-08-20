@@ -225,12 +225,6 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             if (!is_null($this->container['productId']) && (mb_strlen($this->container['productId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'productId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['measureId']) && ($this->container['measureId'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'measureId', must be smaller than or equal to 2147483647.";
-            }
-            if (!is_null($this->container['measureId']) && ($this->container['measureId'] < 1)) {
-                $invalidProperties[] = "invalid value for 'measureId', must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 

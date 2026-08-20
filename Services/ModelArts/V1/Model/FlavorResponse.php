@@ -23,6 +23,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
     * flavorId  资源规格的ID。
     * flavorName  资源规格的名称。
+    * supportEngines  **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * supportGroups  **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
     * maxNum  资源规格的最大节点数。
     * flavorType  资源规格的类型。可选值如下： - CPU - GPU - [Ascend](tag:hc,hk,fcs_super)
     * billing  billing
@@ -35,6 +37,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
             'poolId' => 'string',
             'flavorId' => 'string',
             'flavorName' => 'string',
+            'supportEngines' => 'string',
+            'supportGroups' => 'string',
             'maxNum' => 'int',
             'flavorType' => 'string',
             'billing' => '\HuaweiCloud\SDK\ModelArts\V1\Model\BillingInfo',
@@ -47,6 +51,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
     * flavorId  资源规格的ID。
     * flavorName  资源规格的名称。
+    * supportEngines  **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * supportGroups  **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
     * maxNum  资源规格的最大节点数。
     * flavorType  资源规格的类型。可选值如下： - CPU - GPU - [Ascend](tag:hc,hk,fcs_super)
     * billing  billing
@@ -59,6 +65,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
         'poolId' => null,
         'flavorId' => null,
         'flavorName' => null,
+        'supportEngines' => null,
+        'supportGroups' => null,
         'maxNum' => 'int32',
         'flavorType' => null,
         'billing' => null,
@@ -92,6 +100,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
     * flavorId  资源规格的ID。
     * flavorName  资源规格的名称。
+    * supportEngines  **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * supportGroups  **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
     * maxNum  资源规格的最大节点数。
     * flavorType  资源规格的类型。可选值如下： - CPU - GPU - [Ascend](tag:hc,hk,fcs_super)
     * billing  billing
@@ -104,6 +114,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
             'poolId' => 'pool_id',
             'flavorId' => 'flavor_id',
             'flavorName' => 'flavor_name',
+            'supportEngines' => 'support_engines',
+            'supportGroups' => 'support_groups',
             'maxNum' => 'max_num',
             'flavorType' => 'flavor_type',
             'billing' => 'billing',
@@ -116,6 +128,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
     * flavorId  资源规格的ID。
     * flavorName  资源规格的名称。
+    * supportEngines  **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * supportGroups  **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
     * maxNum  资源规格的最大节点数。
     * flavorType  资源规格的类型。可选值如下： - CPU - GPU - [Ascend](tag:hc,hk,fcs_super)
     * billing  billing
@@ -128,6 +142,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
             'poolId' => 'setPoolId',
             'flavorId' => 'setFlavorId',
             'flavorName' => 'setFlavorName',
+            'supportEngines' => 'setSupportEngines',
+            'supportGroups' => 'setSupportGroups',
             'maxNum' => 'setMaxNum',
             'flavorType' => 'setFlavorType',
             'billing' => 'setBilling',
@@ -140,6 +156,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
     * flavorId  资源规格的ID。
     * flavorName  资源规格的名称。
+    * supportEngines  **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * supportGroups  **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
     * maxNum  资源规格的最大节点数。
     * flavorType  资源规格的类型。可选值如下： - CPU - GPU - [Ascend](tag:hc,hk,fcs_super)
     * billing  billing
@@ -152,6 +170,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
             'poolId' => 'getPoolId',
             'flavorId' => 'getFlavorId',
             'flavorName' => 'getFlavorName',
+            'supportEngines' => 'getSupportEngines',
+            'supportGroups' => 'getSupportGroups',
             'maxNum' => 'getMaxNum',
             'flavorType' => 'getFlavorType',
             'billing' => 'getBilling',
@@ -220,6 +240,8 @@ class FlavorResponse implements ModelInterface, ArrayAccess
         $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
         $this->container['flavorId'] = isset($data['flavorId']) ? $data['flavorId'] : null;
         $this->container['flavorName'] = isset($data['flavorName']) ? $data['flavorName'] : null;
+        $this->container['supportEngines'] = isset($data['supportEngines']) ? $data['supportEngines'] : null;
+        $this->container['supportGroups'] = isset($data['supportGroups']) ? $data['supportGroups'] : null;
         $this->container['maxNum'] = isset($data['maxNum']) ? $data['maxNum'] : null;
         $this->container['flavorType'] = isset($data['flavorType']) ? $data['flavorType'] : null;
         $this->container['billing'] = isset($data['billing']) ? $data['billing'] : null;
@@ -318,6 +340,54 @@ class FlavorResponse implements ModelInterface, ArrayAccess
     public function setFlavorName($flavorName)
     {
         $this->container['flavorName'] = $flavorName;
+        return $this;
+    }
+
+    /**
+    * Gets supportEngines
+    *  **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getSupportEngines()
+    {
+        return $this->container['supportEngines'];
+    }
+
+    /**
+    * Sets supportEngines
+    *
+    * @param string|null $supportEngines **参数解释**：该规格支持的训练引擎列表（JSON 数组字符串格式）。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setSupportEngines($supportEngines)
+    {
+        $this->container['supportEngines'] = $supportEngines;
+        return $this;
+    }
+
+    /**
+    * Gets supportGroups
+    *  **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
+    *
+    * @return string|null
+    */
+    public function getSupportGroups()
+    {
+        return $this->container['supportGroups'];
+    }
+
+    /**
+    * Sets supportGroups
+    *
+    * @param string|null $supportGroups **参数解释**：该规格支持的用户组列表。若为空则默认为 `public`。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：`public`
+    *
+    * @return $this
+    */
+    public function setSupportGroups($supportGroups)
+    {
+        $this->container['supportGroups'] = $supportGroups;
         return $this;
     }
 

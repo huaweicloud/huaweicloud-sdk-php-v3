@@ -21,8 +21,8 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  参数模板数量。
-    * configurations  参数模板列表。
+    * count  **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
+    * configurations  **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  参数模板数量。
-    * configurations  参数模板列表。
+    * count  **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
+    * configurations  **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  参数模板数量。
-    * configurations  参数模板列表。
+    * count  **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
+    * configurations  **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  参数模板数量。
-    * configurations  参数模板列表。
+    * count  **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
+    * configurations  **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  参数模板数量。
-    * configurations  参数模板列表。
+    * count  **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
+    * configurations  **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  参数模板数量。
+    *  **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 参数模板数量。
+    * @param int|null $count **参数解释**: 参数模板总记录数。 **取值范围**: [0, 2147483647]，取决于实际查询大小。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets configurations
-    *  参数模板列表。
+    *  **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationsResult[]|null
     */
@@ -222,7 +222,7 @@ class ListParameterGroupTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets configurations
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationsResult[]|null $configurations 参数模板列表。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationsResult[]|null $configurations **参数解释**: 参数模板信息，具体参数请参考ConfigurationsResult。
     *
     * @return $this
     */

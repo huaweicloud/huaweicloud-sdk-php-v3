@@ -21,22 +21,20 @@ class BatchDeleteConnectionNewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  操作是否成功
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  操作是否成功
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null
     ];
 
     /**
@@ -62,32 +60,29 @@ class BatchDeleteConnectionNewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  操作是否成功
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  操作是否成功
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  操作是否成功
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus'
     ];
 
     /**
@@ -148,7 +143,6 @@ class BatchDeleteConnectionNewResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -171,30 +165,6 @@ class BatchDeleteConnectionNewResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets status
-    *  操作是否成功
-    *
-    * @return bool|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param bool|null $status 操作是否成功
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-        return $this;
     }
 
     /**

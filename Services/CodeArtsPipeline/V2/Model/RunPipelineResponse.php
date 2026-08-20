@@ -22,21 +22,25 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * errorMsg  **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pipelineRunId' => 'string'
+            'pipelineRunId' => 'string',
+            'errorMsg' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * errorMsg  **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pipelineRunId' => null
+        'pipelineRunId' => null,
+        'errorMsg' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * errorMsg  **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'pipelineRunId' => 'pipeline_run_id'
+            'pipelineRunId' => 'pipeline_run_id',
+            'errorMsg' => 'error_msg'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * errorMsg  **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'pipelineRunId' => 'setPipelineRunId'
+            'pipelineRunId' => 'setPipelineRunId',
+            'errorMsg' => 'setErrorMsg'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pipelineRunId  **参数解释**： 流水线运行实例ID，[启动流水线](RunPipeline.xml)接口的返回值即为流水线运行实例ID。 **取值范围**： 32位字符，仅由数字和字母组成。
+    * errorMsg  **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'pipelineRunId' => 'getPipelineRunId'
+            'pipelineRunId' => 'getPipelineRunId',
+            'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -149,6 +159,7 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['pipelineRunId'] = isset($data['pipelineRunId']) ? $data['pipelineRunId'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class RunPipelineResponse implements ModelInterface, ArrayAccess
     public function setPipelineRunId($pipelineRunId)
     {
         $this->container['pipelineRunId'] = $pipelineRunId;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg **参数解释**： 流水线运行失败详情。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
         return $this;
     }
 

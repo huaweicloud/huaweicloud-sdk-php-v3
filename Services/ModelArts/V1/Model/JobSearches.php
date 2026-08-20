@@ -27,6 +27,8 @@ class JobSearches implements ModelInterface, ArrayAccess
     * groupBy  查询作业要搜索的分组条件。
     * workspaceId  参数解释：工作空间ID。 约束限制：不涉及。 取值范围：0或长度为32的字符串。 默认取值：0。
     * trainType  **参数解释**：在开启自定义作业和精调作业联合查询时，只显示自定义或精调作业。 **约束限制**：不涉及。 **取值范围**：   - job: 只查自定义作业   - ftjob : 只查精调作业 **默认取值**：不涉及。
+    * tags  **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    * hostIps  **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
     * filters  查询作业要过滤的一系列条件。
     *
     * @var string[]
@@ -39,6 +41,8 @@ class JobSearches implements ModelInterface, ArrayAccess
             'groupBy' => 'string',
             'workspaceId' => 'string',
             'trainType' => 'string',
+            'tags' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ListTagFilter[]',
+            'hostIps' => 'string[]',
             'filters' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Filter[]'
     ];
 
@@ -51,6 +55,8 @@ class JobSearches implements ModelInterface, ArrayAccess
     * groupBy  查询作业要搜索的分组条件。
     * workspaceId  参数解释：工作空间ID。 约束限制：不涉及。 取值范围：0或长度为32的字符串。 默认取值：0。
     * trainType  **参数解释**：在开启自定义作业和精调作业联合查询时，只显示自定义或精调作业。 **约束限制**：不涉及。 **取值范围**：   - job: 只查自定义作业   - ftjob : 只查精调作业 **默认取值**：不涉及。
+    * tags  **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    * hostIps  **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
     * filters  查询作业要过滤的一系列条件。
     *
     * @var string[]
@@ -63,6 +69,8 @@ class JobSearches implements ModelInterface, ArrayAccess
         'groupBy' => null,
         'workspaceId' => null,
         'trainType' => null,
+        'tags' => null,
+        'hostIps' => 'ip',
         'filters' => null
     ];
 
@@ -96,6 +104,8 @@ class JobSearches implements ModelInterface, ArrayAccess
     * groupBy  查询作业要搜索的分组条件。
     * workspaceId  参数解释：工作空间ID。 约束限制：不涉及。 取值范围：0或长度为32的字符串。 默认取值：0。
     * trainType  **参数解释**：在开启自定义作业和精调作业联合查询时，只显示自定义或精调作业。 **约束限制**：不涉及。 **取值范围**：   - job: 只查自定义作业   - ftjob : 只查精调作业 **默认取值**：不涉及。
+    * tags  **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    * hostIps  **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
     * filters  查询作业要过滤的一系列条件。
     *
     * @var string[]
@@ -108,6 +118,8 @@ class JobSearches implements ModelInterface, ArrayAccess
             'groupBy' => 'group_by',
             'workspaceId' => 'workspace_id',
             'trainType' => 'train_type',
+            'tags' => 'tags',
+            'hostIps' => 'host_ips',
             'filters' => 'filters'
     ];
 
@@ -120,6 +132,8 @@ class JobSearches implements ModelInterface, ArrayAccess
     * groupBy  查询作业要搜索的分组条件。
     * workspaceId  参数解释：工作空间ID。 约束限制：不涉及。 取值范围：0或长度为32的字符串。 默认取值：0。
     * trainType  **参数解释**：在开启自定义作业和精调作业联合查询时，只显示自定义或精调作业。 **约束限制**：不涉及。 **取值范围**：   - job: 只查自定义作业   - ftjob : 只查精调作业 **默认取值**：不涉及。
+    * tags  **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    * hostIps  **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
     * filters  查询作业要过滤的一系列条件。
     *
     * @var string[]
@@ -132,6 +146,8 @@ class JobSearches implements ModelInterface, ArrayAccess
             'groupBy' => 'setGroupBy',
             'workspaceId' => 'setWorkspaceId',
             'trainType' => 'setTrainType',
+            'tags' => 'setTags',
+            'hostIps' => 'setHostIps',
             'filters' => 'setFilters'
     ];
 
@@ -144,6 +160,8 @@ class JobSearches implements ModelInterface, ArrayAccess
     * groupBy  查询作业要搜索的分组条件。
     * workspaceId  参数解释：工作空间ID。 约束限制：不涉及。 取值范围：0或长度为32的字符串。 默认取值：0。
     * trainType  **参数解释**：在开启自定义作业和精调作业联合查询时，只显示自定义或精调作业。 **约束限制**：不涉及。 **取值范围**：   - job: 只查自定义作业   - ftjob : 只查精调作业 **默认取值**：不涉及。
+    * tags  **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    * hostIps  **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
     * filters  查询作业要过滤的一系列条件。
     *
     * @var string[]
@@ -156,6 +174,8 @@ class JobSearches implements ModelInterface, ArrayAccess
             'groupBy' => 'getGroupBy',
             'workspaceId' => 'getWorkspaceId',
             'trainType' => 'getTrainType',
+            'tags' => 'getTags',
+            'hostIps' => 'getHostIps',
             'filters' => 'getFilters'
     ];
 
@@ -224,6 +244,8 @@ class JobSearches implements ModelInterface, ArrayAccess
         $this->container['groupBy'] = isset($data['groupBy']) ? $data['groupBy'] : null;
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
         $this->container['trainType'] = isset($data['trainType']) ? $data['trainType'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['hostIps'] = isset($data['hostIps']) ? $data['hostIps'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
     }
 
@@ -414,6 +436,54 @@ class JobSearches implements ModelInterface, ArrayAccess
     public function setTrainType($trainType)
     {
         $this->container['trainType'] = $trainType;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ListTagFilter[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ListTagFilter[]|null $tags **参数解释**：按 TMS 标签筛选训练作业列表。 **约束限制**：   - 最多 10 个标签条件；   - 同一 `key` 不可重复；   - 同一 `key` 下 `values` 不可重复；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 同一 `key` 下多个 `values` 为 **OR**；   - 不同 `key` 之间为 **AND**；   - `values` 为空或仅含空字符串时，按 **仅匹配该 key**（不限 value）处理。 **取值范围**：不涉及。 **默认取值**：不传则不按标签筛选。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets hostIps
+    *  **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
+    *
+    * @return string[]|null
+    */
+    public function getHostIps()
+    {
+        return $this->container['hostIps'];
+    }
+
+    /**
+    * Sets hostIps
+    *
+    * @param string[]|null $hostIps **参数解释**：按训练实例所在节点宿主机 IP 筛选训练作业列表。 **约束限制**：   - 最多 10 个 IP；   - 每个元素须为合法 IPv4/IPv6 地址；   - 传入本参数时须同时满足 `filters` 中 `create_time` 条件：未传则默认最近 31 天，时间跨度不得超过 31 天。 **匹配规则**：   - 多个 IP 之间为 **OR**（命中任一 IP 即匹配） **取值范围**：不涉及。 **默认取值**：不传则不按 IP 筛选。
+    *
+    * @return $this
+    */
+    public function setHostIps($hostIps)
+    {
+        $this->container['hostIps'] = $hostIps;
         return $this;
     }
 

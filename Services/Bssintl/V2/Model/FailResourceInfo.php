@@ -20,9 +20,9 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  |参数名称：错误码| |参数约束及描述：错误码|
-    * errorMsg  |参数名称：错误描述| |参数约束及描述：错误描述|
-    * resourceId  |参数名称：资源ID| |参数约束及描述：资源ID|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * resourceId  资源ID。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  |参数名称：错误码| |参数约束及描述：错误码|
-    * errorMsg  |参数名称：错误描述| |参数约束及描述：错误描述|
-    * resourceId  |参数名称：资源ID| |参数约束及描述：资源ID|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * resourceId  资源ID。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  |参数名称：错误码| |参数约束及描述：错误码|
-    * errorMsg  |参数名称：错误描述| |参数约束及描述：错误描述|
-    * resourceId  |参数名称：资源ID| |参数约束及描述：资源ID|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * resourceId  资源ID。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  |参数名称：错误码| |参数约束及描述：错误码|
-    * errorMsg  |参数名称：错误描述| |参数约束及描述：错误描述|
-    * resourceId  |参数名称：资源ID| |参数约束及描述：资源ID|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * resourceId  资源ID。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  |参数名称：错误码| |参数约束及描述：错误码|
-    * errorMsg  |参数名称：错误描述| |参数约束及描述：错误描述|
-    * resourceId  |参数名称：资源ID| |参数约束及描述：资源ID|
+    * errorCode  状态码。
+    * errorMsg  错误描述信息。
+    * resourceId  资源ID。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  |参数名称：错误码| |参数约束及描述：错误码|
+    *  状态码。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode |参数名称：错误码| |参数约束及描述：错误码|
+    * @param string|null $errorCode 状态码。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  |参数名称：错误描述| |参数约束及描述：错误描述|
+    *  错误描述信息。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg |参数名称：错误描述| |参数约束及描述：错误描述|
+    * @param string|null $errorMsg 错误描述信息。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  |参数名称：资源ID| |参数约束及描述：资源ID|
+    *  资源ID。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class FailResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId |参数名称：资源ID| |参数约束及描述：资源ID|
+    * @param string|null $resourceId 资源ID。
     *
     * @return $this
     */

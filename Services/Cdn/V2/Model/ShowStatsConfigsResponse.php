@@ -21,7 +21,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  统计配置数量
+    * total  **参数解释：** 统计配置数量 **取值范围：** 不涉及
     * data  data
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  统计配置数量
+    * total  **参数解释：** 统计配置数量 **取值范围：** 不涉及
     * data  data
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  统计配置数量
+    * total  **参数解释：** 统计配置数量 **取值范围：** 不涉及
     * data  data
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  统计配置数量
+    * total  **参数解释：** 统计配置数量 **取值范围：** 不涉及
     * data  data
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  统计配置数量
+    * total  **参数解释：** 统计配置数量 **取值范围：** 不涉及
     * data  data
     *
     * @var string[]
@@ -192,7 +192,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  统计配置数量
+    *  **参数解释：** 统计配置数量 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -204,7 +204,7 @@ class ShowStatsConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 统计配置数量
+    * @param int|null $total **参数解释：** 统计配置数量 **取值范围：** 不涉及
     *
     * @return $this
     */

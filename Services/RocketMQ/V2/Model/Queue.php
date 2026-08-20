@@ -25,6 +25,7 @@ class Queue implements ModelInterface, ArrayAccess
     * brokerOffset  **参数解释**： 队列消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * lastMessageTime  **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class Queue implements ModelInterface, ArrayAccess
             'lag' => 'int',
             'brokerOffset' => 'int',
             'consumerOffset' => 'int',
-            'lastMessageTime' => 'int'
+            'lastMessageTime' => 'int',
+            'clientId' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class Queue implements ModelInterface, ArrayAccess
     * brokerOffset  **参数解释**： 队列消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * lastMessageTime  **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class Queue implements ModelInterface, ArrayAccess
         'lag' => 'int64',
         'brokerOffset' => 'int64',
         'consumerOffset' => 'int64',
-        'lastMessageTime' => 'int64'
+        'lastMessageTime' => 'int64',
+        'clientId' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class Queue implements ModelInterface, ArrayAccess
     * brokerOffset  **参数解释**： 队列消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * lastMessageTime  **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class Queue implements ModelInterface, ArrayAccess
             'lag' => 'lag',
             'brokerOffset' => 'broker_offset',
             'consumerOffset' => 'consumer_offset',
-            'lastMessageTime' => 'last_message_time'
+            'lastMessageTime' => 'last_message_time',
+            'clientId' => 'client_id'
     ];
 
     /**
@@ -100,6 +106,7 @@ class Queue implements ModelInterface, ArrayAccess
     * brokerOffset  **参数解释**： 队列消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * lastMessageTime  **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class Queue implements ModelInterface, ArrayAccess
             'lag' => 'setLag',
             'brokerOffset' => 'setBrokerOffset',
             'consumerOffset' => 'setConsumerOffset',
-            'lastMessageTime' => 'setLastMessageTime'
+            'lastMessageTime' => 'setLastMessageTime',
+            'clientId' => 'setClientId'
     ];
 
     /**
@@ -118,6 +126,7 @@ class Queue implements ModelInterface, ArrayAccess
     * brokerOffset  **参数解释**： 队列消息总数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * consumerOffset  **参数解释**： 已消费消息数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * lastMessageTime  **参数解释**： 最新消费消息的存储时间，Unix毫秒时间戳格式。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * clientId  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class Queue implements ModelInterface, ArrayAccess
             'lag' => 'getLag',
             'brokerOffset' => 'getBrokerOffset',
             'consumerOffset' => 'getConsumerOffset',
-            'lastMessageTime' => 'getLastMessageTime'
+            'lastMessageTime' => 'getLastMessageTime',
+            'clientId' => 'getClientId'
     ];
 
     /**
@@ -192,6 +202,7 @@ class Queue implements ModelInterface, ArrayAccess
         $this->container['brokerOffset'] = isset($data['brokerOffset']) ? $data['brokerOffset'] : null;
         $this->container['consumerOffset'] = isset($data['consumerOffset']) ? $data['consumerOffset'] : null;
         $this->container['lastMessageTime'] = isset($data['lastMessageTime']) ? $data['lastMessageTime'] : null;
+        $this->container['clientId'] = isset($data['clientId']) ? $data['clientId'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class Queue implements ModelInterface, ArrayAccess
     public function setLastMessageTime($lastMessageTime)
     {
         $this->container['lastMessageTime'] = $lastMessageTime;
+        return $this;
+    }
+
+    /**
+    * Gets clientId
+    *  **参数解释**： 客户端ID。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getClientId()
+    {
+        return $this->container['clientId'];
+    }
+
+    /**
+    * Sets clientId
+    *
+    * @param string|null $clientId **参数解释**： 客户端ID。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setClientId($clientId)
+    {
+        $this->container['clientId'] = $clientId;
         return $this;
     }
 

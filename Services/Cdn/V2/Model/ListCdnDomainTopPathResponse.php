@@ -21,7 +21,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topPathSummary  详情数据对象。
+    * topPathSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topPathSummary  详情数据对象。
+    * topPathSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topPathSummary  详情数据对象。
+    * topPathSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topPathSummary  详情数据对象。
+    * topPathSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topPathSummary  详情数据对象。
+    * topPathSummary  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topPathSummary
-    *  详情数据对象。
+    *  **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\TopPathSummary[]|null
     */
@@ -187,7 +187,7 @@ class ListCdnDomainTopPathResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topPathSummary
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopPathSummary[]|null $topPathSummary 详情数据对象。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\TopPathSummary[]|null $topPathSummary **参数解释：** 数据详情 **取值范围：** 不涉及
     *
     * @return $this
     */

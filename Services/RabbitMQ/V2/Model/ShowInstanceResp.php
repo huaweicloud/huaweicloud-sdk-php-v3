@@ -48,7 +48,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
-    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
@@ -166,7 +166,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
-    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
@@ -305,7 +305,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
-    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
@@ -423,7 +423,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
-    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
@@ -541,7 +541,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     * maintainBegin  **参数解释**： 维护时间窗开始时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * maintainEnd  **参数解释**： 维护时间窗结束时间，格式为HH:mm:ss。 **取值范围**： 不涉及。
     * enablePublicip  **参数解释**： RabbitMQ实例是否开启公网访问功能。 **取值范围**： - true：开启 - false：未开启
-    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * publicipAddress  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * publicipId  **参数解释**： RabbitMQ实例绑定的弹性IP地址的ID。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     * managementConnectAddress  **参数解释**： RabbitMQ实例的管理地址。 **取值范围**： 不涉及。
     * managementConnectDomainName  **参数解释**： RabbitMQ实例的管理域名。 **取值范围**： 不涉及。
@@ -1490,7 +1490,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipAddress
-    *  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    *  **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -1502,7 +1502,7 @@ class ShowInstanceResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicipAddress
     *
-    * @param string|null $publicipAddress **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： - true：开启 - false：未开启
+    * @param string|null $publicipAddress **参数解释**： RabbitMQ实例绑定的弹性IP地址。  如果未开启公网访问功能，该字段值为null。 **取值范围**： 不涉及。
     *
     * @return $this
     */

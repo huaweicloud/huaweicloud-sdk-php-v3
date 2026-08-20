@@ -33,6 +33,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * slowLogStat  slowLogStat
     * fullSqlStat  fullSqlStat
     * inspectionStat  inspectionStat
+    * errorMessage  错误信息
     *
     * @var string[]
     */
@@ -48,7 +49,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
             'tableSpaceStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceNewStat',
             'slowLogStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportSlowLogStat',
             'fullSqlStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportFullSqlStat',
-            'inspectionStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportInspectionStat'
+            'inspectionStat' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportInspectionStat',
+            'errorMessage' => 'string'
     ];
 
     /**
@@ -65,6 +67,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * slowLogStat  slowLogStat
     * fullSqlStat  fullSqlStat
     * inspectionStat  inspectionStat
+    * errorMessage  错误信息
     *
     * @var string[]
     */
@@ -80,7 +83,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
         'tableSpaceStat' => null,
         'slowLogStat' => null,
         'fullSqlStat' => null,
-        'inspectionStat' => null
+        'inspectionStat' => null,
+        'errorMessage' => null
     ];
 
     /**
@@ -118,6 +122,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * slowLogStat  slowLogStat
     * fullSqlStat  fullSqlStat
     * inspectionStat  inspectionStat
+    * errorMessage  错误信息
     *
     * @var string[]
     */
@@ -133,7 +138,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
             'tableSpaceStat' => 'table_space_stat',
             'slowLogStat' => 'slow_log_stat',
             'fullSqlStat' => 'full_sql_stat',
-            'inspectionStat' => 'inspection_stat'
+            'inspectionStat' => 'inspection_stat',
+            'errorMessage' => 'error_message'
     ];
 
     /**
@@ -150,6 +156,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * slowLogStat  slowLogStat
     * fullSqlStat  fullSqlStat
     * inspectionStat  inspectionStat
+    * errorMessage  错误信息
     *
     * @var string[]
     */
@@ -165,7 +172,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
             'tableSpaceStat' => 'setTableSpaceStat',
             'slowLogStat' => 'setSlowLogStat',
             'fullSqlStat' => 'setFullSqlStat',
-            'inspectionStat' => 'setInspectionStat'
+            'inspectionStat' => 'setInspectionStat',
+            'errorMessage' => 'setErrorMessage'
     ];
 
     /**
@@ -182,6 +190,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * slowLogStat  slowLogStat
     * fullSqlStat  fullSqlStat
     * inspectionStat  inspectionStat
+    * errorMessage  错误信息
     *
     * @var string[]
     */
@@ -197,7 +206,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
             'tableSpaceStat' => 'getTableSpaceStat',
             'slowLogStat' => 'getSlowLogStat',
             'fullSqlStat' => 'getFullSqlStat',
-            'inspectionStat' => 'getInspectionStat'
+            'inspectionStat' => 'getInspectionStat',
+            'errorMessage' => 'getErrorMessage'
     ];
 
     /**
@@ -270,6 +280,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
         $this->container['slowLogStat'] = isset($data['slowLogStat']) ? $data['slowLogStat'] : null;
         $this->container['fullSqlStat'] = isset($data['fullSqlStat']) ? $data['fullSqlStat'] : null;
         $this->container['inspectionStat'] = isset($data['inspectionStat']) ? $data['inspectionStat'] : null;
+        $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
     }
 
     /**
@@ -579,6 +590,30 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     public function setInspectionStat($inspectionStat)
     {
         $this->container['inspectionStat'] = $inspectionStat;
+        return $this;
+    }
+
+    /**
+    * Gets errorMessage
+    *  错误信息
+    *
+    * @return string|null
+    */
+    public function getErrorMessage()
+    {
+        return $this->container['errorMessage'];
+    }
+
+    /**
+    * Sets errorMessage
+    *
+    * @param string|null $errorMessage 错误信息
+    *
+    * @return $this
+    */
+    public function setErrorMessage($errorMessage)
+    {
+        $this->container['errorMessage'] = $errorMessage;
         return $this;
     }
 

@@ -21,11 +21,11 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * result  按指定的分组方式组织的数据
+    * action  **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
+    * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -39,11 +39,11 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * result  按指定的分组方式组织的数据
+    * action  **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
+    * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -78,11 +78,11 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * result  按指定的分组方式组织的数据
+    * action  **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
+    * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -96,11 +96,11 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * result  按指定的分组方式组织的数据
+    * action  **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
+    * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -114,11 +114,11 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * startTime  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * endTime  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * result  按指定的分组方式组织的数据
+    * action  **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
+    * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  **参数解释：** 规则行为 **约束限制：** 不涉及
+    *  **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action **参数解释：** 规则行为 **约束限制：** 不涉及
+    * @param string|null $action **参数解释：** 查询数据类型 > 汇总或明细数据  **取值范围：** - summary：查询汇总数据 - detail：查询数据详情
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    *  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     *
     * @return int|null
     */
@@ -255,7 +255,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 查询起始时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * @param int|null $startTime **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    *  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     *
     * @return int|null
     */
@@ -279,7 +279,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 查询结束时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * @param int|null $endTime **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets statType
-    *  参数类型支持：flux(流量)，req_num(请求总数)。
+    *  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @return string|null
     */
@@ -303,7 +303,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Sets statType
     *
-    * @param string|null $statType 参数类型支持：flux(流量)，req_num(请求总数)。
+    * @param string|null $statType **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  按指定的分组方式组织的数据
+    *  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @return map[string,object]|null
     */
@@ -327,7 +327,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param map[string,object]|null $result 按指定的分组方式组织的数据
+    * @param map[string,object]|null $result **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
     *
     * @return $this
     */

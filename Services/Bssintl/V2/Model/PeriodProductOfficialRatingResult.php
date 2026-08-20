@@ -23,7 +23,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * id  ID标识，来源于请求中的ID。
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
+    * measureId  价格度量单位标识。 1：美元
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * id  ID标识，来源于请求中的ID。
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
+    * measureId  价格度量单位标识。 1：美元
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * id  ID标识，来源于请求中的ID。
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
+    * measureId  价格度量单位标识。 1：美元
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * id  ID标识，来源于请求中的ID。
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
+    * measureId  价格度量单位标识。 1：美元
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * id  ID标识，来源于请求中的ID。
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
+    * measureId  价格度量单位标识。 1：美元
     *
     * @var string[]
     */
@@ -291,7 +291,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  价格度量单位标识。 1：元
+    *  价格度量单位标识。 1：美元
     *
     * @return int|null
     */
@@ -303,7 +303,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId 价格度量单位标识。 1：元
+    * @param int|null $measureId 价格度量单位标识。 1：美元
     *
     * @return $this
     */

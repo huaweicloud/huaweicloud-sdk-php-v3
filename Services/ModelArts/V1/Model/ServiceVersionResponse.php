@@ -28,8 +28,9 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     * upgradeConfig  upgradeConfig
     * instanceGroups  **参数解释：** 服务部署信息。
     * ltsStrategy  **参数解释：** 日志策略。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略
-    * ltsStatus  **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * ltsEventStatus  **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsStatus  **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsEventStatus  **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsFileStatus  **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     * logConfigs  **参数解释：** 服务日志配置信息。
     * deployTimeoutMinutes  **参数解释：** 部署超时时间。 **取值范围：** 不涉及。
     *
@@ -46,6 +47,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
             'ltsStrategy' => 'string',
             'ltsStatus' => 'string',
             'ltsEventStatus' => 'string',
+            'ltsFileStatus' => 'string',
             'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LogConfigResponse[]',
             'deployTimeoutMinutes' => 'int'
     ];
@@ -60,8 +62,9 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     * upgradeConfig  upgradeConfig
     * instanceGroups  **参数解释：** 服务部署信息。
     * ltsStrategy  **参数解释：** 日志策略。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略
-    * ltsStatus  **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * ltsEventStatus  **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsStatus  **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsEventStatus  **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsFileStatus  **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     * logConfigs  **参数解释：** 服务日志配置信息。
     * deployTimeoutMinutes  **参数解释：** 部署超时时间。 **取值范围：** 不涉及。
     *
@@ -78,6 +81,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
         'ltsStrategy' => null,
         'ltsStatus' => null,
         'ltsEventStatus' => null,
+        'ltsFileStatus' => null,
         'logConfigs' => null,
         'deployTimeoutMinutes' => 'int32'
     ];
@@ -113,8 +117,9 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     * upgradeConfig  upgradeConfig
     * instanceGroups  **参数解释：** 服务部署信息。
     * ltsStrategy  **参数解释：** 日志策略。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略
-    * ltsStatus  **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * ltsEventStatus  **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsStatus  **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsEventStatus  **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsFileStatus  **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     * logConfigs  **参数解释：** 服务日志配置信息。
     * deployTimeoutMinutes  **参数解释：** 部署超时时间。 **取值范围：** 不涉及。
     *
@@ -131,6 +136,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
             'ltsStrategy' => 'lts_strategy',
             'ltsStatus' => 'lts_status',
             'ltsEventStatus' => 'lts_event_status',
+            'ltsFileStatus' => 'lts_file_status',
             'logConfigs' => 'log_configs',
             'deployTimeoutMinutes' => 'deploy_timeout_minutes'
     ];
@@ -145,8 +151,9 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     * upgradeConfig  upgradeConfig
     * instanceGroups  **参数解释：** 服务部署信息。
     * ltsStrategy  **参数解释：** 日志策略。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略
-    * ltsStatus  **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * ltsEventStatus  **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsStatus  **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsEventStatus  **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsFileStatus  **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     * logConfigs  **参数解释：** 服务日志配置信息。
     * deployTimeoutMinutes  **参数解释：** 部署超时时间。 **取值范围：** 不涉及。
     *
@@ -163,6 +170,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
             'ltsStrategy' => 'setLtsStrategy',
             'ltsStatus' => 'setLtsStatus',
             'ltsEventStatus' => 'setLtsEventStatus',
+            'ltsFileStatus' => 'setLtsFileStatus',
             'logConfigs' => 'setLogConfigs',
             'deployTimeoutMinutes' => 'setDeployTimeoutMinutes'
     ];
@@ -177,8 +185,9 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     * upgradeConfig  upgradeConfig
     * instanceGroups  **参数解释：** 服务部署信息。
     * ltsStrategy  **参数解释：** 日志策略。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略
-    * ltsStatus  **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * ltsEventStatus  **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsStatus  **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsEventStatus  **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * ltsFileStatus  **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     * logConfigs  **参数解释：** 服务日志配置信息。
     * deployTimeoutMinutes  **参数解释：** 部署超时时间。 **取值范围：** 不涉及。
     *
@@ -195,6 +204,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
             'ltsStrategy' => 'getLtsStrategy',
             'ltsStatus' => 'getLtsStatus',
             'ltsEventStatus' => 'getLtsEventStatus',
+            'ltsFileStatus' => 'getLtsFileStatus',
             'logConfigs' => 'getLogConfigs',
             'deployTimeoutMinutes' => 'getDeployTimeoutMinutes'
     ];
@@ -267,6 +277,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
         $this->container['ltsStrategy'] = isset($data['ltsStrategy']) ? $data['ltsStrategy'] : null;
         $this->container['ltsStatus'] = isset($data['ltsStatus']) ? $data['ltsStatus'] : null;
         $this->container['ltsEventStatus'] = isset($data['ltsEventStatus']) ? $data['ltsEventStatus'] : null;
+        $this->container['ltsFileStatus'] = isset($data['ltsFileStatus']) ? $data['ltsFileStatus'] : null;
         $this->container['logConfigs'] = isset($data['logConfigs']) ? $data['logConfigs'] : null;
         $this->container['deployTimeoutMinutes'] = isset($data['deployTimeoutMinutes']) ? $data['deployTimeoutMinutes'] : null;
     }
@@ -487,7 +498,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsStatus
-    *  **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    *  **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     *
     * @return string|null
     */
@@ -499,7 +510,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ltsStatus
     *
-    * @param string|null $ltsStatus **参数解释：** 部署对接lts状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * @param string|null $ltsStatus **参数解释：** 服务容器标准输出对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     *
     * @return $this
     */
@@ -511,7 +522,7 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsEventStatus
-    *  **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    *  **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     *
     * @return string|null
     */
@@ -523,13 +534,37 @@ class ServiceVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ltsEventStatus
     *
-    * @param string|null $ltsEventStatus **参数解释：** 部署对接lts k8s事件状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * @param string|null $ltsEventStatus **参数解释：** 服务对接lts k8s事件开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
     *
     * @return $this
     */
     public function setLtsEventStatus($ltsEventStatus)
     {
         $this->container['ltsEventStatus'] = $ltsEventStatus;
+        return $this;
+    }
+
+    /**
+    * Gets ltsFileStatus
+    *  **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    *
+    * @return string|null
+    */
+    public function getLtsFileStatus()
+    {
+        return $this->container['ltsFileStatus'];
+    }
+
+    /**
+    * Sets ltsFileStatus
+    *
+    * @param string|null $ltsFileStatus **参数解释：** 服务容器日志文件对接lts开关状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    *
+    * @return $this
+    */
+    public function setLtsFileStatus($ltsFileStatus)
+    {
+        $this->container['ltsFileStatus'] = $ltsFileStatus;
         return $this;
     }
 

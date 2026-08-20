@@ -24,7 +24,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     * metrics  **参数解释**： 监控指标名称。
     * keyName  **参数解释**： 监控查询使用的key。
     * dimRouter  **参数解释**： 监控维度路由。
-    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -32,8 +31,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
             'name' => 'string',
             'metrics' => 'string[]',
             'keyName' => 'string[]',
-            'dimRouter' => 'string[]',
-            'children' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespChildren[]'
+            'dimRouter' => 'string[]'
     ];
 
     /**
@@ -42,7 +40,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     * metrics  **参数解释**： 监控指标名称。
     * keyName  **参数解释**： 监控查询使用的key。
     * dimRouter  **参数解释**： 监控维度路由。
-    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
         'name' => null,
         'metrics' => null,
         'keyName' => null,
-        'dimRouter' => null,
-        'children' => null
+        'dimRouter' => null
     ];
 
     /**
@@ -81,7 +77,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     * metrics  **参数解释**： 监控指标名称。
     * keyName  **参数解释**： 监控查询使用的key。
     * dimRouter  **参数解释**： 监控维度路由。
-    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -89,8 +84,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
             'name' => 'name',
             'metrics' => 'metrics',
             'keyName' => 'key_name',
-            'dimRouter' => 'dim_router',
-            'children' => 'children'
+            'dimRouter' => 'dim_router'
     ];
 
     /**
@@ -99,7 +93,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     * metrics  **参数解释**： 监控指标名称。
     * keyName  **参数解释**： 监控查询使用的key。
     * dimRouter  **参数解释**： 监控维度路由。
-    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -107,8 +100,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'metrics' => 'setMetrics',
             'keyName' => 'setKeyName',
-            'dimRouter' => 'setDimRouter',
-            'children' => 'setChildren'
+            'dimRouter' => 'setDimRouter'
     ];
 
     /**
@@ -117,7 +109,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     * metrics  **参数解释**： 监控指标名称。
     * keyName  **参数解释**： 监控查询使用的key。
     * dimRouter  **参数解释**： 监控维度路由。
-    * children  **参数解释**： 子维度列表。
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'metrics' => 'getMetrics',
             'keyName' => 'getKeyName',
-            'dimRouter' => 'getDimRouter',
-            'children' => 'getChildren'
+            'dimRouter' => 'getDimRouter'
     ];
 
     /**
@@ -191,7 +181,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
         $this->container['metrics'] = isset($data['metrics']) ? $data['metrics'] : null;
         $this->container['keyName'] = isset($data['keyName']) ? $data['keyName'] : null;
         $this->container['dimRouter'] = isset($data['dimRouter']) ? $data['dimRouter'] : null;
-        $this->container['children'] = isset($data['children']) ? $data['children'] : null;
     }
 
     /**
@@ -309,30 +298,6 @@ class ShowCeshierarchyRespDimensions implements ModelInterface, ArrayAccess
     public function setDimRouter($dimRouter)
     {
         $this->container['dimRouter'] = $dimRouter;
-        return $this;
-    }
-
-    /**
-    * Gets children
-    *  **参数解释**： 子维度列表。
-    *
-    * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespChildren[]|null
-    */
-    public function getChildren()
-    {
-        return $this->container['children'];
-    }
-
-    /**
-    * Sets children
-    *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespChildren[]|null $children **参数解释**： 子维度列表。
-    *
-    * @return $this
-    */
-    public function setChildren($children)
-    {
-        $this->container['children'] = $children;
         return $this;
     }
 

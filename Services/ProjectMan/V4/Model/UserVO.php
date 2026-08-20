@@ -20,42 +20,54 @@ class UserVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  用户的租户ID
-    * domainName  用户的租户名称
-    * nickName  用户的昵称
-    * userId  用户Iam id
-    * userName  用户名
-    * userNumId  用户索引id
+    * userId  用户ID。
+    * userNumId  用户短ID。
+    * userName  用户名称。
+    * domainId  用户所属域ID。
+    * domainName  租户名称。
+    * nickName  用户昵称。
+    * roleId  角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    * roleName  用户角色名称，多个角色用英文逗号分隔。
+    * roleCode  用户角色编码，多个角色用英文逗号分隔。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'userId' => 'string',
+            'userNumId' => 'int',
+            'userName' => 'string',
             'domainId' => 'string',
             'domainName' => 'string',
             'nickName' => 'string',
-            'userId' => 'string',
-            'userName' => 'string',
-            'userNumId' => 'int'
+            'roleId' => 'string',
+            'roleName' => 'string',
+            'roleCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  用户的租户ID
-    * domainName  用户的租户名称
-    * nickName  用户的昵称
-    * userId  用户Iam id
-    * userName  用户名
-    * userNumId  用户索引id
+    * userId  用户ID。
+    * userNumId  用户短ID。
+    * userName  用户名称。
+    * domainId  用户所属域ID。
+    * domainName  租户名称。
+    * nickName  用户昵称。
+    * roleId  角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    * roleName  用户角色名称，多个角色用英文逗号分隔。
+    * roleCode  用户角色编码，多个角色用英文逗号分隔。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'userId' => null,
+        'userNumId' => 'int32',
+        'userName' => null,
         'domainId' => null,
         'domainName' => null,
         'nickName' => null,
-        'userId' => null,
-        'userName' => null,
-        'userNumId' => 'int32'
+        'roleId' => null,
+        'roleName' => null,
+        'roleCode' => null
     ];
 
     /**
@@ -81,62 +93,80 @@ class UserVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  用户的租户ID
-    * domainName  用户的租户名称
-    * nickName  用户的昵称
-    * userId  用户Iam id
-    * userName  用户名
-    * userNumId  用户索引id
+    * userId  用户ID。
+    * userNumId  用户短ID。
+    * userName  用户名称。
+    * domainId  用户所属域ID。
+    * domainName  租户名称。
+    * nickName  用户昵称。
+    * roleId  角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    * roleName  用户角色名称，多个角色用英文逗号分隔。
+    * roleCode  用户角色编码，多个角色用英文逗号分隔。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'userId' => 'user_id',
+            'userNumId' => 'user_num_id',
+            'userName' => 'user_name',
             'domainId' => 'domain_id',
             'domainName' => 'domain_name',
             'nickName' => 'nick_name',
-            'userId' => 'user_id',
-            'userName' => 'user_name',
-            'userNumId' => 'user_num_id'
+            'roleId' => 'role_id',
+            'roleName' => 'role_name',
+            'roleCode' => 'role_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  用户的租户ID
-    * domainName  用户的租户名称
-    * nickName  用户的昵称
-    * userId  用户Iam id
-    * userName  用户名
-    * userNumId  用户索引id
+    * userId  用户ID。
+    * userNumId  用户短ID。
+    * userName  用户名称。
+    * domainId  用户所属域ID。
+    * domainName  租户名称。
+    * nickName  用户昵称。
+    * roleId  角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    * roleName  用户角色名称，多个角色用英文逗号分隔。
+    * roleCode  用户角色编码，多个角色用英文逗号分隔。
     *
     * @var string[]
     */
     protected static $setters = [
+            'userId' => 'setUserId',
+            'userNumId' => 'setUserNumId',
+            'userName' => 'setUserName',
             'domainId' => 'setDomainId',
             'domainName' => 'setDomainName',
             'nickName' => 'setNickName',
-            'userId' => 'setUserId',
-            'userName' => 'setUserName',
-            'userNumId' => 'setUserNumId'
+            'roleId' => 'setRoleId',
+            'roleName' => 'setRoleName',
+            'roleCode' => 'setRoleCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  用户的租户ID
-    * domainName  用户的租户名称
-    * nickName  用户的昵称
-    * userId  用户Iam id
-    * userName  用户名
-    * userNumId  用户索引id
+    * userId  用户ID。
+    * userNumId  用户短ID。
+    * userName  用户名称。
+    * domainId  用户所属域ID。
+    * domainName  租户名称。
+    * nickName  用户昵称。
+    * roleId  角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    * roleName  用户角色名称，多个角色用英文逗号分隔。
+    * roleCode  用户角色编码，多个角色用英文逗号分隔。
     *
     * @var string[]
     */
     protected static $getters = [
+            'userId' => 'getUserId',
+            'userNumId' => 'getUserNumId',
+            'userName' => 'getUserName',
             'domainId' => 'getDomainId',
             'domainName' => 'getDomainName',
             'nickName' => 'getNickName',
-            'userId' => 'getUserId',
-            'userName' => 'getUserName',
-            'userNumId' => 'getUserNumId'
+            'roleId' => 'getRoleId',
+            'roleName' => 'getRoleName',
+            'roleCode' => 'getRoleCode'
     ];
 
     /**
@@ -197,12 +227,15 @@ class UserVO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
+        $this->container['userNumId'] = isset($data['userNumId']) ? $data['userNumId'] : null;
+        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['nickName'] = isset($data['nickName']) ? $data['nickName'] : null;
-        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
-        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
-        $this->container['userNumId'] = isset($data['userNumId']) ? $data['userNumId'] : null;
+        $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
+        $this->container['roleName'] = isset($data['roleName']) ? $data['roleName'] : null;
+        $this->container['roleCode'] = isset($data['roleCode']) ? $data['roleCode'] : null;
     }
 
     /**
@@ -213,6 +246,60 @@ class UserVO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['userId']) && (mb_strlen($this->container['userId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'userId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['userId']) && (mb_strlen($this->container['userId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'userId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['userNumId']) && ($this->container['userNumId'] > 99999999)) {
+                $invalidProperties[] = "invalid value for 'userNumId', must be smaller than or equal to 99999999.";
+            }
+            if (!is_null($this->container['userNumId']) && ($this->container['userNumId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'userNumId', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['userName']) && (mb_strlen($this->container['userName']) < 2)) {
+                $invalidProperties[] = "invalid value for 'userName', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'domainName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['domainName']) && (mb_strlen($this->container['domainName']) < 2)) {
+                $invalidProperties[] = "invalid value for 'domainName', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['nickName']) && (mb_strlen($this->container['nickName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nickName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nickName']) && (mb_strlen($this->container['nickName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'nickName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) > 1056)) {
+                $invalidProperties[] = "invalid value for 'roleId', the character length must be smaller than or equal to 1056.";
+            }
+            if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'roleId', the character length must be bigger than or equal to 32.";
+            }
+            if (!is_null($this->container['roleName']) && (mb_strlen($this->container['roleName']) > 1056)) {
+                $invalidProperties[] = "invalid value for 'roleName', the character length must be smaller than or equal to 1056.";
+            }
+            if (!is_null($this->container['roleName']) && (mb_strlen($this->container['roleName']) < 2)) {
+                $invalidProperties[] = "invalid value for 'roleName', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['roleCode']) && (mb_strlen($this->container['roleCode']) > 1056)) {
+                $invalidProperties[] = "invalid value for 'roleCode', the character length must be smaller than or equal to 1056.";
+            }
+            if (!is_null($this->container['roleCode']) && (mb_strlen($this->container['roleCode']) < 2)) {
+                $invalidProperties[] = "invalid value for 'roleCode', the character length must be bigger than or equal to 2.";
+            }
         return $invalidProperties;
     }
 
@@ -228,80 +315,8 @@ class UserVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets domainId
-    *  用户的租户ID
-    *
-    * @return string|null
-    */
-    public function getDomainId()
-    {
-        return $this->container['domainId'];
-    }
-
-    /**
-    * Sets domainId
-    *
-    * @param string|null $domainId 用户的租户ID
-    *
-    * @return $this
-    */
-    public function setDomainId($domainId)
-    {
-        $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
-    * Gets domainName
-    *  用户的租户名称
-    *
-    * @return string|null
-    */
-    public function getDomainName()
-    {
-        return $this->container['domainName'];
-    }
-
-    /**
-    * Sets domainName
-    *
-    * @param string|null $domainName 用户的租户名称
-    *
-    * @return $this
-    */
-    public function setDomainName($domainName)
-    {
-        $this->container['domainName'] = $domainName;
-        return $this;
-    }
-
-    /**
-    * Gets nickName
-    *  用户的昵称
-    *
-    * @return string|null
-    */
-    public function getNickName()
-    {
-        return $this->container['nickName'];
-    }
-
-    /**
-    * Sets nickName
-    *
-    * @param string|null $nickName 用户的昵称
-    *
-    * @return $this
-    */
-    public function setNickName($nickName)
-    {
-        $this->container['nickName'] = $nickName;
-        return $this;
-    }
-
-    /**
     * Gets userId
-    *  用户Iam id
+    *  用户ID。
     *
     * @return string|null
     */
@@ -313,7 +328,7 @@ class UserVO implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string|null $userId 用户Iam id
+    * @param string|null $userId 用户ID。
     *
     * @return $this
     */
@@ -324,32 +339,8 @@ class UserVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets userName
-    *  用户名
-    *
-    * @return string|null
-    */
-    public function getUserName()
-    {
-        return $this->container['userName'];
-    }
-
-    /**
-    * Sets userName
-    *
-    * @param string|null $userName 用户名
-    *
-    * @return $this
-    */
-    public function setUserName($userName)
-    {
-        $this->container['userName'] = $userName;
-        return $this;
-    }
-
-    /**
     * Gets userNumId
-    *  用户索引id
+    *  用户短ID。
     *
     * @return int|null
     */
@@ -361,13 +352,181 @@ class UserVO implements ModelInterface, ArrayAccess
     /**
     * Sets userNumId
     *
-    * @param int|null $userNumId 用户索引id
+    * @param int|null $userNumId 用户短ID。
     *
     * @return $this
     */
     public function setUserNumId($userNumId)
     {
         $this->container['userNumId'] = $userNumId;
+        return $this;
+    }
+
+    /**
+    * Gets userName
+    *  用户名称。
+    *
+    * @return string|null
+    */
+    public function getUserName()
+    {
+        return $this->container['userName'];
+    }
+
+    /**
+    * Sets userName
+    *
+    * @param string|null $userName 用户名称。
+    *
+    * @return $this
+    */
+    public function setUserName($userName)
+    {
+        $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets domainId
+    *  用户所属域ID。
+    *
+    * @return string|null
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string|null $domainId 用户所属域ID。
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets domainName
+    *  租户名称。
+    *
+    * @return string|null
+    */
+    public function getDomainName()
+    {
+        return $this->container['domainName'];
+    }
+
+    /**
+    * Sets domainName
+    *
+    * @param string|null $domainName 租户名称。
+    *
+    * @return $this
+    */
+    public function setDomainName($domainName)
+    {
+        $this->container['domainName'] = $domainName;
+        return $this;
+    }
+
+    /**
+    * Gets nickName
+    *  用户昵称。
+    *
+    * @return string|null
+    */
+    public function getNickName()
+    {
+        return $this->container['nickName'];
+    }
+
+    /**
+    * Sets nickName
+    *
+    * @param string|null $nickName 用户昵称。
+    *
+    * @return $this
+    */
+    public function setNickName($nickName)
+    {
+        $this->container['nickName'] = $nickName;
+        return $this;
+    }
+
+    /**
+    * Gets roleId
+    *  角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    *
+    * @return string|null
+    */
+    public function getRoleId()
+    {
+        return $this->container['roleId'];
+    }
+
+    /**
+    * Sets roleId
+    *
+    * @param string|null $roleId 角色ID，用户在项目中具有多个角色时用英文逗号分隔。
+    *
+    * @return $this
+    */
+    public function setRoleId($roleId)
+    {
+        $this->container['roleId'] = $roleId;
+        return $this;
+    }
+
+    /**
+    * Gets roleName
+    *  用户角色名称，多个角色用英文逗号分隔。
+    *
+    * @return string|null
+    */
+    public function getRoleName()
+    {
+        return $this->container['roleName'];
+    }
+
+    /**
+    * Sets roleName
+    *
+    * @param string|null $roleName 用户角色名称，多个角色用英文逗号分隔。
+    *
+    * @return $this
+    */
+    public function setRoleName($roleName)
+    {
+        $this->container['roleName'] = $roleName;
+        return $this;
+    }
+
+    /**
+    * Gets roleCode
+    *  用户角色编码，多个角色用英文逗号分隔。
+    *
+    * @return string|null
+    */
+    public function getRoleCode()
+    {
+        return $this->container['roleCode'];
+    }
+
+    /**
+    * Sets roleCode
+    *
+    * @param string|null $roleCode 用户角色编码，多个角色用英文逗号分隔。
+    *
+    * @return $this
+    */
+    public function setRoleCode($roleCode)
+    {
+        $this->container['roleCode'] = $roleCode;
         return $this;
     }
 

@@ -21,12 +21,12 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  账号的计费模式
-    * productType  加速类型
-    * effectiveTime  该模式生效时间
-    * createTime  创建时间
-    * serviceArea  该模式的区域
-    * status  状态,首次开通状态为active,之后修改为upcoming
+    * chargeMode  **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
+    * productType  **参数解释：** 加速类型 **取值范围：** base：基础加速
+    * effectiveTime  **参数解释：** 该模式生效时间 **取值范围：** 不涉及
+    * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
+    * serviceArea  **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
+    * status  **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  账号的计费模式
-    * productType  加速类型
-    * effectiveTime  该模式生效时间
-    * createTime  创建时间
-    * serviceArea  该模式的区域
-    * status  状态,首次开通状态为active,之后修改为upcoming
+    * chargeMode  **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
+    * productType  **参数解释：** 加速类型 **取值范围：** base：基础加速
+    * effectiveTime  **参数解释：** 该模式生效时间 **取值范围：** 不涉及
+    * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
+    * serviceArea  **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
+    * status  **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  账号的计费模式
-    * productType  加速类型
-    * effectiveTime  该模式生效时间
-    * createTime  创建时间
-    * serviceArea  该模式的区域
-    * status  状态,首次开通状态为active,之后修改为upcoming
+    * chargeMode  **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
+    * productType  **参数解释：** 加速类型 **取值范围：** base：基础加速
+    * effectiveTime  **参数解释：** 该模式生效时间 **取值范围：** 不涉及
+    * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
+    * serviceArea  **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
+    * status  **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  账号的计费模式
-    * productType  加速类型
-    * effectiveTime  该模式生效时间
-    * createTime  创建时间
-    * serviceArea  该模式的区域
-    * status  状态,首次开通状态为active,之后修改为upcoming
+    * chargeMode  **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
+    * productType  **参数解释：** 加速类型 **取值范围：** base：基础加速
+    * effectiveTime  **参数解释：** 该模式生效时间 **取值范围：** 不涉及
+    * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
+    * serviceArea  **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
+    * status  **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  账号的计费模式
-    * productType  加速类型
-    * effectiveTime  该模式生效时间
-    * createTime  创建时间
-    * serviceArea  该模式的区域
-    * status  状态,首次开通状态为active,之后修改为upcoming
+    * chargeMode  **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
+    * productType  **参数解释：** 加速类型 **取值范围：** base：基础加速
+    * effectiveTime  **参数解释：** 该模式生效时间 **取值范围：** 不涉及
+    * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
+    * serviceArea  **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
+    * status  **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  账号的计费模式
+    *  **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
     *
     * @return string|null
     */
@@ -242,7 +242,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 账号的计费模式
+    * @param string|null $chargeMode **参数解释：** 账号的计费模式 **取值范围：** - flux：流量 - bw：带宽
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets productType
-    *  加速类型
+    *  **参数解释：** 加速类型 **取值范围：** base：基础加速
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets productType
     *
-    * @param string|null $productType 加速类型
+    * @param string|null $productType **参数解释：** 加速类型 **取值范围：** base：基础加速
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectiveTime
-    *  该模式生效时间
+    *  **参数解释：** 该模式生效时间 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets effectiveTime
     *
-    * @param int|null $effectiveTime 该模式生效时间
+    * @param int|null $effectiveTime **参数解释：** 该模式生效时间 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  **参数解释：** 创建时间 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -314,7 +314,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 创建时间
+    * @param int|null $createTime **参数解释：** 创建时间 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  该模式的区域
+    *  **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea 该模式的区域
+    * @param string|null $serviceArea **参数解释：** 该模式的区域 **取值范围：** mainland_china：中国大陆
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态,首次开通状态为active,之后修改为upcoming
+    *  **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class SetChargeModesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态,首次开通状态为active,之后修改为upcoming
+    * @param string|null $status **参数解释：** 状态 > 首次开通状态为active（已生效）,之后修改为upcoming（待生效）  **取值范围：** - active：已生效 - upcoming：待生效
     *
     * @return $this
     */

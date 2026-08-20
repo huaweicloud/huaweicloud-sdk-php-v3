@@ -21,8 +21,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
-    * productRatingResults  产品询价结果，具体参见表5。
+    * measureId  价格度量单位标识。 1：美元
+    * productRatingResults  产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
-    * productRatingResults  产品询价结果，具体参见表5。
+    * measureId  价格度量单位标识。 1：美元
+    * productRatingResults  产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
-    * productRatingResults  产品询价结果，具体参见表5。
+    * measureId  价格度量单位标识。 1：美元
+    * productRatingResults  产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
-    * productRatingResults  产品询价结果，具体参见表5。
+    * measureId  价格度量单位标识。 1：美元
+    * productRatingResults  产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * officialWebsiteAmount  包年/包月产品的官网价。
-    * measureId  价格度量单位标识。 1：元
-    * productRatingResults  产品询价结果，具体参见表5。
+    * measureId  价格度量单位标识。 1：美元
+    * productRatingResults  产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureId
-    *  价格度量单位标识。 1：元
+    *  价格度量单位标识。 1：美元
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets measureId
     *
-    * @param int|null $measureId 价格度量单位标识。 1：元
+    * @param int|null $measureId 价格度量单位标识。 1：美元
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets productRatingResults
-    *  产品询价结果，具体参见表5。
+    *  产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @return \HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]|null
     */
@@ -256,7 +256,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets productRatingResults
     *
-    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]|null $productRatingResults 产品询价结果，具体参见表5。
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]|null $productRatingResults 产品询价结果，具体参见PeriodProductOfficialRatingResult。
     *
     * @return $this
     */

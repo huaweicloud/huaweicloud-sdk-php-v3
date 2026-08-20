@@ -20,10 +20,10 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
-    * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
-    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    * resourceIds  资源ID列表。只支持传入主资源ID，最多10个资源ID。
+    * periodType  周期类型。2：月 3：年
+    * periodNum  周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
+    * includeRelativeResources  是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
-    * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
-    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    * resourceIds  资源ID列表。只支持传入主资源ID，最多10个资源ID。
+    * periodType  周期类型。2：月 3：年
+    * periodNum  周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
+    * includeRelativeResources  是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
-    * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
-    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    * resourceIds  资源ID列表。只支持传入主资源ID，最多10个资源ID。
+    * periodType  周期类型。2：月 3：年
+    * periodNum  周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
+    * includeRelativeResources  是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
-    * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
-    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    * resourceIds  资源ID列表。只支持传入主资源ID，最多10个资源ID。
+    * periodType  周期类型。2：月 3：年
+    * periodNum  周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
+    * includeRelativeResources  是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
-    * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
-    * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
-    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    * resourceIds  资源ID列表。只支持传入主资源ID，最多10个资源ID。
+    * periodType  周期类型。2：月 3：年
+    * periodNum  周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
+    * includeRelativeResources  是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceIds
-    *  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
+    *  资源ID列表。只支持传入主资源ID，最多10个资源ID。
     *
     * @return string[]
     */
@@ -240,7 +240,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Sets resourceIds
     *
-    * @param string[] $resourceIds |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
+    * @param string[] $resourceIds 资源ID列表。只支持传入主资源ID，最多10个资源ID。
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
+    *  周期类型。2：月 3：年
     *
     * @return int
     */
@@ -264,7 +264,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int $periodType |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
+    * @param int $periodType 周期类型。2：月 3：年
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    *  周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
     *
     * @return int
     */
@@ -288,7 +288,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int $periodNum |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    * @param int $periodNum 周期数目。如果是月，目前支持1-11 如果是年，目前支持1-3
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets includeRelativeResources
-    *  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    *  是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @return bool|null
     */
@@ -312,7 +312,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     /**
     * Sets includeRelativeResources
     *
-    * @param bool|null $includeRelativeResources 是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    * @param bool|null $includeRelativeResources 是否包含关联资源一起续费询价。该参数非必填，true:包含。false:不包含。此参数不携带或携带值为空串时，默认值为“false”。
     *
     * @return $this
     */

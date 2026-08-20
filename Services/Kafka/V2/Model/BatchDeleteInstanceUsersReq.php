@@ -182,6 +182,9 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['action'] === null) {
+            $invalidProperties[] = "'action' can't be null";
+        }
             $allowedValues = $this->getActionAllowableValues();
                 if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -190,6 +193,9 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -208,7 +214,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     * Gets action
     *  删除类型。当前只支持delete。  当删除用户时，为必选参数。
     *
-    * @return string|null
+    * @return string
     */
     public function getAction()
     {
@@ -218,7 +224,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 删除类型。当前只支持delete。  当删除用户时，为必选参数。
+    * @param string $action 删除类型。当前只支持delete。  当删除用户时，为必选参数。
     *
     * @return $this
     */
@@ -232,7 +238,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     * Gets users
     *  用户列表。  当删除用户时，为必选参数。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getUsers()
     {
@@ -242,7 +248,7 @@ class BatchDeleteInstanceUsersReq implements ModelInterface, ArrayAccess
     /**
     * Sets users
     *
-    * @param string[]|null $users 用户列表。  当删除用户时，为必选参数。
+    * @param string[] $users 用户列表。  当删除用户时，为必选参数。
     *
     * @return $this
     */

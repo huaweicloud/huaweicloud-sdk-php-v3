@@ -27,7 +27,7 @@ class ListScheduledTasksResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobCount' => 'string',
+            'jobCount' => 'int',
             'jobs' => '\HuaweiCloud\SDK\RabbitMQ\V2\Model\ScheduledTaskEntity[]'
     ];
 
@@ -188,7 +188,7 @@ class ListScheduledTasksResponse implements ModelInterface, ArrayAccess
     * Gets jobCount
     *  **参数解释**： 任务总数。 **取值范围**： 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getJobCount()
     {
@@ -198,7 +198,7 @@ class ListScheduledTasksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobCount
     *
-    * @param string|null $jobCount **参数解释**： 任务总数。 **取值范围**： 不涉及。
+    * @param int|null $jobCount **参数解释**： 任务总数。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,16 +21,18 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * interval  查询时间间隔，单位：秒
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * action  **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
+    * interval  **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'groupBy' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
             'statType' => 'string',
@@ -41,16 +43,18 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * interval  查询时间间隔，单位：秒
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * action  **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
+    * interval  **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'groupBy' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
         'statType' => null,
@@ -82,16 +86,18 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * interval  查询时间间隔，单位：秒
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * action  **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
+    * interval  **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'groupBy' => 'group_by',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'statType' => 'stat_type',
@@ -102,16 +108,18 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * interval  查询时间间隔，单位：秒
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * action  **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
+    * interval  **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
+            'groupBy' => 'setGroupBy',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'statType' => 'setStatType',
@@ -122,16 +130,18 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  查询起始时间戳。
-    * endTime  查询结束时间戳
-    * statType  参数类型支持：flux(流量)，req_num(请求总数)。
-    * action  **参数解释：** 规则行为 **约束限制：** 不涉及
-    * interval  查询时间间隔，单位：秒
-    * result  按指定的分组方式组织的数据
+    * groupBy  **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    * startTime  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
+    * endTime  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
+    * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
+    * action  **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
+    * interval  **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
+            'groupBy' => 'getGroupBy',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'statType' => 'getStatType',
@@ -198,6 +208,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['groupBy'] = isset($data['groupBy']) ? $data['groupBy'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['statType'] = isset($data['statType']) ? $data['statType'] : null;
@@ -214,6 +225,12 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['groupBy']) && (mb_strlen($this->container['groupBy']) > 512)) {
+                $invalidProperties[] = "invalid value for 'groupBy', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['groupBy']) && (mb_strlen($this->container['groupBy']) < 2)) {
+                $invalidProperties[] = "invalid value for 'groupBy', the character length must be bigger than or equal to 2.";
+            }
         return $invalidProperties;
     }
 
@@ -229,8 +246,32 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets groupBy
+    *  **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    *
+    * @return string|null
+    */
+    public function getGroupBy()
+    {
+        return $this->container['groupBy'];
+    }
+
+    /**
+    * Sets groupBy
+    *
+    * @param string|null $groupBy **参数解释：** 数据分组方式 **取值范围：** domain：按域名分组 **默认取值：** 不分组
+    *
+    * @return $this
+    */
+    public function setGroupBy($groupBy)
+    {
+        $this->container['groupBy'] = $groupBy;
+        return $this;
+    }
+
+    /**
     * Gets startTime
-    *  查询起始时间戳。
+    *  **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -242,7 +283,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 查询起始时间戳。
+    * @param int|null $startTime **参数解释：** 查询起始时间戳 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -254,7 +295,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  查询结束时间戳
+    *  **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -266,7 +307,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 查询结束时间戳
+    * @param int|null $endTime **参数解释：** 查询结束时间戳 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -278,7 +319,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets statType
-    *  参数类型支持：flux(流量)，req_num(请求总数)。
+    *  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @return string|null
     */
@@ -290,7 +331,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets statType
     *
-    * @param string|null $statType 参数类型支持：flux(流量)，req_num(请求总数)。
+    * @param string|null $statType **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
     *
     * @return $this
     */
@@ -302,7 +343,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  **参数解释：** 规则行为 **约束限制：** 不涉及
+    *  **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
     *
     * @return string|null
     */
@@ -314,7 +355,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action **参数解释：** 规则行为 **约束限制：** 不涉及
+    * @param string|null $action **参数解释：** 查询数据类型 **取值范围：** - summary：汇总数据 - detail：明细数据
     *
     * @return $this
     */
@@ -326,7 +367,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets interval
-    *  查询时间间隔，单位：秒
+    *  **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
     *
     * @return int|null
     */
@@ -338,7 +379,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets interval
     *
-    * @param int|null $interval 查询时间间隔，单位：秒
+    * @param int|null $interval **参数解释：** 查询时间粒度 **取值范围：** - 300：采样时间间隔为5分钟，单位：秒 - 3600：采样时间间隔为1小时，单位：秒 - 86400：采样时间间隔为1天，单位：秒 **默认取值：** 默认取对应时间跨度的最小间隔 > 时间跨度小于等于7天，最小时间间隔为300；时间跨度大于7天，最小时间间隔为3600
     *
     * @return $this
     */
@@ -350,7 +391,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  按指定的分组方式组织的数据
+    *  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @return map[string,object]|null
     */
@@ -362,7 +403,7 @@ class ShowDomainStatsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param map[string,object]|null $result 按指定的分组方式组织的数据
+    * @param map[string,object]|null $result **参数解释：** 按指定的分组方式组织的数据 **取值范围：** 不涉及
     *
     * @return $this
     */

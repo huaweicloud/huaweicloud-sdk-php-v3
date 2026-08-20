@@ -28,6 +28,8 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
+    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class Status implements ModelInterface, ArrayAccess
             'tasks' => 'string[]',
             'startTime' => 'int',
             'taskStatuses' => '\HuaweiCloud\SDK\ModelArts\V1\Model\TaskStatuses[]',
-            'runningRecords' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RunningRecord[]'
+            'runningRecords' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RunningRecord[]',
+            'retentionTime' => 'int',
+            'taskIps' => '\HuaweiCloud\SDK\ModelArts\V1\Model\TaskIP[]'
     ];
 
     /**
@@ -52,6 +56,8 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
+    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class Status implements ModelInterface, ArrayAccess
         'tasks' => null,
         'startTime' => 'int64',
         'taskStatuses' => null,
-        'runningRecords' => null
+        'runningRecords' => null,
+        'retentionTime' => 'int32',
+        'taskIps' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
+    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class Status implements ModelInterface, ArrayAccess
             'tasks' => 'tasks',
             'startTime' => 'start_time',
             'taskStatuses' => 'task_statuses',
-            'runningRecords' => 'running_records'
+            'runningRecords' => 'running_records',
+            'retentionTime' => 'retention_time',
+            'taskIps' => 'task_ips'
     ];
 
     /**
@@ -121,6 +133,8 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
+    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class Status implements ModelInterface, ArrayAccess
             'tasks' => 'setTasks',
             'startTime' => 'setStartTime',
             'taskStatuses' => 'setTaskStatuses',
-            'runningRecords' => 'setRunningRecords'
+            'runningRecords' => 'setRunningRecords',
+            'retentionTime' => 'setRetentionTime',
+            'taskIps' => 'setTaskIps'
     ];
 
     /**
@@ -145,6 +161,8 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
+    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class Status implements ModelInterface, ArrayAccess
             'tasks' => 'getTasks',
             'startTime' => 'getStartTime',
             'taskStatuses' => 'getTaskStatuses',
-            'runningRecords' => 'getRunningRecords'
+            'runningRecords' => 'getRunningRecords',
+            'retentionTime' => 'getRetentionTime',
+            'taskIps' => 'getTaskIps'
     ];
 
     /**
@@ -225,6 +245,8 @@ class Status implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['taskStatuses'] = isset($data['taskStatuses']) ? $data['taskStatuses'] : null;
         $this->container['runningRecords'] = isset($data['runningRecords']) ? $data['runningRecords'] : null;
+        $this->container['retentionTime'] = isset($data['retentionTime']) ? $data['retentionTime'] : null;
+        $this->container['taskIps'] = isset($data['taskIps']) ? $data['taskIps'] : null;
     }
 
     /**
@@ -438,6 +460,54 @@ class Status implements ModelInterface, ArrayAccess
     public function setRunningRecords($runningRecords)
     {
         $this->container['runningRecords'] = $runningRecords;
+        return $this;
+    }
+
+    /**
+    * Gets retentionTime
+    *  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    *
+    * @return int|null
+    */
+    public function getRetentionTime()
+    {
+        return $this->container['retentionTime'];
+    }
+
+    /**
+    * Sets retentionTime
+    *
+    * @param int|null $retentionTime **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setRetentionTime($retentionTime)
+    {
+        $this->container['retentionTime'] = $retentionTime;
+        return $this;
+    }
+
+    /**
+    * Gets taskIps
+    *  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\TaskIP[]|null
+    */
+    public function getTaskIps()
+    {
+        return $this->container['taskIps'];
+    }
+
+    /**
+    * Sets taskIps
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\TaskIP[]|null $taskIps **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
+    *
+    * @return $this
+    */
+    public function setTaskIps($taskIps)
+    {
+        $this->container['taskIps'] = $taskIps;
         return $this;
     }
 

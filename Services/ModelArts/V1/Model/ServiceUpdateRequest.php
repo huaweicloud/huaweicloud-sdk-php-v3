@@ -20,21 +20,21 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
-    * name  **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
-    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
-    * version  **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * id  **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
+    * name  **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    * version  **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
-    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
-    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
-    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
+    * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @var string[]
     */
@@ -45,10 +45,10 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
             'version' => 'string',
             'description' => 'string',
             'groupConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\GroupConfig[]',
-            'runtimeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfig',
+            'runtimeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigUpdateRequest',
             'upgradeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UpgradeConfig',
             'ltsStrategy' => 'string',
-            'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfig[]',
+            'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]',
             'tags' => 'string',
             'workspaceId' => 'string',
             'schedule' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]',
@@ -58,21 +58,21 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
-    * name  **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
-    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
-    * version  **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * id  **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
+    * name  **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    * version  **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
-    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
-    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
-    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
+    * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
-    * name  **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
-    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
-    * version  **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * id  **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
+    * name  **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    * version  **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
-    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
-    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
-    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
+    * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
-    * name  **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
-    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
-    * version  **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * id  **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
+    * name  **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    * version  **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
-    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
-    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
-    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
+    * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
-    * name  **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
-    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
-    * version  **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * id  **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
+    * name  **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    * deployTimeoutMinutes  **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    * version  **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * description  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupConfigs  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * runtimeConfig  runtimeConfig
     * upgradeConfig  upgradeConfig
-    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
-    * logConfigs  **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
-    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
-    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * ltsStrategy  **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
+    * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+    * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
+    * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
+    *  **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -340,7 +340,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id **参数解释：** 服务ID **约束限制：** 不涉及。 **取值范围：** 不涉及
+    * @param string|null $id **参数解释：** 服务ID **约束限制：** 不填保留原有值。 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    *  **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释：** 服务名称。 **约束限制：** 不涉及。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
+    * @param string|null $name **参数解释：** 服务名称。 **约束限制：** 不填保留原有值。 **取值范围：** 支持1-128个字符，可以包含字母、汉字、数字、连字符和下划线。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -376,7 +376,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deployTimeoutMinutes
-    *  **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    *  **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     *
     * @return int|null
     */
@@ -388,7 +388,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deployTimeoutMinutes
     *
-    * @param int|null $deployTimeoutMinutes **参数解释：** 服务部署超时时间，integer类型，取值在1~300（860版本该参数做保留兼容）。 **约束限制：** 不涉及。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
+    * @param int|null $deployTimeoutMinutes **参数解释：** 服务部署超时时间，integer类型，取值在1~300。 **约束限制：** 不填保留原有值。 **取值范围：** [0, 300]。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -400,7 +400,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -412,7 +412,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version **参数解释：** 必填，填了之后，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param string|null $version **参数解释：** 服务版本，数据库中如果存在相同版本号，将会报错（仅修改描述的场景除外）。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -424,7 +424,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -436,7 +436,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string|null $description **参数解释：** 非必填，仅更新描述的场景直接修改对应version的数据库字段，不新增版本号。 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -448,7 +448,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupConfigs
-    *  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\ModelArts\V1\Model\GroupConfig[]|null
     */
@@ -460,7 +460,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupConfigs
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\GroupConfig[]|null $groupConfigs **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\GroupConfig[]|null $groupConfigs **参数解释：** 仅修改服务时不需传，兼容部署分离之前版本。 **约束限制：** 不填保留原有值，group_configs的最大元素数量为1。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -474,7 +474,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * Gets runtimeConfig
     *  runtimeConfig
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfig|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigUpdateRequest|null
     */
     public function getRuntimeConfig()
     {
@@ -484,7 +484,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeConfig
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfig|null $runtimeConfig runtimeConfig
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigUpdateRequest|null $runtimeConfig runtimeConfig
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsStrategy
-    *  **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
+    *  **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ltsStrategy
     *
-    * @param string|null $ltsStrategy **参数解释：** 日志策略。 **约束限制：** 不涉及。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** AUTO_CREATE：自动创建日志流。
+    * @param string|null $ltsStrategy **参数解释：** 日志策略。 **约束限制：** 不填保留原有值。 **取值范围：** - POOL：使用资源池日志插件配置的日志流。 - AUTO_CREATE：自动创建日志流。 - DEFAULT: 由系统决定日志策略 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -544,9 +544,9 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logConfigs
-    *  **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    *  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfig[]|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]|null
     */
     public function getLogConfigs()
     {
@@ -556,7 +556,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logConfigs
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfig[]|null $logConfigs **参数解释：** 日志配置，当开启LTS日志的时候，STDOUT类型为必填。 **约束限制：** 当开启LTS日志的时候，STDOUT类型为必填。 数量上限为2个。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]|null $logConfigs **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -580,7 +580,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string|null $tags **参数解释：** 服务标签,上限20个 **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string|null $tags **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -604,7 +604,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string|null $workspaceId **参数解释：** 工作空间id，默认是“0” **约束限制：** 不涉及。 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string|null $workspaceId **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets schedule
-    *  **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
+    *  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     *
     * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null
     */
@@ -628,7 +628,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets schedule
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null $schedule **参数解释：** 定时停止配置。 **约束限制：** 仅当body中另一个参数description为空时，此参数才生效。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null $schedule **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets customMetricsPath
-    *  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
+    *  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     *
     * @return string|null
     */
@@ -652,7 +652,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets customMetricsPath
     *
-    * @param string|null $customMetricsPath **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。
+    * @param string|null $customMetricsPath **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskType
-    *  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    *  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @return string|null
     */
@@ -676,7 +676,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets taskType
     *
-    * @param string|null $taskType **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * @param string|null $taskType **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
     * @return $this
     */

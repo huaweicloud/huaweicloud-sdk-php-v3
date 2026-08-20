@@ -20,9 +20,9 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * officialWebsiteAmount  |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
-    * installmentPeriodType  |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    * officialWebsiteAmount  官网价格。单位为元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。单位为元
+    * installmentPeriodType  分期付款的周期类型。2：月
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * officialWebsiteAmount  |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
-    * installmentPeriodType  |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    * officialWebsiteAmount  官网价格。单位为元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。单位为元
+    * installmentPeriodType  分期付款的周期类型。2：月
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * officialWebsiteAmount  |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
-    * installmentPeriodType  |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    * officialWebsiteAmount  官网价格。单位为元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。单位为元
+    * installmentPeriodType  分期付款的周期类型。2：月
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * officialWebsiteAmount  |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
-    * installmentPeriodType  |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    * officialWebsiteAmount  官网价格。单位为元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。单位为元
+    * installmentPeriodType  分期付款的周期类型。2：月
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * officialWebsiteAmount  |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
-    * installmentOfficialWebsiteAmount  |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
-    * installmentPeriodType  |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    * officialWebsiteAmount  官网价格。单位为元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。单位为元
+    * installmentPeriodType  分期付款的周期类型。2：月
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets officialWebsiteAmount
-    *  |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
+    *  官网价格。单位为元
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param string|null $officialWebsiteAmount |参数名称：官网价格。单位为元| |参数约束及描述：官网价格。单位为元|
+    * @param string|null $officialWebsiteAmount 官网价格。单位为元
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentOfficialWebsiteAmount
-    *  |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
+    *  分期金额的官网价。单位为元
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets installmentOfficialWebsiteAmount
     *
-    * @param string|null $installmentOfficialWebsiteAmount |参数名称：分期金额的官网价。单位为元| |参数约束及描述：分期金额的官网价。单位为元|
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。单位为元
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets installmentPeriodType
-    *  |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    *  分期付款的周期类型。2：月
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class OfficialWebsiteRatingResultV2 implements ModelInterface, ArrayAccess
     /**
     * Sets installmentPeriodType
     *
-    * @param int|null $installmentPeriodType |参数名称：分期付款的周期类型。2：月| |参数的约束及描述：分期付款的周期类型。2：月|
+    * @param int|null $installmentPeriodType 分期付款的周期类型。2：月
     *
     * @return $this
     */

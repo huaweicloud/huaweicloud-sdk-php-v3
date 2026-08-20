@@ -20,8 +20,8 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    * limit  **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
+    * offset  **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    * limit  **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
+    * offset  **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    * limit  **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
+    * offset  **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    * limit  **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
+    * offset  **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
-    * offset  偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    * limit  **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
+    * offset  **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
+    *  **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
     *
     * @return int|null
     */
@@ -203,7 +203,7 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit - 每页显示的条目数量，默认值为5, 传入空或0时，会按默认处理
+    * @param int|null $limit **参数解释：** 每页显示的条目数量 **约束限制：** 不涉及 **取值范围：** 0-100 **默认取值：** 5 > 传入空或0时，会按默认处理
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    *  **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @return int|null
     */
@@ -227,7 +227,7 @@ class ListSubscriptionTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，表示从此偏移量开始查询， offset大于等于0，默认为0
+    * @param int|null $offset **参数解释：** 偏移量 > 表示从此偏移量开始查询  **约束限制：** 不涉及 **取值范围：** offset大于等于0 **默认取值：** 0
     *
     * @return $this
     */

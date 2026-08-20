@@ -20,9 +20,9 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * advertisedIp  advertised.listeners IP/域名。
-    * success  修改broker跨VPC访问的状态。
-    * ip  listeners IP。
+    * advertisedIp  **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
+    * success  **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
+    * ip  **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * advertisedIp  advertised.listeners IP/域名。
-    * success  修改broker跨VPC访问的状态。
-    * ip  listeners IP。
+    * advertisedIp  **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
+    * success  **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
+    * ip  **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * advertisedIp  advertised.listeners IP/域名。
-    * success  修改broker跨VPC访问的状态。
-    * ip  listeners IP。
+    * advertisedIp  **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
+    * success  **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
+    * ip  **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * advertisedIp  advertised.listeners IP/域名。
-    * success  修改broker跨VPC访问的状态。
-    * ip  listeners IP。
+    * advertisedIp  **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
+    * success  **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
+    * ip  **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * advertisedIp  advertised.listeners IP/域名。
-    * success  修改broker跨VPC访问的状态。
-    * ip  listeners IP。
+    * advertisedIp  **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
+    * success  **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
+    * ip  **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets advertisedIp
-    *  advertised.listeners IP/域名。
+    *  **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
     /**
     * Sets advertisedIp
     *
-    * @param string|null $advertisedIp advertised.listeners IP/域名。
+    * @param string|null $advertisedIp **参数解释**： advertised.listeners IP/域名。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  修改broker跨VPC访问的状态。
+    *  **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
     *
     * @return bool|null
     */
@@ -232,7 +232,7 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param bool|null $success 修改broker跨VPC访问的状态。
+    * @param bool|null $success **参数解释**： 修改broker跨VPC访问的状态。 **取值范围**： - true：修改broker跨VPC访问成功。 - false：修改broker跨VPC访问失败。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  listeners IP。
+    *  **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class UpdateInstanceCrossVpcIpRespResults implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string|null $ip listeners IP。
+    * @param string|null $ip **参数解释**： listeners IP。 **取值范围**： 不涉及。
     *
     * @return $this
     */

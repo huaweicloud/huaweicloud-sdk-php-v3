@@ -20,11 +20,12 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
-    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * logGroupId  **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * logStreamId  **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * deploymentId  **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
+    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
+    * logGroupId  **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * logStreamId  **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * deploymentId  **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * failureReason  **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'logGroupId' => 'string',
             'logStreamId' => 'string',
-            'deploymentId' => 'string'
+            'deploymentId' => 'string',
+            'failureReason' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
-    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * logGroupId  **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * logStreamId  **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * deploymentId  **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
+    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
+    * logGroupId  **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * logStreamId  **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * deploymentId  **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * failureReason  **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'logGroupId' => null,
         'logStreamId' => null,
-        'deploymentId' => null
+        'deploymentId' => null,
+        'failureReason' => null
     ];
 
     /**
@@ -77,11 +81,12 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
-    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * logGroupId  **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * logStreamId  **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * deploymentId  **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
+    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
+    * logGroupId  **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * logStreamId  **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * deploymentId  **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * failureReason  **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'logGroupId' => 'log_group_id',
             'logStreamId' => 'log_stream_id',
-            'deploymentId' => 'deployment_id'
+            'deploymentId' => 'deployment_id',
+            'failureReason' => 'failure_reason'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
-    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * logGroupId  **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * logStreamId  **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * deploymentId  **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
+    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
+    * logGroupId  **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * logStreamId  **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * deploymentId  **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * failureReason  **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'logGroupId' => 'setLogGroupId',
             'logStreamId' => 'setLogStreamId',
-            'deploymentId' => 'setDeploymentId'
+            'deploymentId' => 'setDeploymentId',
+            'failureReason' => 'setFailureReason'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
-    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
-    * logGroupId  **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * logStreamId  **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
-    * deploymentId  **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * type  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
+    * status  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
+    * logGroupId  **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * logStreamId  **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * deploymentId  **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * failureReason  **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'logGroupId' => 'getLogGroupId',
             'logStreamId' => 'getLogStreamId',
-            'deploymentId' => 'getDeploymentId'
+            'deploymentId' => 'getDeploymentId',
+            'failureReason' => 'getFailureReason'
     ];
 
     /**
@@ -192,6 +202,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['deploymentId'] = isset($data['deploymentId']) ? $data['deploymentId'] : null;
+        $this->container['failureReason'] = isset($data['failureReason']) ? $data['failureReason'] : null;
     }
 
     /**
@@ -224,7 +235,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
+    *  **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
     *
     * @return string
     */
@@ -236,7 +247,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。
+    * @param string $type **参数解释：** 日志输出类型。 **取值范围：** - STDOUT：日志输出到控制台或终端。 - EVENT：k8s事件。 - FILE：容器日志文件
     *
     * @return $this
     */
@@ -248,7 +259,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    *  **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
     *
     * @return string
     */
@@ -260,7 +271,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。
+    * @param string $status **参数解释：** 日志服务状态。 **取值范围：** - ON：开启。 - OFF：关闭。 - FAILED：开启失败。
     *
     * @return $this
     */
@@ -272,7 +283,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -284,7 +295,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string|null $logGroupId **参数解释：** 日志组ID，用户选择自己已有的日志组，不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param string|null $logGroupId **参数解释：** 日志组ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -296,7 +307,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logStreamId
-    *  **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -308,7 +319,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logStreamId
     *
-    * @param string|null $logStreamId **参数解释：** 日志流id，用户选择自己已有的日志组。不填时，会自动创建。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param string|null $logStreamId **参数解释：** 日志流id。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -320,7 +331,7 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deploymentId
-    *  **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *  **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -332,13 +343,37 @@ class LogConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentId
     *
-    * @param string|null $deploymentId **参数解释：** 日志流对应的部署ID。当日志策略为default或pool时有值。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * @param string|null $deploymentId **参数解释：** 日志流对应的部署ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
     public function setDeploymentId($deploymentId)
     {
         $this->container['deploymentId'] = $deploymentId;
+        return $this;
+    }
+
+    /**
+    * Gets failureReason
+    *  **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getFailureReason()
+    {
+        return $this->container['failureReason'];
+    }
+
+    /**
+    * Sets failureReason
+    *
+    * @param string|null $failureReason **参数解释：** 失败原因，部署开启LTS对接失败的原因。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setFailureReason($failureReason)
+    {
+        $this->container['failureReason'] = $failureReason;
         return $this;
     }
 

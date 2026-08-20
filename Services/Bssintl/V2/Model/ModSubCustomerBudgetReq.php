@@ -24,8 +24,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
-    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    * budgetType  预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
+    * frozenOperateType  设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
-    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    * budgetType  预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
+    * frozenOperateType  设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
-    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    * budgetType  预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
+    * frozenOperateType  设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
-    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    * budgetType  预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
+    * frozenOperateType  设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     * budgetAmount  调整的目标金额。 单位：元。精确至小数点后2位。
     * cancelPartnerFrozen  是否在设置客户预算的同时解除账号冻结： 0：否1：是 默认值为0。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * budgetType  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
-    * frozenOperateType  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    * budgetType  预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
+    * frozenOperateType  设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @var string[]
     */
@@ -384,7 +384,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets budgetType
-    *  |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    *  预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Sets budgetType
     *
-    * @param string|null $budgetType |参数名称：预算模式| |参数的约束及描述：MONTHLY 月度预算 PACKAGE 一次性预算 ，此参数不携带或携带值为null时，默认值为MONTHLY。|
+    * @param string|null $budgetType 预算模式。MONTHLY：月度预算 PACKAGE：一次性预算，此参数不携带或携带值为null时，默认值为MONTHLY。
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets frozenOperateType
-    *  |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    *  设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @return int|null
     */
@@ -420,7 +420,7 @@ class ModSubCustomerBudgetReq implements ModelInterface, ArrayAccess
     /**
     * Sets frozenOperateType
     *
-    * @param int|null $frozenOperateType |参数名称：设置超预算时是否自动冻结| |参数的约束及描述：0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。|
+    * @param int|null $frozenOperateType 设置超预算时是否自动冻结。0：手工冻结 1：自动冻结，此参数不携带或携带值为null或携带值为空时，字段不生效。
     *
     * @return $this
     */

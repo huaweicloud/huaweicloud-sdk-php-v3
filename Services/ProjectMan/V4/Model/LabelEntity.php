@@ -20,15 +20,17 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  标签id
-    * labelType  标签所属工作项类型，对应工作项的type字段
-    * color  标签颜色RGB
-    * title  标签标题
+    * id  标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
+    * categoryTypes  标签所属工作项类型编码。
+    * labelType  标签所属工作项类型，对应工作项的type字段，枚举类型。
+    * color  标签颜色RGB。 0~16个字符。
+    * title  标签标题。 1~30个字符。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
+            'categoryTypes' => 'string[]',
             'labelType' => 'string',
             'color' => 'string',
             'title' => 'string'
@@ -36,15 +38,17 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  标签id
-    * labelType  标签所属工作项类型，对应工作项的type字段
-    * color  标签颜色RGB
-    * title  标签标题
+    * id  标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
+    * categoryTypes  标签所属工作项类型编码。
+    * labelType  标签所属工作项类型，对应工作项的type字段，枚举类型。
+    * color  标签颜色RGB。 0~16个字符。
+    * title  标签标题。 1~30个字符。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
+        'categoryTypes' => null,
         'labelType' => null,
         'color' => null,
         'title' => null
@@ -73,15 +77,17 @@ class LabelEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  标签id
-    * labelType  标签所属工作项类型，对应工作项的type字段
-    * color  标签颜色RGB
-    * title  标签标题
+    * id  标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
+    * categoryTypes  标签所属工作项类型编码。
+    * labelType  标签所属工作项类型，对应工作项的type字段，枚举类型。
+    * color  标签颜色RGB。 0~16个字符。
+    * title  标签标题。 1~30个字符。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
+            'categoryTypes' => 'category_types',
             'labelType' => 'label_type',
             'color' => 'color',
             'title' => 'title'
@@ -89,15 +95,17 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  标签id
-    * labelType  标签所属工作项类型，对应工作项的type字段
-    * color  标签颜色RGB
-    * title  标签标题
+    * id  标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
+    * categoryTypes  标签所属工作项类型编码。
+    * labelType  标签所属工作项类型，对应工作项的type字段，枚举类型。
+    * color  标签颜色RGB。 0~16个字符。
+    * title  标签标题。 1~30个字符。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
+            'categoryTypes' => 'setCategoryTypes',
             'labelType' => 'setLabelType',
             'color' => 'setColor',
             'title' => 'setTitle'
@@ -105,15 +113,17 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  标签id
-    * labelType  标签所属工作项类型，对应工作项的type字段
-    * color  标签颜色RGB
-    * title  标签标题
+    * id  标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
+    * categoryTypes  标签所属工作项类型编码。
+    * labelType  标签所属工作项类型，对应工作项的type字段，枚举类型。
+    * color  标签颜色RGB。 0~16个字符。
+    * title  标签标题。 1~30个字符。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
+            'categoryTypes' => 'getCategoryTypes',
             'labelType' => 'getLabelType',
             'color' => 'getColor',
             'title' => 'getTitle'
@@ -178,6 +188,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['categoryTypes'] = isset($data['categoryTypes']) ? $data['categoryTypes'] : null;
         $this->container['labelType'] = isset($data['labelType']) ? $data['labelType'] : null;
         $this->container['color'] = isset($data['color']) ? $data['color'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
@@ -231,7 +242,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  标签id
+    *  标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
     *
     * @return string|null
     */
@@ -243,7 +254,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 标签id
+    * @param string|null $id 标签ID，可通过查询标签列表接口获取，响应消息体中的id字段的值就是标签ID。
     *
     * @return $this
     */
@@ -254,8 +265,32 @@ class LabelEntity implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets categoryTypes
+    *  标签所属工作项类型编码。
+    *
+    * @return string[]|null
+    */
+    public function getCategoryTypes()
+    {
+        return $this->container['categoryTypes'];
+    }
+
+    /**
+    * Sets categoryTypes
+    *
+    * @param string[]|null $categoryTypes 标签所属工作项类型编码。
+    *
+    * @return $this
+    */
+    public function setCategoryTypes($categoryTypes)
+    {
+        $this->container['categoryTypes'] = $categoryTypes;
+        return $this;
+    }
+
+    /**
     * Gets labelType
-    *  标签所属工作项类型，对应工作项的type字段
+    *  标签所属工作项类型，对应工作项的type字段，枚举类型。
     *
     * @return string|null
     */
@@ -267,7 +302,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
     /**
     * Sets labelType
     *
-    * @param string|null $labelType 标签所属工作项类型，对应工作项的type字段
+    * @param string|null $labelType 标签所属工作项类型，对应工作项的type字段，枚举类型。
     *
     * @return $this
     */
@@ -279,7 +314,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets color
-    *  标签颜色RGB
+    *  标签颜色RGB。 0~16个字符。
     *
     * @return string|null
     */
@@ -291,7 +326,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
     /**
     * Sets color
     *
-    * @param string|null $color 标签颜色RGB
+    * @param string|null $color 标签颜色RGB。 0~16个字符。
     *
     * @return $this
     */
@@ -303,7 +338,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  标签标题
+    *  标签标题。 1~30个字符。
     *
     * @return string|null
     */
@@ -315,7 +350,7 @@ class LabelEntity implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title 标签标题
+    * @param string|null $title 标签标题。 1~30个字符。
     *
     * @return $this
     */

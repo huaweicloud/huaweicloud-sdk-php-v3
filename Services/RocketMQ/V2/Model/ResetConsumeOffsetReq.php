@@ -27,7 +27,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'topic' => 'string',
-            'timestamp' => 'string'
+            'timestamp' => 'int'
     ];
 
     /**
@@ -39,7 +39,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'topic' => null,
-        'timestamp' => null
+        'timestamp' => 'int64'
     ];
 
     /**
@@ -217,7 +217,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     * Gets timestamp
     *  **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string
+    * @return int
     */
     public function getTimestamp()
     {
@@ -227,7 +227,7 @@ class ResetConsumeOffsetReq implements ModelInterface, ArrayAccess
     /**
     * Sets timestamp
     *
-    * @param string $timestamp **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param int $timestamp **参数解释**： 重置的时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

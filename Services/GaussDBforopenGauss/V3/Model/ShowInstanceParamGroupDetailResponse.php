@@ -21,15 +21,17 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
-    * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: 不涉及。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * configurationParameters  **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'datastoreVersion' => 'string',
             'datastoreName' => 'string',
             'created' => 'string',
@@ -39,15 +41,17 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
-    * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: 不涉及。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * configurationParameters  **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'datastoreVersion' => null,
         'datastoreName' => null,
         'created' => null,
@@ -78,15 +82,17 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
-    * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: 不涉及。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * configurationParameters  **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'datastoreVersion' => 'datastore_version',
             'datastoreName' => 'datastore_name',
             'created' => 'created',
@@ -96,15 +102,17 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
-    * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: 不涉及。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * configurationParameters  **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'datastoreVersion' => 'setDatastoreVersion',
             'datastoreName' => 'setDatastoreName',
             'created' => 'setCreated',
@@ -114,15 +122,17 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * datastoreVersion  引擎版本。
-    * datastoreName  引擎名称。
-    * created  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
-    * updated  更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
-    * configurationParameters  参数对象，用户基于默认参数模板自定义的参数配置。
+    * id  **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    * datastoreVersion  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
+    * datastoreName  **参数解释**: 引擎名称。 **取值范围**: 不涉及。
+    * created  **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * updated  **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
+    * configurationParameters  **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'datastoreVersion' => 'getDatastoreVersion',
             'datastoreName' => 'getDatastoreName',
             'created' => 'getCreated',
@@ -188,6 +198,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['datastoreVersion'] = isset($data['datastoreVersion']) ? $data['datastoreVersion'] : null;
         $this->container['datastoreName'] = isset($data['datastoreName']) ? $data['datastoreName'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
@@ -218,8 +229,32 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     }
 
     /**
+    * Gets id
+    *  **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id **参数解释**: 实例对应参数组ID。 **取值范围**: 不涉及。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
     * Gets datastoreVersion
-    *  引擎版本。
+    *  **参数解释**: 引擎版本。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -231,7 +266,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Sets datastoreVersion
     *
-    * @param string|null $datastoreVersion 引擎版本。
+    * @param string|null $datastoreVersion **参数解释**: 引擎版本。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -243,7 +278,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets datastoreName
-    *  引擎名称。
+    *  **参数解释**: 引擎名称。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -255,7 +290,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Sets datastoreName
     *
-    * @param string|null $datastoreName 引擎名称。
+    * @param string|null $datastoreName **参数解释**: 引擎名称。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -267,7 +302,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets created
-    *  创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
+    *  **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -279,7 +314,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Sets created
     *
-    * @param string|null $created 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。
+    * @param string|null $created **参数解释**: 创建时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -291,7 +326,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets updated
-    *  更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
+    *  **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
     *
     * @return string|null
     */
@@ -303,7 +338,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Sets updated
     *
-    * @param string|null $updated 更新时间，格式为\"yyyy-MM-ddHH:mm:ss\"。
+    * @param string|null $updated **参数解释**: 更新时间，格式为\"yyyy-MM-dd HH:mm:ss\"。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -315,7 +350,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets configurationParameters
-    *  参数对象，用户基于默认参数模板自定义的参数配置。
+    *  **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameterResult[]|null
     */
@@ -327,7 +362,7 @@ class ShowInstanceParamGroupDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Sets configurationParameters
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameterResult[]|null $configurationParameters 参数对象，用户基于默认参数模板自定义的参数配置。
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\ConfigurationParameterResult[]|null $configurationParameters **参数解释**: 参数对象，用户基于默认参数模板自定义的参数配置，具体请参考ConfigurationParameterResult。
     *
     * @return $this
     */

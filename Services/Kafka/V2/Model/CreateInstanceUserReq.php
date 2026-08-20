@@ -180,12 +180,18 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['userName'] === null) {
+            $invalidProperties[] = "'userName' can't be null";
+        }
             if (!is_null($this->container['userDesc']) && (mb_strlen($this->container['userDesc']) > 200)) {
                 $invalidProperties[] = "invalid value for 'userDesc', the character length must be smaller than or equal to 200.";
             }
             if (!is_null($this->container['userDesc']) && (mb_strlen($this->container['userDesc']) < 0)) {
                 $invalidProperties[] = "invalid value for 'userDesc', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['userPasswd'] === null) {
+            $invalidProperties[] = "'userPasswd' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -204,7 +210,7 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     * Gets userName
     *  用户名称。  创建用户时，为必选参数。
     *
-    * @return string|null
+    * @return string
     */
     public function getUserName()
     {
@@ -214,7 +220,7 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 用户名称。  创建用户时，为必选参数。
+    * @param string $userName 用户名称。  创建用户时，为必选参数。
     *
     * @return $this
     */
@@ -252,7 +258,7 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     * Gets userPasswd
     *  用户密码。  创建用户时，为必选参数。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头
     *
-    * @return string|null
+    * @return string
     */
     public function getUserPasswd()
     {
@@ -262,7 +268,7 @@ class CreateInstanceUserReq implements ModelInterface, ArrayAccess
     /**
     * Sets userPasswd
     *
-    * @param string|null $userPasswd 用户密码。  创建用户时，为必选参数。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头
+    * @param string $userPasswd 用户密码。  创建用户时，为必选参数。  密码不能和用户名相同。 复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的三种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）和空格，并且不能以-开头
     *
     * @return $this
     */

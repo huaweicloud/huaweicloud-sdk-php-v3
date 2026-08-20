@@ -25,7 +25,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
     * statusCode  **参数解释**： 状态码。 **取值范围**： 不涉及。
     * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
     * owner  **参数解释**： 桶拥有者信息。
-    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     * location  **参数解释**： 桶所在的区域。 **取值范围**： 不涉及。
     * clustertype  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     * storageClass  **参数解释**： 存储类型。 **取值范围**： 不涉及。
@@ -61,7 +61,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
     * statusCode  **参数解释**： 状态码。 **取值范围**： 不涉及。
     * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
     * owner  **参数解释**： 桶拥有者信息。
-    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     * location  **参数解释**： 桶所在的区域。 **取值范围**： 不涉及。
     * clustertype  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     * storageClass  **参数解释**： 存储类型。 **取值范围**： 不涉及。
@@ -118,7 +118,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
     * statusCode  **参数解释**： 状态码。 **取值范围**： 不涉及。
     * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
     * owner  **参数解释**： 桶拥有者信息。
-    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     * location  **参数解释**： 桶所在的区域。 **取值范围**： 不涉及。
     * clustertype  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     * storageClass  **参数解释**： 存储类型。 **取值范围**： 不涉及。
@@ -154,7 +154,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
     * statusCode  **参数解释**： 状态码。 **取值范围**： 不涉及。
     * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
     * owner  **参数解释**： 桶拥有者信息。
-    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     * location  **参数解释**： 桶所在的区域。 **取值范围**： 不涉及。
     * clustertype  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     * storageClass  **参数解释**： 存储类型。 **取值范围**： 不涉及。
@@ -190,7 +190,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
     * statusCode  **参数解释**： 状态码。 **取值范围**： 不涉及。
     * bucketName  **参数解释**： 桶名。 **取值范围**： 不涉及。
     * owner  **参数解释**： 桶拥有者信息。
-    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    * creationDate  **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     * location  **参数解释**： 桶所在的区域。 **取值范围**： 不涉及。
     * clustertype  **参数解释**： 集群类型。 **取值范围**： 不涉及。
     * storageClass  **参数解释**： 存储类型。 **取值范围**： 不涉及。
@@ -437,7 +437,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationDate
-    *  **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    *  **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     *
     * @return int|null
     */
@@ -449,7 +449,7 @@ class ObsBucketEntity implements ModelInterface, ArrayAccess
     /**
     * Sets creationDate
     *
-    * @param int|null $creationDate **参数解释**： 桶的创建时间。 **取值范围**： 长度为24的字符串。
+    * @param int|null $creationDate **参数解释**： 桶的创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */

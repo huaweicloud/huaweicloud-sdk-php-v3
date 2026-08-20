@@ -23,8 +23,8 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
-    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
-    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
@@ -43,8 +43,8 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
-    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
-    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
@@ -84,8 +84,8 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
-    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
-    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
-    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
-    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     * xLanguage  **参数解释**: 语言。 **约束限制**: 不涉及。 **取值范围**:   - zh-cn   - en-us  **默认取值**: en-us
     * solution  解决方案模板名称。
     * instanceId  实例ID。
-    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
-    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * consistency  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
+    * consistencyProtocol  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     * engineVersion  **参数解释**: 引擎版本号。 **约束限制**: 不涉及。 **取值范围**: 不涉及。 **默认取值**: 不涉及。
     *
     * @var string[]
@@ -324,7 +324,7 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets consistency
-    *  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    *  **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -336,7 +336,7 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     /**
     * Sets consistency
     *
-    * @param string|null $consistency **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual **默认取值**: 不涉及。
+    * @param string|null $consistency **参数解释**: 事务一致性类型。 **约束限制**: 不涉及。 **取值范围**: - strong - eventual  **默认取值**: 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets consistencyProtocol
-    *  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    *  **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     *
     * @return string|null
     */
@@ -360,7 +360,7 @@ class ShowDeploymentFormRequest implements ModelInterface, ArrayAccess
     /**
     * Sets consistencyProtocol
     *
-    * @param string|null $consistencyProtocol **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos **默认取值**: 不涉及。
+    * @param string|null $consistencyProtocol **参数解释**: 副本一致性协议类型。 **约束限制**: 不涉及。 **取值范围**: - quorum - paxos  **默认取值**: 不涉及。
     *
     * @return $this
     */

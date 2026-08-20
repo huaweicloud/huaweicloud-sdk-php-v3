@@ -21,14 +21,16 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  日志ID。
-    * instanceId  实例ID。
-    * status  状态。
-    * logStreamId  日志流ID。
-    * logGroupId  日志组ID。
-    * dashboardId  看板ID。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
+    * logStreamId  **参数解释**： 日志流ID。 **取值范围**： 不涉及。
+    * logGroupId  **参数解释**： 日志组ID。 **取值范围**： 不涉及。
+    * dashboardId  **参数解释**： 看板ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logFileName  **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -39,20 +41,24 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'string',
             'logGroupId' => 'string',
             'dashboardId' => 'string',
-            'createAt' => 'string',
-            'updateAt' => 'string'
+            'logType' => 'string',
+            'logFileName' => 'string',
+            'createdAt' => 'int',
+            'updatedAt' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  日志ID。
-    * instanceId  实例ID。
-    * status  状态。
-    * logStreamId  日志流ID。
-    * logGroupId  日志组ID。
-    * dashboardId  看板ID。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
+    * logStreamId  **参数解释**： 日志流ID。 **取值范围**： 不涉及。
+    * logGroupId  **参数解释**： 日志组ID。 **取值范围**： 不涉及。
+    * dashboardId  **参数解释**： 看板ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logFileName  **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -63,8 +69,10 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
         'logStreamId' => null,
         'logGroupId' => null,
         'dashboardId' => null,
-        'createAt' => null,
-        'updateAt' => null
+        'logType' => null,
+        'logFileName' => null,
+        'createdAt' => 'int64',
+        'updatedAt' => 'int64'
     ];
 
     /**
@@ -90,38 +98,44 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  日志ID。
-    * instanceId  实例ID。
-    * status  状态。
-    * logStreamId  日志流ID。
-    * logGroupId  日志组ID。
-    * dashboardId  看板ID。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
+    * logStreamId  **参数解释**： 日志流ID。 **取值范围**： 不涉及。
+    * logGroupId  **参数解释**： 日志组ID。 **取值范围**： 不涉及。
+    * dashboardId  **参数解释**： 看板ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logFileName  **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'instanceId' => 'instanceId',
+            'instanceId' => 'instance_id',
             'status' => 'status',
-            'logStreamId' => 'logStreamId',
-            'logGroupId' => 'logGroupId',
-            'dashboardId' => 'dashboardId',
-            'createAt' => 'createAt',
-            'updateAt' => 'updateAt'
+            'logStreamId' => 'log_stream_id',
+            'logGroupId' => 'log_group_id',
+            'dashboardId' => 'dashboard_id',
+            'logType' => 'log_type',
+            'logFileName' => 'log_file_name',
+            'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  日志ID。
-    * instanceId  实例ID。
-    * status  状态。
-    * logStreamId  日志流ID。
-    * logGroupId  日志组ID。
-    * dashboardId  看板ID。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
+    * logStreamId  **参数解释**： 日志流ID。 **取值范围**： 不涉及。
+    * logGroupId  **参数解释**： 日志组ID。 **取值范围**： 不涉及。
+    * dashboardId  **参数解释**： 看板ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logFileName  **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -132,20 +146,24 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'setLogStreamId',
             'logGroupId' => 'setLogGroupId',
             'dashboardId' => 'setDashboardId',
-            'createAt' => 'setCreateAt',
-            'updateAt' => 'setUpdateAt'
+            'logType' => 'setLogType',
+            'logFileName' => 'setLogFileName',
+            'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  日志ID。
-    * instanceId  实例ID。
-    * status  状态。
-    * logStreamId  日志流ID。
-    * logGroupId  日志组ID。
-    * dashboardId  看板ID。
-    * createAt  创建时间。
-    * updateAt  更新时间。
+    * id  **参数解释**： 日志ID。 **取值范围**： 不涉及。
+    * instanceId  **参数解释**： 实例ID。 **取值范围**： 不涉及。
+    * status  **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
+    * logStreamId  **参数解释**： 日志流ID。 **取值范围**： 不涉及。
+    * logGroupId  **参数解释**： 日志组ID。 **取值范围**： 不涉及。
+    * dashboardId  **参数解释**： 看板ID。 **取值范围**： 不涉及。
+    * logType  **参数解释**： 日志类型。 **取值范围**： 不涉及。
+    * logFileName  **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 更新时间。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -156,8 +174,10 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
             'logStreamId' => 'getLogStreamId',
             'logGroupId' => 'getLogGroupId',
             'dashboardId' => 'getDashboardId',
-            'createAt' => 'getCreateAt',
-            'updateAt' => 'getUpdateAt'
+            'logType' => 'getLogType',
+            'logFileName' => 'getLogFileName',
+            'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt'
     ];
 
     /**
@@ -224,8 +244,10 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logGroupId'] = isset($data['logGroupId']) ? $data['logGroupId'] : null;
         $this->container['dashboardId'] = isset($data['dashboardId']) ? $data['dashboardId'] : null;
-        $this->container['createAt'] = isset($data['createAt']) ? $data['createAt'] : null;
-        $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
+        $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
+        $this->container['logFileName'] = isset($data['logFileName']) ? $data['logFileName'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
 
     /**
@@ -252,7 +274,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  日志ID。
+    *  **参数解释**： 日志ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -264,7 +286,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 日志ID。
+    * @param string|null $id **参数解释**： 日志ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -276,7 +298,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -288,7 +310,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 实例ID。
+    * @param string|null $instanceId **参数解释**： 实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -300,7 +322,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
     *
     * @return string|null
     */
@@ -312,7 +334,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status **参数解释**： 重平衡日志状态。 **取值范围**： - OPEN：已开启重平衡日志。 - CLOSE：已关闭重平衡日志。 - OPENING：重平衡日志开启中。 - CLOSING：重平衡日志关闭中。
     *
     * @return $this
     */
@@ -324,7 +346,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logStreamId
-    *  日志流ID。
+    *  **参数解释**： 日志流ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -336,7 +358,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logStreamId
     *
-    * @param string|null $logStreamId 日志流ID。
+    * @param string|null $logStreamId **参数解释**： 日志流ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -348,7 +370,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logGroupId
-    *  日志组ID。
+    *  **参数解释**： 日志组ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -360,7 +382,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logGroupId
     *
-    * @param string|null $logGroupId 日志组ID。
+    * @param string|null $logGroupId **参数解释**： 日志组ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -372,7 +394,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dashboardId
-    *  看板ID。
+    *  **参数解释**： 看板ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -384,7 +406,7 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dashboardId
     *
-    * @param string|null $dashboardId 看板ID。
+    * @param string|null $dashboardId **参数解释**： 看板ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -395,50 +417,98 @@ class ShowKafkaRebalanceLogResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createAt
-    *  创建时间。
+    * Gets logType
+    *  **参数解释**： 日志类型。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
-    public function getCreateAt()
+    public function getLogType()
     {
-        return $this->container['createAt'];
+        return $this->container['logType'];
     }
 
     /**
-    * Sets createAt
+    * Sets logType
     *
-    * @param string|null $createAt 创建时间。
+    * @param string|null $logType **参数解释**： 日志类型。 **取值范围**： 不涉及。
     *
     * @return $this
     */
-    public function setCreateAt($createAt)
+    public function setLogType($logType)
     {
-        $this->container['createAt'] = $createAt;
+        $this->container['logType'] = $logType;
         return $this;
     }
 
     /**
-    * Gets updateAt
-    *  更新时间。
+    * Gets logFileName
+    *  **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
-    public function getUpdateAt()
+    public function getLogFileName()
     {
-        return $this->container['updateAt'];
+        return $this->container['logFileName'];
     }
 
     /**
-    * Sets updateAt
+    * Sets logFileName
     *
-    * @param string|null $updateAt 更新时间。
+    * @param string|null $logFileName **参数解释**： 日志文件名称。 **取值范围**： 不涉及。
     *
     * @return $this
     */
-    public function setUpdateAt($updateAt)
+    public function setLogFileName($logFileName)
     {
-        $this->container['updateAt'] = $updateAt;
+        $this->container['logFileName'] = $logFileName;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param int|null $createdAt **参数解释**： 创建时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param int|null $updatedAt **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
         return $this;
     }
 

@@ -27,7 +27,7 @@ class CreateIpdProjectIssueRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'body' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueRequestBody'
+            'body' => '\HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueParam'
     ];
 
     /**
@@ -217,7 +217,7 @@ class CreateIpdProjectIssueRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueRequestBody|null
+    * @return \HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueParam|null
     */
     public function getBody()
     {
@@ -227,7 +227,7 @@ class CreateIpdProjectIssueRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\ProjectMan\V4\Model\CreateIpdProjectIssueParam|null $body body
     *
     * @return $this
     */

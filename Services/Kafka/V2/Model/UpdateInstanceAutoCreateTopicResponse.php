@@ -21,20 +21,22 @@ class UpdateInstanceAutoCreateTopicResponse implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'enableAutoTopic' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'enableAutoTopic' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class UpdateInstanceAutoCreateTopicResponse implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'enableAutoTopic' => 'enable_auto_topic'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
     *
     * @var string[]
     */
     protected static $setters = [
+            'enableAutoTopic' => 'setEnableAutoTopic'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * enableAutoTopic  **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
     *
     * @var string[]
     */
     protected static $getters = [
+            'enableAutoTopic' => 'getEnableAutoTopic'
     ];
 
     /**
@@ -143,6 +148,7 @@ class UpdateInstanceAutoCreateTopicResponse implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
+        $this->container['enableAutoTopic'] = isset($data['enableAutoTopic']) ? $data['enableAutoTopic'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class UpdateInstanceAutoCreateTopicResponse implements ModelInterface, ArrayAcce
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets enableAutoTopic
+    *  **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
+    *
+    * @return bool|null
+    */
+    public function getEnableAutoTopic()
+    {
+        return $this->container['enableAutoTopic'];
+    }
+
+    /**
+    * Sets enableAutoTopic
+    *
+    * @param bool|null $enableAutoTopic **参数解释**： 是否开启自动创建Topic功能。 **取值范围**： - true：开启自动创建Topic功能。 - false：关闭自动创建Topic功能。
+    *
+    * @return $this
+    */
+    public function setEnableAutoTopic($enableAutoTopic)
+    {
+        $this->container['enableAutoTopic'] = $enableAutoTopic;
+        return $this;
     }
 
     /**

@@ -39,7 +39,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'instanceId' => 'string',
             'instanceName' => 'string',
-            'taskContent' => 'object'
+            'taskContent' => 'string'
     ];
 
     /**
@@ -421,7 +421,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     * Gets taskContent
     *  任务信息。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getTaskContent()
     {
@@ -431,7 +431,7 @@ class ScheduleTaskDetail implements ModelInterface, ArrayAccess
     /**
     * Sets taskContent
     *
-    * @param object|null $taskContent 任务信息。
+    * @param string|null $taskContent 任务信息。
     *
     * @return $this
     */

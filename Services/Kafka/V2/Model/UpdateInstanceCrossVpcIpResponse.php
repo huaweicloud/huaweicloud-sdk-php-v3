@@ -21,8 +21,8 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * success  修改跨VPC访问结果。
-    * results  修改broker跨VPC访问的结果列表。
+    * success  **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
+    * results  **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * success  修改跨VPC访问结果。
-    * results  修改broker跨VPC访问的结果列表。
+    * success  **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
+    * results  **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * success  修改跨VPC访问结果。
-    * results  修改broker跨VPC访问的结果列表。
+    * success  **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
+    * results  **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * success  修改跨VPC访问结果。
-    * results  修改broker跨VPC访问的结果列表。
+    * success  **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
+    * results  **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * success  修改跨VPC访问结果。
-    * results  修改broker跨VPC访问的结果列表。
+    * success  **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
+    * results  **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  修改跨VPC访问结果。
+    *  **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
     *
     * @return bool|null
     */
@@ -198,7 +198,7 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param bool|null $success 修改跨VPC访问结果。
+    * @param bool|null $success **参数解释**： 修改跨VPC访问结果。 **取值范围**： - true：修改跨VPC访问成功。 - false：修改跨VPC访问失败。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets results
-    *  修改broker跨VPC访问的结果列表。
+    *  **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceCrossVpcIpRespResults[]|null
     */
@@ -222,7 +222,7 @@ class UpdateInstanceCrossVpcIpResponse implements ModelInterface, ArrayAccess
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceCrossVpcIpRespResults[]|null $results 修改broker跨VPC访问的结果列表。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\UpdateInstanceCrossVpcIpRespResults[]|null $results **参数解释**： 修改broker跨VPC访问的结果列表。
     *
     * @return $this
     */
