@@ -41,6 +41,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
+    * isContainerNode  **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    * version  **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @var string[]
     */
@@ -65,7 +67,9 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'vulnerability' => 'int',
             'intrusion' => 'int',
             'policyGroupId' => 'string',
-            'policyGroupName' => 'string'
+            'policyGroupName' => 'string',
+            'isContainerNode' => 'bool',
+            'version' => 'string'
     ];
 
     /**
@@ -91,6 +95,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
+    * isContainerNode  **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    * version  **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @var string[]
     */
@@ -115,7 +121,9 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
         'vulnerability' => 'int32',
         'intrusion' => 'int32',
         'policyGroupId' => null,
-        'policyGroupName' => null
+        'policyGroupName' => null,
+        'isContainerNode' => null,
+        'version' => null
     ];
 
     /**
@@ -162,6 +170,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
+    * isContainerNode  **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    * version  **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @var string[]
     */
@@ -186,7 +196,9 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'vulnerability' => 'vulnerability',
             'intrusion' => 'intrusion',
             'policyGroupId' => 'policy_group_id',
-            'policyGroupName' => 'policy_group_name'
+            'policyGroupName' => 'policy_group_name',
+            'isContainerNode' => 'is_container_node',
+            'version' => 'version'
     ];
 
     /**
@@ -212,6 +224,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
+    * isContainerNode  **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    * version  **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @var string[]
     */
@@ -236,7 +250,9 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'vulnerability' => 'setVulnerability',
             'intrusion' => 'setIntrusion',
             'policyGroupId' => 'setPolicyGroupId',
-            'policyGroupName' => 'setPolicyGroupName'
+            'policyGroupName' => 'setPolicyGroupName',
+            'isContainerNode' => 'setIsContainerNode',
+            'version' => 'setVersion'
     ];
 
     /**
@@ -262,6 +278,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     * intrusion  **参数解释**: 入侵风险 **取值范围**: 取值0-2097152
     * policyGroupId  **参数解释**: 策略组ID **取值范围**: 字符长度1-128位
     * policyGroupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
+    * isContainerNode  **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    * version  **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
     *
     * @var string[]
     */
@@ -286,7 +304,9 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             'vulnerability' => 'getVulnerability',
             'intrusion' => 'getIntrusion',
             'policyGroupId' => 'getPolicyGroupId',
-            'policyGroupName' => 'getPolicyGroupName'
+            'policyGroupName' => 'getPolicyGroupName',
+            'isContainerNode' => 'getIsContainerNode',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -368,6 +388,8 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
         $this->container['intrusion'] = isset($data['intrusion']) ? $data['intrusion'] : null;
         $this->container['policyGroupId'] = isset($data['policyGroupId']) ? $data['policyGroupId'] : null;
         $this->container['policyGroupName'] = isset($data['policyGroupName']) ? $data['policyGroupName'] : null;
+        $this->container['isContainerNode'] = isset($data['isContainerNode']) ? $data['isContainerNode'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -491,6 +513,12 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['policyGroupName']) && (mb_strlen($this->container['policyGroupName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'policyGroupName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 128)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1007,6 +1035,54 @@ class ContainerNodeInfo implements ModelInterface, ArrayAccess
     public function setPolicyGroupName($policyGroupName)
     {
         $this->container['policyGroupName'] = $policyGroupName;
+        return $this;
+    }
+
+    /**
+    * Gets isContainerNode
+    *  **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    *
+    * @return bool|null
+    */
+    public function getIsContainerNode()
+    {
+        return $this->container['isContainerNode'];
+    }
+
+    /**
+    * Sets isContainerNode
+    *
+    * @param bool|null $isContainerNode **参数解释** 是否是容器节点 **取值范围** - true：是容器节点 - false：非容器节点
+    *
+    * @return $this
+    */
+    public function setIsContainerNode($isContainerNode)
+    {
+        $this->container['isContainerNode'] = $isContainerNode;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version **参数解释**: 节点开启的防护版本 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

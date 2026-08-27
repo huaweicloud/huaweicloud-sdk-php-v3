@@ -32,6 +32,7 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
     * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * extendFields  **参数解释**：  任务扩展字段，默认null。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'createdTime' => 'string',
             'endedTime' => 'string',
             'failReason' => 'string',
-            'showDetail' => 'bool'
+            'showDetail' => 'bool',
+            'extendFields' => 'map[string,object]'
     ];
 
     /**
@@ -64,6 +66,7 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
     * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * extendFields  **参数解释**：  任务扩展字段，默认null。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
         'createdTime' => null,
         'endedTime' => null,
         'failReason' => null,
-        'showDetail' => null
+        'showDetail' => null,
+        'extendFields' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
     * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * extendFields  **参数解释**：  任务扩展字段，默认null。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'createdTime' => 'created_time',
             'endedTime' => 'ended_time',
             'failReason' => 'fail_reason',
-            'showDetail' => 'show_detail'
+            'showDetail' => 'show_detail',
+            'extendFields' => 'extend_fields'
     ];
 
     /**
@@ -149,6 +155,7 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
     * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * extendFields  **参数解释**：  任务扩展字段，默认null。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'createdTime' => 'setCreatedTime',
             'endedTime' => 'setEndedTime',
             'failReason' => 'setFailReason',
-            'showDetail' => 'setShowDetail'
+            'showDetail' => 'setShowDetail',
+            'extendFields' => 'setExtendFields'
     ];
 
     /**
@@ -181,6 +189,7 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     * endedTime  任务结束时间。格式为\"yyyy-mm-ddThh:mm:ssZ\"。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。
     * failReason  任务失败原因。
     * showDetail  **参数解释**：  是否支持通过[获取异步任务详情](https://support.huaweicloud.com/api-taurusdb/ShowTaskDetails.html)接口获取任务详情。  **取值范围**：  - true：是。 - false：否。
+    * extendFields  **参数解释**：  任务扩展字段，默认null。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
             'createdTime' => 'getCreatedTime',
             'endedTime' => 'getEndedTime',
             'failReason' => 'getFailReason',
-            'showDetail' => 'getShowDetail'
+            'showDetail' => 'getShowDetail',
+            'extendFields' => 'getExtendFields'
     ];
 
     /**
@@ -269,6 +279,7 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
         $this->container['endedTime'] = isset($data['endedTime']) ? $data['endedTime'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
         $this->container['showDetail'] = isset($data['showDetail']) ? $data['showDetail'] : null;
+        $this->container['extendFields'] = isset($data['extendFields']) ? $data['extendFields'] : null;
     }
 
     /**
@@ -578,6 +589,30 @@ class TaskDetailInfo implements ModelInterface, ArrayAccess
     public function setShowDetail($showDetail)
     {
         $this->container['showDetail'] = $showDetail;
+        return $this;
+    }
+
+    /**
+    * Gets extendFields
+    *  **参数解释**：  任务扩展字段，默认null。
+    *
+    * @return map[string,object]|null
+    */
+    public function getExtendFields()
+    {
+        return $this->container['extendFields'];
+    }
+
+    /**
+    * Sets extendFields
+    *
+    * @param map[string,object]|null $extendFields **参数解释**：  任务扩展字段，默认null。
+    *
+    * @return $this
+    */
+    public function setExtendFields($extendFields)
+    {
+        $this->container['extendFields'] = $extendFields;
         return $this;
     }
 

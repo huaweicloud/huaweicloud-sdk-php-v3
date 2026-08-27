@@ -27,7 +27,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释**： 最近扫描时间 **取值范围**： 字符长度0-9223372036854775807
     * publishTime  **参数解释**： 漏洞披露时间 **取值范围**： 字符长度0-9223372036854775807
     * solutionDetail  **参数解释**： 解决方案 **取值范围**： 字符长度0-65534位
-    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     * scanStatus  **参数解释**： 漏洞扫描状态 **约束限制**: 不涉及 **取值范围**： - never_scan : 未扫描 - scanning : 扫描中 - finished : 扫描完成  **默认取值**: 不涉及
     * severityLevel  **参数解释**： 危险程度 **约束限制**: 不涉及 **取值范围**： - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  **默认取值**: 不涉及
     * scanningHostNum  **参数解释**： 处于扫描中状态的主机数量 **取值范围**： 字符长度0-2147483647
@@ -61,7 +61,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释**： 最近扫描时间 **取值范围**： 字符长度0-9223372036854775807
     * publishTime  **参数解释**： 漏洞披露时间 **取值范围**： 字符长度0-9223372036854775807
     * solutionDetail  **参数解释**： 解决方案 **取值范围**： 字符长度0-65534位
-    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     * scanStatus  **参数解释**： 漏洞扫描状态 **约束限制**: 不涉及 **取值范围**： - never_scan : 未扫描 - scanning : 扫描中 - finished : 扫描完成  **默认取值**: 不涉及
     * severityLevel  **参数解释**： 危险程度 **约束限制**: 不涉及 **取值范围**： - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  **默认取值**: 不涉及
     * scanningHostNum  **参数解释**： 处于扫描中状态的主机数量 **取值范围**： 字符长度0-2147483647
@@ -116,7 +116,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释**： 最近扫描时间 **取值范围**： 字符长度0-9223372036854775807
     * publishTime  **参数解释**： 漏洞披露时间 **取值范围**： 字符长度0-9223372036854775807
     * solutionDetail  **参数解释**： 解决方案 **取值范围**： 字符长度0-65534位
-    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     * scanStatus  **参数解释**： 漏洞扫描状态 **约束限制**: 不涉及 **取值范围**： - never_scan : 未扫描 - scanning : 扫描中 - finished : 扫描完成  **默认取值**: 不涉及
     * severityLevel  **参数解释**： 危险程度 **约束限制**: 不涉及 **取值范围**： - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  **默认取值**: 不涉及
     * scanningHostNum  **参数解释**： 处于扫描中状态的主机数量 **取值范围**： 字符长度0-2147483647
@@ -150,7 +150,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释**： 最近扫描时间 **取值范围**： 字符长度0-9223372036854775807
     * publishTime  **参数解释**： 漏洞披露时间 **取值范围**： 字符长度0-9223372036854775807
     * solutionDetail  **参数解释**： 解决方案 **取值范围**： 字符长度0-65534位
-    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     * scanStatus  **参数解释**： 漏洞扫描状态 **约束限制**: 不涉及 **取值范围**： - never_scan : 未扫描 - scanning : 扫描中 - finished : 扫描完成  **默认取值**: 不涉及
     * severityLevel  **参数解释**： 危险程度 **约束限制**: 不涉及 **取值范围**： - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  **默认取值**: 不涉及
     * scanningHostNum  **参数解释**： 处于扫描中状态的主机数量 **取值范围**： 字符长度0-2147483647
@@ -184,7 +184,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
     * scanTime  **参数解释**： 最近扫描时间 **取值范围**： 字符长度0-9223372036854775807
     * publishTime  **参数解释**： 漏洞披露时间 **取值范围**： 字符长度0-9223372036854775807
     * solutionDetail  **参数解释**： 解决方案 **取值范围**： 字符长度0-65534位
-    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    * description  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     * scanStatus  **参数解释**： 漏洞扫描状态 **约束限制**: 不涉及 **取值范围**： - never_scan : 未扫描 - scanning : 扫描中 - finished : 扫描完成  **默认取值**: 不涉及
     * severityLevel  **参数解释**： 危险程度 **约束限制**: 不涉及 **取值范围**： - Critical：漏洞cvss评分大于等于9；对应控制台页面的高危 - High：漏洞cvss评分大于等于7，小于9；对应控制台页面的中危 - Medium：漏洞cvss评分大于等于4，小于7；对应控制台页面的中危 - Low：漏洞cvss评分小于4；对应控制台页面的低危  **默认取值**: 不涉及
     * scanningHostNum  **参数解释**： 处于扫描中状态的主机数量 **取值范围**： 字符长度0-2147483647
@@ -320,8 +320,8 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['solutionDetail']) && (mb_strlen($this->container['solutionDetail']) < 0)) {
                 $invalidProperties[] = "invalid value for 'solutionDetail', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 65534)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 65534.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 2048.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
@@ -546,7 +546,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    *  **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class UrgentVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**： 漏洞描述 **取值范围**： 字符长度0-64位
+    * @param string|null $description **参数解释**： 漏洞描述 **取值范围**： 字符长度0-2048位
     *
     * @return $this
     */

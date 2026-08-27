@@ -21,7 +21,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * appCode  App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    * appCode  APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     * id  编号
     * appId  应用编号
     * createTime  创建时间
@@ -37,7 +37,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * appCode  App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    * appCode  APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     * id  编号
     * appId  应用编号
     * createTime  创建时间
@@ -74,7 +74,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * appCode  App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    * appCode  APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     * id  编号
     * appId  应用编号
     * createTime  创建时间
@@ -90,7 +90,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * appCode  App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    * appCode  APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     * id  编号
     * appId  应用编号
     * createTime  创建时间
@@ -106,7 +106,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * appCode  App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    * appCode  APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     * id  编号
     * appId  应用编号
     * createTime  创建时间
@@ -214,7 +214,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets appCode
-    *  App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    *  APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class CreateAppCodeV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets appCode
     *
-    * @param string $appCode App Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
+    * @param string $appCode APP Code值  支持英文、数字，+_!@#$%-/=，且只能以英文、数字和+、/开头，64-180个字符。
     *
     * @return $this
     */

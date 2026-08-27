@@ -21,10 +21,10 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * scanScope  **参数解释**: 扫描风险类型 **约束限制**: 不涉及 **取值范围**: - 0：none。 - 0x7fffffff：全部。 - 0x000f0000：漏洞。 - 0x0000f000：基线检查。 - 0x00000f00：恶意文件。 - 0x000000f0：敏感信息。 - 0x0000000f：软件合规。  **默认取值**: 不涉及
-    * rateLimit  **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
-    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    * rateLimit  **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     * queryInfo  queryInfo
-    * imageInfo  待扫描镜像
+    * imageInfo  **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scanScope  **参数解释**: 扫描风险类型 **约束限制**: 不涉及 **取值范围**: - 0：none。 - 0x7fffffff：全部。 - 0x000f0000：漏洞。 - 0x0000f000：基线检查。 - 0x00000f00：恶意文件。 - 0x000000f0：敏感信息。 - 0x0000000f：软件合规。  **默认取值**: 不涉及
-    * rateLimit  **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
-    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    * rateLimit  **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     * queryInfo  queryInfo
-    * imageInfo  待扫描镜像
+    * imageInfo  **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * scanScope  **参数解释**: 扫描风险类型 **约束限制**: 不涉及 **取值范围**: - 0：none。 - 0x7fffffff：全部。 - 0x000f0000：漏洞。 - 0x0000f000：基线检查。 - 0x00000f00：恶意文件。 - 0x000000f0：敏感信息。 - 0x0000000f：软件合规。  **默认取值**: 不涉及
-    * rateLimit  **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
-    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    * rateLimit  **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     * queryInfo  queryInfo
-    * imageInfo  待扫描镜像
+    * imageInfo  **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scanScope  **参数解释**: 扫描风险类型 **约束限制**: 不涉及 **取值范围**: - 0：none。 - 0x7fffffff：全部。 - 0x000f0000：漏洞。 - 0x0000f000：基线检查。 - 0x00000f00：恶意文件。 - 0x000000f0：敏感信息。 - 0x0000000f：软件合规。  **默认取值**: 不涉及
-    * rateLimit  **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
-    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    * rateLimit  **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     * queryInfo  queryInfo
-    * imageInfo  待扫描镜像
+    * imageInfo  **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scanScope  **参数解释**: 扫描风险类型 **约束限制**: 不涉及 **取值范围**: - 0：none。 - 0x7fffffff：全部。 - 0x000f0000：漏洞。 - 0x0000f000：基线检查。 - 0x00000f00：恶意文件。 - 0x000000f0：敏感信息。 - 0x0000000f：软件合规。  **默认取值**: 不涉及
-    * rateLimit  **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
-    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    * rateLimit  **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    * isAll  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     * queryInfo  queryInfo
-    * imageInfo  待扫描镜像
+    * imageInfo  **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @var string[]
     */
@@ -254,7 +254,7 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rateLimit
-    *  **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    *  **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rateLimit
     *
-    * @param int|null $rateLimit **参数解释**: 扫描限速 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
+    * @param int|null $rateLimit **参数解释**: 三方镜像仓扫描限速,其他镜像仓不生效 单位：个/h **约束限制**: 不涉及 **取值范围**: 0-1000，0表示不限制。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAll
-    *  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    *  **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -290,7 +290,7 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAll
     *
-    * @param bool|null $isAll **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。 - false：指定镜像扫描,见image_info字段。  **默认取值**: 不涉及
+    * @param bool|null $isAll **参数解释**: 扫描全部镜像 **约束限制**: 不涉及 **取值范围**: - true：扫描全部镜像。支持全部镜像扫描或者指定镜像仓类型扫描，若为指定镜像仓类型扫描，需要填写query_info的image_type类型。 - false：指定镜像扫描,需要填写详细的镜像信息image_info字段。 **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageInfo
-    *  待扫描镜像
+    *  **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\CreateManualImageScanTaskReqInfoImageInfo[]|null
     */
@@ -338,7 +338,7 @@ class CreateManualImageScanTaskReqInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageInfo
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CreateManualImageScanTaskReqInfoImageInfo[]|null $imageInfo 待扫描镜像
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CreateManualImageScanTaskReqInfoImageInfo[]|null $imageInfo **参数解释**:   待扫描镜像，is_all为false需要填写；   若为仓库镜像，需要填写id，image_digest，namespace，image_name，image_version，image_version，registry_id，registry_name，registry_type，若为企业镜像，需要填写instance_id   若为本地镜像，需要填写image_id，image_name，image_version，registry_id，registry_name，registry_type
     *
     * @return $this
     */

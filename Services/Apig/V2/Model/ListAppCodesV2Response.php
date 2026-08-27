@@ -23,7 +23,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * size  本次返回的列表长度
     * total  满足条件的记录数
-    * appCodes  App Code列表
+    * appCodes  APP Code列表
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * size  本次返回的列表长度
     * total  满足条件的记录数
-    * appCodes  App Code列表
+    * appCodes  APP Code列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
     * and the value is the original name
     * size  本次返回的列表长度
     * total  满足条件的记录数
-    * appCodes  App Code列表
+    * appCodes  APP Code列表
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * size  本次返回的列表长度
     * total  满足条件的记录数
-    * appCodes  App Code列表
+    * appCodes  APP Code列表
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * size  本次返回的列表长度
     * total  满足条件的记录数
-    * appCodes  App Code列表
+    * appCodes  APP Code列表
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets appCodes
-    *  App Code列表
+    *  APP Code列表
     *
     * @return \HuaweiCloud\SDK\Apig\V2\Model\AppCodeBaseInfo[]|null
     */
@@ -263,7 +263,7 @@ class ListAppCodesV2Response implements ModelInterface, ArrayAccess
     /**
     * Sets appCodes
     *
-    * @param \HuaweiCloud\SDK\Apig\V2\Model\AppCodeBaseInfo[]|null $appCodes App Code列表
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\AppCodeBaseInfo[]|null $appCodes APP Code列表
     *
     * @return $this
     */

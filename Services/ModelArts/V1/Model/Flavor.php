@@ -37,6 +37,7 @@ class Flavor implements ModelInterface, ArrayAccess
     * vcpus  **参数解释**：CPU核数。 **取值范围**：不涉及。
     * gpu  gpu
     * ascend  ascend
+    * supportEni  **参数解释**：是否支持ENI挂载。
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class Flavor implements ModelInterface, ArrayAccess
             'storages' => 'string[]',
             'vcpus' => 'int',
             'gpu' => '\HuaweiCloud\SDK\ModelArts\V1\Model\GPUsInfo',
-            'ascend' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AscendInfo'
+            'ascend' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AscendInfo',
+            'supportEni' => 'bool'
     ];
 
     /**
@@ -79,6 +81,7 @@ class Flavor implements ModelInterface, ArrayAccess
     * vcpus  **参数解释**：CPU核数。 **取值范围**：不涉及。
     * gpu  gpu
     * ascend  ascend
+    * supportEni  **参数解释**：是否支持ENI挂载。
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class Flavor implements ModelInterface, ArrayAccess
         'storages' => null,
         'vcpus' => 'int32',
         'gpu' => null,
-        'ascend' => null
+        'ascend' => null,
+        'supportEni' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class Flavor implements ModelInterface, ArrayAccess
     * vcpus  **参数解释**：CPU核数。 **取值范围**：不涉及。
     * gpu  gpu
     * ascend  ascend
+    * supportEni  **参数解释**：是否支持ENI挂载。
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class Flavor implements ModelInterface, ArrayAccess
             'storages' => 'storages',
             'vcpus' => 'vcpus',
             'gpu' => 'gpu',
-            'ascend' => 'ascend'
+            'ascend' => 'ascend',
+            'supportEni' => 'support_eni'
     ];
 
     /**
@@ -184,6 +190,7 @@ class Flavor implements ModelInterface, ArrayAccess
     * vcpus  **参数解释**：CPU核数。 **取值范围**：不涉及。
     * gpu  gpu
     * ascend  ascend
+    * supportEni  **参数解释**：是否支持ENI挂载。
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class Flavor implements ModelInterface, ArrayAccess
             'storages' => 'setStorages',
             'vcpus' => 'setVcpus',
             'gpu' => 'setGpu',
-            'ascend' => 'setAscend'
+            'ascend' => 'setAscend',
+            'supportEni' => 'setSupportEni'
     ];
 
     /**
@@ -226,6 +234,7 @@ class Flavor implements ModelInterface, ArrayAccess
     * vcpus  **参数解释**：CPU核数。 **取值范围**：不涉及。
     * gpu  gpu
     * ascend  ascend
+    * supportEni  **参数解释**：是否支持ENI挂载。
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class Flavor implements ModelInterface, ArrayAccess
             'storages' => 'getStorages',
             'vcpus' => 'getVcpus',
             'gpu' => 'getGpu',
-            'ascend' => 'getAscend'
+            'ascend' => 'getAscend',
+            'supportEni' => 'getSupportEni'
     ];
 
     /**
@@ -324,6 +334,7 @@ class Flavor implements ModelInterface, ArrayAccess
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
         $this->container['gpu'] = isset($data['gpu']) ? $data['gpu'] : null;
         $this->container['ascend'] = isset($data['ascend']) ? $data['ascend'] : null;
+        $this->container['supportEni'] = isset($data['supportEni']) ? $data['supportEni'] : null;
     }
 
     /**
@@ -753,6 +764,30 @@ class Flavor implements ModelInterface, ArrayAccess
     public function setAscend($ascend)
     {
         $this->container['ascend'] = $ascend;
+        return $this;
+    }
+
+    /**
+    * Gets supportEni
+    *  **参数解释**：是否支持ENI挂载。
+    *
+    * @return bool|null
+    */
+    public function getSupportEni()
+    {
+        return $this->container['supportEni'];
+    }
+
+    /**
+    * Sets supportEni
+    *
+    * @param bool|null $supportEni **参数解释**：是否支持ENI挂载。
+    *
+    * @return $this
+    */
+    public function setSupportEni($supportEni)
+    {
+        $this->container['supportEni'] = $supportEni;
         return $this;
     }
 

@@ -22,6 +22,8 @@ class Capacity implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * value  value
     * maxValue  maxValue
+    * allValue  allValue
+    * allMaxValue  allMaxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -30,6 +32,8 @@ class Capacity implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'value' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Value',
             'maxValue' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Value',
+            'allValue' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Value',
+            'allMaxValue' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Value',
             'timestamp' => 'string',
             'window' => 'string'
     ];
@@ -38,6 +42,8 @@ class Capacity implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * value  value
     * maxValue  maxValue
+    * allValue  allValue
+    * allMaxValue  allMaxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -46,6 +52,8 @@ class Capacity implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'value' => null,
         'maxValue' => null,
+        'allValue' => null,
+        'allMaxValue' => null,
         'timestamp' => null,
         'window' => null
     ];
@@ -75,6 +83,8 @@ class Capacity implements ModelInterface, ArrayAccess
     * and the value is the original name
     * value  value
     * maxValue  maxValue
+    * allValue  allValue
+    * allMaxValue  allMaxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -83,6 +93,8 @@ class Capacity implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'value' => 'value',
             'maxValue' => 'maxValue',
+            'allValue' => 'allValue',
+            'allMaxValue' => 'allMaxValue',
             'timestamp' => 'timestamp',
             'window' => 'window'
     ];
@@ -91,6 +103,8 @@ class Capacity implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * value  value
     * maxValue  maxValue
+    * allValue  allValue
+    * allMaxValue  allMaxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -99,6 +113,8 @@ class Capacity implements ModelInterface, ArrayAccess
     protected static $setters = [
             'value' => 'setValue',
             'maxValue' => 'setMaxValue',
+            'allValue' => 'setAllValue',
+            'allMaxValue' => 'setAllMaxValue',
             'timestamp' => 'setTimestamp',
             'window' => 'setWindow'
     ];
@@ -107,6 +123,8 @@ class Capacity implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * value  value
     * maxValue  maxValue
+    * allValue  allValue
+    * allMaxValue  allMaxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -115,6 +133,8 @@ class Capacity implements ModelInterface, ArrayAccess
     protected static $getters = [
             'value' => 'getValue',
             'maxValue' => 'getMaxValue',
+            'allValue' => 'getAllValue',
+            'allMaxValue' => 'getAllMaxValue',
             'timestamp' => 'getTimestamp',
             'window' => 'getWindow'
     ];
@@ -179,6 +199,8 @@ class Capacity implements ModelInterface, ArrayAccess
     {
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['maxValue'] = isset($data['maxValue']) ? $data['maxValue'] : null;
+        $this->container['allValue'] = isset($data['allValue']) ? $data['allValue'] : null;
+        $this->container['allMaxValue'] = isset($data['allMaxValue']) ? $data['allMaxValue'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
         $this->container['window'] = isset($data['window']) ? $data['window'] : null;
     }
@@ -250,6 +272,54 @@ class Capacity implements ModelInterface, ArrayAccess
     public function setMaxValue($maxValue)
     {
         $this->container['maxValue'] = $maxValue;
+        return $this;
+    }
+
+    /**
+    * Gets allValue
+    *  allValue
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\Value|null
+    */
+    public function getAllValue()
+    {
+        return $this->container['allValue'];
+    }
+
+    /**
+    * Sets allValue
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\Value|null $allValue allValue
+    *
+    * @return $this
+    */
+    public function setAllValue($allValue)
+    {
+        $this->container['allValue'] = $allValue;
+        return $this;
+    }
+
+    /**
+    * Gets allMaxValue
+    *  allMaxValue
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\Value|null
+    */
+    public function getAllMaxValue()
+    {
+        return $this->container['allMaxValue'];
+    }
+
+    /**
+    * Sets allMaxValue
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\Value|null $allMaxValue allMaxValue
+    *
+    * @return $this
+    */
+    public function setAllMaxValue($allMaxValue)
+    {
+        $this->container['allMaxValue'] = $allMaxValue;
         return $this;
     }
 

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
+class ResourceFlavorXpu implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,42 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResourceFlavorSpec_npu';
+    protected static $openAPIModelName = 'ResourceFlavorXpu';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    * type  **参数解释**：卡类型。 **取值范围**：不涉及。
+    * size  **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
+    * memory  **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    * card  **参数解释**：卡数量。 **取值范围**：不涉及。
+    * chip  **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'size' => 'string'
+            'size' => 'string',
+            'memory' => 'string',
+            'card' => 'string',
+            'chip' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    * type  **参数解释**：卡类型。 **取值范围**：不涉及。
+    * size  **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
+    * memory  **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    * card  **参数解释**：卡数量。 **取值范围**：不涉及。
+    * chip  **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'size' => null
+        'size' => null,
+        'memory' => null,
+        'card' => null,
+        'chip' => null
     ];
 
     /**
@@ -65,38 +77,56 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    * type  **参数解释**：卡类型。 **取值范围**：不涉及。
+    * size  **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
+    * memory  **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    * card  **参数解释**：卡数量。 **取值范围**：不涉及。
+    * chip  **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'size' => 'size'
+            'size' => 'size',
+            'memory' => 'memory',
+            'card' => 'card',
+            'chip' => 'chip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    * type  **参数解释**：卡类型。 **取值范围**：不涉及。
+    * size  **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
+    * memory  **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    * card  **参数解释**：卡数量。 **取值范围**：不涉及。
+    * chip  **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'size' => 'setSize'
+            'size' => 'setSize',
+            'memory' => 'setMemory',
+            'card' => 'setCard',
+            'chip' => 'setChip'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    * type  **参数解释**：卡类型。 **取值范围**：不涉及。
+    * size  **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
+    * memory  **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    * card  **参数解释**：卡数量。 **取值范围**：不涉及。
+    * chip  **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'size' => 'getSize'
+            'size' => 'getSize',
+            'memory' => 'getMemory',
+            'card' => 'getCard',
+            'chip' => 'getChip'
     ];
 
     /**
@@ -159,6 +189,9 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['memory'] = isset($data['memory']) ? $data['memory'] : null;
+        $this->container['card'] = isset($data['card']) ? $data['card'] : null;
+        $this->container['chip'] = isset($data['chip']) ? $data['chip'] : null;
     }
 
     /**
@@ -185,7 +218,7 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
+    *  **参数解释**：卡类型。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -197,7 +230,7 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**：资源规格实例的NPU卡类型。 **取值范围**：不涉及。
+    * @param string|null $type **参数解释**：卡类型。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -209,7 +242,7 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    *  **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -221,13 +254,85 @@ class ResourceFlavorSpecNpu implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param string|null $size **参数解释**：资源规格实例的NPU卡数量。 **取值范围**：不涉及。
+    * @param string|null $size **参数解释**：芯片数量。reseverd for backwards compatibility **取值范围**：不涉及。
     *
     * @return $this
     */
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets memory
+    *  **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getMemory()
+    {
+        return $this->container['memory'];
+    }
+
+    /**
+    * Sets memory
+    *
+    * @param string|null $memory **参数解释**：单卡显存大小。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setMemory($memory)
+    {
+        $this->container['memory'] = $memory;
+        return $this;
+    }
+
+    /**
+    * Gets card
+    *  **参数解释**：卡数量。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getCard()
+    {
+        return $this->container['card'];
+    }
+
+    /**
+    * Sets card
+    *
+    * @param string|null $card **参数解释**：卡数量。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setCard($card)
+    {
+        $this->container['card'] = $card;
+        return $this;
+    }
+
+    /**
+    * Gets chip
+    *  **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getChip()
+    {
+        return $this->container['chip'];
+    }
+
+    /**
+    * Sets chip
+    *
+    * @param string|null $chip **参数解释**：芯片数量。值同size字段一致。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setChip($chip)
+    {
+        $this->container['chip'] = $chip;
         return $this;
     }
 

@@ -20,17 +20,18 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     * endpoints  **参数解释**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端接入Notebook。 **约束限制**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端，通过SSH远程接入Notebook实例时需要的相关配置。
     * flavor  **参数解释**：支持变更实例的机器规格。支持变更的规格可以通过本章节的[查询支持可切换规格列表](ShowSwitchableFlavors.xml)的API获取。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * customSpec  customSpec
     * imageId  **参数解释**：支持更新镜像ID，镜像ID参考[查询支持的镜像列表](ListImage.xml)获取。 **约束限制**：不涉及。 **取值范围**：调用[查询支持的镜像列表](ListImage.xml)接口获取的合法镜像ID列表。 **默认取值**：不涉及。
-    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     * storageNewSize  **参数解释**：EVS实例支持动态扩充的容量，单位GB。只允许扩容，不允许缩容。 **约束限制**：不涉及。 **取值范围**：最大允许扩容至4096。 **默认取值**：不涉及。
     * hooks  hooks
     * affinity  affinity
     * dewSecretName  **参数解释**：DEW存储的用户AKSK凭据名称。 **参数约束**：当category为OBS时必填，仅支持大小写字母、数字、中划线、下划线，长度 1-64 字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * dataVolumes  **参数解释**：扩展存储信息。 **约束限制**：不涉及。
+    * publicNetworkConfig  publicNetworkConfig
     *
     * @var string[]
     */
@@ -45,22 +46,24 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
             'hooks' => '\HuaweiCloud\SDK\ModelArts\V1\Model\CustomHooks',
             'affinity' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AffinityType',
             'dewSecretName' => 'string',
-            'dataVolumes' => '\HuaweiCloud\SDK\ModelArts\V1\Model\VolumeMountRequest[]'
+            'dataVolumes' => '\HuaweiCloud\SDK\ModelArts\V1\Model\VolumeMountRequest[]',
+            'publicNetworkConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\PublicNetworkConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     * endpoints  **参数解释**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端接入Notebook。 **约束限制**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端，通过SSH远程接入Notebook实例时需要的相关配置。
     * flavor  **参数解释**：支持变更实例的机器规格。支持变更的规格可以通过本章节的[查询支持可切换规格列表](ShowSwitchableFlavors.xml)的API获取。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * customSpec  customSpec
     * imageId  **参数解释**：支持更新镜像ID，镜像ID参考[查询支持的镜像列表](ListImage.xml)获取。 **约束限制**：不涉及。 **取值范围**：调用[查询支持的镜像列表](ListImage.xml)接口获取的合法镜像ID列表。 **默认取值**：不涉及。
-    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     * storageNewSize  **参数解释**：EVS实例支持动态扩充的容量，单位GB。只允许扩容，不允许缩容。 **约束限制**：不涉及。 **取值范围**：最大允许扩容至4096。 **默认取值**：不涉及。
     * hooks  hooks
     * affinity  affinity
     * dewSecretName  **参数解释**：DEW存储的用户AKSK凭据名称。 **参数约束**：当category为OBS时必填，仅支持大小写字母、数字、中划线、下划线，长度 1-64 字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * dataVolumes  **参数解释**：扩展存储信息。 **约束限制**：不涉及。
+    * publicNetworkConfig  publicNetworkConfig
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
         'hooks' => null,
         'affinity' => null,
         'dewSecretName' => null,
-        'dataVolumes' => null
+        'dataVolumes' => null,
+        'publicNetworkConfig' => null
     ];
 
     /**
@@ -101,17 +105,18 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     * endpoints  **参数解释**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端接入Notebook。 **约束限制**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端，通过SSH远程接入Notebook实例时需要的相关配置。
     * flavor  **参数解释**：支持变更实例的机器规格。支持变更的规格可以通过本章节的[查询支持可切换规格列表](ShowSwitchableFlavors.xml)的API获取。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * customSpec  customSpec
     * imageId  **参数解释**：支持更新镜像ID，镜像ID参考[查询支持的镜像列表](ListImage.xml)获取。 **约束限制**：不涉及。 **取值范围**：调用[查询支持的镜像列表](ListImage.xml)接口获取的合法镜像ID列表。 **默认取值**：不涉及。
-    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     * storageNewSize  **参数解释**：EVS实例支持动态扩充的容量，单位GB。只允许扩容，不允许缩容。 **约束限制**：不涉及。 **取值范围**：最大允许扩容至4096。 **默认取值**：不涉及。
     * hooks  hooks
     * affinity  affinity
     * dewSecretName  **参数解释**：DEW存储的用户AKSK凭据名称。 **参数约束**：当category为OBS时必填，仅支持大小写字母、数字、中划线、下划线，长度 1-64 字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * dataVolumes  **参数解释**：扩展存储信息。 **约束限制**：不涉及。
+    * publicNetworkConfig  publicNetworkConfig
     *
     * @var string[]
     */
@@ -126,22 +131,24 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
             'hooks' => 'hooks',
             'affinity' => 'affinity',
             'dewSecretName' => 'dew_secret_name',
-            'dataVolumes' => 'data_volumes'
+            'dataVolumes' => 'data_volumes',
+            'publicNetworkConfig' => 'public_network_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     * endpoints  **参数解释**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端接入Notebook。 **约束限制**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端，通过SSH远程接入Notebook实例时需要的相关配置。
     * flavor  **参数解释**：支持变更实例的机器规格。支持变更的规格可以通过本章节的[查询支持可切换规格列表](ShowSwitchableFlavors.xml)的API获取。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * customSpec  customSpec
     * imageId  **参数解释**：支持更新镜像ID，镜像ID参考[查询支持的镜像列表](ListImage.xml)获取。 **约束限制**：不涉及。 **取值范围**：调用[查询支持的镜像列表](ListImage.xml)接口获取的合法镜像ID列表。 **默认取值**：不涉及。
-    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     * storageNewSize  **参数解释**：EVS实例支持动态扩充的容量，单位GB。只允许扩容，不允许缩容。 **约束限制**：不涉及。 **取值范围**：最大允许扩容至4096。 **默认取值**：不涉及。
     * hooks  hooks
     * affinity  affinity
     * dewSecretName  **参数解释**：DEW存储的用户AKSK凭据名称。 **参数约束**：当category为OBS时必填，仅支持大小写字母、数字、中划线、下划线，长度 1-64 字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * dataVolumes  **参数解释**：扩展存储信息。 **约束限制**：不涉及。
+    * publicNetworkConfig  publicNetworkConfig
     *
     * @var string[]
     */
@@ -156,22 +163,24 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
             'hooks' => 'setHooks',
             'affinity' => 'setAffinity',
             'dewSecretName' => 'setDewSecretName',
-            'dataVolumes' => 'setDataVolumes'
+            'dataVolumes' => 'setDataVolumes',
+            'publicNetworkConfig' => 'setPublicNetworkConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    * description  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     * endpoints  **参数解释**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端接入Notebook。 **约束限制**：仅在本地IDE（如PyCharm、VS Code）或SSH客户端，通过SSH远程接入Notebook实例时需要的相关配置。
     * flavor  **参数解释**：支持变更实例的机器规格。支持变更的规格可以通过本章节的[查询支持可切换规格列表](ShowSwitchableFlavors.xml)的API获取。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * customSpec  customSpec
     * imageId  **参数解释**：支持更新镜像ID，镜像ID参考[查询支持的镜像列表](ListImage.xml)获取。 **约束限制**：不涉及。 **取值范围**：调用[查询支持的镜像列表](ListImage.xml)接口获取的合法镜像ID列表。 **默认取值**：不涉及。
-    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    * name  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     * storageNewSize  **参数解释**：EVS实例支持动态扩充的容量，单位GB。只允许扩容，不允许缩容。 **约束限制**：不涉及。 **取值范围**：最大允许扩容至4096。 **默认取值**：不涉及。
     * hooks  hooks
     * affinity  affinity
     * dewSecretName  **参数解释**：DEW存储的用户AKSK凭据名称。 **参数约束**：当category为OBS时必填，仅支持大小写字母、数字、中划线、下划线，长度 1-64 字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * dataVolumes  **参数解释**：扩展存储信息。 **约束限制**：不涉及。
+    * publicNetworkConfig  publicNetworkConfig
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
             'hooks' => 'getHooks',
             'affinity' => 'getAffinity',
             'dewSecretName' => 'getDewSecretName',
-            'dataVolumes' => 'getDataVolumes'
+            'dataVolumes' => 'getDataVolumes',
+            'publicNetworkConfig' => 'getPublicNetworkConfig'
     ];
 
     /**
@@ -258,6 +268,7 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
         $this->container['affinity'] = isset($data['affinity']) ? $data['affinity'] : null;
         $this->container['dewSecretName'] = isset($data['dewSecretName']) ? $data['dewSecretName'] : null;
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
+        $this->container['publicNetworkConfig'] = isset($data['publicNetworkConfig']) ? $data['publicNetworkConfig'] : null;
     }
 
     /**
@@ -268,14 +279,17 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['description']) && !preg_match("/^[^<>]{0,512}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]{0,512}$/.";
+            }
             if (!is_null($this->container['flavor']) && !preg_match("/^[a-zA-Z0-9.]{1,128}$/", $this->container['flavor'])) {
                 $invalidProperties[] = "invalid value for 'flavor', must be conform to the pattern /^[a-zA-Z0-9.]{1,128}$/.";
             }
             if (!is_null($this->container['imageId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/", $this->container['imageId'])) {
                 $invalidProperties[] = "invalid value for 'imageId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.";
             }
-            if (!is_null($this->container['name']) && !preg_match("/^[-_a-zA-Z0-9]{1,128}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[-_a-zA-Z0-9]{1,128}$/.";
+            if (!is_null($this->container['name']) && !preg_match("/^[-_a-zA-Z0-9\\u4e00-\\u9fa5]{1,128}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[-_a-zA-Z0-9\\u4e00-\\u9fa5]{1,128}$/.";
             }
         return $invalidProperties;
     }
@@ -293,7 +307,7 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    *  **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     *
     * @return string|null
     */
@@ -305,7 +319,7 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，且不能包含字符&<>\"'/。 **默认取值**：不涉及。
+    * @param string|null $description **参数解释**：支持更新实例描述信息。 **约束限制**：不涉及。 **取值范围**：长度限制为512字符，不可包含特殊字符<>，缺省值为空。 **默认取值**：不涉及。
     *
     * @return $this
     */
@@ -413,7 +427,7 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    *  **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     *
     * @return string|null
     */
@@ -425,7 +439,7 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线和下划线，名称可重复。 **默认取值**：不涉及。
+    * @param string|null $name **参数解释**：支持更新实例名称。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符， 支持大小写字母、数字、中划线、下划线和中文，名称可重复。 **默认取值**：不涉及。
     *
     * @return $this
     */
@@ -552,6 +566,30 @@ class NotebookUpdateRequest implements ModelInterface, ArrayAccess
     public function setDataVolumes($dataVolumes)
     {
         $this->container['dataVolumes'] = $dataVolumes;
+        return $this;
+    }
+
+    /**
+    * Gets publicNetworkConfig
+    *  publicNetworkConfig
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\PublicNetworkConfig|null
+    */
+    public function getPublicNetworkConfig()
+    {
+        return $this->container['publicNetworkConfig'];
+    }
+
+    /**
+    * Sets publicNetworkConfig
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\PublicNetworkConfig|null $publicNetworkConfig publicNetworkConfig
+    *
+    * @return $this
+    */
+    public function setPublicNetworkConfig($publicNetworkConfig)
+    {
+        $this->container['publicNetworkConfig'] = $publicNetworkConfig;
         return $this;
     }
 

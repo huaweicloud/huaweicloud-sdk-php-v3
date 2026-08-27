@@ -306,8 +306,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             if (!is_null($this->container['retentionDurationDays']) && ($this->container['retentionDurationDays'] < 1)) {
                 $invalidProperties[] = "invalid value for 'retentionDurationDays', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['timezone']) && !preg_match("/'UTC([+-]{1,1}[0-9]{2,2}[:]{1,1}[0-9]{2,2})'/", $this->container['timezone'])) {
-                $invalidProperties[] = "invalid value for 'timezone', must be conform to the pattern /'UTC([+-]{1,1}[0-9]{2,2}[:]{1,1}[0-9]{2,2})'/.";
+            if (!is_null($this->container['timezone']) && !preg_match("/UTC([+-]{1,1}[0-9]{2,2}[:]{1,1}[0-9]{2,2})/", $this->container['timezone'])) {
+                $invalidProperties[] = "invalid value for 'timezone', must be conform to the pattern /UTC([+-]{1,1}[0-9]{2,2}[:]{1,1}[0-9]{2,2})/.";
             }
             if (!is_null($this->container['yearBackups']) && ($this->container['yearBackups'] > 100)) {
                 $invalidProperties[] = "invalid value for 'yearBackups', must be smaller than or equal to 100.";

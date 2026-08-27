@@ -22,24 +22,32 @@ class MetricTableItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * allocated  allocated
     * capacity  capacity
+    * available  available
+    * workload  workload
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'allocated' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Allocated',
-            'capacity' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Capacity'
+            'capacity' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Capacity',
+            'available' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Available',
+            'workload' => '\HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * allocated  allocated
     * capacity  capacity
+    * available  available
+    * workload  workload
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'allocated' => null,
-        'capacity' => null
+        'capacity' => null,
+        'available' => null,
+        'workload' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class MetricTableItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * allocated  allocated
     * capacity  capacity
+    * available  available
+    * workload  workload
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'allocated' => 'allocated',
-            'capacity' => 'capacity'
+            'capacity' => 'capacity',
+            'available' => 'available',
+            'workload' => 'workload'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * allocated  allocated
     * capacity  capacity
+    * available  available
+    * workload  workload
     *
     * @var string[]
     */
     protected static $setters = [
             'allocated' => 'setAllocated',
-            'capacity' => 'setCapacity'
+            'capacity' => 'setCapacity',
+            'available' => 'setAvailable',
+            'workload' => 'setWorkload'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * allocated  allocated
     * capacity  capacity
+    * available  available
+    * workload  workload
     *
     * @var string[]
     */
     protected static $getters = [
             'allocated' => 'getAllocated',
-            'capacity' => 'getCapacity'
+            'capacity' => 'getCapacity',
+            'available' => 'getAvailable',
+            'workload' => 'getWorkload'
     ];
 
     /**
@@ -159,6 +179,8 @@ class MetricTableItem implements ModelInterface, ArrayAccess
     {
         $this->container['allocated'] = isset($data['allocated']) ? $data['allocated'] : null;
         $this->container['capacity'] = isset($data['capacity']) ? $data['capacity'] : null;
+        $this->container['available'] = isset($data['available']) ? $data['available'] : null;
+        $this->container['workload'] = isset($data['workload']) ? $data['workload'] : null;
     }
 
     /**
@@ -228,6 +250,54 @@ class MetricTableItem implements ModelInterface, ArrayAccess
     public function setCapacity($capacity)
     {
         $this->container['capacity'] = $capacity;
+        return $this;
+    }
+
+    /**
+    * Gets available
+    *  available
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\Available|null
+    */
+    public function getAvailable()
+    {
+        return $this->container['available'];
+    }
+
+    /**
+    * Sets available
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\Available|null $available available
+    *
+    * @return $this
+    */
+    public function setAvailable($available)
+    {
+        $this->container['available'] = $available;
+        return $this;
+    }
+
+    /**
+    * Gets workload
+    *  workload
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadInfo|null
+    */
+    public function getWorkload()
+    {
+        return $this->container['workload'];
+    }
+
+    /**
+    * Sets workload
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadInfo|null $workload workload
+    *
+    * @return $this
+    */
+    public function setWorkload($workload)
+    {
+        $this->container['workload'] = $workload;
         return $this;
     }
 

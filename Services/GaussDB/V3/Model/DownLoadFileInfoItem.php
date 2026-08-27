@@ -33,7 +33,7 @@ class DownLoadFileInfoItem implements ModelInterface, ArrayAccess
             'fileName' => 'string',
             'fileSize' => 'int',
             'downloadUrl' => 'string',
-            'expireTime' => 'string'
+            'expireTime' => 'int'
     ];
 
     /**
@@ -49,9 +49,9 @@ class DownLoadFileInfoItem implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'fileName' => null,
-        'fileSize' => null,
+        'fileSize' => 'int64',
         'downloadUrl' => null,
-        'expireTime' => null
+        'expireTime' => 'int64'
     ];
 
     /**
@@ -316,7 +316,7 @@ class DownLoadFileInfoItem implements ModelInterface, ArrayAccess
     * Gets expireTime
     *  **参数解释**：  下载链接过期时间，格式为\"yyyy-MM-dd HH:mm:ss\"。  **取值范围**：  不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getExpireTime()
     {
@@ -326,7 +326,7 @@ class DownLoadFileInfoItem implements ModelInterface, ArrayAccess
     /**
     * Sets expireTime
     *
-    * @param string|null $expireTime **参数解释**：  下载链接过期时间，格式为\"yyyy-MM-dd HH:mm:ss\"。  **取值范围**：  不涉及。
+    * @param int|null $expireTime **参数解释**：  下载链接过期时间，格式为\"yyyy-MM-dd HH:mm:ss\"。  **取值范围**：  不涉及。
     *
     * @return $this
     */

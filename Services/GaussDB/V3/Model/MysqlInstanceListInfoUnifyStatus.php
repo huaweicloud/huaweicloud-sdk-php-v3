@@ -46,6 +46,7 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * tags  标签列表。
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -75,7 +76,8 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
             'timeZone' => 'string',
             'chargeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlChargeInfo',
             'dedicatedResourceId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\InstanceTagItem[]'
+            'tags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\InstanceTagItem[]',
+            'eosTag' => 'bool'
     ];
 
     /**
@@ -106,6 +108,7 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * tags  标签列表。
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -135,7 +138,8 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
         'timeZone' => null,
         'chargeInfo' => null,
         'dedicatedResourceId' => null,
-        'tags' => null
+        'tags' => null,
+        'eosTag' => null
     ];
 
     /**
@@ -187,6 +191,7 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * tags  标签列表。
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -216,7 +221,8 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
             'timeZone' => 'time_zone',
             'chargeInfo' => 'charge_info',
             'dedicatedResourceId' => 'dedicated_resource_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'eosTag' => 'eos_tag'
     ];
 
     /**
@@ -247,6 +253,7 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * tags  标签列表。
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -276,7 +283,8 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
             'timeZone' => 'setTimeZone',
             'chargeInfo' => 'setChargeInfo',
             'dedicatedResourceId' => 'setDedicatedResourceId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'eosTag' => 'setEosTag'
     ];
 
     /**
@@ -307,6 +315,7 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * tags  标签列表。
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -336,7 +345,8 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
             'timeZone' => 'getTimeZone',
             'chargeInfo' => 'getChargeInfo',
             'dedicatedResourceId' => 'getDedicatedResourceId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'eosTag' => 'getEosTag'
     ];
 
     /**
@@ -423,6 +433,7 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
         $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
         $this->container['dedicatedResourceId'] = isset($data['dedicatedResourceId']) ? $data['dedicatedResourceId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['eosTag'] = isset($data['eosTag']) ? $data['eosTag'] : null;
     }
 
     /**
@@ -1074,6 +1085,30 @@ class MysqlInstanceListInfoUnifyStatus implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets eosTag
+    *  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
+    *
+    * @return bool|null
+    */
+    public function getEosTag()
+    {
+        return $this->container['eosTag'];
+    }
+
+    /**
+    * Sets eosTag
+    *
+    * @param bool|null $eosTag **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
+    *
+    * @return $this
+    */
+    public function setEosTag($eosTag)
+    {
+        $this->container['eosTag'] = $eosTag;
         return $this;
     }
 

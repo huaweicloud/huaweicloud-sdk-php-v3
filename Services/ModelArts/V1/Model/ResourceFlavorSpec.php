@@ -38,8 +38,8 @@ class ResourceFlavorSpec implements ModelInterface, ArrayAccess
             'cpuArch' => 'string',
             'cpu' => 'string',
             'memory' => 'string',
-            'gpu' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecGpu',
-            'npu' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecNpu',
+            'gpu' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorXpu',
+            'npu' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorXpu',
             'dataVolume' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecDataVolume[]',
             'billingModes' => 'int[]',
             'billingCode' => 'string',
@@ -371,7 +371,7 @@ class ResourceFlavorSpec implements ModelInterface, ArrayAccess
     * Gets gpu
     *  gpu
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecGpu|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorXpu|null
     */
     public function getGpu()
     {
@@ -381,7 +381,7 @@ class ResourceFlavorSpec implements ModelInterface, ArrayAccess
     /**
     * Sets gpu
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecGpu|null $gpu gpu
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorXpu|null $gpu gpu
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ResourceFlavorSpec implements ModelInterface, ArrayAccess
     * Gets npu
     *  npu
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecNpu|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorXpu|null
     */
     public function getNpu()
     {
@@ -405,7 +405,7 @@ class ResourceFlavorSpec implements ModelInterface, ArrayAccess
     /**
     * Sets npu
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorSpecNpu|null $npu npu
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ResourceFlavorXpu|null $npu npu
     *
     * @return $this
     */

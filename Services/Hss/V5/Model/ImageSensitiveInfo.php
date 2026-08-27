@@ -27,7 +27,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * position  **参数解释**: 漏洞所在镜像层 **取值范围**: 字符长度0-128位
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度0-128位
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
-    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
     * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
@@ -55,7 +55,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * position  **参数解释**: 漏洞所在镜像层 **取值范围**: 字符长度0-128位
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度0-128位
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
-    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
     * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
@@ -104,7 +104,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * position  **参数解释**: 漏洞所在镜像层 **取值范围**: 字符长度0-128位
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度0-128位
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
-    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
     * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
@@ -132,7 +132,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * position  **参数解释**: 漏洞所在镜像层 **取值范围**: 字符长度0-128位
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度0-128位
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
-    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
     * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
@@ -160,7 +160,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     * position  **参数解释**: 漏洞所在镜像层 **取值范围**: 字符长度0-128位
     * filePath  **参数解释**: 文件路径 **取值范围**: 字符长度0-128位
     * content  **参数解释**: 敏感信息内容 **取值范围**: 字符长度0-128位
-    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    * latestScanTime  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     * handleStatus  **参数解释**: 是否已处理 **取值范围**: - unhandled：未处理。 - handled：已处理。
     * operateAccept  **参数解释**: 操作类型 **取值范围**: - ignore ：忽略。 - do_not_ignore ：取消忽略。
     *
@@ -299,8 +299,8 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['content']) && (mb_strlen($this->container['content']) < 0)) {
                 $invalidProperties[] = "invalid value for 'content', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['latestScanTime']) && ($this->container['latestScanTime'] > 2147483647)) {
-                $invalidProperties[] = "invalid value for 'latestScanTime', must be smaller than or equal to 2147483647.";
+            if (!is_null($this->container['latestScanTime']) && ($this->container['latestScanTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'latestScanTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['latestScanTime']) && ($this->container['latestScanTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'latestScanTime', must be bigger than or equal to 0.";
@@ -501,7 +501,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestScanTime
-    *  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    *  **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -513,7 +513,7 @@ class ImageSensitiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestScanTime
     *
-    * @param int|null $latestScanTime **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值2147483647
+    * @param int|null $latestScanTime **参数解释**: 最后一次检测时间，时间单位 毫秒（ms） **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */

@@ -28,7 +28,7 @@ class ShowTrainingJobFlavorsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'totalCount' => 'int',
-            'flavors' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FlavorResponse[]'
+            'flavors' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FlavorResponseWithSupport[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ShowTrainingJobFlavorsResponse implements ModelInterface, ArrayAccess
     * Gets flavors
     *  训练作业资源规格列表。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\FlavorResponse[]|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\FlavorResponseWithSupport[]|null
     */
     public function getFlavors()
     {
@@ -222,7 +222,7 @@ class ShowTrainingJobFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flavors
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\FlavorResponse[]|null $flavors 训练作业资源规格列表。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\FlavorResponseWithSupport[]|null $flavors 训练作业资源规格列表。
     *
     * @return $this
     */

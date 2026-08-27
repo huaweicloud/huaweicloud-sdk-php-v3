@@ -238,8 +238,8 @@ class ListTwoFactorLoginHostRequest implements ModelInterface, ArrayAccess
             if (($this->container['offset'] > 2000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 2000000.";
             }
-            if (($this->container['offset'] < 10)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 10.";
+            if (($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

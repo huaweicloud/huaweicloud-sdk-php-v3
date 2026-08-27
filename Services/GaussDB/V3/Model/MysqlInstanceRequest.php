@@ -43,6 +43,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
     * tdeInfo  tdeInfo
+    * enableBinlog  **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    * volumeAutoExpand  volumeAutoExpand
     *
     * @var string[]
     */
@@ -69,7 +71,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'dedicatedResourceId' => 'string',
             'restorePoint' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlRestorePoint',
-            'tdeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo'
+            'tdeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo',
+            'enableBinlog' => 'bool',
+            'volumeAutoExpand' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlVolumeAutoExpandPolicy'
     ];
 
     /**
@@ -97,6 +101,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
     * tdeInfo  tdeInfo
+    * enableBinlog  **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    * volumeAutoExpand  volumeAutoExpand
     *
     * @var string[]
     */
@@ -123,7 +129,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'dedicatedResourceId' => null,
         'restorePoint' => null,
-        'tdeInfo' => null
+        'tdeInfo' => null,
+        'enableBinlog' => null,
+        'volumeAutoExpand' => null
     ];
 
     /**
@@ -172,6 +180,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
     * tdeInfo  tdeInfo
+    * enableBinlog  **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    * volumeAutoExpand  volumeAutoExpand
     *
     * @var string[]
     */
@@ -198,7 +208,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'dedicatedResourceId' => 'dedicated_resource_id',
             'restorePoint' => 'restore_point',
-            'tdeInfo' => 'tde_info'
+            'tdeInfo' => 'tde_info',
+            'enableBinlog' => 'enable_binlog',
+            'volumeAutoExpand' => 'volume_auto_expand'
     ];
 
     /**
@@ -226,6 +238,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
     * tdeInfo  tdeInfo
+    * enableBinlog  **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    * volumeAutoExpand  volumeAutoExpand
     *
     * @var string[]
     */
@@ -252,7 +266,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'dedicatedResourceId' => 'setDedicatedResourceId',
             'restorePoint' => 'setRestorePoint',
-            'tdeInfo' => 'setTdeInfo'
+            'tdeInfo' => 'setTdeInfo',
+            'enableBinlog' => 'setEnableBinlog',
+            'volumeAutoExpand' => 'setVolumeAutoExpand'
     ];
 
     /**
@@ -280,6 +296,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有开通专属资源池后才可以下发此参数。
     * restorePoint  restorePoint
     * tdeInfo  tdeInfo
+    * enableBinlog  **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    * volumeAutoExpand  volumeAutoExpand
     *
     * @var string[]
     */
@@ -306,7 +324,9 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'dedicatedResourceId' => 'getDedicatedResourceId',
             'restorePoint' => 'getRestorePoint',
-            'tdeInfo' => 'getTdeInfo'
+            'tdeInfo' => 'getTdeInfo',
+            'enableBinlog' => 'getEnableBinlog',
+            'volumeAutoExpand' => 'getVolumeAutoExpand'
     ];
 
     /**
@@ -390,6 +410,8 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
         $this->container['dedicatedResourceId'] = isset($data['dedicatedResourceId']) ? $data['dedicatedResourceId'] : null;
         $this->container['restorePoint'] = isset($data['restorePoint']) ? $data['restorePoint'] : null;
         $this->container['tdeInfo'] = isset($data['tdeInfo']) ? $data['tdeInfo'] : null;
+        $this->container['enableBinlog'] = isset($data['enableBinlog']) ? $data['enableBinlog'] : null;
+        $this->container['volumeAutoExpand'] = isset($data['volumeAutoExpand']) ? $data['volumeAutoExpand'] : null;
     }
 
     /**
@@ -999,6 +1021,54 @@ class MysqlInstanceRequest implements ModelInterface, ArrayAccess
     public function setTdeInfo($tdeInfo)
     {
         $this->container['tdeInfo'] = $tdeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets enableBinlog
+    *  **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    *
+    * @return bool|null
+    */
+    public function getEnableBinlog()
+    {
+        return $this->container['enableBinlog'];
+    }
+
+    /**
+    * Sets enableBinlog
+    *
+    * @param bool|null $enableBinlog **参数解释**：  是否打开本地Binlog日志。  **约束限制**：  不涉及。  **取值范围**：  - true: 打开。 - false: 关闭。  **默认取值**：  false。
+    *
+    * @return $this
+    */
+    public function setEnableBinlog($enableBinlog)
+    {
+        $this->container['enableBinlog'] = $enableBinlog;
+        return $this;
+    }
+
+    /**
+    * Gets volumeAutoExpand
+    *  volumeAutoExpand
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlVolumeAutoExpandPolicy|null
+    */
+    public function getVolumeAutoExpand()
+    {
+        return $this->container['volumeAutoExpand'];
+    }
+
+    /**
+    * Sets volumeAutoExpand
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlVolumeAutoExpandPolicy|null $volumeAutoExpand volumeAutoExpand
+    *
+    * @return $this
+    */
+    public function setVolumeAutoExpand($volumeAutoExpand)
+    {
+        $this->container['volumeAutoExpand'] = $volumeAutoExpand;
         return $this;
     }
 

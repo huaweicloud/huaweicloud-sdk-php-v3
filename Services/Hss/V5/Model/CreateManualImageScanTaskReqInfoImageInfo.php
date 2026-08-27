@@ -30,7 +30,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
     * namespace  命名空间
     * instanceId  企业实例ID
     * instanceUrl  下载企业镜像URL
-    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
     * namespace  命名空间
     * instanceId  企业实例ID
     * instanceUrl  下载企业镜像URL
-    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
     * namespace  命名空间
     * instanceId  企业实例ID
     * instanceUrl  下载企业镜像URL
-    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
     * namespace  命名空间
     * instanceId  企业实例ID
     * instanceUrl  下载企业镜像URL
-    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
     * namespace  命名空间
     * instanceId  企业实例ID
     * instanceUrl  下载企业镜像URL
-    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    * registryType  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -620,7 +620,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
 
     /**
     * Gets registryType
-    *  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    *  **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -632,7 +632,7 @@ class CreateManualImageScanTaskReqInfoImageInfo implements ModelInterface, Array
     /**
     * Sets registryType
     *
-    * @param string|null $registryType **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。  **默认取值**: 不涉及
+    * @param string|null $registryType **参数解释**: 镜像仓库类型 **约束限制**: 不涉及 **取值范围**: - SwrPrivate：swr私有。 - SwrShared：swr共享。 - SwrEnterprise：swr企业。 - Harbor：harbor仓库。 - Jfrog：jfrog仓库。 - Other：其他仓库。 - Local：本地镜像 **默认取值**: 不涉及
     *
     * @return $this
     */

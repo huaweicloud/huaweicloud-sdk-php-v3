@@ -5248,6 +5248,12 @@ class HssAsyncClient extends Client
         if ($localVarParams['containerTags'] !== null) {
             $queryParams['container_tags'] = $localVarParams['containerTags'];
         }
+        if ($localVarParams['containerNode'] !== null) {
+            $queryParams['container_node'] = $localVarParams['containerNode'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
         if ($localVarParams['region'] !== null) {
             $headerParams['region'] = $localVarParams['region'];
         }
@@ -5702,11 +5708,11 @@ class HssAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/zip']
+                ['application/zip', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/zip'],
+                ['application/zip', 'application/json'],
                 []
             );
         }
@@ -38348,11 +38354,11 @@ class HssAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }

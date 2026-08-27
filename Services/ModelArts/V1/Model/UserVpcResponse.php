@@ -26,6 +26,8 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **取值范围**：不涉及。
     * portId  **参数解释**：网卡ID。 **取值范围**：不涉及。
     * portIp  **参数解释**：网卡ip。 **取值范围**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
             'securityGroupIds' => 'string[]',
             'connectCidrs' => 'string',
             'portId' => 'string[]',
-            'portIp' => 'string'
+            'portIp' => 'string',
+            'natId' => 'string',
+            'eipId' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **取值范围**：不涉及。
     * portId  **参数解释**：网卡ID。 **取值范围**：不涉及。
     * portIp  **参数解释**：网卡ip。 **取值范围**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
         'securityGroupIds' => null,
         'connectCidrs' => null,
         'portId' => null,
-        'portIp' => null
+        'portIp' => null,
+        'natId' => null,
+        'eipId' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **取值范围**：不涉及。
     * portId  **参数解释**：网卡ID。 **取值范围**：不涉及。
     * portIp  **参数解释**：网卡ip。 **取值范围**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
             'securityGroupIds' => 'security_group_ids',
             'connectCidrs' => 'connect_cidrs',
             'portId' => 'port_id',
-            'portIp' => 'port_ip'
+            'portIp' => 'port_ip',
+            'natId' => 'nat_id',
+            'eipId' => 'eip_id'
     ];
 
     /**
@@ -107,6 +119,8 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **取值范围**：不涉及。
     * portId  **参数解释**：网卡ID。 **取值范围**：不涉及。
     * portIp  **参数解释**：网卡ip。 **取值范围**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
             'securityGroupIds' => 'setSecurityGroupIds',
             'connectCidrs' => 'setConnectCidrs',
             'portId' => 'setPortId',
-            'portIp' => 'setPortIp'
+            'portIp' => 'setPortIp',
+            'natId' => 'setNatId',
+            'eipId' => 'setEipId'
     ];
 
     /**
@@ -127,6 +143,8 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **取值范围**：不涉及。
     * portId  **参数解释**：网卡ID。 **取值范围**：不涉及。
     * portIp  **参数解释**：网卡ip。 **取值范围**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
             'securityGroupIds' => 'getSecurityGroupIds',
             'connectCidrs' => 'getConnectCidrs',
             'portId' => 'getPortId',
-            'portIp' => 'getPortIp'
+            'portIp' => 'getPortIp',
+            'natId' => 'getNatId',
+            'eipId' => 'getEipId'
     ];
 
     /**
@@ -203,6 +223,8 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
         $this->container['connectCidrs'] = isset($data['connectCidrs']) ? $data['connectCidrs'] : null;
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['portIp'] = isset($data['portIp']) ? $data['portIp'] : null;
+        $this->container['natId'] = isset($data['natId']) ? $data['natId'] : null;
+        $this->container['eipId'] = isset($data['eipId']) ? $data['eipId'] : null;
     }
 
     /**
@@ -368,6 +390,54 @@ class UserVpcResponse implements ModelInterface, ArrayAccess
     public function setPortIp($portIp)
     {
         $this->container['portIp'] = $portIp;
+        return $this;
+    }
+
+    /**
+    * Gets natId
+    *  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getNatId()
+    {
+        return $this->container['natId'];
+    }
+
+    /**
+    * Sets natId
+    *
+    * @param string|null $natId **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setNatId($natId)
+    {
+        $this->container['natId'] = $natId;
+        return $this;
+    }
+
+    /**
+    * Gets eipId
+    *  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getEipId()
+    {
+        return $this->container['eipId'];
+    }
+
+    /**
+    * Sets eipId
+    *
+    * @param string|null $eipId **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setEipId($eipId)
+    {
+        $this->container['eipId'] = $eipId;
         return $this;
     }
 

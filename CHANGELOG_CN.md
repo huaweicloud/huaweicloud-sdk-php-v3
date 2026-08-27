@@ -1,3 +1,264 @@
+# 3.1.198 2026-08-27
+
+### HuaweiCloud SDK BMS
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowJobInfos**
+    - 响应参数变更
+      - `+ entities.server_id`
+      - `+ entities.nic_id`
+      - `+ entities.sub_jobs.entities.errorcode_message`
+
+### HuaweiCloud SDK DAS
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ShowQuotas**
+    - 响应参数变更
+      - `+ quotas.resources`
+      - `* quotas: object -> object<Quotas>`
+
+### HuaweiCloud SDK GaussDB
+
+- _接口版本_
+  - V3
+- _新增特性_
+  - 支持以下接口：
+    - `ListColdTableMetas`
+    - `ShowInstanceScheduleEvents`
+    - `SetInstanceScheduleEvents`
+    - `UpgradeConfiguration`
+    - `ShowTaurusDbAdvancedBackupPolicy`
+    - `UpdateTaurusDbAdvancedBackupPolicy`
+    - `BatchUpdateBackupPolicy`
+    - `CheckKernelUpgrade`
+    - `SetInstanceReadonlyStatus`
+    - `ShowKernelUpgradeCheckResult`
+    - `ClearOnlineDdlTaskTempTable`
+    - `StartOnlineDdlTask`
+    - `DeleteOnlineDdlTaskRecord`
+    - `DownloadOnlineDdlTaskLog`
+    - `ListOnlineDdlTaskRecords`
+    - `StopOnlineDdlTask`
+    - `ShowTaurusDbTxnProgress`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ExpandGaussMySqlProxy**
+    - 请求参数变更
+      - `+ proxy_nodes_az_list`
+  - **ShrinkGaussMySqlProxy**
+    - 请求参数变更
+      - `+ node_ids`
+  - **SwitchGaussMySqlConfiguration**
+    - 请求参数变更
+      - `+ is_update_param_group_version`
+  - **CreateGaussMySqlProxy**
+    - 请求参数变更
+      - `+ proxy_nodes_az_list`
+      - `+ proxy_ip`
+  - **ListImmediateJobs**
+    - 响应参数变更
+      - `+ jobs.extend_fields`
+  - **ListDdlLogs**
+    - 请求参数变更
+      - `* start_time: optional -> required`
+      - `* end_time: optional -> required`
+  - **DownloadDdlLogs**
+    - 响应参数变更
+      - `* download_files.file_size: int32 -> int64`
+      - `* download_files.expire_time: string -> int64`
+  - **ShowInstanceBackups**
+    - 响应参数变更
+      - `+ backups.backup_mode`
+  - **CreateGaussMySqlInstance**
+    - 请求参数变更
+      - `+ enable_binlog`
+      - `+ volume_auto_expand`
+  - **ShowGaussMySqlBackupList**
+    - 响应参数变更
+      - `+ backups.backup_mode`
+      - `* backups: list<backups> -> list<Backups>`
+  - **ListGaussMySqlInstancesUnifyStatus**
+    - 响应参数变更
+      - `+ instances.eos_tag`
+  - **ShowGaussMySqlInstanceInfoUnifyStatus**
+    - 响应参数变更
+      - `+ instance.eos_tag`
+  - **ListGaussMySqlInstanceDetailInfoUnifyStatus**
+    - 响应参数变更
+      - `+ instances.eos_tag`
+
+### HuaweiCloud SDK HSS
+
+- _接口版本_
+  - V5
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 废弃以下接口：
+    - `ShowFilePathWhiteDetail`
+    - `ChangeFilePathWhiteDetail`
+    - `RunImageSynchronize`
+    - `BatchScanSwrImage`
+    - `ListServerlessAssetDetail`
+    - `ListServerlessAsset`
+    - `ListEventTopRisk`
+    - `ListSwrImageRepository`
+  - **ListContainerNodes**
+    - 请求参数变更
+      - `+ container_node`
+      - `+ version`
+    - 响应参数变更
+      - `+ data_list.is_container_node`
+      - `+ data_list.version`
+
+### HuaweiCloud SDK IoTDA
+
+- _接口版本_
+  - V5
+- _新增特性_
+  - 支持以下接口：
+    - `ListProtocolConfigs`
+    - `CreateProtocolConfig`
+    - `ShowProtocolConfig`
+    - `UpdateProtocolConfig`
+    - `DeleteProtocolConfig`
+- _解决问题_
+  - 无
+- _特性变更_
+  - 无
+
+### HuaweiCloud SDK ModelArts
+
+- _接口版本_
+  - V1
+- _新增特性_
+  - 支持接口`BatchDrainPoolNodes`
+- _解决问题_
+  - 无
+- _特性变更_
+  - **ListFlavors**
+    - 响应参数变更
+      - `+ data.ascend.chip`
+      - `- data.ascend.ai_core`
+      - `- data.ascend.ai_cpu`
+      - `- data.ascend.type_alias`
+  - **ShowSwitchableFlavors**
+    - 响应参数变更
+      - `+ data.ascend.chip`
+      - `- data.ascend.ai_core`
+      - `- data.ascend.ai_cpu`
+      - `- data.ascend.type_alias`
+  - **StartNotebook**
+    - 响应参数变更
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **StopNotebook**
+    - 响应参数变更
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **ShowCluster**
+    - 响应参数变更
+      - `+ flavors.support_eni`
+      - `+ flavors.ascend.chip`
+      - `- flavors.ascend.ai_core`
+      - `- flavors.ascend.ai_cpu`
+      - `- flavors.ascend.type_alias`
+  - **ShowInferServiceCluster**
+    - 响应参数变更
+      - `- flavors.evs_sku_code`
+      - `- flavors.grow_support_type`
+      - `+ flavors.arch: enum value [arm64,X86_64]`
+      - `- flavors.arch: enum value [x86_64,aarch64]`
+      - `* flavors.billing: object<BillingInfo> -> object<BillingResource>`
+      - `* flavors.gpu: object<GPUInfo> -> object<GPUResource>`
+      - `* flavors: list<NotebookFlavor> -> list<InferFlavor>`
+  - **ListInferClusterFlavors**
+    - 响应参数变更
+      - `+ data.ascend.type_alias`
+  - **ShowTrainingJobFlavors**
+    - 响应参数变更
+      - `* flavors: list<FlavorResponse> -> list<FlavorResponseWithSupport>`
+  - **ListNotebooks**
+    - 请求参数变更
+      - `+ swr_path`
+      - `+ pool_name`
+      - `+ description`
+      - `+ ip`
+      - `+ username`
+    - 响应参数变更
+      - `+ data.user_vpc.nat_id`
+      - `+ data.user_vpc.eip_id`
+  - **CreateNotebook**
+    - 请求参数变更
+      - `+ public_network_config`
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+    - 响应参数变更
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **ListAllNotebooks**
+    - 请求参数变更
+      - `+ swr_path`
+      - `+ pool_name`
+      - `+ description`
+      - `+ ip`
+      - `+ username`
+    - 响应参数变更
+      - `+ data.user_vpc.nat_id`
+      - `+ data.user_vpc.eip_id`
+  - **ShowNotebook**
+    - 响应参数变更
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **DeleteNotebook**
+    - 响应参数变更
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **UpdateNotebook**
+    - 请求参数变更
+      - `+ public_network_config`
+    - 响应参数变更
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **ListAuthoringClusters**
+    - 响应参数变更
+      - `+ data.flavors.support_eni`
+      - `+ data.flavors.ascend.chip`
+      - `- data.flavors.ascend.ai_core`
+      - `- data.flavors.ascend.ai_cpu`
+      - `- data.flavors.ascend.type_alias`
+  - **ShowTrainingJobDetails**
+    - 响应参数变更
+      - `- tasks.task_resource.support_engines`
+      - `- tasks.task_resource.support_groups`
+  - **StopTrainingJob**
+    - 响应参数变更
+      - `- tasks.task_resource.support_engines`
+      - `- tasks.task_resource.support_groups`
+  - **CreateTrainingJob**
+    - 响应参数变更
+      - `- tasks.task_resource.support_engines`
+      - `- tasks.task_resource.support_groups`
+  - **ListTrainingJobs**
+    - 响应参数变更
+      - `- items.tasks.task_resource.support_engines`
+      - `- items.tasks.task_resource.support_groups`
+
 # 3.1.197 2026-08-20
 
 ### HuaweiCloud SDK BSS

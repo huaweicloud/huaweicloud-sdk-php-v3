@@ -230,6 +230,12 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
         if ($this->container['nodeId'] === null) {
             $invalidProperties[] = "'nodeId' can't be null";
         }
+        if ($this->container['startTime'] === null) {
+            $invalidProperties[] = "'startTime' can't be null";
+        }
+        if ($this->container['endTime'] === null) {
+            $invalidProperties[] = "'endTime' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -368,7 +374,7 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * Gets startTime
     *  **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return int|null
+    * @return int
     */
     public function getStartTime()
     {
@@ -378,7 +384,7 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param int $startTime **参数解释**：  查询开始时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -392,7 +398,7 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     * Gets endTime
     *  **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
-    * @return int|null
+    * @return int
     */
     public function getEndTime()
     {
@@ -402,7 +408,7 @@ class ListDdlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param int $endTime **参数解释**：  查询结束时间。格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */

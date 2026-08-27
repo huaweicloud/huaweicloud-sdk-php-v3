@@ -1,3 +1,264 @@
+# 3.1.198 2026-08-27
+
+### HuaweiCloud SDK BMS
+
+- _API Version_
+  - V1
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowJobInfos**
+    - changes of response param
+      - `+ entities.server_id`
+      - `+ entities.nic_id`
+      - `+ entities.sub_jobs.entities.errorcode_message`
+
+### HuaweiCloud SDK DAS
+
+- _API Version_
+  - V3
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ShowQuotas**
+    - changes of response param
+      - `+ quotas.resources`
+      - `* quotas: object -> object<Quotas>`
+
+### HuaweiCloud SDK GaussDB
+
+- _API Version_
+  - V3
+- _Features_
+  - Support the following APIs:
+    - `ListColdTableMetas`
+    - `ShowInstanceScheduleEvents`
+    - `SetInstanceScheduleEvents`
+    - `UpgradeConfiguration`
+    - `ShowTaurusDbAdvancedBackupPolicy`
+    - `UpdateTaurusDbAdvancedBackupPolicy`
+    - `BatchUpdateBackupPolicy`
+    - `CheckKernelUpgrade`
+    - `SetInstanceReadonlyStatus`
+    - `ShowKernelUpgradeCheckResult`
+    - `ClearOnlineDdlTaskTempTable`
+    - `StartOnlineDdlTask`
+    - `DeleteOnlineDdlTaskRecord`
+    - `DownloadOnlineDdlTaskLog`
+    - `ListOnlineDdlTaskRecords`
+    - `StopOnlineDdlTask`
+    - `ShowTaurusDbTxnProgress`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ExpandGaussMySqlProxy**
+    - changes of request param
+      - `+ proxy_nodes_az_list`
+  - **ShrinkGaussMySqlProxy**
+    - changes of request param
+      - `+ node_ids`
+  - **SwitchGaussMySqlConfiguration**
+    - changes of request param
+      - `+ is_update_param_group_version`
+  - **CreateGaussMySqlProxy**
+    - changes of request param
+      - `+ proxy_nodes_az_list`
+      - `+ proxy_ip`
+  - **ListImmediateJobs**
+    - changes of response param
+      - `+ jobs.extend_fields`
+  - **ListDdlLogs**
+    - changes of request param
+      - `* start_time: optional -> required`
+      - `* end_time: optional -> required`
+  - **DownloadDdlLogs**
+    - changes of response param
+      - `* download_files.file_size: int32 -> int64`
+      - `* download_files.expire_time: string -> int64`
+  - **ShowInstanceBackups**
+    - changes of response param
+      - `+ backups.backup_mode`
+  - **CreateGaussMySqlInstance**
+    - changes of request param
+      - `+ enable_binlog`
+      - `+ volume_auto_expand`
+  - **ShowGaussMySqlBackupList**
+    - changes of response param
+      - `+ backups.backup_mode`
+      - `* backups: list<backups> -> list<Backups>`
+  - **ListGaussMySqlInstancesUnifyStatus**
+    - changes of response param
+      - `+ instances.eos_tag`
+  - **ShowGaussMySqlInstanceInfoUnifyStatus**
+    - changes of response param
+      - `+ instance.eos_tag`
+  - **ListGaussMySqlInstanceDetailInfoUnifyStatus**
+    - changes of response param
+      - `+ instances.eos_tag`
+
+### HuaweiCloud SDK HSS
+
+- _API Version_
+  - V5
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - Deprecate the following APIs:
+    - `ShowFilePathWhiteDetail`
+    - `ChangeFilePathWhiteDetail`
+    - `RunImageSynchronize`
+    - `BatchScanSwrImage`
+    - `ListServerlessAssetDetail`
+    - `ListServerlessAsset`
+    - `ListEventTopRisk`
+    - `ListSwrImageRepository`
+  - **ListContainerNodes**
+    - changes of request param
+      - `+ container_node`
+      - `+ version`
+    - changes of response param
+      - `+ data_list.is_container_node`
+      - `+ data_list.version`
+
+### HuaweiCloud SDK IoTDA
+
+- _API Version_
+  - V5
+- _Features_
+  - Support the following APIs:
+    - `ListProtocolConfigs`
+    - `CreateProtocolConfig`
+    - `ShowProtocolConfig`
+    - `UpdateProtocolConfig`
+    - `DeleteProtocolConfig`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK ModelArts
+
+- _API Version_
+  - V1
+- _Features_
+  - Support the API `BatchDrainPoolNodes`
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListFlavors**
+    - changes of response param
+      - `+ data.ascend.chip`
+      - `- data.ascend.ai_core`
+      - `- data.ascend.ai_cpu`
+      - `- data.ascend.type_alias`
+  - **ShowSwitchableFlavors**
+    - changes of response param
+      - `+ data.ascend.chip`
+      - `- data.ascend.ai_core`
+      - `- data.ascend.ai_cpu`
+      - `- data.ascend.type_alias`
+  - **StartNotebook**
+    - changes of response param
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **StopNotebook**
+    - changes of response param
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **ShowCluster**
+    - changes of response param
+      - `+ flavors.support_eni`
+      - `+ flavors.ascend.chip`
+      - `- flavors.ascend.ai_core`
+      - `- flavors.ascend.ai_cpu`
+      - `- flavors.ascend.type_alias`
+  - **ShowInferServiceCluster**
+    - changes of response param
+      - `- flavors.evs_sku_code`
+      - `- flavors.grow_support_type`
+      - `+ flavors.arch: enum value [arm64,X86_64]`
+      - `- flavors.arch: enum value [x86_64,aarch64]`
+      - `* flavors.billing: object<BillingInfo> -> object<BillingResource>`
+      - `* flavors.gpu: object<GPUInfo> -> object<GPUResource>`
+      - `* flavors: list<NotebookFlavor> -> list<InferFlavor>`
+  - **ListInferClusterFlavors**
+    - changes of response param
+      - `+ data.ascend.type_alias`
+  - **ShowTrainingJobFlavors**
+    - changes of response param
+      - `* flavors: list<FlavorResponse> -> list<FlavorResponseWithSupport>`
+  - **ListNotebooks**
+    - changes of request param
+      - `+ swr_path`
+      - `+ pool_name`
+      - `+ description`
+      - `+ ip`
+      - `+ username`
+    - changes of response param
+      - `+ data.user_vpc.nat_id`
+      - `+ data.user_vpc.eip_id`
+  - **CreateNotebook**
+    - changes of request param
+      - `+ public_network_config`
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+    - changes of response param
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **ListAllNotebooks**
+    - changes of request param
+      - `+ swr_path`
+      - `+ pool_name`
+      - `+ description`
+      - `+ ip`
+      - `+ username`
+    - changes of response param
+      - `+ data.user_vpc.nat_id`
+      - `+ data.user_vpc.eip_id`
+  - **ShowNotebook**
+    - changes of response param
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **DeleteNotebook**
+    - changes of response param
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **UpdateNotebook**
+    - changes of request param
+      - `+ public_network_config`
+    - changes of response param
+      - `+ user_vpc.nat_id`
+      - `+ user_vpc.eip_id`
+  - **ListAuthoringClusters**
+    - changes of response param
+      - `+ data.flavors.support_eni`
+      - `+ data.flavors.ascend.chip`
+      - `- data.flavors.ascend.ai_core`
+      - `- data.flavors.ascend.ai_cpu`
+      - `- data.flavors.ascend.type_alias`
+  - **ShowTrainingJobDetails**
+    - changes of response param
+      - `- tasks.task_resource.support_engines`
+      - `- tasks.task_resource.support_groups`
+  - **StopTrainingJob**
+    - changes of response param
+      - `- tasks.task_resource.support_engines`
+      - `- tasks.task_resource.support_groups`
+  - **CreateTrainingJob**
+    - changes of response param
+      - `- tasks.task_resource.support_engines`
+      - `- tasks.task_resource.support_groups`
+  - **ListTrainingJobs**
+    - changes of response param
+      - `- items.tasks.task_resource.support_engines`
+      - `- items.tasks.task_resource.support_groups`
+
 # 3.1.197 2026-08-20
 
 ### HuaweiCloud SDK BSS

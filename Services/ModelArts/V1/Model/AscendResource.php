@@ -25,6 +25,7 @@ class AscendResource implements ModelInterface, ArrayAccess
     * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
     * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
     * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
+    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class AscendResource implements ModelInterface, ArrayAccess
             'npuMemory' => 'string',
             'type' => 'string',
             'aiCore' => 'string',
-            'aiCpu' => 'string'
+            'aiCpu' => 'string',
+            'typeAlias' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class AscendResource implements ModelInterface, ArrayAccess
     * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
     * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
     * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
+    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class AscendResource implements ModelInterface, ArrayAccess
         'npuMemory' => null,
         'type' => null,
         'aiCore' => null,
-        'aiCpu' => null
+        'aiCpu' => null,
+        'typeAlias' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class AscendResource implements ModelInterface, ArrayAccess
     * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
     * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
     * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
+    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class AscendResource implements ModelInterface, ArrayAccess
             'npuMemory' => 'npu_memory',
             'type' => 'type',
             'aiCore' => 'ai_core',
-            'aiCpu' => 'ai_cpu'
+            'aiCpu' => 'ai_cpu',
+            'typeAlias' => 'type_alias'
     ];
 
     /**
@@ -100,6 +106,7 @@ class AscendResource implements ModelInterface, ArrayAccess
     * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
     * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
     * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
+    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class AscendResource implements ModelInterface, ArrayAccess
             'npuMemory' => 'setNpuMemory',
             'type' => 'setType',
             'aiCore' => 'setAiCore',
-            'aiCpu' => 'setAiCpu'
+            'aiCpu' => 'setAiCpu',
+            'typeAlias' => 'setTypeAlias'
     ];
 
     /**
@@ -118,6 +126,7 @@ class AscendResource implements ModelInterface, ArrayAccess
     * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
     * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
     * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
+    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class AscendResource implements ModelInterface, ArrayAccess
             'npuMemory' => 'getNpuMemory',
             'type' => 'getType',
             'aiCore' => 'getAiCore',
-            'aiCpu' => 'getAiCpu'
+            'aiCpu' => 'getAiCpu',
+            'typeAlias' => 'getTypeAlias'
     ];
 
     /**
@@ -192,6 +202,7 @@ class AscendResource implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['aiCore'] = isset($data['aiCore']) ? $data['aiCore'] : null;
         $this->container['aiCpu'] = isset($data['aiCpu']) ? $data['aiCpu'] : null;
+        $this->container['typeAlias'] = isset($data['typeAlias']) ? $data['typeAlias'] : null;
     }
 
     /**
@@ -333,6 +344,30 @@ class AscendResource implements ModelInterface, ArrayAccess
     public function setAiCpu($aiCpu)
     {
         $this->container['aiCpu'] = $aiCpu;
+        return $this;
+    }
+
+    /**
+    * Gets typeAlias
+    *  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getTypeAlias()
+    {
+        return $this->container['typeAlias'];
+    }
+
+    /**
+    * Sets typeAlias
+    *
+    * @param string|null $typeAlias **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setTypeAlias($typeAlias)
+    {
+        $this->container['typeAlias'] = $typeAlias;
         return $this;
     }
 

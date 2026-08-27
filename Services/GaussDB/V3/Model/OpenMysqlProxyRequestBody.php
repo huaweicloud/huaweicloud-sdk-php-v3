@@ -26,7 +26,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     * subnetId  数据库VPC下的子网ID。
+    * proxyIp  **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
     * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
@@ -39,7 +41,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'string',
             'routeMode' => 'int',
             'nodesReadWeight' => '\HuaweiCloud\SDK\GaussDB\V3\Model\NodesWeight[]',
+            'proxyNodesAzList' => 'string[]',
             'subnetId' => 'string',
+            'proxyIp' => 'string',
             'newNodeAutoAddStatus' => 'string',
             'newNodeWeight' => 'int'
     ];
@@ -52,7 +56,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     * subnetId  数据库VPC下的子网ID。
+    * proxyIp  **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
     * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
@@ -65,7 +71,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
         'proxyMode' => 'int32',
         'routeMode' => 'int32',
         'nodesReadWeight' => null,
+        'proxyNodesAzList' => null,
         'subnetId' => null,
+        'proxyIp' => null,
         'newNodeAutoAddStatus' => null,
         'newNodeWeight' => 'int32'
     ];
@@ -99,7 +107,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     * subnetId  数据库VPC下的子网ID。
+    * proxyIp  **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
     * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
@@ -112,7 +122,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'proxy_mode',
             'routeMode' => 'route_mode',
             'nodesReadWeight' => 'nodes_read_weight',
+            'proxyNodesAzList' => 'proxy_nodes_az_list',
             'subnetId' => 'subnet_id',
+            'proxyIp' => 'proxy_ip',
             'newNodeAutoAddStatus' => 'new_node_auto_add_status',
             'newNodeWeight' => 'new_node_weight'
     ];
@@ -125,7 +137,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     * subnetId  数据库VPC下的子网ID。
+    * proxyIp  **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
     * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
@@ -138,7 +152,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'setProxyMode',
             'routeMode' => 'setRouteMode',
             'nodesReadWeight' => 'setNodesReadWeight',
+            'proxyNodesAzList' => 'setProxyNodesAzList',
             'subnetId' => 'setSubnetId',
+            'proxyIp' => 'setProxyIp',
             'newNodeAutoAddStatus' => 'setNewNodeAutoAddStatus',
             'newNodeWeight' => 'setNewNodeWeight'
     ];
@@ -151,7 +167,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     * proxyMode  代理实例类型。默认类型为readwrite。
     * routeMode  数据库代理路由模式，默认为权重负载模式。  取值范围: - 0，表示权重负载模式; - 1，表示负载均衡模式（数据库主节点不接受读请求）； - 2，表示负载均衡模式（数据库主节点接受读请求）。
     * nodesReadWeight  数据库节点的读权重设置。  在proxy_mode为readonly时，只能为只读节点选择权重。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     * subnetId  数据库VPC下的子网ID。
+    * proxyIp  **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * newNodeAutoAddStatus  是否开启新增节点自动加入该Proxy。如果需要设置是否开启新增节点自动加入该Proxy，请联系客服人员添加白名单，加入白名单后，方可输入该字段。  取值范围： - ON：开启。 - OFF：关闭。
     * newNodeWeight  新增节点的读权重：    - 如果路由模式为0，新增节点自动加入为ON，取值为0~1000。 - 如果路由模式不为0或新增节点自动加入为OFF，则可不输入读权重。
     *
@@ -164,7 +182,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
             'proxyMode' => 'getProxyMode',
             'routeMode' => 'getRouteMode',
             'nodesReadWeight' => 'getNodesReadWeight',
+            'proxyNodesAzList' => 'getProxyNodesAzList',
             'subnetId' => 'getSubnetId',
+            'proxyIp' => 'getProxyIp',
             'newNodeAutoAddStatus' => 'getNewNodeAutoAddStatus',
             'newNodeWeight' => 'getNewNodeWeight'
     ];
@@ -248,7 +268,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
         $this->container['proxyMode'] = isset($data['proxyMode']) ? $data['proxyMode'] : null;
         $this->container['routeMode'] = isset($data['routeMode']) ? $data['routeMode'] : null;
         $this->container['nodesReadWeight'] = isset($data['nodesReadWeight']) ? $data['nodesReadWeight'] : null;
+        $this->container['proxyNodesAzList'] = isset($data['proxyNodesAzList']) ? $data['proxyNodesAzList'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['proxyIp'] = isset($data['proxyIp']) ? $data['proxyIp'] : null;
         $this->container['newNodeAutoAddStatus'] = isset($data['newNodeAutoAddStatus']) ? $data['newNodeAutoAddStatus'] : null;
         $this->container['newNodeWeight'] = isset($data['newNodeWeight']) ? $data['newNodeWeight'] : null;
     }
@@ -275,6 +297,9 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['proxyIp']) && !preg_match("/^((25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)$/", $this->container['proxyIp'])) {
+                $invalidProperties[] = "invalid value for 'proxyIp', must be conform to the pattern /^((25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)$/.";
+            }
         return $invalidProperties;
     }
 
@@ -434,6 +459,30 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets proxyNodesAzList
+    *  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
+    *
+    * @return string[]|null
+    */
+    public function getProxyNodesAzList()
+    {
+        return $this->container['proxyNodesAzList'];
+    }
+
+    /**
+    * Sets proxyNodesAzList
+    *
+    * @param string[]|null $proxyNodesAzList **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
+    *
+    * @return $this
+    */
+    public function setProxyNodesAzList($proxyNodesAzList)
+    {
+        $this->container['proxyNodesAzList'] = $proxyNodesAzList;
+        return $this;
+    }
+
+    /**
     * Gets subnetId
     *  数据库VPC下的子网ID。
     *
@@ -454,6 +503,30 @@ class OpenMysqlProxyRequestBody implements ModelInterface, ArrayAccess
     public function setSubnetId($subnetId)
     {
         $this->container['subnetId'] = $subnetId;
+        return $this;
+    }
+
+    /**
+    * Gets proxyIp
+    *  **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *
+    * @return string|null
+    */
+    public function getProxyIp()
+    {
+        return $this->container['proxyIp'];
+    }
+
+    /**
+    * Sets proxyIp
+    *
+    * @param string|null $proxyIp **参数解释**：   数据库代理IP，获取方法如下。 - 用户自定义代理IP时，由用户自定义传入。 - 用户不指定代理IP时，随机在指定子网下生成的IPV4地址。  **约束限制**：  指定子网下的可用IP，获取方法如下： 登录TaurusDB的控制台界面，单击实例名称，进入实例详情页面，在该页面单击数据库代理，新增代理，查看已使用IP地址，查找指定子网下未被使用的IP。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *
+    * @return $this
+    */
+    public function setProxyIp($proxyIp)
+    {
+        $this->container['proxyIp'] = $proxyIp;
         return $this;
     }
 

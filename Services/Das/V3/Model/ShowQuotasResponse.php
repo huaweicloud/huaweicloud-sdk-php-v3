@@ -21,17 +21,17 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotas  配额列表对象。
+    * quotas  quotas
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'quotas' => 'object'
+            'quotas' => '\HuaweiCloud\SDK\Das\V3\Model\Quotas'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotas  配额列表对象。
+    * quotas  quotas
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotas  配额列表对象。
+    * quotas  quotas
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotas  配额列表对象。
+    * quotas  quotas
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotas  配额列表对象。
+    * quotas  quotas
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotas
-    *  配额列表对象。
+    *  quotas
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\Quotas|null
     */
     public function getQuotas()
     {
@@ -187,7 +187,7 @@ class ShowQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param object|null $quotas 配额列表对象。
+    * @param \HuaweiCloud\SDK\Das\V3\Model\Quotas|null $quotas quotas
     *
     * @return $this
     */

@@ -22,24 +22,28 @@ class Entitie implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * serverId  裸金属服务器相关操作显示server_id
     * nicId  网卡相关操作显示nic_id
+    * errorcodeMessage  子任务执行失败的具体原因
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'serverId' => 'string',
-            'nicId' => 'string'
+            'nicId' => 'string',
+            'errorcodeMessage' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * serverId  裸金属服务器相关操作显示server_id
     * nicId  网卡相关操作显示nic_id
+    * errorcodeMessage  子任务执行失败的具体原因
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'serverId' => null,
-        'nicId' => null
+        'nicId' => null,
+        'errorcodeMessage' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class Entitie implements ModelInterface, ArrayAccess
     * and the value is the original name
     * serverId  裸金属服务器相关操作显示server_id
     * nicId  网卡相关操作显示nic_id
+    * errorcodeMessage  子任务执行失败的具体原因
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'serverId' => 'server_id',
-            'nicId' => 'nic_id'
+            'nicId' => 'nic_id',
+            'errorcodeMessage' => 'errorcode_message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * serverId  裸金属服务器相关操作显示server_id
     * nicId  网卡相关操作显示nic_id
+    * errorcodeMessage  子任务执行失败的具体原因
     *
     * @var string[]
     */
     protected static $setters = [
             'serverId' => 'setServerId',
-            'nicId' => 'setNicId'
+            'nicId' => 'setNicId',
+            'errorcodeMessage' => 'setErrorcodeMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * serverId  裸金属服务器相关操作显示server_id
     * nicId  网卡相关操作显示nic_id
+    * errorcodeMessage  子任务执行失败的具体原因
     *
     * @var string[]
     */
     protected static $getters = [
             'serverId' => 'getServerId',
-            'nicId' => 'getNicId'
+            'nicId' => 'getNicId',
+            'errorcodeMessage' => 'getErrorcodeMessage'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Entitie implements ModelInterface, ArrayAccess
     {
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
         $this->container['nicId'] = isset($data['nicId']) ? $data['nicId'] : null;
+        $this->container['errorcodeMessage'] = isset($data['errorcodeMessage']) ? $data['errorcodeMessage'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class Entitie implements ModelInterface, ArrayAccess
     public function setNicId($nicId)
     {
         $this->container['nicId'] = $nicId;
+        return $this;
+    }
+
+    /**
+    * Gets errorcodeMessage
+    *  子任务执行失败的具体原因
+    *
+    * @return string|null
+    */
+    public function getErrorcodeMessage()
+    {
+        return $this->container['errorcodeMessage'];
+    }
+
+    /**
+    * Sets errorcodeMessage
+    *
+    * @param string|null $errorcodeMessage 子任务执行失败的具体原因
+    *
+    * @return $this
+    */
+    public function setErrorcodeMessage($errorcodeMessage)
+    {
+        $this->container['errorcodeMessage'] = $errorcodeMessage;
         return $this;
     }
 

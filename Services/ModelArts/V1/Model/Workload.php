@@ -30,6 +30,7 @@ class Workload implements ModelInterface, ArrayAccess
     * jobUuid  **参数解释**：作业的归属的上层业务的ID。 **取值范围**：不涉及。
     * flavor  **参数解释**：作业的资源规格。 **取值范围**：不涉及。
     * status  **参数解释**：作业状态。 **取值范围**：不涉及。
+    * userName  **参数解释**：作业创建者。 **取值范围**：不涉及。
     * resourceRequirement  resourceRequirement
     * priority  **参数解释**：作业的优先级。 **取值范围**：不涉及。
     * runningDuration  **参数解释**：作业的运行时长，以秒为单位。 **取值范围**：不涉及。
@@ -53,6 +54,7 @@ class Workload implements ModelInterface, ArrayAccess
             'jobUuid' => 'string',
             'flavor' => 'string',
             'status' => 'string',
+            'userName' => 'string',
             'resourceRequirement' => '\HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadResourceRequirement',
             'priority' => 'string',
             'runningDuration' => 'int',
@@ -76,6 +78,7 @@ class Workload implements ModelInterface, ArrayAccess
     * jobUuid  **参数解释**：作业的归属的上层业务的ID。 **取值范围**：不涉及。
     * flavor  **参数解释**：作业的资源规格。 **取值范围**：不涉及。
     * status  **参数解释**：作业状态。 **取值范围**：不涉及。
+    * userName  **参数解释**：作业创建者。 **取值范围**：不涉及。
     * resourceRequirement  resourceRequirement
     * priority  **参数解释**：作业的优先级。 **取值范围**：不涉及。
     * runningDuration  **参数解释**：作业的运行时长，以秒为单位。 **取值范围**：不涉及。
@@ -99,6 +102,7 @@ class Workload implements ModelInterface, ArrayAccess
         'jobUuid' => null,
         'flavor' => null,
         'status' => null,
+        'userName' => null,
         'resourceRequirement' => null,
         'priority' => null,
         'runningDuration' => null,
@@ -143,6 +147,7 @@ class Workload implements ModelInterface, ArrayAccess
     * jobUuid  **参数解释**：作业的归属的上层业务的ID。 **取值范围**：不涉及。
     * flavor  **参数解释**：作业的资源规格。 **取值范围**：不涉及。
     * status  **参数解释**：作业状态。 **取值范围**：不涉及。
+    * userName  **参数解释**：作业创建者。 **取值范围**：不涉及。
     * resourceRequirement  resourceRequirement
     * priority  **参数解释**：作业的优先级。 **取值范围**：不涉及。
     * runningDuration  **参数解释**：作业的运行时长，以秒为单位。 **取值范围**：不涉及。
@@ -166,6 +171,7 @@ class Workload implements ModelInterface, ArrayAccess
             'jobUuid' => 'jobUUID',
             'flavor' => 'flavor',
             'status' => 'status',
+            'userName' => 'userName',
             'resourceRequirement' => 'resourceRequirement',
             'priority' => 'priority',
             'runningDuration' => 'runningDuration',
@@ -189,6 +195,7 @@ class Workload implements ModelInterface, ArrayAccess
     * jobUuid  **参数解释**：作业的归属的上层业务的ID。 **取值范围**：不涉及。
     * flavor  **参数解释**：作业的资源规格。 **取值范围**：不涉及。
     * status  **参数解释**：作业状态。 **取值范围**：不涉及。
+    * userName  **参数解释**：作业创建者。 **取值范围**：不涉及。
     * resourceRequirement  resourceRequirement
     * priority  **参数解释**：作业的优先级。 **取值范围**：不涉及。
     * runningDuration  **参数解释**：作业的运行时长，以秒为单位。 **取值范围**：不涉及。
@@ -212,6 +219,7 @@ class Workload implements ModelInterface, ArrayAccess
             'jobUuid' => 'setJobUuid',
             'flavor' => 'setFlavor',
             'status' => 'setStatus',
+            'userName' => 'setUserName',
             'resourceRequirement' => 'setResourceRequirement',
             'priority' => 'setPriority',
             'runningDuration' => 'setRunningDuration',
@@ -235,6 +243,7 @@ class Workload implements ModelInterface, ArrayAccess
     * jobUuid  **参数解释**：作业的归属的上层业务的ID。 **取值范围**：不涉及。
     * flavor  **参数解释**：作业的资源规格。 **取值范围**：不涉及。
     * status  **参数解释**：作业状态。 **取值范围**：不涉及。
+    * userName  **参数解释**：作业创建者。 **取值范围**：不涉及。
     * resourceRequirement  resourceRequirement
     * priority  **参数解释**：作业的优先级。 **取值范围**：不涉及。
     * runningDuration  **参数解释**：作业的运行时长，以秒为单位。 **取值范围**：不涉及。
@@ -258,6 +267,7 @@ class Workload implements ModelInterface, ArrayAccess
             'jobUuid' => 'getJobUuid',
             'flavor' => 'getFlavor',
             'status' => 'getStatus',
+            'userName' => 'getUserName',
             'resourceRequirement' => 'getResourceRequirement',
             'priority' => 'getPriority',
             'runningDuration' => 'getRunningDuration',
@@ -337,6 +347,7 @@ class Workload implements ModelInterface, ArrayAccess
         $this->container['jobUuid'] = isset($data['jobUuid']) ? $data['jobUuid'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['resourceRequirement'] = isset($data['resourceRequirement']) ? $data['resourceRequirement'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['runningDuration'] = isset($data['runningDuration']) ? $data['runningDuration'] : null;
@@ -622,6 +633,30 @@ class Workload implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets userName
+    *  **参数解释**：作业创建者。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getUserName()
+    {
+        return $this->container['userName'];
+    }
+
+    /**
+    * Sets userName
+    *
+    * @param string|null $userName **参数解释**：作业创建者。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setUserName($userName)
+    {
+        $this->container['userName'] = $userName;
         return $this;
     }
 

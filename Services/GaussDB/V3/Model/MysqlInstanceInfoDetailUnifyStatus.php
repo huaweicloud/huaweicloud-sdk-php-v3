@@ -52,6 +52,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
     * tdeInfo  tdeInfo
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -87,7 +88,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTags[]',
             'dedicatedResourceId' => 'string',
             'proxies' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyInfo[]',
-            'tdeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo'
+            'tdeInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\MysqlTdeInfo',
+            'eosTag' => 'bool'
     ];
 
     /**
@@ -124,6 +126,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
     * tdeInfo  tdeInfo
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -159,7 +162,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
         'tags' => null,
         'dedicatedResourceId' => null,
         'proxies' => null,
-        'tdeInfo' => null
+        'tdeInfo' => null,
+        'eosTag' => null
     ];
 
     /**
@@ -217,6 +221,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
     * tdeInfo  tdeInfo
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -252,7 +257,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'dedicatedResourceId' => 'dedicated_resource_id',
             'proxies' => 'proxies',
-            'tdeInfo' => 'tde_info'
+            'tdeInfo' => 'tde_info',
+            'eosTag' => 'eos_tag'
     ];
 
     /**
@@ -289,6 +295,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
     * tdeInfo  tdeInfo
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -324,7 +331,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'dedicatedResourceId' => 'setDedicatedResourceId',
             'proxies' => 'setProxies',
-            'tdeInfo' => 'setTdeInfo'
+            'tdeInfo' => 'setTdeInfo',
+            'eosTag' => 'setEosTag'
     ];
 
     /**
@@ -361,6 +369,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     * dedicatedResourceId  专属资源池ID，只有数据库实例属于专属资源池才会返回该参数。
     * proxies  代理信息。
     * tdeInfo  tdeInfo
+    * eosTag  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
     *
     * @var string[]
     */
@@ -396,7 +405,8 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'dedicatedResourceId' => 'getDedicatedResourceId',
             'proxies' => 'getProxies',
-            'tdeInfo' => 'getTdeInfo'
+            'tdeInfo' => 'getTdeInfo',
+            'eosTag' => 'getEosTag'
     ];
 
     /**
@@ -489,6 +499,7 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
         $this->container['dedicatedResourceId'] = isset($data['dedicatedResourceId']) ? $data['dedicatedResourceId'] : null;
         $this->container['proxies'] = isset($data['proxies']) ? $data['proxies'] : null;
         $this->container['tdeInfo'] = isset($data['tdeInfo']) ? $data['tdeInfo'] : null;
+        $this->container['eosTag'] = isset($data['eosTag']) ? $data['eosTag'] : null;
     }
 
     /**
@@ -1287,6 +1298,30 @@ class MysqlInstanceInfoDetailUnifyStatus implements ModelInterface, ArrayAccess
     public function setTdeInfo($tdeInfo)
     {
         $this->container['tdeInfo'] = $tdeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets eosTag
+    *  **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
+    *
+    * @return bool|null
+    */
+    public function getEosTag()
+    {
+        return $this->container['eosTag'];
+    }
+
+    /**
+    * Sets eosTag
+    *
+    * @param bool|null $eosTag **参数解释**：  当前内核版本是否EOS。  **取值范围**：  - true：版本EOS。 - false：版本正常维护。
+    *
+    * @return $this
+    */
+    public function setEosTag($eosTag)
+    {
+        $this->container['eosTag'] = $eosTag;
         return $this;
     }
 

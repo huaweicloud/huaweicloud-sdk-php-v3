@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\ModelArts\V1\Model;
+namespace HuaweiCloud\SDK\GaussDB\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResourceFlavorSpecGpu implements ModelInterface, ArrayAccess
+class ShowTaurusDbTxnProgressResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,30 @@ class ResourceFlavorSpecGpu implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResourceFlavorSpec_gpu';
+    protected static $openAPIModelName = 'ShowTaurusDbTxnProgressResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * transactions  **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
+    * totalCount  **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'type' => 'string',
-            'size' => 'string'
+            'transactions' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TxnItem[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * transactions  **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
+    * totalCount  **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'type' => null,
-        'size' => null
+        'transactions' => null,
+        'totalCount' => 'int32'
     ];
 
     /**
@@ -65,38 +66,38 @@ class ResourceFlavorSpecGpu implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * transactions  **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
+    * totalCount  **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'type' => 'type',
-            'size' => 'size'
+            'transactions' => 'transactions',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * transactions  **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
+    * totalCount  **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
     * @var string[]
     */
     protected static $setters = [
-            'type' => 'setType',
-            'size' => 'setSize'
+            'transactions' => 'setTransactions',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
-    * size  **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * transactions  **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
+    * totalCount  **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
     * @var string[]
     */
     protected static $getters = [
-            'type' => 'getType',
-            'size' => 'getSize'
+            'transactions' => 'getTransactions',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -157,8 +158,8 @@ class ResourceFlavorSpecGpu implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -169,6 +170,12 @@ class ResourceFlavorSpecGpu implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['totalCount']) && ($this->container['totalCount'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'totalCount', must be smaller than or equal to 2147483647.";
+            }
+            if (!is_null($this->container['totalCount']) && ($this->container['totalCount'] < 0)) {
+                $invalidProperties[] = "invalid value for 'totalCount', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -184,50 +191,50 @@ class ResourceFlavorSpecGpu implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets type
-    *  **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
+    * Gets transactions
+    *  **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\TxnItem[]|null
     */
-    public function getType()
+    public function getTransactions()
     {
-        return $this->container['type'];
+        return $this->container['transactions'];
     }
 
     /**
-    * Sets type
+    * Sets transactions
     *
-    * @param string|null $type **参数解释**：资源规格实例的GPU卡类型。 **取值范围**：不涉及。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\TxnItem[]|null $transactions **参数解释**：  处于活跃状态（回滚中）的事务进度列表。如果输入的ID已结束或不存在，则不在此列表中返回。
     *
     * @return $this
     */
-    public function setType($type)
+    public function setTransactions($transactions)
     {
-        $this->container['type'] = $type;
+        $this->container['transactions'] = $transactions;
         return $this;
     }
 
     /**
-    * Gets size
-    *  **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * Gets totalCount
+    *  **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getSize()
+    public function getTotalCount()
     {
-        return $this->container['size'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets size
+    * Sets totalCount
     *
-    * @param string|null $size **参数解释**：资源规格实例的GPU卡数量。 **取值范围**：不涉及。
+    * @param int|null $totalCount **参数解释**： 满足查询条件的事务记录总数。 **取值范围**： 0~100。
     *
     * @return $this
     */
-    public function setSize($size)
+    public function setTotalCount($totalCount)
     {
-        $this->container['size'] = $size;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

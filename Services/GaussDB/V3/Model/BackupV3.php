@@ -35,6 +35,7 @@ class BackupV3 implements ModelInterface, ArrayAccess
     * backupMethod  **参数解释**： 备份方法。 **取值范围**： - Db：物理备份。 - Snapshot：快照备份。
     * useDetail  **参数解释**： 使用详情。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： UTC时区。 **取值范围**： 不涉及。
+    * backupMode  **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class BackupV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'string',
             'backupMethod' => 'string',
             'useDetail' => 'string',
-            'timeZone' => 'string'
+            'timeZone' => 'string',
+            'backupMode' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class BackupV3 implements ModelInterface, ArrayAccess
     * backupMethod  **参数解释**： 备份方法。 **取值范围**： - Db：物理备份。 - Snapshot：快照备份。
     * useDetail  **参数解释**： 使用详情。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： UTC时区。 **取值范围**： 不涉及。
+    * backupMode  **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class BackupV3 implements ModelInterface, ArrayAccess
         'backupLevel' => null,
         'backupMethod' => null,
         'useDetail' => null,
-        'timeZone' => null
+        'timeZone' => null,
+        'backupMode' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class BackupV3 implements ModelInterface, ArrayAccess
     * backupMethod  **参数解释**： 备份方法。 **取值范围**： - Db：物理备份。 - Snapshot：快照备份。
     * useDetail  **参数解释**： 使用详情。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： UTC时区。 **取值范围**： 不涉及。
+    * backupMode  **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class BackupV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'backup_level',
             'backupMethod' => 'backup_method',
             'useDetail' => 'use_detail',
-            'timeZone' => 'time_zone'
+            'timeZone' => 'time_zone',
+            'backupMode' => 'backup_mode'
     ];
 
     /**
@@ -170,6 +176,7 @@ class BackupV3 implements ModelInterface, ArrayAccess
     * backupMethod  **参数解释**： 备份方法。 **取值范围**： - Db：物理备份。 - Snapshot：快照备份。
     * useDetail  **参数解释**： 使用详情。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： UTC时区。 **取值范围**： 不涉及。
+    * backupMode  **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class BackupV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'setBackupLevel',
             'backupMethod' => 'setBackupMethod',
             'useDetail' => 'setUseDetail',
-            'timeZone' => 'setTimeZone'
+            'timeZone' => 'setTimeZone',
+            'backupMode' => 'setBackupMode'
     ];
 
     /**
@@ -208,6 +216,7 @@ class BackupV3 implements ModelInterface, ArrayAccess
     * backupMethod  **参数解释**： 备份方法。 **取值范围**： - Db：物理备份。 - Snapshot：快照备份。
     * useDetail  **参数解释**： 使用详情。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： UTC时区。 **取值范围**： 不涉及。
+    * backupMode  **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class BackupV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'getBackupLevel',
             'backupMethod' => 'getBackupMethod',
             'useDetail' => 'getUseDetail',
-            'timeZone' => 'getTimeZone'
+            'timeZone' => 'getTimeZone',
+            'backupMode' => 'getBackupMode'
     ];
 
     /**
@@ -302,6 +312,7 @@ class BackupV3 implements ModelInterface, ArrayAccess
         $this->container['backupMethod'] = isset($data['backupMethod']) ? $data['backupMethod'] : null;
         $this->container['useDetail'] = isset($data['useDetail']) ? $data['useDetail'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
+        $this->container['backupMode'] = isset($data['backupMode']) ? $data['backupMode'] : null;
     }
 
     /**
@@ -683,6 +694,30 @@ class BackupV3 implements ModelInterface, ArrayAccess
     public function setTimeZone($timeZone)
     {
         $this->container['timeZone'] = $timeZone;
+        return $this;
+    }
+
+    /**
+    * Gets backupMode
+    *  **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
+    *
+    * @return string|null
+    */
+    public function getBackupMode()
+    {
+        return $this->container['backupMode'];
+    }
+
+    /**
+    * Sets backupMode
+    *
+    * @param string|null $backupMode **参数解释**： 备份类型。 **取值范围**： - differential：差量备份。 - completed：全量备份。
+    *
+    * @return $this
+    */
+    public function setBackupMode($backupMode)
+    {
+        $this->container['backupMode'] = $backupMode;
         return $this;
     }
 

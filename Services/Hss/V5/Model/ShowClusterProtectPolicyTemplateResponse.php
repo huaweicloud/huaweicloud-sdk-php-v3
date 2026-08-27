@@ -27,7 +27,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
     * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
-    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
@@ -51,7 +51,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
     * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
-    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
@@ -96,7 +96,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
     * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
-    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
@@ -120,7 +120,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
     * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
-    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
@@ -144,7 +144,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     * description  **参数解释**: 描述 **取值范围**: 字符长度0-2048
     * targetKind  **参数解释**: 策略模板应用资源类型，多个资源类型通过分号分隔连接 **取值范围**: 字符长度1-255
     * tag  **参数解释**: 标签 **取值范围**: 字符长度0-2048
-    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * level  **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     * constraintTemplate  **参数解释**: 策略模板内容 **取值范围**: 字符长度1-65535
     *
     * @var string[]
@@ -275,8 +275,8 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
             if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) < 0)) {
                 $invalidProperties[] = "invalid value for 'tag', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) > 5)) {
-                $invalidProperties[] = "invalid value for 'level', the character length must be smaller than or equal to 5.";
+            if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) > 6)) {
+                $invalidProperties[] = "invalid value for 'level', the character length must be smaller than or equal to 6.";
             }
             if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) < 1)) {
                 $invalidProperties[] = "invalid value for 'level', the character length must be bigger than or equal to 1.";
@@ -447,7 +447,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
 
     /**
     * Gets level
-    *  **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    *  **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
     /**
     * Sets level
     *
-    * @param string|null $level **参数解释**: 推荐级别 **取值范围**: 字符长度1-5
+    * @param string|null $level **参数解释**: 推荐级别 **取值范围**: 字符长度1-6
     *
     * @return $this
     */

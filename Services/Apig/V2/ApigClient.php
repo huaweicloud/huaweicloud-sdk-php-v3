@@ -159,7 +159,7 @@ class ApigClient extends Client
     /**
      * 实例更新或绑定EIP
      *
-     * 实例更新或绑定EIP(仅当实例为LVS类型时支持)
+     * 实例更新或绑定EIP（仅当实例为LVS类型时支持）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -354,7 +354,7 @@ class ApigClient extends Client
     /**
      * 开启实例公网入口
      *
-     * 开启实例开启公网入口，仅当实例为ELB类型时支持
+     * 开启实例公网入口，仅当实例为ELB类型时支持。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -910,8 +910,7 @@ class ApigClient extends Client
     /**
      * 校验APP
      *
-     * 校验app是否存在，非APP所有者可以调用该接口校验APP是否真实存在。这个接口只展示app的基本信息id 、name、
-     * remark，其他信息不显示。
+     * 校验APP是否存在，非APP所有者可以调用该接口校验APP是否真实存在。该接口只展示APP的基本信息id、name、remark，其他信息不显示。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1110,7 +1109,7 @@ class ApigClient extends Client
     /**
      * 自动生成APP Code
      *
-     * 创建App Code时，可以不指定具体值，由后台自动生成随机字符串填充。
+     * 创建APP Code时，可以不指定具体值，由后台自动生成随机字符串填充。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1175,7 +1174,7 @@ class ApigClient extends Client
     /**
      * 创建APP Code
      *
-     * App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
+     * APP Code为APP应用下的子模块，创建APP Code之后，可以实现简易的APP认证。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2383,7 +2382,7 @@ class ApigClient extends Client
     /**
      * 删除APP Code
      *
-     * 删除App Code，App Code删除后，将无法再通过简易认证访问对应的API。
+     * 删除APP Code，APP Code删除后，将无法再通过简易认证访问对应的API。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4595,7 +4594,7 @@ class ApigClient extends Client
     /**
      * 查询APP Code列表
      *
-     * 查询App Code列表。
+     * 查询APP Code列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6315,8 +6314,8 @@ class ApigClient extends Client
     /**
      * 查询编排规则绑定的API
      *
-     * 查询指定插件下绑定的API信息
-     * - 用于查询指定插件下已经绑定的API列表信息
+     * 查询指定编排规则下绑定的API信息
+     * - 用于查询指定编排规则下已经绑定的API列表信息
      * - 支持分页返回
      * - 支持API名称模糊查询
      * 
@@ -7842,7 +7841,7 @@ class ApigClient extends Client
     /**
      * 查询APP Code详情
      *
-     * App Code为APP应用下的子模块，创建App Code之后，可以实现简易的APP认证。
+     * 查询指定APP Code的详细信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9234,7 +9233,7 @@ class ApigClient extends Client
     /**
      * 修改变量
      *
-     * 修改环境变量。环境变量引用位置为api的后端服务地址时，修改对应环境变量会将使用该变量的所有api重新发布。
+     * 修改环境变量。环境变量引用位置为API的后端服务地址时，修改对应环境变量会将使用该变量的所有API重新发布。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10125,7 +10124,7 @@ class ApigClient extends Client
     /**
      * 删除ACL策略
      *
-     * 删除指定的ACL策略， 如果存在api与该ACL策略的绑定关系，则无法删除
+     * 删除指定的ACL策略， 如果存在API与该ACL策略的绑定关系，则无法删除
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12332,9 +12331,9 @@ class ApigClient extends Client
     }
 
     /**
-     * 将API与ACL策略进行绑定
+     * 将API与ACL策略绑定
      *
-     * 将API与ACL策略进行绑定。
+     * 将API与ACL策略绑定。
      * 
      * 同一个API发布到不同的环境可以绑定不同的ACL策略；一个API在发布到特定环境后只能绑定一个同一种类型的ACL策略。
      * 
@@ -13578,7 +13577,7 @@ class ApigClient extends Client
     /**
      * 删除SSL证书
      *
-     * 删除ssl证书接口，删除时只有没有关联域名的证书才能被删除。
+     * 删除SSL证书接口，删除时只有没有关联域名的证书才能被删除。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14553,9 +14552,9 @@ class ApigClient extends Client
     }
 
     /**
-     * 查询VPC通道后端云服务组列表
+     * 查询VPC通道后端云服务器组列表
      *
-     * 查询VPC通道后端云服务组列表
+     * 查询VPC通道后端云服务器组列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14863,7 +14862,7 @@ class ApigClient extends Client
     /**
      * 更新后端实例
      *
-     * 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。如果未指定修改的云服务器组，则进行全量覆盖。
+     * 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务器组的后端实例进行全量覆盖修改。如果未指定修改的云服务器组，则进行全量覆盖。
      * 
      * 引用负载通道类型的负载通道不支持更新后端实例。
      * 

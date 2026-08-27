@@ -22,24 +22,28 @@ class EnlargeProxyRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * nodeNum  proxy节点扩容操作需要扩容的节点数。  扩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的proxy节点的总数量小于等于32。
     * proxyId  数据库代理ID。  如果实例只开启了一个代理，可不传该参数；如果实例开启了多个代理，则必须指定一个数据库代理，扩容新的代理节点。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'nodeNum' => 'int',
-            'proxyId' => 'string'
+            'proxyId' => 'string',
+            'proxyNodesAzList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * nodeNum  proxy节点扩容操作需要扩容的节点数。  扩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的proxy节点的总数量小于等于32。
     * proxyId  数据库代理ID。  如果实例只开启了一个代理，可不传该参数；如果实例开启了多个代理，则必须指定一个数据库代理，扩容新的代理节点。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'nodeNum' => 'int32',
-        'proxyId' => null
+        'proxyId' => null,
+        'proxyNodesAzList' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class EnlargeProxyRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * nodeNum  proxy节点扩容操作需要扩容的节点数。  扩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的proxy节点的总数量小于等于32。
     * proxyId  数据库代理ID。  如果实例只开启了一个代理，可不传该参数；如果实例开启了多个代理，则必须指定一个数据库代理，扩容新的代理节点。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'nodeNum' => 'node_num',
-            'proxyId' => 'proxy_id'
+            'proxyId' => 'proxy_id',
+            'proxyNodesAzList' => 'proxy_nodes_az_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * nodeNum  proxy节点扩容操作需要扩容的节点数。  扩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的proxy节点的总数量小于等于32。
     * proxyId  数据库代理ID。  如果实例只开启了一个代理，可不传该参数；如果实例开启了多个代理，则必须指定一个数据库代理，扩容新的代理节点。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     *
     * @var string[]
     */
     protected static $setters = [
             'nodeNum' => 'setNodeNum',
-            'proxyId' => 'setProxyId'
+            'proxyId' => 'setProxyId',
+            'proxyNodesAzList' => 'setProxyNodesAzList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * nodeNum  proxy节点扩容操作需要扩容的节点数。  扩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的proxy节点的总数量小于等于32。
     * proxyId  数据库代理ID。  如果实例只开启了一个代理，可不传该参数；如果实例开启了多个代理，则必须指定一个数据库代理，扩容新的代理节点。
+    * proxyNodesAzList  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
     *
     * @var string[]
     */
     protected static $getters = [
             'nodeNum' => 'getNodeNum',
-            'proxyId' => 'getProxyId'
+            'proxyId' => 'getProxyId',
+            'proxyNodesAzList' => 'getProxyNodesAzList'
     ];
 
     /**
@@ -159,6 +169,7 @@ class EnlargeProxyRequest implements ModelInterface, ArrayAccess
     {
         $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
         $this->container['proxyId'] = isset($data['proxyId']) ? $data['proxyId'] : null;
+        $this->container['proxyNodesAzList'] = isset($data['proxyNodesAzList']) ? $data['proxyNodesAzList'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class EnlargeProxyRequest implements ModelInterface, ArrayAccess
     public function setProxyId($proxyId)
     {
         $this->container['proxyId'] = $proxyId;
+        return $this;
+    }
+
+    /**
+    * Gets proxyNodesAzList
+    *  **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
+    *
+    * @return string[]|null
+    */
+    public function getProxyNodesAzList()
+    {
+        return $this->container['proxyNodesAzList'];
+    }
+
+    /**
+    * Sets proxyNodesAzList
+    *
+    * @param string[]|null $proxyNodesAzList **参数解释**：  数据库代理节点的可用区设置。  **约束限制**：  不传该字段，代理节点可用区将随机设置，优先与数据库节点可用区保持一致；传入该字段，代理节点将设置在指定可用区。
+    *
+    * @return $this
+    */
+    public function setProxyNodesAzList($proxyNodesAzList)
+    {
+        $this->container['proxyNodesAzList'] = $proxyNodesAzList;
         return $this;
     }
 

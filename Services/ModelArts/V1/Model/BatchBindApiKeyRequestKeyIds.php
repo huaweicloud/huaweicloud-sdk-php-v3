@@ -158,9 +158,6 @@ class BatchBindApiKeyRequestKeyIds implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['keyId'] === null) {
-            $invalidProperties[] = "'keyId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +176,7 @@ class BatchBindApiKeyRequestKeyIds implements ModelInterface, ArrayAccess
     * Gets keyId
     *  **参数解释：** apikey_id，在创建API_KEY时即可在返回体中获取，也可通过查询api-keys列表获取当前用户拥有的apikey，其中key_id字段即为apikey_id。 **约束限制：** 不涉及 **取值范围：** apikey_id只能由英文小写字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getKeyId()
     {
@@ -189,7 +186,7 @@ class BatchBindApiKeyRequestKeyIds implements ModelInterface, ArrayAccess
     /**
     * Sets keyId
     *
-    * @param string $keyId **参数解释：** apikey_id，在创建API_KEY时即可在返回体中获取，也可通过查询api-keys列表获取当前用户拥有的apikey，其中key_id字段即为apikey_id。 **约束限制：** 不涉及 **取值范围：** apikey_id只能由英文小写字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
+    * @param string|null $keyId **参数解释：** apikey_id，在创建API_KEY时即可在返回体中获取，也可通过查询api-keys列表获取当前用户拥有的apikey，其中key_id字段即为apikey_id。 **约束限制：** 不涉及 **取值范围：** apikey_id只能由英文小写字母、数字组成，且长度为32个字符。 **默认取值：** 不涉及
     *
     * @return $this
     */

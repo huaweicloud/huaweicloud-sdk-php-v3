@@ -20,12 +20,10 @@ class AscendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * npu  **参数解释：** NPU数量。 **取值范围：** 不涉及。
-    * npuMemory  **参数解释：** NPU内存。 **取值范围：** 不涉及。
-    * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
-    * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
-    * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    * npu  **参数解释**：NPU数量。 **取值范围**：不涉及。
+    * npuMemory  **参数解释**：NPU内存。 **取值范围**：不涉及。
+    * type  **参数解释**：NPU类型。 **取值范围**：不涉及。
+    * chip  **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -33,19 +31,15 @@ class AscendInfo implements ModelInterface, ArrayAccess
             'npu' => 'int',
             'npuMemory' => 'string',
             'type' => 'string',
-            'aiCore' => 'string',
-            'aiCpu' => 'string',
-            'typeAlias' => 'string'
+            'chip' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * npu  **参数解释：** NPU数量。 **取值范围：** 不涉及。
-    * npuMemory  **参数解释：** NPU内存。 **取值范围：** 不涉及。
-    * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
-    * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
-    * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    * npu  **参数解释**：NPU数量。 **取值范围**：不涉及。
+    * npuMemory  **参数解释**：NPU内存。 **取值范围**：不涉及。
+    * type  **参数解释**：NPU类型。 **取值范围**：不涉及。
+    * chip  **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -53,9 +47,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
         'npu' => 'int32',
         'npuMemory' => null,
         'type' => null,
-        'aiCore' => null,
-        'aiCpu' => null,
-        'typeAlias' => null
+        'chip' => 'int32'
     ];
 
     /**
@@ -81,12 +73,10 @@ class AscendInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * npu  **参数解释：** NPU数量。 **取值范围：** 不涉及。
-    * npuMemory  **参数解释：** NPU内存。 **取值范围：** 不涉及。
-    * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
-    * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
-    * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    * npu  **参数解释**：NPU数量。 **取值范围**：不涉及。
+    * npuMemory  **参数解释**：NPU内存。 **取值范围**：不涉及。
+    * type  **参数解释**：NPU类型。 **取值范围**：不涉及。
+    * chip  **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -94,19 +84,15 @@ class AscendInfo implements ModelInterface, ArrayAccess
             'npu' => 'npu',
             'npuMemory' => 'npu_memory',
             'type' => 'type',
-            'aiCore' => 'ai_core',
-            'aiCpu' => 'ai_cpu',
-            'typeAlias' => 'type_alias'
+            'chip' => 'chip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * npu  **参数解释：** NPU数量。 **取值范围：** 不涉及。
-    * npuMemory  **参数解释：** NPU内存。 **取值范围：** 不涉及。
-    * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
-    * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
-    * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    * npu  **参数解释**：NPU数量。 **取值范围**：不涉及。
+    * npuMemory  **参数解释**：NPU内存。 **取值范围**：不涉及。
+    * type  **参数解释**：NPU类型。 **取值范围**：不涉及。
+    * chip  **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -114,19 +100,15 @@ class AscendInfo implements ModelInterface, ArrayAccess
             'npu' => 'setNpu',
             'npuMemory' => 'setNpuMemory',
             'type' => 'setType',
-            'aiCore' => 'setAiCore',
-            'aiCpu' => 'setAiCpu',
-            'typeAlias' => 'setTypeAlias'
+            'chip' => 'setChip'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * npu  **参数解释：** NPU数量。 **取值范围：** 不涉及。
-    * npuMemory  **参数解释：** NPU内存。 **取值范围：** 不涉及。
-    * type  **参数解释：** NPU类型。 **取值范围：** 不涉及。
-    * aiCore  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
-    * aiCpu  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    * typeAlias  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
+    * npu  **参数解释**：NPU数量。 **取值范围**：不涉及。
+    * npuMemory  **参数解释**：NPU内存。 **取值范围**：不涉及。
+    * type  **参数解释**：NPU类型。 **取值范围**：不涉及。
+    * chip  **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
     * @var string[]
     */
@@ -134,9 +116,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
             'npu' => 'getNpu',
             'npuMemory' => 'getNpuMemory',
             'type' => 'getType',
-            'aiCore' => 'getAiCore',
-            'aiCpu' => 'getAiCpu',
-            'typeAlias' => 'getTypeAlias'
+            'chip' => 'getChip'
     ];
 
     /**
@@ -200,9 +180,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
         $this->container['npu'] = isset($data['npu']) ? $data['npu'] : null;
         $this->container['npuMemory'] = isset($data['npuMemory']) ? $data['npuMemory'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['aiCore'] = isset($data['aiCore']) ? $data['aiCore'] : null;
-        $this->container['aiCpu'] = isset($data['aiCpu']) ? $data['aiCpu'] : null;
-        $this->container['typeAlias'] = isset($data['typeAlias']) ? $data['typeAlias'] : null;
+        $this->container['chip'] = isset($data['chip']) ? $data['chip'] : null;
     }
 
     /**
@@ -229,7 +207,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets npu
-    *  **参数解释：** NPU数量。 **取值范围：** 不涉及。
+    *  **参数解释**：NPU数量。 **取值范围**：不涉及。
     *
     * @return int|null
     */
@@ -241,7 +219,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets npu
     *
-    * @param int|null $npu **参数解释：** NPU数量。 **取值范围：** 不涉及。
+    * @param int|null $npu **参数解释**：NPU数量。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -253,7 +231,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets npuMemory
-    *  **参数解释：** NPU内存。 **取值范围：** 不涉及。
+    *  **参数解释**：NPU内存。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -265,7 +243,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets npuMemory
     *
-    * @param string|null $npuMemory **参数解释：** NPU内存。 **取值范围：** 不涉及。
+    * @param string|null $npuMemory **参数解释**：NPU内存。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -277,7 +255,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** NPU类型。 **取值范围：** 不涉及。
+    *  **参数解释**：NPU类型。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -289,7 +267,7 @@ class AscendInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释：** NPU类型。 **取值范围：** 不涉及。
+    * @param string|null $type **参数解释**：NPU类型。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -300,74 +278,26 @@ class AscendInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets aiCore
-    *  **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
+    * Gets chip
+    *  **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
-    public function getAiCore()
+    public function getChip()
     {
-        return $this->container['aiCore'];
+        return $this->container['chip'];
     }
 
     /**
-    * Sets aiCore
+    * Sets chip
     *
-    * @param string|null $aiCore **参数解释：** 切分规格中的ai_core。 **取值范围：** 不涉及。
+    * @param int|null $chip **参数解释**：NPU设备数。 **取值范围**：不涉及。
     *
     * @return $this
     */
-    public function setAiCore($aiCore)
+    public function setChip($chip)
     {
-        $this->container['aiCore'] = $aiCore;
-        return $this;
-    }
-
-    /**
-    * Gets aiCpu
-    *  **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    *
-    * @return string|null
-    */
-    public function getAiCpu()
-    {
-        return $this->container['aiCpu'];
-    }
-
-    /**
-    * Sets aiCpu
-    *
-    * @param string|null $aiCpu **参数解释：** 切分规格中的ai_cpu。 **取值范围：** 不涉及。
-    *
-    * @return $this
-    */
-    public function setAiCpu($aiCpu)
-    {
-        $this->container['aiCpu'] = $aiCpu;
-        return $this;
-    }
-
-    /**
-    * Gets typeAlias
-    *  **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
-    *
-    * @return string|null
-    */
-    public function getTypeAlias()
-    {
-        return $this->container['typeAlias'];
-    }
-
-    /**
-    * Sets typeAlias
-    *
-    * @param string|null $typeAlias **参数解释：** 区分卡类型，如Snt9b3、Snt9b2 **取值范围：** 不涉及。
-    *
-    * @return $this
-    */
-    public function setTypeAlias($typeAlias)
-    {
-        $this->container['typeAlias'] = $typeAlias;
+        $this->container['chip'] = $chip;
         return $this;
     }
 

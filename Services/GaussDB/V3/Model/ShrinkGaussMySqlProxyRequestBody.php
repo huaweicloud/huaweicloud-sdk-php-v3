@@ -21,21 +21,25 @@ class ShrinkGaussMySqlProxyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * nodeNum  数据库代理节点缩容操作需要减少的节点数。  缩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的数据库代理节点的总数量小于等于32，大于等于2。
+    * nodeIds  **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'nodeNum' => 'int'
+            'nodeNum' => 'int',
+            'nodeIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * nodeNum  数据库代理节点缩容操作需要减少的节点数。  缩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的数据库代理节点的总数量小于等于32，大于等于2。
+    * nodeIds  **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'nodeNum' => 'int32'
+        'nodeNum' => 'int32',
+        'nodeIds' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ShrinkGaussMySqlProxyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * nodeNum  数据库代理节点缩容操作需要减少的节点数。  缩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的数据库代理节点的总数量小于等于32，大于等于2。
+    * nodeIds  **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'nodeNum' => 'node_num'
+            'nodeNum' => 'node_num',
+            'nodeIds' => 'node_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * nodeNum  数据库代理节点缩容操作需要减少的节点数。  缩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的数据库代理节点的总数量小于等于32，大于等于2。
+    * nodeIds  **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
     *
     * @var string[]
     */
     protected static $setters = [
-            'nodeNum' => 'setNodeNum'
+            'nodeNum' => 'setNodeNum',
+            'nodeIds' => 'setNodeIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * nodeNum  数据库代理节点缩容操作需要减少的节点数。  缩容的节点数的取值范围：1~30之间的整数。  限制条件：该实例的数据库代理节点的总数量小于等于32，大于等于2。
+    * nodeIds  **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
     *
     * @var string[]
     */
     protected static $getters = [
-            'nodeNum' => 'getNodeNum'
+            'nodeNum' => 'getNodeNum',
+            'nodeIds' => 'getNodeIds'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ShrinkGaussMySqlProxyRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['nodeNum'] = isset($data['nodeNum']) ? $data['nodeNum'] : null;
+        $this->container['nodeIds'] = isset($data['nodeIds']) ? $data['nodeIds'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ShrinkGaussMySqlProxyRequestBody implements ModelInterface, ArrayAccess
     public function setNodeNum($nodeNum)
     {
         $this->container['nodeNum'] = $nodeNum;
+        return $this;
+    }
+
+    /**
+    * Gets nodeIds
+    *  **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
+    *
+    * @return string[]|null
+    */
+    public function getNodeIds()
+    {
+        return $this->container['nodeIds'];
+    }
+
+    /**
+    * Sets nodeIds
+    *
+    * @param string[]|null $nodeIds **参数解释**：  数据库代理节点的节点ID。  获取方式请参见[查询数据库代理信息列表](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlProxyList.html)。  **约束限制**：  不传该字段，将随机删除代理节点；传入该字段，将删除指定ID的代理节点。
+    *
+    * @return $this
+    */
+    public function setNodeIds($nodeIds)
+    {
+        $this->container['nodeIds'] = $nodeIds;
         return $this;
     }
 

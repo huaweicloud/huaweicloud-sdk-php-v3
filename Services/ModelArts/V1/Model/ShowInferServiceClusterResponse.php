@@ -46,7 +46,7 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'createAt' => 'int',
             'updateAt' => 'int',
-            'flavors' => '\HuaweiCloud\SDK\ModelArts\V1\Model\NotebookFlavor[]',
+            'flavors' => '\HuaweiCloud\SDK\ModelArts\V1\Model\InferFlavor[]',
             'poolType' => 'string',
             'physicalPoolId' => 'string'
     ];
@@ -599,7 +599,7 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     * Gets flavors
     *  **参数解释：** 当前专属池支持的规格。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\NotebookFlavor[]|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\InferFlavor[]|null
     */
     public function getFlavors()
     {
@@ -609,7 +609,7 @@ class ShowInferServiceClusterResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flavors
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\NotebookFlavor[]|null $flavors **参数解释：** 当前专属池支持的规格。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\InferFlavor[]|null $flavors **参数解释：** 当前专属池支持的规格。
     *
     * @return $this
     */

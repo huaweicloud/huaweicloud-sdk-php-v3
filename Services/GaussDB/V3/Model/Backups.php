@@ -16,7 +16,7 @@ class Backups implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'backups';
+    protected static $openAPIModelName = 'Backups';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -33,6 +33,7 @@ class Backups implements ModelInterface, ArrayAccess
     * instanceName  实例名称。
     * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
     * description  备份文件描述信息。
+    * backupMode  **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class Backups implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'instanceName' => 'string',
             'backupLevel' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'backupMode' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class Backups implements ModelInterface, ArrayAccess
     * instanceName  实例名称。
     * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
     * description  备份文件描述信息。
+    * backupMode  **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class Backups implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'instanceName' => null,
         'backupLevel' => null,
-        'description' => null
+        'description' => null,
+        'backupMode' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class Backups implements ModelInterface, ArrayAccess
     * instanceName  实例名称。
     * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
     * description  备份文件描述信息。
+    * backupMode  **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class Backups implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'instanceName' => 'instance_name',
             'backupLevel' => 'backup_level',
-            'description' => 'description'
+            'description' => 'description',
+            'backupMode' => 'backup_mode'
     ];
 
     /**
@@ -156,6 +162,7 @@ class Backups implements ModelInterface, ArrayAccess
     * instanceName  实例名称。
     * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
     * description  备份文件描述信息。
+    * backupMode  **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class Backups implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'instanceName' => 'setInstanceName',
             'backupLevel' => 'setBackupLevel',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'backupMode' => 'setBackupMode'
     ];
 
     /**
@@ -190,6 +198,7 @@ class Backups implements ModelInterface, ArrayAccess
     * instanceName  实例名称。
     * backupLevel  备份级别。当开启一级备份开关时，返回该参数。
     * description  备份文件描述信息。
+    * backupMode  **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class Backups implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'instanceName' => 'getInstanceName',
             'backupLevel' => 'getBackupLevel',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'backupMode' => 'getBackupMode'
     ];
 
     /**
@@ -297,6 +307,7 @@ class Backups implements ModelInterface, ArrayAccess
         $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['backupMode'] = isset($data['backupMode']) ? $data['backupMode'] : null;
     }
 
     /**
@@ -638,6 +649,30 @@ class Backups implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets backupMode
+    *  **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
+    *
+    * @return string|null
+    */
+    public function getBackupMode()
+    {
+        return $this->container['backupMode'];
+    }
+
+    /**
+    * Sets backupMode
+    *
+    * @param string|null $backupMode **参数解释**：  备份类型。  **取值范围**： - differential：差量备份。 - completed：全量备份。
+    *
+    * @return $this
+    */
+    public function setBackupMode($backupMode)
+    {
+        $this->container['backupMode'] = $backupMode;
         return $this;
     }
 

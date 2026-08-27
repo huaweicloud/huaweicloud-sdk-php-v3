@@ -21,21 +21,25 @@ class ApplyConfigurationRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceIds  实例ID列表。列表长度限制在10以内。
+    * isUpdateParamGroupVersion  **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceIds' => 'string[]'
+            'instanceIds' => 'string[]',
+            'isUpdateParamGroupVersion' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceIds  实例ID列表。列表长度限制在10以内。
+    * isUpdateParamGroupVersion  **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceIds' => null
+        'instanceIds' => null,
+        'isUpdateParamGroupVersion' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ApplyConfigurationRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceIds  实例ID列表。列表长度限制在10以内。
+    * isUpdateParamGroupVersion  **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceIds' => 'instance_ids'
+            'instanceIds' => 'instance_ids',
+            'isUpdateParamGroupVersion' => 'is_update_param_group_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceIds  实例ID列表。列表长度限制在10以内。
+    * isUpdateParamGroupVersion  **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceIds' => 'setInstanceIds'
+            'instanceIds' => 'setInstanceIds',
+            'isUpdateParamGroupVersion' => 'setIsUpdateParamGroupVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceIds  实例ID列表。列表长度限制在10以内。
+    * isUpdateParamGroupVersion  **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceIds' => 'getInstanceIds'
+            'instanceIds' => 'getInstanceIds',
+            'isUpdateParamGroupVersion' => 'getIsUpdateParamGroupVersion'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ApplyConfigurationRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceIds'] = isset($data['instanceIds']) ? $data['instanceIds'] : null;
+        $this->container['isUpdateParamGroupVersion'] = isset($data['isUpdateParamGroupVersion']) ? $data['isUpdateParamGroupVersion'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ApplyConfigurationRequestBody implements ModelInterface, ArrayAccess
     public function setInstanceIds($instanceIds)
     {
         $this->container['instanceIds'] = $instanceIds;
+        return $this;
+    }
+
+    /**
+    * Gets isUpdateParamGroupVersion
+    *  **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
+    *
+    * @return bool|null
+    */
+    public function getIsUpdateParamGroupVersion()
+    {
+        return $this->container['isUpdateParamGroupVersion'];
+    }
+
+    /**
+    * Sets isUpdateParamGroupVersion
+    *
+    * @param bool|null $isUpdateParamGroupVersion **参数解释**：  是否更新实例参数组版本，更新后实例规格变更时默认的规格参数值会以最新版本的为准。  **约束限制**：  不涉及。  **取值范围**：  - true：是。 - false：否。  **默认取值**：    false。
+    *
+    * @return $this
+    */
+    public function setIsUpdateParamGroupVersion($isUpdateParamGroupVersion)
+    {
+        $this->container['isUpdateParamGroupVersion'] = $isUpdateParamGroupVersion;
         return $this;
     }
 

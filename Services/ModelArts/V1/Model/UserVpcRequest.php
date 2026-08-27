@@ -24,6 +24,8 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**：子网ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * securityGroupIds  **参数解释**：安全组ID列表。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **约束限制**：选填参数，适用场景：用户希望通过挂载的网卡，访问其他网段的地址。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'string',
             'subnetId' => 'string',
             'securityGroupIds' => 'string[]',
-            'connectCidrs' => 'string[]'
+            'connectCidrs' => 'string[]',
+            'natId' => 'string',
+            'eipId' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**：子网ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * securityGroupIds  **参数解释**：安全组ID列表。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **约束限制**：选填参数，适用场景：用户希望通过挂载的网卡，访问其他网段的地址。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
         'vpcId' => null,
         'subnetId' => null,
         'securityGroupIds' => null,
-        'connectCidrs' => null
+        'connectCidrs' => null,
+        'natId' => null,
+        'eipId' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**：子网ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * securityGroupIds  **参数解释**：安全组ID列表。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **约束限制**：选填参数，适用场景：用户希望通过挂载的网卡，访问其他网段的地址。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'vpc_id',
             'subnetId' => 'subnet_id',
             'securityGroupIds' => 'security_group_ids',
-            'connectCidrs' => 'connect_cidrs'
+            'connectCidrs' => 'connect_cidrs',
+            'natId' => 'nat_id',
+            'eipId' => 'eip_id'
     ];
 
     /**
@@ -93,6 +105,8 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**：子网ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * securityGroupIds  **参数解释**：安全组ID列表。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **约束限制**：选填参数，适用场景：用户希望通过挂载的网卡，访问其他网段的地址。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'setVpcId',
             'subnetId' => 'setSubnetId',
             'securityGroupIds' => 'setSecurityGroupIds',
-            'connectCidrs' => 'setConnectCidrs'
+            'connectCidrs' => 'setConnectCidrs',
+            'natId' => 'setNatId',
+            'eipId' => 'setEipId'
     ];
 
     /**
@@ -109,6 +125,8 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
     * subnetId  **参数解释**：子网ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * securityGroupIds  **参数解释**：安全组ID列表。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * connectCidrs  **参数解释**：连接的CIDR地址列表。 **约束限制**：选填参数，适用场景：用户希望通过挂载的网卡，访问其他网段的地址。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * natId  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * eipId  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
             'vpcId' => 'getVpcId',
             'subnetId' => 'getSubnetId',
             'securityGroupIds' => 'getSecurityGroupIds',
-            'connectCidrs' => 'getConnectCidrs'
+            'connectCidrs' => 'getConnectCidrs',
+            'natId' => 'getNatId',
+            'eipId' => 'getEipId'
     ];
 
     /**
@@ -181,6 +201,8 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['securityGroupIds'] = isset($data['securityGroupIds']) ? $data['securityGroupIds'] : null;
         $this->container['connectCidrs'] = isset($data['connectCidrs']) ? $data['connectCidrs'] : null;
+        $this->container['natId'] = isset($data['natId']) ? $data['natId'] : null;
+        $this->container['eipId'] = isset($data['eipId']) ? $data['eipId'] : null;
     }
 
     /**
@@ -307,6 +329,54 @@ class UserVpcRequest implements ModelInterface, ArrayAccess
     public function setConnectCidrs($connectCidrs)
     {
         $this->container['connectCidrs'] = $connectCidrs;
+        return $this;
+    }
+
+    /**
+    * Gets natId
+    *  **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getNatId()
+    {
+        return $this->container['natId'];
+    }
+
+    /**
+    * Sets natId
+    *
+    * @param string|null $natId **参数解释**：NAT ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setNatId($natId)
+    {
+        $this->container['natId'] = $natId;
+        return $this;
+    }
+
+    /**
+    * Gets eipId
+    *  **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getEipId()
+    {
+        return $this->container['eipId'];
+    }
+
+    /**
+    * Sets eipId
+    *
+    * @param string|null $eipId **参数解释**：EIP ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setEipId($eipId)
+    {
+        $this->container['eipId'] = $eipId;
         return $this;
     }
 

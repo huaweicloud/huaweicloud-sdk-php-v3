@@ -28,6 +28,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
+    * containerNode  **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    * version  **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'hostName' => 'string',
             'agentStatus' => 'string',
             'protectStatus' => 'string',
-            'containerTags' => 'string'
+            'containerTags' => 'string',
+            'containerNode' => 'bool',
+            'version' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
+    * containerNode  **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    * version  **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
         'hostName' => null,
         'agentStatus' => null,
         'protectStatus' => null,
-        'containerTags' => null
+        'containerTags' => null,
+        'containerNode' => null,
+        'version' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
+    * containerNode  **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    * version  **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'hostName' => 'host_name',
             'agentStatus' => 'agent_status',
             'protectStatus' => 'protect_status',
-            'containerTags' => 'container_tags'
+            'containerTags' => 'container_tags',
+            'containerNode' => 'container_node',
+            'version' => 'version'
     ];
 
     /**
@@ -121,6 +133,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
+    * containerNode  **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    * version  **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'hostName' => 'setHostName',
             'agentStatus' => 'setAgentStatus',
             'protectStatus' => 'setProtectStatus',
-            'containerTags' => 'setContainerTags'
+            'containerTags' => 'setContainerTags',
+            'containerNode' => 'setContainerNode',
+            'version' => 'setVersion'
     ];
 
     /**
@@ -145,6 +161,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
     * protectStatus  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - closed：关闭   - opened：开启  **默认取值**: 不涉及
     * containerTags  **参数解释**: 用来识别cce节点或者自建节点的标签 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - cce：cce节点   - self：自建节点   - other：其他节点  **默认取值**: 不涉及
+    * containerNode  **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    * version  **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             'hostName' => 'getHostName',
             'agentStatus' => 'getAgentStatus',
             'protectStatus' => 'getProtectStatus',
-            'containerTags' => 'getContainerTags'
+            'containerTags' => 'getContainerTags',
+            'containerNode' => 'getContainerNode',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -225,6 +245,8 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
         $this->container['agentStatus'] = isset($data['agentStatus']) ? $data['agentStatus'] : null;
         $this->container['protectStatus'] = isset($data['protectStatus']) ? $data['protectStatus'] : null;
         $this->container['containerTags'] = isset($data['containerTags']) ? $data['containerTags'] : null;
+        $this->container['containerNode'] = isset($data['containerNode']) ? $data['containerNode'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -288,6 +310,12 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['containerTags']) && (mb_strlen($this->container['containerTags']) < 1)) {
                 $invalidProperties[] = "invalid value for 'containerTags', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 32)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -492,6 +520,54 @@ class ListContainerNodesRequest implements ModelInterface, ArrayAccess
     public function setContainerTags($containerTags)
     {
         $this->container['containerTags'] = $containerTags;
+        return $this;
+    }
+
+    /**
+    * Gets containerNode
+    *  **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    *
+    * @return bool|null
+    */
+    public function getContainerNode()
+    {
+        return $this->container['containerNode'];
+    }
+
+    /**
+    * Sets containerNode
+    *
+    * @param bool|null $containerNode **参数解释**: 查询是否是容器节点 **约束限制**: 不涉及 **取值范围**: - true：是容器节点 - false：非容器节点  **默认取值**: false
+    *
+    * @return $this
+    */
+    public function setContainerNode($containerNode)
+    {
+        $this->container['containerNode'] = $containerNode;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version **参数解释**: 节点开启的防护版本 **约束限制**: 不涉及 **取值范围**: - hss.version.null ：无。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。              **默认取值**: 不涉及
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 
