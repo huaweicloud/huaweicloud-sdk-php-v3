@@ -20,7 +20,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     * type  属性类型 STRING：字符串（String）类型 STRING_ARRAY：字符串数组（String.Array）类型 PROTOCOL：协议类型
     * value  属性值。 当属性类型为“STRING”时，属性值只能包含中英文、数字、下划线，长度为1到32个字符。 当属性类型为“STRING_ARRAY”时，属性值为字符串数组，数组长度为1到10，数组中的元素内容不能重复，数组中的每个字符串都只能包含中英文、数字、下划线，且长度为1到32个字符。 当属性类型为“PROTOCOL”时，属性值为支持协议类型的字符串数组。
     *
@@ -34,7 +34,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     * type  属性类型 STRING：字符串（String）类型 STRING_ARRAY：字符串数组（String.Array）类型 PROTOCOL：协议类型
     * value  属性值。 当属性类型为“STRING”时，属性值只能包含中英文、数字、下划线，长度为1到32个字符。 当属性类型为“STRING_ARRAY”时，属性值为字符串数组，数组长度为1到10，数组中的元素内容不能重复，数组中的每个字符串都只能包含中英文、数字、下划线，且长度为1到32个字符。 当属性类型为“PROTOCOL”时，属性值为支持协议类型的字符串数组。
     *
@@ -69,7 +69,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     * type  属性类型 STRING：字符串（String）类型 STRING_ARRAY：字符串数组（String.Array）类型 PROTOCOL：协议类型
     * value  属性值。 当属性类型为“STRING”时，属性值只能包含中英文、数字、下划线，长度为1到32个字符。 当属性类型为“STRING_ARRAY”时，属性值为字符串数组，数组长度为1到10，数组中的元素内容不能重复，数组中的每个字符串都只能包含中英文、数字、下划线，且长度为1到32个字符。 当属性类型为“PROTOCOL”时，属性值为支持协议类型的字符串数组。
     *
@@ -83,7 +83,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     * type  属性类型 STRING：字符串（String）类型 STRING_ARRAY：字符串数组（String.Array）类型 PROTOCOL：协议类型
     * value  属性值。 当属性类型为“STRING”时，属性值只能包含中英文、数字、下划线，长度为1到32个字符。 当属性类型为“STRING_ARRAY”时，属性值为字符串数组，数组长度为1到10，数组中的元素内容不能重复，数组中的每个字符串都只能包含中英文、数字、下划线，且长度为1到32个字符。 当属性类型为“PROTOCOL”时，属性值为支持协议类型的字符串数组。
     *
@@ -97,7 +97,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    * name  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     * type  属性类型 STRING：字符串（String）类型 STRING_ARRAY：字符串数组（String.Array）类型 PROTOCOL：协议类型
     * value  属性值。 当属性类型为“STRING”时，属性值只能包含中英文、数字、下划线，长度为1到32个字符。 当属性类型为“STRING_ARRAY”时，属性值为字符串数组，数组长度为1到10，数组中的元素内容不能重复，数组中的每个字符串都只能包含中英文、数字、下划线，且长度为1到32个字符。 当属性类型为“PROTOCOL”时，属性值为支持协议类型的字符串数组。
     *
@@ -239,7 +239,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    *  属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     *
     * @return string
     */
@@ -251,7 +251,7 @@ class MessageAttribute implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
+    * @param string $name 属性名称。属性名称只能包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符
     *
     * @return $this
     */

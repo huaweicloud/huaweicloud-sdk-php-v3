@@ -21,22 +21,30 @@ class ShowKernelUpgradeCheckResultResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobIds  **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * upgradePrecheckResult  **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
+    * updatedAt  **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    * upgradePrecheckDetail  **参数解释**：  实例预检查详情。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobIds' => 'string[]'
+            'upgradePrecheckResult' => 'string',
+            'updatedAt' => 'int',
+            'upgradePrecheckDetail' => '\HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeDatabasePrecheckResult[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobIds  **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * upgradePrecheckResult  **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
+    * updatedAt  **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    * upgradePrecheckDetail  **参数解释**：  实例预检查详情。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobIds' => null
+        'upgradePrecheckResult' => null,
+        'updatedAt' => 'int64',
+        'upgradePrecheckDetail' => null
     ];
 
     /**
@@ -62,32 +70,44 @@ class ShowKernelUpgradeCheckResultResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobIds  **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * upgradePrecheckResult  **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
+    * updatedAt  **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    * upgradePrecheckDetail  **参数解释**：  实例预检查详情。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobIds' => 'job_ids'
+            'upgradePrecheckResult' => 'upgrade_precheck_result',
+            'updatedAt' => 'updated_at',
+            'upgradePrecheckDetail' => 'upgrade_precheck_detail'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobIds  **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * upgradePrecheckResult  **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
+    * updatedAt  **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    * upgradePrecheckDetail  **参数解释**：  实例预检查详情。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobIds' => 'setJobIds'
+            'upgradePrecheckResult' => 'setUpgradePrecheckResult',
+            'updatedAt' => 'setUpdatedAt',
+            'upgradePrecheckDetail' => 'setUpgradePrecheckDetail'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobIds  **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * upgradePrecheckResult  **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
+    * updatedAt  **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    * upgradePrecheckDetail  **参数解释**：  实例预检查详情。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobIds' => 'getJobIds'
+            'upgradePrecheckResult' => 'getUpgradePrecheckResult',
+            'updatedAt' => 'getUpdatedAt',
+            'upgradePrecheckDetail' => 'getUpgradePrecheckDetail'
     ];
 
     /**
@@ -148,7 +168,9 @@ class ShowKernelUpgradeCheckResultResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['jobIds'] = isset($data['jobIds']) ? $data['jobIds'] : null;
+        $this->container['upgradePrecheckResult'] = isset($data['upgradePrecheckResult']) ? $data['upgradePrecheckResult'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['upgradePrecheckDetail'] = isset($data['upgradePrecheckDetail']) ? $data['upgradePrecheckDetail'] : null;
     }
 
     /**
@@ -174,26 +196,74 @@ class ShowKernelUpgradeCheckResultResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets jobIds
-    *  **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * Gets upgradePrecheckResult
+    *  **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
     *
-    * @return string[]|null
+    * @return string|null
     */
-    public function getJobIds()
+    public function getUpgradePrecheckResult()
     {
-        return $this->container['jobIds'];
+        return $this->container['upgradePrecheckResult'];
     }
 
     /**
-    * Sets jobIds
+    * Sets upgradePrecheckResult
     *
-    * @param string[]|null $jobIds **参数解释**：  预检查任务ID集合。  **取值范围**：  不涉及。
+    * @param string|null $upgradePrecheckResult **参数解释**：  预检查结果。  **取值范围**：  - true：成功。 - false：失败。
     *
     * @return $this
     */
-    public function setJobIds($jobIds)
+    public function setUpgradePrecheckResult($upgradePrecheckResult)
     {
-        $this->container['jobIds'] = $jobIds;
+        $this->container['upgradePrecheckResult'] = $upgradePrecheckResult;
+        return $this;
+    }
+
+    /**
+    * Gets updatedAt
+    *  **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    *
+    * @return int|null
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param int|null $updatedAt **参数解释**：  预检查完成时间。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets upgradePrecheckDetail
+    *  **参数解释**：  实例预检查详情。
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeDatabasePrecheckResult[]|null
+    */
+    public function getUpgradePrecheckDetail()
+    {
+        return $this->container['upgradePrecheckDetail'];
+    }
+
+    /**
+    * Sets upgradePrecheckDetail
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\UpgradeDatabasePrecheckResult[]|null $upgradePrecheckDetail **参数解释**：  实例预检查详情。
+    *
+    * @return $this
+    */
+    public function setUpgradePrecheckDetail($upgradePrecheckDetail)
+    {
+        $this->container['upgradePrecheckDetail'] = $upgradePrecheckDetail;
         return $this;
     }
 

@@ -39,8 +39,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     */
     protected static $openAPITypes = [
             'success' => 'bool',
-            'startAt' => 'float',
-            'endAt' => 'float',
+            'startAt' => 'int',
+            'endAt' => 'int',
             'taskId' => 'string',
             'summaryInfo' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportSummaryInfo',
             'instanceInfo' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportInstanceInfo',
@@ -73,8 +73,8 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     */
     protected static $openAPIFormats = [
         'success' => null,
-        'startAt' => null,
-        'endAt' => null,
+        'startAt' => 'int64',
+        'endAt' => 'int64',
         'taskId' => null,
         'summaryInfo' => null,
         'instanceInfo' => null,
@@ -333,7 +333,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * Gets startAt
     *  日报诊断区间的起始时间（Unix timestamp），单位：毫秒
     *
-    * @return float|null
+    * @return int|null
     */
     public function getStartAt()
     {
@@ -343,7 +343,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     /**
     * Sets startAt
     *
-    * @param float|null $startAt 日报诊断区间的起始时间（Unix timestamp），单位：毫秒
+    * @param int|null $startAt 日报诊断区间的起始时间（Unix timestamp），单位：毫秒
     *
     * @return $this
     */
@@ -357,7 +357,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     * Gets endAt
     *  日报诊断区间的结束时间（Unix timestamp），单位：毫秒
     *
-    * @return float|null
+    * @return int|null
     */
     public function getEndAt()
     {
@@ -367,7 +367,7 @@ class ShowLatestInstanceHealthReportResponse implements ModelInterface, ArrayAcc
     /**
     * Sets endAt
     *
-    * @param float|null $endAt 日报诊断区间的结束时间（Unix timestamp），单位：毫秒
+    * @param int|null $endAt 日报诊断区间的结束时间（Unix timestamp），单位：毫秒
     *
     * @return $this
     */

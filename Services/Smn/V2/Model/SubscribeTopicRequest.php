@@ -20,9 +20,9 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * endpoint  订阅终端地址。
-    * token  订阅主题Token信息。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
+    * endpoint  订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
+    * token  确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * endpoint  订阅终端地址。
-    * token  订阅主题Token信息。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
+    * endpoint  订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
+    * token  确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * endpoint  订阅终端地址。
-    * token  订阅主题Token信息。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
+    * endpoint  订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
+    * token  确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * endpoint  订阅终端地址。
-    * token  订阅主题Token信息。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
+    * endpoint  订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
+    * token  确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * endpoint  订阅终端地址。
-    * token  订阅主题Token信息。
+    * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
+    * endpoint  订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
+    * token  确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicUrn
-    *  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    *  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
     *
     * @return string|null
     */
@@ -211,7 +211,7 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string|null $topicUrn Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
+    * @param string|null $topicUrn Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。当订阅类型为短信或邮件时，与token、endpoint参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功；当订阅类型为其他时，该参数必填，需与token同时设置。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoint
-    *  订阅终端地址。
+    *  订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endpoint
     *
-    * @param string|null $endpoint 订阅终端地址。
+    * @param string|null $endpoint 订阅终端地址。仅当订阅类型为短信或邮件时可设置，与token、topic_urn参数组合使用，三个参数中设置任意两个或全部设置均可确认订阅成功。
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets token
-    *  订阅主题Token信息。
+    *  确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class SubscribeTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets token
     *
-    * @param string $token 订阅主题Token信息。
+    * @param string $token 确认订阅Token信息。（订阅链接中携带的token信息）
     *
     * @return $this
     */

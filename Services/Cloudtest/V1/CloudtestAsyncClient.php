@@ -100,6 +100,74 @@ class CloudtestAsyncClient extends Client
     }
 
     /**
+     * 添加测试套
+     *
+     * 添加测试套
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addOrUpdateTestsuiteInfoUsingAsync($request)
+    {
+        return $this->addOrUpdateTestsuiteInfoUsingAsyncWithHttpInfo($request);
+    }
+    
+    public function addOrUpdateTestsuiteInfoUsingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/projects/{service_id}/testsuite';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serviceId'] !== null) {
+            $pathParams['service_id'] = $localVarParams['serviceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\AddOrUpdateTestsuiteInfoUsingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\AddOrUpdateTestsuiteInfoUsingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 新增用例评论
      *
      * 新增用例评论
@@ -2231,6 +2299,74 @@ class CloudtestAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\DeleteTestReportCustomDetailByUriResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\DeleteTestReportCustomDetailByUriRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 根据任务Id列表批量删除任务
+     *
+     * 根据任务Id列表批量删除任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTestsuiteInfosUsingAsync($request)
+    {
+        return $this->deleteTestsuiteInfosUsingAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteTestsuiteInfosUsingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/projects/{service_id}/testsuite';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serviceId'] !== null) {
+            $pathParams['service_id'] = $localVarParams['serviceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\DeleteTestsuiteInfosUsingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\DeleteTestsuiteInfosUsingRequest',
             $asyncRequest = true);
     }
 
@@ -9331,6 +9467,77 @@ class CloudtestAsyncClient extends Client
     }
 
     /**
+     * 根据任务id查询任务
+     *
+     * 根据任务id查询任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTestsuiteInfoUsingAsync($request)
+    {
+        return $this->showTestsuiteInfoUsingAsyncWithHttpInfo($request);
+    }
+    
+    public function showTestsuiteInfoUsingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/projects/{service_id}/testsuite/{suite_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['planId'] !== null) {
+            $queryParams['plan_id'] = $localVarParams['planId'];
+        }
+        if ($localVarParams['serviceId'] !== null) {
+            $pathParams['service_id'] = $localVarParams['serviceId'];
+        }
+        if ($localVarParams['suiteId'] !== null) {
+            $pathParams['suite_id'] = $localVarParams['suiteId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowTestsuiteInfoUsingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowTestsuiteInfoUsingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取租户订单信息
      *
      * 获取租户订单信息
@@ -9460,6 +9667,77 @@ class CloudtestAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowUserExecuteTestCaseInfoResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\ShowUserExecuteTestCaseInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 启动测试套
+     *
+     * 启动测试套
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startTestsuiteUsingAsync($request)
+    {
+        return $this->startTestsuiteUsingAsyncWithHttpInfo($request);
+    }
+    
+    public function startTestsuiteUsingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/projects/{service_id}/testsuite/{suite_id}/start';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serviceId'] !== null) {
+            $pathParams['service_id'] = $localVarParams['serviceId'];
+        }
+        if ($localVarParams['suiteId'] !== null) {
+            $pathParams['suite_id'] = $localVarParams['suiteId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\StartTestsuiteUsingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\StartTestsuiteUsingRequest',
             $asyncRequest = true);
     }
 
@@ -10031,6 +10309,77 @@ class CloudtestAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\UpdateTestReportCustomDetailByUriResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\UpdateTestReportCustomDetailByUriRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新测试套
+     *
+     * 更新测试套
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTestsuiteInfoUsingAsync($request)
+    {
+        return $this->updateTestsuiteInfoUsingAsyncWithHttpInfo($request);
+    }
+    
+    public function updateTestsuiteInfoUsingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/projects/{service_id}/testsuite/{suite_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serviceId'] !== null) {
+            $pathParams['service_id'] = $localVarParams['serviceId'];
+        }
+        if ($localVarParams['suiteId'] !== null) {
+            $pathParams['suite_id'] = $localVarParams['suiteId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cloudtest\V1\Model\UpdateTestsuiteInfoUsingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cloudtest\V1\Model\UpdateTestsuiteInfoUsingRequest',
             $asyncRequest = true);
     }
 

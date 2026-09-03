@@ -167,8 +167,8 @@ class GetOauth2CredentialProviderRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['credentialProviderName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'credentialProviderName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,56}$/", $this->container['credentialProviderName'])) {
-                $invalidProperties[] = "invalid value for 'credentialProviderName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,56}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['credentialProviderName'])) {
+                $invalidProperties[] = "invalid value for 'credentialProviderName', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         return $invalidProperties;
     }

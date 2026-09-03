@@ -26,6 +26,12 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * https  https
     * sms  sms
     * email  email
+    * callnotify  callnotify
+    * wechat  wechat
+    * dingding  dingding
+    * feishu  feishu
+    * welink  welink
+    * dingTalkBot  dingTalkBot
     *
     * @var string[]
     */
@@ -35,7 +41,13 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
             'http' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestHttpEndpointInfo',
             'https' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestHttpsEndpointInfo',
             'sms' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestSmsEndpointInfo',
-            'email' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestEmailEndpointInfo'
+            'email' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestEmailEndpointInfo',
+            'callnotify' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestCallnotifyEndpointInfo',
+            'wechat' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestWechatEndpointInfo',
+            'dingding' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestDingdingEndpointInfo',
+            'feishu' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestFeishuEndpointInfo',
+            'welink' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestWelinkEndpointInfo',
+            'dingTalkBot' => '\HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestDingTalkBotEndpointInfo'
     ];
 
     /**
@@ -46,6 +58,12 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * https  https
     * sms  sms
     * email  email
+    * callnotify  callnotify
+    * wechat  wechat
+    * dingding  dingding
+    * feishu  feishu
+    * welink  welink
+    * dingTalkBot  dingTalkBot
     *
     * @var string[]
     */
@@ -55,7 +73,13 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
         'http' => null,
         'https' => null,
         'sms' => null,
-        'email' => null
+        'email' => null,
+        'callnotify' => null,
+        'wechat' => null,
+        'dingding' => null,
+        'feishu' => null,
+        'welink' => null,
+        'dingTalkBot' => null
     ];
 
     /**
@@ -87,6 +111,12 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * https  https
     * sms  sms
     * email  email
+    * callnotify  callnotify
+    * wechat  wechat
+    * dingding  dingding
+    * feishu  feishu
+    * welink  welink
+    * dingTalkBot  dingTalkBot
     *
     * @var string[]
     */
@@ -96,7 +126,13 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
             'http' => 'http',
             'https' => 'https',
             'sms' => 'sms',
-            'email' => 'email'
+            'email' => 'email',
+            'callnotify' => 'callnotify',
+            'wechat' => 'wechat',
+            'dingding' => 'dingding',
+            'feishu' => 'feishu',
+            'welink' => 'welink',
+            'dingTalkBot' => 'ding_talk_bot'
     ];
 
     /**
@@ -107,6 +143,12 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * https  https
     * sms  sms
     * email  email
+    * callnotify  callnotify
+    * wechat  wechat
+    * dingding  dingding
+    * feishu  feishu
+    * welink  welink
+    * dingTalkBot  dingTalkBot
     *
     * @var string[]
     */
@@ -116,7 +158,13 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
             'http' => 'setHttp',
             'https' => 'setHttps',
             'sms' => 'setSms',
-            'email' => 'setEmail'
+            'email' => 'setEmail',
+            'callnotify' => 'setCallnotify',
+            'wechat' => 'setWechat',
+            'dingding' => 'setDingding',
+            'feishu' => 'setFeishu',
+            'welink' => 'setWelink',
+            'dingTalkBot' => 'setDingTalkBot'
     ];
 
     /**
@@ -127,6 +175,12 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * https  https
     * sms  sms
     * email  email
+    * callnotify  callnotify
+    * wechat  wechat
+    * dingding  dingding
+    * feishu  feishu
+    * welink  welink
+    * dingTalkBot  dingTalkBot
     *
     * @var string[]
     */
@@ -136,7 +190,13 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
             'http' => 'getHttp',
             'https' => 'getHttps',
             'sms' => 'getSms',
-            'email' => 'getEmail'
+            'email' => 'getEmail',
+            'callnotify' => 'getCallnotify',
+            'wechat' => 'getWechat',
+            'dingding' => 'getDingding',
+            'feishu' => 'getFeishu',
+            'welink' => 'getWelink',
+            'dingTalkBot' => 'getDingTalkBot'
     ];
 
     /**
@@ -203,6 +263,12 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
         $this->container['https'] = isset($data['https']) ? $data['https'] : null;
         $this->container['sms'] = isset($data['sms']) ? $data['sms'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['callnotify'] = isset($data['callnotify']) ? $data['callnotify'] : null;
+        $this->container['wechat'] = isset($data['wechat']) ? $data['wechat'] : null;
+        $this->container['dingding'] = isset($data['dingding']) ? $data['dingding'] : null;
+        $this->container['feishu'] = isset($data['feishu']) ? $data['feishu'] : null;
+        $this->container['welink'] = isset($data['welink']) ? $data['welink'] : null;
+        $this->container['dingTalkBot'] = isset($data['dingTalkBot']) ? $data['dingTalkBot'] : null;
     }
 
     /**
@@ -380,6 +446,150 @@ class CreateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+        return $this;
+    }
+
+    /**
+    * Gets callnotify
+    *  callnotify
+    *
+    * @return \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestCallnotifyEndpointInfo|null
+    */
+    public function getCallnotify()
+    {
+        return $this->container['callnotify'];
+    }
+
+    /**
+    * Sets callnotify
+    *
+    * @param \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestCallnotifyEndpointInfo|null $callnotify callnotify
+    *
+    * @return $this
+    */
+    public function setCallnotify($callnotify)
+    {
+        $this->container['callnotify'] = $callnotify;
+        return $this;
+    }
+
+    /**
+    * Gets wechat
+    *  wechat
+    *
+    * @return \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestWechatEndpointInfo|null
+    */
+    public function getWechat()
+    {
+        return $this->container['wechat'];
+    }
+
+    /**
+    * Sets wechat
+    *
+    * @param \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestWechatEndpointInfo|null $wechat wechat
+    *
+    * @return $this
+    */
+    public function setWechat($wechat)
+    {
+        $this->container['wechat'] = $wechat;
+        return $this;
+    }
+
+    /**
+    * Gets dingding
+    *  dingding
+    *
+    * @return \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestDingdingEndpointInfo|null
+    */
+    public function getDingding()
+    {
+        return $this->container['dingding'];
+    }
+
+    /**
+    * Sets dingding
+    *
+    * @param \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestDingdingEndpointInfo|null $dingding dingding
+    *
+    * @return $this
+    */
+    public function setDingding($dingding)
+    {
+        $this->container['dingding'] = $dingding;
+        return $this;
+    }
+
+    /**
+    * Gets feishu
+    *  feishu
+    *
+    * @return \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestFeishuEndpointInfo|null
+    */
+    public function getFeishu()
+    {
+        return $this->container['feishu'];
+    }
+
+    /**
+    * Sets feishu
+    *
+    * @param \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestFeishuEndpointInfo|null $feishu feishu
+    *
+    * @return $this
+    */
+    public function setFeishu($feishu)
+    {
+        $this->container['feishu'] = $feishu;
+        return $this;
+    }
+
+    /**
+    * Gets welink
+    *  welink
+    *
+    * @return \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestWelinkEndpointInfo|null
+    */
+    public function getWelink()
+    {
+        return $this->container['welink'];
+    }
+
+    /**
+    * Sets welink
+    *
+    * @param \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestWelinkEndpointInfo|null $welink welink
+    *
+    * @return $this
+    */
+    public function setWelink($welink)
+    {
+        $this->container['welink'] = $welink;
+        return $this;
+    }
+
+    /**
+    * Gets dingTalkBot
+    *  dingTalkBot
+    *
+    * @return \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestDingTalkBotEndpointInfo|null
+    */
+    public function getDingTalkBot()
+    {
+        return $this->container['dingTalkBot'];
+    }
+
+    /**
+    * Sets dingTalkBot
+    *
+    * @param \HuaweiCloud\SDK\Smnglobal\V2\Model\CreateSubscriptionUserRequestDingTalkBotEndpointInfo|null $dingTalkBot dingTalkBot
+    *
+    * @return $this
+    */
+    public function setDingTalkBot($dingTalkBot)
+    {
+        $this->container['dingTalkBot'] = $dingTalkBot;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * startTime  起始时间
-    * endTime  结束时间
+    * startTime  起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
+    * endTime  结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * startTime  起始时间
-    * endTime  结束时间
+    * startTime  起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
+    * endTime  结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * startTime  起始时间
-    * endTime  结束时间
+    * startTime  起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
+    * endTime  结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * startTime  起始时间
-    * endTime  结束时间
+    * startTime  起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
+    * endTime  结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * topicUrn  Topic的唯一的资源标识，可通过[查询主题列表](smn_api_51004.xml)获取该标识。
-    * startTime  起始时间
-    * endTime  结束时间
+    * startTime  起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
+    * endTime  结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间
+    *  起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 起始时间
+    * @param string $startTime 起始时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class ListTopicMessageStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 结束时间
+    * @param string $endTime 结束时间，取UTC时区的整点时间(支持查询近31天的计量数据)。
     *
     * @return $this
     */

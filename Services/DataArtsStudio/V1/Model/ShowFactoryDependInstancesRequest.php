@@ -1,0 +1,499 @@
+<?php
+
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class ShowFactoryDependInstancesRequest implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'ShowFactoryDependInstancesRequest';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * instanceId  作业实例id，可通过作业实例列表接口获取。
+    * relation  支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    * depth  默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    * latest  默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'workspace' => 'string',
+            'xProjectId' => 'string',
+            'contentType' => 'string',
+            'instanceId' => 'int',
+            'relation' => 'string',
+            'depth' => 'int',
+            'latest' => 'bool'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * instanceId  作业实例id，可通过作业实例列表接口获取。
+    * relation  支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    * depth  默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    * latest  默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'workspace' => null,
+        'xProjectId' => null,
+        'contentType' => null,
+        'instanceId' => 'int64',
+        'relation' => null,
+        'depth' => 'int32',
+        'latest' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * instanceId  作业实例id，可通过作业实例列表接口获取。
+    * relation  支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    * depth  默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    * latest  默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'workspace' => 'workspace',
+            'xProjectId' => 'X-Project-Id',
+            'contentType' => 'Content-Type',
+            'instanceId' => 'instance_id',
+            'relation' => 'relation',
+            'depth' => 'depth',
+            'latest' => 'latest'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * instanceId  作业实例id，可通过作业实例列表接口获取。
+    * relation  支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    * depth  默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    * latest  默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'workspace' => 'setWorkspace',
+            'xProjectId' => 'setXProjectId',
+            'contentType' => 'setContentType',
+            'instanceId' => 'setInstanceId',
+            'relation' => 'setRelation',
+            'depth' => 'setDepth',
+            'latest' => 'setLatest'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * instanceId  作业实例id，可通过作业实例列表接口获取。
+    * relation  支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    * depth  默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    * latest  默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'workspace' => 'getWorkspace',
+            'xProjectId' => 'getXProjectId',
+            'contentType' => 'getContentType',
+            'instanceId' => 'getInstanceId',
+            'relation' => 'getRelation',
+            'depth' => 'getDepth',
+            'latest' => 'getLatest'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['relation'] = isset($data['relation']) ? $data['relation'] : null;
+        $this->container['depth'] = isset($data['depth']) ? $data['depth'] : null;
+        $this->container['latest'] = isset($data['latest']) ? $data['latest'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        if ($this->container['workspace'] === null) {
+            $invalidProperties[] = "'workspace' can't be null";
+        }
+            if ((mb_strlen($this->container['workspace']) > 64)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['workspace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) < 3)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets workspace
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    *
+    * @return string
+    */
+    public function getWorkspace()
+    {
+        return $this->container['workspace'];
+    }
+
+    /**
+    * Sets workspace
+    *
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    *
+    * @return $this
+    */
+    public function setWorkspace($workspace)
+    {
+        $this->container['workspace'] = $workspace;
+        return $this;
+    }
+
+    /**
+    * Gets xProjectId
+    *  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getXProjectId()
+    {
+        return $this->container['xProjectId'];
+    }
+
+    /**
+    * Sets xProjectId
+    *
+    * @param string|null $xProjectId 项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return $this
+    */
+    public function setXProjectId($xProjectId)
+    {
+        $this->container['xProjectId'] = $xProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  作业实例id，可通过作业实例列表接口获取。
+    *
+    * @return int
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param int $instanceId 作业实例id，可通过作业实例列表接口获取。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets relation
+    *  支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    *
+    * @return string|null
+    */
+    public function getRelation()
+    {
+        return $this->container['relation'];
+    }
+
+    /**
+    * Sets relation
+    *
+    * @param string|null $relation 支持选择查询实例的直接上游、直接下游或者是直接上下游，取值为 parent、child、both，默认为both。 - parent：直接上游实例 - child：直接下游实例 - both：直接上下游实例
+    *
+    * @return $this
+    */
+    public function setRelation($relation)
+    {
+        $this->container['relation'] = $relation;
+        return $this;
+    }
+
+    /**
+    * Gets depth
+    *  默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    *
+    * @return int|null
+    */
+    public function getDepth()
+    {
+        return $this->container['depth'];
+    }
+
+    /**
+    * Sets depth
+    *
+    * @param int|null $depth 默认值为1, depth是上下游依赖查询的层级深度，例如 depth=1 只查直接依赖，depth=2 查到依赖的依赖。单次查询可返回的最大深度为50层。
+    *
+    * @return $this
+    */
+    public function setDepth($depth)
+    {
+        $this->container['depth'] = $depth;
+        return $this;
+    }
+
+    /**
+    * Gets latest
+    *  默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @return bool|null
+    */
+    public function getLatest()
+    {
+        return $this->container['latest'];
+    }
+
+    /**
+    * Sets latest
+    *
+    * @param bool|null $latest 默认值为true, 当latest=true的时候，控制是否只返回每个依赖任务的最新实例，true 时只返回endTime 最晚的执行记录，false 时返回所有历史实例。
+    *
+    * @return $this
+    */
+    public function setLatest($latest)
+    {
+        $this->container['latest'] = $latest;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

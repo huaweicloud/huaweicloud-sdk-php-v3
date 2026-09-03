@@ -21,7 +21,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tokenVaultId  The unique identifier of the token vault.
+    * urn  TokenVault 对象统一资源标识（URN）。
     * kmsConfiguration  kmsConfiguration
+    * policyEngineConfiguration  policyEngineConfiguration
     * updatedAt  Timestamp in RFC 3339 format (UTC)
     * tags  自定义标签列表。
     *
@@ -29,7 +31,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'tokenVaultId' => 'string',
+            'urn' => 'string',
             'kmsConfiguration' => '\HuaweiCloud\SDK\AgentIdentity\V1\Model\KmsConfiguration',
+            'policyEngineConfiguration' => '\HuaweiCloud\SDK\AgentIdentity\V1\Model\PolicyEngineConfiguration',
             'updatedAt' => '\DateTime',
             'tags' => '\HuaweiCloud\SDK\AgentIdentity\V1\Model\Tag[]'
     ];
@@ -37,7 +41,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tokenVaultId  The unique identifier of the token vault.
+    * urn  TokenVault 对象统一资源标识（URN）。
     * kmsConfiguration  kmsConfiguration
+    * policyEngineConfiguration  policyEngineConfiguration
     * updatedAt  Timestamp in RFC 3339 format (UTC)
     * tags  自定义标签列表。
     *
@@ -45,7 +51,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'tokenVaultId' => null,
+        'urn' => null,
         'kmsConfiguration' => null,
+        'policyEngineConfiguration' => null,
         'updatedAt' => 'date-time',
         'tags' => null
     ];
@@ -74,7 +82,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tokenVaultId  The unique identifier of the token vault.
+    * urn  TokenVault 对象统一资源标识（URN）。
     * kmsConfiguration  kmsConfiguration
+    * policyEngineConfiguration  policyEngineConfiguration
     * updatedAt  Timestamp in RFC 3339 format (UTC)
     * tags  自定义标签列表。
     *
@@ -82,7 +92,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'tokenVaultId' => 'token_vault_id',
+            'urn' => 'urn',
             'kmsConfiguration' => 'kms_configuration',
+            'policyEngineConfiguration' => 'policy_engine_configuration',
             'updatedAt' => 'updated_at',
             'tags' => 'tags'
     ];
@@ -90,7 +102,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tokenVaultId  The unique identifier of the token vault.
+    * urn  TokenVault 对象统一资源标识（URN）。
     * kmsConfiguration  kmsConfiguration
+    * policyEngineConfiguration  policyEngineConfiguration
     * updatedAt  Timestamp in RFC 3339 format (UTC)
     * tags  自定义标签列表。
     *
@@ -98,7 +112,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'tokenVaultId' => 'setTokenVaultId',
+            'urn' => 'setUrn',
             'kmsConfiguration' => 'setKmsConfiguration',
+            'policyEngineConfiguration' => 'setPolicyEngineConfiguration',
             'updatedAt' => 'setUpdatedAt',
             'tags' => 'setTags'
     ];
@@ -106,7 +122,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tokenVaultId  The unique identifier of the token vault.
+    * urn  TokenVault 对象统一资源标识（URN）。
     * kmsConfiguration  kmsConfiguration
+    * policyEngineConfiguration  policyEngineConfiguration
     * updatedAt  Timestamp in RFC 3339 format (UTC)
     * tags  自定义标签列表。
     *
@@ -114,7 +132,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'tokenVaultId' => 'getTokenVaultId',
+            'urn' => 'getUrn',
             'kmsConfiguration' => 'getKmsConfiguration',
+            'policyEngineConfiguration' => 'getPolicyEngineConfiguration',
             'updatedAt' => 'getUpdatedAt',
             'tags' => 'getTags'
     ];
@@ -178,7 +198,9 @@ class TokenVault implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tokenVaultId'] = isset($data['tokenVaultId']) ? $data['tokenVaultId'] : null;
+        $this->container['urn'] = isset($data['urn']) ? $data['urn'] : null;
         $this->container['kmsConfiguration'] = isset($data['kmsConfiguration']) ? $data['kmsConfiguration'] : null;
+        $this->container['policyEngineConfiguration'] = isset($data['policyEngineConfiguration']) ? $data['policyEngineConfiguration'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
@@ -200,8 +222,20 @@ class TokenVault implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['tokenVaultId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'tokenVaultId', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['tokenVaultId'])) {
-                $invalidProperties[] = "invalid value for 'tokenVaultId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['tokenVaultId'])) {
+                $invalidProperties[] = "invalid value for 'tokenVaultId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
+            }
+        if ($this->container['urn'] === null) {
+            $invalidProperties[] = "'urn' can't be null";
+        }
+            if ((mb_strlen($this->container['urn']) > 1500)) {
+                $invalidProperties[] = "invalid value for 'urn', the character length must be smaller than or equal to 1500.";
+            }
+            if ((mb_strlen($this->container['urn']) < 16)) {
+                $invalidProperties[] = "invalid value for 'urn', the character length must be bigger than or equal to 16.";
+            }
+            if (!preg_match("/^[A-Za-z0-9\/=_:-]+$/", $this->container['urn'])) {
+                $invalidProperties[] = "invalid value for 'urn', must be conform to the pattern /^[A-Za-z0-9\/=_:-]+$/.";
             }
         if ($this->container['kmsConfiguration'] === null) {
             $invalidProperties[] = "'kmsConfiguration' can't be null";
@@ -248,6 +282,30 @@ class TokenVault implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets urn
+    *  TokenVault 对象统一资源标识（URN）。
+    *
+    * @return string
+    */
+    public function getUrn()
+    {
+        return $this->container['urn'];
+    }
+
+    /**
+    * Sets urn
+    *
+    * @param string $urn TokenVault 对象统一资源标识（URN）。
+    *
+    * @return $this
+    */
+    public function setUrn($urn)
+    {
+        $this->container['urn'] = $urn;
+        return $this;
+    }
+
+    /**
     * Gets kmsConfiguration
     *  kmsConfiguration
     *
@@ -268,6 +326,30 @@ class TokenVault implements ModelInterface, ArrayAccess
     public function setKmsConfiguration($kmsConfiguration)
     {
         $this->container['kmsConfiguration'] = $kmsConfiguration;
+        return $this;
+    }
+
+    /**
+    * Gets policyEngineConfiguration
+    *  policyEngineConfiguration
+    *
+    * @return \HuaweiCloud\SDK\AgentIdentity\V1\Model\PolicyEngineConfiguration|null
+    */
+    public function getPolicyEngineConfiguration()
+    {
+        return $this->container['policyEngineConfiguration'];
+    }
+
+    /**
+    * Sets policyEngineConfiguration
+    *
+    * @param \HuaweiCloud\SDK\AgentIdentity\V1\Model\PolicyEngineConfiguration|null $policyEngineConfiguration policyEngineConfiguration
+    *
+    * @return $this
+    */
+    public function setPolicyEngineConfiguration($policyEngineConfiguration)
+    {
+        $this->container['policyEngineConfiguration'] = $policyEngineConfiguration;
         return $this;
     }
 

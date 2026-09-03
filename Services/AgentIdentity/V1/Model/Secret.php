@@ -178,8 +178,8 @@ class Secret implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['secretId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'secretId', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretId'])) {
-                $invalidProperties[] = "invalid value for 'secretId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['secretId'])) {
+                $invalidProperties[] = "invalid value for 'secretId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         if ($this->container['secretName'] === null) {
             $invalidProperties[] = "'secretName' can't be null";
@@ -190,8 +190,8 @@ class Secret implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['secretName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'secretName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['secretName'])) {
-                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['secretName'])) {
+                $invalidProperties[] = "invalid value for 'secretName', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         return $invalidProperties;
     }

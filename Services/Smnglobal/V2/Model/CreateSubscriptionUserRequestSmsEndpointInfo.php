@@ -21,21 +21,25 @@ class CreateSubscriptionUserRequestSmsEndpointInfo implements ModelInterface, Ar
     /**
     * Array of property to type mappings. Used for (de)serialization
     * endpoint  终端地址。必须是一个电话号码。
+    * verificationCodeEnabled  是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpoint' => 'string'
+            'endpoint' => 'string',
+            'verificationCodeEnabled' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * endpoint  终端地址。必须是一个电话号码。
+    * verificationCodeEnabled  是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'endpoint' => null
+        'endpoint' => null,
+        'verificationCodeEnabled' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class CreateSubscriptionUserRequestSmsEndpointInfo implements ModelInterface, Ar
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * endpoint  终端地址。必须是一个电话号码。
+    * verificationCodeEnabled  是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'endpoint' => 'endpoint'
+            'endpoint' => 'endpoint',
+            'verificationCodeEnabled' => 'verification_code_enabled'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * endpoint  终端地址。必须是一个电话号码。
+    * verificationCodeEnabled  是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
     *
     * @var string[]
     */
     protected static $setters = [
-            'endpoint' => 'setEndpoint'
+            'endpoint' => 'setEndpoint',
+            'verificationCodeEnabled' => 'setVerificationCodeEnabled'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * endpoint  终端地址。必须是一个电话号码。
+    * verificationCodeEnabled  是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
     *
     * @var string[]
     */
     protected static $getters = [
-            'endpoint' => 'getEndpoint'
+            'endpoint' => 'getEndpoint',
+            'verificationCodeEnabled' => 'getVerificationCodeEnabled'
     ];
 
     /**
@@ -148,6 +158,7 @@ class CreateSubscriptionUserRequestSmsEndpointInfo implements ModelInterface, Ar
     public function __construct(array $data = null)
     {
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
+        $this->container['verificationCodeEnabled'] = isset($data['verificationCodeEnabled']) ? $data['verificationCodeEnabled'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class CreateSubscriptionUserRequestSmsEndpointInfo implements ModelInterface, Ar
     public function setEndpoint($endpoint)
     {
         $this->container['endpoint'] = $endpoint;
+        return $this;
+    }
+
+    /**
+    * Gets verificationCodeEnabled
+    *  是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
+    *
+    * @return bool|null
+    */
+    public function getVerificationCodeEnabled()
+    {
+        return $this->container['verificationCodeEnabled'];
+    }
+
+    /**
+    * Sets verificationCodeEnabled
+    *
+    * @param bool|null $verificationCodeEnabled 是否启用验证码，默认为false。当protocol值为sms或callnotify，且该字段值设置为true时，发送订阅确认短信为验证码格式；该字段为false或者不存在时，发送的订阅确认短信为超链接格式。当protocol值为其他协议时，该字段不生效
+    *
+    * @return $this
+    */
+    public function setVerificationCodeEnabled($verificationCodeEnabled)
+    {
+        $this->container['verificationCodeEnabled'] = $verificationCodeEnabled;
         return $this;
     }
 

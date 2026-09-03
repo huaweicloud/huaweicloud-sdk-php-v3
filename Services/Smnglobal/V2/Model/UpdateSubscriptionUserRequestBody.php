@@ -22,24 +22,28 @@ class UpdateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  订阅用户名称。
     * group  订阅用户分组。每个订阅分组只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符。
+    * verificationCode  订阅终端收到的验证码。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'group' => 'string[]'
+            'group' => 'string[]',
+            'verificationCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  订阅用户名称。
     * group  订阅用户分组。每个订阅分组只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符。
+    * verificationCode  订阅终端收到的验证码。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'group' => null
+        'group' => null,
+        'verificationCode' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  订阅用户名称。
     * group  订阅用户分组。每个订阅分组只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符。
+    * verificationCode  订阅终端收到的验证码。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'group' => 'group'
+            'group' => 'group',
+            'verificationCode' => 'verification_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  订阅用户名称。
     * group  订阅用户分组。每个订阅分组只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符。
+    * verificationCode  订阅终端收到的验证码。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'group' => 'setGroup'
+            'group' => 'setGroup',
+            'verificationCode' => 'setVerificationCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  订阅用户名称。
     * group  订阅用户分组。每个订阅分组只能包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不能出现在开始或结尾，下划线不能连续出现，长度为1到32个字符。
+    * verificationCode  订阅终端收到的验证码。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'group' => 'getGroup'
+            'group' => 'getGroup',
+            'verificationCode' => 'getVerificationCode'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
+        $this->container['verificationCode'] = isset($data['verificationCode']) ? $data['verificationCode'] : null;
     }
 
     /**
@@ -237,6 +248,30 @@ class UpdateSubscriptionUserRequestBody implements ModelInterface, ArrayAccess
     public function setGroup($group)
     {
         $this->container['group'] = $group;
+        return $this;
+    }
+
+    /**
+    * Gets verificationCode
+    *  订阅终端收到的验证码。
+    *
+    * @return string|null
+    */
+    public function getVerificationCode()
+    {
+        return $this->container['verificationCode'];
+    }
+
+    /**
+    * Sets verificationCode
+    *
+    * @param string|null $verificationCode 订阅终端收到的验证码。
+    *
+    * @return $this
+    */
+    public function setVerificationCode($verificationCode)
+    {
+        $this->container['verificationCode'] = $verificationCode;
         return $this;
     }
 

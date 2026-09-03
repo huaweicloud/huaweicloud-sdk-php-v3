@@ -178,8 +178,8 @@ class DeleteKmsKeyRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            if (!preg_match("/^[0-9a-zA-Z]{32}$/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[0-9a-zA-Z]{32}$/.";
             }
         return $invalidProperties;
     }

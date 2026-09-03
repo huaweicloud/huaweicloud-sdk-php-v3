@@ -201,11 +201,14 @@ class MicrosoftOauth2ProviderConfigInput implements ModelInterface, ArrayAccess
         if ($this->container['tenantId'] === null) {
             $invalidProperties[] = "'tenantId' can't be null";
         }
-            if ((mb_strlen($this->container['tenantId']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 2048.";
+            if ((mb_strlen($this->container['tenantId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 255.";
             }
             if ((mb_strlen($this->container['tenantId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^(?:(?:[a-zA-Z0-9._-]{1,255})|(?:common|organizations|consumers)|(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}))$/", $this->container['tenantId'])) {
+                $invalidProperties[] = "invalid value for 'tenantId', must be conform to the pattern /^(?:(?:[a-zA-Z0-9._-]{1,255})|(?:common|organizations|consumers)|(?:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}))$/.";
             }
         return $invalidProperties;
     }

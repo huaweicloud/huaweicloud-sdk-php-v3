@@ -25,6 +25,8 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
     * rapidGrowthTablesResp  异常增长表列表。
     * noPrimaryTablesResp  无主键表列表。
     * noIndexTablesResp  无索引表列表。
+    * analyzeSuccess  统计分析是否成功。
+    * errorMessage  错误信息。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
             'tableTopResp' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceQuerySpaceTopResp[]',
             'rapidGrowthTablesResp' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceQueryRapidGrowthTablesResp[]',
             'noPrimaryTablesResp' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceQuerySpecialTablesResp[]',
-            'noIndexTablesResp' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceQuerySpecialTablesResp[]'
+            'noIndexTablesResp' => '\HuaweiCloud\SDK\Das\V3\Model\HealthReportTableSpaceQuerySpecialTablesResp[]',
+            'analyzeSuccess' => 'bool',
+            'errorMessage' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
     * rapidGrowthTablesResp  异常增长表列表。
     * noPrimaryTablesResp  无主键表列表。
     * noIndexTablesResp  无索引表列表。
+    * analyzeSuccess  统计分析是否成功。
+    * errorMessage  错误信息。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
         'tableTopResp' => null,
         'rapidGrowthTablesResp' => null,
         'noPrimaryTablesResp' => null,
-        'noIndexTablesResp' => null
+        'noIndexTablesResp' => null,
+        'analyzeSuccess' => null,
+        'errorMessage' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
     * rapidGrowthTablesResp  异常增长表列表。
     * noPrimaryTablesResp  无主键表列表。
     * noIndexTablesResp  无索引表列表。
+    * analyzeSuccess  统计分析是否成功。
+    * errorMessage  错误信息。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
             'tableTopResp' => 'table_top_resp',
             'rapidGrowthTablesResp' => 'rapid_growth_tables_resp',
             'noPrimaryTablesResp' => 'no_primary_tables_resp',
-            'noIndexTablesResp' => 'no_index_tables_resp'
+            'noIndexTablesResp' => 'no_index_tables_resp',
+            'analyzeSuccess' => 'analyze_success',
+            'errorMessage' => 'error_message'
     ];
 
     /**
@@ -100,6 +112,8 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
     * rapidGrowthTablesResp  异常增长表列表。
     * noPrimaryTablesResp  无主键表列表。
     * noIndexTablesResp  无索引表列表。
+    * analyzeSuccess  统计分析是否成功。
+    * errorMessage  错误信息。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
             'tableTopResp' => 'setTableTopResp',
             'rapidGrowthTablesResp' => 'setRapidGrowthTablesResp',
             'noPrimaryTablesResp' => 'setNoPrimaryTablesResp',
-            'noIndexTablesResp' => 'setNoIndexTablesResp'
+            'noIndexTablesResp' => 'setNoIndexTablesResp',
+            'analyzeSuccess' => 'setAnalyzeSuccess',
+            'errorMessage' => 'setErrorMessage'
     ];
 
     /**
@@ -118,6 +134,8 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
     * rapidGrowthTablesResp  异常增长表列表。
     * noPrimaryTablesResp  无主键表列表。
     * noIndexTablesResp  无索引表列表。
+    * analyzeSuccess  统计分析是否成功。
+    * errorMessage  错误信息。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
             'tableTopResp' => 'getTableTopResp',
             'rapidGrowthTablesResp' => 'getRapidGrowthTablesResp',
             'noPrimaryTablesResp' => 'getNoPrimaryTablesResp',
-            'noIndexTablesResp' => 'getNoIndexTablesResp'
+            'noIndexTablesResp' => 'getNoIndexTablesResp',
+            'analyzeSuccess' => 'getAnalyzeSuccess',
+            'errorMessage' => 'getErrorMessage'
     ];
 
     /**
@@ -192,6 +212,8 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
         $this->container['rapidGrowthTablesResp'] = isset($data['rapidGrowthTablesResp']) ? $data['rapidGrowthTablesResp'] : null;
         $this->container['noPrimaryTablesResp'] = isset($data['noPrimaryTablesResp']) ? $data['noPrimaryTablesResp'] : null;
         $this->container['noIndexTablesResp'] = isset($data['noIndexTablesResp']) ? $data['noIndexTablesResp'] : null;
+        $this->container['analyzeSuccess'] = isset($data['analyzeSuccess']) ? $data['analyzeSuccess'] : null;
+        $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class HealthReportTableSpaceNewStat implements ModelInterface, ArrayAccess
     public function setNoIndexTablesResp($noIndexTablesResp)
     {
         $this->container['noIndexTablesResp'] = $noIndexTablesResp;
+        return $this;
+    }
+
+    /**
+    * Gets analyzeSuccess
+    *  统计分析是否成功。
+    *
+    * @return bool|null
+    */
+    public function getAnalyzeSuccess()
+    {
+        return $this->container['analyzeSuccess'];
+    }
+
+    /**
+    * Sets analyzeSuccess
+    *
+    * @param bool|null $analyzeSuccess 统计分析是否成功。
+    *
+    * @return $this
+    */
+    public function setAnalyzeSuccess($analyzeSuccess)
+    {
+        $this->container['analyzeSuccess'] = $analyzeSuccess;
+        return $this;
+    }
+
+    /**
+    * Gets errorMessage
+    *  错误信息。
+    *
+    * @return string|null
+    */
+    public function getErrorMessage()
+    {
+        return $this->container['errorMessage'];
+    }
+
+    /**
+    * Sets errorMessage
+    *
+    * @param string|null $errorMessage 错误信息。
+    *
+    * @return $this
+    */
+    public function setErrorMessage($errorMessage)
+    {
+        $this->container['errorMessage'] = $errorMessage;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class Available implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * value  value
-    * maxValue  最大弹性资源量减去故障资源和热备节点的资源。
+    * maxValue  maxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -29,7 +29,7 @@ class Available implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'value' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Value',
-            'maxValue' => 'object',
+            'maxValue' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Value',
             'timestamp' => 'string',
             'window' => 'string'
     ];
@@ -37,7 +37,7 @@ class Available implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * value  value
-    * maxValue  最大弹性资源量减去故障资源和热备节点的资源。
+    * maxValue  maxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -74,7 +74,7 @@ class Available implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * value  value
-    * maxValue  最大弹性资源量减去故障资源和热备节点的资源。
+    * maxValue  maxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -90,7 +90,7 @@ class Available implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * value  value
-    * maxValue  最大弹性资源量减去故障资源和热备节点的资源。
+    * maxValue  maxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -106,7 +106,7 @@ class Available implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * value  value
-    * maxValue  最大弹性资源量减去故障资源和热备节点的资源。
+    * maxValue  maxValue
     * timestamp  UTC时间，格式yyyy-MM-dd'T'HH:mm:ss'Z'。
     * window  统计间隔，1s表示1秒，1m表示1分钟，1h为1小时。
     *
@@ -231,9 +231,9 @@ class Available implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxValue
-    *  最大弹性资源量减去故障资源和热备节点的资源。
+    *  maxValue
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\Value|null
     */
     public function getMaxValue()
     {
@@ -243,7 +243,7 @@ class Available implements ModelInterface, ArrayAccess
     /**
     * Sets maxValue
     *
-    * @param object|null $maxValue 最大弹性资源量减去故障资源和热备节点的资源。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\Value|null $maxValue maxValue
     *
     * @return $this
     */

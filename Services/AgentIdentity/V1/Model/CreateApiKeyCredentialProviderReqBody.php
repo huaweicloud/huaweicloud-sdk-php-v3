@@ -189,20 +189,20 @@ class CreateApiKeyCredentialProviderReqBody implements ModelInterface, ArrayAcce
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,56}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_-]{1,56}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         if ($this->container['apiKey'] === null) {
             $invalidProperties[] = "'apiKey' can't be null";
         }
-            if ((mb_strlen($this->container['apiKey']) > 512)) {
-                $invalidProperties[] = "invalid value for 'apiKey', the character length must be smaller than or equal to 512.";
+            if ((mb_strlen($this->container['apiKey']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'apiKey', the character length must be smaller than or equal to 1024.";
             }
             if ((mb_strlen($this->container['apiKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'apiKey', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[A-Za-z0-9\\-_]+$/", $this->container['apiKey'])) {
-                $invalidProperties[] = "invalid value for 'apiKey', must be conform to the pattern /^[A-Za-z0-9\\-_]+$/.";
+            if (!preg_match("/^\\S(.*\\S)?$/", $this->container['apiKey'])) {
+                $invalidProperties[] = "invalid value for 'apiKey', must be conform to the pattern /^\\S(.*\\S)?$/.";
             }
         return $invalidProperties;
     }

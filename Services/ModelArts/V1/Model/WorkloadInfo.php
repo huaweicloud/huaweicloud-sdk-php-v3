@@ -28,8 +28,8 @@ class WorkloadInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'allocated' => '\HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatistics',
-            'queue' => '\HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatistics',
+            'allocated' => '\HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatisticsInfo',
+            'queue' => '\HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatisticsInfo',
             'timestamp' => 'string',
             'window' => 'string'
     ];
@@ -209,7 +209,7 @@ class WorkloadInfo implements ModelInterface, ArrayAccess
     * Gets allocated
     *  allocated
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatistics|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatisticsInfo|null
     */
     public function getAllocated()
     {
@@ -219,7 +219,7 @@ class WorkloadInfo implements ModelInterface, ArrayAccess
     /**
     * Sets allocated
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatistics|null $allocated allocated
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatisticsInfo|null $allocated allocated
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class WorkloadInfo implements ModelInterface, ArrayAccess
     * Gets queue
     *  queue
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatistics|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatisticsInfo|null
     */
     public function getQueue()
     {
@@ -243,7 +243,7 @@ class WorkloadInfo implements ModelInterface, ArrayAccess
     /**
     * Sets queue
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatistics|null $queue queue
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\WorkloadStatisticsInfo|null $queue queue
     *
     * @return $this
     */

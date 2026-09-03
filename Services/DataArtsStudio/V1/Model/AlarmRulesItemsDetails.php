@@ -47,6 +47,8 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
     * sendInterval  最小通知间隔，单位分钟。
     * dutyScheduleId  值班表id。
     * smnConfigId  smn配置id。
+    * enableRecovery  是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    * enablePersistentAlarm  是否启用持续告警，为true时按发送间隔重复发送告警通知。
     *
     * @var string[]
     */
@@ -77,7 +79,9 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
             'maxSendTimes' => 'int',
             'sendInterval' => 'int',
             'dutyScheduleId' => 'int',
-            'smnConfigId' => 'string'
+            'smnConfigId' => 'string',
+            'enableRecovery' => 'bool',
+            'enablePersistentAlarm' => 'bool'
     ];
 
     /**
@@ -109,6 +113,8 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
     * sendInterval  最小通知间隔，单位分钟。
     * dutyScheduleId  值班表id。
     * smnConfigId  smn配置id。
+    * enableRecovery  是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    * enablePersistentAlarm  是否启用持续告警，为true时按发送间隔重复发送告警通知。
     *
     * @var string[]
     */
@@ -139,7 +145,9 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
         'maxSendTimes' => 'int32',
         'sendInterval' => 'int32',
         'dutyScheduleId' => 'int64',
-        'smnConfigId' => null
+        'smnConfigId' => null,
+        'enableRecovery' => null,
+        'enablePersistentAlarm' => null
     ];
 
     /**
@@ -192,6 +200,8 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
     * sendInterval  最小通知间隔，单位分钟。
     * dutyScheduleId  值班表id。
     * smnConfigId  smn配置id。
+    * enableRecovery  是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    * enablePersistentAlarm  是否启用持续告警，为true时按发送间隔重复发送告警通知。
     *
     * @var string[]
     */
@@ -222,7 +232,9 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
             'maxSendTimes' => 'max_send_times',
             'sendInterval' => 'send_interval',
             'dutyScheduleId' => 'duty_schedule_id',
-            'smnConfigId' => 'smn_config_id'
+            'smnConfigId' => 'smn_config_id',
+            'enableRecovery' => 'enable_recovery',
+            'enablePersistentAlarm' => 'enable_persistent_alarm'
     ];
 
     /**
@@ -254,6 +266,8 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
     * sendInterval  最小通知间隔，单位分钟。
     * dutyScheduleId  值班表id。
     * smnConfigId  smn配置id。
+    * enableRecovery  是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    * enablePersistentAlarm  是否启用持续告警，为true时按发送间隔重复发送告警通知。
     *
     * @var string[]
     */
@@ -284,7 +298,9 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
             'maxSendTimes' => 'setMaxSendTimes',
             'sendInterval' => 'setSendInterval',
             'dutyScheduleId' => 'setDutyScheduleId',
-            'smnConfigId' => 'setSmnConfigId'
+            'smnConfigId' => 'setSmnConfigId',
+            'enableRecovery' => 'setEnableRecovery',
+            'enablePersistentAlarm' => 'setEnablePersistentAlarm'
     ];
 
     /**
@@ -316,6 +332,8 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
     * sendInterval  最小通知间隔，单位分钟。
     * dutyScheduleId  值班表id。
     * smnConfigId  smn配置id。
+    * enableRecovery  是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    * enablePersistentAlarm  是否启用持续告警，为true时按发送间隔重复发送告警通知。
     *
     * @var string[]
     */
@@ -346,7 +364,9 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
             'maxSendTimes' => 'getMaxSendTimes',
             'sendInterval' => 'getSendInterval',
             'dutyScheduleId' => 'getDutyScheduleId',
-            'smnConfigId' => 'getSmnConfigId'
+            'smnConfigId' => 'getSmnConfigId',
+            'enableRecovery' => 'getEnableRecovery',
+            'enablePersistentAlarm' => 'getEnablePersistentAlarm'
     ];
 
     /**
@@ -434,6 +454,8 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
         $this->container['sendInterval'] = isset($data['sendInterval']) ? $data['sendInterval'] : null;
         $this->container['dutyScheduleId'] = isset($data['dutyScheduleId']) ? $data['dutyScheduleId'] : null;
         $this->container['smnConfigId'] = isset($data['smnConfigId']) ? $data['smnConfigId'] : null;
+        $this->container['enableRecovery'] = isset($data['enableRecovery']) ? $data['enableRecovery'] : null;
+        $this->container['enablePersistentAlarm'] = isset($data['enablePersistentAlarm']) ? $data['enablePersistentAlarm'] : null;
     }
 
     /**
@@ -1103,6 +1125,54 @@ class AlarmRulesItemsDetails implements ModelInterface, ArrayAccess
     public function setSmnConfigId($smnConfigId)
     {
         $this->container['smnConfigId'] = $smnConfigId;
+        return $this;
+    }
+
+    /**
+    * Gets enableRecovery
+    *  是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    *
+    * @return bool|null
+    */
+    public function getEnableRecovery()
+    {
+        return $this->container['enableRecovery'];
+    }
+
+    /**
+    * Sets enableRecovery
+    *
+    * @param bool|null $enableRecovery 是否启用恢复通知，为true时作业恢复成功后发送恢复通知。
+    *
+    * @return $this
+    */
+    public function setEnableRecovery($enableRecovery)
+    {
+        $this->container['enableRecovery'] = $enableRecovery;
+        return $this;
+    }
+
+    /**
+    * Gets enablePersistentAlarm
+    *  是否启用持续告警，为true时按发送间隔重复发送告警通知。
+    *
+    * @return bool|null
+    */
+    public function getEnablePersistentAlarm()
+    {
+        return $this->container['enablePersistentAlarm'];
+    }
+
+    /**
+    * Sets enablePersistentAlarm
+    *
+    * @param bool|null $enablePersistentAlarm 是否启用持续告警，为true时按发送间隔重复发送告警通知。
+    *
+    * @return $this
+    */
+    public function setEnablePersistentAlarm($enablePersistentAlarm)
+    {
+        $this->container['enablePersistentAlarm'] = $enablePersistentAlarm;
         return $this;
     }
 

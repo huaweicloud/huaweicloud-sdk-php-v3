@@ -22,21 +22,21 @@ class SetInstanceScheduleEventsRequestBody implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * operationType  **参数解释**：  事件操作类型。  **约束限制**：  不涉及。  **取值范围**：  - execute：授权立即执行。 - cancel：授权取消执行。 - reservation：授权预约执行。  **默认取值**：  不涉及。
     * eventInstances  **参数解释**：  事件信息。  **约束限制**：  批量事件个数不得超过20个。
-    * eventScheduleWindow  **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'operationType' => 'string',
             'eventInstances' => '\HuaweiCloud\SDK\GaussDB\V3\Model\EventInstances[]',
-            'eventScheduleWindow' => 'object'
+            'eventScheduleWindow' => '\HuaweiCloud\SDK\GaussDB\V3\Model\EventScheduleWindow'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * operationType  **参数解释**：  事件操作类型。  **约束限制**：  不涉及。  **取值范围**：  - execute：授权立即执行。 - cancel：授权取消执行。 - reservation：授权预约执行。  **默认取值**：  不涉及。
     * eventInstances  **参数解释**：  事件信息。  **约束限制**：  批量事件个数不得超过20个。
-    * eventScheduleWindow  **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SetInstanceScheduleEventsRequestBody implements ModelInterface, ArrayAcces
     * and the value is the original name
     * operationType  **参数解释**：  事件操作类型。  **约束限制**：  不涉及。  **取值范围**：  - execute：授权立即执行。 - cancel：授权取消执行。 - reservation：授权预约执行。  **默认取值**：  不涉及。
     * eventInstances  **参数解释**：  事件信息。  **约束限制**：  批量事件个数不得超过20个。
-    * eventScheduleWindow  **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class SetInstanceScheduleEventsRequestBody implements ModelInterface, ArrayAcces
     * Array of attributes to setter functions (for deserialization of responses)
     * operationType  **参数解释**：  事件操作类型。  **约束限制**：  不涉及。  **取值范围**：  - execute：授权立即执行。 - cancel：授权取消执行。 - reservation：授权预约执行。  **默认取值**：  不涉及。
     * eventInstances  **参数解释**：  事件信息。  **约束限制**：  批量事件个数不得超过20个。
-    * eventScheduleWindow  **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class SetInstanceScheduleEventsRequestBody implements ModelInterface, ArrayAcces
     * Array of attributes to getter functions (for serialization of requests)
     * operationType  **参数解释**：  事件操作类型。  **约束限制**：  不涉及。  **取值范围**：  - execute：授权立即执行。 - cancel：授权取消执行。 - reservation：授权预约执行。  **默认取值**：  不涉及。
     * eventInstances  **参数解释**：  事件信息。  **约束限制**：  批量事件个数不得超过20个。
-    * eventScheduleWindow  **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    * eventScheduleWindow  eventScheduleWindow
     *
     * @var string[]
     */
@@ -250,9 +250,9 @@ class SetInstanceScheduleEventsRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets eventScheduleWindow
-    *  **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    *  eventScheduleWindow
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\EventScheduleWindow|null
     */
     public function getEventScheduleWindow()
     {
@@ -262,7 +262,7 @@ class SetInstanceScheduleEventsRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets eventScheduleWindow
     *
-    * @param object|null $eventScheduleWindow **参数解释**：  事件执行窗口。  **约束限制**：  当operation_type为reservation时，该字段必传。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\EventScheduleWindow|null $eventScheduleWindow eventScheduleWindow
     *
     * @return $this
     */

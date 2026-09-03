@@ -21,9 +21,9 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  订阅用户名称。
-    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     * status  订阅用户状态。 UNCONFIRMED：未确认 CONFIRMED：已确认 CANCELLED：已取消
-    * group  订阅用户分组。
+    * group  订阅用户分组。该字段支持模糊查询。
     * offset  偏移量。偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     *
@@ -41,9 +41,9 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  订阅用户名称。
-    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     * status  订阅用户状态。 UNCONFIRMED：未确认 CONFIRMED：已确认 CANCELLED：已取消
-    * group  订阅用户分组。
+    * group  订阅用户分组。该字段支持模糊查询。
     * offset  偏移量。偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     *
@@ -82,9 +82,9 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  订阅用户名称。
-    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     * status  订阅用户状态。 UNCONFIRMED：未确认 CONFIRMED：已确认 CANCELLED：已取消
-    * group  订阅用户分组。
+    * group  订阅用户分组。该字段支持模糊查询。
     * offset  偏移量。偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     *
@@ -102,9 +102,9 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  订阅用户名称。
-    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     * status  订阅用户状态。 UNCONFIRMED：未确认 CONFIRMED：已确认 CANCELLED：已取消
-    * group  订阅用户分组。
+    * group  订阅用户分组。该字段支持模糊查询。
     * offset  偏移量。偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     *
@@ -122,9 +122,9 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  订阅用户名称。
-    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    * protocol  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     * status  订阅用户状态。 UNCONFIRMED：未确认 CONFIRMED：已确认 CANCELLED：已取消
-    * group  订阅用户分组。
+    * group  订阅用户分组。该字段支持模糊查询。
     * offset  偏移量。偏移量为一个大于0小于资源总个数的整数，表示查询该偏移量后面的所有的资源，默认值为0。
     * limit  查询数量限制。取值范围：1~100，取值一般为10，20，50。功能说明：每页返回的资源个数。默认值为100。
     *
@@ -183,6 +183,12 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     const PROTOCOL_HTTPS = 'https';
     const PROTOCOL_SMS = 'sms';
     const PROTOCOL_EMAIL = 'email';
+    const PROTOCOL_CALLNOTIFY = 'callnotify';
+    const PROTOCOL_WECHAT = 'wechat';
+    const PROTOCOL_DINGDING = 'dingding';
+    const PROTOCOL_FEISHU = 'feishu';
+    const PROTOCOL_WELINK = 'welink';
+    const PROTOCOL_DING_TALK_BOT = 'ding_talk_bot';
     const STATUS_UNCONFIRMED = 'UNCONFIRMED';
     const STATUS_CONFIRMED = 'CONFIRMED';
     const STATUS_CANCELLED = 'CANCELLED';
@@ -200,6 +206,12 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
             self::PROTOCOL_HTTPS,
             self::PROTOCOL_SMS,
             self::PROTOCOL_EMAIL,
+            self::PROTOCOL_CALLNOTIFY,
+            self::PROTOCOL_WECHAT,
+            self::PROTOCOL_DINGDING,
+            self::PROTOCOL_FEISHU,
+            self::PROTOCOL_WELINK,
+            self::PROTOCOL_DING_TALK_BOT,
         ];
     }
 
@@ -320,7 +332,7 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    *  协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     *
     * @return string|null
     */
@@ -332,7 +344,7 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件
+    * @param string|null $protocol 协议。 http：HTTP终端 https：HTTPS终端 sms：短信 email：邮件 callnotify: 语音 wechat: 企业微信机器人 dingding: 钉钉群机器人 feishu: 飞书群机器人 welink: WeLink群机器人 ding_talk_bot: 个人钉钉协议
     *
     * @return $this
     */
@@ -368,7 +380,7 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  订阅用户分组。
+    *  订阅用户分组。该字段支持模糊查询。
     *
     * @return string|null
     */
@@ -380,7 +392,7 @@ class ListSubscriptionUserRequest implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group 订阅用户分组。
+    * @param string|null $group 订阅用户分组。该字段支持模糊查询。
     *
     * @return $this
     */

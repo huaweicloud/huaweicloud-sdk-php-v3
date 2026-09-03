@@ -25,6 +25,7 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
     * authorizationUrl  URL to initiate authorization (provided when user authorization is required, includes encoded RAR details for user consent)
     * sessionStatus  Status of the user's authorization session (determines next steps in OAuth2 flow)
     * sessionUri  Unique identifier for the user's authentication session (matches request session_uri)
+    * expiresAt  Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
     *
     * @var string[]
     */
@@ -32,7 +33,8 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
             'accessToken' => 'string',
             'authorizationUrl' => 'string',
             'sessionStatus' => 'string',
-            'sessionUri' => 'string'
+            'sessionUri' => 'string',
+            'expiresAt' => '\DateTime'
     ];
 
     /**
@@ -41,6 +43,7 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
     * authorizationUrl  URL to initiate authorization (provided when user authorization is required, includes encoded RAR details for user consent)
     * sessionStatus  Status of the user's authorization session (determines next steps in OAuth2 flow)
     * sessionUri  Unique identifier for the user's authentication session (matches request session_uri)
+    * expiresAt  Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
         'accessToken' => null,
         'authorizationUrl' => null,
         'sessionStatus' => null,
-        'sessionUri' => null
+        'sessionUri' => null,
+        'expiresAt' => 'date-time'
     ];
 
     /**
@@ -78,6 +82,7 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
     * authorizationUrl  URL to initiate authorization (provided when user authorization is required, includes encoded RAR details for user consent)
     * sessionStatus  Status of the user's authorization session (determines next steps in OAuth2 flow)
     * sessionUri  Unique identifier for the user's authentication session (matches request session_uri)
+    * expiresAt  Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
     *
     * @var string[]
     */
@@ -85,7 +90,8 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
             'accessToken' => 'access_token',
             'authorizationUrl' => 'authorization_url',
             'sessionStatus' => 'session_status',
-            'sessionUri' => 'session_uri'
+            'sessionUri' => 'session_uri',
+            'expiresAt' => 'expires_at'
     ];
 
     /**
@@ -94,6 +100,7 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
     * authorizationUrl  URL to initiate authorization (provided when user authorization is required, includes encoded RAR details for user consent)
     * sessionStatus  Status of the user's authorization session (determines next steps in OAuth2 flow)
     * sessionUri  Unique identifier for the user's authentication session (matches request session_uri)
+    * expiresAt  Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
     *
     * @var string[]
     */
@@ -101,7 +108,8 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
             'accessToken' => 'setAccessToken',
             'authorizationUrl' => 'setAuthorizationUrl',
             'sessionStatus' => 'setSessionStatus',
-            'sessionUri' => 'setSessionUri'
+            'sessionUri' => 'setSessionUri',
+            'expiresAt' => 'setExpiresAt'
     ];
 
     /**
@@ -110,6 +118,7 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
     * authorizationUrl  URL to initiate authorization (provided when user authorization is required, includes encoded RAR details for user consent)
     * sessionStatus  Status of the user's authorization session (determines next steps in OAuth2 flow)
     * sessionUri  Unique identifier for the user's authentication session (matches request session_uri)
+    * expiresAt  Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
             'accessToken' => 'getAccessToken',
             'authorizationUrl' => 'getAuthorizationUrl',
             'sessionStatus' => 'getSessionStatus',
-            'sessionUri' => 'getSessionUri'
+            'sessionUri' => 'getSessionUri',
+            'expiresAt' => 'getExpiresAt'
     ];
 
     /**
@@ -197,6 +207,7 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
         $this->container['authorizationUrl'] = isset($data['authorizationUrl']) ? $data['authorizationUrl'] : null;
         $this->container['sessionStatus'] = isset($data['sessionStatus']) ? $data['sessionStatus'] : null;
         $this->container['sessionUri'] = isset($data['sessionUri']) ? $data['sessionUri'] : null;
+        $this->container['expiresAt'] = isset($data['expiresAt']) ? $data['expiresAt'] : null;
     }
 
     /**
@@ -340,6 +351,30 @@ class GetResourceOauth2TokenResponse implements ModelInterface, ArrayAccess
     public function setSessionUri($sessionUri)
     {
         $this->container['sessionUri'] = $sessionUri;
+        return $this;
+    }
+
+    /**
+    * Gets expiresAt
+    *  Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
+    *
+    * @return \DateTime|null
+    */
+    public function getExpiresAt()
+    {
+        return $this->container['expiresAt'];
+    }
+
+    /**
+    * Sets expiresAt
+    *
+    * @param \DateTime|null $expiresAt Absolute expiration time of the access token in RFC 3339 format, UTC timezone.
+    *
+    * @return $this
+    */
+    public function setExpiresAt($expiresAt)
+    {
+        $this->container['expiresAt'] = $expiresAt;
         return $this;
     }
 

@@ -167,8 +167,8 @@ class GetTokenVaultRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['tokenVaultId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'tokenVaultId', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,64}$/", $this->container['tokenVaultId'])) {
-                $invalidProperties[] = "invalid value for 'tokenVaultId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['tokenVaultId'])) {
+                $invalidProperties[] = "invalid value for 'tokenVaultId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         return $invalidProperties;
     }

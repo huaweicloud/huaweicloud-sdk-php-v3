@@ -617,6 +617,68 @@ class AgentIdentityAsyncClient extends Client
     }
 
     /**
+     * 查询身份提供商
+     *
+     * Lists identity providers.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listIdentityProvidersAsync($request)
+    {
+        return $this->listIdentityProvidersAsyncWithHttpInfo($request);
+    }
+    
+    public function listIdentityProvidersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/identity-providers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListIdentityProvidersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListIdentityProvidersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * OAuth2.0 Pushed Authorization Request (PAR) standard authorize API
      *
      * Core OAuth2 authorization endpoint following RFC 9126 PAR spec, only accepts authorization request via request_uri parameter to trigger user authorization flow
@@ -1090,6 +1152,757 @@ class AgentIdentityAsyncClient extends Client
     }
 
     /**
+     * 在指定策略集中创建策略
+     *
+     * Creates a new policy in the specified policy engine.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPolicyAsync($request)
+    {
+        return $this->createPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function createPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\CreatePolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\CreatePolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除策略
+     *
+     * Deletes a policy.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePolicyAsync($request)
+    {
+        return $this->deletePolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function deletePolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}/policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\DeletePolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\DeletePolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询策略详情
+     *
+     * Gets details of a specific policy.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getPolicyAsync($request)
+    {
+        return $this->getPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function getPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}/policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\GetPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\GetPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询策略列表
+     *
+     * Lists policies in the specified policy engine.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPoliciesAsync($request)
+    {
+        return $this->listPoliciesAsyncWithHttpInfo($request);
+    }
+    
+    public function listPoliciesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListPoliciesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListPoliciesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新策略
+     *
+     * Updates an existing policy.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePolicyAsync($request)
+    {
+        return $this->updatePolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function updatePolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}/policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\UpdatePolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\UpdatePolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建策略集
+     *
+     * Creates a new policy engine.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPolicyEngineAsync($request)
+    {
+        return $this->createPolicyEngineAsyncWithHttpInfo($request);
+    }
+    
+    public function createPolicyEngineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\CreatePolicyEngineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\CreatePolicyEngineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除策略集
+     *
+     * Deletes a policy engine.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePolicyEngineAsync($request)
+    {
+        return $this->deletePolicyEngineAsyncWithHttpInfo($request);
+    }
+    
+    public function deletePolicyEngineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\DeletePolicyEngineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\DeletePolicyEngineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询策略集详情
+     *
+     * Gets details of a policy engine.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getPolicyEngineAsync($request)
+    {
+        return $this->getPolicyEngineAsyncWithHttpInfo($request);
+    }
+    
+    public function getPolicyEngineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\GetPolicyEngineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\GetPolicyEngineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询策略集关联的实体列表
+     *
+     * Lists the entities (gateways and token vaults) attached to the specified policy engine.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPolicyEngineAttachmentsAsync($request)
+    {
+        return $this->listPolicyEngineAttachmentsAsyncWithHttpInfo($request);
+    }
+    
+    public function listPolicyEngineAttachmentsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}/attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListPolicyEngineAttachmentsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListPolicyEngineAttachmentsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询策略集列表
+     *
+     * Lists policy engines.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPolicyEnginesAsync($request)
+    {
+        return $this->listPolicyEnginesAsyncWithHttpInfo($request);
+    }
+    
+    public function listPolicyEnginesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListPolicyEnginesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\ListPolicyEnginesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新策略集
+     *
+     * Updates a policy engine (description only).
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePolicyEngineAsync($request)
+    {
+        return $this->updatePolicyEngineAsyncWithHttpInfo($request);
+    }
+    
+    public function updatePolicyEngineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/policy-engines/{policy_engine_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyEngineId'] !== null) {
+            $pathParams['policy_engine_id'] = $localVarParams['policyEngineId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\UpdatePolicyEngineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\UpdatePolicyEngineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建STS凭证提供者
      *
      * Creates a new STS credential provider.
@@ -1482,6 +2295,74 @@ class AgentIdentityAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\GetTokenVaultResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\GetTokenVaultRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新令牌保管库配置
+     *
+     * Updates the token vault configuration including KMS and policy engine settings.
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateTokenVaultAsync($request)
+    {
+        return $this->updateTokenVaultAsyncWithHttpInfo($request);
+    }
+    
+    public function updateTokenVaultAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/token-vaults/{token_vault_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tokenVaultId'] !== null) {
+            $pathParams['token_vault_id'] = $localVarParams['tokenVaultId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\UpdateTokenVaultResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\AgentIdentity\V1\Model\UpdateTokenVaultRequest',
             $asyncRequest = true);
     }
 

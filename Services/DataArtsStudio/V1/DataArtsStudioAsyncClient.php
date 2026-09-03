@@ -22865,6 +22865,89 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 查询实例的上下游依赖
+     *
+     * 查询实例的上下游依赖
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFactoryDependInstancesAsync($request)
+    {
+        return $this->showFactoryDependInstancesAsyncWithHttpInfo($request);
+    }
+    
+    public function showFactoryDependInstancesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/factory/instances/{instance_id}/depend-instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['relation'] !== null) {
+            $queryParams['relation'] = $localVarParams['relation'];
+        }
+        if ($localVarParams['depth'] !== null) {
+            $queryParams['depth'] = $localVarParams['depth'];
+        }
+        if ($localVarParams['latest'] !== null) {
+            $queryParams['latest'] = $localVarParams['latest'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryDependInstancesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryDependInstancesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询环境变量信息
      *
      * 查询环境变量信息
@@ -23042,6 +23125,83 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryFullTextResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryFullTextRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看作业的上下游依赖关系
+     *
+     * 提供对外接口，查看作业的上下游依赖关系及责任人。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFactoryJobDependInstancesAsync($request)
+    {
+        return $this->showFactoryJobDependInstancesAsyncWithHttpInfo($request);
+    }
+    
+    public function showFactoryJobDependInstancesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/factory/jobs/{job_name}/depend';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['relation'] !== null) {
+            $queryParams['relation'] = $localVarParams['relation'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['jobName'] !== null) {
+            $pathParams['job_name'] = $localVarParams['jobName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryJobDependInstancesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowFactoryJobDependInstancesRequest',
             $asyncRequest = true);
     }
 

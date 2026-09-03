@@ -28,6 +28,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
     * filterPolices  filterPolices
+    * extension  extension
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'endpoint' => 'string',
             'remark' => 'string',
             'status' => 'int',
-            'filterPolices' => '\HuaweiCloud\SDK\Smn\V2\Model\SubscriptionsFilterPolicy[]'
+            'filterPolices' => '\HuaweiCloud\SDK\Smn\V2\Model\SubscriptionsFilterPolicy[]',
+            'extension' => '\HuaweiCloud\SDK\Smn\V2\Model\SubscriptionExtensionResponse'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
     * filterPolices  filterPolices
+    * extension  extension
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
         'endpoint' => null,
         'remark' => null,
         'status' => null,
-        'filterPolices' => null
+        'filterPolices' => null,
+        'extension' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
     * filterPolices  filterPolices
+    * extension  extension
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'endpoint' => 'endpoint',
             'remark' => 'remark',
             'status' => 'status',
-            'filterPolices' => 'filter_polices'
+            'filterPolices' => 'filter_polices',
+            'extension' => 'extension'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
     * filterPolices  filterPolices
+    * extension  extension
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'endpoint' => 'setEndpoint',
             'remark' => 'setRemark',
             'status' => 'setStatus',
-            'filterPolices' => 'setFilterPolices'
+            'filterPolices' => 'setFilterPolices',
+            'extension' => 'setExtension'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     * remark  备注。
     * status  订阅者状态：0表示订阅还未确认，1表示已经确认，3表示已经取消确认。
     * filterPolices  filterPolices
+    * extension  extension
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
             'endpoint' => 'getEndpoint',
             'remark' => 'getRemark',
             'status' => 'getStatus',
-            'filterPolices' => 'getFilterPolices'
+            'filterPolices' => 'getFilterPolices',
+            'extension' => 'getExtension'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['filterPolices'] = isset($data['filterPolices']) ? $data['filterPolices'] : null;
+        $this->container['extension'] = isset($data['extension']) ? $data['extension'] : null;
     }
 
     /**
@@ -459,6 +470,30 @@ class ListSubscriptionsItem implements ModelInterface, ArrayAccess
     public function setFilterPolices($filterPolices)
     {
         $this->container['filterPolices'] = $filterPolices;
+        return $this;
+    }
+
+    /**
+    * Gets extension
+    *  extension
+    *
+    * @return \HuaweiCloud\SDK\Smn\V2\Model\SubscriptionExtensionResponse|null
+    */
+    public function getExtension()
+    {
+        return $this->container['extension'];
+    }
+
+    /**
+    * Sets extension
+    *
+    * @param \HuaweiCloud\SDK\Smn\V2\Model\SubscriptionExtensionResponse|null $extension extension
+    *
+    * @return $this
+    */
+    public function setExtension($extension)
+    {
+        $this->container['extension'] = $extension;
         return $this;
     }
 

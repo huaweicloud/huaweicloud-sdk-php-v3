@@ -20,7 +20,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     * stringEquals  字符串精确匹配数组。数组长度[1, 10]，数组内容不能重复，值不能为null或者空字符串“ ”，长度限制[1,32]，中英文、数字、下划线
     *
     * @var string[]
@@ -32,7 +32,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     * stringEquals  字符串精确匹配数组。数组长度[1, 10]，数组内容不能重复，值不能为null或者空字符串“ ”，长度限制[1,32]，中英文、数字、下划线
     *
     * @var string[]
@@ -65,7 +65,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     * stringEquals  字符串精确匹配数组。数组长度[1, 10]，数组内容不能重复，值不能为null或者空字符串“ ”，长度限制[1,32]，中英文、数字、下划线
     *
     * @var string[]
@@ -77,7 +77,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     * stringEquals  字符串精确匹配数组。数组长度[1, 10]，数组内容不能重复，值不能为null或者空字符串“ ”，长度限制[1,32]，中英文、数字、下划线
     *
     * @var string[]
@@ -89,7 +89,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    * name  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     * stringEquals  字符串精确匹配数组。数组长度[1, 10]，数组内容不能重复，值不能为null或者空字符串“ ”，长度限制[1,32]，中英文、数字、下划线
     *
     * @var string[]
@@ -200,7 +200,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    *  过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     *
     * @return string
     */
@@ -212,7 +212,7 @@ class SubscriptionsFilterPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(_)，下划线不得开始、结尾或连续出现），长度限制{1,32}，不能是smn_开头。
+    * @param string $name 过滤策略名称。 包含小写英文字母([a-z])、数字([0-9])、下划线(\\_)，下划线不得开始、结尾或连续出现，长度限制{1,32}，不能是smn_开头。
     *
     * @return $this
     */

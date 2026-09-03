@@ -222,8 +222,8 @@ class StsCredentialProvider implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_-]{1,56}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_-]{1,56}$/.";
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         if ($this->container['urn'] === null) {
             $invalidProperties[] = "'urn' can't be null";

@@ -21,21 +21,25 @@ class ListSubscriptionUserResponseSmsEndpointInfo implements ModelInterface, Arr
     /**
     * Array of property to type mappings. Used for (de)serialization
     * endpoint  终端地址。
+    * verificationCodeEnabled  是否启用验证码发送确认短信，默认为false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'endpoint' => 'string'
+            'endpoint' => 'string',
+            'verificationCodeEnabled' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * endpoint  终端地址。
+    * verificationCodeEnabled  是否启用验证码发送确认短信，默认为false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'endpoint' => null
+        'endpoint' => null,
+        'verificationCodeEnabled' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ListSubscriptionUserResponseSmsEndpointInfo implements ModelInterface, Arr
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * endpoint  终端地址。
+    * verificationCodeEnabled  是否启用验证码发送确认短信，默认为false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'endpoint' => 'endpoint'
+            'endpoint' => 'endpoint',
+            'verificationCodeEnabled' => 'verification_code_enabled'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * endpoint  终端地址。
+    * verificationCodeEnabled  是否启用验证码发送确认短信，默认为false。
     *
     * @var string[]
     */
     protected static $setters = [
-            'endpoint' => 'setEndpoint'
+            'endpoint' => 'setEndpoint',
+            'verificationCodeEnabled' => 'setVerificationCodeEnabled'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * endpoint  终端地址。
+    * verificationCodeEnabled  是否启用验证码发送确认短信，默认为false。
     *
     * @var string[]
     */
     protected static $getters = [
-            'endpoint' => 'getEndpoint'
+            'endpoint' => 'getEndpoint',
+            'verificationCodeEnabled' => 'getVerificationCodeEnabled'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ListSubscriptionUserResponseSmsEndpointInfo implements ModelInterface, Arr
     public function __construct(array $data = null)
     {
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
+        $this->container['verificationCodeEnabled'] = isset($data['verificationCodeEnabled']) ? $data['verificationCodeEnabled'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class ListSubscriptionUserResponseSmsEndpointInfo implements ModelInterface, Arr
     public function setEndpoint($endpoint)
     {
         $this->container['endpoint'] = $endpoint;
+        return $this;
+    }
+
+    /**
+    * Gets verificationCodeEnabled
+    *  是否启用验证码发送确认短信，默认为false。
+    *
+    * @return bool|null
+    */
+    public function getVerificationCodeEnabled()
+    {
+        return $this->container['verificationCodeEnabled'];
+    }
+
+    /**
+    * Sets verificationCodeEnabled
+    *
+    * @param bool|null $verificationCodeEnabled 是否启用验证码发送确认短信，默认为false。
+    *
+    * @return $this
+    */
+    public function setVerificationCodeEnabled($verificationCodeEnabled)
+    {
+        $this->container['verificationCodeEnabled'] = $verificationCodeEnabled;
         return $this;
     }
 

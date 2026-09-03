@@ -22,25 +22,21 @@ class CreateWorkloadAccessTokenResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * workloadAccessToken  An opaque token representing the identity of both the workload and the user (or just the workload if not acting on behalf of a user)
-    * expiration  The date and time on which the workload access token expire.
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'workloadAccessToken' => 'string',
-            'expiration' => '\DateTime'
+            'workloadAccessToken' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * workloadAccessToken  An opaque token representing the identity of both the workload and the user (or just the workload if not acting on behalf of a user)
-    * expiration  The date and time on which the workload access token expire.
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'workloadAccessToken' => null,
-        'expiration' => 'date-time'
+        'workloadAccessToken' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class CreateWorkloadAccessTokenResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * workloadAccessToken  An opaque token representing the identity of both the workload and the user (or just the workload if not acting on behalf of a user)
-    * expiration  The date and time on which the workload access token expire.
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'workloadAccessToken' => 'workload_access_token',
-            'expiration' => 'expiration'
+            'workloadAccessToken' => 'workload_access_token'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * workloadAccessToken  An opaque token representing the identity of both the workload and the user (or just the workload if not acting on behalf of a user)
-    * expiration  The date and time on which the workload access token expire.
     *
     * @var string[]
     */
     protected static $setters = [
-            'workloadAccessToken' => 'setWorkloadAccessToken',
-            'expiration' => 'setExpiration'
+            'workloadAccessToken' => 'setWorkloadAccessToken'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * workloadAccessToken  An opaque token representing the identity of both the workload and the user (or just the workload if not acting on behalf of a user)
-    * expiration  The date and time on which the workload access token expire.
     *
     * @var string[]
     */
     protected static $getters = [
-            'workloadAccessToken' => 'getWorkloadAccessToken',
-            'expiration' => 'getExpiration'
+            'workloadAccessToken' => 'getWorkloadAccessToken'
     ];
 
     /**
@@ -159,7 +149,6 @@ class CreateWorkloadAccessTokenResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workloadAccessToken'] = isset($data['workloadAccessToken']) ? $data['workloadAccessToken'] : null;
-        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
     }
 
     /**
@@ -211,30 +200,6 @@ class CreateWorkloadAccessTokenResponse implements ModelInterface, ArrayAccess
     public function setWorkloadAccessToken($workloadAccessToken)
     {
         $this->container['workloadAccessToken'] = $workloadAccessToken;
-        return $this;
-    }
-
-    /**
-    * Gets expiration
-    *  The date and time on which the workload access token expire.
-    *
-    * @return \DateTime|null
-    */
-    public function getExpiration()
-    {
-        return $this->container['expiration'];
-    }
-
-    /**
-    * Sets expiration
-    *
-    * @param \DateTime|null $expiration The date and time on which the workload access token expire.
-    *
-    * @return $this
-    */
-    public function setExpiration($expiration)
-    {
-        $this->container['expiration'] = $expiration;
         return $this;
     }
 

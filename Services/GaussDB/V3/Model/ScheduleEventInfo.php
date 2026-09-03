@@ -34,7 +34,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
     * type  **参数解释**：  事件类型。  **取值范围**：  - system.lifecycle.rebuild_node：备机重建事件。 - system.lifecycle.db_upgrade：数据库内核小版本升级事件。 - system.scheduled_event.high_cpu_memory：实例CPU或内存高负载事件，需要变更实例规格。
     * extendInfo  **参数解释**：  扩展信息。  **取值范围**：  不涉及。
     * executeTime  **参数解释**：  事件的执行时间。UTC，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  **取值范围**：  不涉及。
-    * executionTimeWindow  **参数解释**：  事件执行窗口。
+    * executionTimeWindow  executionTimeWindow
     * eventEntities  **参数解释**：  事件对象信息列表，包含事件对象ID和事件对象的执行状态
     *
     * @var string[]
@@ -54,7 +54,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
             'type' => 'string',
             'extendInfo' => 'string',
             'executeTime' => 'string',
-            'executionTimeWindow' => 'object',
+            'executionTimeWindow' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ExecuteWindow',
             'eventEntities' => '\HuaweiCloud\SDK\GaussDB\V3\Model\EventEntity[]'
     ];
 
@@ -74,7 +74,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
     * type  **参数解释**：  事件类型。  **取值范围**：  - system.lifecycle.rebuild_node：备机重建事件。 - system.lifecycle.db_upgrade：数据库内核小版本升级事件。 - system.scheduled_event.high_cpu_memory：实例CPU或内存高负载事件，需要变更实例规格。
     * extendInfo  **参数解释**：  扩展信息。  **取值范围**：  不涉及。
     * executeTime  **参数解释**：  事件的执行时间。UTC，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  **取值范围**：  不涉及。
-    * executionTimeWindow  **参数解释**：  事件执行窗口。
+    * executionTimeWindow  executionTimeWindow
     * eventEntities  **参数解释**：  事件对象信息列表，包含事件对象ID和事件对象的执行状态
     *
     * @var string[]
@@ -135,7 +135,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
     * type  **参数解释**：  事件类型。  **取值范围**：  - system.lifecycle.rebuild_node：备机重建事件。 - system.lifecycle.db_upgrade：数据库内核小版本升级事件。 - system.scheduled_event.high_cpu_memory：实例CPU或内存高负载事件，需要变更实例规格。
     * extendInfo  **参数解释**：  扩展信息。  **取值范围**：  不涉及。
     * executeTime  **参数解释**：  事件的执行时间。UTC，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  **取值范围**：  不涉及。
-    * executionTimeWindow  **参数解释**：  事件执行窗口。
+    * executionTimeWindow  executionTimeWindow
     * eventEntities  **参数解释**：  事件对象信息列表，包含事件对象ID和事件对象的执行状态
     *
     * @var string[]
@@ -175,7 +175,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
     * type  **参数解释**：  事件类型。  **取值范围**：  - system.lifecycle.rebuild_node：备机重建事件。 - system.lifecycle.db_upgrade：数据库内核小版本升级事件。 - system.scheduled_event.high_cpu_memory：实例CPU或内存高负载事件，需要变更实例规格。
     * extendInfo  **参数解释**：  扩展信息。  **取值范围**：  不涉及。
     * executeTime  **参数解释**：  事件的执行时间。UTC，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  **取值范围**：  不涉及。
-    * executionTimeWindow  **参数解释**：  事件执行窗口。
+    * executionTimeWindow  executionTimeWindow
     * eventEntities  **参数解释**：  事件对象信息列表，包含事件对象ID和事件对象的执行状态
     *
     * @var string[]
@@ -215,7 +215,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
     * type  **参数解释**：  事件类型。  **取值范围**：  - system.lifecycle.rebuild_node：备机重建事件。 - system.lifecycle.db_upgrade：数据库内核小版本升级事件。 - system.scheduled_event.high_cpu_memory：实例CPU或内存高负载事件，需要变更实例规格。
     * extendInfo  **参数解释**：  扩展信息。  **取值范围**：  不涉及。
     * executeTime  **参数解释**：  事件的执行时间。UTC，格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如偏移1个小时显示为+0100。  **取值范围**：  不涉及。
-    * executionTimeWindow  **参数解释**：  事件执行窗口。
+    * executionTimeWindow  executionTimeWindow
     * eventEntities  **参数解释**：  事件对象信息列表，包含事件对象ID和事件对象的执行状态
     *
     * @var string[]
@@ -675,9 +675,9 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionTimeWindow
-    *  **参数解释**：  事件执行窗口。
+    *  executionTimeWindow
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\ExecuteWindow|null
     */
     public function getExecutionTimeWindow()
     {
@@ -687,7 +687,7 @@ class ScheduleEventInfo implements ModelInterface, ArrayAccess
     /**
     * Sets executionTimeWindow
     *
-    * @param object|null $executionTimeWindow **参数解释**：  事件执行窗口。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\ExecuteWindow|null $executionTimeWindow executionTimeWindow
     *
     * @return $this
     */
