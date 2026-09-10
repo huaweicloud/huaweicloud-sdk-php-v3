@@ -20,7 +20,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * body  body
     *
     * @var string[]
@@ -140,6 +140,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const RESOURCE_TYPE_CPH_SERVER = 'cph-server';
+    const RESOURCE_TYPE_ELASTIC_CLOUD_PHONE = 'elastic-cloud-phone';
     
 
     /**
@@ -151,6 +152,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::RESOURCE_TYPE_CPH_SERVER,
+            self::RESOURCE_TYPE_ELASTIC_CLOUD_PHONE,
         ];
     }
 
@@ -209,7 +211,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。  - cph-server，云手机服务器
+    *  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     *
     * @return string
     */
@@ -221,7 +223,7 @@ class ListResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。  - cph-server，云手机服务器
+    * @param string $resourceType 资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     *
     * @return $this
     */

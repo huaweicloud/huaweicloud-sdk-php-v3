@@ -20,7 +20,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  DataArtsStudio实例id
+    * instanceId  DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  DataArtsStudio实例id
+    * instanceId  DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  DataArtsStudio实例id
+    * instanceId  DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  DataArtsStudio实例id
+    * instanceId  DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  DataArtsStudio实例id
+    * instanceId  DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  DataArtsStudio实例id
+    *  DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class CreateManagerWorkSpaceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId DataArtsStudio实例id
+    * @param string $instanceId DataArts Studio实例ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */

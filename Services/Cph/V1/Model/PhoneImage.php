@@ -26,7 +26,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
     * osName  手机操作系统，不超过36个字节。
     * imageLabel  镜像适用的云手机规格。 - cloud_phone：适用于physical.rx1.xlarge 类型云手机服务器 - cloud_phone_1620：适用于physical.kg1.4xlarge.cp类型云手机服务器 - cloud_game：适用于physical.rx1.xlarge.cg 类型云手游服务器 - cloud_game_1620：适用于physical.kg1.4xlarge.cg 类型云手游服务器 - qemu_phone： 适用于physical.rx1.xlarge 类型云手机服务器中 qemu类型云手机规格
     * imageId  手机镜像唯一标识ID，不超过32个字节。
-    * isSupportEncrypt  当前镜像是否支持文件级加密
+    * isSupportEncrypt  当前镜像是否支持文件级加密。
+    * receiveStatus  共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
             'osName' => 'string',
             'imageLabel' => 'string',
             'imageId' => 'string',
-            'isSupportEncrypt' => 'bool'
+            'isSupportEncrypt' => 'bool',
+            'receiveStatus' => 'int'
     ];
 
     /**
@@ -48,7 +50,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
     * osName  手机操作系统，不超过36个字节。
     * imageLabel  镜像适用的云手机规格。 - cloud_phone：适用于physical.rx1.xlarge 类型云手机服务器 - cloud_phone_1620：适用于physical.kg1.4xlarge.cp类型云手机服务器 - cloud_game：适用于physical.rx1.xlarge.cg 类型云手游服务器 - cloud_game_1620：适用于physical.kg1.4xlarge.cg 类型云手游服务器 - qemu_phone： 适用于physical.rx1.xlarge 类型云手机服务器中 qemu类型云手机规格
     * imageId  手机镜像唯一标识ID，不超过32个字节。
-    * isSupportEncrypt  当前镜像是否支持文件级加密
+    * isSupportEncrypt  当前镜像是否支持文件级加密。
+    * receiveStatus  共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
         'osName' => null,
         'imageLabel' => null,
         'imageId' => null,
-        'isSupportEncrypt' => null
+        'isSupportEncrypt' => null,
+        'receiveStatus' => 'int32'
     ];
 
     /**
@@ -91,7 +95,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
     * osName  手机操作系统，不超过36个字节。
     * imageLabel  镜像适用的云手机规格。 - cloud_phone：适用于physical.rx1.xlarge 类型云手机服务器 - cloud_phone_1620：适用于physical.kg1.4xlarge.cp类型云手机服务器 - cloud_game：适用于physical.rx1.xlarge.cg 类型云手游服务器 - cloud_game_1620：适用于physical.kg1.4xlarge.cg 类型云手游服务器 - qemu_phone： 适用于physical.rx1.xlarge 类型云手机服务器中 qemu类型云手机规格
     * imageId  手机镜像唯一标识ID，不超过32个字节。
-    * isSupportEncrypt  当前镜像是否支持文件级加密
+    * isSupportEncrypt  当前镜像是否支持文件级加密。
+    * receiveStatus  共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
             'osName' => 'os_name',
             'imageLabel' => 'image_label',
             'imageId' => 'image_id',
-            'isSupportEncrypt' => 'is_support_encrypt'
+            'isSupportEncrypt' => 'is_support_encrypt',
+            'receiveStatus' => 'receive_status'
     ];
 
     /**
@@ -113,7 +119,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
     * osName  手机操作系统，不超过36个字节。
     * imageLabel  镜像适用的云手机规格。 - cloud_phone：适用于physical.rx1.xlarge 类型云手机服务器 - cloud_phone_1620：适用于physical.kg1.4xlarge.cp类型云手机服务器 - cloud_game：适用于physical.rx1.xlarge.cg 类型云手游服务器 - cloud_game_1620：适用于physical.kg1.4xlarge.cg 类型云手游服务器 - qemu_phone： 适用于physical.rx1.xlarge 类型云手机服务器中 qemu类型云手机规格
     * imageId  手机镜像唯一标识ID，不超过32个字节。
-    * isSupportEncrypt  当前镜像是否支持文件级加密
+    * isSupportEncrypt  当前镜像是否支持文件级加密。
+    * receiveStatus  共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
             'osName' => 'setOsName',
             'imageLabel' => 'setImageLabel',
             'imageId' => 'setImageId',
-            'isSupportEncrypt' => 'setIsSupportEncrypt'
+            'isSupportEncrypt' => 'setIsSupportEncrypt',
+            'receiveStatus' => 'setReceiveStatus'
     ];
 
     /**
@@ -135,7 +143,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
     * osName  手机操作系统，不超过36个字节。
     * imageLabel  镜像适用的云手机规格。 - cloud_phone：适用于physical.rx1.xlarge 类型云手机服务器 - cloud_phone_1620：适用于physical.kg1.4xlarge.cp类型云手机服务器 - cloud_game：适用于physical.rx1.xlarge.cg 类型云手游服务器 - cloud_game_1620：适用于physical.kg1.4xlarge.cg 类型云手游服务器 - qemu_phone： 适用于physical.rx1.xlarge 类型云手机服务器中 qemu类型云手机规格
     * imageId  手机镜像唯一标识ID，不超过32个字节。
-    * isSupportEncrypt  当前镜像是否支持文件级加密
+    * isSupportEncrypt  当前镜像是否支持文件级加密。
+    * receiveStatus  共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class PhoneImage implements ModelInterface, ArrayAccess
             'osName' => 'getOsName',
             'imageLabel' => 'getImageLabel',
             'imageId' => 'getImageId',
-            'isSupportEncrypt' => 'getIsSupportEncrypt'
+            'isSupportEncrypt' => 'getIsSupportEncrypt',
+            'receiveStatus' => 'getReceiveStatus'
     ];
 
     /**
@@ -214,6 +224,7 @@ class PhoneImage implements ModelInterface, ArrayAccess
         $this->container['imageLabel'] = isset($data['imageLabel']) ? $data['imageLabel'] : null;
         $this->container['imageId'] = isset($data['imageId']) ? $data['imageId'] : null;
         $this->container['isSupportEncrypt'] = isset($data['isSupportEncrypt']) ? $data['isSupportEncrypt'] : null;
+        $this->container['receiveStatus'] = isset($data['receiveStatus']) ? $data['receiveStatus'] : null;
     }
 
     /**
@@ -420,7 +431,7 @@ class PhoneImage implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportEncrypt
-    *  当前镜像是否支持文件级加密
+    *  当前镜像是否支持文件级加密。
     *
     * @return bool|null
     */
@@ -432,13 +443,37 @@ class PhoneImage implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportEncrypt
     *
-    * @param bool|null $isSupportEncrypt 当前镜像是否支持文件级加密
+    * @param bool|null $isSupportEncrypt 当前镜像是否支持文件级加密。
     *
     * @return $this
     */
     public function setIsSupportEncrypt($isSupportEncrypt)
     {
         $this->container['isSupportEncrypt'] = $isSupportEncrypt;
+        return $this;
+    }
+
+    /**
+    * Gets receiveStatus
+    *  共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
+    *
+    * @return int|null
+    */
+    public function getReceiveStatus()
+    {
+        return $this->container['receiveStatus'];
+    }
+
+    /**
+    * Sets receiveStatus
+    *
+    * @param int|null $receiveStatus 共享镜像接收状态（0: 待接收，1: 已接收，2: 已拒绝）
+    *
+    * @return $this
+    */
+    public function setReceiveStatus($receiveStatus)
+    {
+        $this->container['receiveStatus'] = $receiveStatus;
         return $this;
     }
 

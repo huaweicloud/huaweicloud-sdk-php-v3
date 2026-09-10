@@ -27,7 +27,7 @@ class ResetCloudPhoneRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'imageId' => 'string',
-            'phones' => '\HuaweiCloud\SDK\Cph\V1\Model\PhoneProperty[]'
+            'phones' => '\HuaweiCloud\SDK\Cph\V1\Model\ResetPhoneProperty[]'
     ];
 
     /**
@@ -220,7 +220,7 @@ class ResetCloudPhoneRequestBody implements ModelInterface, ArrayAccess
     * Gets phones
     *  云手机列表。
     *
-    * @return \HuaweiCloud\SDK\Cph\V1\Model\PhoneProperty[]
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\ResetPhoneProperty[]
     */
     public function getPhones()
     {
@@ -230,7 +230,7 @@ class ResetCloudPhoneRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets phones
     *
-    * @param \HuaweiCloud\SDK\Cph\V1\Model\PhoneProperty[] $phones 云手机列表。
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\ResetPhoneProperty[] $phones 云手机列表。
     *
     * @return $this
     */

@@ -23,24 +23,28 @@ class ListCloudPhoneServerModelsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求的唯一标识ID。
     * serverModels  云手机服务器的规格信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'serverModels' => '\HuaweiCloud\SDK\Cph\V1\Model\ServerModel[]'
+            'serverModels' => '\HuaweiCloud\SDK\Cph\V1\Model\ServerModel[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneServerModelsResponseBodyPageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求的唯一标识ID。
     * serverModels  云手机服务器的规格信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'serverModels' => null
+        'serverModels' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListCloudPhoneServerModelsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  请求的唯一标识ID。
     * serverModels  云手机服务器的规格信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'serverModels' => 'server_models'
+            'serverModels' => 'server_models',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求的唯一标识ID。
     * serverModels  云手机服务器的规格信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'serverModels' => 'setServerModels'
+            'serverModels' => 'setServerModels',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求的唯一标识ID。
     * serverModels  云手机服务器的规格信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'serverModels' => 'getServerModels'
+            'serverModels' => 'getServerModels',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListCloudPhoneServerModelsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['serverModels'] = isset($data['serverModels']) ? $data['serverModels'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListCloudPhoneServerModelsResponse implements ModelInterface, ArrayAccess
     public function setServerModels($serverModels)
     {
         $this->container['serverModels'] = $serverModels;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneServerModelsResponseBodyPageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneServerModelsResponseBodyPageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

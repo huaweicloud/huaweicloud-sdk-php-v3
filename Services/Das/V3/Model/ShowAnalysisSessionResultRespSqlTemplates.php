@@ -23,6 +23,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
     * sqlTemplate  SQL模板
     * databaseName  数据库名
     * totalCount  总执行次数
+    * avgExecuteTime  平均执行耗时（秒）
+    * totalExecuteTime  总执行耗时（秒）
     * topStateDurationList  当前模板下状态持续时间长TOP会话列表
     * topTransactionDurationList  当前模板下事务持续时间长TOP会话列表
     *
@@ -32,6 +34,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
             'sqlTemplate' => 'string',
             'databaseName' => 'string',
             'totalCount' => 'int',
+            'avgExecuteTime' => 'double',
+            'totalExecuteTime' => 'double',
             'topStateDurationList' => '\HuaweiCloud\SDK\Das\V3\Model\ShowAnalysisSessionResultRespTopStateDuration[]',
             'topTransactionDurationList' => '\HuaweiCloud\SDK\Das\V3\Model\ShowAnalysisSessionResultRespTopStateDuration[]'
     ];
@@ -41,6 +45,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
     * sqlTemplate  SQL模板
     * databaseName  数据库名
     * totalCount  总执行次数
+    * avgExecuteTime  平均执行耗时（秒）
+    * totalExecuteTime  总执行耗时（秒）
     * topStateDurationList  当前模板下状态持续时间长TOP会话列表
     * topTransactionDurationList  当前模板下事务持续时间长TOP会话列表
     *
@@ -50,6 +56,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
         'sqlTemplate' => null,
         'databaseName' => null,
         'totalCount' => 'int64',
+        'avgExecuteTime' => 'double',
+        'totalExecuteTime' => 'double',
         'topStateDurationList' => null,
         'topTransactionDurationList' => null
     ];
@@ -80,6 +88,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
     * sqlTemplate  SQL模板
     * databaseName  数据库名
     * totalCount  总执行次数
+    * avgExecuteTime  平均执行耗时（秒）
+    * totalExecuteTime  总执行耗时（秒）
     * topStateDurationList  当前模板下状态持续时间长TOP会话列表
     * topTransactionDurationList  当前模板下事务持续时间长TOP会话列表
     *
@@ -89,6 +99,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
             'sqlTemplate' => 'sql_template',
             'databaseName' => 'database_name',
             'totalCount' => 'total_count',
+            'avgExecuteTime' => 'avg_execute_time',
+            'totalExecuteTime' => 'total_execute_time',
             'topStateDurationList' => 'top_state_duration_list',
             'topTransactionDurationList' => 'top_transaction_duration_list'
     ];
@@ -98,6 +110,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
     * sqlTemplate  SQL模板
     * databaseName  数据库名
     * totalCount  总执行次数
+    * avgExecuteTime  平均执行耗时（秒）
+    * totalExecuteTime  总执行耗时（秒）
     * topStateDurationList  当前模板下状态持续时间长TOP会话列表
     * topTransactionDurationList  当前模板下事务持续时间长TOP会话列表
     *
@@ -107,6 +121,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
             'sqlTemplate' => 'setSqlTemplate',
             'databaseName' => 'setDatabaseName',
             'totalCount' => 'setTotalCount',
+            'avgExecuteTime' => 'setAvgExecuteTime',
+            'totalExecuteTime' => 'setTotalExecuteTime',
             'topStateDurationList' => 'setTopStateDurationList',
             'topTransactionDurationList' => 'setTopTransactionDurationList'
     ];
@@ -116,6 +132,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
     * sqlTemplate  SQL模板
     * databaseName  数据库名
     * totalCount  总执行次数
+    * avgExecuteTime  平均执行耗时（秒）
+    * totalExecuteTime  总执行耗时（秒）
     * topStateDurationList  当前模板下状态持续时间长TOP会话列表
     * topTransactionDurationList  当前模板下事务持续时间长TOP会话列表
     *
@@ -125,6 +143,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
             'sqlTemplate' => 'getSqlTemplate',
             'databaseName' => 'getDatabaseName',
             'totalCount' => 'getTotalCount',
+            'avgExecuteTime' => 'getAvgExecuteTime',
+            'totalExecuteTime' => 'getTotalExecuteTime',
             'topStateDurationList' => 'getTopStateDurationList',
             'topTransactionDurationList' => 'getTopTransactionDurationList'
     ];
@@ -190,6 +210,8 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
         $this->container['sqlTemplate'] = isset($data['sqlTemplate']) ? $data['sqlTemplate'] : null;
         $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['avgExecuteTime'] = isset($data['avgExecuteTime']) ? $data['avgExecuteTime'] : null;
+        $this->container['totalExecuteTime'] = isset($data['totalExecuteTime']) ? $data['totalExecuteTime'] : null;
         $this->container['topStateDurationList'] = isset($data['topStateDurationList']) ? $data['topStateDurationList'] : null;
         $this->container['topTransactionDurationList'] = isset($data['topTransactionDurationList']) ? $data['topTransactionDurationList'] : null;
     }
@@ -210,6 +232,12 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
         }
         if ($this->container['totalCount'] === null) {
             $invalidProperties[] = "'totalCount' can't be null";
+        }
+        if ($this->container['avgExecuteTime'] === null) {
+            $invalidProperties[] = "'avgExecuteTime' can't be null";
+        }
+        if ($this->container['totalExecuteTime'] === null) {
+            $invalidProperties[] = "'totalExecuteTime' can't be null";
         }
         if ($this->container['topStateDurationList'] === null) {
             $invalidProperties[] = "'topStateDurationList' can't be null";
@@ -300,6 +328,54 @@ class ShowAnalysisSessionResultRespSqlTemplates implements ModelInterface, Array
     public function setTotalCount($totalCount)
     {
         $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets avgExecuteTime
+    *  平均执行耗时（秒）
+    *
+    * @return double
+    */
+    public function getAvgExecuteTime()
+    {
+        return $this->container['avgExecuteTime'];
+    }
+
+    /**
+    * Sets avgExecuteTime
+    *
+    * @param double $avgExecuteTime 平均执行耗时（秒）
+    *
+    * @return $this
+    */
+    public function setAvgExecuteTime($avgExecuteTime)
+    {
+        $this->container['avgExecuteTime'] = $avgExecuteTime;
+        return $this;
+    }
+
+    /**
+    * Gets totalExecuteTime
+    *  总执行耗时（秒）
+    *
+    * @return double
+    */
+    public function getTotalExecuteTime()
+    {
+        return $this->container['totalExecuteTime'];
+    }
+
+    /**
+    * Sets totalExecuteTime
+    *
+    * @param double $totalExecuteTime 总执行耗时（秒）
+    *
+    * @return $this
+    */
+    public function setTotalExecuteTime($totalExecuteTime)
+    {
+        $this->container['totalExecuteTime'] = $totalExecuteTime;
         return $this;
     }
 

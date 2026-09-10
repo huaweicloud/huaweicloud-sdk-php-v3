@@ -96,6 +96,139 @@ class CphAsyncClient extends Client
     }
 
     /**
+     * 挂载共享文件系统
+     *
+     * 将指定的共享文件系统挂载到多个云手机服务器。单个共享文件系统同时挂载的服务器数量建议不超过50台。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function attachShareFilesystemAsync($request)
+    {
+        return $this->attachShareFilesystemAsyncWithHttpInfo($request);
+    }
+    
+    public function attachShareFilesystemAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/servers/attach-share-filesystem';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cph\V1\Model\AttachShareFilesystemResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cph\V1\Model\AttachShareFilesystemRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 授权计划事件
+     *
+     * 授权计划事件。当系统上报计划事件时，需要对服务器进行“授权维护”操作。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function authorizeScheduledEventAsync($request)
+    {
+        return $this->authorizeScheduledEventAsyncWithHttpInfo($request);
+    }
+    
+    public function authorizeScheduledEventAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloud-phone/scheduled-events/{event_id}/authorize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['eventId'] !== null) {
+            $pathParams['event_id'] = $localVarParams['eventId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cph\V1\Model\AuthorizeScheduledEventResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cph\V1\Model\AuthorizeScheduledEventRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量添加标签
      *
      * 批量添加标签。
@@ -240,7 +373,7 @@ class CphAsyncClient extends Client
     /**
      * 导出云手机数据
      *
-     * 批量导出云手机中的数据。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+     * 批量导出云手机中的数据，不支持导出共享应用及其数据文件。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -572,7 +705,7 @@ class CphAsyncClient extends Client
     /**
      * 创建云手机裸服务器
      *
-     * 该接口创建的服务器仅包含服务器和服务器的镜像，不包含云手机实例和镜像等内容。若需要创建包含云手机实例的服务器，请使用创建云手机服务器接口。
+     * 该接口创建的服务器仅包含服务器和服务器的镜像，不包含云手机实例和镜像等内容。若需创建包含云手机实例的服务器，请使用创建云手机服务器接口。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1031,6 +1164,71 @@ class CphAsyncClient extends Client
     }
 
     /**
+     * 卸载共享文件系统
+     *
+     * 卸载多个云手机服务器上的共享文件系统
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function detachShareFilesystemAsync($request)
+    {
+        return $this->detachShareFilesystemAsyncWithHttpInfo($request);
+    }
+    
+    public function detachShareFilesystemAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/servers/detach-share-filesystem';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cph\V1\Model\DetachShareFilesystemResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cph\V1\Model\DetachShareFilesystemRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 扩容云手机数据盘大小
      *
      * 扩容云手机数据盘大小
@@ -1195,6 +1393,12 @@ class CphAsyncClient extends Client
         if ($localVarParams['imageType'] !== null) {
             $queryParams['image_type'] = $localVarParams['imageType'];
         }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1330,6 +1534,12 @@ class CphAsyncClient extends Client
         }
         if ($localVarParams['productType'] !== null) {
             $queryParams['product_type'] = $localVarParams['productType'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
 
         if ($multipart) {
@@ -1640,6 +1850,12 @@ class CphAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
         }
         if ($localVarParams['imageId'] !== null) {
             $pathParams['image_id'] = $localVarParams['imageId'];
@@ -2042,6 +2258,171 @@ class CphAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cph\V1\Model\ListResourceTagsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cph\V1\Model\ListResourceTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询计划事件列表
+     *
+     * 查询服务器计划事件列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listScheduledEventsAsync($request)
+    {
+        return $this->listScheduledEventsAsyncWithHttpInfo($request);
+    }
+    
+    public function listScheduledEventsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloud-phone/scheduled-events';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['eventId'] !== null) {
+            $queryParams['event_id'] = $localVarParams['eventId'];
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $queryParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($localVarParams['publishSince'] !== null) {
+            $queryParams['publish_since'] = $localVarParams['publishSince'];
+        }
+        if ($localVarParams['publishUntil'] !== null) {
+            $queryParams['publish_until'] = $localVarParams['publishUntil'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cph\V1\Model\ListScheduledEventsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cph\V1\Model\ListScheduledEventsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询服务器已安装共享应用列表
+     *
+     * 该接口查询云手机服务器上最新采集的已安装的共享应用快照，采集在云手机服务器上定时每两小时执行一次。
+     * 注意存在以下限制：
+     * 1.云手机服务器安装不同的共享应用数量不能超过10000个，超过限制不会采集该服务器数据。
+     * 2.推送安装的共享应用包名只包含大小写字母、数字、下划线、点，不能以数字和下划线开头，点不能作为结尾且包名中至少有一个点，点后必须以字母开头，长度不超过128。不符合该限制的共享应用包名不会采集。
+     * 3.推送安装的共享应用版本只包含字母、数字、连字符、下划线、点，无空格，不能以连字符、点开头，长度不超过32。不符合该限制的共享应用包版本不会采集。
+     * 4.同一个服务器上同一个已安装的共享应用版本建议不要超过60个。超过会影响该应用的采集。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listShareAppsSnapshotAsync($request)
+    {
+        return $this->listShareAppsSnapshotAsyncWithHttpInfo($request);
+    }
+    
+    public function listShareAppsSnapshotAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/servers/{server_id}/share-apps-snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['packageName'] !== null) {
+            $queryParams['package_name'] = $localVarParams['packageName'];
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cph\V1\Model\ListShareAppsSnapshotResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cph\V1\Model\ListShareAppsSnapshotRequest',
             $asyncRequest = true);
     }
 
@@ -2975,7 +3356,7 @@ class CphAsyncClient extends Client
     /**
      * 更新共享镜像接受信息
      *
-     * 用户收到共享镜像后，选择接受或拒绝共享镜像。未接受的共享镜像无法使用。
+     * 用户收到共享镜像后，选择接受或者拒绝共享镜像。未接受的共享镜像无法使用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3174,6 +3555,74 @@ class CphAsyncClient extends Client
     }
 
     /**
+     * 修改计划事件预约时间
+     *
+     * 更新计划事件的执行开始时间。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateScheduledEventAsync($request)
+    {
+        return $this->updateScheduledEventAsyncWithHttpInfo($request);
+    }
+    
+    public function updateScheduledEventAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/cloud-phone/scheduled-events/{event_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['eventId'] !== null) {
+            $pathParams['event_id'] = $localVarParams['eventId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cph\V1\Model\UpdateScheduledEventResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cph\V1\Model\UpdateScheduledEventRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改云手机服务器名称
      *
      * 根据serverId修改serverName。
@@ -3245,7 +3694,7 @@ class CphAsyncClient extends Client
      * 安装apk
      *
      * 在云手机中安装apk。系统会将指定的apk文件下载后直接安装到云手机中。
-     * 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk，如果一次传多个apk只有第一个安装成功；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
+     * 支持安装单apk应用和多apk应用。可使用install命令安装单apk应用，一次只支持安装一个apk，只能传一个apk；可使用install-multiple命令安装多apk应用（多apk应用为单个应用拆分成多个apk），一次只支持同一个应用的多个apk。该接口为异步接口。[接口调用前请先确保已完成CPH服务操作OBS桶的委托授权。委托CPH操作OBS桶请参见[委托CPH操作OBS桶](https://support.huaweicloud.com/bestpractice-cph/cph_bp_0050.html)。](tag:hws)
      * - 管理面性能有限，对相同服务器批量执行的ADB命令，将会阻塞云手机其他任务执行。
      * - 允许安装的apk大小限制为2G（即不可将obs桶内大于2G的apk安装到手机中），超过限制将返回错误。
      * 

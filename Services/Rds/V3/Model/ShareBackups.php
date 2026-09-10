@@ -31,7 +31,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
     * instanceId  备份所在实例ID。
     * instanceName  备份所在实例名称。
     * instanceStatus  备份所在实例状态。
-    * datastore  数据库版本信息。
+    * datastore  datastore
     * userName  共享者用户名称。
     *
     * @var string[]
@@ -48,7 +48,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'instanceName' => 'string',
             'instanceStatus' => 'string',
-            'datastore' => 'object',
+            'datastore' => '\HuaweiCloud\SDK\Rds\V3\Model\ShareBackupDatastore',
             'userName' => 'string'
     ];
 
@@ -65,7 +65,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
     * instanceId  备份所在实例ID。
     * instanceName  备份所在实例名称。
     * instanceStatus  备份所在实例状态。
-    * datastore  数据库版本信息。
+    * datastore  datastore
     * userName  共享者用户名称。
     *
     * @var string[]
@@ -120,7 +120,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
     * instanceId  备份所在实例ID。
     * instanceName  备份所在实例名称。
     * instanceStatus  备份所在实例状态。
-    * datastore  数据库版本信息。
+    * datastore  datastore
     * userName  共享者用户名称。
     *
     * @var string[]
@@ -154,7 +154,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
     * instanceId  备份所在实例ID。
     * instanceName  备份所在实例名称。
     * instanceStatus  备份所在实例状态。
-    * datastore  数据库版本信息。
+    * datastore  datastore
     * userName  共享者用户名称。
     *
     * @var string[]
@@ -188,7 +188,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
     * instanceId  备份所在实例ID。
     * instanceName  备份所在实例名称。
     * instanceStatus  备份所在实例状态。
-    * datastore  数据库版本信息。
+    * datastore  datastore
     * userName  共享者用户名称。
     *
     * @var string[]
@@ -570,9 +570,9 @@ class ShareBackups implements ModelInterface, ArrayAccess
 
     /**
     * Gets datastore
-    *  数据库版本信息。
+    *  datastore
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ShareBackupDatastore|null
     */
     public function getDatastore()
     {
@@ -582,7 +582,7 @@ class ShareBackups implements ModelInterface, ArrayAccess
     /**
     * Sets datastore
     *
-    * @param object|null $datastore 数据库版本信息。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ShareBackupDatastore|null $datastore datastore
     *
     * @return $this
     */

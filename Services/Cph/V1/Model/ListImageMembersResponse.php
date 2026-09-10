@@ -22,21 +22,25 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * members  镜像成员详情
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'members' => '\HuaweiCloud\SDK\Cph\V1\Model\ListImageMembersView[]'
+            'members' => '\HuaweiCloud\SDK\Cph\V1\Model\ListImageMembersView[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneImagesResponseBodyPageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * members  镜像成员详情
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'members' => null
+        'members' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * members  镜像成员详情
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'members' => 'members'
+            'members' => 'members',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * members  镜像成员详情
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'members' => 'setMembers'
+            'members' => 'setMembers',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * members  镜像成员详情
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'members' => 'getMembers'
+            'members' => 'getMembers',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListImageMembersResponse implements ModelInterface, ArrayAccess
     public function setMembers($members)
     {
         $this->container['members'] = $members;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneImagesResponseBodyPageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneImagesResponseBodyPageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

@@ -163,6 +163,73 @@ class VpcClient extends Client
     }
 
     /**
+     * 挂载辅助弹性网卡
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function attachSubNetworkInterface($request)
+    {
+        return $this->attachSubNetworkInterfaceWithHttpInfo($request);
+    }
+
+    public function attachSubNetworkInterfaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}/attach';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\AttachSubNetworkInterfaceResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\AttachSubNetworkInterfaceRequest');
+    }
+
+    /**
      * 批量添加端口资源标签
      *
      * 为指定的端口批量添加标签。
@@ -365,6 +432,75 @@ class VpcClient extends Client
     }
 
     /**
+     * 批量添加辅助弹性网卡资源标签
+     *
+     * 为指定的辅助弹性网卡资源实例批量添加标签。
+     * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateSubNetworkInterfaceTags($request)
+    {
+        return $this->batchCreateSubNetworkInterfaceTagsWithHttpInfo($request);
+    }
+
+    public function batchCreateSubNetworkInterfaceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceTagsRequest');
+    }
+
+    /**
      * 批量删除端口资源标签
      *
      * 为指定的端口资源实例批量删除标签。
@@ -434,6 +570,75 @@ class VpcClient extends Client
     }
 
     /**
+     * 批量删除辅助弹性网卡资源标签
+     *
+     * 为指定的辅助弹性网卡资源实例批量删除标签。
+     * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSubNetworkInterfaceTags($request)
+    {
+        return $this->batchDeleteSubNetworkInterfaceTagsWithHttpInfo($request);
+    }
+
+    public function batchDeleteSubNetworkInterfaceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchDeleteSubNetworkInterfaceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchDeleteSubNetworkInterfaceTagsRequest');
+    }
+
+    /**
      * 查询端口资源实例数量
      *
      * 使用标签过滤查询端口实例数量。
@@ -496,6 +701,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CountPortsByTagsResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CountPortsByTagsRequest');
+    }
+
+    /**
+     * 查询辅助弹性网卡资源实例数量
+     *
+     * 使用标签过滤查询辅助弹性网卡实例数量。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countSubNetworkInterfacesByTags($request)
+    {
+        return $this->countSubNetworkInterfacesByTagsWithHttpInfo($request);
+    }
+
+    public function countSubNetworkInterfacesByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/resource-instances/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CountSubNetworkInterfacesByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CountSubNetworkInterfacesByTagsRequest');
     }
 
     /**
@@ -760,6 +1030,75 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 添加辅助弹性网卡资源标签
+     *
+     * 给指定辅助弹性网卡资源实例增加标签信息。
+     * 此接口为幂等接口：创建时，如果创建的标签之前已经存在（key相同），则覆盖之前的标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSubNetworkInterfaceTag($request)
+    {
+        return $this->createSubNetworkInterfaceTagWithHttpInfo($request);
+    }
+
+    public function createSubNetworkInterfaceTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateSubNetworkInterfaceTagRequest');
     }
 
     /**
@@ -1287,6 +1626,75 @@ class VpcClient extends Client
     }
 
     /**
+     * 删除辅助弹性网卡资源标签
+     *
+     * 删除指定辅助弹性网卡资源实例的标签信息
+     * 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSubNetworkInterfaceTag($request)
+    {
+        return $this->deleteSubNetworkInterfaceTagWithHttpInfo($request);
+    }
+
+    public function deleteSubNetworkInterfaceTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags/{tag_key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $pathParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteSubNetworkInterfaceTagRequest');
+    }
+
+    /**
      * 删除流量镜像筛选条件
      *
      * 删除流量镜像筛选条件
@@ -1544,6 +1952,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteVirsubnetCidrReservationResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteVirsubnetCidrReservationRequest');
+    }
+
+    /**
+     * 卸载辅助弹性网卡
+     *
+     * 辅助弹性网卡支持从云服务器网卡之间迁移，用户可以通过此接口从云服务器网卡中解绑辅助弹性网卡，再绑定辅助弹性网卡到其他云服务器网卡上。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function detachSubNetworkInterface($request)
+    {
+        return $this->detachSubNetworkInterfaceWithHttpInfo($request);
+    }
+
+    public function detachSubNetworkInterfaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/sub-network-interfaces/{sub_network_interface_id}/detach';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DetachSubNetworkInterfaceResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DetachSubNetworkInterfaceRequest');
     }
 
     /**
@@ -1989,6 +2462,68 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询辅助弹性网卡项目标签
+     *
+     * 查询租户在指定项目下，辅助弹性网卡资源的所有标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSubNetworkInterfaceTags($request)
+    {
+        return $this->listSubNetworkInterfaceTagsWithHttpInfo($request);
+    }
+
+    public function listSubNetworkInterfaceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfaceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfaceTagsRequest');
+    }
+
+    /**
      * 查询租户下辅助弹性网卡列表
      *
      * 查询辅助弹性网卡列表，单次查询最多返回2000条数据
@@ -2075,6 +2610,77 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesRequest');
+    }
+
+    /**
+     * 查询辅助弹性网卡资源实例列表
+     *
+     * 使用标签过滤，查询辅助弹性网卡实例列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSubNetworkInterfacesByTags($request)
+    {
+        return $this->listSubNetworkInterfacesByTagsWithHttpInfo($request);
+    }
+
+    public function listSubNetworkInterfacesByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/resource-instances/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListSubNetworkInterfacesByTagsRequest');
     }
 
     /**
@@ -3132,6 +3738,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 查询辅助弹性网卡资源标签
+     *
+     * 查询指定辅助弹性网卡实例的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSubNetworkInterfaceTags($request)
+    {
+        return $this->showSubNetworkInterfaceTagsWithHttpInfo($request);
+    }
+
+    public function showSubNetworkInterfaceTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/sub-network-interfaces/{sub_network_interface_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['subNetworkInterfaceId'] !== null) {
+            $pathParams['sub_network_interface_id'] = $localVarParams['subNetworkInterfaceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowSubNetworkInterfaceTagsRequest');
     }
 
     /**

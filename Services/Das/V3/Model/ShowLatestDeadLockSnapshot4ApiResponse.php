@@ -30,7 +30,7 @@ class ShowLatestDeadLockSnapshot4ApiResponse implements ModelInterface, ArrayAcc
     protected static $openAPITypes = [
             'findLock' => 'bool',
             'happenTime' => 'int',
-            'mysqlDeadLock' => '\HuaweiCloud\SDK\Das\V3\Model\MySQLDeadLock'
+            'mysqlDeadLock' => '\HuaweiCloud\SDK\Das\V3\Model\MySQLLatestDeadLock'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ShowLatestDeadLockSnapshot4ApiResponse implements ModelInterface, ArrayAcc
     * Gets mysqlDeadLock
     *  mysqlDeadLock
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\MySQLDeadLock|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\MySQLLatestDeadLock|null
     */
     public function getMysqlDeadLock()
     {
@@ -257,7 +257,7 @@ class ShowLatestDeadLockSnapshot4ApiResponse implements ModelInterface, ArrayAcc
     /**
     * Sets mysqlDeadLock
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\MySQLDeadLock|null $mysqlDeadLock mysqlDeadLock
+    * @param \HuaweiCloud\SDK\Das\V3\Model\MySQLLatestDeadLock|null $mysqlDeadLock mysqlDeadLock
     *
     * @return $this
     */

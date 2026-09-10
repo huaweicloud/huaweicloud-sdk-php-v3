@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Evs\V2\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UnsubscribeVolume implements ModelInterface, ArrayAccess
+class GetInstancesOpsResourceUsageResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,38 +17,38 @@ class UnsubscribeVolume implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UnsubscribeVolume';
+    protected static $openAPIModelName = 'GetInstancesOpsResourceUsageResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * volumeId  卷id对应的结果
-    * orderId  卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
-    * result  volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
-    * failReason  当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * cpu  cpu
+    * mem  mem
+    * disk  disk
+    * io  io
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'volumeId' => 'string',
-            'orderId' => 'string',
-            'result' => 'string',
-            'failReason' => 'string'
+            'cpu' => '\HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage',
+            'mem' => '\HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage',
+            'disk' => '\HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage',
+            'io' => '\HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * volumeId  卷id对应的结果
-    * orderId  卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
-    * result  volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
-    * failReason  当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * cpu  cpu
+    * mem  mem
+    * disk  disk
+    * io  io
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'volumeId' => null,
-        'orderId' => null,
-        'result' => null,
-        'failReason' => null
+        'cpu' => null,
+        'mem' => null,
+        'disk' => null,
+        'io' => null
     ];
 
     /**
@@ -73,50 +74,50 @@ class UnsubscribeVolume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * volumeId  卷id对应的结果
-    * orderId  卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
-    * result  volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
-    * failReason  当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * cpu  cpu
+    * mem  mem
+    * disk  disk
+    * io  io
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'volumeId' => 'volume_id',
-            'orderId' => 'order_id',
-            'result' => 'result',
-            'failReason' => 'fail_reason'
+            'cpu' => 'cpu',
+            'mem' => 'mem',
+            'disk' => 'disk',
+            'io' => 'io'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * volumeId  卷id对应的结果
-    * orderId  卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
-    * result  volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
-    * failReason  当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * cpu  cpu
+    * mem  mem
+    * disk  disk
+    * io  io
     *
     * @var string[]
     */
     protected static $setters = [
-            'volumeId' => 'setVolumeId',
-            'orderId' => 'setOrderId',
-            'result' => 'setResult',
-            'failReason' => 'setFailReason'
+            'cpu' => 'setCpu',
+            'mem' => 'setMem',
+            'disk' => 'setDisk',
+            'io' => 'setIo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * volumeId  卷id对应的结果
-    * orderId  卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
-    * result  volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
-    * failReason  当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * cpu  cpu
+    * mem  mem
+    * disk  disk
+    * io  io
     *
     * @var string[]
     */
     protected static $getters = [
-            'volumeId' => 'getVolumeId',
-            'orderId' => 'getOrderId',
-            'result' => 'getResult',
-            'failReason' => 'getFailReason'
+            'cpu' => 'getCpu',
+            'mem' => 'getMem',
+            'disk' => 'getDisk',
+            'io' => 'getIo'
     ];
 
     /**
@@ -177,10 +178,10 @@ class UnsubscribeVolume implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['volumeId'] = isset($data['volumeId']) ? $data['volumeId'] : null;
-        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
-        $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
+        $this->container['cpu'] = isset($data['cpu']) ? $data['cpu'] : null;
+        $this->container['mem'] = isset($data['mem']) ? $data['mem'] : null;
+        $this->container['disk'] = isset($data['disk']) ? $data['disk'] : null;
+        $this->container['io'] = isset($data['io']) ? $data['io'] : null;
     }
 
     /**
@@ -191,12 +192,6 @@ class UnsubscribeVolume implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['volumeId'] === null) {
-            $invalidProperties[] = "'volumeId' can't be null";
-        }
-        if ($this->container['result'] === null) {
-            $invalidProperties[] = "'result' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -212,98 +207,98 @@ class UnsubscribeVolume implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets volumeId
-    *  卷id对应的结果
+    * Gets cpu
+    *  cpu
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null
     */
-    public function getVolumeId()
+    public function getCpu()
     {
-        return $this->container['volumeId'];
+        return $this->container['cpu'];
     }
 
     /**
-    * Sets volumeId
+    * Sets cpu
     *
-    * @param string $volumeId 卷id对应的结果
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null $cpu cpu
     *
     * @return $this
     */
-    public function setVolumeId($volumeId)
+    public function setCpu($cpu)
     {
-        $this->container['volumeId'] = $volumeId;
+        $this->container['cpu'] = $cpu;
         return $this;
     }
 
     /**
-    * Gets orderId
-    *  卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
+    * Gets mem
+    *  mem
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null
     */
-    public function getOrderId()
+    public function getMem()
     {
-        return $this->container['orderId'];
+        return $this->container['mem'];
     }
 
     /**
-    * Sets orderId
+    * Sets mem
     *
-    * @param string|null $orderId 卷id对应的退订订单id，如果是已到期的云硬盘退订，则不显示此字段。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null $mem mem
     *
     * @return $this
     */
-    public function setOrderId($orderId)
+    public function setMem($mem)
     {
-        $this->container['orderId'] = $orderId;
+        $this->container['mem'] = $mem;
         return $this;
     }
 
     /**
-    * Gets result
-    *  volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
+    * Gets disk
+    *  disk
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null
     */
-    public function getResult()
+    public function getDisk()
     {
-        return $this->container['result'];
+        return $this->container['disk'];
     }
 
     /**
-    * Sets result
+    * Sets disk
     *
-    * @param string $result volume_id对应的退订结果，只有SUCCESS 和 FAIL两种结果。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null $disk disk
     *
     * @return $this
     */
-    public function setResult($result)
+    public function setDisk($disk)
     {
-        $this->container['result'] = $result;
+        $this->container['disk'] = $disk;
         return $this;
     }
 
     /**
-    * Gets failReason
-    *  当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * Gets io
+    *  io
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null
     */
-    public function getFailReason()
+    public function getIo()
     {
-        return $this->container['failReason'];
+        return $this->container['io'];
     }
 
     /**
-    * Sets failReason
+    * Sets io
     *
-    * @param string|null $failReason 当result为FAIL时，此字段显示具体的失败原因。 result为SUCCESS时，不显示此字段。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ResourceUsage|null $io io
     *
     * @return $this
     */
-    public function setFailReason($failReason)
+    public function setIo($io)
     {
-        $this->container['failReason'] = $failReason;
+        $this->container['io'] = $io;
         return $this;
     }
 

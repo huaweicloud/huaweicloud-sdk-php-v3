@@ -158,6 +158,9 @@ class ShowSqlAutoSqlLimitingReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['nodeIds'] === null) {
+            $invalidProperties[] = "'nodeIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class ShowSqlAutoSqlLimitingReq implements ModelInterface, ArrayAccess
     * Gets nodeIds
     *  **参数解释**：  节点ID列表。  获取方法请参见[查询实例详情](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlInstanceInfoUnifyStatus.html)。  **约束限制**：  节点角色必须为主节点。  **取值范围**：  列表元素为节点ID，只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getNodeIds()
     {
@@ -186,7 +189,7 @@ class ShowSqlAutoSqlLimitingReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeIds
     *
-    * @param string[]|null $nodeIds **参数解释**：  节点ID列表。  获取方法请参见[查询实例详情](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlInstanceInfoUnifyStatus.html)。  **约束限制**：  节点角色必须为主节点。  **取值范围**：  列表元素为节点ID，只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
+    * @param string[] $nodeIds **参数解释**：  节点ID列表。  获取方法请参见[查询实例详情](https://support.huaweicloud.com/api-taurusdb/ShowGaussMySqlInstanceInfoUnifyStatus.html)。  **约束限制**：  节点角色必须为主节点。  **取值范围**：  列表元素为节点ID，只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     *
     * @return $this
     */

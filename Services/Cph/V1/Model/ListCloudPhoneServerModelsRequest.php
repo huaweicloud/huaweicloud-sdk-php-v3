@@ -21,21 +21,29 @@ class ListCloudPhoneServerModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * productType  产品类型。 - 0：云手机 - 1：云手游
+    * marker  分页标记。
+    * limit  每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'productType' => 'int'
+            'productType' => 'int',
+            'marker' => 'string',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * productType  产品类型。 - 0：云手机 - 1：云手游
+    * marker  分页标记。
+    * limit  每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'productType' => null
+        'productType' => null,
+        'marker' => null,
+        'limit' => 'int32'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListCloudPhoneServerModelsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * productType  产品类型。 - 0：云手机 - 1：云手游
+    * marker  分页标记。
+    * limit  每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'productType' => 'product_type'
+            'productType' => 'product_type',
+            'marker' => 'marker',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * productType  产品类型。 - 0：云手机 - 1：云手游
+    * marker  分页标记。
+    * limit  每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     *
     * @var string[]
     */
     protected static $setters = [
-            'productType' => 'setProductType'
+            'productType' => 'setProductType',
+            'marker' => 'setMarker',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * productType  产品类型。 - 0：云手机 - 1：云手游
+    * marker  分页标记。
+    * limit  每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     *
     * @var string[]
     */
     protected static $getters = [
-            'productType' => 'getProductType'
+            'productType' => 'getProductType',
+            'marker' => 'getMarker',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListCloudPhoneServerModelsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['productType'] = isset($data['productType']) ? $data['productType'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -199,6 +221,54 @@ class ListCloudPhoneServerModelsRequest implements ModelInterface, ArrayAccess
     public function setProductType($productType)
     {
         $this->container['productType'] = $productType;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的服务器规格个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

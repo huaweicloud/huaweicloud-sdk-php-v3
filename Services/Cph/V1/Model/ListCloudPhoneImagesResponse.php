@@ -23,24 +23,28 @@ class ListCloudPhoneImagesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * requestId  请求的唯一标识ID。
     * phoneImages  手机镜像信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'phoneImages' => '\HuaweiCloud\SDK\Cph\V1\Model\PhoneImage[]'
+            'phoneImages' => '\HuaweiCloud\SDK\Cph\V1\Model\PhoneImage[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneImagesResponseBodyPageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  请求的唯一标识ID。
     * phoneImages  手机镜像信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'phoneImages' => null
+        'phoneImages' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListCloudPhoneImagesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * requestId  请求的唯一标识ID。
     * phoneImages  手机镜像信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'phoneImages' => 'phone_images'
+            'phoneImages' => 'phone_images',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  请求的唯一标识ID。
     * phoneImages  手机镜像信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'phoneImages' => 'setPhoneImages'
+            'phoneImages' => 'setPhoneImages',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  请求的唯一标识ID。
     * phoneImages  手机镜像信息。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'phoneImages' => 'getPhoneImages'
+            'phoneImages' => 'getPhoneImages',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListCloudPhoneImagesResponse implements ModelInterface, ArrayAccess
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
         $this->container['phoneImages'] = isset($data['phoneImages']) ? $data['phoneImages'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -235,6 +246,30 @@ class ListCloudPhoneImagesResponse implements ModelInterface, ArrayAccess
     public function setPhoneImages($phoneImages)
     {
         $this->container['phoneImages'] = $phoneImages;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneImagesResponseBodyPageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneImagesResponseBodyPageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuthorizeDataConnectionResponse implements ModelInterface, ArrayAccess
+class CreateClusterResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,24 +17,38 @@ class AuthorizeDataConnectionResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AuthorizeDataConnectionResponse';
+    protected static $openAPIModelName = 'CreateClusterResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * isSuccess  请求执行是否成功。\"true\"表示请求执行成功。
+    * message  系统提示信息，执行成功时，信息可能为空。
+    * clusterName  新增集群的名称。
+    * jobId  异步作业id，用于查询作业状态。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'isSuccess' => 'bool',
+            'message' => 'string',
+            'clusterName' => 'string',
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * isSuccess  请求执行是否成功。\"true\"表示请求执行成功。
+    * message  系统提示信息，执行成功时，信息可能为空。
+    * clusterName  新增集群的名称。
+    * jobId  异步作业id，用于查询作业状态。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'isSuccess' => null,
+        'message' => null,
+        'clusterName' => null,
+        'jobId' => null
     ];
 
     /**
@@ -60,29 +74,50 @@ class AuthorizeDataConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * isSuccess  请求执行是否成功。\"true\"表示请求执行成功。
+    * message  系统提示信息，执行成功时，信息可能为空。
+    * clusterName  新增集群的名称。
+    * jobId  异步作业id，用于查询作业状态。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'isSuccess' => 'is_success',
+            'message' => 'message',
+            'clusterName' => 'cluster_name',
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * isSuccess  请求执行是否成功。\"true\"表示请求执行成功。
+    * message  系统提示信息，执行成功时，信息可能为空。
+    * clusterName  新增集群的名称。
+    * jobId  异步作业id，用于查询作业状态。
     *
     * @var string[]
     */
     protected static $setters = [
+            'isSuccess' => 'setIsSuccess',
+            'message' => 'setMessage',
+            'clusterName' => 'setClusterName',
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * isSuccess  请求执行是否成功。\"true\"表示请求执行成功。
+    * message  系统提示信息，执行成功时，信息可能为空。
+    * clusterName  新增集群的名称。
+    * jobId  异步作业id，用于查询作业状态。
     *
     * @var string[]
     */
     protected static $getters = [
+            'isSuccess' => 'getIsSuccess',
+            'message' => 'getMessage',
+            'clusterName' => 'getClusterName',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -143,6 +178,10 @@ class AuthorizeDataConnectionResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -165,6 +204,102 @@ class AuthorizeDataConnectionResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets isSuccess
+    *  请求执行是否成功。\"true\"表示请求执行成功。
+    *
+    * @return bool|null
+    */
+    public function getIsSuccess()
+    {
+        return $this->container['isSuccess'];
+    }
+
+    /**
+    * Sets isSuccess
+    *
+    * @param bool|null $isSuccess 请求执行是否成功。\"true\"表示请求执行成功。
+    *
+    * @return $this
+    */
+    public function setIsSuccess($isSuccess)
+    {
+        $this->container['isSuccess'] = $isSuccess;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  系统提示信息，执行成功时，信息可能为空。
+    *
+    * @return string|null
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets clusterName
+    *  新增集群的名称。
+    *
+    * @return string|null
+    */
+    public function getClusterName()
+    {
+        return $this->container['clusterName'];
+    }
+
+    /**
+    * Sets clusterName
+    *
+    * @param string|null $clusterName 新增集群的名称。
+    *
+    * @return $this
+    */
+    public function setClusterName($clusterName)
+    {
+        $this->container['clusterName'] = $clusterName;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  异步作业id，用于查询作业状态。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 异步作业id，用于查询作业状态。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
     }
 
     /**

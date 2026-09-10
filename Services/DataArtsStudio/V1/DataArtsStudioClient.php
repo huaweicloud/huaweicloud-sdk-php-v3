@@ -435,6 +435,77 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 绑定集群
+     *
+     * 该API用于在已创建的资源组网络连接中绑定集群。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateConnectionCluster($request)
+    {
+        return $this->associateConnectionClusterWithHttpInfo($request);
+    }
+
+    public function associateConnectionClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/connections/{connection_id}/associate-cluster';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AssociateConnectionClusterResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AssociateConnectionClusterRequest');
+    }
+
+    /**
      * 资产关联密级
      *
      * 关联资产到密级，资产关联指定密级
@@ -500,71 +571,6 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AssociateSecurityLevelToEntitieResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AssociateSecurityLevelToEntitieRequest');
-    }
-
-    /**
-     * 数据连接跨空间授权
-     *
-     * 数据连接跨空间授权。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function authorizeDataConnection($request)
-    {
-        return $this->authorizeDataConnectionWithHttpInfo($request);
-    }
-
-    public function authorizeDataConnectionWithHttpInfo($request)
-    {
-        $resourcePath = '/v1/{project_id}/datasources/authorize_datasource';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['dataConnectionId'] !== null) {
-            $queryParams['data_connection_id'] = $localVarParams['dataConnectionId'];
-        }
-        if ($localVarParams['workspaceId'] !== null) {
-            $queryParams['workspace_id'] = $localVarParams['workspaceId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AuthorizeDataConnectionResponse',
-            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AuthorizeDataConnectionRequest');
     }
 
     /**
@@ -831,6 +837,74 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchAssociateSecurityLevelToEntitiesResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchAssociateSecurityLevelToEntitiesRequest');
+    }
+
+    /**
+     * 批量关联或取消关联数据集成资源到工作空间
+     *
+     * 批量关联或取消关联数据集成资源到工作空间，通过workspaces中的action字段区分操作类型。action为band表示关联，action为remove表示取消关联。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchBindMigrationResourceToWorkspace($request)
+    {
+        return $this->batchBindMigrationResourceToWorkspaceWithHttpInfo($request);
+    }
+
+    public function batchBindMigrationResourceToWorkspaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{instance_id}/migration/batch-bind-workspace';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchBindMigrationResourceToWorkspaceResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchBindMigrationResourceToWorkspaceRequest');
     }
 
     /**
@@ -1574,6 +1648,71 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 删除工作空间
+     *
+     * 删除工作空间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteWorkspaces($request)
+    {
+        return $this->batchDeleteWorkspacesWithHttpInfo($request);
+    }
+
+    public function batchDeleteWorkspacesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{instance_id}/workspaces/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchDeleteWorkspacesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchDeleteWorkspacesRequest');
+    }
+
+    /**
      * 批量下线
      *
      * 批量下线。
@@ -1975,7 +2114,7 @@ class DataArtsStudioClient extends Client
     /**
      * 撤销任务包
      *
-     * 撤销任务包
+     * 目前支持发布包管理中相关包的撤销，支持撤销多个任务包。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3228,6 +3367,77 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 创建集群
+     *
+     * 该API用于创建集群，该集群将会绑定用户指定的计算资源。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCluster($request)
+    {
+        return $this->createClusterWithHttpInfo($request);
+    }
+
+    public function createClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/instances/{instance_id}/clusters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateClusterResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateClusterRequest');
+    }
+
+    /**
      * 创建码表
      *
      * 创建码表。
@@ -3361,6 +3571,148 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateConnectionsResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateConnectionsRequest');
+    }
+
+    /**
+     * 创建资源组网络连接
+     *
+     * 该API用于创建与其他服务的资源组网络连接。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDatasourceConnection($request)
+    {
+        return $this->createDatasourceConnectionWithHttpInfo($request);
+    }
+
+    public function createDatasourceConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/instances/{instance_id}/connections';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDatasourceConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDatasourceConnectionRequest');
+    }
+
+    /**
+     * 创建路由
+     *
+     * 该API用于给资源组网络连接添加路由。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDatasourceConnectionRoutes($request)
+    {
+        return $this->createDatasourceConnectionRoutesWithHttpInfo($request);
+    }
+
+    public function createDatasourceConnectionRoutesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/connections/{connection_id}/routes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDatasourceConnectionRoutesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDatasourceConnectionRoutesRequest');
     }
 
     /**
@@ -4070,7 +4422,7 @@ class DataArtsStudioClient extends Client
     /**
      * 创建补数据实例
      *
-     * 创建补数据实例
+     * 创建一个补数据实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6495,6 +6847,148 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 删除资源组网络连接
+     *
+     * 该API用于删除已创建的DLI资源组网络连接。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDatasourceConnection($request)
+    {
+        return $this->deleteDatasourceConnectionWithHttpInfo($request);
+    }
+
+    public function deleteDatasourceConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/instances/{instance_id}/connections/{connection_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDatasourceConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDatasourceConnectionRequest');
+    }
+
+    /**
+     * 删除路由
+     *
+     * 该API用于删除资源组网络连接添加的路由。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDatasourceConnectionRoutes($request)
+    {
+        return $this->deleteDatasourceConnectionRoutesWithHttpInfo($request);
+    }
+
+    public function deleteDatasourceConnectionRoutesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/connections/{connection_id}/routes/{route_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['routeName'] !== null) {
+            $pathParams['route_name'] = $localVarParams['routeName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDatasourceConnectionRoutesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDatasourceConnectionRoutesRequest');
+    }
+
+    /**
      * 删除汇总表
      *
      * 批量删除汇总表，只能删除状态为草稿、已线下、已驳回的表。
@@ -8222,7 +8716,7 @@ class DataArtsStudioClient extends Client
     /**
      * 发布任务包
      *
-     * 发布任务包
+     * 目前支持发布包管理中相关包的发布，支持发布多个任务包。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8285,6 +8779,80 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeployFactoryPackagesResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeployFactoryPackagesRequest');
+    }
+
+    /**
+     * 下载实时处理集成作业日志
+     *
+     * 获取range范围的日志内容，最多10MB。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadTaskLog($request)
+    {
+        return $this->downloadTaskLogWithHttpInfo($request);
+    }
+
+    public function downloadTaskLogWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/tasks/{task_id}/logs/download';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['path'] !== null) {
+            $queryParams['path'] = $localVarParams['path'];
+        }
+        if ($localVarParams['range'] !== null) {
+            $queryParams['range'] = $localVarParams['range'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/octet-stream'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DownloadTaskLogResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DownloadTaskLogRequest');
     }
 
     /**
@@ -11811,6 +12379,83 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询资源组网络连接列表
+     *
+     * 该API用于查询该用户已创建的DLI资源组网络连接列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatasourceConnections($request)
+    {
+        return $this->listDatasourceConnectionsWithHttpInfo($request);
+    }
+
+    public function listDatasourceConnectionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/instances/{instance_id}/connections';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDatasourceConnectionsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDatasourceConnectionsRequest');
+    }
+
+    /**
      * 查找衍生指标
      *
      * 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找衍生指标信息。
@@ -12546,7 +13191,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询告警通知记录
      *
-     * 查询告警通知记录
+     * 此接口可以查询指定时间段内的告警通知记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12703,7 +13348,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询指定作业的实例列表
      *
-     * 查询指定作业的实例列表
+     * 根据作业名称精确查询作业实例列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12988,7 +13633,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询发布包列表
      *
-     * 查询发布包列表
+     * 用于查询发布包的列表信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13234,7 +13879,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询任务完成情况
      *
-     * 查询任务完成情况
+     * 查询任务完成情况。包括今天，昨天以及近7天的平均任务完成情况。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13299,7 +13944,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询实例运行状态
      *
-     * 查询实例运行状态
+     * 此接口可以查询实例运行状态，包括当天、昨天、前天以及近7天的实例状态情况。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16745,9 +17390,80 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询实时处理集成作业日志列表
+     *
+     * 查询实时处理集成作业日志列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTaskLogs($request)
+    {
+        return $this->listTaskLogsWithHttpInfo($request);
+    }
+
+    public function listTaskLogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/tasks/{task_id}/logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['path'] !== null) {
+            $queryParams['path'] = $localVarParams['path'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListTaskLogsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListTaskLogsRequest');
+    }
+
+    /**
      * 查询单表的作业表引用详情
      *
-     * 根据表名查询该表被哪些作业引用的详细信息，支持按输入输出类型、工作空间等条件筛选。
+     * 查询表被作业（调度中）引用详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17819,7 +18535,7 @@ class DataArtsStudioClient extends Client
     /**
      * 重跑作业实例
      *
-     * 支持重跑作业实例以及上下游的作业实例。
+     * 支持重跑作业实例以及上下游的作业实例。该接口功能处于邀测阶段，后续将随功能公测逐步开放。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19334,6 +20050,7 @@ class DataArtsStudioClient extends Client
     /**
      * 设置作业标签
      *
+     * 此接口可以设置作业标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -21478,6 +22195,77 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询资源组网络连接
+     *
+     * 该API用于查询该用户已创建的DLI资源组网络连接。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDatasourceConnection($request)
+    {
+        return $this->showDatasourceConnectionWithHttpInfo($request);
+    }
+
+    public function showDatasourceConnectionWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/instances/{instance_id}/connections/{connection_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDatasourceConnectionResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDatasourceConnectionRequest');
+    }
+
+    /**
      * 查看衍生指标详情
      *
      * 通过ID获取衍生详情信息。
@@ -22315,7 +23103,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询指定发布包详情
      *
-     * 查询指定发布包详情
+     * 用于查询指定的发布包详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22383,7 +23171,7 @@ class DataArtsStudioClient extends Client
     /**
      * 查询补数据实例
      *
-     * 查询补数据实例
+     * 查询补数据实例列表，支持分页查询。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -22778,6 +23566,74 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowInstanceResultResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowInstanceResultRequest');
+    }
+
+    /**
+     * 查询实时处理集成作业监控指标
+     *
+     * 查询实时处理集成作业的子任务监控指标结果，包括各子任务的吞吐量、延迟等运行指标。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showJobMonitorInfo($request)
+    {
+        return $this->showJobMonitorInfoWithHttpInfo($request);
+    }
+
+    public function showJobMonitorInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/tasks/{task_id}/monitor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowJobMonitorInfoResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowJobMonitorInfoRequest');
     }
 
     /**
@@ -23462,6 +24318,75 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowQueuesResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowQueuesRequest');
+    }
+
+    /**
+     * 查询实时作业详情
+     *
+     * 查询实时作业的详细监控信息，包括作业运行状态、引擎版本、追踪URL及各子任务详情。
+     * 仅支持一键入湖（OneClickCDC）类型的实时作业。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRealTimeJobDetails($request)
+    {
+        return $this->showRealTimeJobDetailsWithHttpInfo($request);
+    }
+
+    public function showRealTimeJobDetailsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/factory/real-time-jobs/{job_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['jobName'] !== null) {
+            $pathParams['job_name'] = $localVarParams['jobName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowRealTimeJobDetailsResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowRealTimeJobDetailsRequest');
     }
 
     /**
@@ -25158,7 +26083,7 @@ class DataArtsStudioClient extends Client
     /**
      * 停止补数据实例
      *
-     * 停止补数据实例
+     * 停止指定的补数据实例。只有补数据实例的状态是运行中，才能停止补数据实例。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -25869,6 +26794,80 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 修改资源组网络连接的主机信息
+     *
+     * 该API用于在DLI资源组网络连接中修改数据源主机信息，仅支持全量覆盖。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDatasourceConnectionHostMessage($request)
+    {
+        return $this->updateDatasourceConnectionHostMessageWithHttpInfo($request);
+    }
+
+    public function updateDatasourceConnectionHostMessageWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/migration/instances/{instance_id}/connections/{connection_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $pathParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDatasourceConnectionHostMessageResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDatasourceConnectionHostMessageRequest');
+    }
+
+    /**
      * 更新汇总表
      *
      * 更新汇总表。
@@ -26513,7 +27512,7 @@ class DataArtsStudioClient extends Client
     /**
      * 修改作业名称
      *
-     * 修改作业名称
+     * 对作业名称进行重命名操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -27895,6 +28894,74 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateTemplateResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateTemplateRequest');
+    }
+
+    /**
+     * 修改工作空间
+     *
+     * 修改工作空间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateWorkSpaceOld($request)
+    {
+        return $this->updateWorkSpaceOldWithHttpInfo($request);
+    }
+
+    public function updateWorkSpaceOldWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/{instance_id}/workspace/{workspace_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $pathParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateWorkSpaceOldResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateWorkSpaceOldRequest');
     }
 
     /**

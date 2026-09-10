@@ -175,8 +175,8 @@ class ChangeCloudPhoneServerRequestBodyPhoneDataVolume implements ModelInterface
             if ((mb_strlen($this->container['volumeType']) > 36)) {
                 $invalidProperties[] = "invalid value for 'volumeType', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['volumeType']) < 36)) {
-                $invalidProperties[] = "invalid value for 'volumeType', the character length must be bigger than or equal to 36.";
+            if ((mb_strlen($this->container['volumeType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'volumeType', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['size'] === null) {
             $invalidProperties[] = "'size' can't be null";

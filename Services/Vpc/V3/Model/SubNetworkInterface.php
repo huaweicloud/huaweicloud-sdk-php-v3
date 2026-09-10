@@ -20,26 +20,27 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
-    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
-    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
-    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
-    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
-    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
-    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
-    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
-    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
-    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
-    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
-    * tags  功能说明：辅助弹性网卡的标签列表
-    * projectId  功能说明：辅助弹性网卡所属项目ID
-    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
-    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
-    * state  功能说明：辅助弹性网卡当前状态
-    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
-    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
-    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
-    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    * id  **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
+    * virsubnetId  **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * privateIpAddress  **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
+    * ipv6IpAddress  **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * parentId  **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * description  **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * vpcId  **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vlanId  **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
+    * securityGroups  **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
+    * tags  **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
+    * state  **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
+    * instanceId  **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * scope  **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
+    * securityEnabled  **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -55,9 +56,10 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'vpcId' => 'string',
             'vlanId' => 'int',
             'securityGroups' => 'string[]',
-            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[]',
             'projectId' => 'string',
             'createdAt' => '\DateTime',
+            'updatedAt' => '\DateTime',
             'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]',
             'state' => 'string',
             'instanceId' => 'string',
@@ -68,26 +70,27 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
-    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
-    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
-    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
-    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
-    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
-    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
-    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
-    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
-    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
-    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
-    * tags  功能说明：辅助弹性网卡的标签列表
-    * projectId  功能说明：辅助弹性网卡所属项目ID
-    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
-    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
-    * state  功能说明：辅助弹性网卡当前状态
-    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
-    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
-    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
-    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    * id  **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
+    * virsubnetId  **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * privateIpAddress  **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
+    * ipv6IpAddress  **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * parentId  **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * description  **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * vpcId  **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vlanId  **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
+    * securityGroups  **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
+    * tags  **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
+    * state  **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
+    * instanceId  **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * scope  **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
+    * securityEnabled  **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -106,6 +109,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         'tags' => null,
         'projectId' => null,
         'createdAt' => 'date-time',
+        'updatedAt' => 'date-time',
         'allowedAddressPairs' => null,
         'state' => null,
         'instanceId' => null,
@@ -137,26 +141,27 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
-    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
-    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
-    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
-    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
-    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
-    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
-    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
-    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
-    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
-    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
-    * tags  功能说明：辅助弹性网卡的标签列表
-    * projectId  功能说明：辅助弹性网卡所属项目ID
-    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
-    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
-    * state  功能说明：辅助弹性网卡当前状态
-    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
-    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
-    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
-    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    * id  **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
+    * virsubnetId  **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * privateIpAddress  **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
+    * ipv6IpAddress  **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * parentId  **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * description  **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * vpcId  **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vlanId  **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
+    * securityGroups  **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
+    * tags  **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
+    * state  **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
+    * instanceId  **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * scope  **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
+    * securityEnabled  **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -175,6 +180,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'projectId' => 'project_id',
             'createdAt' => 'created_at',
+            'updatedAt' => 'updated_at',
             'allowedAddressPairs' => 'allowed_address_pairs',
             'state' => 'state',
             'instanceId' => 'instance_id',
@@ -185,26 +191,27 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
-    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
-    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
-    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
-    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
-    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
-    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
-    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
-    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
-    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
-    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
-    * tags  功能说明：辅助弹性网卡的标签列表
-    * projectId  功能说明：辅助弹性网卡所属项目ID
-    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
-    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
-    * state  功能说明：辅助弹性网卡当前状态
-    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
-    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
-    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
-    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    * id  **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
+    * virsubnetId  **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * privateIpAddress  **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
+    * ipv6IpAddress  **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * parentId  **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * description  **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * vpcId  **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vlanId  **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
+    * securityGroups  **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
+    * tags  **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
+    * state  **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
+    * instanceId  **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * scope  **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
+    * securityEnabled  **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -223,6 +230,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'projectId' => 'setProjectId',
             'createdAt' => 'setCreatedAt',
+            'updatedAt' => 'setUpdatedAt',
             'allowedAddressPairs' => 'setAllowedAddressPairs',
             'state' => 'setState',
             'instanceId' => 'setInstanceId',
@@ -233,26 +241,27 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
-    * virsubnetId  功能说明：虚拟子网ID 取值范围：标准UUID
-    * privateIpAddress  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
-    * ipv6IpAddress  功能说明：辅助弹性网卡的IPv6地址
-    * macAddress  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
-    * parentDeviceId  功能说明：设备ID 取值范围：标准UUID
-    * parentId  功能说明：宿主网络接口的ID 取值范围：标准UUID
-    * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
-    * vpcId  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
-    * vlanId  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
-    * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
-    * tags  功能说明：辅助弹性网卡的标签列表
-    * projectId  功能说明：辅助弹性网卡所属项目ID
-    * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
-    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
-    * state  功能说明：辅助弹性网卡当前状态
-    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
-    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
-    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
-    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    * id  **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
+    * virsubnetId  **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
+    * privateIpAddress  **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
+    * ipv6IpAddress  **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
+    * macAddress  **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
+    * parentDeviceId  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
+    * parentId  **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * description  **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
+    * vpcId  **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
+    * vlanId  **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
+    * securityGroups  **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
+    * tags  **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
+    * projectId  **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
+    * createdAt  **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
+    * updatedAt  **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    * allowedAddressPairs  **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
+    * state  **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
+    * instanceId  **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
+    * instanceType  **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
+    * scope  **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
+    * securityEnabled  **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -271,6 +280,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'projectId' => 'getProjectId',
             'createdAt' => 'getCreatedAt',
+            'updatedAt' => 'getUpdatedAt',
             'allowedAddressPairs' => 'getAllowedAddressPairs',
             'state' => 'getState',
             'instanceId' => 'getInstanceId',
@@ -351,6 +361,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
@@ -409,6 +420,9 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
         }
+        if ($this->container['updatedAt'] === null) {
+            $invalidProperties[] = "'updatedAt' can't be null";
+        }
         if ($this->container['allowedAddressPairs'] === null) {
             $invalidProperties[] = "'allowedAddressPairs' can't be null";
         }
@@ -443,7 +457,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    *  **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -455,7 +469,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 功能说明：辅助弹性网卡的唯一标识 取值范围：带(-)的标准UUID
+    * @param string $id **参数解释**： 辅助弹性网卡的资源ID。辅助弹性网卡创建成功后，会生成一个辅助弹性网卡 ID，是辅助弹性网卡对应的唯一标识。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -467,7 +481,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets virsubnetId
-    *  功能说明：虚拟子网ID 取值范围：标准UUID
+    *  **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -479,7 +493,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets virsubnetId
     *
-    * @param string $virsubnetId 功能说明：虚拟子网ID 取值范围：标准UUID
+    * @param string $virsubnetId **参数解释**： 辅助弹性网卡所在的虚拟子网ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -491,7 +505,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateIpAddress
-    *  功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    *  **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -503,7 +517,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets privateIpAddress
     *
-    * @param string $privateIpAddress 功能说明：辅助弹性网卡的私有IPv4地址 取值范围：必须在虚拟子网的网段内，不填则随机在虚拟子网网段内随机分配
+    * @param string $privateIpAddress **参数解释**： 辅助弹性网卡的私有IPv4地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -515,7 +529,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6IpAddress
-    *  功能说明：辅助弹性网卡的IPv6地址
+    *  **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -527,7 +541,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6IpAddress
     *
-    * @param string $ipv6IpAddress 功能说明：辅助弹性网卡的IPv6地址
+    * @param string $ipv6IpAddress **参数解释**： 辅助弹性网卡的私有IPv6地址。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -539,7 +553,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets macAddress
-    *  功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    *  **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
     *
     * @return string
     */
@@ -551,7 +565,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets macAddress
     *
-    * @param string $macAddress 功能说明：辅助弹性网卡的mac地址 取值范围：合法的mac地址，系统随机分配
+    * @param string $macAddress **参数解释**： 辅助弹性网卡的MAC地址。 **取值范围**： 合法的MAC地址，系统随机分配。
     *
     * @return $this
     */
@@ -563,7 +577,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentDeviceId
-    *  功能说明：设备ID 取值范围：标准UUID
+    *  **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -575,7 +589,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets parentDeviceId
     *
-    * @param string $parentDeviceId 功能说明：设备ID 取值范围：标准UUID
+    * @param string $parentDeviceId **参数解释**： 辅助弹性网卡的宿主网卡所属的设备ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -587,7 +601,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  功能说明：宿主网络接口的ID 取值范围：标准UUID
+    *  **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -599,7 +613,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string $parentId 功能说明：宿主网络接口的ID 取值范围：标准UUID
+    * @param string $parentId **参数解释**： 辅助弹性网卡所挂载的弹性网卡的ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -611,7 +625,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    *  **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
     *
     * @return string
     */
@@ -623,7 +637,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
+    * @param string $description **参数解释**： 辅助弹性网卡的描述信息。 **取值范围**： 0-255个字符，不能包含“<”和“>”。
     *
     * @return $this
     */
@@ -635,7 +649,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    *  **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return string
     */
@@ -647,7 +661,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId 功能说明：辅助弹性网卡所属的VPC_ID 取值范围：标准UUID
+    * @param string $vpcId **参数解释**： 辅助弹性网卡所属VPC的ID。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @return $this
     */
@@ -659,7 +673,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets vlanId
-    *  功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    *  **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
     *
     * @return int
     */
@@ -671,7 +685,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets vlanId
     *
-    * @param int $vlanId 功能说明：辅助弹性网卡的VLAN ID 取值范围：1-4094 约束：同一个宿主网络接口下唯一
+    * @param int $vlanId **参数解释**： 辅助弹性网卡的VLAN ID。 **取值范围**： 1-4094
     *
     * @return $this
     */
@@ -683,7 +697,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
-    *  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    *  **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
     *
     * @return string[]
     */
@@ -695,7 +709,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroups
     *
-    * @param string[] $securityGroups 功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
+    * @param string[] $securityGroups **参数解释**： 辅助弹性网卡关联的安全组的ID列表。例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"]。 **取值范围**： 如果请求时不指定此参数，辅助弹性网卡创建后会自动关联默认安全组。
     *
     * @return $this
     */
@@ -707,9 +721,9 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  功能说明：辅助弹性网卡的标签列表
+    *  **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[]
     */
     public function getTags()
     {
@@ -719,7 +733,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags 功能说明：辅助弹性网卡的标签列表
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[] $tags **参数解释**： 辅助弹性网卡的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -731,7 +745,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  功能说明：辅助弹性网卡所属项目ID
+    *  **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -743,7 +757,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 功能说明：辅助弹性网卡所属项目ID
+    * @param string $projectId **参数解释**： 辅助弹性网卡所属的项目ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -755,7 +769,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    *  **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
     *
     * @return \DateTime
     */
@@ -767,7 +781,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt 功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * @param \DateTime $createdAt **参数解释**： 辅助弹性网卡的创建时间。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -778,8 +792,32 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets updatedAt
+    *  **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    *
+    * @return \DateTime
+    */
+    public function getUpdatedAt()
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+    * Sets updatedAt
+    *
+    * @param \DateTime $updatedAt **参数解释**： 辅助弹性网卡的更新时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
     * Gets allowedAddressPairs
-    *  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    *  **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]
     */
@@ -791,7 +829,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets allowedAddressPairs
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[] $allowedAddressPairs 1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[] $allowedAddressPairs **参数解释**： 辅助弹性网卡的IP/Mac对列表，详情请参见“AllowedAddressPair”对象表。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -803,7 +841,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  功能说明：辅助弹性网卡当前状态
+    *  **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
     *
     * @return string
     */
@@ -815,7 +853,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state 功能说明：辅助弹性网卡当前状态
+    * @param string $state **参数解释**： 辅助弹性网卡的状态。 **取值范围**： - NORMAL：表示辅助弹性网卡已挂载在弹性网卡上。 - UNBOUND：表示辅助弹性网卡未挂载在弹性网卡上。
     *
     * @return $this
     */
@@ -827,7 +865,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    *  **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -839,7 +877,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    * @param string $instanceId **参数解释**： 辅助弹性网卡所属的云服务实例ID，例如RDS实例ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -851,7 +889,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceType
-    *  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    *  **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
     *
     * @return string
     */
@@ -863,7 +901,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets instanceType
     *
-    * @param string $instanceType 功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    * @param string $instanceType **参数解释**： 辅助弹性网卡所属的云服务实例类型，例如“RDS”。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -875,7 +913,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets scope
-    *  功能说明：辅助弹性网卡所在站点的公网出口信息
+    *  **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
     *
     * @return string
     */
@@ -887,7 +925,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets scope
     *
-    * @param string $scope 功能说明：辅助弹性网卡所在站点的公网出口信息
+    * @param string $scope **参数解释**： 辅助弹性网卡所在站点的公网出口信息。 **取值范围**： - center：默认值，表示作用域为中心。 - 某个AZ ID：表示作用域为具体的AZ。
     *
     * @return $this
     */
@@ -899,7 +937,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityEnabled
-    *  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    *  **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @return bool
     */
@@ -911,7 +949,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets securityEnabled
     *
-    * @param bool $securityEnabled 功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    * @param bool $securityEnabled **参数解释**： 辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 **取值范围**： 不涉及。
     *
     * @return $this
     */

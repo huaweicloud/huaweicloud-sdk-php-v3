@@ -21,7 +21,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * command  ADB命令，固定填写shell。
-    * content  待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    * content  待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     * phoneIds  云手机ID列表。 server_ids参数不存在时必选，同时存在只处理phone_ids。最多支持传入15个phone_id。
     * serverIds  云手机服务器ID列表。 phone_ids参数不存在时必选，同时存在只处理phone_ids。
     *
@@ -37,7 +37,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * command  ADB命令，固定填写shell。
-    * content  待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    * content  待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     * phoneIds  云手机ID列表。 server_ids参数不存在时必选，同时存在只处理phone_ids。最多支持传入15个phone_id。
     * serverIds  云手机服务器ID列表。 phone_ids参数不存在时必选，同时存在只处理phone_ids。
     *
@@ -74,7 +74,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * command  ADB命令，固定填写shell。
-    * content  待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    * content  待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     * phoneIds  云手机ID列表。 server_ids参数不存在时必选，同时存在只处理phone_ids。最多支持传入15个phone_id。
     * serverIds  云手机服务器ID列表。 phone_ids参数不存在时必选，同时存在只处理phone_ids。
     *
@@ -90,7 +90,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * command  ADB命令，固定填写shell。
-    * content  待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    * content  待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     * phoneIds  云手机ID列表。 server_ids参数不存在时必选，同时存在只处理phone_ids。最多支持传入15个phone_id。
     * serverIds  云手机服务器ID列表。 phone_ids参数不存在时必选，同时存在只处理phone_ids。
     *
@@ -106,7 +106,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * command  ADB命令，固定填写shell。
-    * content  待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    * content  待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     * phoneIds  云手机ID列表。 server_ids参数不存在时必选，同时存在只处理phone_ids。最多支持传入15个phone_id。
     * serverIds  云手机服务器ID列表。 phone_ids参数不存在时必选，同时存在只处理phone_ids。
     *
@@ -203,8 +203,8 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['content'] === null) {
             $invalidProperties[] = "'content' can't be null";
         }
-            if ((mb_strlen($this->container['content']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'content', the character length must be smaller than or equal to 1024.";
+            if ((mb_strlen($this->container['content']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'content', the character length must be smaller than or equal to 2048.";
             }
             if ((mb_strlen($this->container['content']) < 0)) {
                 $invalidProperties[] = "invalid value for 'content', the character length must be bigger than or equal to 0.";
@@ -249,7 +249,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    *  待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     *
     * @return string
     */
@@ -261,7 +261,7 @@ class RunSyncCommandRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param string $content 待执行的命令。  最大长度为1024字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）。
+    * @param string $content 待执行的命令。  最大长度为2048字节，只支持大小写字母、数字、下划线（_）、点（.）、斜线（/）、冒号（:）、中划线（-）、问号（?）、等号（=）、与（&）、竖线（|）。
     *
     * @return $this
     */

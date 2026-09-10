@@ -20,7 +20,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * limit  每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     * offset  索引位置，从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
     *
@@ -34,7 +34,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * limit  每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     * offset  索引位置，从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
     *
@@ -69,7 +69,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * limit  每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     * offset  索引位置，从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
     *
@@ -83,7 +83,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * limit  每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     * offset  索引位置，从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
     *
@@ -97,7 +97,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。  - cph-server，云手机服务器
+    * resourceType  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     * limit  每页返回的资源个数。取值范围：1~100（默认值为100），一般设置为10、20、50。
     * offset  索引位置，从第一条数据偏移offset条数据后开始查询，默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
     *
@@ -150,6 +150,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const RESOURCE_TYPE_CPH_SERVER = 'cph-server';
+    const RESOURCE_TYPE_ELASTIC_CLOUD_PHONE = 'elastic-cloud-phone';
     
 
     /**
@@ -161,6 +162,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     {
         return [
             self::RESOURCE_TYPE_CPH_SERVER,
+            self::RESOURCE_TYPE_ELASTIC_CLOUD_PHONE,
         ];
     }
 
@@ -229,7 +231,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。  - cph-server，云手机服务器
+    *  资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     *
     * @return string
     */
@@ -241,7 +243,7 @@ class ListProjectTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。  - cph-server，云手机服务器
+    * @param string $resourceType 资源类型。  - cph-server，云手机服务器 [- elastic-cloud-phone, 弹性云手机实例](tag:hws_test)
     *
     * @return $this
     */

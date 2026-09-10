@@ -20,7 +20,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspaceId  工作空间id
+    * workspaceId  工作空间ID
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspaceId  工作空间id
+    * workspaceId  工作空间ID
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspaceId  工作空间id
+    * workspaceId  工作空间ID
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspaceId  工作空间id
+    * workspaceId  工作空间ID
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspaceId  工作空间id
+    * workspaceId  工作空间ID
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspaceId
-    *  工作空间id
+    *  工作空间ID
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DeleteWorkspaceusersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspaceId
     *
-    * @param string $workspaceId 工作空间id
+    * @param string $workspaceId 工作空间ID
     *
     * @return $this
     */

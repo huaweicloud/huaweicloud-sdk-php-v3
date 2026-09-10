@@ -32,6 +32,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
     * status  云手机状态。 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
     * accessInfos  云手机访问信息。
     * property  云手机属性字符串，不超过2048个字节。
+    * customProperty  云手机用户自定义属性键值对列表。
     * metadata  metadata
     * phoneDataVolume  phoneDataVolume
     * imei  imei码。
@@ -57,6 +58,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'int',
             'accessInfos' => '\HuaweiCloud\SDK\Cph\V1\Model\PhoneAccessInfo[]',
             'property' => 'string',
+            'customProperty' => 'map[string,string]',
             'metadata' => '\HuaweiCloud\SDK\Cph\V1\Model\ShowCloudPhoneDetailResponseBodyMetadata',
             'phoneDataVolume' => '\HuaweiCloud\SDK\Cph\V1\Model\PhoneDataVolume',
             'imei' => 'string',
@@ -82,6 +84,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
     * status  云手机状态。 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
     * accessInfos  云手机访问信息。
     * property  云手机属性字符串，不超过2048个字节。
+    * customProperty  云手机用户自定义属性键值对列表。
     * metadata  metadata
     * phoneDataVolume  phoneDataVolume
     * imei  imei码。
@@ -107,6 +110,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
         'status' => 'int32',
         'accessInfos' => null,
         'property' => null,
+        'customProperty' => null,
         'metadata' => null,
         'phoneDataVolume' => null,
         'imei' => null,
@@ -153,6 +157,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
     * status  云手机状态。 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
     * accessInfos  云手机访问信息。
     * property  云手机属性字符串，不超过2048个字节。
+    * customProperty  云手机用户自定义属性键值对列表。
     * metadata  metadata
     * phoneDataVolume  phoneDataVolume
     * imei  imei码。
@@ -178,6 +183,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'accessInfos' => 'access_infos',
             'property' => 'property',
+            'customProperty' => 'custom_property',
             'metadata' => 'metadata',
             'phoneDataVolume' => 'phone_data_volume',
             'imei' => 'imei',
@@ -203,6 +209,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
     * status  云手机状态。 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
     * accessInfos  云手机访问信息。
     * property  云手机属性字符串，不超过2048个字节。
+    * customProperty  云手机用户自定义属性键值对列表。
     * metadata  metadata
     * phoneDataVolume  phoneDataVolume
     * imei  imei码。
@@ -228,6 +235,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'accessInfos' => 'setAccessInfos',
             'property' => 'setProperty',
+            'customProperty' => 'setCustomProperty',
             'metadata' => 'setMetadata',
             'phoneDataVolume' => 'setPhoneDataVolume',
             'imei' => 'setImei',
@@ -253,6 +261,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
     * status  云手机状态。 - 1：创建中 - 2：运行中 - 3：重置中 - 4：重启中 - 6：冻结 - 7：正在关机 - 8：已关机 - -5：重置失败 - -6：重启失败 - -7：手机异常 - -8：创建失败 - -9：关机失败
     * accessInfos  云手机访问信息。
     * property  云手机属性字符串，不超过2048个字节。
+    * customProperty  云手机用户自定义属性键值对列表。
     * metadata  metadata
     * phoneDataVolume  phoneDataVolume
     * imei  imei码。
@@ -278,6 +287,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'accessInfos' => 'getAccessInfos',
             'property' => 'getProperty',
+            'customProperty' => 'getCustomProperty',
             'metadata' => 'getMetadata',
             'phoneDataVolume' => 'getPhoneDataVolume',
             'imei' => 'getImei',
@@ -359,6 +369,7 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['accessInfos'] = isset($data['accessInfos']) ? $data['accessInfos'] : null;
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
+        $this->container['customProperty'] = isset($data['customProperty']) ? $data['customProperty'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['phoneDataVolume'] = isset($data['phoneDataVolume']) ? $data['phoneDataVolume'] : null;
         $this->container['imei'] = isset($data['imei']) ? $data['imei'] : null;
@@ -756,6 +767,30 @@ class ShowCloudPhoneDetailResponse implements ModelInterface, ArrayAccess
     public function setProperty($property)
     {
         $this->container['property'] = $property;
+        return $this;
+    }
+
+    /**
+    * Gets customProperty
+    *  云手机用户自定义属性键值对列表。
+    *
+    * @return map[string,string]|null
+    */
+    public function getCustomProperty()
+    {
+        return $this->container['customProperty'];
+    }
+
+    /**
+    * Sets customProperty
+    *
+    * @param map[string,string]|null $customProperty 云手机用户自定义属性键值对列表。
+    *
+    * @return $this
+    */
+    public function setCustomProperty($customProperty)
+    {
+        $this->container['customProperty'] = $customProperty;
         return $this;
     }
 

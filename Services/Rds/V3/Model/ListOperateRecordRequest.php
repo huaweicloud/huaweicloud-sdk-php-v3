@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AuthorizeDataConnectionRequest implements ModelInterface, ArrayAccess
+class ListOperateRecordRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class AuthorizeDataConnectionRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AuthorizeDataConnectionRequest';
+    protected static $openAPIModelName = 'ListOperateRecordRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dataConnectionId  需要授权的数据连接id。
-    * workspaceId  需要授权的工作空间id。
+    * instanceId  实例id
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'dataConnectionId' => 'string',
-            'workspaceId' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\ListOperateRecordRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dataConnectionId  需要授权的数据连接id。
-    * workspaceId  需要授权的工作空间id。
+    * instanceId  实例id
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'dataConnectionId' => null,
-        'workspaceId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class AuthorizeDataConnectionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dataConnectionId  需要授权的数据连接id。
-    * workspaceId  需要授权的工作空间id。
+    * instanceId  实例id
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'dataConnectionId' => 'data_connection_id',
-            'workspaceId' => 'workspace_id'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dataConnectionId  需要授权的数据连接id。
-    * workspaceId  需要授权的工作空间id。
+    * instanceId  实例id
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'dataConnectionId' => 'setDataConnectionId',
-            'workspaceId' => 'setWorkspaceId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dataConnectionId  需要授权的数据连接id。
-    * workspaceId  需要授权的工作空间id。
+    * instanceId  实例id
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'dataConnectionId' => 'getDataConnectionId',
-            'workspaceId' => 'getWorkspaceId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class AuthorizeDataConnectionRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['dataConnectionId'] = isset($data['dataConnectionId']) ? $data['dataConnectionId'] : null;
-        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,20 +169,14 @@ class AuthorizeDataConnectionRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['dataConnectionId'] === null) {
-            $invalidProperties[] = "'dataConnectionId' can't be null";
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
         }
-            if ((mb_strlen($this->container['dataConnectionId']) > 4096)) {
-                $invalidProperties[] = "invalid value for 'dataConnectionId', the character length must be smaller than or equal to 4096.";
+            if ((mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['dataConnectionId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'dataConnectionId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) > 4096)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 4096.";
-            }
-            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -199,50 +193,50 @@ class AuthorizeDataConnectionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dataConnectionId
-    *  需要授权的数据连接id。
+    * Gets instanceId
+    *  实例id
     *
     * @return string
     */
-    public function getDataConnectionId()
+    public function getInstanceId()
     {
-        return $this->container['dataConnectionId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets dataConnectionId
+    * Sets instanceId
     *
-    * @param string $dataConnectionId 需要授权的数据连接id。
+    * @param string $instanceId 实例id
     *
     * @return $this
     */
-    public function setDataConnectionId($dataConnectionId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['dataConnectionId'] = $dataConnectionId;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
-    * Gets workspaceId
-    *  需要授权的工作空间id。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ListOperateRecordRequestBody|null
     */
-    public function getWorkspaceId()
+    public function getBody()
     {
-        return $this->container['workspaceId'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets workspaceId
+    * Sets body
     *
-    * @param string|null $workspaceId 需要授权的工作空间id。
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ListOperateRecordRequestBody|null $body body
     *
     * @return $this
     */
-    public function setWorkspaceId($workspaceId)
+    public function setBody($body)
     {
-        $this->container['workspaceId'] = $workspaceId;
+        $this->container['body'] = $body;
         return $this;
     }
 

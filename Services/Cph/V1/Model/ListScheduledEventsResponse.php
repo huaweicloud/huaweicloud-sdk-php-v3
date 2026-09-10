@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Evs\V2\Model;
+namespace HuaweiCloud\SDK\Cph\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UnsubscribeVolumeResponseBody implements ModelInterface, ArrayAccess
+class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,38 @@ class UnsubscribeVolumeResponseBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UnsubscribeVolumeResponseBody';
+    protected static $openAPIModelName = 'ListScheduledEventsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * results  退订包周期云硬盘的结果。
+    * requestId  请求的唯一标识ID。
+    * count  计划事件总数。
+    * scheduledEvents  计划事件信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'results' => '\HuaweiCloud\SDK\Evs\V2\Model\UnsubscribeVolume[]'
+            'requestId' => 'string',
+            'count' => 'int',
+            'scheduledEvents' => '\HuaweiCloud\SDK\Cph\V1\Model\ListScheduledEventsResponseBodyScheduledEvents[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneServersModelOfferingsResponseBodyPageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * results  退订包周期云硬盘的结果。
+    * requestId  请求的唯一标识ID。
+    * count  计划事件总数。
+    * scheduledEvents  计划事件信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'results' => null
+        'requestId' => null,
+        'count' => 'int32',
+        'scheduledEvents' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -61,32 +74,50 @@ class UnsubscribeVolumeResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * results  退订包周期云硬盘的结果。
+    * requestId  请求的唯一标识ID。
+    * count  计划事件总数。
+    * scheduledEvents  计划事件信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'results' => 'results'
+            'requestId' => 'request_id',
+            'count' => 'count',
+            'scheduledEvents' => 'scheduled_events',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * results  退订包周期云硬盘的结果。
+    * requestId  请求的唯一标识ID。
+    * count  计划事件总数。
+    * scheduledEvents  计划事件信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'results' => 'setResults'
+            'requestId' => 'setRequestId',
+            'count' => 'setCount',
+            'scheduledEvents' => 'setScheduledEvents',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * results  退订包周期云硬盘的结果。
+    * requestId  请求的唯一标识ID。
+    * count  计划事件总数。
+    * scheduledEvents  计划事件信息
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'results' => 'getResults'
+            'requestId' => 'getRequestId',
+            'count' => 'getCount',
+            'scheduledEvents' => 'getScheduledEvents',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -147,7 +178,10 @@ class UnsubscribeVolumeResponseBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['scheduledEvents'] = isset($data['scheduledEvents']) ? $data['scheduledEvents'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -158,9 +192,6 @@ class UnsubscribeVolumeResponseBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['results'] === null) {
-            $invalidProperties[] = "'results' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +207,98 @@ class UnsubscribeVolumeResponseBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets results
-    *  退订包周期云硬盘的结果。
+    * Gets requestId
+    *  请求的唯一标识ID。
     *
-    * @return \HuaweiCloud\SDK\Evs\V2\Model\UnsubscribeVolume[]
+    * @return string|null
     */
-    public function getResults()
+    public function getRequestId()
     {
-        return $this->container['results'];
+        return $this->container['requestId'];
     }
 
     /**
-    * Sets results
+    * Sets requestId
     *
-    * @param \HuaweiCloud\SDK\Evs\V2\Model\UnsubscribeVolume[] $results 退订包周期云硬盘的结果。
+    * @param string|null $requestId 请求的唯一标识ID。
     *
     * @return $this
     */
-    public function setResults($results)
+    public function setRequestId($requestId)
     {
-        $this->container['results'] = $results;
+        $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  计划事件总数。
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count 计划事件总数。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets scheduledEvents
+    *  计划事件信息
+    *
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\ListScheduledEventsResponseBodyScheduledEvents[]|null
+    */
+    public function getScheduledEvents()
+    {
+        return $this->container['scheduledEvents'];
+    }
+
+    /**
+    * Sets scheduledEvents
+    *
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\ListScheduledEventsResponseBodyScheduledEvents[]|null $scheduledEvents 计划事件信息
+    *
+    * @return $this
+    */
+    public function setScheduledEvents($scheduledEvents)
+    {
+        $this->container['scheduledEvents'] = $scheduledEvents;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneServersModelOfferingsResponseBodyPageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Cph\V1\Model\ListCloudPhoneServersModelOfferingsResponseBodyPageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

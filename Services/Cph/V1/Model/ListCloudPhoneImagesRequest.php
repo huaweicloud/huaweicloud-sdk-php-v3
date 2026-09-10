@@ -21,21 +21,29 @@ class ListCloudPhoneImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * imageType  镜像类型 公共镜像：public 私有镜像：private 共享镜像：share 所有类型镜像：all
+    * marker  分页标记。
+    * limit  每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'imageType' => 'string'
+            'imageType' => 'string',
+            'marker' => 'string',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * imageType  镜像类型 公共镜像：public 私有镜像：private 共享镜像：share 所有类型镜像：all
+    * marker  分页标记。
+    * limit  每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'imageType' => null
+        'imageType' => null,
+        'marker' => null,
+        'limit' => 'int32'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListCloudPhoneImagesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * imageType  镜像类型 公共镜像：public 私有镜像：private 共享镜像：share 所有类型镜像：all
+    * marker  分页标记。
+    * limit  每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'imageType' => 'image_type'
+            'imageType' => 'image_type',
+            'marker' => 'marker',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * imageType  镜像类型 公共镜像：public 私有镜像：private 共享镜像：share 所有类型镜像：all
+    * marker  分页标记。
+    * limit  每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
     *
     * @var string[]
     */
     protected static $setters = [
-            'imageType' => 'setImageType'
+            'imageType' => 'setImageType',
+            'marker' => 'setMarker',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * imageType  镜像类型 公共镜像：public 私有镜像：private 共享镜像：share 所有类型镜像：all
+    * marker  分页标记。
+    * limit  每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
     *
     * @var string[]
     */
     protected static $getters = [
-            'imageType' => 'getImageType'
+            'imageType' => 'getImageType',
+            'marker' => 'getMarker',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListCloudPhoneImagesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['imageType'] = isset($data['imageType']) ? $data['imageType'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -199,6 +221,54 @@ class ListCloudPhoneImagesRequest implements ModelInterface, ArrayAccess
     public function setImageType($imageType)
     {
         $this->container['imageType'] = $imageType;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页返回的镜像个数。取值范围：1~500（默认值为500），一般设置为10、20、50。 当image_type传all时，分页返回顺序按公共镜像：public 私有镜像，private 共享镜像：share
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

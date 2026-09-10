@@ -22,24 +22,28 @@ class PropertyToUpdate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * phoneId  云手机id，不超过32个字节。
     * property  云手机属性列表，为Json格式字符串。
+    * customProperty  用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'phoneId' => 'string',
-            'property' => 'string'
+            'property' => 'string',
+            'customProperty' => 'map[string,string]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * phoneId  云手机id，不超过32个字节。
     * property  云手机属性列表，为Json格式字符串。
+    * customProperty  用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'phoneId' => null,
-        'property' => null
+        'property' => null,
+        'customProperty' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class PropertyToUpdate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * phoneId  云手机id，不超过32个字节。
     * property  云手机属性列表，为Json格式字符串。
+    * customProperty  用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'phoneId' => 'phone_id',
-            'property' => 'property'
+            'property' => 'property',
+            'customProperty' => 'custom_property'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * phoneId  云手机id，不超过32个字节。
     * property  云手机属性列表，为Json格式字符串。
+    * customProperty  用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
     *
     * @var string[]
     */
     protected static $setters = [
             'phoneId' => 'setPhoneId',
-            'property' => 'setProperty'
+            'property' => 'setProperty',
+            'customProperty' => 'setCustomProperty'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * phoneId  云手机id，不超过32个字节。
     * property  云手机属性列表，为Json格式字符串。
+    * customProperty  用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
     *
     * @var string[]
     */
     protected static $getters = [
             'phoneId' => 'getPhoneId',
-            'property' => 'getProperty'
+            'property' => 'getProperty',
+            'customProperty' => 'getCustomProperty'
     ];
 
     /**
@@ -159,6 +169,7 @@ class PropertyToUpdate implements ModelInterface, ArrayAccess
     {
         $this->container['phoneId'] = isset($data['phoneId']) ? $data['phoneId'] : null;
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
+        $this->container['customProperty'] = isset($data['customProperty']) ? $data['customProperty'] : null;
     }
 
     /**
@@ -246,6 +257,30 @@ class PropertyToUpdate implements ModelInterface, ArrayAccess
     public function setProperty($property)
     {
         $this->container['property'] = $property;
+        return $this;
+    }
+
+    /**
+    * Gets customProperty
+    *  用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
+    *
+    * @return map[string,string]|null
+    */
+    public function getCustomProperty()
+    {
+        return $this->container['customProperty'];
+    }
+
+    /**
+    * Sets customProperty
+    *
+    * @param map[string,string]|null $customProperty 用户自定义属性键值对。若涉及 OS 系统属性，需遵循系统属性规范。注意：本字段与 property 字段的合并总长度不得超过 7800 字节。
+    *
+    * @return $this
+    */
+    public function setCustomProperty($customProperty)
+    {
+        $this->container['customProperty'] = $customProperty;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class UnsubscribePostpaidVolumeResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Evs\V2\Model\UnsubscribeVolumeResponseBody[]'
+            'body' => 'object'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UnsubscribePostpaidVolumeResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Evs\V2\Model\UnsubscribeVolumeResponseBody[]|null
+    * @return object|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class UnsubscribePostpaidVolumeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Evs\V2\Model\UnsubscribeVolumeResponseBody[]|null $body body
+    * @param object|null $body body
     *
     * @return $this
     */
