@@ -26,6 +26,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -35,7 +39,11 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'float',
             'officialWebsiteAmount' => 'float',
             'discountAmount' => 'float',
-            'measureId' => 'int'
+            'measureId' => 'int',
+            'installmentOfficialWebsiteAmount' => 'string',
+            'installmentOfficialDiscountAmount' => 'string',
+            'installmentAmount' => 'string',
+            'installmentPeriodType' => 'int'
     ];
 
     /**
@@ -46,6 +54,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
         'amount' => 'bigdecimal',
         'officialWebsiteAmount' => 'bigdecimal',
         'discountAmount' => 'bigdecimal',
-        'measureId' => 'int32'
+        'measureId' => 'int32',
+        'installmentOfficialWebsiteAmount' => null,
+        'installmentOfficialDiscountAmount' => null,
+        'installmentAmount' => null,
+        'installmentPeriodType' => 'int32'
     ];
 
     /**
@@ -87,6 +103,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -96,7 +116,11 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'amount',
             'officialWebsiteAmount' => 'official_website_amount',
             'discountAmount' => 'discount_amount',
-            'measureId' => 'measure_id'
+            'measureId' => 'measure_id',
+            'installmentOfficialWebsiteAmount' => 'installment_official_website_amount',
+            'installmentOfficialDiscountAmount' => 'installment_official_discount_amount',
+            'installmentAmount' => 'installment_amount',
+            'installmentPeriodType' => 'installment_period_type'
     ];
 
     /**
@@ -107,6 +131,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -116,7 +144,11 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'setAmount',
             'officialWebsiteAmount' => 'setOfficialWebsiteAmount',
             'discountAmount' => 'setDiscountAmount',
-            'measureId' => 'setMeasureId'
+            'measureId' => 'setMeasureId',
+            'installmentOfficialWebsiteAmount' => 'setInstallmentOfficialWebsiteAmount',
+            'installmentOfficialDiscountAmount' => 'setInstallmentOfficialDiscountAmount',
+            'installmentAmount' => 'setInstallmentAmount',
+            'installmentPeriodType' => 'setInstallmentPeriodType'
     ];
 
     /**
@@ -127,6 +159,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     * officialWebsiteAmount  包年/包月产品的官网价。
     * discountAmount  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     * measureId  价格度量单位标识。 1：元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
             'amount' => 'getAmount',
             'officialWebsiteAmount' => 'getOfficialWebsiteAmount',
             'discountAmount' => 'getDiscountAmount',
-            'measureId' => 'getMeasureId'
+            'measureId' => 'getMeasureId',
+            'installmentOfficialWebsiteAmount' => 'getInstallmentOfficialWebsiteAmount',
+            'installmentOfficialDiscountAmount' => 'getInstallmentOfficialDiscountAmount',
+            'installmentAmount' => 'getInstallmentAmount',
+            'installmentPeriodType' => 'getInstallmentPeriodType'
     ];
 
     /**
@@ -203,6 +243,10 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
         $this->container['officialWebsiteAmount'] = isset($data['officialWebsiteAmount']) ? $data['officialWebsiteAmount'] : null;
         $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['installmentOfficialWebsiteAmount'] = isset($data['installmentOfficialWebsiteAmount']) ? $data['installmentOfficialWebsiteAmount'] : null;
+        $this->container['installmentOfficialDiscountAmount'] = isset($data['installmentOfficialDiscountAmount']) ? $data['installmentOfficialDiscountAmount'] : null;
+        $this->container['installmentAmount'] = isset($data['installmentAmount']) ? $data['installmentAmount'] : null;
+        $this->container['installmentPeriodType'] = isset($data['installmentPeriodType']) ? $data['installmentPeriodType'] : null;
     }
 
     /**
@@ -380,6 +424,102 @@ class PeriodProductRatingResult implements ModelInterface, ArrayAccess
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
+        return $this;
+    }
+
+    /**
+    * Gets installmentOfficialWebsiteAmount
+    *  分期金额的官网价。 说明：暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentOfficialWebsiteAmount()
+    {
+        return $this->container['installmentOfficialWebsiteAmount'];
+    }
+
+    /**
+    * Sets installmentOfficialWebsiteAmount
+    *
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。 说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentOfficialWebsiteAmount($installmentOfficialWebsiteAmount)
+    {
+        $this->container['installmentOfficialWebsiteAmount'] = $installmentOfficialWebsiteAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentOfficialDiscountAmount
+    *  分期金额的折扣价。 说明：暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentOfficialDiscountAmount()
+    {
+        return $this->container['installmentOfficialDiscountAmount'];
+    }
+
+    /**
+    * Sets installmentOfficialDiscountAmount
+    *
+    * @param string|null $installmentOfficialDiscountAmount 分期金额的折扣价。 说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentOfficialDiscountAmount($installmentOfficialDiscountAmount)
+    {
+        $this->container['installmentOfficialDiscountAmount'] = $installmentOfficialDiscountAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentAmount
+    *  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentAmount()
+    {
+        return $this->container['installmentAmount'];
+    }
+
+    /**
+    * Sets installmentAmount
+    *
+    * @param string|null $installmentAmount 分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentAmount($installmentAmount)
+    {
+        $this->container['installmentAmount'] = $installmentAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentPeriodType
+    *  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
+    *
+    * @return int|null
+    */
+    public function getInstallmentPeriodType()
+    {
+        return $this->container['installmentPeriodType'];
+    }
+
+    /**
+    * Sets installmentPeriodType
+    *
+    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentPeriodType($installmentPeriodType)
+    {
+        $this->container['installmentPeriodType'] = $installmentPeriodType;
         return $this;
     }
 

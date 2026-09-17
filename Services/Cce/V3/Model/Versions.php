@@ -20,13 +20,13 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  插件版本号
-    * input  插件安装参数
-    * stable  是否为稳定版本
-    * translate  供界面使用的翻译信息
-    * supportVersions  支持集群版本号
-    * creationTimestamp  创建时间
-    * updateTimestamp  更新时间
+    * version  **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * input  **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * stable  **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
+    * translate  **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * supportVersions  **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  插件版本号
-    * input  插件安装参数
-    * stable  是否为稳定版本
-    * translate  供界面使用的翻译信息
-    * supportVersions  支持集群版本号
-    * creationTimestamp  创建时间
-    * updateTimestamp  更新时间
+    * version  **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * input  **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * stable  **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
+    * translate  **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * supportVersions  **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  插件版本号
-    * input  插件安装参数
-    * stable  是否为稳定版本
-    * translate  供界面使用的翻译信息
-    * supportVersions  支持集群版本号
-    * creationTimestamp  创建时间
-    * updateTimestamp  更新时间
+    * version  **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * input  **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * stable  **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
+    * translate  **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * supportVersions  **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  插件版本号
-    * input  插件安装参数
-    * stable  是否为稳定版本
-    * translate  供界面使用的翻译信息
-    * supportVersions  支持集群版本号
-    * creationTimestamp  创建时间
-    * updateTimestamp  更新时间
+    * version  **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * input  **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * stable  **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
+    * translate  **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * supportVersions  **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  插件版本号
-    * input  插件安装参数
-    * stable  是否为稳定版本
-    * translate  供界面使用的翻译信息
-    * supportVersions  支持集群版本号
-    * creationTimestamp  创建时间
-    * updateTimestamp  更新时间
+    * version  **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * input  **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * stable  **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
+    * translate  **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * supportVersions  **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -258,7 +258,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  插件版本号
+    *  **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 插件版本号
+    * @param string $version **参数解释**： 插件版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets input
-    *  插件安装参数
+    *  **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return object
     */
@@ -294,7 +294,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets input
     *
-    * @param object $input 插件安装参数
+    * @param object $input **参数解释**： 插件安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets stable
-    *  是否为稳定版本
+    *  **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
     *
     * @return bool
     */
@@ -318,7 +318,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets stable
     *
-    * @param bool $stable 是否为稳定版本
+    * @param bool $stable **参数解释**： 是否为稳定版本。 **约束限制**： 不涉及 **取值范围**： - true：稳定版本 - false：非稳定版本  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets translate
-    *  供界面使用的翻译信息
+    *  **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return object
     */
@@ -342,7 +342,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets translate
     *
-    * @param object $translate 供界面使用的翻译信息
+    * @param object $translate **参数解释**： 供界面使用的翻译信息。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportVersions
-    *  支持集群版本号
+    *  **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\SupportVersions[]
     */
@@ -366,7 +366,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets supportVersions
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\SupportVersions[] $supportVersions 支持集群版本号
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\SupportVersions[] $supportVersions **参数解释**： 支持集群版本号。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  创建时间
+    *  **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \DateTime|null
     */
@@ -390,7 +390,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param \DateTime|null $creationTimestamp 创建时间
+    * @param \DateTime|null $creationTimestamp **参数解释**： 创建时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class Versions implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTimestamp
-    *  更新时间
+    *  **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \DateTime
     */
@@ -414,7 +414,7 @@ class Versions implements ModelInterface, ArrayAccess
     /**
     * Sets updateTimestamp
     *
-    * @param \DateTime $updateTimestamp 更新时间
+    * @param \DateTime $updateTimestamp **参数解释**： 更新时间。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

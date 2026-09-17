@@ -20,7 +20,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    * uid  **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    * uid  **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    * uid  **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    * uid  **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    * uid  **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    *  **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class UpgradeCluserResponseMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 升级任务ID，可通过调用获取集群升级任务详情API查询进展
+    * @param string|null $uid **参数解释：** 升级任务ID，可通过调用获取集群升级任务详情API查询进展 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

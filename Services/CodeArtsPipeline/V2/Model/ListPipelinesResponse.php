@@ -24,6 +24,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
     * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
     * total  **参数解释**： 记录总数。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    * highestConfidentiality  highestConfidentiality
+    * numberOfHiddenData  **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
     * pipelines  **参数解释**： 流水线。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -32,6 +35,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'total' => 'int',
+            'currentSystemTime' => 'int',
+            'highestConfidentiality' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageHighestConfidentiality',
+            'numberOfHiddenData' => 'int',
             'pipelines' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPagePipelines[]'
     ];
 
@@ -40,6 +46,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
     * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
     * total  **参数解释**： 记录总数。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    * highestConfidentiality  highestConfidentiality
+    * numberOfHiddenData  **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
     * pipelines  **参数解释**： 流水线。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -48,6 +57,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'limit' => 'int32',
         'total' => 'int32',
+        'currentSystemTime' => 'int64',
+        'highestConfidentiality' => null,
+        'numberOfHiddenData' => 'int64',
         'pipelines' => null
     ];
 
@@ -77,6 +89,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
     * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
     * total  **参数解释**： 记录总数。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    * highestConfidentiality  highestConfidentiality
+    * numberOfHiddenData  **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
     * pipelines  **参数解释**： 流水线。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -85,6 +100,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'total' => 'total',
+            'currentSystemTime' => 'current_system_time',
+            'highestConfidentiality' => 'highest_confidentiality',
+            'numberOfHiddenData' => 'number_of_hidden_data',
             'pipelines' => 'pipelines'
     ];
 
@@ -93,6 +111,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
     * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
     * total  **参数解释**： 记录总数。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    * highestConfidentiality  highestConfidentiality
+    * numberOfHiddenData  **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
     * pipelines  **参数解释**： 流水线。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -101,6 +122,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'total' => 'setTotal',
+            'currentSystemTime' => 'setCurrentSystemTime',
+            'highestConfidentiality' => 'setHighestConfidentiality',
+            'numberOfHiddenData' => 'setNumberOfHiddenData',
             'pipelines' => 'setPipelines'
     ];
 
@@ -109,6 +133,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
     * offset  **参数解释**： 起始偏移。 **取值范围**： 不涉及。
     * limit  **参数解释**： 查询大小。 **取值范围**： 不涉及。
     * total  **参数解释**： 记录总数。 **取值范围**： 不涉及。
+    * currentSystemTime  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    * highestConfidentiality  highestConfidentiality
+    * numberOfHiddenData  **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
     * pipelines  **参数解释**： 流水线。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -117,6 +144,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'total' => 'getTotal',
+            'currentSystemTime' => 'getCurrentSystemTime',
+            'highestConfidentiality' => 'getHighestConfidentiality',
+            'numberOfHiddenData' => 'getNumberOfHiddenData',
             'pipelines' => 'getPipelines'
     ];
 
@@ -181,6 +211,9 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['currentSystemTime'] = isset($data['currentSystemTime']) ? $data['currentSystemTime'] : null;
+        $this->container['highestConfidentiality'] = isset($data['highestConfidentiality']) ? $data['highestConfidentiality'] : null;
+        $this->container['numberOfHiddenData'] = isset($data['numberOfHiddenData']) ? $data['numberOfHiddenData'] : null;
         $this->container['pipelines'] = isset($data['pipelines']) ? $data['pipelines'] : null;
     }
 
@@ -275,6 +308,78 @@ class ListPipelinesResponse implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+        return $this;
+    }
+
+    /**
+    * Gets currentSystemTime
+    *  **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCurrentSystemTime()
+    {
+        return $this->container['currentSystemTime'];
+    }
+
+    /**
+    * Sets currentSystemTime
+    *
+    * @param int|null $currentSystemTime **参数解释**： 当前系统时间。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCurrentSystemTime($currentSystemTime)
+    {
+        $this->container['currentSystemTime'] = $currentSystemTime;
+        return $this;
+    }
+
+    /**
+    * Gets highestConfidentiality
+    *  highestConfidentiality
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageHighestConfidentiality|null
+    */
+    public function getHighestConfidentiality()
+    {
+        return $this->container['highestConfidentiality'];
+    }
+
+    /**
+    * Sets highestConfidentiality
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageHighestConfidentiality|null $highestConfidentiality highestConfidentiality
+    *
+    * @return $this
+    */
+    public function setHighestConfidentiality($highestConfidentiality)
+    {
+        $this->container['highestConfidentiality'] = $highestConfidentiality;
+        return $this;
+    }
+
+    /**
+    * Gets numberOfHiddenData
+    *  **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getNumberOfHiddenData()
+    {
+        return $this->container['numberOfHiddenData'];
+    }
+
+    /**
+    * Sets numberOfHiddenData
+    *
+    * @param int|null $numberOfHiddenData **参数解释**： 隐藏数据数量。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNumberOfHiddenData($numberOfHiddenData)
+    {
+        $this->container['numberOfHiddenData'] = $numberOfHiddenData;
         return $this;
     }
 

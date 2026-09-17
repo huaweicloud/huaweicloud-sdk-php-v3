@@ -21,25 +21,29 @@ class ResizeInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resize  resize
-    * isAutoPay  变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    * isAutoPay  **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
+    * isForceResize  **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resize' => '\HuaweiCloud\SDK\Dds\V3\Model\ResizeInstanceOption',
-            'isAutoPay' => 'bool'
+            'isAutoPay' => 'bool',
+            'isForceResize' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resize  resize
-    * isAutoPay  变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    * isAutoPay  **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
+    * isForceResize  **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resize' => null,
-        'isAutoPay' => null
+        'isAutoPay' => null,
+        'isForceResize' => null
     ];
 
     /**
@@ -66,37 +70,43 @@ class ResizeInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resize  resize
-    * isAutoPay  变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    * isAutoPay  **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
+    * isForceResize  **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resize' => 'resize',
-            'isAutoPay' => 'is_auto_pay'
+            'isAutoPay' => 'is_auto_pay',
+            'isForceResize' => 'is_force_resize'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resize  resize
-    * isAutoPay  变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    * isAutoPay  **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
+    * isForceResize  **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
     *
     * @var string[]
     */
     protected static $setters = [
             'resize' => 'setResize',
-            'isAutoPay' => 'setIsAutoPay'
+            'isAutoPay' => 'setIsAutoPay',
+            'isForceResize' => 'setIsForceResize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resize  resize
-    * isAutoPay  变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    * isAutoPay  **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
+    * isForceResize  **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
     *
     * @var string[]
     */
     protected static $getters = [
             'resize' => 'getResize',
-            'isAutoPay' => 'getIsAutoPay'
+            'isAutoPay' => 'getIsAutoPay',
+            'isForceResize' => 'getIsForceResize'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ResizeInstanceRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['resize'] = isset($data['resize']) ? $data['resize'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['isForceResize'] = isset($data['isForceResize']) ? $data['isForceResize'] : null;
     }
 
     /**
@@ -212,7 +223,7 @@ class ResizeInstanceRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    *  **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
     *
     * @return bool|null
     */
@@ -224,13 +235,37 @@ class ResizeInstanceRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 - 对于降低规格场景，该字段无效。 - 对于扩大规格场景：   - true，表示自动从账户中支付。   - false，表示手动从账户中支付，默认为该方式。
+    * @param bool|null $isAutoPay **参数解释：** 变更包年包月实例规格时可指定，表示是否自动从账户中支付，此字段不影响自动续订的支付方式。 **约束限制：** 对于降低规格场景，该字段无效。 **取值范围：** 对于扩大规格场景： - true，表示自动从账户中支付。 - false，表示手动从账户中支付，默认为该方式。 **默认取值：** false。
     *
     * @return $this
     */
     public function setIsAutoPay($isAutoPay)
     {
         $this->container['isAutoPay'] = $isAutoPay;
+        return $this;
+    }
+
+    /**
+    * Gets isForceResize
+    *  **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
+    *
+    * @return bool|null
+    */
+    public function getIsForceResize()
+    {
+        return $this->container['isForceResize'];
+    }
+
+    /**
+    * Sets isForceResize
+    *
+    * @param bool|null $isForceResize **参数解释：** 标识是否进行强制规格变更操作。 **约束限制：** 集群的dds mongos节点和只读节点不支持强制规格变更。 **取值范围：** 对于规格变更： - true，表示执行强制规格变更。 - 不传此参数，表示执行正常规格变更。 **默认取值：** 不传此参数。
+    *
+    * @return $this
+    */
+    public function setIsForceResize($isForceResize)
+    {
+        $this->container['isForceResize'] = $isForceResize;
         return $this;
     }
 

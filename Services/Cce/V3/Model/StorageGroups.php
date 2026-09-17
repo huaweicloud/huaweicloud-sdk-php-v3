@@ -22,8 +22,8 @@ class StorageGroups implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
-    * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
-    * virtualSpaces  group中空间配置的详细管理。
+    * selectorNames  **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * virtualSpaces  **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class StorageGroups implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
-    * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
-    * virtualSpaces  group中空间配置的详细管理。
+    * selectorNames  **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * virtualSpaces  **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class StorageGroups implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
-    * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
-    * virtualSpaces  group中空间配置的详细管理。
+    * selectorNames  **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * virtualSpaces  **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class StorageGroups implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
-    * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
-    * virtualSpaces  group中空间配置的详细管理。
+    * selectorNames  **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * virtualSpaces  **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class StorageGroups implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  storageGroups的名字，作为虚拟存储组的名字，因此各个group名字不能重复。 > - 当cceManaged=ture时，name必须为：vgpass。 > - 当数据盘作为临时存储卷时：name必须为：vg-everest-localvolume-ephemeral。 > - 当数据盘作为持久存储卷时：name必须为：vg-everest-localvolume-persistent。
     * cceManaged  k8s及runtime所属存储空间。有且仅有一个group被设置为true，不填默认false。
-    * selectorNames  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
-    * virtualSpaces  group中空间配置的详细管理。
+    * selectorNames  **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * virtualSpaces  **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -264,7 +264,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Gets selectorNames
-    *  对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
+    *  **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]
     */
@@ -276,7 +276,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
     /**
     * Sets selectorNames
     *
-    * @param string[] $selectorNames 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。
+    * @param string[] $selectorNames **参数解释**： 对应storageSelectors中的name，一个group可选择多个selector；但一个selector只能被一个group选择。 **约束限制**： 系统组件无法分别存储于系统盘与数据盘中，因此选择selector的type为system时，group只能选择一个selector。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualSpaces
-    *  group中空间配置的详细管理。
+    *  **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\VirtualSpace[]
     */
@@ -300,7 +300,7 @@ class StorageGroups implements ModelInterface, ArrayAccess
     /**
     * Sets virtualSpaces
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\VirtualSpace[] $virtualSpaces group中空间配置的详细管理。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\VirtualSpace[] $virtualSpaces **参数解释**： group中空间配置的详细管理。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    * jobid  **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    * jobid  **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    * jobid  **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    * jobid  **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobid  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    * jobid  **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobid
-    *  Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    *  **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class UpgradeNodePoolResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobid
     *
-    * @param string|null $jobid Job ID returned after the job is delivered. The job ID can be used to query the job execution status.
+    * @param string|null $jobid **参数解释**： 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -22,32 +22,36 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * appVersion  边缘应用版本
     * moduleName  边缘模块名称
-    * containerSettings  containerSettings
     * desiredState  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * containerSettings  containerSettings
+    * forceUpgrade  是否强制升级
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'appVersion' => 'string',
             'moduleName' => 'string',
+            'desiredState' => 'string',
             'containerSettings' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ContainerSettingsReqDTO',
-            'desiredState' => 'string'
+            'forceUpgrade' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * appVersion  边缘应用版本
     * moduleName  边缘模块名称
-    * containerSettings  containerSettings
     * desiredState  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * containerSettings  containerSettings
+    * forceUpgrade  是否强制升级
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'appVersion' => null,
         'moduleName' => null,
+        'desiredState' => null,
         'containerSettings' => null,
-        'desiredState' => null
+        'forceUpgrade' => null
     ];
 
     /**
@@ -75,48 +79,54 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * appVersion  边缘应用版本
     * moduleName  边缘模块名称
-    * containerSettings  containerSettings
     * desiredState  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * containerSettings  containerSettings
+    * forceUpgrade  是否强制升级
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'appVersion' => 'app_version',
             'moduleName' => 'module_name',
+            'desiredState' => 'desired_state',
             'containerSettings' => 'container_settings',
-            'desiredState' => 'desired_state'
+            'forceUpgrade' => 'force_upgrade'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * appVersion  边缘应用版本
     * moduleName  边缘模块名称
-    * containerSettings  containerSettings
     * desiredState  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * containerSettings  containerSettings
+    * forceUpgrade  是否强制升级
     *
     * @var string[]
     */
     protected static $setters = [
             'appVersion' => 'setAppVersion',
             'moduleName' => 'setModuleName',
+            'desiredState' => 'setDesiredState',
             'containerSettings' => 'setContainerSettings',
-            'desiredState' => 'setDesiredState'
+            'forceUpgrade' => 'setForceUpgrade'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * appVersion  边缘应用版本
     * moduleName  边缘模块名称
-    * containerSettings  containerSettings
     * desiredState  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * containerSettings  containerSettings
+    * forceUpgrade  是否强制升级
     *
     * @var string[]
     */
     protected static $getters = [
             'appVersion' => 'getAppVersion',
             'moduleName' => 'getModuleName',
+            'desiredState' => 'getDesiredState',
             'containerSettings' => 'getContainerSettings',
-            'desiredState' => 'getDesiredState'
+            'forceUpgrade' => 'getForceUpgrade'
     ];
 
     /**
@@ -194,8 +204,9 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
     {
         $this->container['appVersion'] = isset($data['appVersion']) ? $data['appVersion'] : null;
         $this->container['moduleName'] = isset($data['moduleName']) ? $data['moduleName'] : null;
-        $this->container['containerSettings'] = isset($data['containerSettings']) ? $data['containerSettings'] : null;
         $this->container['desiredState'] = isset($data['desiredState']) ? $data['desiredState'] : null;
+        $this->container['containerSettings'] = isset($data['containerSettings']) ? $data['containerSettings'] : null;
+        $this->container['forceUpgrade'] = isset($data['forceUpgrade']) ? $data['forceUpgrade'] : null;
     }
 
     /**
@@ -215,8 +226,8 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appVersion']) && !preg_match("/^[A-Za-z0-9-_.]*$/", $this->container['appVersion'])) {
                 $invalidProperties[] = "invalid value for 'appVersion', must be conform to the pattern /^[A-Za-z0-9-_.]*$/.";
             }
-            if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'moduleName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'moduleName', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'moduleName', the character length must be bigger than or equal to 0.";
@@ -232,15 +243,6 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['desiredState']) && (mb_strlen($this->container['desiredState']) > 64)) {
-                $invalidProperties[] = "invalid value for 'desiredState', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['desiredState']) && (mb_strlen($this->container['desiredState']) < 0)) {
-                $invalidProperties[] = "invalid value for 'desiredState', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['desiredState']) && !preg_match("/(RUNNING|STOPPED)/", $this->container['desiredState'])) {
-                $invalidProperties[] = "invalid value for 'desiredState', must be conform to the pattern /(RUNNING|STOPPED)/.";
-            }
         return $invalidProperties;
     }
 
@@ -304,6 +306,30 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets desiredState
+    *  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    *
+    * @return string|null
+    */
+    public function getDesiredState()
+    {
+        return $this->container['desiredState'];
+    }
+
+    /**
+    * Sets desiredState
+    *
+    * @param string|null $desiredState 模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    *
+    * @return $this
+    */
+    public function setDesiredState($desiredState)
+    {
+        $this->container['desiredState'] = $desiredState;
+        return $this;
+    }
+
+    /**
     * Gets containerSettings
     *  containerSettings
     *
@@ -328,26 +354,26 @@ class UpdateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets desiredState
-    *  模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * Gets forceUpgrade
+    *  是否强制升级
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getDesiredState()
+    public function getForceUpgrade()
     {
-        return $this->container['desiredState'];
+        return $this->container['forceUpgrade'];
     }
 
     /**
-    * Sets desiredState
+    * Sets forceUpgrade
     *
-    * @param string|null $desiredState 模块期望状态: RUNNING(升级后期望模块运行)，STOPPED(升级后期望模块停止)，空值默认继承升级前模块期望状态
+    * @param bool|null $forceUpgrade 是否强制升级
     *
     * @return $this
     */
-    public function setDesiredState($desiredState)
+    public function setForceUpgrade($forceUpgrade)
     {
-        $this->container['desiredState'] = $desiredState;
+        $this->container['forceUpgrade'] = $forceUpgrade;
         return $this;
     }
 

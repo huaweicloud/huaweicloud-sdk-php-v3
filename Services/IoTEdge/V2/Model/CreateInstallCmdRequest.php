@@ -22,6 +22,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * arch  节点架构
+    * enableTpm  是否启用TPM
     * body  body
     *
     * @var string[]
@@ -29,6 +30,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'edgeNodeId' => 'string',
             'arch' => 'string',
+            'enableTpm' => 'bool',
             'body' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\CreateInstallCmdRequestDTO'
     ];
 
@@ -36,6 +38,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * arch  节点架构
+    * enableTpm  是否启用TPM
     * body  body
     *
     * @var string[]
@@ -43,6 +46,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'edgeNodeId' => null,
         'arch' => null,
+        'enableTpm' => null,
         'body' => null
     ];
 
@@ -71,6 +75,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * edgeNodeId  边缘节点ID
     * arch  节点架构
+    * enableTpm  是否启用TPM
     * body  body
     *
     * @var string[]
@@ -78,6 +83,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'edgeNodeId' => 'edge_node_id',
             'arch' => 'arch',
+            'enableTpm' => 'enable_tpm',
             'body' => 'body'
     ];
 
@@ -85,6 +91,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
     * arch  节点架构
+    * enableTpm  是否启用TPM
     * body  body
     *
     * @var string[]
@@ -92,6 +99,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'edgeNodeId' => 'setEdgeNodeId',
             'arch' => 'setArch',
+            'enableTpm' => 'setEnableTpm',
             'body' => 'setBody'
     ];
 
@@ -99,6 +107,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
     * arch  节点架构
+    * enableTpm  是否启用TPM
     * body  body
     *
     * @var string[]
@@ -106,6 +115,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'edgeNodeId' => 'getEdgeNodeId',
             'arch' => 'getArch',
+            'enableTpm' => 'getEnableTpm',
             'body' => 'getBody'
     ];
 
@@ -169,6 +179,7 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     {
         $this->container['edgeNodeId'] = isset($data['edgeNodeId']) ? $data['edgeNodeId'] : null;
         $this->container['arch'] = isset($data['arch']) ? $data['arch'] : null;
+        $this->container['enableTpm'] = isset($data['enableTpm']) ? $data['enableTpm'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -263,6 +274,30 @@ class CreateInstallCmdRequest implements ModelInterface, ArrayAccess
     public function setArch($arch)
     {
         $this->container['arch'] = $arch;
+        return $this;
+    }
+
+    /**
+    * Gets enableTpm
+    *  是否启用TPM
+    *
+    * @return bool|null
+    */
+    public function getEnableTpm()
+    {
+        return $this->container['enableTpm'];
+    }
+
+    /**
+    * Sets enableTpm
+    *
+    * @param bool|null $enableTpm 是否启用TPM
+    *
+    * @return $this
+    */
+    public function setEnableTpm($enableTpm)
+    {
+        $this->container['enableTpm'] = $enableTpm;
         return $this;
     }
 

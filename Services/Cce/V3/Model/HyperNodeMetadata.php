@@ -20,10 +20,10 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
-    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效
-    * updateTimestamp  **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    * name  **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
+    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * ownerReference  ownerReference
     *
     * @var string[]
@@ -38,10 +38,10 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
-    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效
-    * updateTimestamp  **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    * name  **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
+    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * ownerReference  ownerReference
     *
     * @var string[]
@@ -77,10 +77,10 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
-    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效
-    * updateTimestamp  **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    * name  **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
+    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * ownerReference  ownerReference
     *
     * @var string[]
@@ -95,10 +95,10 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
-    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效
-    * updateTimestamp  **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    * name  **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
+    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * ownerReference  ownerReference
     *
     * @var string[]
@@ -113,10 +113,10 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
-    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
-    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效
-    * updateTimestamp  **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    * name  **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
+    * uid  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * ownerReference  ownerReference
     *
     * @var string[]
@@ -227,7 +227,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *  **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释**： 超节点名称 > 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-56位，且不能以中划线(-)结尾。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * @param string|null $name **参数解释**： 超节点名称。 **约束限制**： 不涉及 **取值范围**： 命名规则：以小写字母开头，由小写字母、数字、中划线(-)组成，长度范围1-69位，且不能以中划线(-)结尾。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
+    *  **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效
+    * @param string|null $uid **参数解释**： 超节点ID，资源唯一标识，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： UUID格式 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  **参数解释**： 创建时间，创建成功后自动生成，填写无效
+    *  **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param string|null $creationTimestamp **参数解释**： 创建时间，创建成功后自动生成，填写无效
+    * @param string|null $creationTimestamp **参数解释**： 创建时间，创建成功后自动生成，填写无效 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTimestamp
-    *  **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    *  **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class HyperNodeMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets updateTimestamp
     *
-    * @param string|null $updateTimestamp **参数解释**： 更新时间，创建成功后自动生成，填写无效
+    * @param string|null $updateTimestamp **参数解释**： 更新时间，系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

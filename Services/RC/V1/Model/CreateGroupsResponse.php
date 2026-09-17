@@ -24,8 +24,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * groupName  groupName
     * description  description
-    * createTime  createTime
-    * updateTime  updateTime
+    * created  created
+    * updated  updated
     *
     * @var string[]
     */
@@ -34,8 +34,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
             'domainId' => 'string',
             'groupName' => 'string',
             'description' => 'string',
-            'createTime' => 'string',
-            'updateTime' => 'string'
+            'created' => 'string',
+            'updated' => 'string'
     ];
 
     /**
@@ -44,8 +44,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * groupName  groupName
     * description  description
-    * createTime  createTime
-    * updateTime  updateTime
+    * created  created
+    * updated  updated
     *
     * @var string[]
     */
@@ -54,8 +54,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
         'domainId' => null,
         'groupName' => null,
         'description' => null,
-        'createTime' => null,
-        'updateTime' => null
+        'created' => null,
+        'updated' => null
     ];
 
     /**
@@ -85,8 +85,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * groupName  groupName
     * description  description
-    * createTime  createTime
-    * updateTime  updateTime
+    * created  created
+    * updated  updated
     *
     * @var string[]
     */
@@ -95,8 +95,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'groupName' => 'group_name',
             'description' => 'description',
-            'createTime' => 'create_time',
-            'updateTime' => 'update_time'
+            'created' => 'created',
+            'updated' => 'updated'
     ];
 
     /**
@@ -105,8 +105,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * groupName  groupName
     * description  description
-    * createTime  createTime
-    * updateTime  updateTime
+    * created  created
+    * updated  updated
     *
     * @var string[]
     */
@@ -115,8 +115,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'groupName' => 'setGroupName',
             'description' => 'setDescription',
-            'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime'
+            'created' => 'setCreated',
+            'updated' => 'setUpdated'
     ];
 
     /**
@@ -125,8 +125,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
     * domainId  domainId
     * groupName  groupName
     * description  description
-    * createTime  createTime
-    * updateTime  updateTime
+    * created  created
+    * updated  updated
     *
     * @var string[]
     */
@@ -135,8 +135,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'groupName' => 'getGroupName',
             'description' => 'getDescription',
-            'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime'
+            'created' => 'getCreated',
+            'updated' => 'getUpdated'
     ];
 
     /**
@@ -201,8 +201,8 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -324,50 +324,50 @@ class CreateGroupsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createTime
-    *  createTime
+    * Gets created
+    *  created
     *
     * @return string|null
     */
-    public function getCreateTime()
+    public function getCreated()
     {
-        return $this->container['createTime'];
+        return $this->container['created'];
     }
 
     /**
-    * Sets createTime
+    * Sets created
     *
-    * @param string|null $createTime createTime
+    * @param string|null $created created
     *
     * @return $this
     */
-    public function setCreateTime($createTime)
+    public function setCreated($created)
     {
-        $this->container['createTime'] = $createTime;
+        $this->container['created'] = $created;
         return $this;
     }
 
     /**
-    * Gets updateTime
-    *  updateTime
+    * Gets updated
+    *  updated
     *
     * @return string|null
     */
-    public function getUpdateTime()
+    public function getUpdated()
     {
-        return $this->container['updateTime'];
+        return $this->container['updated'];
     }
 
     /**
-    * Sets updateTime
+    * Sets updated
     *
-    * @param string|null $updateTime updateTime
+    * @param string|null $updated updated
     *
     * @return $this
     */
-    public function setUpdateTime($updateTime)
+    public function setUpdated($updated)
     {
-        $this->container['updateTime'] = $updateTime;
+        $this->container['updated'] = $updated;
         return $this;
     }
 

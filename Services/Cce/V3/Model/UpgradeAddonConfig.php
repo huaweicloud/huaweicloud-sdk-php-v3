@@ -20,10 +20,10 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * addonTemplateName  插件名称
-    * operation  执行动作，当前升级场景支持操作为\"patch\"
-    * version  目标插件版本号
-    * values  插件参数列表，Key:Value格式
+    * addonTemplateName  **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
+    * operation  **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
+    * version  **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * addonTemplateName  插件名称
-    * operation  执行动作，当前升级场景支持操作为\"patch\"
-    * version  目标插件版本号
-    * values  插件参数列表，Key:Value格式
+    * addonTemplateName  **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
+    * operation  **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
+    * version  **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * addonTemplateName  插件名称
-    * operation  执行动作，当前升级场景支持操作为\"patch\"
-    * version  目标插件版本号
-    * values  插件参数列表，Key:Value格式
+    * addonTemplateName  **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
+    * operation  **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
+    * version  **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * addonTemplateName  插件名称
-    * operation  执行动作，当前升级场景支持操作为\"patch\"
-    * version  目标插件版本号
-    * values  插件参数列表，Key:Value格式
+    * addonTemplateName  **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
+    * operation  **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
+    * version  **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * addonTemplateName  插件名称
-    * operation  执行动作，当前升级场景支持操作为\"patch\"
-    * version  目标插件版本号
-    * values  插件参数列表，Key:Value格式
+    * addonTemplateName  **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
+    * operation  **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
+    * version  **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -216,7 +216,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateName
-    *  插件名称
+    *  **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateName
     *
-    * @param string $addonTemplateName 插件名称
+    * @param string $addonTemplateName **参数解释：** CCE插件名称 **约束限制：** 不涉及 **取值范围：** 集群中已安装的插件名称。[集群中已安装插件详情见[获取AddonInstance列表](https://support.huaweicloud.com/api-cce/cce_02_0326.html)](tag:hws) **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -240,7 +240,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets operation
-    *  执行动作，当前升级场景支持操作为\"patch\"
+    *  **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
     /**
     * Sets operation
     *
-    * @param string $operation 执行动作，当前升级场景支持操作为\"patch\"
+    * @param string $operation **参数解释：** 升级插件的执行动作 **约束限制：** 不涉及 **取值范围：** - patch：表示升级插件版本  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  目标插件版本号
+    *  **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -276,7 +276,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 目标插件版本号
+    * @param string $version **参数解释：** 目标插件版本号 **约束限制：** 目标插件版本必须与目标集群版本配套。[集群版本配套关系见[查询AddonTemplates列表](https://support.huaweicloud.com/api-cce/cce_02_0321.html)](tag:hws) **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  插件参数列表，Key:Value格式
+    *  **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return object|null
     */
@@ -300,7 +300,7 @@ class UpgradeAddonConfig implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param object|null $values 插件参数列表，Key:Value格式
+    * @param object|null $values **参数解释：** 插件参数列表，Key:Value格式。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

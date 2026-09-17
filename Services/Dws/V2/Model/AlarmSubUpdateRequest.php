@@ -26,7 +26,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
-    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
@@ -54,7 +54,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
-    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
@@ -103,7 +103,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
-    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
@@ -131,7 +131,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
-    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
@@ -159,7 +159,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     * notificationTarget  **参数解释**： 消息主题地址。 **取值范围**： 不涉及。
     * notificationTargetName  **参数解释**： 消息主题名称。 **取值范围**： 不涉及。
     * notificationTargetType  **参数解释**： 消息主题类型。 **取值范围**： - SMN：SMN类型
-    * language  **参数解释**：  语言。  **取值范围**：  不涉及。
+    * language  **参数解释**： 语言。 **取值范围**： 不涉及。
     * timeZone  **参数解释**： 时区。 **取值范围**： 不涉及。
     * clusterId  **参数解释**： 集群ID。 **取值范围**： 不涉及。
     * alarmDetails  **参数解释**： 订阅的所有告警详细信息。 **取值范围**： 不涉及。
@@ -429,7 +429,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  **参数解释**：  语言。  **取值范围**：  不涉及。
+    *  **参数解释**： 语言。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class AlarmSubUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language **参数解释**：  语言。  **取值范围**：  不涉及。
+    * @param string|null $language **参数解释**： 语言。 **取值范围**： 不涉及。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  任务ID
+    * uid  **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     *
     * @var string[]
@@ -33,7 +33,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  任务ID
+    * uid  **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     *
     * @var string[]
@@ -66,7 +66,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  任务ID
+    * uid  **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     *
     * @var string[]
@@ -78,7 +78,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  任务ID
+    * uid  **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  任务ID
+    * uid  **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     *
     * @var string[]
@@ -186,7 +186,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  任务ID
+    *  **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class CreateClusterMasterSnapshotResponse implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 任务ID
+    * @param string|null $uid **参数解释：** 任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -45,7 +45,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持备份到当前集群。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否支持细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： agent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
@@ -117,7 +117,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持备份到当前集群。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否支持细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： agent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
@@ -210,7 +210,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持备份到当前集群。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否支持细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： agent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
@@ -282,7 +282,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持备份到当前集群。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否支持细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： agent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
@@ -354,7 +354,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * baseBackupName  **参数解释**： 对应全量快照名称。 **取值范围**： 不涉及。
     * supportInplaceRestore  **参数解释**： 是否支持备份到当前集群。 **取值范围**： 不涉及。
     * fineGrainedBackup  **参数解释**： 是否支持细粒度备份。 **取值范围**： 不涉及。
-    * backupLevel  **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    * backupLevel  **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     * fineGrainedBackupDetail  fineGrainedBackupDetail
     * guestAgentVersion  **参数解释**： agent版本。 **取值范围**： 不涉及。
     * clusterStatus  **参数解释**： 集群状态。 **取值范围**： 不涉及。
@@ -439,24 +439,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const BACKUP_LEVEL_CLUSTER = 'cluster';
-    const BACKUP_LEVEL_SCHEMA = 'schema';
-    const BACKUP_LEVEL_TABLE = 'table';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getBackupLevelAllowableValues()
-    {
-        return [
-            self::BACKUP_LEVEL_CLUSTER,
-            self::BACKUP_LEVEL_SCHEMA,
-            self::BACKUP_LEVEL_TABLE,
-        ];
-    }
 
 
     /**
@@ -543,14 +526,6 @@ class Snapshots implements ModelInterface, ArrayAccess
         if ($this->container['clusterId'] === null) {
             $invalidProperties[] = "'clusterId' can't be null";
         }
-            $allowedValues = $this->getBackupLevelAllowableValues();
-                if (!is_null($this->container['backupLevel']) && !in_array($this->container['backupLevel'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'backupLevel', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -1167,7 +1142,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupLevel
-    *  **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    *  **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     *
     * @return string|null
     */
@@ -1179,7 +1154,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets backupLevel
     *
-    * @param string|null $backupLevel **参数解释**： 备份等级。 **取值范围**： 不涉及。
+    * @param string|null $backupLevel **参数解释**： 备份等级。 **取值范围**： - cluster：集群级 - schema：schema级 - table：表级
     *
     * @return $this
     */

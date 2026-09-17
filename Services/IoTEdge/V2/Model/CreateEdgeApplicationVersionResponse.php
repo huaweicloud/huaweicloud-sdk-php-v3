@@ -44,6 +44,7 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
     * offShelfTime  下线时间
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -70,7 +71,8 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
             'publishTime' => 'string',
             'offShelfTime' => 'string',
             'supplier' => 'string',
-            'tplId' => 'string'
+            'tplId' => 'string',
+            'preUpgradeProbe' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\PreUpgradeProbeDTO'
     ];
 
     /**
@@ -98,6 +100,7 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
     * offShelfTime  下线时间
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -124,7 +127,8 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
         'publishTime' => null,
         'offShelfTime' => null,
         'supplier' => null,
-        'tplId' => null
+        'tplId' => null,
+        'preUpgradeProbe' => null
     ];
 
     /**
@@ -173,6 +177,7 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
     * offShelfTime  下线时间
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -199,7 +204,8 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
             'publishTime' => 'publish_time',
             'offShelfTime' => 'off_shelf_time',
             'supplier' => 'supplier',
-            'tplId' => 'tpl_id'
+            'tplId' => 'tpl_id',
+            'preUpgradeProbe' => 'pre_upgrade_probe'
     ];
 
     /**
@@ -227,6 +233,7 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
     * offShelfTime  下线时间
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -253,7 +260,8 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
             'publishTime' => 'setPublishTime',
             'offShelfTime' => 'setOffShelfTime',
             'supplier' => 'setSupplier',
-            'tplId' => 'setTplId'
+            'tplId' => 'setTplId',
+            'preUpgradeProbe' => 'setPreUpgradeProbe'
     ];
 
     /**
@@ -281,6 +289,7 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
     * offShelfTime  下线时间
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -307,7 +316,8 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
             'publishTime' => 'getPublishTime',
             'offShelfTime' => 'getOffShelfTime',
             'supplier' => 'getSupplier',
-            'tplId' => 'getTplId'
+            'tplId' => 'getTplId',
+            'preUpgradeProbe' => 'getPreUpgradeProbe'
     ];
 
     /**
@@ -408,6 +418,7 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
         $this->container['offShelfTime'] = isset($data['offShelfTime']) ? $data['offShelfTime'] : null;
         $this->container['supplier'] = isset($data['supplier']) ? $data['supplier'] : null;
         $this->container['tplId'] = isset($data['tplId']) ? $data['tplId'] : null;
+        $this->container['preUpgradeProbe'] = isset($data['preUpgradeProbe']) ? $data['preUpgradeProbe'] : null;
     }
 
     /**
@@ -477,12 +488,6 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
                 );
             }
 
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 64)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['publishTime']) && (mb_strlen($this->container['publishTime']) > 256)) {
                 $invalidProperties[] = "invalid value for 'publishTime', the character length must be smaller than or equal to 256.";
             }
@@ -1070,6 +1075,30 @@ class CreateEdgeApplicationVersionResponse implements ModelInterface, ArrayAcces
     public function setTplId($tplId)
     {
         $this->container['tplId'] = $tplId;
+        return $this;
+    }
+
+    /**
+    * Gets preUpgradeProbe
+    *  preUpgradeProbe
+    *
+    * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\PreUpgradeProbeDTO|null
+    */
+    public function getPreUpgradeProbe()
+    {
+        return $this->container['preUpgradeProbe'];
+    }
+
+    /**
+    * Sets preUpgradeProbe
+    *
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\PreUpgradeProbeDTO|null $preUpgradeProbe preUpgradeProbe
+    *
+    * @return $this
+    */
+    public function setPreUpgradeProbe($preUpgradeProbe)
+    {
+        $this->container['preUpgradeProbe'] = $preUpgradeProbe;
         return $this;
     }
 

@@ -33,20 +33,20 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * ips  边缘节点主机ip
     * name  边缘节点名称
     * state  边缘节点状态
-    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     * createTime  边缘节点创建时间
     * updateTime  边缘节点更新时间
-    * osName  边缘节点操作系统名称
-    * arch  边缘节点操作系统架构
+    * osName  边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
     * hostName  边缘节点主机名
     * nics  边缘节点网络网卡信息
     * specification  网络规格，如4 cores | 3867 MB
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * containerVersion  容器运行时版本
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * securityLevel  节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
     * basePath  basePath
     * hardwareModel  注册节点网关配置
@@ -56,6 +56,11 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * tpmInfo  tpmInfo
+    * runtimeInfo  runtimeInfo
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -94,7 +99,12 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'string',
             'automaticUpgrade' => 'string',
             'deviceDataRecord' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\DeviceDataRecord',
-            'metricReport' => 'string'
+            'metricReport' => 'string',
+            'iotdaSouthAccess' => 'string',
+            'tpmInfo' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\TPMInfoDTO',
+            'runtimeInfo' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\RuntimeInfoDTO',
+            'osType' => 'string',
+            'nodeGroupId' => 'string'
     ];
 
     /**
@@ -111,20 +121,20 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * ips  边缘节点主机ip
     * name  边缘节点名称
     * state  边缘节点状态
-    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     * createTime  边缘节点创建时间
     * updateTime  边缘节点更新时间
-    * osName  边缘节点操作系统名称
-    * arch  边缘节点操作系统架构
+    * osName  边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
     * hostName  边缘节点主机名
     * nics  边缘节点网络网卡信息
     * specification  网络规格，如4 cores | 3867 MB
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * containerVersion  容器运行时版本
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * securityLevel  节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
     * basePath  basePath
     * hardwareModel  注册节点网关配置
@@ -134,6 +144,11 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * tpmInfo  tpmInfo
+    * runtimeInfo  runtimeInfo
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -172,7 +187,12 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
         'deviceDataFormat' => null,
         'automaticUpgrade' => null,
         'deviceDataRecord' => null,
-        'metricReport' => null
+        'metricReport' => null,
+        'iotdaSouthAccess' => null,
+        'tpmInfo' => null,
+        'runtimeInfo' => null,
+        'osType' => null,
+        'nodeGroupId' => null
     ];
 
     /**
@@ -210,20 +230,20 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * ips  边缘节点主机ip
     * name  边缘节点名称
     * state  边缘节点状态
-    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     * createTime  边缘节点创建时间
     * updateTime  边缘节点更新时间
-    * osName  边缘节点操作系统名称
-    * arch  边缘节点操作系统架构
+    * osName  边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
     * hostName  边缘节点主机名
     * nics  边缘节点网络网卡信息
     * specification  网络规格，如4 cores | 3867 MB
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * containerVersion  容器运行时版本
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * securityLevel  节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
     * basePath  basePath
     * hardwareModel  注册节点网关配置
@@ -233,6 +253,11 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * tpmInfo  tpmInfo
+    * runtimeInfo  runtimeInfo
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -271,7 +296,12 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'device_data_format',
             'automaticUpgrade' => 'automatic_upgrade',
             'deviceDataRecord' => 'device_data_record',
-            'metricReport' => 'metric_report'
+            'metricReport' => 'metric_report',
+            'iotdaSouthAccess' => 'iotda_south_access',
+            'tpmInfo' => 'tpm_info',
+            'runtimeInfo' => 'runtime_info',
+            'osType' => 'os_type',
+            'nodeGroupId' => 'node_group_id'
     ];
 
     /**
@@ -288,20 +318,20 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * ips  边缘节点主机ip
     * name  边缘节点名称
     * state  边缘节点状态
-    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     * createTime  边缘节点创建时间
     * updateTime  边缘节点更新时间
-    * osName  边缘节点操作系统名称
-    * arch  边缘节点操作系统架构
+    * osName  边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
     * hostName  边缘节点主机名
     * nics  边缘节点网络网卡信息
     * specification  网络规格，如4 cores | 3867 MB
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * containerVersion  容器运行时版本
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * securityLevel  节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
     * basePath  basePath
     * hardwareModel  注册节点网关配置
@@ -311,6 +341,11 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * tpmInfo  tpmInfo
+    * runtimeInfo  runtimeInfo
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -349,7 +384,12 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'setDeviceDataFormat',
             'automaticUpgrade' => 'setAutomaticUpgrade',
             'deviceDataRecord' => 'setDeviceDataRecord',
-            'metricReport' => 'setMetricReport'
+            'metricReport' => 'setMetricReport',
+            'iotdaSouthAccess' => 'setIotdaSouthAccess',
+            'tpmInfo' => 'setTpmInfo',
+            'runtimeInfo' => 'setRuntimeInfo',
+            'osType' => 'setOsType',
+            'nodeGroupId' => 'setNodeGroupId'
     ];
 
     /**
@@ -366,20 +406,20 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * ips  边缘节点主机ip
     * name  边缘节点名称
     * state  边缘节点状态
-    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * softwareVersion  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     * createTime  边缘节点创建时间
     * updateTime  边缘节点更新时间
-    * osName  边缘节点操作系统名称
-    * arch  边缘节点操作系统架构
+    * osName  边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
     * hostName  边缘节点主机名
     * nics  边缘节点网络网卡信息
     * specification  网络规格，如4 cores | 3867 MB
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * containerVersion  容器运行时版本
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * securityLevel  节点的安全等级，MEDIUM边缘节数据上报不进行加密，HIGH对数据上报进行加密。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
     * basePath  basePath
     * hardwareModel  注册节点网关配置
@@ -389,6 +429,11 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * tpmInfo  tpmInfo
+    * runtimeInfo  runtimeInfo
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -427,7 +472,12 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'getDeviceDataFormat',
             'automaticUpgrade' => 'getAutomaticUpgrade',
             'deviceDataRecord' => 'getDeviceDataRecord',
-            'metricReport' => 'getMetricReport'
+            'metricReport' => 'getMetricReport',
+            'iotdaSouthAccess' => 'getIotdaSouthAccess',
+            'tpmInfo' => 'getTpmInfo',
+            'runtimeInfo' => 'getRuntimeInfo',
+            'osType' => 'getOsType',
+            'nodeGroupId' => 'getNodeGroupId'
     ];
 
     /**
@@ -523,6 +573,11 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
         $this->container['automaticUpgrade'] = isset($data['automaticUpgrade']) ? $data['automaticUpgrade'] : null;
         $this->container['deviceDataRecord'] = isset($data['deviceDataRecord']) ? $data['deviceDataRecord'] : null;
         $this->container['metricReport'] = isset($data['metricReport']) ? $data['metricReport'] : null;
+        $this->container['iotdaSouthAccess'] = isset($data['iotdaSouthAccess']) ? $data['iotdaSouthAccess'] : null;
+        $this->container['tpmInfo'] = isset($data['tpmInfo']) ? $data['tpmInfo'] : null;
+        $this->container['runtimeInfo'] = isset($data['runtimeInfo']) ? $data['runtimeInfo'] : null;
+        $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
+        $this->container['nodeGroupId'] = isset($data['nodeGroupId']) ? $data['nodeGroupId'] : null;
     }
 
     /**
@@ -721,6 +776,33 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['metricReport']) && !preg_match("/(off|on)/", $this->container['metricReport'])) {
                 $invalidProperties[] = "invalid value for 'metricReport', must be conform to the pattern /(off|on)/.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && (mb_strlen($this->container['iotdaSouthAccess']) > 128)) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && (mb_strlen($this->container['iotdaSouthAccess']) < 0)) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && !preg_match("/^[a-zA-Z0-9:.-]+$/", $this->container['iotdaSouthAccess'])) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', must be conform to the pattern /^[a-zA-Z0-9:.-]+$/.";
+            }
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 2)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['osType']) && !preg_match("/(generalLinux|openHarmony)/", $this->container['osType'])) {
+                $invalidProperties[] = "invalid value for 'osType', must be conform to the pattern /(generalLinux|openHarmony)/.";
+            }
+            if (!is_null($this->container['nodeGroupId']) && (mb_strlen($this->container['nodeGroupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nodeGroupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nodeGroupId']) && (mb_strlen($this->container['nodeGroupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeGroupId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nodeGroupId']) && !preg_match("/^[a-zA-Z0-9_-]*$/", $this->container['nodeGroupId'])) {
+                $invalidProperties[] = "invalid value for 'nodeGroupId', must be conform to the pattern /^[a-zA-Z0-9_-]*$/.";
             }
         return $invalidProperties;
     }
@@ -1026,7 +1108,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets softwareVersion
-    *  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    *  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @return string|null
     */
@@ -1038,7 +1120,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets softwareVersion
     *
-    * @param string|null $softwareVersion 边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * @param string|null $softwareVersion 边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @return $this
     */
@@ -1098,7 +1180,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets osName
-    *  边缘节点操作系统名称
+    *  边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
     *
     * @return string|null
     */
@@ -1110,7 +1192,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets osName
     *
-    * @param string|null $osName 边缘节点操作系统名称
+    * @param string|null $osName 边缘节点操作系统。例如：Ubuntu 20.04；CentOS 7.9。不同于os_type边缘节点系统类型。
     *
     * @return $this
     */
@@ -1122,7 +1204,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets arch
-    *  边缘节点操作系统架构
+    *  边缘节点系统架构。包括：arm64，arm32，x86_64。
     *
     * @return string|null
     */
@@ -1134,7 +1216,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets arch
     *
-    * @param string|null $arch 边缘节点操作系统架构
+    * @param string|null $arch 边缘节点系统架构。包括：arm64，arm32，x86_64。
     *
     * @return $this
     */
@@ -1218,7 +1300,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiCardType
-    *  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    *  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     *
     * @return string|null
     */
@@ -1230,7 +1312,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets aiCardType
     *
-    * @param string|null $aiCardType AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * @param string|null $aiCardType AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     *
     * @return $this
     */
@@ -1290,7 +1372,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  节点所属资源类型：advanced|standard
+    *  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return string|null
     */
@@ -1302,7 +1384,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 节点所属资源类型：advanced|standard
+    * @param string|null $type 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return $this
     */
@@ -1338,7 +1420,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets reliabilityLevel
-    *  节点的可靠性等级。
+    *  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     *
     * @return string|null
     */
@@ -1350,7 +1432,7 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets reliabilityLevel
     *
-    * @param string|null $reliabilityLevel 节点的可靠性等级。
+    * @param string|null $reliabilityLevel 节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     *
     * @return $this
     */
@@ -1573,6 +1655,126 @@ class UpdateEdgeNodeResponse implements ModelInterface, ArrayAccess
     public function setMetricReport($metricReport)
     {
         $this->container['metricReport'] = $metricReport;
+        return $this;
+    }
+
+    /**
+    * Gets iotdaSouthAccess
+    *  iotda南向接入地址
+    *
+    * @return string|null
+    */
+    public function getIotdaSouthAccess()
+    {
+        return $this->container['iotdaSouthAccess'];
+    }
+
+    /**
+    * Sets iotdaSouthAccess
+    *
+    * @param string|null $iotdaSouthAccess iotda南向接入地址
+    *
+    * @return $this
+    */
+    public function setIotdaSouthAccess($iotdaSouthAccess)
+    {
+        $this->container['iotdaSouthAccess'] = $iotdaSouthAccess;
+        return $this;
+    }
+
+    /**
+    * Gets tpmInfo
+    *  tpmInfo
+    *
+    * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\TPMInfoDTO|null
+    */
+    public function getTpmInfo()
+    {
+        return $this->container['tpmInfo'];
+    }
+
+    /**
+    * Sets tpmInfo
+    *
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\TPMInfoDTO|null $tpmInfo tpmInfo
+    *
+    * @return $this
+    */
+    public function setTpmInfo($tpmInfo)
+    {
+        $this->container['tpmInfo'] = $tpmInfo;
+        return $this;
+    }
+
+    /**
+    * Gets runtimeInfo
+    *  runtimeInfo
+    *
+    * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\RuntimeInfoDTO|null
+    */
+    public function getRuntimeInfo()
+    {
+        return $this->container['runtimeInfo'];
+    }
+
+    /**
+    * Sets runtimeInfo
+    *
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\RuntimeInfoDTO|null $runtimeInfo runtimeInfo
+    *
+    * @return $this
+    */
+    public function setRuntimeInfo($runtimeInfo)
+    {
+        $this->container['runtimeInfo'] = $runtimeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets osType
+    *  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    *
+    * @return string|null
+    */
+    public function getOsType()
+    {
+        return $this->container['osType'];
+    }
+
+    /**
+    * Sets osType
+    *
+    * @param string|null $osType 边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    *
+    * @return $this
+    */
+    public function setOsType($osType)
+    {
+        $this->container['osType'] = $osType;
+        return $this;
+    }
+
+    /**
+    * Gets nodeGroupId
+    *  节点组ID
+    *
+    * @return string|null
+    */
+    public function getNodeGroupId()
+    {
+        return $this->container['nodeGroupId'];
+    }
+
+    /**
+    * Sets nodeGroupId
+    *
+    * @param string|null $nodeGroupId 节点组ID
+    *
+    * @return $this
+    */
+    public function setNodeGroupId($nodeGroupId)
+    {
+        $this->container['nodeGroupId'] = $nodeGroupId;
         return $this;
     }
 

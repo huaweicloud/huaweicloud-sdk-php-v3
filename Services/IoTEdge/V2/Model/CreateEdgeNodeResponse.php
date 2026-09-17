@@ -28,7 +28,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * productId  边缘节点关联的产品ID，用于唯一标识一个产品模型。
     * productName  边缘节点关联的产品名称。
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * installerVersion  安装文件版本
     * basePath  basePath
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
@@ -39,6 +39,8 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @var string[]
     */
@@ -60,7 +62,9 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'string',
             'automaticUpgrade' => 'string',
             'deviceDataRecord' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\DeviceDataRecord',
-            'metricReport' => 'string'
+            'metricReport' => 'string',
+            'iotdaSouthAccess' => 'string',
+            'osType' => 'string'
     ];
 
     /**
@@ -72,7 +76,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * productId  边缘节点关联的产品ID，用于唯一标识一个产品模型。
     * productName  边缘节点关联的产品名称。
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * installerVersion  安装文件版本
     * basePath  basePath
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
@@ -83,6 +87,8 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @var string[]
     */
@@ -104,7 +110,9 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
         'deviceDataFormat' => null,
         'automaticUpgrade' => null,
         'deviceDataRecord' => null,
-        'metricReport' => null
+        'metricReport' => null,
+        'iotdaSouthAccess' => null,
+        'osType' => null
     ];
 
     /**
@@ -137,7 +145,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * productId  边缘节点关联的产品ID，用于唯一标识一个产品模型。
     * productName  边缘节点关联的产品名称。
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * installerVersion  安装文件版本
     * basePath  basePath
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
@@ -148,6 +156,8 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @var string[]
     */
@@ -169,7 +179,9 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'device_data_format',
             'automaticUpgrade' => 'automatic_upgrade',
             'deviceDataRecord' => 'device_data_record',
-            'metricReport' => 'metric_report'
+            'metricReport' => 'metric_report',
+            'iotdaSouthAccess' => 'iotda_south_access',
+            'osType' => 'os_type'
     ];
 
     /**
@@ -181,7 +193,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * productId  边缘节点关联的产品ID，用于唯一标识一个产品模型。
     * productName  边缘节点关联的产品名称。
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * installerVersion  安装文件版本
     * basePath  basePath
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
@@ -192,6 +204,8 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @var string[]
     */
@@ -213,7 +227,9 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'setDeviceDataFormat',
             'automaticUpgrade' => 'setAutomaticUpgrade',
             'deviceDataRecord' => 'setDeviceDataRecord',
-            'metricReport' => 'setMetricReport'
+            'metricReport' => 'setMetricReport',
+            'iotdaSouthAccess' => 'setIotdaSouthAccess',
+            'osType' => 'setOsType'
     ];
 
     /**
@@ -225,7 +241,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * productId  边缘节点关联的产品ID，用于唯一标识一个产品模型。
     * productName  边缘节点关联的产品名称。
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * installerVersion  安装文件版本
     * basePath  basePath
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，可以叠加节点功能。
@@ -236,6 +252,8 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda南向接入地址
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @var string[]
     */
@@ -257,7 +275,9 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'getDeviceDataFormat',
             'automaticUpgrade' => 'getAutomaticUpgrade',
             'deviceDataRecord' => 'getDeviceDataRecord',
-            'metricReport' => 'getMetricReport'
+            'metricReport' => 'getMetricReport',
+            'iotdaSouthAccess' => 'getIotdaSouthAccess',
+            'osType' => 'getOsType'
     ];
 
     /**
@@ -336,6 +356,8 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
         $this->container['automaticUpgrade'] = isset($data['automaticUpgrade']) ? $data['automaticUpgrade'] : null;
         $this->container['deviceDataRecord'] = isset($data['deviceDataRecord']) ? $data['deviceDataRecord'] : null;
         $this->container['metricReport'] = isset($data['metricReport']) ? $data['metricReport'] : null;
+        $this->container['iotdaSouthAccess'] = isset($data['iotdaSouthAccess']) ? $data['iotdaSouthAccess'] : null;
+        $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
     }
 
     /**
@@ -450,6 +472,24 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['metricReport']) && !preg_match("/(off|on)/", $this->container['metricReport'])) {
                 $invalidProperties[] = "invalid value for 'metricReport', must be conform to the pattern /(off|on)/.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && (mb_strlen($this->container['iotdaSouthAccess']) > 128)) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && (mb_strlen($this->container['iotdaSouthAccess']) < 0)) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && !preg_match("/^[a-zA-Z0-9:.-]+$/", $this->container['iotdaSouthAccess'])) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', must be conform to the pattern /^[a-zA-Z0-9:.-]+$/.";
+            }
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 2)) {
+                $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['osType']) && !preg_match("/(generalLinux|openHarmony)/", $this->container['osType'])) {
+                $invalidProperties[] = "invalid value for 'osType', must be conform to the pattern /(generalLinux|openHarmony)/.";
             }
         return $invalidProperties;
     }
@@ -635,7 +675,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  节点所属资源类型：advanced|standard
+    *  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return string|null
     */
@@ -647,7 +687,7 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 节点所属资源类型：advanced|standard
+    * @param string|null $type 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return $this
     */
@@ -894,6 +934,54 @@ class CreateEdgeNodeResponse implements ModelInterface, ArrayAccess
     public function setMetricReport($metricReport)
     {
         $this->container['metricReport'] = $metricReport;
+        return $this;
+    }
+
+    /**
+    * Gets iotdaSouthAccess
+    *  iotda南向接入地址
+    *
+    * @return string|null
+    */
+    public function getIotdaSouthAccess()
+    {
+        return $this->container['iotdaSouthAccess'];
+    }
+
+    /**
+    * Sets iotdaSouthAccess
+    *
+    * @param string|null $iotdaSouthAccess iotda南向接入地址
+    *
+    * @return $this
+    */
+    public function setIotdaSouthAccess($iotdaSouthAccess)
+    {
+        $this->container['iotdaSouthAccess'] = $iotdaSouthAccess;
+        return $this;
+    }
+
+    /**
+    * Gets osType
+    *  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    *
+    * @return string|null
+    */
+    public function getOsType()
+    {
+        return $this->container['osType'];
+    }
+
+    /**
+    * Sets osType
+    *
+    * @param string|null $osType 边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
+    *
+    * @return $this
+    */
+    public function setOsType($osType)
+    {
+        $this->container['osType'] = $osType;
         return $this;
     }
 

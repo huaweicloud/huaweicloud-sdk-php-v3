@@ -24,6 +24,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：美元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
             'id' => 'string',
             'productId' => 'string',
             'officialWebsiteAmount' => 'float',
-            'measureId' => 'int'
+            'measureId' => 'int',
+            'installmentOfficialWebsiteAmount' => 'string',
+            'installmentPeriodType' => 'int'
     ];
 
     /**
@@ -40,6 +44,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：美元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
         'id' => null,
         'productId' => null,
         'officialWebsiteAmount' => 'bigdecimal',
-        'measureId' => 'int32'
+        'measureId' => 'int32',
+        'installmentOfficialWebsiteAmount' => null,
+        'installmentPeriodType' => 'int32'
     ];
 
     /**
@@ -77,6 +85,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：美元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
             'id' => 'id',
             'productId' => 'product_id',
             'officialWebsiteAmount' => 'official_website_amount',
-            'measureId' => 'measure_id'
+            'measureId' => 'measure_id',
+            'installmentOfficialWebsiteAmount' => 'installment_official_website_amount',
+            'installmentPeriodType' => 'installment_period_type'
     ];
 
     /**
@@ -93,6 +105,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：美元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'productId' => 'setProductId',
             'officialWebsiteAmount' => 'setOfficialWebsiteAmount',
-            'measureId' => 'setMeasureId'
+            'measureId' => 'setMeasureId',
+            'installmentOfficialWebsiteAmount' => 'setInstallmentOfficialWebsiteAmount',
+            'installmentPeriodType' => 'setInstallmentPeriodType'
     ];
 
     /**
@@ -109,6 +125,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * productId  包年/包月产品的ID。
     * officialWebsiteAmount  包年/包月产品的官网价。
     * measureId  价格度量单位标识。 1：美元
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'productId' => 'getProductId',
             'officialWebsiteAmount' => 'getOfficialWebsiteAmount',
-            'measureId' => 'getMeasureId'
+            'measureId' => 'getMeasureId',
+            'installmentOfficialWebsiteAmount' => 'getInstallmentOfficialWebsiteAmount',
+            'installmentPeriodType' => 'getInstallmentPeriodType'
     ];
 
     /**
@@ -181,6 +201,8 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
         $this->container['officialWebsiteAmount'] = isset($data['officialWebsiteAmount']) ? $data['officialWebsiteAmount'] : null;
         $this->container['measureId'] = isset($data['measureId']) ? $data['measureId'] : null;
+        $this->container['installmentOfficialWebsiteAmount'] = isset($data['installmentOfficialWebsiteAmount']) ? $data['installmentOfficialWebsiteAmount'] : null;
+        $this->container['installmentPeriodType'] = isset($data['installmentPeriodType']) ? $data['installmentPeriodType'] : null;
     }
 
     /**
@@ -310,6 +332,54 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     public function setMeasureId($measureId)
     {
         $this->container['measureId'] = $measureId;
+        return $this;
+    }
+
+    /**
+    * Gets installmentOfficialWebsiteAmount
+    *  分期金额的官网价。 说明：暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentOfficialWebsiteAmount()
+    {
+        return $this->container['installmentOfficialWebsiteAmount'];
+    }
+
+    /**
+    * Sets installmentOfficialWebsiteAmount
+    *
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。 说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentOfficialWebsiteAmount($installmentOfficialWebsiteAmount)
+    {
+        $this->container['installmentOfficialWebsiteAmount'] = $installmentOfficialWebsiteAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentPeriodType
+    *  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
+    *
+    * @return int|null
+    */
+    public function getInstallmentPeriodType()
+    {
+        return $this->container['installmentPeriodType'];
+    }
+
+    /**
+    * Sets installmentPeriodType
+    *
+    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentPeriodType($installmentPeriodType)
+    {
+        $this->container['installmentPeriodType'] = $installmentPeriodType;
         return $this;
     }
 

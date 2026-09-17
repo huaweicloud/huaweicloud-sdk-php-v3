@@ -20,14 +20,14 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  检查项名称
-    * kind  检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
-    * group  检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
-    * level  检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * message  提示信息
+    * name  **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
+    * group  **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
+    * level  **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * message  **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * riskSource  riskSource
-    * errorCodes  错误码集合
+    * errorCodes  **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  检查项名称
-    * kind  检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
-    * group  检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
-    * level  检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * message  提示信息
+    * name  **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
+    * group  **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
+    * level  **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * message  **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * riskSource  riskSource
-    * errorCodes  错误码集合
+    * errorCodes  **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  检查项名称
-    * kind  检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
-    * group  检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
-    * level  检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * message  提示信息
+    * name  **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
+    * group  **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
+    * level  **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * message  **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * riskSource  riskSource
-    * errorCodes  错误码集合
+    * errorCodes  **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  检查项名称
-    * kind  检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
-    * group  检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
-    * level  检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * message  提示信息
+    * name  **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
+    * group  **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
+    * level  **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * message  **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * riskSource  riskSource
-    * errorCodes  错误码集合
+    * errorCodes  **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  检查项名称
-    * kind  检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
-    * group  检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
-    * level  检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * message  提示信息
+    * name  **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
+    * group  **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
+    * level  **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * message  **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * riskSource  riskSource
-    * errorCodes  错误码集合
+    * errorCodes  **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  检查项名称
+    *  **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 检查项名称
+    * @param string|null $name **参数解释：** 检查项名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
+    *  **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind 检查项类型，取值如下 - Exception: 异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过
+    * @param string|null $kind **参数解释：** 检查项类型 **约束限制：** 不涉及 **取值范围：** - Exception：异常类，需要用户解决 - Risk：风险类，用户确认后可选择跳过  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
+    *  **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group 检查项分组，取值如下 - LimitCheck: 集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误
+    * @param string|null $group **参数解释：** 检查项分组 **约束限制：** 不涉及 **取值范围：** - LimitCheck：集群限制检查 - MasterCheck：控制节点检查 - NodeCheck：用户节点检查 - AddonCheck：插件检查 - ExecuteException：检查流程错误  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
+    *  **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 检查项风险级别，取值如下 - Info: 提示级别 - Warning：风险级别 - Fatal：严重级别
+    * @param string|null $level **参数解释：** 检查项风险级别 **约束限制：** 不涉及 **取值范围：** - Info：提示级别 - Warning：风险级别 - Fatal：严重级别  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
+    *  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase 状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
+    * @param string|null $phase **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  提示信息
+    *  **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 提示信息
+    * @param string|null $message **参数解释：** 提示信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCodes
-    *  错误码集合
+    *  **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string[]|null
     */
@@ -431,7 +431,7 @@ class PreCheckItemStatus implements ModelInterface, ArrayAccess
     /**
     * Sets errorCodes
     *
-    * @param string[]|null $errorCodes 错误码集合
+    * @param string[]|null $errorCodes **参数解释：** 错误码集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

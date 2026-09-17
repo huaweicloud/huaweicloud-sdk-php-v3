@@ -27,6 +27,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     * aiCardType  ai加速卡类型
     * arch  支持架构
     * state  应用版本状态
+    * deployType  应用部署类型
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'aiCardType' => 'string',
             'arch' => 'string',
-            'state' => 'string'
+            'state' => 'string',
+            'deployType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     * aiCardType  ai加速卡类型
     * arch  支持架构
     * state  应用版本状态
+    * deployType  应用部署类型
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'aiCardType' => null,
         'arch' => null,
-        'state' => null
+        'state' => null,
+        'deployType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     * aiCardType  ai加速卡类型
     * arch  支持架构
     * state  应用版本状态
+    * deployType  应用部署类型
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'aiCardType' => 'ai_card_type',
             'arch' => 'arch',
-            'state' => 'state'
+            'state' => 'state',
+            'deployType' => 'deploy_type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     * aiCardType  ai加速卡类型
     * arch  支持架构
     * state  应用版本状态
+    * deployType  应用部署类型
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'aiCardType' => 'setAiCardType',
             'arch' => 'setArch',
-            'state' => 'setState'
+            'state' => 'setState',
+            'deployType' => 'setDeployType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     * aiCardType  ai加速卡类型
     * arch  支持架构
     * state  应用版本状态
+    * deployType  应用部署类型
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'aiCardType' => 'getAiCardType',
             'arch' => 'getArch',
-            'state' => 'getState'
+            'state' => 'getState',
+            'deployType' => 'getDeployType'
     ];
 
     /**
@@ -191,13 +201,15 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     }
     const AI_CARD_TYPE_GPU = 'GPU';
     const AI_CARD_TYPE_NPU = 'NPU';
-    const AI_CARD_TYPE_UN_EQUIPPED = 'unEquipped';
+    const AI_CARD_TYPE_UNEQUIPPED = 'UNEQUIPPED';
     const ARCH_X86_64 = 'x86_64';
     const ARCH_ARM32 = 'arm32';
     const ARCH_ARM64 = 'arm64';
     const STATE_DRAFT = 'DRAFT';
     const STATE_PUBLISHED = 'PUBLISHED';
     const STATE_OFF_SHELF = 'OFF_SHELF';
+    const DEPLOY_TYPE_DOCKER = 'docker';
+    const DEPLOY_TYPE_PROCESS = 'process';
     
 
     /**
@@ -210,7 +222,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
         return [
             self::AI_CARD_TYPE_GPU,
             self::AI_CARD_TYPE_NPU,
-            self::AI_CARD_TYPE_UN_EQUIPPED,
+            self::AI_CARD_TYPE_UNEQUIPPED,
         ];
     }
 
@@ -242,6 +254,19 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDeployTypeAllowableValues()
+    {
+        return [
+            self::DEPLOY_TYPE_DOCKER,
+            self::DEPLOY_TYPE_PROCESS,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -265,6 +290,7 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
         $this->container['aiCardType'] = isset($data['aiCardType']) ? $data['aiCardType'] : null;
         $this->container['arch'] = isset($data['arch']) ? $data['arch'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['deployType'] = isset($data['deployType']) ? $data['deployType'] : null;
     }
 
     /**
@@ -316,6 +342,9 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['aiCardType']) && (mb_strlen($this->container['aiCardType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'aiCardType', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['aiCardType']) && !preg_match("/(GPU|NPU|UNEQUIPPED)/", $this->container['aiCardType'])) {
+                $invalidProperties[] = "invalid value for 'aiCardType', must be conform to the pattern /(GPU|NPU|UNEQUIPPED)/.";
+            }
             $allowedValues = $this->getArchAllowableValues();
                 if (!is_null($this->container['arch']) && !in_array($this->container['arch'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -343,6 +372,23 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getDeployTypeAllowableValues();
+                if (!is_null($this->container['deployType']) && !in_array($this->container['deployType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'deployType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['deployType']) && (mb_strlen($this->container['deployType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'deployType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['deployType']) && (mb_strlen($this->container['deployType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'deployType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['deployType']) && !preg_match("/(docker|process)/", $this->container['deployType'])) {
+                $invalidProperties[] = "invalid value for 'deployType', must be conform to the pattern /(docker|process)/.";
             }
         return $invalidProperties;
     }
@@ -523,6 +569,30 @@ class BatchListEdgeAppVersionsRequest implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets deployType
+    *  应用部署类型
+    *
+    * @return string|null
+    */
+    public function getDeployType()
+    {
+        return $this->container['deployType'];
+    }
+
+    /**
+    * Sets deployType
+    *
+    * @param string|null $deployType 应用部署类型
+    *
+    * @return $this
+    */
+    public function setDeployType($deployType)
+    {
+        $this->container['deployType'] = $deployType;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class GetClusterFlavorSpecsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'clusterFlavorSpecs' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterFlavorSpecification'
+            'clusterFlavorSpecs' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterFlavorSpecification[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class GetClusterFlavorSpecsResponse implements ModelInterface, ArrayAccess
     * Gets clusterFlavorSpecs
     *  clusterFlavorSpecs
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterFlavorSpecification|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterFlavorSpecification[]|null
     */
     public function getClusterFlavorSpecs()
     {
@@ -187,7 +187,7 @@ class GetClusterFlavorSpecsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clusterFlavorSpecs
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterFlavorSpecification|null $clusterFlavorSpecs clusterFlavorSpecs
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterFlavorSpecification[]|null $clusterFlavorSpecs clusterFlavorSpecs
     *
     * @return $this
     */

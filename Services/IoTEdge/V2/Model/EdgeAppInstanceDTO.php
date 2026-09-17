@@ -20,8 +20,8 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
+    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
+    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
+    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
+    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
-    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * edgeAppId  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
+    * appVersion  边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @var string[]
     */
@@ -206,7 +206,7 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgeAppId
-    *  边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    *  边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @return string
     */
@@ -218,7 +218,7 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
     /**
     * Sets edgeAppId
     *
-    * @param string $edgeAppId 边缘应用id，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * @param string $edgeAppId 边缘应用id，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @return $this
     */
@@ -230,7 +230,7 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets appVersion
-    *  边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    *  边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @return string|null
     */
@@ -242,7 +242,7 @@ class EdgeAppInstanceDTO implements ModelInterface, ArrayAccess
     /**
     * Sets appVersion
     *
-    * @param string|null $appVersion 边缘应用版本，只允许数字、英文小写、中划线，切必须以字母或数字结尾
+    * @param string|null $appVersion 边缘应用版本，只允许数字、英文小写、中划线，且必须以字母或数字结尾
     *
     * @return $this
     */

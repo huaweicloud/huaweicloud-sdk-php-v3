@@ -890,6 +890,71 @@ class BssClient extends Client
     }
 
     /**
+     * 查询商务折扣信息
+     *
+     * 功能描述：默认查询华为云框架商务（正在生效），支持产品报价项/分类报价项分页查询，返回全量阶梯折扣及站点区域信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBusinessDiscountInfo($request)
+    {
+        return $this->listBusinessDiscountInfoWithHttpInfo($request);
+    }
+
+    public function listBusinessDiscountInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/promotions/business/discount-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bss\V2\Model\ListBusinessDiscountInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Bss\V2\Model\ListBusinessDiscountInfoRequest');
+    }
+
+    /**
      * 查询城市信息
      *
      * 伙伴在伙伴销售平台上查询城市信息。

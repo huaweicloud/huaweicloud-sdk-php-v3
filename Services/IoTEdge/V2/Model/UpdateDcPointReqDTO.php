@@ -26,6 +26,7 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * dataType  点位数据类型
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
             'deviceId' => 'string',
             'property' => 'string',
             'dataType' => 'string',
-            'processingConfig' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ProcessingConfigDTO'
+            'processingConfig' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ProcessingConfigDTO',
+            'active' => 'bool'
     ];
 
     /**
@@ -46,6 +48,7 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * dataType  点位数据类型
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
         'deviceId' => null,
         'property' => null,
         'dataType' => null,
-        'processingConfig' => null
+        'processingConfig' => null,
+        'active' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * dataType  点位数据类型
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
             'deviceId' => 'device_id',
             'property' => 'property',
             'dataType' => 'data_type',
-            'processingConfig' => 'processing_config'
+            'processingConfig' => 'processing_config',
+            'active' => 'active'
     ];
 
     /**
@@ -107,6 +113,7 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * dataType  点位数据类型
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
             'deviceId' => 'setDeviceId',
             'property' => 'setProperty',
             'dataType' => 'setDataType',
-            'processingConfig' => 'setProcessingConfig'
+            'processingConfig' => 'setProcessingConfig',
+            'active' => 'setActive'
     ];
 
     /**
@@ -127,6 +135,7 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * dataType  点位数据类型
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
             'deviceId' => 'getDeviceId',
             'property' => 'getProperty',
             'dataType' => 'getDataType',
-            'processingConfig' => 'getProcessingConfig'
+            'processingConfig' => 'getProcessingConfig',
+            'active' => 'getActive'
     ];
 
     /**
@@ -203,6 +213,7 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['processingConfig'] = isset($data['processingConfig']) ? $data['processingConfig'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -401,6 +412,30 @@ class UpdateDcPointReqDTO implements ModelInterface, ArrayAccess
     public function setProcessingConfig($processingConfig)
     {
         $this->container['processingConfig'] = $processingConfig;
+        return $this;
+    }
+
+    /**
+    * Gets active
+    *  点位启停状态，默认开启
+    *
+    * @return bool|null
+    */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+    * Sets active
+    *
+    * @param bool|null $active 点位启停状态，默认开启
+    *
+    * @return $this
+    */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
         return $this;
     }
 

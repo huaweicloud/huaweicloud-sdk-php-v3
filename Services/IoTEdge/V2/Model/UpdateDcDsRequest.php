@@ -22,6 +22,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * dsId  采集数据源id，创建数据源配置时设置，节点下唯一。
+    * updateNameOnly  指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
     * body  body
     *
     * @var string[]
@@ -29,6 +30,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'edgeNodeId' => 'string',
             'dsId' => 'string',
+            'updateNameOnly' => 'bool',
             'body' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\UpdateDcDsReqDTO'
     ];
 
@@ -36,6 +38,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * dsId  采集数据源id，创建数据源配置时设置，节点下唯一。
+    * updateNameOnly  指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
     * body  body
     *
     * @var string[]
@@ -43,6 +46,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'edgeNodeId' => null,
         'dsId' => null,
+        'updateNameOnly' => null,
         'body' => null
     ];
 
@@ -71,6 +75,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * edgeNodeId  边缘节点ID
     * dsId  采集数据源id，创建数据源配置时设置，节点下唯一。
+    * updateNameOnly  指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
     * body  body
     *
     * @var string[]
@@ -78,6 +83,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'edgeNodeId' => 'edge_node_id',
             'dsId' => 'ds_id',
+            'updateNameOnly' => 'update_name_only',
             'body' => 'body'
     ];
 
@@ -85,6 +91,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
     * dsId  采集数据源id，创建数据源配置时设置，节点下唯一。
+    * updateNameOnly  指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
     * body  body
     *
     * @var string[]
@@ -92,6 +99,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'edgeNodeId' => 'setEdgeNodeId',
             'dsId' => 'setDsId',
+            'updateNameOnly' => 'setUpdateNameOnly',
             'body' => 'setBody'
     ];
 
@@ -99,6 +107,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
     * dsId  采集数据源id，创建数据源配置时设置，节点下唯一。
+    * updateNameOnly  指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
     * body  body
     *
     * @var string[]
@@ -106,6 +115,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'edgeNodeId' => 'getEdgeNodeId',
             'dsId' => 'getDsId',
+            'updateNameOnly' => 'getUpdateNameOnly',
             'body' => 'getBody'
     ];
 
@@ -169,6 +179,7 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['edgeNodeId'] = isset($data['edgeNodeId']) ? $data['edgeNodeId'] : null;
         $this->container['dsId'] = isset($data['dsId']) ? $data['dsId'] : null;
+        $this->container['updateNameOnly'] = isset($data['updateNameOnly']) ? $data['updateNameOnly'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -263,6 +274,30 @@ class UpdateDcDsRequest implements ModelInterface, ArrayAccess
     public function setDsId($dsId)
     {
         $this->container['dsId'] = $dsId;
+        return $this;
+    }
+
+    /**
+    * Gets updateNameOnly
+    *  指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
+    *
+    * @return bool|null
+    */
+    public function getUpdateNameOnly()
+    {
+        return $this->container['updateNameOnly'];
+    }
+
+    /**
+    * Sets updateNameOnly
+    *
+    * @param bool|null $updateNameOnly 指此配置是否只更新了名称，默认值为false。 - true: 配置中只更新了名称 - false: 配置中包含其他配置参数更新
+    *
+    * @return $this
+    */
+    public function setUpdateNameOnly($updateNameOnly)
+    {
+        $this->container['updateNameOnly'] = $updateNameOnly;
         return $this;
     }
 

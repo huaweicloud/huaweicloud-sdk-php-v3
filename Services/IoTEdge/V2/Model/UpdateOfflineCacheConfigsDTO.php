@@ -20,21 +20,29 @@ class UpdateOfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'publishOrder' => 'string',
+            'period' => 'int',
             'capacity' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'publishOrder' => null,
+        'period' => 'int32',
         'capacity' => 'int32'
     ];
 
@@ -61,31 +69,43 @@ class UpdateOfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'publishOrder' => 'publish_order',
+            'period' => 'period',
             'capacity' => 'capacity'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @var string[]
     */
     protected static $setters = [
+            'publishOrder' => 'setPublishOrder',
+            'period' => 'setPeriod',
             'capacity' => 'setCapacity'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @var string[]
     */
     protected static $getters = [
+            'publishOrder' => 'getPublishOrder',
+            'period' => 'getPeriod',
             'capacity' => 'getCapacity'
     ];
 
@@ -147,6 +167,8 @@ class UpdateOfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['publishOrder'] = isset($data['publishOrder']) ? $data['publishOrder'] : null;
+        $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['capacity'] = isset($data['capacity']) ? $data['capacity'] : null;
     }
 
@@ -158,8 +180,17 @@ class UpdateOfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['capacity']) && ($this->container['capacity'] > 65536)) {
-                $invalidProperties[] = "invalid value for 'capacity', must be smaller than or equal to 65536.";
+            if (!is_null($this->container['publishOrder']) && !preg_match("/(sequential|realtime_first)/", $this->container['publishOrder'])) {
+                $invalidProperties[] = "invalid value for 'publishOrder', must be conform to the pattern /(sequential|realtime_first)/.";
+            }
+            if (!is_null($this->container['period']) && ($this->container['period'] > 14)) {
+                $invalidProperties[] = "invalid value for 'period', must be smaller than or equal to 14.";
+            }
+            if (!is_null($this->container['period']) && ($this->container['period'] < -1)) {
+                $invalidProperties[] = "invalid value for 'period', must be bigger than or equal to -1.";
+            }
+            if (!is_null($this->container['capacity']) && ($this->container['capacity'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'capacity', must be smaller than or equal to 1048576.";
             }
             if (!is_null($this->container['capacity']) && ($this->container['capacity'] < 500)) {
                 $invalidProperties[] = "invalid value for 'capacity', must be bigger than or equal to 500.";
@@ -179,8 +210,56 @@ class UpdateOfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets publishOrder
+    *  数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    *
+    * @return string|null
+    */
+    public function getPublishOrder()
+    {
+        return $this->container['publishOrder'];
+    }
+
+    /**
+    * Sets publishOrder
+    *
+    * @param string|null $publishOrder 数据上报优先级，可选项：realtime_first实时数据优先sequential按时序上报，默认realtime_first
+    *
+    * @return $this
+    */
+    public function setPublishOrder($publishOrder)
+    {
+        $this->container['publishOrder'] = $publishOrder;
+        return $this;
+    }
+
+    /**
+    * Gets period
+    *  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    *
+    * @return int|null
+    */
+    public function getPeriod()
+    {
+        return $this->container['period'];
+    }
+
+    /**
+    * Sets period
+    *
+    * @param int|null $period 节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
+    *
+    * @return $this
+    */
+    public function setPeriod($period)
+    {
+        $this->container['period'] = $period;
+        return $this;
+    }
+
+    /**
     * Gets capacity
-    *  节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    *  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @return int|null
     */
@@ -192,7 +271,7 @@ class UpdateOfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets capacity
     *
-    * @param int|null $capacity 节点离线缓存容量，单位MB，默认2048，取值范围500-65536
+    * @param int|null $capacity 节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @return $this
     */

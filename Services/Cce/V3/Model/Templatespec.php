@@ -20,13 +20,13 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * require  是否为必安装插件
-    * labels  模板所属分组
-    * logoUrl  Logo图片地址
-    * readmeUrl  插件详情描述及使用说明
-    * description  模板描述
-    * versions  模板具体版本详情
+    * type  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * require  **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
+    * labels  **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * logoUrl  **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * readmeUrl  **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * versions  **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * require  是否为必安装插件
-    * labels  模板所属分组
-    * logoUrl  Logo图片地址
-    * readmeUrl  插件详情描述及使用说明
-    * description  模板描述
-    * versions  模板具体版本详情
+    * type  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * require  **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
+    * labels  **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * logoUrl  **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * readmeUrl  **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * versions  **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * require  是否为必安装插件
-    * labels  模板所属分组
-    * logoUrl  Logo图片地址
-    * readmeUrl  插件详情描述及使用说明
-    * description  模板描述
-    * versions  模板具体版本详情
+    * type  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * require  **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
+    * labels  **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * logoUrl  **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * readmeUrl  **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * versions  **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * require  是否为必安装插件
-    * labels  模板所属分组
-    * logoUrl  Logo图片地址
-    * readmeUrl  插件详情描述及使用说明
-    * description  模板描述
-    * versions  模板具体版本详情
+    * type  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * require  **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
+    * labels  **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * logoUrl  **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * readmeUrl  **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * versions  **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * require  是否为必安装插件
-    * labels  模板所属分组
-    * logoUrl  Logo图片地址
-    * readmeUrl  插件详情描述及使用说明
-    * description  模板描述
-    * versions  模板具体版本详情
+    * type  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * require  **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
+    * labels  **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * logoUrl  **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * readmeUrl  **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * versions  **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -258,7 +258,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
+    *  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
+    * @param string $type **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets require
-    *  是否为必安装插件
+    *  **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
     *
     * @return bool|null
     */
@@ -294,7 +294,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets require
     *
-    * @param bool|null $require 是否为必安装插件
+    * @param bool|null $require **参数解释**： 是否为必安装插件。 **约束限制**： 不涉及 **取值范围**： - true：必安装插件 - false：非必安装插件  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  模板所属分组
+    *  **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]
     */
@@ -318,7 +318,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param string[] $labels 模板所属分组
+    * @param string[] $labels **参数解释**： 模板所属分组。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets logoUrl
-    *  Logo图片地址
+    *  **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -342,7 +342,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets logoUrl
     *
-    * @param string $logoUrl Logo图片地址
+    * @param string $logoUrl **参数解释**： Logo图片地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets readmeUrl
-    *  插件详情描述及使用说明
+    *  **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -366,7 +366,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets readmeUrl
     *
-    * @param string $readmeUrl 插件详情描述及使用说明
+    * @param string $readmeUrl **参数解释**： 插件详情描述及使用说明。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  模板描述
+    *  **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -390,7 +390,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 模板描述
+    * @param string $description **参数解释**： 模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -402,7 +402,7 @@ class Templatespec implements ModelInterface, ArrayAccess
 
     /**
     * Gets versions
-    *  模板具体版本详情
+    *  **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\Versions[]
     */
@@ -414,7 +414,7 @@ class Templatespec implements ModelInterface, ArrayAccess
     /**
     * Sets versions
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\Versions[] $versions 模板具体版本详情
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Versions[] $versions **参数解释**： 模板具体版本详情。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

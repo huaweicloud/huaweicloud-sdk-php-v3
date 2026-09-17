@@ -462,6 +462,9 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
         if ($this->container['containerNetwork'] === null) {
             $invalidProperties[] = "'containerNetwork' can't be null";
         }
+        if ($this->container['eniNetwork'] === null) {
+            $invalidProperties[] = "'eniNetwork' can't be null";
+        }
             $allowedValues = $this->getKubeProxyModeAllowableValues();
                 if (!is_null($this->container['kubeProxyMode']) && !in_array($this->container['kubeProxyMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -776,7 +779,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     * Gets eniNetwork
     *  eniNetwork
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\AutopilotEniNetwork|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\AutopilotEniNetwork
     */
     public function getEniNetwork()
     {
@@ -786,7 +789,7 @@ class AutopilotClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Sets eniNetwork
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\AutopilotEniNetwork|null $eniNetwork eniNetwork
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\AutopilotEniNetwork $eniNetwork eniNetwork
     *
     * @return $this
     */

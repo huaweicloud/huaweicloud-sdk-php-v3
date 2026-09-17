@@ -21,10 +21,12 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * edgeAppId  应用ID搜索关键字
-    * offset  查询的起始位置，取值范围为非负整数，默认为0
-    * limit  每页记录数，默认值为10，取值区间为1-1000
+    * offset  查询的起始位置，取值范围为非负整数，默认为0。
+    * limit  每页记录数，默认值为10，取值区间为1-1000。
     * appType  应用id搜索关键字
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocol  驱动协议类型搜索关键字
     *
     * @var string[]
     */
@@ -33,16 +35,20 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'appType' => 'string',
-            'functionType' => 'string'
+            'functionType' => 'string',
+            'functionTypes' => 'string[]',
+            'protocol' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edgeAppId  应用ID搜索关键字
-    * offset  查询的起始位置，取值范围为非负整数，默认为0
-    * limit  每页记录数，默认值为10，取值区间为1-1000
+    * offset  查询的起始位置，取值范围为非负整数，默认为0。
+    * limit  每页记录数，默认值为10，取值区间为1-1000。
     * appType  应用id搜索关键字
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocol  驱动协议类型搜索关键字
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'limit' => 'int32',
         'appType' => null,
-        'functionType' => null
+        'functionType' => null,
+        'functionTypes' => null,
+        'protocol' => null
     ];
 
     /**
@@ -78,10 +86,12 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * edgeAppId  应用ID搜索关键字
-    * offset  查询的起始位置，取值范围为非负整数，默认为0
-    * limit  每页记录数，默认值为10，取值区间为1-1000
+    * offset  查询的起始位置，取值范围为非负整数，默认为0。
+    * limit  每页记录数，默认值为10，取值区间为1-1000。
     * appType  应用id搜索关键字
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocol  驱动协议类型搜索关键字
     *
     * @var string[]
     */
@@ -90,16 +100,20 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'appType' => 'app_type',
-            'functionType' => 'function_type'
+            'functionType' => 'function_type',
+            'functionTypes' => 'function_types',
+            'protocol' => 'protocol'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeAppId  应用ID搜索关键字
-    * offset  查询的起始位置，取值范围为非负整数，默认为0
-    * limit  每页记录数，默认值为10，取值区间为1-1000
+    * offset  查询的起始位置，取值范围为非负整数，默认为0。
+    * limit  每页记录数，默认值为10，取值区间为1-1000。
     * appType  应用id搜索关键字
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocol  驱动协议类型搜索关键字
     *
     * @var string[]
     */
@@ -108,16 +122,20 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'appType' => 'setAppType',
-            'functionType' => 'setFunctionType'
+            'functionType' => 'setFunctionType',
+            'functionTypes' => 'setFunctionTypes',
+            'protocol' => 'setProtocol'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edgeAppId  应用ID搜索关键字
-    * offset  查询的起始位置，取值范围为非负整数，默认为0
-    * limit  每页记录数，默认值为10，取值区间为1-1000
+    * offset  查询的起始位置，取值范围为非负整数，默认为0。
+    * limit  每页记录数，默认值为10，取值区间为1-1000。
     * appType  应用id搜索关键字
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocol  驱动协议类型搜索关键字
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'appType' => 'getAppType',
-            'functionType' => 'getFunctionType'
+            'functionType' => 'getFunctionType',
+            'functionTypes' => 'getFunctionTypes',
+            'protocol' => 'getProtocol'
     ];
 
     /**
@@ -178,6 +198,7 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
     const FUNCTION_TYPE_GATEWAY_MANAGER = 'GATEWAY_MANAGER';
     const FUNCTION_TYPE_COMPOSITE_APPLICATION = 'COMPOSITE_APPLICATION';
     const FUNCTION_TYPE_DATA_COLLECTION = 'DATA_COLLECTION';
+    const FUNCTION_TYPE_MODEL_INFERENCE = 'MODEL_INFERENCE';
     
 
     /**
@@ -208,6 +229,7 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             self::FUNCTION_TYPE_GATEWAY_MANAGER,
             self::FUNCTION_TYPE_COMPOSITE_APPLICATION,
             self::FUNCTION_TYPE_DATA_COLLECTION,
+            self::FUNCTION_TYPE_MODEL_INFERENCE,
         ];
     }
 
@@ -232,6 +254,8 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['functionType'] = isset($data['functionType']) ? $data['functionType'] : null;
+        $this->container['functionTypes'] = isset($data['functionTypes']) ? $data['functionTypes'] : null;
+        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
     }
 
     /**
@@ -245,8 +269,8 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['edgeAppId']) && (mb_strlen($this->container['edgeAppId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'edgeAppId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['edgeAppId']) && (mb_strlen($this->container['edgeAppId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'edgeAppId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['edgeAppId']) && (mb_strlen($this->container['edgeAppId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'edgeAppId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000.";
@@ -291,8 +315,14 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['functionType']) && (mb_strlen($this->container['functionType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'functionType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['functionType']) && !preg_match("/(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION)/", $this->container['functionType'])) {
-                $invalidProperties[] = "invalid value for 'functionType', must be conform to the pattern /(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION)/.";
+            if (!is_null($this->container['functionType']) && !preg_match("/(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION|MODEL_INFERENCE)/", $this->container['functionType'])) {
+                $invalidProperties[] = "invalid value for 'functionType', must be conform to the pattern /(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION|MODEL_INFERENCE)/.";
+            }
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 64)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 1)) {
+                $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -334,7 +364,7 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询的起始位置，取值范围为非负整数，默认为0
+    *  查询的起始位置，取值范围为非负整数，默认为0。
     *
     * @return int|null
     */
@@ -346,7 +376,7 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询的起始位置，取值范围为非负整数，默认为0
+    * @param int|null $offset 查询的起始位置，取值范围为非负整数，默认为0。
     *
     * @return $this
     */
@@ -358,7 +388,7 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页记录数，默认值为10，取值区间为1-1000
+    *  每页记录数，默认值为10，取值区间为1-1000。
     *
     * @return int|null
     */
@@ -370,7 +400,7 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页记录数，默认值为10，取值区间为1-1000
+    * @param int|null $limit 每页记录数，默认值为10，取值区间为1-1000。
     *
     * @return $this
     */
@@ -425,6 +455,54 @@ class BatchListEdgeAppsRequest implements ModelInterface, ArrayAccess
     public function setFunctionType($functionType)
     {
         $this->container['functionType'] = $functionType;
+        return $this;
+    }
+
+    /**
+    * Gets functionTypes
+    *  功能类型列表
+    *
+    * @return string[]|null
+    */
+    public function getFunctionTypes()
+    {
+        return $this->container['functionTypes'];
+    }
+
+    /**
+    * Sets functionTypes
+    *
+    * @param string[]|null $functionTypes 功能类型列表
+    *
+    * @return $this
+    */
+    public function setFunctionTypes($functionTypes)
+    {
+        $this->container['functionTypes'] = $functionTypes;
+        return $this;
+    }
+
+    /**
+    * Gets protocol
+    *  驱动协议类型搜索关键字
+    *
+    * @return string|null
+    */
+    public function getProtocol()
+    {
+        return $this->container['protocol'];
+    }
+
+    /**
+    * Sets protocol
+    *
+    * @param string|null $protocol 驱动协议类型搜索关键字
+    *
+    * @return $this
+    */
+    public function setProtocol($protocol)
+    {
+        $this->container['protocol'] = $protocol;
         return $this;
     }
 

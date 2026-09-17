@@ -21,24 +21,28 @@ class RemoveNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * removeNodeSystemSecurityGroup  **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
+            'removeNodeSystemSecurityGroup' => 'bool',
             'body' => '\HuaweiCloud\SDK\Cce\V3\Model\RemoveNodesTask'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * removeNodeSystemSecurityGroup  **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
+        'removeNodeSystemSecurityGroup' => null,
         'body' => null
     ];
 
@@ -66,36 +70,42 @@ class RemoveNodeRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * removeNodeSystemSecurityGroup  **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
+            'removeNodeSystemSecurityGroup' => 'removeNodeSystemSecurityGroup',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * removeNodeSystemSecurityGroup  **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
+            'removeNodeSystemSecurityGroup' => 'setRemoveNodeSystemSecurityGroup',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * removeNodeSystemSecurityGroup  **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
+            'removeNodeSystemSecurityGroup' => 'getRemoveNodeSystemSecurityGroup',
             'body' => 'getBody'
     ];
 
@@ -158,6 +168,7 @@ class RemoveNodeRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['removeNodeSystemSecurityGroup'] = isset($data['removeNodeSystemSecurityGroup']) ? $data['removeNodeSystemSecurityGroup'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -210,6 +221,30 @@ class RemoveNodeRequest implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets removeNodeSystemSecurityGroup
+    *  **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
+    *
+    * @return bool|null
+    */
+    public function getRemoveNodeSystemSecurityGroup()
+    {
+        return $this->container['removeNodeSystemSecurityGroup'];
+    }
+
+    /**
+    * Sets removeNodeSystemSecurityGroup
+    *
+    * @param bool|null $removeNodeSystemSecurityGroup **参数解释**： 移除节点时是否解绑节点默认安全组。 **约束限制**： 不涉及 **取值范围**： - false：移除节点时保留节点默认安全组 - true：移除节点时解绑节点默认安全组  **默认取值**： false
+    *
+    * @return $this
+    */
+    public function setRemoveNodeSystemSecurityGroup($removeNodeSystemSecurityGroup)
+    {
+        $this->container['removeNodeSystemSecurityGroup'] = $removeNodeSystemSecurityGroup;
         return $this;
     }
 

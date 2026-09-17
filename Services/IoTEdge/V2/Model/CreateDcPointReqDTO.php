@@ -27,6 +27,7 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
     * deviceId  设备id
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
             'collectionConfig' => 'object',
             'deviceId' => 'string',
             'property' => 'string',
-            'processingConfig' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ProcessingConfigDTO'
+            'processingConfig' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ProcessingConfigDTO',
+            'active' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
     * deviceId  设备id
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
         'collectionConfig' => null,
         'deviceId' => null,
         'property' => null,
-        'processingConfig' => null
+        'processingConfig' => null,
+        'active' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
     * deviceId  设备id
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
             'collectionConfig' => 'collection_config',
             'deviceId' => 'device_id',
             'property' => 'property',
-            'processingConfig' => 'processing_config'
+            'processingConfig' => 'processing_config',
+            'active' => 'active'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
     * deviceId  设备id
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
             'collectionConfig' => 'setCollectionConfig',
             'deviceId' => 'setDeviceId',
             'property' => 'setProperty',
-            'processingConfig' => 'setProcessingConfig'
+            'processingConfig' => 'setProcessingConfig',
+            'active' => 'setActive'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
     * deviceId  设备id
     * property  属性，允许中、数字、英文大小写、下划线、中划线
     * processingConfig  processingConfig
+    * active  点位启停状态，默认开启
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
             'collectionConfig' => 'getCollectionConfig',
             'deviceId' => 'getDeviceId',
             'property' => 'getProperty',
-            'processingConfig' => 'getProcessingConfig'
+            'processingConfig' => 'getProcessingConfig',
+            'active' => 'getActive'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
         $this->container['processingConfig'] = isset($data['processingConfig']) ? $data['processingConfig'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -457,6 +468,30 @@ class CreateDcPointReqDTO implements ModelInterface, ArrayAccess
     public function setProcessingConfig($processingConfig)
     {
         $this->container['processingConfig'] = $processingConfig;
+        return $this;
+    }
+
+    /**
+    * Gets active
+    *  点位启停状态，默认开启
+    *
+    * @return bool|null
+    */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+    * Sets active
+    *
+    * @param bool|null $active 点位启停状态，默认开启
+    *
+    * @return $this
+    */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
         return $this;
     }
 

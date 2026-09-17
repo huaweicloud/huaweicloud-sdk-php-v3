@@ -20,14 +20,14 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dryRun  开启后，仅验证模板参数，不进行安装
-    * nameTemplate  实例名称模板
-    * noHooks  安装时是否禁用hooks
-    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
-    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
-    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
-    * releaseVersion  回滚实例的版本
-    * includeHooks  更新或者删除时启用hooks
+    * dryRun  **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
+    * nameTemplate  **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * noHooks  **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
+    * replace  **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
+    * recreate  **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
+    * resetValues  **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
+    * releaseVersion  **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * includeHooks  **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dryRun  开启后，仅验证模板参数，不进行安装
-    * nameTemplate  实例名称模板
-    * noHooks  安装时是否禁用hooks
-    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
-    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
-    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
-    * releaseVersion  回滚实例的版本
-    * includeHooks  更新或者删除时启用hooks
+    * dryRun  **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
+    * nameTemplate  **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * noHooks  **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
+    * replace  **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
+    * recreate  **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
+    * resetValues  **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
+    * releaseVersion  **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * includeHooks  **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dryRun  开启后，仅验证模板参数，不进行安装
-    * nameTemplate  实例名称模板
-    * noHooks  安装时是否禁用hooks
-    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
-    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
-    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
-    * releaseVersion  回滚实例的版本
-    * includeHooks  更新或者删除时启用hooks
+    * dryRun  **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
+    * nameTemplate  **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * noHooks  **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
+    * replace  **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
+    * recreate  **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
+    * resetValues  **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
+    * releaseVersion  **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * includeHooks  **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dryRun  开启后，仅验证模板参数，不进行安装
-    * nameTemplate  实例名称模板
-    * noHooks  安装时是否禁用hooks
-    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
-    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
-    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
-    * releaseVersion  回滚实例的版本
-    * includeHooks  更新或者删除时启用hooks
+    * dryRun  **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
+    * nameTemplate  **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * noHooks  **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
+    * replace  **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
+    * recreate  **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
+    * resetValues  **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
+    * releaseVersion  **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * includeHooks  **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dryRun  开启后，仅验证模板参数，不进行安装
-    * nameTemplate  实例名称模板
-    * noHooks  安装时是否禁用hooks
-    * replace  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
-    * recreate  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
-    * resetValues  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
-    * releaseVersion  回滚实例的版本
-    * includeHooks  更新或者删除时启用hooks
+    * dryRun  **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
+    * nameTemplate  **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * noHooks  **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
+    * replace  **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
+    * recreate  **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
+    * resetValues  **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
+    * releaseVersion  **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * includeHooks  **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets dryRun
-    *  开启后，仅验证模板参数，不进行安装
+    *  **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
     *
     * @return bool|null
     */
@@ -263,7 +263,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets dryRun
     *
-    * @param bool|null $dryRun 开启后，仅验证模板参数，不进行安装
+    * @param bool|null $dryRun **参数解释：** 开启后，仅验证模板参数，不进行安装 **约束限制：** 不涉及 **取值范围：** - true：仅验证 - false：正常安装  **默认取值：** false
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameTemplate
-    *  实例名称模板
+    *  **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets nameTemplate
     *
-    * @param string|null $nameTemplate 实例名称模板
+    * @param string|null $nameTemplate **参数解释：** 实例名称模板 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets noHooks
-    *  安装时是否禁用hooks
+    *  **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
     *
     * @return bool|null
     */
@@ -311,7 +311,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets noHooks
     *
-    * @param bool|null $noHooks 安装时是否禁用hooks
+    * @param bool|null $noHooks **参数解释：** 安装时是否禁用hooks **约束限制：** 不涉及 **取值范围：** - true：禁用hooks - false：不禁用hooks  **默认取值：** false
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets replace
-    *  模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    *  **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
     *
     * @return bool|null
     */
@@ -335,7 +335,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets replace
     *
-    * @param bool|null $replace 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效
+    * @param bool|null $replace **参数解释：** 模板实例更新时是否保留values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：保留values - false：不保留values  **默认取值：** false
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets recreate
-    *  模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    *  **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
     *
     * @return bool|null
     */
@@ -359,7 +359,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets recreate
     *
-    * @param bool|null $recreate 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效
+    * @param bool|null $recreate **参数解释：** 模板实例更新时是否重建实例，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重建实例 - false：不重建实例  **默认取值：** false
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets resetValues
-    *  模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
+    *  **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
     *
     * @return bool|null
     */
@@ -383,7 +383,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets resetValues
     *
-    * @param bool|null $resetValues 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效
+    * @param bool|null $resetValues **参数解释：** 模板实例更新时是否重置values，该字段仅在更新指定模板实例时生效 **约束限制：** 不涉及 **取值范围：** - true：重置values - false：不重置values  **默认取值：** false
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets releaseVersion
-    *  回滚实例的版本
+    *  **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -407,7 +407,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets releaseVersion
     *
-    * @param int|null $releaseVersion 回滚实例的版本
+    * @param int|null $releaseVersion **参数解释：** 回滚实例的版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
 
     /**
     * Gets includeHooks
-    *  更新或者删除时启用hooks
+    *  **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @return bool|null
     */
@@ -431,7 +431,7 @@ class ReleaseReqBodyParams implements ModelInterface, ArrayAccess
     /**
     * Sets includeHooks
     *
-    * @param bool|null $includeHooks 更新或者删除时启用hooks
+    * @param bool|null $includeHooks **参数解释：** 更新或者删除时启用hooks **约束限制：** 不涉及 **取值范围：** - true：启用hooks - false：不启用hooks  **默认取值：** false
     *
     * @return $this
     */

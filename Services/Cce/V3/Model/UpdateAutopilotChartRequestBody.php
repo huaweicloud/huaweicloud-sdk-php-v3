@@ -20,8 +20,8 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parameters  上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
-    * content  模板包文件
+    * parameters  **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
+    * content  **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parameters  上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
-    * content  模板包文件
+    * parameters  **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
+    * content  **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parameters  上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
-    * content  模板包文件
+    * parameters  **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
+    * content  **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parameters  上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
-    * content  模板包文件
+    * parameters  **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
+    * content  **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parameters  上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
-    * content  模板包文件
+    * parameters  **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
+    * content  **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameters
-    *  上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
+    *  **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param string|null $parameters 上传模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\" - skip_lint: whether lint uploaded chart - override: whether override existed chart - visible: update chart visible
+    * @param string|null $parameters **参数解释：** 更新模板的配置参数，示例如下：\"{\\\"override\\\":true,\\\"skip_lint\\\":true,\\\"source\\\":\\\"package\\\"}\"。 **约束限制：** 不涉及 **取值范围：** - skip_lint：是否验证上传的模板 - override：是否覆盖已存在的模板 - visible：模板是否可见  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets content
-    *  模板包文件
+    *  **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \SplFileObject
     */
@@ -224,7 +224,7 @@ class UpdateAutopilotChartRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets content
     *
-    * @param \SplFileObject $content 模板包文件
+    * @param \SplFileObject $content **参数解释：** 模板包文件。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

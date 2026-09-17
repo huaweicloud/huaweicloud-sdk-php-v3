@@ -220,14 +220,14 @@ class VolumeDTO implements ModelInterface, ArrayAccess
         if ($this->container['source'] === null) {
             $invalidProperties[] = "'source' can't be null";
         }
-            if (!preg_match("/^\/([a-zA-Z_0-9-]+\/?)+$/", $this->container['source'])) {
-                $invalidProperties[] = "invalid value for 'source', must be conform to the pattern /^\/([a-zA-Z_0-9-]+\/?)+$/.";
+            if (!preg_match("/^\/[a-zA-Z_0-9-\/]{0,1024}$/", $this->container['source'])) {
+                $invalidProperties[] = "invalid value for 'source', must be conform to the pattern /^\/[a-zA-Z_0-9-\/]{0,1024}$/.";
             }
         if ($this->container['destination'] === null) {
             $invalidProperties[] = "'destination' can't be null";
         }
-            if (!preg_match("/^\/_*(?!boot\/|dev\/|etc\/|lib\/|pro\/|sys\/)([a-zA-Z_0-9-]+\/?)+$/", $this->container['destination'])) {
-                $invalidProperties[] = "invalid value for 'destination', must be conform to the pattern /^\/_*(?!boot\/|dev\/|etc\/|lib\/|pro\/|sys\/)([a-zA-Z_0-9-]+\/?)+$/.";
+            if (!preg_match("/^(\/)*(?!boot\/|dev\/|etc\/|lib\/|pro\/|sys\/)[a-zA-Z_0-9-\/]{0,1024}$/", $this->container['destination'])) {
+                $invalidProperties[] = "invalid value for 'destination', must be conform to the pattern /^(\/)*(?!boot\/|dev\/|etc\/|lib\/|pro\/|sys\/)[a-zA-Z_0-9-\/]{0,1024}$/.";
             }
         return $invalidProperties;
     }

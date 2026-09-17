@@ -27,6 +27,74 @@ class CodeArtsPipelineClient extends Client
 
 
     /**
+     * 手动卡点通过
+     *
+     * 手动卡点通过
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function acceptCheckpoint($request)
+    {
+        return $this->acceptCheckpointWithHttpInfo($request);
+    }
+
+    public function acceptCheckpointWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipelines/{pipeline_id}/pipeline-runs/{pipeline_run_id}/steps/{step_run_id}/manual/pass';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['stepRunId'] !== null) {
+            $pathParams['step_run_id'] = $localVarParams['stepRunId'];
+        }
+        if ($localVarParams['pipelineId'] !== null) {
+            $pathParams['pipeline_id'] = $localVarParams['pipelineId'];
+        }
+        if ($localVarParams['pipelineRunId'] !== null) {
+            $pathParams['pipeline_run_id'] = $localVarParams['pipelineRunId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\AcceptCheckpointResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\AcceptCheckpointRequest');
+    }
+
+    /**
      * 通过人工审核
      *
      * 通过人工审核
@@ -56,6 +124,9 @@ class CodeArtsPipelineClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['approvalDescription'] !== null) {
+            $queryParams['approval_description'] = $localVarParams['approvalDescription'];
         }
         if ($localVarParams['jobRunId'] !== null) {
             $pathParams['job_run_id'] = $localVarParams['jobRunId'];
@@ -219,6 +290,71 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\BatchShowPipelinesLatestStatusResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\BatchShowPipelinesLatestStatusRequest');
+    }
+
+    /**
+     * 创建告警策略
+     *
+     * 创建流水线告警策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAlertPolicy($request)
+    {
+        return $this->createAlertPolicyWithHttpInfo($request);
+    }
+
+    public function createAlertPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{tenant_id}/api/alert/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $pathParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreateAlertPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreateAlertPolicyRequest');
     }
 
     /**
@@ -541,6 +677,68 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreatePipelineNewResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreatePipelineNewRequest');
+    }
+
+    /**
+     * 新建流水线标签
+     *
+     * 新建流水线标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPipelineTag($request)
+    {
+        return $this->createPipelineTagWithHttpInfo($request);
+    }
+
+    public function createPipelineTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline-tag/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreatePipelineTagResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreatePipelineTagRequest');
     }
 
     /**
@@ -934,6 +1132,133 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
+     * 创建参数组
+     *
+     * 创建参数组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVariableGroup($request)
+    {
+        return $this->createVariableGroupWithHttpInfo($request);
+    }
+
+    public function createVariableGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline/variable/group/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreateVariableGroupResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\CreateVariableGroupRequest');
+    }
+
+    /**
+     * 删除告警策略
+     *
+     * 删除流水线告警策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAlertPolicy($request)
+    {
+        return $this->deleteAlertPolicyWithHttpInfo($request);
+    }
+
+    public function deleteAlertPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{tenant_id}/api/alert/policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $pathParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeleteAlertPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeleteAlertPolicyRequest');
+    }
+
+    /**
      * 删除基础插件
      *
      * 删除基础插件
@@ -1126,6 +1451,68 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeletePipelineGroupResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeletePipelineGroupRequest');
+    }
+
+    /**
+     * 删除流水线标签
+     *
+     * 删除流水线标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePipelineTag($request)
+    {
+        return $this->deletePipelineTagWithHttpInfo($request);
+    }
+
+    public function deletePipelineTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline-tag/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tagId'] !== null) {
+            $queryParams['tagId'] = $localVarParams['tagId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeletePipelineTagResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeletePipelineTagRequest');
     }
 
     /**
@@ -1454,6 +1841,68 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeleteStrategyResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeleteStrategyRequest');
+    }
+
+    /**
+     * 删除参数组
+     *
+     * 删除参数组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteVariableGroup($request)
+    {
+        return $this->deleteVariableGroupWithHttpInfo($request);
+    }
+
+    public function deleteVariableGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline/variable/group/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeleteVariableGroupResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\DeleteVariableGroupRequest');
     }
 
     /**
@@ -2013,6 +2462,68 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineSimpleInfoResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineSimpleInfoRequest');
+    }
+
+    /**
+     * 查询流水线标签列表
+     *
+     * 查询流水线标签列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPipelineTag($request)
+    {
+        return $this->listPipelineTagWithHttpInfo($request);
+    }
+
+    public function listPipelineTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline-tag/list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projId'] !== null) {
+            $queryParams['proj_id'] = $localVarParams['projId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineTagResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelineTagRequest');
     }
 
     /**
@@ -2809,6 +3320,68 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
+     * 查询参数组列表
+     *
+     * 查询参数组列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVariableGroups($request)
+    {
+        return $this->listVariableGroupsWithHttpInfo($request);
+    }
+
+    public function listVariableGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline/variable/group/list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListVariableGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListVariableGroupsRequest');
+    }
+
+    /**
      * 发布插件
      *
      * 发布插件
@@ -3034,6 +3607,9 @@ class CodeArtsPipelineClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['approvalDescription'] !== null) {
+            $queryParams['approval_description'] = $localVarParams['approvalDescription'];
+        }
         if ($localVarParams['jobRunId'] !== null) {
             $pathParams['job_run_id'] = $localVarParams['jobRunId'];
         }
@@ -3173,6 +3749,9 @@ class CodeArtsPipelineClient extends Client
         if ($localVarParams['pipelineRunId'] !== null) {
             $pathParams['pipeline_run_id'] = $localVarParams['pipelineRunId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -3180,7 +3759,7 @@ class CodeArtsPipelineClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json;charset=UTF-8', 'application/json'],
-                []
+                ['application/json;charset=UTF-8']
             );
         }
         $headers = array_merge(
@@ -3264,6 +3843,71 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineRequest');
+    }
+
+    /**
+     * 查询告警策略详情
+     *
+     * 查询流水线告警策略详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAlertPolicy($request)
+    {
+        return $this->showAlertPolicyWithHttpInfo($request);
+    }
+
+    public function showAlertPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{tenant_id}/api/alert/policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $pathParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ShowAlertPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ShowAlertPolicyRequest');
     }
 
     /**
@@ -3690,6 +4334,9 @@ class CodeArtsPipelineClient extends Client
         if ($localVarParams['pipelineRunId'] !== null) {
             $queryParams['pipeline_run_id'] = $localVarParams['pipelineRunId'];
         }
+        if ($localVarParams['pipelineRunNumber'] !== null) {
+            $queryParams['pipeline_run_number'] = $localVarParams['pipelineRunNumber'];
+        }
         if ($localVarParams['pipelineId'] !== null) {
             $pathParams['pipeline_id'] = $localVarParams['pipelineId'];
         }
@@ -4115,7 +4762,7 @@ class CodeArtsPipelineClient extends Client
     }
 
     /**
-     * 
+     * 查询项目级策略详情
      *
      * 查询项目级策略详情
      * 
@@ -4511,6 +5158,68 @@ class CodeArtsPipelineClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ShowTemplateDetailResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ShowTemplateDetailRequest');
+    }
+
+    /**
+     * 查询参数组详情
+     *
+     * 查询参数组详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVariableGroupDetail($request)
+    {
+        return $this->showVariableGroupDetailWithHttpInfo($request);
+    }
+
+    public function showVariableGroupDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/api/pipeline/variable/group/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ShowVariableGroupDetailResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ShowVariableGroupDetailRequest');
     }
 
     /**
@@ -4935,7 +5644,7 @@ class CodeArtsPipelineClient extends Client
             $localVarParams[$k] = $value;
         }
         if ($localVarParams['componentId'] !== null) {
-            $queryParams['componentId'] = $localVarParams['componentId'];
+            $queryParams['component_id'] = $localVarParams['componentId'];
         }
         if ($localVarParams['pipelineId'] !== null) {
             $pathParams['pipeline_id'] = $localVarParams['pipelineId'];

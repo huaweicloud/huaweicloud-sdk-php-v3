@@ -22,24 +22,28 @@ class RetryPipelineRunRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'pipelineId' => 'string',
-            'pipelineRunId' => 'string'
+            'pipelineRunId' => 'string',
+            'body' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RetryPipelineRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'pipelineId' => null,
-        'pipelineRunId' => null
+        'pipelineRunId' => null,
+        'body' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class RetryPipelineRunRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'pipelineId' => 'pipeline_id',
-            'pipelineRunId' => 'pipeline_run_id'
+            'pipelineRunId' => 'pipeline_run_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'pipelineId' => 'setPipelineId',
-            'pipelineRunId' => 'setPipelineRunId'
+            'pipelineRunId' => 'setPipelineRunId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'pipelineId' => 'getPipelineId',
-            'pipelineRunId' => 'getPipelineRunId'
+            'pipelineRunId' => 'getPipelineRunId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -159,6 +169,7 @@ class RetryPipelineRunRequest implements ModelInterface, ArrayAccess
     {
         $this->container['pipelineId'] = isset($data['pipelineId']) ? $data['pipelineId'] : null;
         $this->container['pipelineRunId'] = isset($data['pipelineRunId']) ? $data['pipelineRunId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -246,6 +257,30 @@ class RetryPipelineRunRequest implements ModelInterface, ArrayAccess
     public function setPipelineRunId($pipelineRunId)
     {
         $this->container['pipelineRunId'] = $pipelineRunId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RetryPipelineRequest|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RetryPipelineRequest|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

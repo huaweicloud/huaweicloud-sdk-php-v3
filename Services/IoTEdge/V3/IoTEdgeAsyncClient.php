@@ -62,11 +62,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'app_id', 'description', 'app_type', 'provider_type', 'create_time', 'update_time']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'app_id', 'description', 'app_type', 'provider_type', 'create_time', 'update_time'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -127,11 +127,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -204,11 +204,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'count', 'page_info', 'apps']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'count', 'page_info', 'apps'],
+                ['application/json'],
                 []
             );
         }
@@ -269,11 +269,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'app_id', 'description', 'app_type', 'provider_type', 'create_time', 'update_time']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'app_id', 'description', 'app_type', 'provider_type', 'create_time', 'update_time'],
+                ['application/json'],
                 []
             );
         }
@@ -337,11 +337,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'id', 'namespace', 'version', 'app_id', 'app_version', 'status', 'status_description', 'values', 'create_time', 'update_time']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'id', 'namespace', 'version', 'app_id', 'app_version', 'status', 'status_description', 'values', 'create_time', 'update_time'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -408,11 +408,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -479,11 +479,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'history']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'history'],
+                ['application/json'],
                 []
             );
         }
@@ -544,11 +544,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'app_instances']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'app_instances'],
+                ['application/json'],
                 []
             );
         }
@@ -615,11 +615,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'id', 'namespace', 'version', 'app_id', 'app_version', 'status', 'status_description', 'values', 'create_time', 'update_time']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'id', 'namespace', 'version', 'app_id', 'app_version', 'status', 'status_description', 'values', 'create_time', 'update_time'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -691,11 +691,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'app_id', 'version', 'values', 'create_time', 'update_time']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'app_id', 'version', 'values', 'create_time', 'update_time'],
+                ['application/json'],
                 ['multipart/form-data']
             );
         }
@@ -759,11 +759,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -827,11 +827,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/octet-stream']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/octet-stream'],
+                [],
                 []
             );
         }
@@ -901,11 +901,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'count', 'page_info', 'app_images']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'count', 'page_info', 'app_images'],
+                ['application/json'],
                 []
             );
         }
@@ -1043,11 +1043,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'count', 'page_info', 'app_versions']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'count', 'page_info', 'app_versions'],
+                ['application/json'],
                 []
             );
         }
@@ -1179,11 +1179,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'cmd']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'cmd'],
+                ['application/json'],
                 []
             );
         }
@@ -1244,11 +1244,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -1309,6 +1309,9 @@ class IoTEdgeAsyncClient extends Client
         if ($localVarParams['state'] !== null) {
             $queryParams['state'] = $localVarParams['state'];
         }
+        if ($localVarParams['clusterIds'] !== null) {
+            $queryParams['cluster_ids'] = $localVarParams['clusterIds'];
+        }
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
@@ -1318,11 +1321,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'count', 'page_info', 'clusters']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'count', 'page_info', 'clusters'],
+                ['application/json'],
                 []
             );
         }
@@ -1383,11 +1386,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'cluster_id', 'cluster_name', 'description', 'version', 'state', 'os', 'arch', 'create_time', 'update_time']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'cluster_id', 'cluster_name', 'description', 'version', 'state', 'os', 'arch', 'create_time', 'update_time'],
+                ['application/json'],
                 []
             );
         }
@@ -1408,6 +1411,482 @@ class IoTEdgeAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ShowClusterResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ShowClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询资源列表-企业版
+     *
+     * 查询资源列表-企业版
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterResourcesAsync($request)
+    {
+        return $this->showClusterResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function showClusterResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceGroup'] !== null) {
+            $queryParams['resource_group'] = $localVarParams['resourceGroup'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ShowClusterResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ShowClusterResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更改资源绑定信息-企业版
+     *
+     * 更改资源绑定信息-企业版
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateResourceBindingAsync($request)
+    {
+        return $this->updateResourceBindingAsyncWithHttpInfo($request);
+    }
+    
+    public function updateResourceBindingAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/resources/{resource_id}/cluster';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\UpdateResourceBindingResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\UpdateResourceBindingRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 转发k8s API
+     *
+     * 转发k8s API。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function invokeKubeApiAsync($request)
+    {
+        return $this->invokeKubeApiAsyncWithHttpInfo($request);
+    }
+    
+    public function invokeKubeApiAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/clusters/{cluster_id}/api-proxy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xForwardTarget'] !== null) {
+            $headerParams['x_forward_target'] = $localVarParams['xForwardTarget'];
+        }
+        if ($localVarParams['xForwardHeaders'] !== null) {
+            $headerParams['x_forward_headers'] = $localVarParams['xForwardHeaders'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\InvokeKubeApiResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\InvokeKubeApiRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询命名空间列表
+     *
+     * 应用服务器可调用此接口查询命名空间列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterNamespacesAsync($request)
+    {
+        return $this->listClusterNamespacesAsyncWithHttpInfo($request);
+    }
+    
+    public function listClusterNamespacesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/clusters/{cluster_id}/namespaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ListClusterNamespacesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ListClusterNamespacesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 生成安装集群节点的安装命令
+     *
+     * 生成安装集群节点的安装命令。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createClusterNodesInstallCmdAsync($request)
+    {
+        return $this->createClusterNodesInstallCmdAsyncWithHttpInfo($request);
+    }
+    
+    public function createClusterNodesInstallCmdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/clusters/{cluster_id}/nodes/install-cmd';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\CreateClusterNodesInstallCmdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\CreateClusterNodesInstallCmdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群的节点列表
+     *
+     * 应用服务器可调用此接口查询集群的节点列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClusterNodesAsync($request)
+    {
+        return $this->listClusterNodesAsyncWithHttpInfo($request);
+    }
+    
+    public function listClusterNodesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/clusters/{cluster_id}/nodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ListClusterNodesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ListClusterNodesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群的节点详情
+     *
+     * 应用服务器可调用此接口查询集群的节点详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterNodeAsync($request)
+    {
+        return $this->showClusterNodeAsyncWithHttpInfo($request);
+    }
+    
+    public function showClusterNodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/{project_id}/clusters/{cluster_id}/nodes/{node_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['nodeName'] !== null) {
+            $pathParams['node_name'] = $localVarParams['nodeName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ShowClusterNodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\IoTEdge\V3\Model\ShowClusterNodeRequest',
             $asyncRequest = true);
     }
 

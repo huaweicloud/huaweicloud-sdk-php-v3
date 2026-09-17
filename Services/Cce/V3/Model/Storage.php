@@ -20,8 +20,8 @@ class Storage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * storageSelectors  磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
-    * storageGroups  由多个存储设备组成的存储组，用于各个存储空间的划分。
+    * storageSelectors  **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * storageGroups  **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Storage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * storageSelectors  磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
-    * storageGroups  由多个存储设备组成的存储组，用于各个存储空间的划分。
+    * storageSelectors  **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * storageGroups  **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Storage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * storageSelectors  磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
-    * storageGroups  由多个存储设备组成的存储组，用于各个存储空间的划分。
+    * storageSelectors  **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * storageGroups  **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Storage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * storageSelectors  磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
-    * storageGroups  由多个存储设备组成的存储组，用于各个存储空间的划分。
+    * storageSelectors  **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * storageGroups  **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Storage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * storageSelectors  磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
-    * storageGroups  由多个存储设备组成的存储组，用于各个存储空间的划分。
+    * storageSelectors  **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * storageGroups  **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class Storage implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSelectors
-    *  磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
+    *  **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\StorageSelectors[]
     */
@@ -203,7 +203,7 @@ class Storage implements ModelInterface, ArrayAccess
     /**
     * Sets storageSelectors
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\StorageSelectors[] $storageSelectors 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\StorageSelectors[] $storageSelectors **参数解释**： 磁盘选择，根据matchLabels和storageType对匹配的磁盘进行管理。磁盘匹配存在先后顺序，靠前的匹配规则优先匹配。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class Storage implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageGroups
-    *  由多个存储设备组成的存储组，用于各个存储空间的划分。
+    *  **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\StorageGroups[]
     */
@@ -227,7 +227,7 @@ class Storage implements ModelInterface, ArrayAccess
     /**
     * Sets storageGroups
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\StorageGroups[] $storageGroups 由多个存储设备组成的存储组，用于各个存储空间的划分。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\StorageGroups[] $storageGroups **参数解释**： 由多个存储设备组成的存储组，用于各个存储空间的划分。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

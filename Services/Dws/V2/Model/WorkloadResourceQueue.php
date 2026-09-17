@@ -20,7 +20,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **约束限制**： 不涉及。 **取值范围**： -1以上，-1表示不限制。 **默认取值**： -1
     *
     * @var string[]
@@ -32,7 +32,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **约束限制**： 不涉及。 **取值范围**： -1以上，-1表示不限制。 **默认取值**： -1
     *
     * @var string[]
@@ -65,7 +65,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **约束限制**： 不涉及。 **取值范围**： -1以上，-1表示不限制。 **默认取值**： -1
     *
     * @var string[]
@@ -77,7 +77,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **约束限制**： 不涉及。 **取值范围**： -1以上，-1表示不限制。 **默认取值**： -1
     *
     * @var string[]
@@ -89,7 +89,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    * shortQueryOptimize  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     * shortQueryConcurrencyNum  **参数解释**： 工作负载队列短查询并发数。 **约束限制**： 不涉及。 **取值范围**： -1以上，-1表示不限制。 **默认取值**： -1
     *
     * @var string[]
@@ -185,7 +185,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
 
     /**
     * Gets shortQueryOptimize
-    *  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    *  **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class WorkloadResourceQueue implements ModelInterface, ArrayAccess
     /**
     * Sets shortQueryOptimize
     *
-    * @param string|null $shortQueryOptimize **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭 **默认取值**： on
+    * @param string|null $shortQueryOptimize **参数解释**： 工作负载队列短查询加速开关。 **约束限制**： 不涉及。 **取值范围**： - on：开启 - off：关闭  **默认取值**： on
     *
     * @return $this
     */

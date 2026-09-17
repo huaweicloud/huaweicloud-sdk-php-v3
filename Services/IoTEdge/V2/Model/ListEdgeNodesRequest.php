@@ -21,11 +21,12 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  节点名称
-    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     * type  节点所属资源类型，advanced|standard
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的设备列表，不携带该参数则会查询该用户下所有设备列表。
     * nodeIds  节点id列表,查询ID在给的节点ID列表内的节点信息
+    * appId  应用ID，查询部署了该应用的节点列表。
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -38,6 +39,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'spaceId' => 'string',
             'nodeIds' => 'string[]',
+            'appId' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -45,11 +47,12 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  节点名称
-    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     * type  节点所属资源类型，advanced|standard
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的设备列表，不携带该参数则会查询该用户下所有设备列表。
     * nodeIds  节点id列表,查询ID在给的节点ID列表内的节点信息
+    * appId  应用ID，查询部署了该应用的节点列表。
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -62,6 +65,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'spaceId' => null,
         'nodeIds' => null,
+        'appId' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -90,11 +94,12 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  节点名称
-    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     * type  节点所属资源类型，advanced|standard
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的设备列表，不携带该参数则会查询该用户下所有设备列表。
     * nodeIds  节点id列表,查询ID在给的节点ID列表内的节点信息
+    * appId  应用ID，查询部署了该应用的节点列表。
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -107,6 +112,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'spaceId' => 'space_id',
             'nodeIds' => 'node_ids',
+            'appId' => 'app_id',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -114,11 +120,12 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  节点名称
-    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     * type  节点所属资源类型，advanced|standard
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的设备列表，不携带该参数则会查询该用户下所有设备列表。
     * nodeIds  节点id列表,查询ID在给的节点ID列表内的节点信息
+    * appId  应用ID，查询部署了该应用的节点列表。
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -131,6 +138,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'spaceId' => 'setSpaceId',
             'nodeIds' => 'setNodeIds',
+            'appId' => 'setAppId',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -138,11 +146,12 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  节点名称
-    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    * state  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     * type  节点所属资源类型，advanced|standard
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的设备列表，不携带该参数则会查询该用户下所有设备列表。
     * nodeIds  节点id列表,查询ID在给的节点ID列表内的节点信息
+    * appId  应用ID，查询部署了该应用的节点列表。
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -155,6 +164,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'spaceId' => 'getSpaceId',
             'nodeIds' => 'getNodeIds',
+            'appId' => 'getAppId',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -223,6 +233,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['spaceId'] = isset($data['spaceId']) ? $data['spaceId'] : null;
         $this->container['nodeIds'] = isset($data['nodeIds']) ? $data['nodeIds'] : null;
+        $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -250,8 +261,8 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 1)) {
                 $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['state']) && !preg_match("/(OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING)/", $this->container['state'])) {
-                $invalidProperties[] = "invalid value for 'state', must be conform to the pattern /(OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING)/.";
+            if (!is_null($this->container['state']) && !preg_match("/(OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|FROZEN)/", $this->container['state'])) {
+                $invalidProperties[] = "invalid value for 'state', must be conform to the pattern /(OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|FROZEN)/.";
             }
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 32)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 32.";
@@ -259,8 +270,8 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 1)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['type']) && !preg_match("/(advanced|standard)/", $this->container['type'])) {
-                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /(advanced|standard)/.";
+            if (!is_null($this->container['type']) && !preg_match("/(advanced|standard|lite)/", $this->container['type'])) {
+                $invalidProperties[] = "invalid value for 'type', must be conform to the pattern /(advanced|standard|lite)/.";
             }
             if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
@@ -268,8 +279,8 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{36}$/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{36}$/.";
+            if (!is_null($this->container['instanceId']) && !preg_match("/^[a-f0-9-]{1,36}$/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /^[a-f0-9-]{1,36}$/.";
             }
             if (!is_null($this->container['spaceId']) && (mb_strlen($this->container['spaceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'spaceId', the character length must be smaller than or equal to 36.";
@@ -279,6 +290,15 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['spaceId']) && !preg_match("/^[a-zA-Z0-9_-]{1,36}$/", $this->container['spaceId'])) {
                 $invalidProperties[] = "invalid value for 'spaceId', must be conform to the pattern /^[a-zA-Z0-9_-]{1,36}$/.";
+            }
+            if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'appId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'appId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['appId']) && !preg_match("/^[$A-Za-z0-9-_]*$/", $this->container['appId'])) {
+                $invalidProperties[] = "invalid value for 'appId', must be conform to the pattern /^[$A-Za-z0-9-_]*$/.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000.";
@@ -332,7 +352,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    *  节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     *
     * @return string|null
     */
@@ -344,7 +364,7 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string|null $state 节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING
+    * @param string|null $state 节点状态,OFFLINE|ONLINE|UNINSTALLED|INSTALLED|DELETING|UPGRADING|FROZEN
     *
     * @return $this
     */
@@ -447,6 +467,30 @@ class ListEdgeNodesRequest implements ModelInterface, ArrayAccess
     public function setNodeIds($nodeIds)
     {
         $this->container['nodeIds'] = $nodeIds;
+        return $this;
+    }
+
+    /**
+    * Gets appId
+    *  应用ID，查询部署了该应用的节点列表。
+    *
+    * @return string|null
+    */
+    public function getAppId()
+    {
+        return $this->container['appId'];
+    }
+
+    /**
+    * Sets appId
+    *
+    * @param string|null $appId 应用ID，查询部署了该应用的节点列表。
+    *
+    * @return $this
+    */
+    public function setAppId($appId)
+    {
+        $this->container['appId'] = $appId;
         return $this;
     }
 

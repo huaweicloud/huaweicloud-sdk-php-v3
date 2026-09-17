@@ -46,7 +46,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
             'remoteGroupId' => 'string',
             'remoteAddressGroupId' => 'string',
             'action' => 'string',
-            'priority' => 'string',
+            'priority' => 'int',
             'enabled' => 'bool'
     ];
 
@@ -543,7 +543,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     * Gets priority
     *  功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPriority()
     {
@@ -553,7 +553,7 @@ class CreateSecurityGroupRuleOption implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param string|null $priority 功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
+    * @param int|null $priority 功能说明：规则在安全组中的优先级 取值范围：1~100，1代表最高优先级 约束：默认值为100
     *
     * @return $this
     */

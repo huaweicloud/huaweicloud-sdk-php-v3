@@ -23,15 +23,13 @@ class BasePathDTO implements ModelInterface, ArrayAccess
     * logBasePath  节点日志根目录
     * configBasePath  节点配置根目录
     * dbBasePath  节点数据存储根目录
-    * offlineCacheConfigs  offlineCacheConfigs
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'logBasePath' => 'string',
             'configBasePath' => 'string',
-            'dbBasePath' => 'string',
-            'offlineCacheConfigs' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\OfflineCacheConfigsDTO'
+            'dbBasePath' => 'string'
     ];
 
     /**
@@ -39,15 +37,13 @@ class BasePathDTO implements ModelInterface, ArrayAccess
     * logBasePath  节点日志根目录
     * configBasePath  节点配置根目录
     * dbBasePath  节点数据存储根目录
-    * offlineCacheConfigs  offlineCacheConfigs
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'logBasePath' => null,
         'configBasePath' => null,
-        'dbBasePath' => null,
-        'offlineCacheConfigs' => null
+        'dbBasePath' => null
     ];
 
     /**
@@ -76,15 +72,13 @@ class BasePathDTO implements ModelInterface, ArrayAccess
     * logBasePath  节点日志根目录
     * configBasePath  节点配置根目录
     * dbBasePath  节点数据存储根目录
-    * offlineCacheConfigs  offlineCacheConfigs
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'logBasePath' => 'log_base_path',
             'configBasePath' => 'config_base_path',
-            'dbBasePath' => 'db_base_path',
-            'offlineCacheConfigs' => 'offline_cache_configs'
+            'dbBasePath' => 'db_base_path'
     ];
 
     /**
@@ -92,15 +86,13 @@ class BasePathDTO implements ModelInterface, ArrayAccess
     * logBasePath  节点日志根目录
     * configBasePath  节点配置根目录
     * dbBasePath  节点数据存储根目录
-    * offlineCacheConfigs  offlineCacheConfigs
     *
     * @var string[]
     */
     protected static $setters = [
             'logBasePath' => 'setLogBasePath',
             'configBasePath' => 'setConfigBasePath',
-            'dbBasePath' => 'setDbBasePath',
-            'offlineCacheConfigs' => 'setOfflineCacheConfigs'
+            'dbBasePath' => 'setDbBasePath'
     ];
 
     /**
@@ -108,15 +100,13 @@ class BasePathDTO implements ModelInterface, ArrayAccess
     * logBasePath  节点日志根目录
     * configBasePath  节点配置根目录
     * dbBasePath  节点数据存储根目录
-    * offlineCacheConfigs  offlineCacheConfigs
     *
     * @var string[]
     */
     protected static $getters = [
             'logBasePath' => 'getLogBasePath',
             'configBasePath' => 'getConfigBasePath',
-            'dbBasePath' => 'getDbBasePath',
-            'offlineCacheConfigs' => 'getOfflineCacheConfigs'
+            'dbBasePath' => 'getDbBasePath'
     ];
 
     /**
@@ -180,7 +170,6 @@ class BasePathDTO implements ModelInterface, ArrayAccess
         $this->container['logBasePath'] = isset($data['logBasePath']) ? $data['logBasePath'] : null;
         $this->container['configBasePath'] = isset($data['configBasePath']) ? $data['configBasePath'] : null;
         $this->container['dbBasePath'] = isset($data['dbBasePath']) ? $data['dbBasePath'] : null;
-        $this->container['offlineCacheConfigs'] = isset($data['offlineCacheConfigs']) ? $data['offlineCacheConfigs'] : null;
     }
 
     /**
@@ -301,30 +290,6 @@ class BasePathDTO implements ModelInterface, ArrayAccess
     public function setDbBasePath($dbBasePath)
     {
         $this->container['dbBasePath'] = $dbBasePath;
-        return $this;
-    }
-
-    /**
-    * Gets offlineCacheConfigs
-    *  offlineCacheConfigs
-    *
-    * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\OfflineCacheConfigsDTO|null
-    */
-    public function getOfflineCacheConfigs()
-    {
-        return $this->container['offlineCacheConfigs'];
-    }
-
-    /**
-    * Sets offlineCacheConfigs
-    *
-    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\OfflineCacheConfigsDTO|null $offlineCacheConfigs offlineCacheConfigs
-    *
-    * @return $this
-    */
-    public function setOfflineCacheConfigs($offlineCacheConfigs)
-    {
-        $this->container['offlineCacheConfigs'] = $offlineCacheConfigs;
         return $this;
     }
 

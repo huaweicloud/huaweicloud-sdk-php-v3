@@ -20,7 +20,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  待删除的集群资源标签列表。
+    * tags  **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  待删除的集群资源标签列表。
+    * tags  **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  待删除的集群资源标签列表。
+    * tags  **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  待删除的集群资源标签列表。
+    * tags  **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  待删除的集群资源标签列表。
+    * tags  **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  待删除的集群资源标签列表。
+    *  **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceDeleteTag[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteClusterTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceDeleteTag[] $tags 待删除的集群资源标签列表。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceDeleteTag[] $tags **参数解释：** 待删除的集群资源标签列表。 **约束限制：** 删除时仅需指定key，value将被忽略。 **取值范围：** 1-20个ResourceDeleteTag对象。 **默认取值：** 不涉及
     *
     * @return $this
     */

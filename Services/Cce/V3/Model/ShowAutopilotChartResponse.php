@@ -21,19 +21,19 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  模板ID
-    * name  模板名称
-    * values  模板值
-    * translate  模板翻译资源
-    * instruction  模板介绍
-    * version  模板版本
-    * description  模板描述
-    * source  模板的来源
-    * iconUrl  模板的图标链接
-    * public  是否公开模板
-    * chartUrl  模板的链接
-    * createAt  创建时间
-    * updateAt  更新时间
+    * id  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * translate  **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instruction  **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * source  **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * iconUrl  **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * public  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartUrl  **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -55,19 +55,19 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  模板ID
-    * name  模板名称
-    * values  模板值
-    * translate  模板翻译资源
-    * instruction  模板介绍
-    * version  模板版本
-    * description  模板描述
-    * source  模板的来源
-    * iconUrl  模板的图标链接
-    * public  是否公开模板
-    * chartUrl  模板的链接
-    * createAt  创建时间
-    * updateAt  更新时间
+    * id  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * translate  **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instruction  **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * source  **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * iconUrl  **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * public  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartUrl  **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -110,19 +110,19 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  模板ID
-    * name  模板名称
-    * values  模板值
-    * translate  模板翻译资源
-    * instruction  模板介绍
-    * version  模板版本
-    * description  模板描述
-    * source  模板的来源
-    * iconUrl  模板的图标链接
-    * public  是否公开模板
-    * chartUrl  模板的链接
-    * createAt  创建时间
-    * updateAt  更新时间
+    * id  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * translate  **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instruction  **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * source  **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * iconUrl  **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * public  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartUrl  **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -144,19 +144,19 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  模板ID
-    * name  模板名称
-    * values  模板值
-    * translate  模板翻译资源
-    * instruction  模板介绍
-    * version  模板版本
-    * description  模板描述
-    * source  模板的来源
-    * iconUrl  模板的图标链接
-    * public  是否公开模板
-    * chartUrl  模板的链接
-    * createAt  创建时间
-    * updateAt  更新时间
+    * id  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * translate  **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instruction  **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * source  **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * iconUrl  **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * public  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartUrl  **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -178,19 +178,19 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  模板ID
-    * name  模板名称
-    * values  模板值
-    * translate  模板翻译资源
-    * instruction  模板介绍
-    * version  模板版本
-    * description  模板描述
-    * source  模板的来源
-    * iconUrl  模板的图标链接
-    * public  是否公开模板
-    * chartUrl  模板的链接
-    * createAt  创建时间
-    * updateAt  更新时间
+    * id  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * translate  **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * instruction  **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * source  **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * iconUrl  **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * public  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartUrl  **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -307,7 +307,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  模板ID
+    *  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 模板ID
+    * @param string|null $id **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板名称
+    *  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板名称
+    * @param string|null $name **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  模板值
+    *  **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string|null $values 模板值
+    * @param string|null $values **参数解释：** 模板值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets translate
-    *  模板翻译资源
+    *  **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets translate
     *
-    * @param string|null $translate 模板翻译资源
+    * @param string|null $translate **参数解释：** 模板翻译资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets instruction
-    *  模板介绍
+    *  **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets instruction
     *
-    * @param string|null $instruction 模板介绍
+    * @param string|null $instruction **参数解释：** 模板介绍 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  模板版本
+    *  **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 模板版本
+    * @param string|null $version **参数解释：** 模板版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -451,7 +451,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  模板描述
+    *  **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -463,7 +463,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 模板描述
+    * @param string|null $description **参数解释：** 模板描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets source
-    *  模板的来源
+    *  **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -487,7 +487,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param string|null $source 模板的来源
+    * @param string|null $source **参数解释：** 模板的来源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets iconUrl
-    *  模板的图标链接
+    *  **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -511,7 +511,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets iconUrl
     *
-    * @param string|null $iconUrl 模板的图标链接
+    * @param string|null $iconUrl **参数解释：** 模板的图标链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets public
-    *  是否公开模板
+    *  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
     *
     * @return bool|null
     */
@@ -535,7 +535,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets public
     *
-    * @param bool|null $public 是否公开模板
+    * @param bool|null $public **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
     *
     * @return $this
     */
@@ -547,7 +547,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets chartUrl
-    *  模板的链接
+    *  **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chartUrl
     *
-    * @param string|null $chartUrl 模板的链接
+    * @param string|null $chartUrl **参数解释：** 模板的链接 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createAt
-    *  创建时间
+    *  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt 创建时间
+    * @param string|null $createAt **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateAt
-    *  更新时间
+    *  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class ShowAutopilotChartResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt 更新时间
+    * @param string|null $updateAt **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * deviceId  昇腾设备ID
-    * npuType  华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    * npuType  AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     * productName  昇腾设备产品类型
     * aiCore  AI加速卡包含ai核个数
     * health  昇腾设备健康状态
@@ -43,7 +43,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * deviceId  昇腾设备ID
-    * npuType  华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    * npuType  AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     * productName  昇腾设备产品类型
     * aiCore  AI加速卡包含ai核个数
     * health  昇腾设备健康状态
@@ -86,7 +86,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * deviceId  昇腾设备ID
-    * npuType  华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    * npuType  AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     * productName  昇腾设备产品类型
     * aiCore  AI加速卡包含ai核个数
     * health  昇腾设备健康状态
@@ -108,7 +108,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * deviceId  昇腾设备ID
-    * npuType  华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    * npuType  AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     * productName  昇腾设备产品类型
     * aiCore  AI加速卡包含ai核个数
     * health  昇腾设备健康状态
@@ -130,7 +130,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * deviceId  昇腾设备ID
-    * npuType  华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    * npuType  AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     * productName  昇腾设备产品类型
     * aiCore  AI加速卡包含ai核个数
     * health  昇腾设备健康状态
@@ -303,7 +303,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets npuType
-    *  华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    *  AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class NPUDetailsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets npuType
     *
-    * @param string|null $npuType 华为AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
+    * @param string|null $npuType AI加速卡型号，如D310推理卡、D310P推理卡、D910训练卡。
     *
     * @return $this
     */

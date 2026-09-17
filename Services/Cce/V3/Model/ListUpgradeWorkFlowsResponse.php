@@ -21,9 +21,9 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  API类型，固定值“List”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * items  items
+    * kind  **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
+    * items  **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  API类型，固定值“List”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * items  items
+    * kind  **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
+    * items  **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  API类型，固定值“List”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * items  items
+    * kind  **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
+    * items  **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  API类型，固定值“List”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * items  items
+    * kind  **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
+    * items  **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  API类型，固定值“List”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
-    * items  items
+    * kind  **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
+    * items  **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  API类型，固定值“List”，该值不可修改。
+    *  **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
     *
     * @return string|null
     */
@@ -215,7 +215,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind API类型，固定值“List”，该值不可修改。
+    * @param string|null $kind **参数解释：** API类型，固定值\"List\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - List  **默认取值：** List
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  API版本，固定值“v3”，该值不可修改。
+    *  **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion API版本，固定值“v3”，该值不可修改。
+    * @param string|null $apiVersion **参数解释：** API版本，固定值\"v3\"，该值不可修改 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     *
     * @return $this
     */
@@ -251,7 +251,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  items
+    *  **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow[]|null
     */
@@ -263,7 +263,7 @@ class ListUpgradeWorkFlowsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow[]|null $items items
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeWorkFlow[]|null $items **参数解释：** 升级工作流列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

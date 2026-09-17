@@ -23,6 +23,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     * edgeAppId  应用ID
     * appVersion  应用版本
     * state  模块运行状态
+    * livenessState  模块健康状态
     * controlStatus  模块管控状态
     * nodeId  边缘节点（同deviceID）ID
     * moduleName  模块名称
@@ -38,6 +39,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
             'edgeAppId' => 'string',
             'appVersion' => 'string',
             'state' => 'string',
+            'livenessState' => 'string',
             'controlStatus' => 'string',
             'nodeId' => 'string',
             'moduleName' => 'string',
@@ -53,6 +55,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     * edgeAppId  应用ID
     * appVersion  应用版本
     * state  模块运行状态
+    * livenessState  模块健康状态
     * controlStatus  模块管控状态
     * nodeId  边缘节点（同deviceID）ID
     * moduleName  模块名称
@@ -68,6 +71,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
         'edgeAppId' => null,
         'appVersion' => null,
         'state' => null,
+        'livenessState' => null,
         'controlStatus' => null,
         'nodeId' => null,
         'moduleName' => null,
@@ -104,6 +108,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     * edgeAppId  应用ID
     * appVersion  应用版本
     * state  模块运行状态
+    * livenessState  模块健康状态
     * controlStatus  模块管控状态
     * nodeId  边缘节点（同deviceID）ID
     * moduleName  模块名称
@@ -119,6 +124,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
             'edgeAppId' => 'edge_app_id',
             'appVersion' => 'app_version',
             'state' => 'state',
+            'livenessState' => 'liveness_state',
             'controlStatus' => 'control_status',
             'nodeId' => 'node_id',
             'moduleName' => 'module_name',
@@ -134,6 +140,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     * edgeAppId  应用ID
     * appVersion  应用版本
     * state  模块运行状态
+    * livenessState  模块健康状态
     * controlStatus  模块管控状态
     * nodeId  边缘节点（同deviceID）ID
     * moduleName  模块名称
@@ -149,6 +156,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
             'edgeAppId' => 'setEdgeAppId',
             'appVersion' => 'setAppVersion',
             'state' => 'setState',
+            'livenessState' => 'setLivenessState',
             'controlStatus' => 'setControlStatus',
             'nodeId' => 'setNodeId',
             'moduleName' => 'setModuleName',
@@ -164,6 +172,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     * edgeAppId  应用ID
     * appVersion  应用版本
     * state  模块运行状态
+    * livenessState  模块健康状态
     * controlStatus  模块管控状态
     * nodeId  边缘节点（同deviceID）ID
     * moduleName  模块名称
@@ -179,6 +188,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
             'edgeAppId' => 'getEdgeAppId',
             'appVersion' => 'getAppVersion',
             'state' => 'getState',
+            'livenessState' => 'getLivenessState',
             'controlStatus' => 'getControlStatus',
             'nodeId' => 'getNodeId',
             'moduleName' => 'getModuleName',
@@ -233,6 +243,8 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     const STATE_PENDING_DELETE = 'PENDING_DELETE';
     const STATE_DELETE_FAILED = 'DELETE_FAILED';
     const STATE_RUNNING = 'RUNNING';
+    const STATE_UPGRADE_PRELOADING = 'UPGRADE_PRELOADING';
+    const STATE_UPGRADE_PRELOADED = 'UPGRADE_PRELOADED';
     const STATE_FAILED = 'FAILED';
     const STATE_SUCCEEDED = 'SUCCEEDED';
     const STATE_UNKNOWN = 'UNKNOWN';
@@ -247,6 +259,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     const FUNCTION_TYPE_GATEWAY_MANAGER = 'GATEWAY_MANAGER';
     const FUNCTION_TYPE_COMPOSITE_APPLICATION = 'COMPOSITE_APPLICATION';
     const FUNCTION_TYPE_DATA_COLLECTION = 'DATA_COLLECTION';
+    const FUNCTION_TYPE_MODEL_INFERENCE = 'MODEL_INFERENCE';
     
 
     /**
@@ -261,6 +274,8 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
             self::STATE_PENDING_DELETE,
             self::STATE_DELETE_FAILED,
             self::STATE_RUNNING,
+            self::STATE_UPGRADE_PRELOADING,
+            self::STATE_UPGRADE_PRELOADED,
             self::STATE_FAILED,
             self::STATE_SUCCEEDED,
             self::STATE_UNKNOWN,
@@ -297,6 +312,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
             self::FUNCTION_TYPE_GATEWAY_MANAGER,
             self::FUNCTION_TYPE_COMPOSITE_APPLICATION,
             self::FUNCTION_TYPE_DATA_COLLECTION,
+            self::FUNCTION_TYPE_MODEL_INFERENCE,
         ];
     }
 
@@ -319,6 +335,7 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
         $this->container['edgeAppId'] = isset($data['edgeAppId']) ? $data['edgeAppId'] : null;
         $this->container['appVersion'] = isset($data['appVersion']) ? $data['appVersion'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['livenessState'] = isset($data['livenessState']) ? $data['livenessState'] : null;
         $this->container['controlStatus'] = isset($data['controlStatus']) ? $data['controlStatus'] : null;
         $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
         $this->container['moduleName'] = isset($data['moduleName']) ? $data['moduleName'] : null;
@@ -486,6 +503,30 @@ class EdgeModuleDTO implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets livenessState
+    *  模块健康状态
+    *
+    * @return string|null
+    */
+    public function getLivenessState()
+    {
+        return $this->container['livenessState'];
+    }
+
+    /**
+    * Sets livenessState
+    *
+    * @param string|null $livenessState 模块健康状态
+    *
+    * @return $this
+    */
+    public function setLivenessState($livenessState)
+    {
+        $this->container['livenessState'] = $livenessState;
         return $this;
     }
 

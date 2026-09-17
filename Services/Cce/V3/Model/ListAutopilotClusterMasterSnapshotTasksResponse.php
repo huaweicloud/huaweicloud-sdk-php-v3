@@ -21,10 +21,10 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3.1
-    * kind  任务类型
+    * apiVersion  **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
+    * kind  **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  备份任务列表
+    * items  **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
     *
     * @var string[]
@@ -39,10 +39,10 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3.1
-    * kind  任务类型
+    * apiVersion  **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
+    * kind  **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  备份任务列表
+    * items  **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
     *
     * @var string[]
@@ -78,10 +78,10 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  api版本，默认为v3.1
-    * kind  任务类型
+    * apiVersion  **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
+    * kind  **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  备份任务列表
+    * items  **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
     *
     * @var string[]
@@ -96,10 +96,10 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  api版本，默认为v3.1
-    * kind  任务类型
+    * apiVersion  **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
+    * kind  **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  备份任务列表
+    * items  **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
     *
     * @var string[]
@@ -114,10 +114,10 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  api版本，默认为v3.1
-    * kind  任务类型
+    * apiVersion  **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
+    * kind  **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  备份任务列表
+    * items  **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
     *
     * @var string[]
@@ -219,7 +219,7 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Gets apiVersion
-    *  api版本，默认为v3.1
+    *  **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion api版本，默认为v3.1
+    * @param string|null $apiVersion **参数解释：** API版本，默认为v3.1 **约束限制：** 不涉及 **取值范围：** - v3.1  **默认取值：** v3.1
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Gets kind
-    *  任务类型
+    *  **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
     /**
     * Sets kind
     *
-    * @param string|null $kind 任务类型
+    * @param string|null $kind **参数解释：** 任务类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
 
     /**
     * Gets items
-    *  备份任务列表
+    *  **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\SnapshotTask[]|null
     */
@@ -303,7 +303,7 @@ class ListAutopilotClusterMasterSnapshotTasksResponse implements ModelInterface,
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\SnapshotTask[]|null $items 备份任务列表
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\SnapshotTask[]|null $items **参数解释：** 备份任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

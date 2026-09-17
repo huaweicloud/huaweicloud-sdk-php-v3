@@ -1049,9 +1049,9 @@ class CceAsyncClient extends Client
     }
 
     /**
-     * 获取集群证书
+     * 获取集群访问证书
      *
-     * 该API用于获取指定集群的证书信息。
+     * 该API用于获取指定集群的访问证书信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3045,6 +3045,79 @@ class CceAsyncClient extends Client
     }
 
     /**
+     * 节点腾挪
+     *
+     * 该API用于在指定集群下腾挪节点到另一集群。
+     * 
+     * &gt; 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function inplaceMigrateNodeAsync($request)
+    {
+        return $this->inplaceMigrateNodeAsyncWithHttpInfo($request);
+    }
+    
+    public function inplaceMigrateNodeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/nodes/operation/in-place-migrateto/{target_cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['targetClusterId'] !== null) {
+            $pathParams['target_cluster_id'] = $localVarParams['targetClusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\InplaceMigrateNodeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\InplaceMigrateNodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取访问策略列表
      *
      * 该API用于获取访问策略列表。
@@ -3744,6 +3817,9 @@ class CceAsyncClient extends Client
         }
         if ($localVarParams['showDefaultNodePool'] !== null) {
             $queryParams['show_default_node_pool'] = $localVarParams['showDefaultNodePool'];
+        }
+        if ($localVarParams['advanceStatus'] !== null) {
+            $queryParams['advance_status'] = $localVarParams['advanceStatus'];
         }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
@@ -4559,6 +4635,9 @@ class CceAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['removeNodeSystemSecurityGroup'] !== null) {
+            $queryParams['remove_node_system_security_group'] = $localVarParams['removeNodeSystemSecurityGroup'];
+        }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
         }
@@ -4805,9 +4884,9 @@ class CceAsyncClient extends Client
     }
 
     /**
-     * 吊销用户的集群证书
+     * 吊销集群访问证书
      *
-     * 该API用于吊销指定集群的用户证书
+     * 该API用于吊销指定集群的访问证书
      * 
      * &gt; 吊销操作完成后，此证书申请人之前下载的证书和 kubectl 配置文件无法再用于连接集群。此证书申请人可以重新下载证书或 kubectl 配置文件，并使用新下载的文件连接集群
      * 
@@ -4943,11 +5022,11 @@ class CceAsyncClient extends Client
     }
 
     /**
-     * 轮转用户的集群证书
+     * 轮转集群证书
      *
      * 该API用于轮转指定集群的证书
      * 
-     * &gt; 只支持1.19及以上集群版本
+     * &gt; 只支持1.15.11及以上集群版本
      * &gt; 操作完成后，用户集群组件的证书有效期会续期5年。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -5992,6 +6071,9 @@ class CceAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['advanceStatus'] !== null) {
+            $queryParams['advance_status'] = $localVarParams['advanceStatus'];
+        }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
         }
@@ -6816,11 +6898,11 @@ class CceAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json'],
                 []
             );
         }

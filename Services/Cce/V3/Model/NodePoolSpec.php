@@ -24,6 +24,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  **参数解释**： 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义。 **约束限制**： 更新节点池时如果未指定则保持原伸缩组配置，如果指定伸缩组（包括空数组），则基于请求体刷新所有伸缩组配置。
@@ -39,6 +40,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate',
             'initialNodeCount' => 'int',
             'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling',
+            'repairPolicy' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolRepairPolicy',
             'nodeManagement' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeManagement',
             'podSecurityGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\SecurityID[]',
             'extensionScaleGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup[]',
@@ -54,6 +56,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  **参数解释**： 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义。 **约束限制**： 更新节点池时如果未指定则保持原伸缩组配置，如果指定伸缩组（包括空数组），则基于请求体刷新所有伸缩组配置。
@@ -69,6 +72,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
         'nodeTemplate' => null,
         'initialNodeCount' => 'int32',
         'autoscaling' => null,
+        'repairPolicy' => null,
         'nodeManagement' => null,
         'podSecurityGroups' => null,
         'extensionScaleGroups' => null,
@@ -105,6 +109,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  **参数解释**： 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义。 **约束限制**： 更新节点池时如果未指定则保持原伸缩组配置，如果指定伸缩组（包括空数组），则基于请求体刷新所有伸缩组配置。
@@ -120,6 +125,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeTemplate' => 'nodeTemplate',
             'initialNodeCount' => 'initialNodeCount',
             'autoscaling' => 'autoscaling',
+            'repairPolicy' => 'repairPolicy',
             'nodeManagement' => 'nodeManagement',
             'podSecurityGroups' => 'podSecurityGroups',
             'extensionScaleGroups' => 'extensionScaleGroups',
@@ -135,6 +141,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  **参数解释**： 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义。 **约束限制**： 更新节点池时如果未指定则保持原伸缩组配置，如果指定伸缩组（包括空数组），则基于请求体刷新所有伸缩组配置。
@@ -150,6 +157,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeTemplate' => 'setNodeTemplate',
             'initialNodeCount' => 'setInitialNodeCount',
             'autoscaling' => 'setAutoscaling',
+            'repairPolicy' => 'setRepairPolicy',
             'nodeManagement' => 'setNodeManagement',
             'podSecurityGroups' => 'setPodSecurityGroups',
             'extensionScaleGroups' => 'setExtensionScaleGroups',
@@ -165,6 +173,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
     * extensionScaleGroups  **参数解释**： 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义。 **约束限制**： 更新节点池时如果未指定则保持原伸缩组配置，如果指定伸缩组（包括空数组），则基于请求体刷新所有伸缩组配置。
@@ -180,6 +189,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'nodeTemplate' => 'getNodeTemplate',
             'initialNodeCount' => 'getInitialNodeCount',
             'autoscaling' => 'getAutoscaling',
+            'repairPolicy' => 'getRepairPolicy',
             'nodeManagement' => 'getNodeManagement',
             'podSecurityGroups' => 'getPodSecurityGroups',
             'extensionScaleGroups' => 'getExtensionScaleGroups',
@@ -268,6 +278,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
         $this->container['nodeTemplate'] = isset($data['nodeTemplate']) ? $data['nodeTemplate'] : null;
         $this->container['initialNodeCount'] = isset($data['initialNodeCount']) ? $data['initialNodeCount'] : null;
         $this->container['autoscaling'] = isset($data['autoscaling']) ? $data['autoscaling'] : null;
+        $this->container['repairPolicy'] = isset($data['repairPolicy']) ? $data['repairPolicy'] : null;
         $this->container['nodeManagement'] = isset($data['nodeManagement']) ? $data['nodeManagement'] : null;
         $this->container['podSecurityGroups'] = isset($data['podSecurityGroups']) ? $data['podSecurityGroups'] : null;
         $this->container['extensionScaleGroups'] = isset($data['extensionScaleGroups']) ? $data['extensionScaleGroups'] : null;
@@ -403,6 +414,30 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     public function setAutoscaling($autoscaling)
     {
         $this->container['autoscaling'] = $autoscaling;
+        return $this;
+    }
+
+    /**
+    * Gets repairPolicy
+    *  repairPolicy
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolRepairPolicy|null
+    */
+    public function getRepairPolicy()
+    {
+        return $this->container['repairPolicy'];
+    }
+
+    /**
+    * Sets repairPolicy
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolRepairPolicy|null $repairPolicy repairPolicy
+    *
+    * @return $this
+    */
+    public function setRepairPolicy($repairPolicy)
+    {
+        $this->container['repairPolicy'] = $repairPolicy;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * startPoint  startPoint
     * endPoint  endPoint
-    * critical  表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * critical  **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * startPoint  startPoint
     * endPoint  endPoint
-    * critical  表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * critical  **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * and the value is the original name
     * startPoint  startPoint
     * endPoint  endPoint
-    * critical  表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * critical  **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * startPoint  startPoint
     * endPoint  endPoint
-    * critical  表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * critical  **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * startPoint  startPoint
     * endPoint  endPoint
-    * critical  表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * critical  **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class LineStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets critical
-    *  表示是否为关键线路（关键线路未执行无法取消升级流程）
+    *  **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     /**
     * Sets critical
     *
-    * @param bool|null $critical 表示是否为关键线路（关键线路未执行无法取消升级流程）
+    * @param bool|null $critical **参数解释：** 表示是否为关键线路（关键线路未执行无法取消升级流程） **约束限制：** 不涉及 **取值范围：** - true：是关键线路 - false：非关键线路  **默认取值：** 不涉及
     *
     * @return $this
     */

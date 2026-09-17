@@ -31,9 +31,16 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
-    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
     * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    * disableReleaseBranchManagement  **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    * executionPlans  **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * cancelStrategy  **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * agencyName  **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variableGroupIds  **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +58,14 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'id' => 'string',
             'concurrencyControl' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineConcurrencyMgmt',
-            'securityLevel' => 'int'
+            'securityLevel' => 'int',
+            'disableReleaseBranchManagement' => 'bool',
+            'executionPlans' => 'object[]',
+            'projectId' => 'string',
+            'cancelStrategy' => 'object',
+            'confidentialityCode' => 'string',
+            'agencyName' => 'string',
+            'variableGroupIds' => 'string[]'
     ];
 
     /**
@@ -67,9 +81,16 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
-    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
     * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    * disableReleaseBranchManagement  **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    * executionPlans  **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * cancelStrategy  **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * agencyName  **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variableGroupIds  **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -87,7 +108,14 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         'groupId' => null,
         'id' => null,
         'concurrencyControl' => null,
-        'securityLevel' => null
+        'securityLevel' => null,
+        'disableReleaseBranchManagement' => null,
+        'executionPlans' => null,
+        'projectId' => null,
+        'cancelStrategy' => null,
+        'confidentialityCode' => null,
+        'agencyName' => null,
+        'variableGroupIds' => null
     ];
 
     /**
@@ -124,9 +152,16 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
-    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
     * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    * disableReleaseBranchManagement  **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    * executionPlans  **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * cancelStrategy  **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * agencyName  **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variableGroupIds  **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -144,7 +179,14 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'id' => 'id',
             'concurrencyControl' => 'concurrency_control',
-            'securityLevel' => 'security_level'
+            'securityLevel' => 'security_level',
+            'disableReleaseBranchManagement' => 'disable_release_branch_management',
+            'executionPlans' => 'execution_plans',
+            'projectId' => 'project_id',
+            'cancelStrategy' => 'cancel_strategy',
+            'confidentialityCode' => 'confidentiality_code',
+            'agencyName' => 'agency_name',
+            'variableGroupIds' => 'variable_group_ids'
     ];
 
     /**
@@ -160,9 +202,16 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
-    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
     * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    * disableReleaseBranchManagement  **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    * executionPlans  **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * cancelStrategy  **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * agencyName  **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variableGroupIds  **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -180,7 +229,14 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'id' => 'setId',
             'concurrencyControl' => 'setConcurrencyControl',
-            'securityLevel' => 'setSecurityLevel'
+            'securityLevel' => 'setSecurityLevel',
+            'disableReleaseBranchManagement' => 'setDisableReleaseBranchManagement',
+            'executionPlans' => 'setExecutionPlans',
+            'projectId' => 'setProjectId',
+            'cancelStrategy' => 'setCancelStrategy',
+            'confidentialityCode' => 'setConfidentialityCode',
+            'agencyName' => 'setAgencyName',
+            'variableGroupIds' => 'setVariableGroupIds'
     ];
 
     /**
@@ -196,9 +252,16 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * definition  **参数解释**： 流水线结构定义JSON。该字段结构复杂，建议使用页面编辑流水线后，从[查询流水线详情](ShowPipelineDetail.xml)接口获取。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * projectName  **参数解释**： 项目名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * groupId  **参数解释**： 流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
-    * id  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * id  **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     * concurrencyControl  concurrencyControl
     * securityLevel  **参数解释**： 流水线涉密等级。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 正整数（1为最低密级）。 **默认取值**： 不涉及。
+    * disableReleaseBranchManagement  **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    * executionPlans  **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * projectId  **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * cancelStrategy  **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * confidentialityCode  **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * agencyName  **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * variableGroupIds  **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -216,7 +279,14 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'id' => 'getId',
             'concurrencyControl' => 'getConcurrencyControl',
-            'securityLevel' => 'getSecurityLevel'
+            'securityLevel' => 'getSecurityLevel',
+            'disableReleaseBranchManagement' => 'getDisableReleaseBranchManagement',
+            'executionPlans' => 'getExecutionPlans',
+            'projectId' => 'getProjectId',
+            'cancelStrategy' => 'getCancelStrategy',
+            'confidentialityCode' => 'getConfidentialityCode',
+            'agencyName' => 'getAgencyName',
+            'variableGroupIds' => 'getVariableGroupIds'
     ];
 
     /**
@@ -291,6 +361,13 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['concurrencyControl'] = isset($data['concurrencyControl']) ? $data['concurrencyControl'] : null;
         $this->container['securityLevel'] = isset($data['securityLevel']) ? $data['securityLevel'] : null;
+        $this->container['disableReleaseBranchManagement'] = isset($data['disableReleaseBranchManagement']) ? $data['disableReleaseBranchManagement'] : null;
+        $this->container['executionPlans'] = isset($data['executionPlans']) ? $data['executionPlans'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['cancelStrategy'] = isset($data['cancelStrategy']) ? $data['cancelStrategy'] : null;
+        $this->container['confidentialityCode'] = isset($data['confidentialityCode']) ? $data['confidentialityCode'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
+        $this->container['variableGroupIds'] = isset($data['variableGroupIds']) ? $data['variableGroupIds'] : null;
     }
 
     /**
@@ -590,7 +667,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *  **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -602,7 +679,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id **参数解释**： 复制场景使用，为流水线组ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * @param string|null $id **参数解释**： 复制场景使用，为原流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -657,6 +734,174 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     public function setSecurityLevel($securityLevel)
     {
         $this->container['securityLevel'] = $securityLevel;
+        return $this;
+    }
+
+    /**
+    * Gets disableReleaseBranchManagement
+    *  **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    *
+    * @return bool|null
+    */
+    public function getDisableReleaseBranchManagement()
+    {
+        return $this->container['disableReleaseBranchManagement'];
+    }
+
+    /**
+    * Sets disableReleaseBranchManagement
+    *
+    * @param bool|null $disableReleaseBranchManagement **参数解释**： 是否禁用自动生成阶段，仅变更流水线适用。默认值为false，即默认启用自动生成阶段。 **约束限制**： 不涉及。 **取值范围**： - true：禁用自动生成阶段。 - false：启用自动生成阶段。 **默认取值**： false。
+    *
+    * @return $this
+    */
+    public function setDisableReleaseBranchManagement($disableReleaseBranchManagement)
+    {
+        $this->container['disableReleaseBranchManagement'] = $disableReleaseBranchManagement;
+        return $this;
+    }
+
+    /**
+    * Gets executionPlans
+    *  **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return object[]|null
+    */
+    public function getExecutionPlans()
+    {
+        return $this->container['executionPlans'];
+    }
+
+    /**
+    * Sets executionPlans
+    *
+    * @param object[]|null $executionPlans **参数解释**： 流水线执行计划列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setExecutionPlans($executionPlans)
+    {
+        $this->container['executionPlans'] = $executionPlans;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId **参数解释**： 项目ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets cancelStrategy
+    *  **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return object|null
+    */
+    public function getCancelStrategy()
+    {
+        return $this->container['cancelStrategy'];
+    }
+
+    /**
+    * Sets cancelStrategy
+    *
+    * @param object|null $cancelStrategy **参数解释**： 流水线取消运行策略。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setCancelStrategy($cancelStrategy)
+    {
+        $this->container['cancelStrategy'] = $cancelStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets confidentialityCode
+    *  **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getConfidentialityCode()
+    {
+        return $this->container['confidentialityCode'];
+    }
+
+    /**
+    * Sets confidentialityCode
+    *
+    * @param string|null $confidentialityCode **参数解释**： 流水线密级code。 **约束限制**： 非涉密场景不涉及，涉密场景必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setConfidentialityCode($confidentialityCode)
+    {
+        $this->container['confidentialityCode'] = $confidentialityCode;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName **参数解释**： 委托名称。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
+        return $this;
+    }
+
+    /**
+    * Gets variableGroupIds
+    *  **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getVariableGroupIds()
+    {
+        return $this->container['variableGroupIds'];
+    }
+
+    /**
+    * Sets variableGroupIds
+    *
+    * @param string[]|null $variableGroupIds **参数解释**： 关联的通用参数组ID列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setVariableGroupIds($variableGroupIds)
+    {
+        $this->container['variableGroupIds'] = $variableGroupIds;
         return $this;
     }
 

@@ -178,8 +178,8 @@ class CertificateLocalPathDTO implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['certPath']) < 1)) {
                 $invalidProperties[] = "invalid value for 'certPath', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^\/([a-zA-Z0-9-_]+\/?)+(.pem|.crt){1}$/", $this->container['certPath'])) {
-                $invalidProperties[] = "invalid value for 'certPath', must be conform to the pattern /^\/([a-zA-Z0-9-_]+\/?)+(.pem|.crt){1}$/.";
+            if (!preg_match("/^\/[a-zA-Z0-9-_\/]{0,2043}(.pem|.crt){1}$/", $this->container['certPath'])) {
+                $invalidProperties[] = "invalid value for 'certPath', must be conform to the pattern /^\/[a-zA-Z0-9-_\/]{0,2043}(.pem|.crt){1}$/.";
             }
         if ($this->container['keyPath'] === null) {
             $invalidProperties[] = "'keyPath' can't be null";
@@ -190,8 +190,8 @@ class CertificateLocalPathDTO implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['keyPath']) < 1)) {
                 $invalidProperties[] = "invalid value for 'keyPath', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^\/([a-zA-Z0-9-_]+\/?)+(.pem|.key){1}$/", $this->container['keyPath'])) {
-                $invalidProperties[] = "invalid value for 'keyPath', must be conform to the pattern /^\/([a-zA-Z0-9-_]+\/?)+(.pem|.key){1}$/.";
+            if (!preg_match("/^\/[a-zA-Z0-9-_\/]{0,2043}(.pem|.key){1}$/", $this->container['keyPath'])) {
+                $invalidProperties[] = "invalid value for 'keyPath', must be conform to the pattern /^\/[a-zA-Z0-9-_\/]{0,2043}(.pem|.key){1}$/.";
             }
         return $invalidProperties;
     }

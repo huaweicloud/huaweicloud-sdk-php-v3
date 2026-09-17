@@ -20,8 +20,8 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  插件实例id
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * id  **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
+    * clusterId  **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  插件实例id
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * id  **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
+    * clusterId  **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  插件实例id
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * id  **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
+    * clusterId  **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  插件实例id
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * id  **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
+    * clusterId  **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  插件实例id
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * id  **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
+    * clusterId  **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  插件实例id
+    *  **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 插件实例id
+    * @param string $id **参数解释**： 插件实例ID。 **约束限制**： 不涉及 **取值范围**： UUID格式，长度范围1~255位。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    *  **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class ShowAddonInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * @param string|null $clusterId **参数解释**： 集群ID（废弃中），获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

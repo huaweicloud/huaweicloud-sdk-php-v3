@@ -22,24 +22,28 @@ class Volume implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * iops  **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'volume' => 'string',
-            'capacity' => 'int'
+            'capacity' => 'int',
+            'iops' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * iops  **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'volume' => null,
-        'capacity' => 'int32'
+        'capacity' => 'int32',
+        'iops' => 'int32'
     ];
 
     /**
@@ -67,36 +71,42 @@ class Volume implements ModelInterface, ArrayAccess
     * and the value is the original name
     * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * iops  **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'volume' => 'volume',
-            'capacity' => 'capacity'
+            'capacity' => 'capacity',
+            'iops' => 'iops'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * iops  **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'volume' => 'setVolume',
-            'capacity' => 'setCapacity'
+            'capacity' => 'setCapacity',
+            'iops' => 'setIops'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * volume  **参数解释**： 磁盘名称。 **约束限制**： 不涉及。 **取值范围**： - SSD：超高IO - SAS：高IO - SATA：普通IO  **默认取值**： 不涉及。
     * capacity  **参数解释**： 磁盘容量，单位：GB。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * iops  **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'volume' => 'getVolume',
-            'capacity' => 'getCapacity'
+            'capacity' => 'getCapacity',
+            'iops' => 'getIops'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Volume implements ModelInterface, ArrayAccess
     {
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['capacity'] = isset($data['capacity']) ? $data['capacity'] : null;
+        $this->container['iops'] = isset($data['iops']) ? $data['iops'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class Volume implements ModelInterface, ArrayAccess
     public function setCapacity($capacity)
     {
         $this->container['capacity'] = $capacity;
+        return $this;
+    }
+
+    /**
+    * Gets iops
+    *  **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getIops()
+    {
+        return $this->container['iops'];
+    }
+
+    /**
+    * Sets iops
+    *
+    * @param int|null $iops **参数解释**： ESSD2磁盘IOPS值。  **约束限制**： 仅磁盘类型为ESSD2时必填。 **取值范围**： 100~256000 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIops($iops)
+    {
+        $this->container['iops'] = $iops;
         return $this;
     }
 

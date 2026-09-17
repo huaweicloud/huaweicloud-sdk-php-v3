@@ -20,9 +20,9 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  任务状态
-    * progress  任务进度
-    * completionTime  完成时间
+    * phase  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * progress  **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * completionTime  **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  任务状态
-    * progress  任务进度
-    * completionTime  完成时间
+    * phase  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * progress  **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * completionTime  **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  任务状态
-    * progress  任务进度
-    * completionTime  完成时间
+    * phase  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * progress  **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * completionTime  **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  任务状态
-    * progress  任务进度
-    * completionTime  完成时间
+    * phase  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * progress  **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * completionTime  **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  任务状态
-    * progress  任务进度
-    * completionTime  完成时间
+    * phase  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * progress  **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * completionTime  **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  任务状态
+    *  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase 任务状态
+    * @param string|null $phase **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets progress
-    *  任务进度
+    *  **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
     /**
     * Sets progress
     *
-    * @param string|null $progress 任务进度
+    * @param string|null $progress **参数解释：** 任务进度 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets completionTime
-    *  完成时间
+    *  **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class SnapshotStatus implements ModelInterface, ArrayAccess
     /**
     * Sets completionTime
     *
-    * @param string|null $completionTime 完成时间
+    * @param string|null $completionTime **参数解释：** 完成时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

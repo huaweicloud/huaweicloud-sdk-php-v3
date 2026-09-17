@@ -26,6 +26,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
     * name  点位名称，允许中、数字、英文大小写、下划线、中划线、#%()*特殊字符.模糊查询
     * property  属性，允许中、数字、英文大小写、下划线、中划线，精确查询
     * deviceId  设备标识，精确查询
+    * active  点位启停状态筛选
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -38,6 +39,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
             'name' => 'string',
             'property' => 'string',
             'deviceId' => 'string',
+            'active' => 'bool',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -50,6 +52,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
     * name  点位名称，允许中、数字、英文大小写、下划线、中划线、#%()*特殊字符.模糊查询
     * property  属性，允许中、数字、英文大小写、下划线、中划线，精确查询
     * deviceId  设备标识，精确查询
+    * active  点位启停状态筛选
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -62,6 +65,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
         'name' => null,
         'property' => null,
         'deviceId' => null,
+        'active' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -95,6 +99,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
     * name  点位名称，允许中、数字、英文大小写、下划线、中划线、#%()*特殊字符.模糊查询
     * property  属性，允许中、数字、英文大小写、下划线、中划线，精确查询
     * deviceId  设备标识，精确查询
+    * active  点位启停状态筛选
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -107,6 +112,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
             'name' => 'name',
             'property' => 'property',
             'deviceId' => 'device_id',
+            'active' => 'active',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -119,6 +125,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
     * name  点位名称，允许中、数字、英文大小写、下划线、中划线、#%()*特殊字符.模糊查询
     * property  属性，允许中、数字、英文大小写、下划线、中划线，精确查询
     * deviceId  设备标识，精确查询
+    * active  点位启停状态筛选
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -131,6 +138,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'property' => 'setProperty',
             'deviceId' => 'setDeviceId',
+            'active' => 'setActive',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -143,6 +151,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
     * name  点位名称，允许中、数字、英文大小写、下划线、中划线、#%()*特殊字符.模糊查询
     * property  属性，允许中、数字、英文大小写、下划线、中划线，精确查询
     * deviceId  设备标识，精确查询
+    * active  点位启停状态筛选
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -155,6 +164,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'property' => 'getProperty',
             'deviceId' => 'getDeviceId',
+            'active' => 'getActive',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -223,6 +233,7 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
         $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -453,6 +464,30 @@ class BatchListDcPointsRequest implements ModelInterface, ArrayAccess
     public function setDeviceId($deviceId)
     {
         $this->container['deviceId'] = $deviceId;
+        return $this;
+    }
+
+    /**
+    * Gets active
+    *  点位启停状态筛选
+    *
+    * @return bool|null
+    */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+    * Sets active
+    *
+    * @param bool|null $active 点位启停状态筛选
+    *
+    * @return $this
+    */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
         return $this;
     }
 

@@ -25,6 +25,8 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subHook  **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executionPlanId  **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
             'description' => 'string',
             'variables' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\RunPipelineDTOVariables[]',
             'chooseJobs' => 'string[]',
-            'chooseStages' => 'string[]'
+            'chooseStages' => 'string[]',
+            'subHook' => 'bool',
+            'executionPlanId' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subHook  **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executionPlanId  **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
         'description' => null,
         'variables' => null,
         'chooseJobs' => null,
-        'chooseStages' => null
+        'chooseStages' => null,
+        'subHook' => null,
+        'executionPlanId' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subHook  **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executionPlanId  **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
             'description' => 'description',
             'variables' => 'variables',
             'chooseJobs' => 'choose_jobs',
-            'chooseStages' => 'choose_stages'
+            'chooseStages' => 'choose_stages',
+            'subHook' => 'sub_hook',
+            'executionPlanId' => 'execution_plan_id'
     ];
 
     /**
@@ -100,6 +112,8 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subHook  **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executionPlanId  **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'variables' => 'setVariables',
             'chooseJobs' => 'setChooseJobs',
-            'chooseStages' => 'setChooseStages'
+            'chooseStages' => 'setChooseStages',
+            'subHook' => 'setSubHook',
+            'executionPlanId' => 'setExecutionPlanId'
     ];
 
     /**
@@ -118,6 +134,8 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     * variables  **参数解释**： 使用的自定义参数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseJobs  **参数解释**： 流水线运行时选择的流水线任务。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * chooseStages  **参数解释**： 选择的流水线阶段。优先级高于choose_jobs，即stage未选择时，无视choose_jobs中该stage下的job。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * subHook  **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * executionPlanId  **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'variables' => 'getVariables',
             'chooseJobs' => 'getChooseJobs',
-            'chooseStages' => 'getChooseStages'
+            'chooseStages' => 'getChooseStages',
+            'subHook' => 'getSubHook',
+            'executionPlanId' => 'getExecutionPlanId'
     ];
 
     /**
@@ -192,6 +212,8 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
         $this->container['variables'] = isset($data['variables']) ? $data['variables'] : null;
         $this->container['chooseJobs'] = isset($data['chooseJobs']) ? $data['chooseJobs'] : null;
         $this->container['chooseStages'] = isset($data['chooseStages']) ? $data['chooseStages'] : null;
+        $this->container['subHook'] = isset($data['subHook']) ? $data['subHook'] : null;
+        $this->container['executionPlanId'] = isset($data['executionPlanId']) ? $data['executionPlanId'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class RunPipelineDTO implements ModelInterface, ArrayAccess
     public function setChooseStages($chooseStages)
     {
         $this->container['chooseStages'] = $chooseStages;
+        return $this;
+    }
+
+    /**
+    * Gets subHook
+    *  **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getSubHook()
+    {
+        return $this->container['subHook'];
+    }
+
+    /**
+    * Sets subHook
+    *
+    * @param bool|null $subHook **参数解释**： 是否为子流水线触发。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setSubHook($subHook)
+    {
+        $this->container['subHook'] = $subHook;
+        return $this;
+    }
+
+    /**
+    * Gets executionPlanId
+    *  **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getExecutionPlanId()
+    {
+        return $this->container['executionPlanId'];
+    }
+
+    /**
+    * Sets executionPlanId
+    *
+    * @param string|null $executionPlanId **参数解释**： 使用哪一个执行方案运行流水线。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setExecutionPlanId($executionPlanId)
+    {
+        $this->container['executionPlanId'] = $executionPlanId;
         return $this;
     }
 

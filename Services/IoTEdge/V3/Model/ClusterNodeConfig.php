@@ -21,28 +21,40 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * masterNodeVip  master虚拟ip
+    * dmzVip  dmz区worker节点虚拟ip
+    * interfaceName  网卡名称
     * masterNodes  master节点数
-    * workNodes  work节点数
+    * dmzNodes  dmz区worker节点数
+    * workNodes  trust区worker节点数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'masterNodeVip' => 'string',
+            'dmzVip' => 'string',
+            'interfaceName' => 'string',
             'masterNodes' => '\HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]',
+            'dmzNodes' => '\HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]',
             'workNodes' => '\HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * masterNodeVip  master虚拟ip
+    * dmzVip  dmz区worker节点虚拟ip
+    * interfaceName  网卡名称
     * masterNodes  master节点数
-    * workNodes  work节点数
+    * dmzNodes  dmz区worker节点数
+    * workNodes  trust区worker节点数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'masterNodeVip' => null,
+        'dmzVip' => null,
+        'interfaceName' => null,
         'masterNodes' => null,
+        'dmzNodes' => null,
         'workNodes' => null
     ];
 
@@ -70,42 +82,60 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * masterNodeVip  master虚拟ip
+    * dmzVip  dmz区worker节点虚拟ip
+    * interfaceName  网卡名称
     * masterNodes  master节点数
-    * workNodes  work节点数
+    * dmzNodes  dmz区worker节点数
+    * workNodes  trust区worker节点数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'masterNodeVip' => 'master_node_vip',
+            'dmzVip' => 'dmz_vip',
+            'interfaceName' => 'interface_name',
             'masterNodes' => 'master_nodes',
+            'dmzNodes' => 'dmz_nodes',
             'workNodes' => 'work_nodes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * masterNodeVip  master虚拟ip
+    * dmzVip  dmz区worker节点虚拟ip
+    * interfaceName  网卡名称
     * masterNodes  master节点数
-    * workNodes  work节点数
+    * dmzNodes  dmz区worker节点数
+    * workNodes  trust区worker节点数
     *
     * @var string[]
     */
     protected static $setters = [
             'masterNodeVip' => 'setMasterNodeVip',
+            'dmzVip' => 'setDmzVip',
+            'interfaceName' => 'setInterfaceName',
             'masterNodes' => 'setMasterNodes',
+            'dmzNodes' => 'setDmzNodes',
             'workNodes' => 'setWorkNodes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * masterNodeVip  master虚拟ip
+    * dmzVip  dmz区worker节点虚拟ip
+    * interfaceName  网卡名称
     * masterNodes  master节点数
-    * workNodes  work节点数
+    * dmzNodes  dmz区worker节点数
+    * workNodes  trust区worker节点数
     *
     * @var string[]
     */
     protected static $getters = [
             'masterNodeVip' => 'getMasterNodeVip',
+            'dmzVip' => 'getDmzVip',
+            'interfaceName' => 'getInterfaceName',
             'masterNodes' => 'getMasterNodes',
+            'dmzNodes' => 'getDmzNodes',
             'workNodes' => 'getWorkNodes'
     ];
 
@@ -168,7 +198,10 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['masterNodeVip'] = isset($data['masterNodeVip']) ? $data['masterNodeVip'] : null;
+        $this->container['dmzVip'] = isset($data['dmzVip']) ? $data['dmzVip'] : null;
+        $this->container['interfaceName'] = isset($data['interfaceName']) ? $data['interfaceName'] : null;
         $this->container['masterNodes'] = isset($data['masterNodes']) ? $data['masterNodes'] : null;
+        $this->container['dmzNodes'] = isset($data['dmzNodes']) ? $data['dmzNodes'] : null;
         $this->container['workNodes'] = isset($data['workNodes']) ? $data['workNodes'] : null;
     }
 
@@ -188,6 +221,24 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['masterNodeVip']) && !preg_match("/^((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)(\\.((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)){3}$/", $this->container['masterNodeVip'])) {
                 $invalidProperties[] = "invalid value for 'masterNodeVip', must be conform to the pattern /^((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)(\\.((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)){3}$/.";
+            }
+            if (!is_null($this->container['dmzVip']) && (mb_strlen($this->container['dmzVip']) > 64)) {
+                $invalidProperties[] = "invalid value for 'dmzVip', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['dmzVip']) && (mb_strlen($this->container['dmzVip']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dmzVip', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dmzVip']) && !preg_match("/^((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)(\\.((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)){3}$/", $this->container['dmzVip'])) {
+                $invalidProperties[] = "invalid value for 'dmzVip', must be conform to the pattern /^((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)(\\.((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]\\d)|\\d)){3}$/.";
+            }
+            if (!is_null($this->container['interfaceName']) && (mb_strlen($this->container['interfaceName']) > 16)) {
+                $invalidProperties[] = "invalid value for 'interfaceName', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['interfaceName']) && (mb_strlen($this->container['interfaceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'interfaceName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['interfaceName']) && !preg_match("/^[a-z][a-z0-9]*$/", $this->container['interfaceName'])) {
+                $invalidProperties[] = "invalid value for 'interfaceName', must be conform to the pattern /^[a-z][a-z0-9]*$/.";
             }
         return $invalidProperties;
     }
@@ -228,6 +279,54 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets dmzVip
+    *  dmz区worker节点虚拟ip
+    *
+    * @return string|null
+    */
+    public function getDmzVip()
+    {
+        return $this->container['dmzVip'];
+    }
+
+    /**
+    * Sets dmzVip
+    *
+    * @param string|null $dmzVip dmz区worker节点虚拟ip
+    *
+    * @return $this
+    */
+    public function setDmzVip($dmzVip)
+    {
+        $this->container['dmzVip'] = $dmzVip;
+        return $this;
+    }
+
+    /**
+    * Gets interfaceName
+    *  网卡名称
+    *
+    * @return string|null
+    */
+    public function getInterfaceName()
+    {
+        return $this->container['interfaceName'];
+    }
+
+    /**
+    * Sets interfaceName
+    *
+    * @param string|null $interfaceName 网卡名称
+    *
+    * @return $this
+    */
+    public function setInterfaceName($interfaceName)
+    {
+        $this->container['interfaceName'] = $interfaceName;
+        return $this;
+    }
+
+    /**
     * Gets masterNodes
     *  master节点数
     *
@@ -252,8 +351,32 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets dmzNodes
+    *  dmz区worker节点数
+    *
+    * @return \HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]|null
+    */
+    public function getDmzNodes()
+    {
+        return $this->container['dmzNodes'];
+    }
+
+    /**
+    * Sets dmzNodes
+    *
+    * @param \HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]|null $dmzNodes dmz区worker节点数
+    *
+    * @return $this
+    */
+    public function setDmzNodes($dmzNodes)
+    {
+        $this->container['dmzNodes'] = $dmzNodes;
+        return $this;
+    }
+
+    /**
     * Gets workNodes
-    *  work节点数
+    *  trust区worker节点数
     *
     * @return \HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]|null
     */
@@ -265,7 +388,7 @@ class ClusterNodeConfig implements ModelInterface, ArrayAccess
     /**
     * Sets workNodes
     *
-    * @param \HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]|null $workNodes work节点数
+    * @param \HuaweiCloud\SDK\IoTEdge\V3\Model\NodeConfig[]|null $workNodes trust区worker节点数
     *
     * @return $this
     */

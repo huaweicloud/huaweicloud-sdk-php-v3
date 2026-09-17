@@ -23,7 +23,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
-    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
-    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
-    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
-    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * count  **参数解释**： 规格数量。 **取值范围**： 不涉及。
     * flavors  **参数解释**： 规格详情列表。接口返回的规格列表最多为20条。 **取值范围**： 不涉及。
-    * changeMode  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    * changeMode  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeMode
-    *  **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    *  **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @return string|null
     */
@@ -257,7 +257,7 @@ class ListTargetFlavorsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets changeMode
     *
-    * @param string|null $changeMode **参数解释**： 规格变更模式。 **取值范围**： online：在线模式； offline：离线模式； all：在线模式、离线模式都支持。
+    * @param string|null $changeMode **参数解释**： 规格变更模式。 **约束限制**： 不涉及。 **取值范围**： - online：在线模式； - offline：离线模式； - all：在线模式、离线模式都支持。 **默认取值**： offline
     *
     * @return $this
     */

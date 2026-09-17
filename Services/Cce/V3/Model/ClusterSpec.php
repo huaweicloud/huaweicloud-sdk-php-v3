@@ -51,6 +51,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     * certificateAuthority  certificateAuthority
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -85,7 +86,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]',
             'clusterOps' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterOps',
             'encryptionConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\EncryptionConfig',
-            'certificateAuthority' => '\HuaweiCloud\SDK\Cce\V3\Model\CertificateAuthority'
+            'certificateAuthority' => '\HuaweiCloud\SDK\Cce\V3\Model\CertificateAuthority',
+            'secretConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\SecretConfig'
     ];
 
     /**
@@ -121,6 +123,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     * certificateAuthority  certificateAuthority
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -155,7 +158,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'configurationsOverride' => null,
         'clusterOps' => null,
         'encryptionConfig' => null,
-        'certificateAuthority' => null
+        'certificateAuthority' => null,
+        'secretConfig' => null
     ];
 
     /**
@@ -212,6 +216,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     * certificateAuthority  certificateAuthority
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -246,7 +251,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'configurationsOverride' => 'configurationsOverride',
             'clusterOps' => 'clusterOps',
             'encryptionConfig' => 'encryptionConfig',
-            'certificateAuthority' => 'certificateAuthority'
+            'certificateAuthority' => 'certificateAuthority',
+            'secretConfig' => 'secretConfig'
     ];
 
     /**
@@ -282,6 +288,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     * certificateAuthority  certificateAuthority
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -316,7 +323,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'configurationsOverride' => 'setConfigurationsOverride',
             'clusterOps' => 'setClusterOps',
             'encryptionConfig' => 'setEncryptionConfig',
-            'certificateAuthority' => 'setCertificateAuthority'
+            'certificateAuthority' => 'setCertificateAuthority',
+            'secretConfig' => 'setSecretConfig'
     ];
 
     /**
@@ -352,6 +360,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * clusterOps  clusterOps
     * encryptionConfig  encryptionConfig
     * certificateAuthority  certificateAuthority
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -386,7 +395,8 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'configurationsOverride' => 'getConfigurationsOverride',
             'clusterOps' => 'getClusterOps',
             'encryptionConfig' => 'getEncryptionConfig',
-            'certificateAuthority' => 'getCertificateAuthority'
+            'certificateAuthority' => 'getCertificateAuthority',
+            'secretConfig' => 'getSecretConfig'
     ];
 
     /**
@@ -525,6 +535,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['clusterOps'] = isset($data['clusterOps']) ? $data['clusterOps'] : null;
         $this->container['encryptionConfig'] = isset($data['encryptionConfig']) ? $data['encryptionConfig'] : null;
         $this->container['certificateAuthority'] = isset($data['certificateAuthority']) ? $data['certificateAuthority'] : null;
+        $this->container['secretConfig'] = isset($data['secretConfig']) ? $data['secretConfig'] : null;
     }
 
     /**
@@ -565,9 +576,6 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         }
         if ($this->container['containerNetwork'] === null) {
             $invalidProperties[] = "'containerNetwork' can't be null";
-        }
-        if ($this->container['eniNetwork'] === null) {
-            $invalidProperties[] = "'eniNetwork' can't be null";
         }
             $allowedValues = $this->getKubeProxyModeAllowableValues();
                 if (!is_null($this->container['kubeProxyMode']) && !in_array($this->container['kubeProxyMode'], $allowedValues, true)) {
@@ -883,7 +891,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * Gets eniNetwork
     *  eniNetwork
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\EniNetwork
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\EniNetwork|null
     */
     public function getEniNetwork()
     {
@@ -893,7 +901,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     /**
     * Sets eniNetwork
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\EniNetwork $eniNetwork eniNetwork
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\EniNetwork|null $eniNetwork eniNetwork
     *
     * @return $this
     */
@@ -1332,6 +1340,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setCertificateAuthority($certificateAuthority)
     {
         $this->container['certificateAuthority'] = $certificateAuthority;
+        return $this;
+    }
+
+    /**
+    * Gets secretConfig
+    *  secretConfig
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\SecretConfig|null
+    */
+    public function getSecretConfig()
+    {
+        return $this->container['secretConfig'];
+    }
+
+    /**
+    * Sets secretConfig
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\SecretConfig|null $secretConfig secretConfig
+    *
+    * @return $this
+    */
+    public function setSecretConfig($secretConfig)
+    {
+        $this->container['secretConfig'] = $secretConfig;
         return $this;
     }
 

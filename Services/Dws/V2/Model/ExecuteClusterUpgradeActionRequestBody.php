@@ -20,7 +20,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     * itemId  **参数解释**： 升级项ID。 **约束限制**： 填写的升级项ID应属于当前集群。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     * itemId  **参数解释**： 升级项ID。 **约束限制**： 填写的升级项ID应属于当前集群。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     * itemId  **参数解释**： 升级项ID。 **约束限制**： 填写的升级项ID应属于当前集群。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     * itemId  **参数解释**： 升级项ID。 **约束限制**： 填写的升级项ID应属于当前集群。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    * action  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     * itemId  **参数解释**： 升级项ID。 **约束限制**： 填写的升级项ID应属于当前集群。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets action
-    *  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    *  **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ExecuteClusterUpgradeActionRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets action
     *
-    * @param string $action **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试 **默认取值**： 不涉及。
+    * @param string $action **参数解释**： 当前集群要做的操作。 **约束限制**： 不涉及。 **取值范围**： - update: 下发升级 - rollback: 下发回滚 - commit: 下发提交集群 - retry: 下发重试  **默认取值**： 不涉及。
     *
     * @return $this
     */

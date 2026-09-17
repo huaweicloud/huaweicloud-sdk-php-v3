@@ -22,25 +22,25 @@ class ListInstanceBackupSummaryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * infos  **参数解释**：  实例备份概览列表  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * totalCount  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * total  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'infos' => '\HuaweiCloud\SDK\Rds\V3\Model\InstanceBackupSummary[]',
-            'totalCount' => 'int'
+            'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * infos  **参数解释**：  实例备份概览列表  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * totalCount  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * total  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'infos' => null,
-        'totalCount' => 'int32'
+        'total' => 'int32'
     ];
 
     /**
@@ -67,37 +67,37 @@ class ListInstanceBackupSummaryResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * infos  **参数解释**：  实例备份概览列表  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * totalCount  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * total  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'infos' => 'infos',
-            'totalCount' => 'total_count'
+            'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * infos  **参数解释**：  实例备份概览列表  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * totalCount  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * total  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'infos' => 'setInfos',
-            'totalCount' => 'setTotalCount'
+            'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * infos  **参数解释**：  实例备份概览列表  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * totalCount  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * total  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'infos' => 'getInfos',
-            'totalCount' => 'getTotalCount'
+            'total' => 'getTotal'
     ];
 
     /**
@@ -159,7 +159,7 @@ class ListInstanceBackupSummaryResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['infos'] = isset($data['infos']) ? $data['infos'] : null;
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -209,26 +209,26 @@ class ListInstanceBackupSummaryResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets totalCount
+    * Gets total
     *  **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return int|null
     */
-    public function getTotalCount()
+    public function getTotal()
     {
-        return $this->container['totalCount'];
+        return $this->container['total'];
     }
 
     /**
-    * Sets totalCount
+    * Sets total
     *
-    * @param int|null $totalCount **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param int|null $total **参数解释**：  总记录数。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setTotalCount($totalCount)
+    public function setTotal($total)
     {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['total'] = $total;
         return $this;
     }
 

@@ -20,11 +20,11 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chartId  模板ID
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * version  模板实例版本号
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -42,11 +42,11 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chartId  模板ID
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * version  模板实例版本号
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -85,11 +85,11 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chartId  模板ID
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * version  模板实例版本号
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -107,11 +107,11 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chartId  模板ID
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * version  模板实例版本号
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -129,11 +129,11 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chartId  模板ID
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * version  模板实例版本号
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -255,7 +255,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets chartId
-    *  模板ID
+    *  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -267,7 +267,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets chartId
     *
-    * @param string $chartId 模板ID
+    * @param string $chartId **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  模板实例描述
+    *  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 模板实例描述
+    * @param string|null $description **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板实例名称
+    *  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -315,7 +315,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 模板实例名称
+    * @param string $name **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  模板实例所在的命名空间
+    *  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -339,7 +339,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 模板实例所在的命名空间
+    * @param string $namespace **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  模板实例版本号
+    *  **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -363,7 +363,7 @@ class CreateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 模板实例版本号
+    * @param string $version **参数解释：** 模板实例版本号 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

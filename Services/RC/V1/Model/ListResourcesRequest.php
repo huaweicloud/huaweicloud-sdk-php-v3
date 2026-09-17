@@ -27,6 +27,7 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
     * tag  标签
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
             'epId' => 'string',
             'tag' => 'map[string,string[]]',
             'limit' => 'int',
-            'marker' => 'string'
+            'marker' => 'string',
+            'groupId' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
     * tag  标签
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
         'epId' => null,
         'tag' => null,
         'limit' => 'int32',
-        'marker' => null
+        'marker' => null,
+        'groupId' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
     * tag  标签
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
             'epId' => 'ep_id',
             'tag' => 'tag',
             'limit' => 'limit',
-            'marker' => 'marker'
+            'marker' => 'marker',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
     * tag  标签
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
             'epId' => 'setEpId',
             'tag' => 'setTag',
             'limit' => 'setLimit',
-            'marker' => 'setMarker'
+            'marker' => 'setMarker',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
     * tag  标签
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
             'epId' => 'getEpId',
             'tag' => 'getTag',
             'limit' => 'getLimit',
-            'marker' => 'getMarker'
+            'marker' => 'getMarker',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -268,6 +279,15 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9+\/=%\\-_]+/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9+\/=%\\-_]+/.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 40)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 40.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['groupId']) && !preg_match("/[\\w-]+/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /[\\w-]+/.";
             }
         return $invalidProperties;
     }
@@ -448,6 +468,30 @@ class ListResourcesRequest implements ModelInterface, ArrayAccess
     public function setMarker($marker)
     {
         $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  资源组ID
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 资源组ID
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  API版本
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     * spec  spec
     * status  status
@@ -39,8 +39,8 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  API版本
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     * spec  spec
     * status  status
@@ -78,8 +78,8 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  API版本
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     * spec  spec
     * status  status
@@ -96,8 +96,8 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  API版本
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     * spec  spec
     * status  status
@@ -114,8 +114,8 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  API版本
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
     * spec  spec
     * status  status
@@ -219,7 +219,7 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  API版本
+    *  **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -231,7 +231,7 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion API版本
+    * @param string|null $apiVersion **参数解释：** API版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  资源类型
+    *  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class CreateAutopilotPreCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind 资源类型
+    * @param string|null $kind **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

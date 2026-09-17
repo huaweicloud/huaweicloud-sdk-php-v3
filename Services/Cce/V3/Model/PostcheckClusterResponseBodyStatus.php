@@ -20,7 +20,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    *  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class PostcheckClusterResponseBodyStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase 状态，取值如下 - Success 成功 - Failed 失败 - Error 错误
+    * @param string|null $phase **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @return $this
     */

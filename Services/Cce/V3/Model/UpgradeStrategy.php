@@ -20,7 +20,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    * type  **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     * inPlaceRollingUpdate  inPlaceRollingUpdate
     *
     * @var string[]
@@ -32,7 +32,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    * type  **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     * inPlaceRollingUpdate  inPlaceRollingUpdate
     *
     * @var string[]
@@ -65,7 +65,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    * type  **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     * inPlaceRollingUpdate  inPlaceRollingUpdate
     *
     * @var string[]
@@ -77,7 +77,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    * type  **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     * inPlaceRollingUpdate  inPlaceRollingUpdate
     *
     * @var string[]
@@ -89,7 +89,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    * type  **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     * inPlaceRollingUpdate  inPlaceRollingUpdate
     *
     * @var string[]
@@ -188,7 +188,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    *  **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpgradeStrategy implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 升级策略类型，当前仅支持原地升级类型\"inPlaceRollingUpdate\"
+    * @param string $type **参数解释：** 升级策略类型 **约束限制：** 当前仅支持inPlaceRollingUpdate类型 **取值范围：** - \"inPlaceRollingUpdate\"：原地升级类型  **默认取值：** 不涉及
     *
     * @return $this
     */

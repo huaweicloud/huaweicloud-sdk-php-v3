@@ -24,6 +24,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * initialNodeCount  **参数解释：** 节点池期望节点个数。 **约束限制：** 更新节点池时，此字段为必填字段。 > 注意：如果更新节点池时不填此字段，节点池期望节点个数将取默认值0，如果此时节点池节点个数大于0将导致节点池缩容。  **取值范围：** 大于0，小于集群节点规模。 **默认取值：** 0
     * ignoreInitialNodeCount  **参数解释：** 该参数用于控制更新节点池时 **节点池期望节点个数(spec.initialNodeCount)** 的默认行为。当该参数未设置或者为false时，如果用户请求Body体中未设置spec.initialNodeCount，更新时将自动初始化spec.initialNodeCount为0。当该参数为true时，将忽略spec.initialNodeCount参数。 > 当用户不需要更新节点池spec.initialNodeCount时，必须显示的设置该参数为true，同时在更新节点池Body体中不设置spec.initialNodeCount。  **约束限制：** 不涉及 **取值范围：** - false：更新节点池时，如果spec.initialNodeCount参数未设置，将初始化spec.initialNodeCount为0。 > 如果节点池当前spec.initialNodeCount 不等于0将导致节点池缩容。  - true：更新节点池时，忽略spec.initialNodeCount参数，节点池spec.initialNodeCount参数将保持原样。  **默认取值：** false
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagementUpdate  nodeManagementUpdate
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     * taintPolicyOnExistingNodes  **参数解释：** 是否同步K8S污点。 **约束限制**： 不涉及 **取值范围：** - 填写为refresh，K8S污点的改动将会被同步更新到存量节点上。 - 填写为ignore，节点池K8S污点将不会同步更新到存量节点上。  **默认取值：** 无
@@ -38,6 +39,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
             'initialNodeCount' => 'int',
             'ignoreInitialNodeCount' => 'bool',
             'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling',
+            'repairPolicy' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolRepairPolicy',
             'nodeManagementUpdate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeManagement',
             'customSecurityGroups' => 'string[]',
             'taintPolicyOnExistingNodes' => 'string',
@@ -52,6 +54,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * initialNodeCount  **参数解释：** 节点池期望节点个数。 **约束限制：** 更新节点池时，此字段为必填字段。 > 注意：如果更新节点池时不填此字段，节点池期望节点个数将取默认值0，如果此时节点池节点个数大于0将导致节点池缩容。  **取值范围：** 大于0，小于集群节点规模。 **默认取值：** 0
     * ignoreInitialNodeCount  **参数解释：** 该参数用于控制更新节点池时 **节点池期望节点个数(spec.initialNodeCount)** 的默认行为。当该参数未设置或者为false时，如果用户请求Body体中未设置spec.initialNodeCount，更新时将自动初始化spec.initialNodeCount为0。当该参数为true时，将忽略spec.initialNodeCount参数。 > 当用户不需要更新节点池spec.initialNodeCount时，必须显示的设置该参数为true，同时在更新节点池Body体中不设置spec.initialNodeCount。  **约束限制：** 不涉及 **取值范围：** - false：更新节点池时，如果spec.initialNodeCount参数未设置，将初始化spec.initialNodeCount为0。 > 如果节点池当前spec.initialNodeCount 不等于0将导致节点池缩容。  - true：更新节点池时，忽略spec.initialNodeCount参数，节点池spec.initialNodeCount参数将保持原样。  **默认取值：** false
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagementUpdate  nodeManagementUpdate
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     * taintPolicyOnExistingNodes  **参数解释：** 是否同步K8S污点。 **约束限制**： 不涉及 **取值范围：** - 填写为refresh，K8S污点的改动将会被同步更新到存量节点上。 - 填写为ignore，节点池K8S污点将不会同步更新到存量节点上。  **默认取值：** 无
@@ -66,6 +69,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
         'initialNodeCount' => 'int32',
         'ignoreInitialNodeCount' => null,
         'autoscaling' => null,
+        'repairPolicy' => null,
         'nodeManagementUpdate' => null,
         'customSecurityGroups' => null,
         'taintPolicyOnExistingNodes' => null,
@@ -101,6 +105,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * initialNodeCount  **参数解释：** 节点池期望节点个数。 **约束限制：** 更新节点池时，此字段为必填字段。 > 注意：如果更新节点池时不填此字段，节点池期望节点个数将取默认值0，如果此时节点池节点个数大于0将导致节点池缩容。  **取值范围：** 大于0，小于集群节点规模。 **默认取值：** 0
     * ignoreInitialNodeCount  **参数解释：** 该参数用于控制更新节点池时 **节点池期望节点个数(spec.initialNodeCount)** 的默认行为。当该参数未设置或者为false时，如果用户请求Body体中未设置spec.initialNodeCount，更新时将自动初始化spec.initialNodeCount为0。当该参数为true时，将忽略spec.initialNodeCount参数。 > 当用户不需要更新节点池spec.initialNodeCount时，必须显示的设置该参数为true，同时在更新节点池Body体中不设置spec.initialNodeCount。  **约束限制：** 不涉及 **取值范围：** - false：更新节点池时，如果spec.initialNodeCount参数未设置，将初始化spec.initialNodeCount为0。 > 如果节点池当前spec.initialNodeCount 不等于0将导致节点池缩容。  - true：更新节点池时，忽略spec.initialNodeCount参数，节点池spec.initialNodeCount参数将保持原样。  **默认取值：** false
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagementUpdate  nodeManagementUpdate
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     * taintPolicyOnExistingNodes  **参数解释：** 是否同步K8S污点。 **约束限制**： 不涉及 **取值范围：** - 填写为refresh，K8S污点的改动将会被同步更新到存量节点上。 - 填写为ignore，节点池K8S污点将不会同步更新到存量节点上。  **默认取值：** 无
@@ -115,6 +120,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
             'initialNodeCount' => 'initialNodeCount',
             'ignoreInitialNodeCount' => 'ignoreInitialNodeCount',
             'autoscaling' => 'autoscaling',
+            'repairPolicy' => 'repairPolicy',
             'nodeManagementUpdate' => 'nodeManagementUpdate',
             'customSecurityGroups' => 'customSecurityGroups',
             'taintPolicyOnExistingNodes' => 'taintPolicyOnExistingNodes',
@@ -129,6 +135,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * initialNodeCount  **参数解释：** 节点池期望节点个数。 **约束限制：** 更新节点池时，此字段为必填字段。 > 注意：如果更新节点池时不填此字段，节点池期望节点个数将取默认值0，如果此时节点池节点个数大于0将导致节点池缩容。  **取值范围：** 大于0，小于集群节点规模。 **默认取值：** 0
     * ignoreInitialNodeCount  **参数解释：** 该参数用于控制更新节点池时 **节点池期望节点个数(spec.initialNodeCount)** 的默认行为。当该参数未设置或者为false时，如果用户请求Body体中未设置spec.initialNodeCount，更新时将自动初始化spec.initialNodeCount为0。当该参数为true时，将忽略spec.initialNodeCount参数。 > 当用户不需要更新节点池spec.initialNodeCount时，必须显示的设置该参数为true，同时在更新节点池Body体中不设置spec.initialNodeCount。  **约束限制：** 不涉及 **取值范围：** - false：更新节点池时，如果spec.initialNodeCount参数未设置，将初始化spec.initialNodeCount为0。 > 如果节点池当前spec.initialNodeCount 不等于0将导致节点池缩容。  - true：更新节点池时，忽略spec.initialNodeCount参数，节点池spec.initialNodeCount参数将保持原样。  **默认取值：** false
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagementUpdate  nodeManagementUpdate
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     * taintPolicyOnExistingNodes  **参数解释：** 是否同步K8S污点。 **约束限制**： 不涉及 **取值范围：** - 填写为refresh，K8S污点的改动将会被同步更新到存量节点上。 - 填写为ignore，节点池K8S污点将不会同步更新到存量节点上。  **默认取值：** 无
@@ -143,6 +150,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
             'initialNodeCount' => 'setInitialNodeCount',
             'ignoreInitialNodeCount' => 'setIgnoreInitialNodeCount',
             'autoscaling' => 'setAutoscaling',
+            'repairPolicy' => 'setRepairPolicy',
             'nodeManagementUpdate' => 'setNodeManagementUpdate',
             'customSecurityGroups' => 'setCustomSecurityGroups',
             'taintPolicyOnExistingNodes' => 'setTaintPolicyOnExistingNodes',
@@ -157,6 +165,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * initialNodeCount  **参数解释：** 节点池期望节点个数。 **约束限制：** 更新节点池时，此字段为必填字段。 > 注意：如果更新节点池时不填此字段，节点池期望节点个数将取默认值0，如果此时节点池节点个数大于0将导致节点池缩容。  **取值范围：** 大于0，小于集群节点规模。 **默认取值：** 0
     * ignoreInitialNodeCount  **参数解释：** 该参数用于控制更新节点池时 **节点池期望节点个数(spec.initialNodeCount)** 的默认行为。当该参数未设置或者为false时，如果用户请求Body体中未设置spec.initialNodeCount，更新时将自动初始化spec.initialNodeCount为0。当该参数为true时，将忽略spec.initialNodeCount参数。 > 当用户不需要更新节点池spec.initialNodeCount时，必须显示的设置该参数为true，同时在更新节点池Body体中不设置spec.initialNodeCount。  **约束限制：** 不涉及 **取值范围：** - false：更新节点池时，如果spec.initialNodeCount参数未设置，将初始化spec.initialNodeCount为0。 > 如果节点池当前spec.initialNodeCount 不等于0将导致节点池缩容。  - true：更新节点池时，忽略spec.initialNodeCount参数，节点池spec.initialNodeCount参数将保持原样。  **默认取值：** false
     * autoscaling  autoscaling
+    * repairPolicy  repairPolicy
     * nodeManagementUpdate  nodeManagementUpdate
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     * taintPolicyOnExistingNodes  **参数解释：** 是否同步K8S污点。 **约束限制**： 不涉及 **取值范围：** - 填写为refresh，K8S污点的改动将会被同步更新到存量节点上。 - 填写为ignore，节点池K8S污点将不会同步更新到存量节点上。  **默认取值：** 无
@@ -171,6 +180,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
             'initialNodeCount' => 'getInitialNodeCount',
             'ignoreInitialNodeCount' => 'getIgnoreInitialNodeCount',
             'autoscaling' => 'getAutoscaling',
+            'repairPolicy' => 'getRepairPolicy',
             'nodeManagementUpdate' => 'getNodeManagementUpdate',
             'customSecurityGroups' => 'getCustomSecurityGroups',
             'taintPolicyOnExistingNodes' => 'getTaintPolicyOnExistingNodes',
@@ -241,6 +251,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
         $this->container['initialNodeCount'] = isset($data['initialNodeCount']) ? $data['initialNodeCount'] : null;
         $this->container['ignoreInitialNodeCount'] = isset($data['ignoreInitialNodeCount']) ? $data['ignoreInitialNodeCount'] : null;
         $this->container['autoscaling'] = isset($data['autoscaling']) ? $data['autoscaling'] : null;
+        $this->container['repairPolicy'] = isset($data['repairPolicy']) ? $data['repairPolicy'] : null;
         $this->container['nodeManagementUpdate'] = isset($data['nodeManagementUpdate']) ? $data['nodeManagementUpdate'] : null;
         $this->container['customSecurityGroups'] = isset($data['customSecurityGroups']) ? $data['customSecurityGroups'] : null;
         $this->container['taintPolicyOnExistingNodes'] = isset($data['taintPolicyOnExistingNodes']) ? $data['taintPolicyOnExistingNodes'] : null;
@@ -367,6 +378,30 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     public function setAutoscaling($autoscaling)
     {
         $this->container['autoscaling'] = $autoscaling;
+        return $this;
+    }
+
+    /**
+    * Gets repairPolicy
+    *  repairPolicy
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodePoolRepairPolicy|null
+    */
+    public function getRepairPolicy()
+    {
+        return $this->container['repairPolicy'];
+    }
+
+    /**
+    * Sets repairPolicy
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodePoolRepairPolicy|null $repairPolicy repairPolicy
+    *
+    * @return $this
+    */
+    public function setRepairPolicy($repairPolicy)
+    {
+        $this->container['repairPolicy'] = $repairPolicy;
         return $this;
     }
 

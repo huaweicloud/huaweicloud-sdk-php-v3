@@ -20,9 +20,9 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  升级前集群版本
-    * targetVersion  升级的目标集群版本
-    * items  升级任务附属信息
+    * version  **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * items  **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  升级前集群版本
-    * targetVersion  升级的目标集群版本
-    * items  升级任务附属信息
+    * version  **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * items  **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  升级前集群版本
-    * targetVersion  升级的目标集群版本
-    * items  升级任务附属信息
+    * version  **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * items  **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  升级前集群版本
-    * targetVersion  升级的目标集群版本
-    * items  升级任务附属信息
+    * version  **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * items  **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  升级前集群版本
-    * targetVersion  升级的目标集群版本
-    * items  升级任务附属信息
+    * version  **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * items  **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  升级前集群版本
+    *  **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 升级前集群版本
+    * @param string|null $version **参数解释：** 升级前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersion
-    *  升级的目标集群版本
+    *  **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersion
     *
-    * @param string|null $targetVersion 升级的目标集群版本
+    * @param string|null $targetVersion **参数解释：** 升级的目标集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  升级任务附属信息
+    *  **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return object|null
     */
@@ -256,7 +256,7 @@ class UpgradeTaskSpec implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param object|null $items 升级任务附属信息
+    * @param object|null $items **参数解释：** 升级任务附属信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

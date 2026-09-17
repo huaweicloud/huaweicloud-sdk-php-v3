@@ -23,7 +23,9 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
     * currentNode  当前节点池中所有节点数量（不含删除中的节点）。
     * creatingNode  当前节点池中处于创建流程中的节点数量。
     * deletingNode  当前节点池中删除中的节点数量。
-    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairingNode  **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairFailedNode  **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * configurationSyncedNodeCount  **参数解释** 当前节点池中已经同步了节点池配置参数的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * jobId  对节点池执行操作时的 JobID。
@@ -37,6 +39,8 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'int',
             'deletingNode' => 'int',
             'activeNode' => 'int',
+            'repairingNode' => 'int',
+            'repairFailedNode' => 'int',
             'configurationSyncedNodeCount' => 'int',
             'phase' => 'string',
             'jobId' => 'string',
@@ -49,7 +53,9 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
     * currentNode  当前节点池中所有节点数量（不含删除中的节点）。
     * creatingNode  当前节点池中处于创建流程中的节点数量。
     * deletingNode  当前节点池中删除中的节点数量。
-    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairingNode  **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairFailedNode  **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * configurationSyncedNodeCount  **参数解释** 当前节点池中已经同步了节点池配置参数的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * jobId  对节点池执行操作时的 JobID。
@@ -63,6 +69,8 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
         'creatingNode' => 'int32',
         'deletingNode' => 'int32',
         'activeNode' => 'int32',
+        'repairingNode' => 'int32',
+        'repairFailedNode' => 'int32',
         'configurationSyncedNodeCount' => 'int32',
         'phase' => null,
         'jobId' => null,
@@ -96,7 +104,9 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
     * currentNode  当前节点池中所有节点数量（不含删除中的节点）。
     * creatingNode  当前节点池中处于创建流程中的节点数量。
     * deletingNode  当前节点池中删除中的节点数量。
-    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairingNode  **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairFailedNode  **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * configurationSyncedNodeCount  **参数解释** 当前节点池中已经同步了节点池配置参数的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * jobId  对节点池执行操作时的 JobID。
@@ -110,6 +120,8 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'creatingNode',
             'deletingNode' => 'deletingNode',
             'activeNode' => 'activeNode',
+            'repairingNode' => 'repairingNode',
+            'repairFailedNode' => 'repairFailedNode',
             'configurationSyncedNodeCount' => 'configurationSyncedNodeCount',
             'phase' => 'phase',
             'jobId' => 'jobId',
@@ -122,7 +134,9 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
     * currentNode  当前节点池中所有节点数量（不含删除中的节点）。
     * creatingNode  当前节点池中处于创建流程中的节点数量。
     * deletingNode  当前节点池中删除中的节点数量。
-    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairingNode  **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairFailedNode  **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * configurationSyncedNodeCount  **参数解释** 当前节点池中已经同步了节点池配置参数的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * jobId  对节点池执行操作时的 JobID。
@@ -136,6 +150,8 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'setCreatingNode',
             'deletingNode' => 'setDeletingNode',
             'activeNode' => 'setActiveNode',
+            'repairingNode' => 'setRepairingNode',
+            'repairFailedNode' => 'setRepairFailedNode',
             'configurationSyncedNodeCount' => 'setConfigurationSyncedNodeCount',
             'phase' => 'setPhase',
             'jobId' => 'setJobId',
@@ -148,7 +164,9 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
     * currentNode  当前节点池中所有节点数量（不含删除中的节点）。
     * creatingNode  当前节点池中处于创建流程中的节点数量。
     * deletingNode  当前节点池中删除中的节点数量。
-    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    * activeNode  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairingNode  **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * repairFailedNode  **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * configurationSyncedNodeCount  **参数解释** 当前节点池中已经同步了节点池配置参数的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * jobId  对节点池执行操作时的 JobID。
@@ -162,6 +180,8 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'getCreatingNode',
             'deletingNode' => 'getDeletingNode',
             'activeNode' => 'getActiveNode',
+            'repairingNode' => 'getRepairingNode',
+            'repairFailedNode' => 'getRepairFailedNode',
             'configurationSyncedNodeCount' => 'getConfigurationSyncedNodeCount',
             'phase' => 'getPhase',
             'jobId' => 'getJobId',
@@ -252,6 +272,8 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
         $this->container['creatingNode'] = isset($data['creatingNode']) ? $data['creatingNode'] : null;
         $this->container['deletingNode'] = isset($data['deletingNode']) ? $data['deletingNode'] : null;
         $this->container['activeNode'] = isset($data['activeNode']) ? $data['activeNode'] : null;
+        $this->container['repairingNode'] = isset($data['repairingNode']) ? $data['repairingNode'] : null;
+        $this->container['repairFailedNode'] = isset($data['repairFailedNode']) ? $data['repairFailedNode'] : null;
         $this->container['configurationSyncedNodeCount'] = isset($data['configurationSyncedNodeCount']) ? $data['configurationSyncedNodeCount'] : null;
         $this->container['phase'] = isset($data['phase']) ? $data['phase'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
@@ -363,7 +385,7 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeNode
-    *  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    *  **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -375,13 +397,61 @@ class NodePoolStatus implements ModelInterface, ArrayAccess
     /**
     * Sets activeNode
     *
-    * @param int|null $activeNode **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及
+    * @param int|null $activeNode **参数解释**： 当前节点池中就绪的节点数量。 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
     public function setActiveNode($activeNode)
     {
         $this->container['activeNode'] = $activeNode;
+        return $this;
+    }
+
+    /**
+    * Gets repairingNode
+    *  **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getRepairingNode()
+    {
+        return $this->container['repairingNode'];
+    }
+
+    /**
+    * Sets repairingNode
+    *
+    * @param int|null $repairingNode **参数解释**： 当前节点池中修复中的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setRepairingNode($repairingNode)
+    {
+        $this->container['repairingNode'] = $repairingNode;
+        return $this;
+    }
+
+    /**
+    * Gets repairFailedNode
+    *  **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return int|null
+    */
+    public function getRepairFailedNode()
+    {
+        return $this->container['repairFailedNode'];
+    }
+
+    /**
+    * Sets repairFailedNode
+    *
+    * @param int|null $repairFailedNode **参数解释**： 当前节点池中修复失败的节点数量。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setRepairFailedNode($repairFailedNode)
+    {
+        $this->container['repairFailedNode'] = $repairFailedNode;
         return $this;
     }
 

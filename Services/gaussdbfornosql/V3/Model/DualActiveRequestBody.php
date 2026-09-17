@@ -20,26 +20,30 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * destinationRegion  参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
-    * destinationInstanceId  参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * destinationRegion  **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * destinationInstanceId  **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * tables  tables
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'destinationRegion' => 'string',
-            'destinationInstanceId' => 'string'
+            'destinationInstanceId' => 'string',
+            'tables' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * destinationRegion  参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
-    * destinationInstanceId  参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * destinationRegion  **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * destinationInstanceId  **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * tables  tables
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'destinationRegion' => null,
-        'destinationInstanceId' => null
+        'destinationInstanceId' => null,
+        'tables' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * destinationRegion  参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
-    * destinationInstanceId  参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * destinationRegion  **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * destinationInstanceId  **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * tables  tables
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'destinationRegion' => 'destination_region',
-            'destinationInstanceId' => 'destination_instance_id'
+            'destinationInstanceId' => 'destination_instance_id',
+            'tables' => 'tables'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * destinationRegion  参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
-    * destinationInstanceId  参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * destinationRegion  **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * destinationInstanceId  **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * tables  tables
     *
     * @var string[]
     */
     protected static $setters = [
             'destinationRegion' => 'setDestinationRegion',
-            'destinationInstanceId' => 'setDestinationInstanceId'
+            'destinationInstanceId' => 'setDestinationInstanceId',
+            'tables' => 'setTables'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * destinationRegion  参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
-    * destinationInstanceId  参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * destinationRegion  **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * destinationInstanceId  **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * tables  tables
     *
     * @var string[]
     */
     protected static $getters = [
             'destinationRegion' => 'getDestinationRegion',
-            'destinationInstanceId' => 'getDestinationInstanceId'
+            'destinationInstanceId' => 'getDestinationInstanceId',
+            'tables' => 'getTables'
     ];
 
     /**
@@ -159,6 +169,7 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['destinationRegion'] = isset($data['destinationRegion']) ? $data['destinationRegion'] : null;
         $this->container['destinationInstanceId'] = isset($data['destinationInstanceId']) ? $data['destinationInstanceId'] : null;
+        $this->container['tables'] = isset($data['tables']) ? $data['tables'] : null;
     }
 
     /**
@@ -191,7 +202,7 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationRegion
-    *  参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    *  **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -203,7 +214,7 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets destinationRegion
     *
-    * @param string $destinationRegion 参数解释 搭建双活目标实例所在的region。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * @param string $destinationRegion **参数解释：** 搭建双活目标实例所在的region。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -215,7 +226,7 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationInstanceId
-    *  参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    *  **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -227,13 +238,37 @@ class DualActiveRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets destinationInstanceId
     *
-    * @param string $destinationInstanceId 参数解释 搭建双活目标实例ID。 约束限制 不涉及。 取值范围 不涉及。 默认取值 不涉及。
+    * @param string $destinationInstanceId **参数解释：** 搭建双活目标实例ID。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
     public function setDestinationInstanceId($destinationInstanceId)
     {
         $this->container['destinationInstanceId'] = $destinationInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets tables
+    *  tables
+    *
+    * @return string[]|null
+    */
+    public function getTables()
+    {
+        return $this->container['tables'];
+    }
+
+    /**
+    * Sets tables
+    *
+    * @param string[]|null $tables tables
+    *
+    * @return $this
+    */
+    public function setTables($tables)
+    {
+        $this->container['tables'] = $tables;
         return $this;
     }
 

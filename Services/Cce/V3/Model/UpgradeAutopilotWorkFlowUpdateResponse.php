@@ -21,8 +21,8 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  API类型，固定值“WorkFlowTask”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * kind  **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     * metadata  metadata
     * spec  spec
     * status  status
@@ -39,8 +39,8 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  API类型，固定值“WorkFlowTask”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * kind  **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     * metadata  metadata
     * spec  spec
     * status  status
@@ -78,8 +78,8 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  API类型，固定值“WorkFlowTask”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * kind  **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     * metadata  metadata
     * spec  spec
     * status  status
@@ -96,8 +96,8 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  API类型，固定值“WorkFlowTask”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * kind  **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     * metadata  metadata
     * spec  spec
     * status  status
@@ -114,8 +114,8 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  API类型，固定值“WorkFlowTask”，该值不可修改。
-    * apiVersion  API版本，固定值“v3”，该值不可修改。
+    * kind  **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     * metadata  metadata
     * spec  spec
     * status  status
@@ -225,7 +225,7 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets kind
-    *  API类型，固定值“WorkFlowTask”，该值不可修改。
+    *  **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
     *
     * @return string|null
     */
@@ -237,7 +237,7 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
     /**
     * Sets kind
     *
-    * @param string|null $kind API类型，固定值“WorkFlowTask”，该值不可修改。
+    * @param string|null $kind **参数解释：** API类型，固定值\"WorkFlowTask\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - WorkFlowTask  **默认取值：** WorkFlowTask
     *
     * @return $this
     */
@@ -249,7 +249,7 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
 
     /**
     * Gets apiVersion
-    *  API版本，固定值“v3”，该值不可修改。
+    *  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class UpgradeAutopilotWorkFlowUpdateResponse implements ModelInterface, ArrayAcc
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion API版本，固定值“v3”，该值不可修改。
+    * @param string|null $apiVersion **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 固定值 **取值范围：** - v3  **默认取值：** v3
     *
     * @return $this
     */

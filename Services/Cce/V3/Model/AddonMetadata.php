@@ -20,13 +20,13 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uid  唯一id标识
-    * name  插件名称
-    * alias  插件别名
-    * labels  插件标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * alias  **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uid  唯一id标识
-    * name  插件名称
-    * alias  插件别名
-    * labels  插件标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * alias  **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uid  唯一id标识
-    * name  插件名称
-    * alias  插件别名
-    * labels  插件标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * alias  **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uid  唯一id标识
-    * name  插件名称
-    * alias  插件别名
-    * labels  插件标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * alias  **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uid  唯一id标识
-    * name  插件名称
-    * alias  插件别名
-    * labels  插件标签，key/value对格式，接口保留字段，填写不会生效
-    * annotations  插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
-    * updateTimestamp  更新时间
-    * creationTimestamp  创建时间
+    * uid  **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * name  **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * alias  **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * labels  **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * annotations  **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
+    * updateTimestamp  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * creationTimestamp  **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  唯一id标识
+    *  **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param string|null $uid 唯一id标识
+    * @param string|null $uid **参数解释**： 插件实例唯一ID标识，创建成功后系统自动生成。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  插件名称
+    *  **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 插件名称
+    * @param string|null $name **参数解释**： 插件名称 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  插件别名
+    *  **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 插件别名
+    * @param string|null $alias **参数解释**： 插件别名。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets labels
-    *  插件标签，key/value对格式，接口保留字段，填写不会生效
+    *  **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return map[string,string]|null
     */
@@ -324,7 +324,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets labels
     *
-    * @param map[string,string]|null $labels 插件标签，key/value对格式，接口保留字段，填写不会生效
+    * @param map[string,string]|null $labels **参数解释**： 插件标签，key/value对格式，接口保留字段，填写不会生效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets annotations
-    *  插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
+    *  **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
     *
     * @return map[string,string]|null
     */
@@ -348,7 +348,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets annotations
     *
-    * @param map[string,string]|null $annotations 插件注解，由key/value组成 - 安装：固定值为{\"addon.install/type\":\"install\"} - 升级：固定值为{\"addon.upgrade/type\":\"upgrade\"}
+    * @param map[string,string]|null $annotations **参数解释**： 插件注解，由key/value组成。 **约束限制**： 不涉及 **取值范围**： - 安装时固定值为{\"addon.install/type\":\"install\"} - 升级时固定值为{\"addon.upgrade/type\":\"upgrade\"}  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTimestamp
-    *  更新时间
+    *  **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \DateTime|null
     */
@@ -372,7 +372,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets updateTimestamp
     *
-    * @param \DateTime|null $updateTimestamp 更新时间
+    * @param \DateTime|null $updateTimestamp **参数解释**： 更新时间 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  创建时间
+    *  **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return \DateTime|null
     */
@@ -396,7 +396,7 @@ class AddonMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param \DateTime|null $creationTimestamp 创建时间
+    * @param \DateTime|null $creationTimestamp **参数解释**： 创建时间，创建成功后系统自动生成，填写无效。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

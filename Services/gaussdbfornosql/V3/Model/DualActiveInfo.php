@@ -36,7 +36,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
             'destinationInstanceId' => 'string',
             'destinationRegion' => 'string',
             'destinationInstanceName' => 'string',
-            'destinationInstanceNodeNum' => 'string',
+            'destinationInstanceNodeNum' => 'int',
             'destinationInstanceSpecCode' => 'string'
     ];
 
@@ -362,7 +362,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     * Gets destinationInstanceNodeNum
     *  **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getDestinationInstanceNodeNum()
     {
@@ -372,7 +372,7 @@ class DualActiveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets destinationInstanceNodeNum
     *
-    * @param string|null $destinationInstanceNodeNum **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
+    * @param int|null $destinationInstanceNodeNum **参数解释：** 双活对端实例节点数量。 **取值范围：** 不涉及。
     *
     * @return $this
     */

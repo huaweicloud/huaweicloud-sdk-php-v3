@@ -20,9 +20,9 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterType  **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
-    * clusterVersion  支持的集群版本（正则表达式）
-    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    * clusterType  **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
+    * clusterVersion  **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterType  **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
-    * clusterVersion  支持的集群版本（正则表达式）
-    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    * clusterType  **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
+    * clusterVersion  **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SupportVersions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterType  **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
-    * clusterVersion  支持的集群版本（正则表达式）
-    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    * clusterType  **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
+    * clusterVersion  **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterType  **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
-    * clusterVersion  支持的集群版本（正则表达式）
-    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    * clusterType  **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
+    * clusterVersion  **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterType  **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
-    * clusterVersion  支持的集群版本（正则表达式）
-    * category  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    * clusterType  **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
+    * clusterVersion  **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * category  **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @var string[]
     */
@@ -202,7 +202,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterType
-    *  **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
+    *  **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
     /**
     * Sets clusterType
     *
-    * @param string $clusterType **参数解释**： 支持的集群类型 **取值范围**： - VirtualMachine: CCE集群，控制节点架构为X86 - ARM64: 鲲鹏集群，控制节点架构为鲲鹏 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型
+    * @param string $clusterType **参数解释**： 支持的集群类型。 **约束限制**： CCE Autopilot集群仅支持VirtualMachine类型 **取值范围**： - VirtualMachine：CCE集群，控制节点架构为X86 - BareMetal：裸金属集群，控制节点部署在裸金属服务器上 - ARM64：鲲鹏集群，控制节点架构为鲲鹏  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterVersion
-    *  支持的集群版本（正则表达式）
+    *  **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]
     */
@@ -238,7 +238,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
     /**
     * Sets clusterVersion
     *
-    * @param string[] $clusterVersion 支持的集群版本（正则表达式）
+    * @param string[] $clusterVersion **参数解释**： 支持的集群版本（正则表达式）。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    *  **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @return string[]|null
     */
@@ -262,7 +262,7 @@ class SupportVersions implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string[]|null $category 作用的集群类型 **取值范围：** - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值** 为空时默认为CCE Standard，CCE Turbo集群
+    * @param string[]|null $category **参数解释**： 作用的集群类型。 **约束限制**： 不涉及 **取值范围**： - CCE：CCE Standard集群 - Turbo：CCE Turbo集群 - Autopilot：CCE Autopilot集群  **默认取值**： 为空时默认为CCE Standard，CCE Turbo集群
     *
     * @return $this
     */

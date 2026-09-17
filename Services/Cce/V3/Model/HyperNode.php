@@ -20,8 +20,8 @@ class HyperNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  v3
-    * kind  HyperNode
+    * apiVersion  **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
+    * kind  **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     * metadata  metadata
     * spec  spec
     * status  status
@@ -38,8 +38,8 @@ class HyperNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  v3
-    * kind  HyperNode
+    * apiVersion  **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
+    * kind  **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     * metadata  metadata
     * spec  spec
     * status  status
@@ -77,8 +77,8 @@ class HyperNode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  v3
-    * kind  HyperNode
+    * apiVersion  **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
+    * kind  **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     * metadata  metadata
     * spec  spec
     * status  status
@@ -95,8 +95,8 @@ class HyperNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  v3
-    * kind  HyperNode
+    * apiVersion  **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
+    * kind  **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     * metadata  metadata
     * spec  spec
     * status  status
@@ -113,8 +113,8 @@ class HyperNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  v3
-    * kind  HyperNode
+    * apiVersion  **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
+    * kind  **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     * metadata  metadata
     * spec  spec
     * status  status
@@ -218,7 +218,7 @@ class HyperNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  v3
+    *  **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class HyperNode implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion v3
+    * @param string|null $apiVersion **参数解释**： API版本，固定值v3。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class HyperNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  HyperNode
+    *  **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class HyperNode implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind HyperNode
+    * @param string|null $kind **参数解释**： API类型，固定值HyperNode。 **约束限制**： 该值不可修改 **取值范围**： - HyperNode  **默认取值**： HyperNode
     *
     * @return $this
     */

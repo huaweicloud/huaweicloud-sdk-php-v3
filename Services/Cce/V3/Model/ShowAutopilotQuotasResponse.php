@@ -21,7 +21,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotas  资源
+    * quotas  **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotas  资源
+    * quotas  **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotas  资源
+    * quotas  **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotas  资源
+    * quotas  **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotas  资源
+    * quotas  **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotas
-    *  资源
+    *  **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\QuotaResource[]|null
     */
@@ -187,7 +187,7 @@ class ShowAutopilotQuotasResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\QuotaResource[]|null $quotas 资源
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\QuotaResource[]|null $quotas **参数解释：** 资源配额列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

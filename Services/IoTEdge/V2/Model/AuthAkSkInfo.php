@@ -20,7 +20,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * secret  鉴权秘钥
+    * secret  鉴权密钥
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * secret  鉴权秘钥
+    * secret  鉴权密钥
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * secret  鉴权秘钥
+    * secret  鉴权密钥
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * secret  鉴权秘钥
+    * secret  鉴权密钥
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * secret  鉴权秘钥
+    * secret  鉴权密钥
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets secret
-    *  鉴权秘钥
+    *  鉴权密钥
     *
     * @return string|null
     */
@@ -192,7 +192,7 @@ class AuthAkSkInfo implements ModelInterface, ArrayAccess
     /**
     * Sets secret
     *
-    * @param string|null $secret 鉴权秘钥
+    * @param string|null $secret 鉴权密钥
     *
     * @return $this
     */

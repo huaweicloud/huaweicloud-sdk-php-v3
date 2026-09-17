@@ -22,22 +22,22 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * name  边缘节点名称，只允许中、数字、英文大小写、中划线、下划线
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * verifyCode  边缘节点注册使用的验证码，如果不输入则平台随机生成。
     * timeOut  验证码的有效时间单位秒，默认1800秒，范围为1~864000，过期后平台会随机生成。
-    * arch  系统架构。包括：arm64，arm32，x86_64。
-    * osType  系统类型。包括：generalLinux通用系统，openHarmony。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，资源可叠加。
     * securityLevel  节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * basePath  basePath
-    * logConfigs  边缘节点在IEF日志配置参数，仅高级版支持。
-    * apps  用户预置第三方边缘应用
+    * logConfigs  边缘节点在IEF日志配置参数，仅专业版支持。
+    * apps  需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     * networkAccessPoint  网络接入方式类型
     * hardwareModel  网关型号
     * offlineCacheConfigs  offlineCacheConfigs
@@ -46,6 +46,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda的南向接入地址
     *
     * @var string[]
     */
@@ -75,29 +76,30 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'string',
             'automaticUpgrade' => 'string',
             'deviceDataRecord' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\DeviceDataRecord',
-            'metricReport' => 'string'
+            'metricReport' => 'string',
+            'iotdaSouthAccess' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * name  边缘节点名称，只允许中、数字、英文大小写、中划线、下划线
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * verifyCode  边缘节点注册使用的验证码，如果不输入则平台随机生成。
     * timeOut  验证码的有效时间单位秒，默认1800秒，范围为1~864000，过期后平台会随机生成。
-    * arch  系统架构。包括：arm64，arm32，x86_64。
-    * osType  系统类型。包括：generalLinux通用系统，openHarmony。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，资源可叠加。
     * securityLevel  节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * basePath  basePath
-    * logConfigs  边缘节点在IEF日志配置参数，仅高级版支持。
-    * apps  用户预置第三方边缘应用
+    * logConfigs  边缘节点在IEF日志配置参数，仅专业版支持。
+    * apps  需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     * networkAccessPoint  网络接入方式类型
     * hardwareModel  网关型号
     * offlineCacheConfigs  offlineCacheConfigs
@@ -106,6 +108,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda的南向接入地址
     *
     * @var string[]
     */
@@ -135,7 +138,8 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
         'deviceDataFormat' => null,
         'automaticUpgrade' => null,
         'deviceDataRecord' => null,
-        'metricReport' => null
+        'metricReport' => null,
+        'iotdaSouthAccess' => null
     ];
 
     /**
@@ -163,22 +167,22 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * and the value is the original name
     * edgeNodeId  边缘节点ID
     * name  边缘节点名称，只允许中、数字、英文大小写、中划线、下划线
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * verifyCode  边缘节点注册使用的验证码，如果不输入则平台随机生成。
     * timeOut  验证码的有效时间单位秒，默认1800秒，范围为1~864000，过期后平台会随机生成。
-    * arch  系统架构。包括：arm64，arm32，x86_64。
-    * osType  系统类型。包括：generalLinux通用系统，openHarmony。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，资源可叠加。
     * securityLevel  节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * basePath  basePath
-    * logConfigs  边缘节点在IEF日志配置参数，仅高级版支持。
-    * apps  用户预置第三方边缘应用
+    * logConfigs  边缘节点在IEF日志配置参数，仅专业版支持。
+    * apps  需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     * networkAccessPoint  网络接入方式类型
     * hardwareModel  网关型号
     * offlineCacheConfigs  offlineCacheConfigs
@@ -187,6 +191,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda的南向接入地址
     *
     * @var string[]
     */
@@ -216,29 +221,30 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'device_data_format',
             'automaticUpgrade' => 'automatic_upgrade',
             'deviceDataRecord' => 'device_data_record',
-            'metricReport' => 'metric_report'
+            'metricReport' => 'metric_report',
+            'iotdaSouthAccess' => 'iotda_south_access'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
     * name  边缘节点名称，只允许中、数字、英文大小写、中划线、下划线
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * verifyCode  边缘节点注册使用的验证码，如果不输入则平台随机生成。
     * timeOut  验证码的有效时间单位秒，默认1800秒，范围为1~864000，过期后平台会随机生成。
-    * arch  系统架构。包括：arm64，arm32，x86_64。
-    * osType  系统类型。包括：generalLinux通用系统，openHarmony。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，资源可叠加。
     * securityLevel  节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * basePath  basePath
-    * logConfigs  边缘节点在IEF日志配置参数，仅高级版支持。
-    * apps  用户预置第三方边缘应用
+    * logConfigs  边缘节点在IEF日志配置参数，仅专业版支持。
+    * apps  需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     * networkAccessPoint  网络接入方式类型
     * hardwareModel  网关型号
     * offlineCacheConfigs  offlineCacheConfigs
@@ -247,6 +253,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda的南向接入地址
     *
     * @var string[]
     */
@@ -276,29 +283,30 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'setDeviceDataFormat',
             'automaticUpgrade' => 'setAutomaticUpgrade',
             'deviceDataRecord' => 'setDeviceDataRecord',
-            'metricReport' => 'setMetricReport'
+            'metricReport' => 'setMetricReport',
+            'iotdaSouthAccess' => 'setIotdaSouthAccess'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
     * name  边缘节点名称，只允许中、数字、英文大小写、中划线、下划线
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * verifyCode  边缘节点注册使用的验证码，如果不输入则平台随机生成。
     * timeOut  验证码的有效时间单位秒，默认1800秒，范围为1~864000，过期后平台会随机生成。
-    * arch  系统架构。包括：arm64，arm32，x86_64。
-    * osType  系统类型。包括：generalLinux通用系统，openHarmony。
+    * arch  边缘节点系统架构。包括：arm64，arm32，x86_64。
+    * osType  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
     * resourceIds  资源id列表，创建节点时需绑定已购买的资源包，资源可叠加。
     * securityLevel  节点的安全等级，MEDIUM表示本地明文存储，HIGH表示本地加密存储。
-    * reliabilityLevel  节点的可靠性等级。
+    * reliabilityLevel  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     * storagePeriod  节点的存储周期，默认0天，取值范围0~7天，0天则不存储。
-    * aiCardType  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * aiCardType  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     * npuLibraryPath  npu驱动动态库路径
     * basePath  basePath
-    * logConfigs  边缘节点在IEF日志配置参数，仅高级版支持。
-    * apps  用户预置第三方边缘应用
+    * logConfigs  边缘节点在IEF日志配置参数，仅专业版支持。
+    * apps  需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     * networkAccessPoint  网络接入方式类型
     * hardwareModel  网关型号
     * offlineCacheConfigs  offlineCacheConfigs
@@ -307,6 +315,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     * automaticUpgrade  自动升级系统应用的节点开关，默认为关闭：OFF，IMMEDIATE表示节点开关打开
     * deviceDataRecord  deviceDataRecord
     * metricReport  omagent监控运维工具是否上报指标
+    * iotdaSouthAccess  iotda的南向接入地址
     *
     * @var string[]
     */
@@ -336,7 +345,8 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
             'deviceDataFormat' => 'getDeviceDataFormat',
             'automaticUpgrade' => 'getAutomaticUpgrade',
             'deviceDataRecord' => 'getDeviceDataRecord',
-            'metricReport' => 'getMetricReport'
+            'metricReport' => 'getMetricReport',
+            'iotdaSouthAccess' => 'getIotdaSouthAccess'
     ];
 
     /**
@@ -423,6 +433,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
         $this->container['automaticUpgrade'] = isset($data['automaticUpgrade']) ? $data['automaticUpgrade'] : null;
         $this->container['deviceDataRecord'] = isset($data['deviceDataRecord']) ? $data['deviceDataRecord'] : null;
         $this->container['metricReport'] = isset($data['metricReport']) ? $data['metricReport'] : null;
+        $this->container['iotdaSouthAccess'] = isset($data['iotdaSouthAccess']) ? $data['iotdaSouthAccess'] : null;
     }
 
     /**
@@ -601,6 +612,15 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
             if (!is_null($this->container['metricReport']) && !preg_match("/(off|on)/", $this->container['metricReport'])) {
                 $invalidProperties[] = "invalid value for 'metricReport', must be conform to the pattern /(off|on)/.";
             }
+            if (!is_null($this->container['iotdaSouthAccess']) && (mb_strlen($this->container['iotdaSouthAccess']) > 128)) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && (mb_strlen($this->container['iotdaSouthAccess']) < 0)) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['iotdaSouthAccess']) && !preg_match("/^[a-zA-Z0-9:.-]+$/", $this->container['iotdaSouthAccess'])) {
+                $invalidProperties[] = "invalid value for 'iotdaSouthAccess', must be conform to the pattern /^[a-zA-Z0-9:.-]+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -665,7 +685,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  节点所属资源类型：advanced|standard
+    *  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return string
     */
@@ -677,7 +697,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 节点所属资源类型：advanced|standard
+    * @param string $type 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return $this
     */
@@ -737,7 +757,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets arch
-    *  系统架构。包括：arm64，arm32，x86_64。
+    *  边缘节点系统架构。包括：arm64，arm32，x86_64。
     *
     * @return string|null
     */
@@ -749,7 +769,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets arch
     *
-    * @param string|null $arch 系统架构。包括：arm64，arm32，x86_64。
+    * @param string|null $arch 边缘节点系统架构。包括：arm64，arm32，x86_64。
     *
     * @return $this
     */
@@ -761,7 +781,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  系统类型。包括：generalLinux通用系统，openHarmony。
+    *  边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @return string|null
     */
@@ -773,7 +793,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType 系统类型。包括：generalLinux通用系统，openHarmony。
+    * @param string|null $osType 边缘节点系统类型。包括：generalLinux通用系统，openHarmony鸿蒙系统。
     *
     * @return $this
     */
@@ -881,7 +901,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets reliabilityLevel
-    *  节点的可靠性等级。
+    *  节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     *
     * @return string|null
     */
@@ -893,7 +913,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets reliabilityLevel
     *
-    * @param string|null $reliabilityLevel 节点的可靠性等级。
+    * @param string|null $reliabilityLevel 节点的可靠性等级，LOW表示中级别，MEDIUM表示高级别。详细功能请参考“用户指南>管理边缘节点>注册节点”。
     *
     * @return $this
     */
@@ -929,7 +949,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiCardType
-    *  AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    *  AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     *
     * @return string|null
     */
@@ -941,7 +961,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets aiCardType
     *
-    * @param string|null $aiCardType AI加速卡类型，如华为昇腾AI加速卡NPU、图像处理加速卡GPU。
+    * @param string|null $aiCardType AI加速卡类型，如昇腾AI加速卡NPU、图像处理加速卡GPU。
     *
     * @return $this
     */
@@ -1001,7 +1021,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets logConfigs
-    *  边缘节点在IEF日志配置参数，仅高级版支持。
+    *  边缘节点在IEF日志配置参数，仅专业版支持。
     *
     * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\LogConfigDTO[]|null
     */
@@ -1013,7 +1033,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets logConfigs
     *
-    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\LogConfigDTO[]|null $logConfigs 边缘节点在IEF日志配置参数，仅高级版支持。
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\LogConfigDTO[]|null $logConfigs 边缘节点在IEF日志配置参数，仅专业版支持。
     *
     * @return $this
     */
@@ -1025,7 +1045,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
 
     /**
     * Gets apps
-    *  用户预置第三方边缘应用
+    *  需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     *
     * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\EdgeAppInstanceDTO[]|null
     */
@@ -1037,7 +1057,7 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     /**
     * Sets apps
     *
-    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\EdgeAppInstanceDTO[]|null $apps 用户预置第三方边缘应用
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\EdgeAppInstanceDTO[]|null $apps 需要自动安装的边缘应用。此处可填写控制台“应用管理”页面中列出的业务应用与驱动应用。
     *
     * @return $this
     */
@@ -1236,6 +1256,30 @@ class EdgeNodeCreation implements ModelInterface, ArrayAccess
     public function setMetricReport($metricReport)
     {
         $this->container['metricReport'] = $metricReport;
+        return $this;
+    }
+
+    /**
+    * Gets iotdaSouthAccess
+    *  iotda的南向接入地址
+    *
+    * @return string|null
+    */
+    public function getIotdaSouthAccess()
+    {
+        return $this->container['iotdaSouthAccess'];
+    }
+
+    /**
+    * Sets iotdaSouthAccess
+    *
+    * @param string|null $iotdaSouthAccess iotda的南向接入地址
+    *
+    * @return $this
+    */
+    public function setIotdaSouthAccess($iotdaSouthAccess)
+    {
+        $this->container['iotdaSouthAccess'] = $iotdaSouthAccess;
         return $this;
     }
 

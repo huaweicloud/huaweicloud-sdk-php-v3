@@ -25,11 +25,13 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * resourceIds  节点所购买的资源类型的列表
     * resourceSpecTypes  节点所购买的资源类型的列表
     * ips  边缘节点ip列表
+    * softwareVersion  节点软件版本
     * createTime  边缘节点创建时间
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
             'resourceIds' => 'string[]',
             'resourceSpecTypes' => 'string[]',
             'ips' => 'string[]',
-            'createTime' => 'string'
+            'softwareVersion' => 'string',
+            'createTime' => 'string',
+            'nodeGroupId' => 'string'
     ];
 
     /**
@@ -53,11 +57,13 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * resourceIds  节点所购买的资源类型的列表
     * resourceSpecTypes  节点所购买的资源类型的列表
     * ips  边缘节点ip列表
+    * softwareVersion  节点软件版本
     * createTime  边缘节点创建时间
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
         'resourceIds' => null,
         'resourceSpecTypes' => null,
         'ips' => null,
-        'createTime' => null
+        'softwareVersion' => null,
+        'createTime' => null,
+        'nodeGroupId' => null
     ];
 
     /**
@@ -102,11 +110,13 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * resourceIds  节点所购买的资源类型的列表
     * resourceSpecTypes  节点所购买的资源类型的列表
     * ips  边缘节点ip列表
+    * softwareVersion  节点软件版本
     * createTime  边缘节点创建时间
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
             'resourceIds' => 'resource_ids',
             'resourceSpecTypes' => 'resource_spec_types',
             'ips' => 'ips',
-            'createTime' => 'create_time'
+            'softwareVersion' => 'software_version',
+            'createTime' => 'create_time',
+            'nodeGroupId' => 'node_group_id'
     ];
 
     /**
@@ -130,11 +142,13 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * resourceIds  节点所购买的资源类型的列表
     * resourceSpecTypes  节点所购买的资源类型的列表
     * ips  边缘节点ip列表
+    * softwareVersion  节点软件版本
     * createTime  边缘节点创建时间
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
             'resourceIds' => 'setResourceIds',
             'resourceSpecTypes' => 'setResourceSpecTypes',
             'ips' => 'setIps',
-            'createTime' => 'setCreateTime'
+            'softwareVersion' => 'setSoftwareVersion',
+            'createTime' => 'setCreateTime',
+            'nodeGroupId' => 'setNodeGroupId'
     ];
 
     /**
@@ -158,11 +174,13 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     * state  边缘节点状态UNINSTALLED|INSTALLED|OFFLINE|ONLINE|DELETING|FROZEN
     * instanceId  实例ID。物理多租下各实例的唯一标识，一般华为云租户无需携带该参数，仅在物理多租场景下从管理面访问API时需要携带该参数。
     * spaceId  资源空间id，对应IOTDA云服务接口参数中的app_id。
-    * type  节点所属资源类型：advanced|standard
+    * type  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     * resourceIds  节点所购买的资源类型的列表
     * resourceSpecTypes  节点所购买的资源类型的列表
     * ips  边缘节点ip列表
+    * softwareVersion  节点软件版本
     * createTime  边缘节点创建时间
+    * nodeGroupId  节点组ID
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
             'resourceIds' => 'getResourceIds',
             'resourceSpecTypes' => 'getResourceSpecTypes',
             'ips' => 'getIps',
-            'createTime' => 'getCreateTime'
+            'softwareVersion' => 'getSoftwareVersion',
+            'createTime' => 'getCreateTime',
+            'nodeGroupId' => 'getNodeGroupId'
     ];
 
     /**
@@ -246,7 +266,9 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
         $this->container['resourceIds'] = isset($data['resourceIds']) ? $data['resourceIds'] : null;
         $this->container['resourceSpecTypes'] = isset($data['resourceSpecTypes']) ? $data['resourceSpecTypes'] : null;
         $this->container['ips'] = isset($data['ips']) ? $data['ips'] : null;
+        $this->container['softwareVersion'] = isset($data['softwareVersion']) ? $data['softwareVersion'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['nodeGroupId'] = isset($data['nodeGroupId']) ? $data['nodeGroupId'] : null;
     }
 
     /**
@@ -305,11 +327,26 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
             if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 4)) {
                 $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 4.";
             }
+            if (!is_null($this->container['softwareVersion']) && (mb_strlen($this->container['softwareVersion']) > 32)) {
+                $invalidProperties[] = "invalid value for 'softwareVersion', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['softwareVersion']) && (mb_strlen($this->container['softwareVersion']) < 4)) {
+                $invalidProperties[] = "invalid value for 'softwareVersion', the character length must be bigger than or equal to 4.";
+            }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 256)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 256.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['nodeGroupId']) && (mb_strlen($this->container['nodeGroupId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nodeGroupId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nodeGroupId']) && (mb_strlen($this->container['nodeGroupId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nodeGroupId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nodeGroupId']) && !preg_match("/^[a-zA-Z0-9_-]*$/", $this->container['nodeGroupId'])) {
+                $invalidProperties[] = "invalid value for 'nodeGroupId', must be conform to the pattern /^[a-zA-Z0-9_-]*$/.";
             }
         return $invalidProperties;
     }
@@ -447,7 +484,7 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  节点所属资源类型：advanced|standard
+    *  边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return string|null
     */
@@ -459,7 +496,7 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 节点所属资源类型：advanced|standard
+    * @param string|null $type 边缘节点类型：lite|advanced|standard。lite表示基础版边缘节点，advanced或standard表示专业版边缘节点。
     *
     * @return $this
     */
@@ -542,6 +579,30 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets softwareVersion
+    *  节点软件版本
+    *
+    * @return string|null
+    */
+    public function getSoftwareVersion()
+    {
+        return $this->container['softwareVersion'];
+    }
+
+    /**
+    * Sets softwareVersion
+    *
+    * @param string|null $softwareVersion 节点软件版本
+    *
+    * @return $this
+    */
+    public function setSoftwareVersion($softwareVersion)
+    {
+        $this->container['softwareVersion'] = $softwareVersion;
+        return $this;
+    }
+
+    /**
     * Gets createTime
     *  边缘节点创建时间
     *
@@ -562,6 +623,30 @@ class EdgeNodeDTO implements ModelInterface, ArrayAccess
     public function setCreateTime($createTime)
     {
         $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets nodeGroupId
+    *  节点组ID
+    *
+    * @return string|null
+    */
+    public function getNodeGroupId()
+    {
+        return $this->container['nodeGroupId'];
+    }
+
+    /**
+    * Sets nodeGroupId
+    *
+    * @param string|null $nodeGroupId 节点组ID
+    *
+    * @return $this
+    */
+    public function setNodeGroupId($nodeGroupId)
+    {
+        $this->container['nodeGroupId'] = $nodeGroupId;
         return $this;
     }
 

@@ -100,7 +100,7 @@ class GetAvailableZoneResponseBody implements ModelInterface, ArrayAccess
             'name' => 'name',
             'displayName' => 'displayName',
             'azGroupIds' => 'azGroupIds',
-            'publicBorderGroup' => 'PublicBorderGroup',
+            'publicBorderGroup' => 'publicBorderGroup',
             'category' => 'category',
             'alias' => 'alias'
     ];

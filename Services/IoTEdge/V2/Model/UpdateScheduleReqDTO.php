@@ -22,6 +22,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  调度计划名称
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级。
@@ -33,6 +34,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'enabled' => 'bool',
+            'resetCurrentTask' => 'bool',
             'startTime' => 'int',
             'endTime' => 'int',
             'priority' => 'int',
@@ -44,6 +46,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  调度计划名称
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级。
@@ -55,6 +58,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'enabled' => null,
+        'resetCurrentTask' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
         'priority' => 'int32',
@@ -87,6 +91,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  调度计划名称
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级。
@@ -98,6 +103,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'enabled' => 'enabled',
+            'resetCurrentTask' => 'reset_current_task',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'priority' => 'priority',
@@ -109,6 +115,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  调度计划名称
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级。
@@ -120,6 +127,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'enabled' => 'setEnabled',
+            'resetCurrentTask' => 'setResetCurrentTask',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'priority' => 'setPriority',
@@ -131,6 +139,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  调度计划名称
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级。
@@ -142,6 +151,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'enabled' => 'getEnabled',
+            'resetCurrentTask' => 'getResetCurrentTask',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'priority' => 'getPriority',
@@ -209,6 +219,7 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['resetCurrentTask'] = isset($data['resetCurrentTask']) ? $data['resetCurrentTask'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
@@ -239,8 +250,8 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
         if ($this->container['enabled'] === null) {
             $invalidProperties[] = "'enabled' can't be null";
         }
-            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 4828176000000)) {
-                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 4828176000000.";
+            if (!is_null($this->container['startTime']) && ($this->container['startTime'] > 7983849600000)) {
+                $invalidProperties[] = "invalid value for 'startTime', must be smaller than or equal to 7983849600000.";
             }
             if (!is_null($this->container['startTime']) && ($this->container['startTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'startTime', must be bigger than or equal to 0.";
@@ -248,8 +259,8 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
         if ($this->container['endTime'] === null) {
             $invalidProperties[] = "'endTime' can't be null";
         }
-            if (($this->container['endTime'] > 4828176000000)) {
-                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 4828176000000.";
+            if (($this->container['endTime'] > 7983849600000)) {
+                $invalidProperties[] = "invalid value for 'endTime', must be smaller than or equal to 7983849600000.";
             }
             if (($this->container['endTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'endTime', must be bigger than or equal to 0.";
@@ -325,6 +336,30 @@ class UpdateScheduleReqDTO implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets resetCurrentTask
+    *  是否立即执行
+    *
+    * @return bool|null
+    */
+    public function getResetCurrentTask()
+    {
+        return $this->container['resetCurrentTask'];
+    }
+
+    /**
+    * Sets resetCurrentTask
+    *
+    * @param bool|null $resetCurrentTask 是否立即执行
+    *
+    * @return $this
+    */
+    public function setResetCurrentTask($resetCurrentTask)
+    {
+        $this->container['resetCurrentTask'] = $resetCurrentTask;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
     * name  调度计划名称
     * cycleType  调度计划的循环类型
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级, 1-16
@@ -40,6 +41,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
             'name' => 'string',
             'cycleType' => 'string',
             'enabled' => 'bool',
+            'resetCurrentTask' => 'bool',
             'startTime' => 'int',
             'endTime' => 'int',
             'priority' => 'int',
@@ -54,6 +56,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
     * name  调度计划名称
     * cycleType  调度计划的循环类型
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级, 1-16
@@ -68,6 +71,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
         'name' => null,
         'cycleType' => null,
         'enabled' => null,
+        'resetCurrentTask' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
         'priority' => 'int32',
@@ -103,6 +107,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
     * name  调度计划名称
     * cycleType  调度计划的循环类型
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级, 1-16
@@ -117,6 +122,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
             'name' => 'name',
             'cycleType' => 'cycle_type',
             'enabled' => 'enabled',
+            'resetCurrentTask' => 'reset_current_task',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'priority' => 'priority',
@@ -131,6 +137,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
     * name  调度计划名称
     * cycleType  调度计划的循环类型
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级, 1-16
@@ -145,6 +152,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'cycleType' => 'setCycleType',
             'enabled' => 'setEnabled',
+            'resetCurrentTask' => 'setResetCurrentTask',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'priority' => 'setPriority',
@@ -159,6 +167,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
     * name  调度计划名称
     * cycleType  调度计划的循环类型
     * enabled  调度计划是否生效
+    * resetCurrentTask  是否立即执行
     * startTime  调度计划起始时间，毫秒级别的时间戳
     * endTime  调度计划结束时间，毫秒级别的时间戳
     * priority  调度计划优先级, 1-16
@@ -173,6 +182,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'cycleType' => 'getCycleType',
             'enabled' => 'getEnabled',
+            'resetCurrentTask' => 'getResetCurrentTask',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'priority' => 'getPriority',
@@ -243,6 +253,7 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['cycleType'] = isset($data['cycleType']) ? $data['cycleType'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['resetCurrentTask'] = isset($data['resetCurrentTask']) ? $data['resetCurrentTask'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
@@ -443,6 +454,30 @@ class CreateScheduleResponse implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
+        return $this;
+    }
+
+    /**
+    * Gets resetCurrentTask
+    *  是否立即执行
+    *
+    * @return bool|null
+    */
+    public function getResetCurrentTask()
+    {
+        return $this->container['resetCurrentTask'];
+    }
+
+    /**
+    * Sets resetCurrentTask
+    *
+    * @param bool|null $resetCurrentTask 是否立即执行
+    *
+    * @return $this
+    */
+    public function setResetCurrentTask($resetCurrentTask)
+    {
+        $this->container['resetCurrentTask'] = $resetCurrentTask;
         return $this;
     }
 

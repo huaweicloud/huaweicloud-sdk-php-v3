@@ -32,6 +32,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * pipelineCount  **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    * noGroupCount  **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
     * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -48,6 +50,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
             'updater' => 'string',
             'createTime' => 'int',
             'updateTime' => 'int',
+            'pipelineCount' => 'int',
+            'noGroupCount' => 'int',
             'children' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineGroupVo[]'
     ];
 
@@ -64,6 +68,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * pipelineCount  **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    * noGroupCount  **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
     * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -80,6 +86,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
         'updater' => null,
         'createTime' => 'int64',
         'updateTime' => 'int64',
+        'pipelineCount' => 'int32',
+        'noGroupCount' => 'int32',
         'children' => null
     ];
 
@@ -117,6 +125,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * pipelineCount  **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    * noGroupCount  **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
     * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -133,6 +143,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
             'updater' => 'updater',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
+            'pipelineCount' => 'pipeline_count',
+            'noGroupCount' => 'no_group_count',
             'children' => 'children'
     ];
 
@@ -149,6 +161,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * pipelineCount  **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    * noGroupCount  **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
     * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -165,6 +179,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
             'updater' => 'setUpdater',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
+            'pipelineCount' => 'setPipelineCount',
+            'noGroupCount' => 'setNoGroupCount',
             'children' => 'setChildren'
     ];
 
@@ -181,6 +197,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     * updater  **参数解释**： 更新用户ID。 **取值范围**： 32位字符，由数字和字母组成。
     * createTime  **参数解释**： 创建时间。 **取值范围**： 不涉及。
     * updateTime  **参数解释**： 更新时间。 **取值范围**： 不涉及。
+    * pipelineCount  **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    * noGroupCount  **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
     * children  **参数解释**： 流水线分组详情。 **取值范围**： 不涉及。
     *
     * @var string[]
@@ -197,6 +215,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
             'updater' => 'getUpdater',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
+            'pipelineCount' => 'getPipelineCount',
+            'noGroupCount' => 'getNoGroupCount',
             'children' => 'getChildren'
     ];
 
@@ -269,6 +289,8 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
         $this->container['updater'] = isset($data['updater']) ? $data['updater'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['pipelineCount'] = isset($data['pipelineCount']) ? $data['pipelineCount'] : null;
+        $this->container['noGroupCount'] = isset($data['noGroupCount']) ? $data['noGroupCount'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
     }
 
@@ -555,6 +577,54 @@ class CreatePipelineGroupResponse implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets pipelineCount
+    *  **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getPipelineCount()
+    {
+        return $this->container['pipelineCount'];
+    }
+
+    /**
+    * Sets pipelineCount
+    *
+    * @param int|null $pipelineCount **参数解释**： 分组下的流水线总数。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPipelineCount($pipelineCount)
+    {
+        $this->container['pipelineCount'] = $pipelineCount;
+        return $this;
+    }
+
+    /**
+    * Gets noGroupCount
+    *  **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getNoGroupCount()
+    {
+        return $this->container['noGroupCount'];
+    }
+
+    /**
+    * Sets noGroupCount
+    *
+    * @param int|null $noGroupCount **参数解释**： 未分组的流水线数量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setNoGroupCount($noGroupCount)
+    {
+        $this->container['noGroupCount'] = $noGroupCount;
         return $this;
     }
 

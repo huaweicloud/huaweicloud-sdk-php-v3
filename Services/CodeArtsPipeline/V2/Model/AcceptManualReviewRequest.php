@@ -24,6 +24,7 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
     * stepRunId  流水线步骤ID
+    * approvalDescription  审核意见
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
             'jobRunId' => 'string',
             'pipelineId' => 'string',
             'pipelineRunId' => 'string',
-            'stepRunId' => 'string'
+            'stepRunId' => 'string',
+            'approvalDescription' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
     * stepRunId  流水线步骤ID
+    * approvalDescription  审核意见
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
         'jobRunId' => null,
         'pipelineId' => null,
         'pipelineRunId' => null,
-        'stepRunId' => null
+        'stepRunId' => null,
+        'approvalDescription' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
     * stepRunId  流水线步骤ID
+    * approvalDescription  审核意见
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
             'jobRunId' => 'job_run_id',
             'pipelineId' => 'pipeline_id',
             'pipelineRunId' => 'pipeline_run_id',
-            'stepRunId' => 'step_run_id'
+            'stepRunId' => 'step_run_id',
+            'approvalDescription' => 'approval_description'
     ];
 
     /**
@@ -93,6 +99,7 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
     * stepRunId  流水线步骤ID
+    * approvalDescription  审核意见
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
             'jobRunId' => 'setJobRunId',
             'pipelineId' => 'setPipelineId',
             'pipelineRunId' => 'setPipelineRunId',
-            'stepRunId' => 'setStepRunId'
+            'stepRunId' => 'setStepRunId',
+            'approvalDescription' => 'setApprovalDescription'
     ];
 
     /**
@@ -109,6 +117,7 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
     * stepRunId  流水线步骤ID
+    * approvalDescription  审核意见
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
             'jobRunId' => 'getJobRunId',
             'pipelineId' => 'getPipelineId',
             'pipelineRunId' => 'getPipelineRunId',
-            'stepRunId' => 'getStepRunId'
+            'stepRunId' => 'getStepRunId',
+            'approvalDescription' => 'getApprovalDescription'
     ];
 
     /**
@@ -181,6 +191,7 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
         $this->container['pipelineId'] = isset($data['pipelineId']) ? $data['pipelineId'] : null;
         $this->container['pipelineRunId'] = isset($data['pipelineRunId']) ? $data['pipelineRunId'] : null;
         $this->container['stepRunId'] = isset($data['stepRunId']) ? $data['stepRunId'] : null;
+        $this->container['approvalDescription'] = isset($data['approvalDescription']) ? $data['approvalDescription'] : null;
     }
 
     /**
@@ -334,6 +345,30 @@ class AcceptManualReviewRequest implements ModelInterface, ArrayAccess
     public function setStepRunId($stepRunId)
     {
         $this->container['stepRunId'] = $stepRunId;
+        return $this;
+    }
+
+    /**
+    * Gets approvalDescription
+    *  审核意见
+    *
+    * @return string|null
+    */
+    public function getApprovalDescription()
+    {
+        return $this->container['approvalDescription'];
+    }
+
+    /**
+    * Sets approvalDescription
+    *
+    * @param string|null $approvalDescription 审核意见
+    *
+    * @return $this
+    */
+    public function setApprovalDescription($approvalDescription)
+    {
+        $this->container['approvalDescription'] = $approvalDescription;
         return $this;
     }
 

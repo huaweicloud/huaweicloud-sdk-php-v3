@@ -22,6 +22,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterName  边缘集群名称
     * state  边缘集群状态
+    * clusterIds  边缘集群ID列表
     * limit  每页记录数，默认值为10，取值区间为1-1000。
     * offset  查询的起始位置，取值范围为非负整数，默认为0。
     *
@@ -30,6 +31,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'clusterName' => 'string',
             'state' => 'string',
+            'clusterIds' => 'string[]',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -38,6 +40,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterName  边缘集群名称
     * state  边缘集群状态
+    * clusterIds  边缘集群ID列表
     * limit  每页记录数，默认值为10，取值区间为1-1000。
     * offset  查询的起始位置，取值范围为非负整数，默认为0。
     *
@@ -46,6 +49,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'clusterName' => null,
         'state' => null,
+        'clusterIds' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -75,6 +79,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterName  边缘集群名称
     * state  边缘集群状态
+    * clusterIds  边缘集群ID列表
     * limit  每页记录数，默认值为10，取值区间为1-1000。
     * offset  查询的起始位置，取值范围为非负整数，默认为0。
     *
@@ -83,6 +88,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'clusterName' => 'cluster_name',
             'state' => 'state',
+            'clusterIds' => 'cluster_ids',
             'limit' => 'limit',
             'offset' => 'offset'
     ];
@@ -91,6 +97,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterName  边缘集群名称
     * state  边缘集群状态
+    * clusterIds  边缘集群ID列表
     * limit  每页记录数，默认值为10，取值区间为1-1000。
     * offset  查询的起始位置，取值范围为非负整数，默认为0。
     *
@@ -99,6 +106,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'clusterName' => 'setClusterName',
             'state' => 'setState',
+            'clusterIds' => 'setClusterIds',
             'limit' => 'setLimit',
             'offset' => 'setOffset'
     ];
@@ -107,6 +115,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterName  边缘集群名称
     * state  边缘集群状态
+    * clusterIds  边缘集群ID列表
     * limit  每页记录数，默认值为10，取值区间为1-1000。
     * offset  查询的起始位置，取值范围为非负整数，默认为0。
     *
@@ -115,6 +124,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'clusterName' => 'getClusterName',
             'state' => 'getState',
+            'clusterIds' => 'getClusterIds',
             'limit' => 'getLimit',
             'offset' => 'getOffset'
     ];
@@ -179,6 +189,7 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['clusterIds'] = isset($data['clusterIds']) ? $data['clusterIds'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
@@ -280,6 +291,30 @@ class ListClustersRequest implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets clusterIds
+    *  边缘集群ID列表
+    *
+    * @return string[]|null
+    */
+    public function getClusterIds()
+    {
+        return $this->container['clusterIds'];
+    }
+
+    /**
+    * Sets clusterIds
+    *
+    * @param string[]|null $clusterIds 边缘集群ID列表
+    *
+    * @return $this
+    */
+    public function setClusterIds($clusterIds)
+    {
+        $this->container['clusterIds'] = $clusterIds;
         return $this;
     }
 

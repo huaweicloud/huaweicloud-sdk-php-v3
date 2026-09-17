@@ -172,8 +172,8 @@ class RouterRespDTO implements ModelInterface, ArrayAccess
         if ($this->container['routeId'] === null) {
             $invalidProperties[] = "'routeId' can't be null";
         }
-            if ((mb_strlen($this->container['routeId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'routeId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['routeId']) > 96)) {
+                $invalidProperties[] = "invalid value for 'routeId', the character length must be smaller than or equal to 96.";
             }
             if ((mb_strlen($this->container['routeId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'routeId', the character length must be bigger than or equal to 1.";

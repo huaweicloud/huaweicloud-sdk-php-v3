@@ -20,11 +20,11 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  当前集群版本
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * targetPlatformVersion  目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    * version  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetPlatformVersion  **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * config  升级过程中指定的集群配置
+    * config  **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  当前集群版本
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * targetPlatformVersion  目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    * version  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetPlatformVersion  **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * config  升级过程中指定的集群配置
+    * config  **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  当前集群版本
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * targetPlatformVersion  目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    * version  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetPlatformVersion  **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * config  升级过程中指定的集群配置
+    * config  **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  当前集群版本
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * targetPlatformVersion  目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    * version  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetPlatformVersion  **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * config  升级过程中指定的集群配置
+    * config  **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  当前集群版本
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * targetPlatformVersion  目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    * version  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetPlatformVersion  **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * config  升级过程中指定的集群配置
+    * config  **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  当前集群版本
+    *  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 当前集群版本
+    * @param string|null $version **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersion
-    *  目标集群版本，例如\"v1.23\"
+    *  **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersion
     *
-    * @param string|null $targetVersion 目标集群版本，例如\"v1.23\"
+    * @param string|null $targetVersion **参数解释：** 目标集群版本，例如\"v1.23\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetPlatformVersion
-    *  目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    *  **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
     /**
     * Sets targetPlatformVersion
     *
-    * @param string|null $targetPlatformVersion 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。
+    * @param string|null $targetPlatformVersion **参数解释：** 目标集群的平台版本号，表示集群版本(version)下的内部版本，不支持用户指定。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets config
-    *  升级过程中指定的集群配置
+    *  **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return object|null
     */
@@ -326,7 +326,7 @@ class ClusterUpgradeResponseAction implements ModelInterface, ArrayAccess
     /**
     * Sets config
     *
-    * @param object|null $config 升级过程中指定的集群配置
+    * @param object|null $config **参数解释：** 升级过程中指定的集群配置 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

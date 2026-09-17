@@ -16,7 +16,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'pageInfo';
+    protected static $openAPIModelName = 'PageInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

@@ -21,7 +21,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
-    * body  body
+    * body  创建路由请求结构体
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
-    * body  body
+    * body  创建路由请求结构体
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * edgeNodeId  边缘节点ID
-    * body  body
+    * body  创建路由请求结构体
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
-    * body  body
+    * body  创建路由请求结构体
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
-    * body  body
+    * body  创建路由请求结构体
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  body
+    *  创建路由请求结构体
     *
     * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\CreateRouterReqDTO[]|null
     */
@@ -233,7 +233,7 @@ class UpdateRoutesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\CreateRouterReqDTO[]|null $body body
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\CreateRouterReqDTO[]|null $body 创建路由请求结构体
     *
     * @return $this
     */

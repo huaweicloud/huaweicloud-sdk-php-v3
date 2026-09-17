@@ -20,22 +20,22 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chartName  模板名称
-    * chartPublic  是否公开模板
-    * chartVersion  模板版本
-    * clusterId  集群ID
-    * clusterName  集群名称
-    * createAt  创建时间
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * parameters  模板实例参数
-    * resources  模板实例需要的资源
-    * status  模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
-    * statusDescription  模板实例状态描述
-    * updateAt  更新时间
-    * values  模板实例的值
-    * version  模板实例版本
+    * chartName  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * chartPublic  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartVersion  **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterName  **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * parameters  **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * resources  **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
+    * statusDescription  **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chartName  模板名称
-    * chartPublic  是否公开模板
-    * chartVersion  模板版本
-    * clusterId  集群ID
-    * clusterName  集群名称
-    * createAt  创建时间
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * parameters  模板实例参数
-    * resources  模板实例需要的资源
-    * status  模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
-    * statusDescription  模板实例状态描述
-    * updateAt  更新时间
-    * values  模板实例的值
-    * version  模板实例版本
+    * chartName  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * chartPublic  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartVersion  **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterName  **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * parameters  **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * resources  **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
+    * statusDescription  **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chartName  模板名称
-    * chartPublic  是否公开模板
-    * chartVersion  模板版本
-    * clusterId  集群ID
-    * clusterName  集群名称
-    * createAt  创建时间
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * parameters  模板实例参数
-    * resources  模板实例需要的资源
-    * status  模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
-    * statusDescription  模板实例状态描述
-    * updateAt  更新时间
-    * values  模板实例的值
-    * version  模板实例版本
+    * chartName  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * chartPublic  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartVersion  **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterName  **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * parameters  **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * resources  **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
+    * statusDescription  **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chartName  模板名称
-    * chartPublic  是否公开模板
-    * chartVersion  模板版本
-    * clusterId  集群ID
-    * clusterName  集群名称
-    * createAt  创建时间
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * parameters  模板实例参数
-    * resources  模板实例需要的资源
-    * status  模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
-    * statusDescription  模板实例状态描述
-    * updateAt  更新时间
-    * values  模板实例的值
-    * version  模板实例版本
+    * chartName  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * chartPublic  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartVersion  **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterName  **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * parameters  **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * resources  **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
+    * statusDescription  **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chartName  模板名称
-    * chartPublic  是否公开模板
-    * chartVersion  模板版本
-    * clusterId  集群ID
-    * clusterName  集群名称
-    * createAt  创建时间
-    * description  模板实例描述
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
-    * parameters  模板实例参数
-    * resources  模板实例需要的资源
-    * status  模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
-    * statusDescription  模板实例状态描述
-    * updateAt  更新时间
-    * values  模板实例的值
-    * version  模板实例版本
+    * chartName  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * chartPublic  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
+    * chartVersion  **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterName  **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * createAt  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * description  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * name  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * parameters  **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * resources  **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * status  **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
+    * statusDescription  **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateAt  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * values  **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * version  **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -339,7 +339,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chartName
-    *  模板名称
+    *  **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets chartName
     *
-    * @param string|null $chartName 模板名称
+    * @param string|null $chartName **参数解释：** 模板名称 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chartPublic
-    *  是否公开模板
+    *  **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
     *
     * @return bool|null
     */
@@ -375,7 +375,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets chartPublic
     *
-    * @param bool|null $chartPublic 是否公开模板
+    * @param bool|null $chartPublic **参数解释：** 是否公开模板 **约束限制：** 不涉及 **取值范围：** - true：公开模板 - false：不公开模板  **默认取值：** false
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets chartVersion
-    *  模板版本
+    *  **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets chartVersion
     *
-    * @param string|null $chartVersion 模板版本
+    * @param string|null $chartVersion **参数解释：** 模板版本 **约束限制：** 最长64个字符 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID
+    *  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID
+    * @param string|null $clusterId **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterName
-    *  集群名称
+    *  **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -447,7 +447,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets clusterName
     *
-    * @param string|null $clusterName 集群名称
+    * @param string|null $clusterName **参数解释：** 集群名称 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createAt
-    *  创建时间
+    *  **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt 创建时间
+    * @param string|null $createAt **参数解释：** 创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  模板实例描述
+    *  **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 模板实例描述
+    * @param string|null $description **参数解释：** 模板实例描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板实例名称
+    *  **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 模板实例名称
+    * @param string|null $name **参数解释：** 模板实例名称 **约束限制：** 由小写字母开头，中间由小写字母、数字和中划线(-)组成，以小写字母或数字结尾 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  模板实例所在的命名空间
+    *  **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 模板实例所在的命名空间
+    * @param string|null $namespace **参数解释：** 模板实例所在的命名空间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets parameters
-    *  模板实例参数
+    *  **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -567,7 +567,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets parameters
     *
-    * @param string|null $parameters 模板实例参数
+    * @param string|null $parameters **参数解释：** 模板实例参数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  模板实例需要的资源
+    *  **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param string|null $resources 模板实例需要的资源
+    * @param string|null $resources **参数解释：** 模板实例需要的资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
+    *  **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 模板实例状态 - DEPLOYED：已部署，表示模板实例处于正常状态。 - DELETED：已删除，表示模板实例已经被删除。 - FAILED：失败，表示模板实例部署失败。 - DELETING：删除中，表示模板实例正处于删除过程中。 - PENDING_INSTALL：待安装，表示模板正在等待安装。 - PENDING_UPGRADE：待升级，表示模板正在等待升级。 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚。 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装。
+    * @param string|null $status **参数解释：** 模板实例状态 **约束限制：** 不涉及 **取值范围：** - DEPLOYED：已部署，表示模板实例处于正常状态 - DELETED：已删除，表示模板实例已经被删除 - FAILED：失败，表示模板实例部署失败 - DELETING：删除中，表示模板实例正处于删除过程中 - PENDING_INSTALL：待安装，表示模板正在等待安装 - PENDING_UPGRADE：待升级，表示模板正在等待升级 - PENDING_ROLLBACK：待回滚，表示模板正在等待回滚 - UNKNOWN：未知，表示模板状态异常，可尝试手动删除后重新安装  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets statusDescription
-    *  模板实例状态描述
+    *  **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -639,7 +639,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets statusDescription
     *
-    * @param string|null $statusDescription 模板实例状态描述
+    * @param string|null $statusDescription **参数解释：** 模板实例状态描述 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -651,7 +651,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateAt
-    *  更新时间
+    *  **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -663,7 +663,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt 更新时间
+    * @param string|null $updateAt **参数解释：** 更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  模板实例的值
+    *  **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -687,7 +687,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string|null $values 模板实例的值
+    * @param string|null $values **参数解释：** 模板实例的值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -699,7 +699,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  模板实例版本
+    *  **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -711,7 +711,7 @@ class ReleaseResp implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param int|null $version 模板实例版本
+    * @param int|null $version **参数解释：** 模板实例版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

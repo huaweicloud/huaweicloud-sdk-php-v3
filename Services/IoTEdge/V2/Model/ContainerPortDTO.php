@@ -20,7 +20,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * containerPort  构成一堆映射的容器端口
+    * containerPort  构成一对映射的容器端口
     * hostPort  构成一对映射的物理机对应网卡端口
     * hostIp  对应网卡地址
     *
@@ -34,7 +34,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * containerPort  构成一堆映射的容器端口
+    * containerPort  构成一对映射的容器端口
     * hostPort  构成一对映射的物理机对应网卡端口
     * hostIp  对应网卡地址
     *
@@ -69,7 +69,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * containerPort  构成一堆映射的容器端口
+    * containerPort  构成一对映射的容器端口
     * hostPort  构成一对映射的物理机对应网卡端口
     * hostIp  对应网卡地址
     *
@@ -83,7 +83,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * containerPort  构成一堆映射的容器端口
+    * containerPort  构成一对映射的容器端口
     * hostPort  构成一对映射的物理机对应网卡端口
     * hostIp  对应网卡地址
     *
@@ -97,7 +97,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * containerPort  构成一堆映射的容器端口
+    * containerPort  构成一对映射的容器端口
     * hostPort  构成一对映射的物理机对应网卡端口
     * hostIp  对应网卡地址
     *
@@ -214,7 +214,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets containerPort
-    *  构成一堆映射的容器端口
+    *  构成一对映射的容器端口
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class ContainerPortDTO implements ModelInterface, ArrayAccess
     /**
     * Sets containerPort
     *
-    * @param int|null $containerPort 构成一堆映射的容器端口
+    * @param int|null $containerPort 构成一对映射的容器端口
     *
     * @return $this
     */

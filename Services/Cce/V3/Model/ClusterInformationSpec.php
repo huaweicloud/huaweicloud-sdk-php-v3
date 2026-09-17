@@ -27,6 +27,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
     * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
             'containerNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\ContainerNetworkUpdate',
             'eniNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\EniNetworkUpdate',
             'hostNetwork' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterInformationSpecHostNetwork',
-            'deletionProtection' => 'bool'
+            'deletionProtection' => 'bool',
+            'secretConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\SecretConfigUpdate'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
     * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
         'containerNetwork' => null,
         'eniNetwork' => null,
         'hostNetwork' => null,
-        'deletionProtection' => null
+        'deletionProtection' => null,
+        'secretConfig' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
     * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
             'containerNetwork' => 'containerNetwork',
             'eniNetwork' => 'eniNetwork',
             'hostNetwork' => 'hostNetwork',
-            'deletionProtection' => 'deletionProtection'
+            'deletionProtection' => 'deletionProtection',
+            'secretConfig' => 'secretConfig'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
     * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
             'containerNetwork' => 'setContainerNetwork',
             'eniNetwork' => 'setEniNetwork',
             'hostNetwork' => 'setHostNetwork',
-            'deletionProtection' => 'setDeletionProtection'
+            'deletionProtection' => 'setDeletionProtection',
+            'secretConfig' => 'setSecretConfig'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     * eniNetwork  eniNetwork
     * hostNetwork  hostNetwork
     * deletionProtection  **参数解释：** 集群删除保护，如果开启后用户将无法删除该集群。 **约束限制：** 不涉及 **取值范围：** - true: 开启集群删除保护 - false: 关闭集群删除保护  **默认取值：** 默认false
+    * secretConfig  secretConfig
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
             'containerNetwork' => 'getContainerNetwork',
             'eniNetwork' => 'getEniNetwork',
             'hostNetwork' => 'getHostNetwork',
-            'deletionProtection' => 'getDeletionProtection'
+            'deletionProtection' => 'getDeletionProtection',
+            'secretConfig' => 'getSecretConfig'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
         $this->container['eniNetwork'] = isset($data['eniNetwork']) ? $data['eniNetwork'] : null;
         $this->container['hostNetwork'] = isset($data['hostNetwork']) ? $data['hostNetwork'] : null;
         $this->container['deletionProtection'] = isset($data['deletionProtection']) ? $data['deletionProtection'] : null;
+        $this->container['secretConfig'] = isset($data['secretConfig']) ? $data['secretConfig'] : null;
     }
 
     /**
@@ -409,6 +420,30 @@ class ClusterInformationSpec implements ModelInterface, ArrayAccess
     public function setDeletionProtection($deletionProtection)
     {
         $this->container['deletionProtection'] = $deletionProtection;
+        return $this;
+    }
+
+    /**
+    * Gets secretConfig
+    *  secretConfig
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\SecretConfigUpdate|null
+    */
+    public function getSecretConfig()
+    {
+        return $this->container['secretConfig'];
+    }
+
+    /**
+    * Sets secretConfig
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\SecretConfigUpdate|null $secretConfig secretConfig
+    *
+    * @return $this
+    */
+    public function setSecretConfig($secretConfig)
+    {
+        $this->container['secretConfig'] = $secretConfig;
         return $this;
     }
 

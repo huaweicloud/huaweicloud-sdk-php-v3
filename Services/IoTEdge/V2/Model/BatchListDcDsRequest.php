@@ -22,6 +22,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * moduleId  数据源所属的模块id
+    * name  采集数据源名称，允许中、数字、英文大小写、下划线、中划线
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -30,6 +31,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'edgeNodeId' => 'string',
             'moduleId' => 'string',
+            'name' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -38,6 +40,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
     * moduleId  数据源所属的模块id
+    * name  采集数据源名称，允许中、数字、英文大小写、下划线、中划线
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -46,6 +49,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'edgeNodeId' => null,
         'moduleId' => null,
+        'name' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -75,6 +79,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * edgeNodeId  边缘节点ID
     * moduleId  数据源所属的模块id
+    * name  采集数据源名称，允许中、数字、英文大小写、下划线、中划线
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -83,6 +88,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'edgeNodeId' => 'edge_node_id',
             'moduleId' => 'module_id',
+            'name' => 'name',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -91,6 +97,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
     * moduleId  数据源所属的模块id
+    * name  采集数据源名称，允许中、数字、英文大小写、下划线、中划线
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -99,6 +106,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'edgeNodeId' => 'setEdgeNodeId',
             'moduleId' => 'setModuleId',
+            'name' => 'setName',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -107,6 +115,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
     * moduleId  数据源所属的模块id
+    * name  采集数据源名称，允许中、数字、英文大小写、下划线、中划线
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -115,6 +124,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'edgeNodeId' => 'getEdgeNodeId',
             'moduleId' => 'getModuleId',
+            'name' => 'getName',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -179,6 +189,7 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['edgeNodeId'] = isset($data['edgeNodeId']) ? $data['edgeNodeId'] : null;
         $this->container['moduleId'] = isset($data['moduleId']) ? $data['moduleId'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -211,6 +222,15 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['moduleId']) && !preg_match("/^[A-Za-z0-9-_]*$/", $this->container['moduleId'])) {
                 $invalidProperties[] = "invalid value for 'moduleId', must be conform to the pattern /^[A-Za-z0-9-_]*$/.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/^[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]*$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]*$/.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000.";
@@ -283,6 +303,30 @@ class BatchListDcDsRequest implements ModelInterface, ArrayAccess
     public function setModuleId($moduleId)
     {
         $this->container['moduleId'] = $moduleId;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  采集数据源名称，允许中、数字、英文大小写、下划线、中划线
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 采集数据源名称，允许中、数字、英文大小写、下划线、中划线
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

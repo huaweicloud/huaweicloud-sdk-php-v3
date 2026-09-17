@@ -20,7 +20,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeIds  授权北向NA信息到边缘节点的请求结构体
+    * nodeIds  授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeIds  授权北向NA信息到边缘节点的请求结构体
+    * nodeIds  授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeIds  授权北向NA信息到边缘节点的请求结构体
+    * nodeIds  授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeIds  授权北向NA信息到边缘节点的请求结构体
+    * nodeIds  授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeIds  授权北向NA信息到边缘节点的请求结构体
+    * nodeIds  授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeIds
-    *  授权北向NA信息到边缘节点的请求结构体
+    *  授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @return object
     */
@@ -189,7 +189,7 @@ class AuthorizeNa2NodesRequestDTO implements ModelInterface, ArrayAccess
     /**
     * Sets nodeIds
     *
-    * @param object $nodeIds 授权北向NA信息到边缘节点的请求结构体
+    * @param object $nodeIds 授权北向NA信息到边缘节点的请求结构体。示例：[\"node_id1\"]
     *
     * @return $this
     */

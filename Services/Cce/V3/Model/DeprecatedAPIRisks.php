@@ -20,8 +20,8 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  请求路径，如/apis/policy/v1beta1/podsecuritypolicies
-    * userAgent  客户端信息
+    * url  **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * userAgent  **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  请求路径，如/apis/policy/v1beta1/podsecuritypolicies
-    * userAgent  客户端信息
+    * url  **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * userAgent  **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  请求路径，如/apis/policy/v1beta1/podsecuritypolicies
-    * userAgent  客户端信息
+    * url  **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * userAgent  **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  请求路径，如/apis/policy/v1beta1/podsecuritypolicies
-    * userAgent  客户端信息
+    * url  **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * userAgent  **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  请求路径，如/apis/policy/v1beta1/podsecuritypolicies
-    * userAgent  客户端信息
+    * url  **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * userAgent  **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  请求路径，如/apis/policy/v1beta1/podsecuritypolicies
+    *  **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url 请求路径，如/apis/policy/v1beta1/podsecuritypolicies
+    * @param string|null $url **参数解释：** 请求路径，如/apis/policy/v1beta1/podsecuritypolicies。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets userAgent
-    *  客户端信息
+    *  **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class DeprecatedAPIRisks implements ModelInterface, ArrayAccess
     /**
     * Sets userAgent
     *
-    * @param string|null $userAgent 客户端信息
+    * @param string|null $userAgent **参数解释：** 客户端信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

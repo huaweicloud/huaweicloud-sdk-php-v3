@@ -20,7 +20,7 @@ class Login implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sshKey  选择密钥对方式登录时的密钥对名称。
+    * sshKey  **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * userPassword  userPassword
     * removeUserPassword  **参数解释**： 更新节点池时，移除当前节点池密码方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置userPassword **取值范围**： 不涉及 **默认取值**： false
     * removeSshKey  **参数解释**： 更新节点池时，移除当前节点池密钥对方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置sshKey **取值范围**： 不涉及 **默认取值**： false
@@ -36,7 +36,7 @@ class Login implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sshKey  选择密钥对方式登录时的密钥对名称。
+    * sshKey  **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * userPassword  userPassword
     * removeUserPassword  **参数解释**： 更新节点池时，移除当前节点池密码方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置userPassword **取值范围**： 不涉及 **默认取值**： false
     * removeSshKey  **参数解释**： 更新节点池时，移除当前节点池密钥对方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置sshKey **取值范围**： 不涉及 **默认取值**： false
@@ -73,7 +73,7 @@ class Login implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sshKey  选择密钥对方式登录时的密钥对名称。
+    * sshKey  **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * userPassword  userPassword
     * removeUserPassword  **参数解释**： 更新节点池时，移除当前节点池密码方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置userPassword **取值范围**： 不涉及 **默认取值**： false
     * removeSshKey  **参数解释**： 更新节点池时，移除当前节点池密钥对方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置sshKey **取值范围**： 不涉及 **默认取值**： false
@@ -89,7 +89,7 @@ class Login implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sshKey  选择密钥对方式登录时的密钥对名称。
+    * sshKey  **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * userPassword  userPassword
     * removeUserPassword  **参数解释**： 更新节点池时，移除当前节点池密码方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置userPassword **取值范围**： 不涉及 **默认取值**： false
     * removeSshKey  **参数解释**： 更新节点池时，移除当前节点池密钥对方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置sshKey **取值范围**： 不涉及 **默认取值**： false
@@ -105,7 +105,7 @@ class Login implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sshKey  选择密钥对方式登录时的密钥对名称。
+    * sshKey  **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * userPassword  userPassword
     * removeUserPassword  **参数解释**： 更新节点池时，移除当前节点池密码方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置userPassword **取值范围**： 不涉及 **默认取值**： false
     * removeSshKey  **参数解释**： 更新节点池时，移除当前节点池密钥对方式登录的配置 **约束限制**： 仅更新节点池场景支持该参数，设置为true时不允许设置sshKey **取值范围**： 不涉及 **默认取值**： false
@@ -207,7 +207,7 @@ class Login implements ModelInterface, ArrayAccess
 
     /**
     * Gets sshKey
-    *  选择密钥对方式登录时的密钥对名称。
+    *  **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class Login implements ModelInterface, ArrayAccess
     /**
     * Sets sshKey
     *
-    * @param string|null $sshKey 选择密钥对方式登录时的密钥对名称。
+    * @param string|null $sshKey **参数解释**： 选择密钥对方式登录时的密钥对名称。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

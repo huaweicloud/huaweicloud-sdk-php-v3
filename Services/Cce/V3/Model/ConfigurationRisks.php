@@ -20,13 +20,13 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * package  组件名称
-    * sourceFile  涉及文件路径
-    * nodeMsg  节点信息
-    * field  参数值
-    * operation  修改操作类型
-    * originalValue  原始值
-    * value  当前值
+    * package  **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * sourceFile  **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeMsg  **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * field  **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * operation  **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * originalValue  **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * value  **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * package  组件名称
-    * sourceFile  涉及文件路径
-    * nodeMsg  节点信息
-    * field  参数值
-    * operation  修改操作类型
-    * originalValue  原始值
-    * value  当前值
+    * package  **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * sourceFile  **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeMsg  **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * field  **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * operation  **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * originalValue  **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * value  **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * package  组件名称
-    * sourceFile  涉及文件路径
-    * nodeMsg  节点信息
-    * field  参数值
-    * operation  修改操作类型
-    * originalValue  原始值
-    * value  当前值
+    * package  **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * sourceFile  **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeMsg  **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * field  **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * operation  **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * originalValue  **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * value  **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * package  组件名称
-    * sourceFile  涉及文件路径
-    * nodeMsg  节点信息
-    * field  参数值
-    * operation  修改操作类型
-    * originalValue  原始值
-    * value  当前值
+    * package  **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * sourceFile  **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeMsg  **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * field  **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * operation  **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * originalValue  **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * value  **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * package  组件名称
-    * sourceFile  涉及文件路径
-    * nodeMsg  节点信息
-    * field  参数值
-    * operation  修改操作类型
-    * originalValue  原始值
-    * value  当前值
+    * package  **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * sourceFile  **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeMsg  **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * field  **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * operation  **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * originalValue  **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * value  **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets package
-    *  组件名称
+    *  **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets package
     *
-    * @param string|null $package 组件名称
+    * @param string|null $package **参数解释：** 组件名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceFile
-    *  涉及文件路径
+    *  **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets sourceFile
     *
-    * @param string|null $sourceFile 涉及文件路径
+    * @param string|null $sourceFile **参数解释：** 涉及文件路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeMsg
-    *  节点信息
+    *  **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets nodeMsg
     *
-    * @param string|null $nodeMsg 节点信息
+    * @param string|null $nodeMsg **参数解释：** 节点信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets field
-    *  参数值
+    *  **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets field
     *
-    * @param string|null $field 参数值
+    * @param string|null $field **参数解释：** 参数值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets operation
-    *  修改操作类型
+    *  **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets operation
     *
-    * @param string|null $operation 修改操作类型
+    * @param string|null $operation **参数解释：** 修改操作类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets originalValue
-    *  原始值
+    *  **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets originalValue
     *
-    * @param string|null $originalValue 原始值
+    * @param string|null $originalValue **参数解释：** 原始值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  当前值
+    *  **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ConfigurationRisks implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 当前值
+    * @param string|null $value **参数解释：** 当前值。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

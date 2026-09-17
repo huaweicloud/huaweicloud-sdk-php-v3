@@ -20,8 +20,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * kind  API类型，固定值“Addon”，该值不可修改，该字段传入无效。
-    * apiVersion  API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    * kind  **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
+    * apiVersion  **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -36,8 +36,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * kind  API类型，固定值“Addon”，该值不可修改，该字段传入无效。
-    * apiVersion  API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    * kind  **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
+    * apiVersion  **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -73,8 +73,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * kind  API类型，固定值“Addon”，该值不可修改，该字段传入无效。
-    * apiVersion  API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    * kind  **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
+    * apiVersion  **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -89,8 +89,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * kind  API类型，固定值“Addon”，该值不可修改，该字段传入无效。
-    * apiVersion  API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    * kind  **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
+    * apiVersion  **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -105,8 +105,8 @@ class InstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * kind  API类型，固定值“Addon”，该值不可修改，该字段传入无效。
-    * apiVersion  API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    * kind  **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
+    * apiVersion  **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     * metadata  metadata
     * spec  spec
     *
@@ -219,7 +219,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  API类型，固定值“Addon”，该值不可修改，该字段传入无效。
+    *  **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string $kind API类型，固定值“Addon”，该值不可修改，该字段传入无效。
+    * @param string $kind **参数解释**： API类型，固定值\"Addon\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - Addon  **默认取值**： Addon
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    *  **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class InstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string $apiVersion API版本，固定值“v3”，该值不可修改，该字段传入无效。
+    * @param string $apiVersion **参数解释**： API版本，固定值\"v3\"，该值不可修改，该字段传入无效。 **约束限制**： 该值不可修改 **取值范围**： - v3  **默认取值**： v3
     *
     * @return $this
     */

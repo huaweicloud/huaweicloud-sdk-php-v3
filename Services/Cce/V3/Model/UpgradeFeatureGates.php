@@ -20,7 +20,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * supportUpgradePageV4  集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    * supportUpgradePageV4  **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * supportUpgradePageV4  集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    * supportUpgradePageV4  **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * supportUpgradePageV4  集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    * supportUpgradePageV4  **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * supportUpgradePageV4  集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    * supportUpgradePageV4  **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * supportUpgradePageV4  集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    * supportUpgradePageV4  **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportUpgradePageV4
-    *  集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    *  **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @return bool|null
     */
@@ -186,7 +186,7 @@ class UpgradeFeatureGates implements ModelInterface, ArrayAccess
     /**
     * Sets supportUpgradePageV4
     *
-    * @param bool|null $supportUpgradePageV4 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。
+    * @param bool|null $supportUpgradePageV4 **参数解释：** 集群升级Console界面是否支持V4版本，该字段一般由CCE Console使用。 **约束限制：** 不涉及 **取值范围：** - true：支持V4版本 - false：不支持V4版本  **默认取值：** 不涉及
     *
     * @return $this
     */

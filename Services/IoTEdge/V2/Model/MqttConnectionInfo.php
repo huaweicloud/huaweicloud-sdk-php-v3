@@ -23,7 +23,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
     * serverAddress  采用cleint方式连接时，mqtt服务器地址
     * clientId  mqtt连接时，client_id
     * authType  鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写user_name和user_name字段，使用证书认证接入方式(CERTIFICATES)填写privateKey和certificate字段
-    * privateKey  证书秘钥
+    * privateKey  证书密钥
     * certificate  证书
     * userName  用户名
     * password  密码
@@ -47,7 +47,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
     * serverAddress  采用cleint方式连接时，mqtt服务器地址
     * clientId  mqtt连接时，client_id
     * authType  鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写user_name和user_name字段，使用证书认证接入方式(CERTIFICATES)填写privateKey和certificate字段
-    * privateKey  证书秘钥
+    * privateKey  证书密钥
     * certificate  证书
     * userName  用户名
     * password  密码
@@ -92,7 +92,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
     * serverAddress  采用cleint方式连接时，mqtt服务器地址
     * clientId  mqtt连接时，client_id
     * authType  鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写user_name和user_name字段，使用证书认证接入方式(CERTIFICATES)填写privateKey和certificate字段
-    * privateKey  证书秘钥
+    * privateKey  证书密钥
     * certificate  证书
     * userName  用户名
     * password  密码
@@ -116,7 +116,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
     * serverAddress  采用cleint方式连接时，mqtt服务器地址
     * clientId  mqtt连接时，client_id
     * authType  鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写user_name和user_name字段，使用证书认证接入方式(CERTIFICATES)填写privateKey和certificate字段
-    * privateKey  证书秘钥
+    * privateKey  证书密钥
     * certificate  证书
     * userName  用户名
     * password  密码
@@ -140,7 +140,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
     * serverAddress  采用cleint方式连接时，mqtt服务器地址
     * clientId  mqtt连接时，client_id
     * authType  鉴权类型。支持密钥认证接入(SECRET)和证书认证接入(CERTIFICATES)两种方式。使用密钥认证接入方式(SECRET)填写user_name和user_name字段，使用证书认证接入方式(CERTIFICATES)填写privateKey和certificate字段
-    * privateKey  证书秘钥
+    * privateKey  证书密钥
     * certificate  证书
     * userName  用户名
     * password  密码
@@ -362,7 +362,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  证书秘钥
+    *  证书密钥
     *
     * @return string|null
     */
@@ -374,7 +374,7 @@ class MqttConnectionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey 证书秘钥
+    * @param string|null $privateKey 证书密钥
     *
     * @return $this
     */

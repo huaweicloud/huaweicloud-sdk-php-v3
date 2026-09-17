@@ -20,10 +20,10 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
-    * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
-    * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
-    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
+    * mode  **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
-    * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
-    * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
-    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
+    * mode  **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
-    * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
-    * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
-    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
+    * mode  **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
-    * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
-    * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
-    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
+    * mode  **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterRings  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
-    * parallelJobs  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
-    * mode  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
-    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * clusterRings  **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
+    * mode  **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * shrinkNodeNum  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterRings
-    *  **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    *  **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null
     */
@@ -219,7 +219,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterRings
     *
-    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null $clusterRings **参数解释**： 缩容主机环信息。  **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\ClusterRing[]|null $clusterRings **参数解释**： 缩容主机环信息。 **约束限制**：  与shrink_node_num缩容节点个数两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelJobs
-    *  **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
+    *  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets parallelJobs
     *
-    * @param int|null $parallelJobs **参数解释**： 重分布并发配置数。  **约束限制**：  不涉及。 **取值范围**：  1~200。 **默认取值**：  4。
+    * @param int|null $parallelJobs **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。 **取值范围**： 1~200。 **默认取值**：  4。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    *  **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode **参数解释**：  缩容模式。 **约束限制**：  不涉及。 **取值范围**：  read-only：离线模式 insert：在线模式 **默认取值**：  insert
+    * @param string|null $mode **参数解释**： 缩容模式。 **约束限制**：  不涉及。 **取值范围**： read-only：离线模式 insert：在线模式 **默认取值**：  insert
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets shrinkNodeNum
-    *  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    *  **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class ShrinkLogicalClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets shrinkNodeNum
     *
-    * @param int|null $shrinkNodeNum **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**：  不涉及。 **默认取值**：  不涉及。
+    * @param int|null $shrinkNodeNum **参数解释**： 缩容节点个数。 **约束限制**：  与cluster_rings缩容主机环信息两个参数任选其一，两者都存在，优先取cluster_rings缩容主机环信息参数。 **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return $this
     */

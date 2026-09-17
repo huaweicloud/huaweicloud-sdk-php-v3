@@ -37,7 +37,7 @@ class InfluxdbSlowLogDetail implements ModelInterface, ArrayAccess
             'nodeName' => 'string',
             'wholeMessage' => 'string',
             'operateType' => 'string',
-            'costTime' => 'string',
+            'costTime' => 'int',
             'logTime' => 'string',
             'database' => 'string',
             'retentionPolicy' => 'string',
@@ -387,7 +387,7 @@ class InfluxdbSlowLogDetail implements ModelInterface, ArrayAccess
     * Gets costTime
     *  执行时间。单位：ms
     *
-    * @return string
+    * @return int
     */
     public function getCostTime()
     {
@@ -397,7 +397,7 @@ class InfluxdbSlowLogDetail implements ModelInterface, ArrayAccess
     /**
     * Sets costTime
     *
-    * @param string $costTime 执行时间。单位：ms
+    * @param int $costTime 执行时间。单位：ms
     *
     * @return $this
     */

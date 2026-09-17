@@ -29,7 +29,7 @@ class ShowRedisDisabledCommandsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'string',
+            'totalCount' => 'int',
             'disabledType' => 'string',
             'commands' => 'string[]',
             'keys' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RedisDisabledCommandsDetail[]'
@@ -233,7 +233,7 @@ class ShowRedisDisabledCommandsResponse implements ModelInterface, ArrayAccess
     * Gets totalCount
     *  总数。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTotalCount()
     {
@@ -243,7 +243,7 @@ class ShowRedisDisabledCommandsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param string|null $totalCount 总数。
+    * @param int|null $totalCount 总数。
     *
     * @return $this
     */

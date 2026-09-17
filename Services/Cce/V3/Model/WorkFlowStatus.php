@@ -21,8 +21,8 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * phase  phase
-    * pointStatuses  升级流程中的各个任务项的执行状态
-    * lineStatuses  表示该升级流程的任务执行线路
+    * pointStatuses  **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lineStatuses  **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * phase  phase
-    * pointStatuses  升级流程中的各个任务项的执行状态
-    * lineStatuses  表示该升级流程的任务执行线路
+    * pointStatuses  **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lineStatuses  **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * phase  phase
-    * pointStatuses  升级流程中的各个任务项的执行状态
-    * lineStatuses  表示该升级流程的任务执行线路
+    * pointStatuses  **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lineStatuses  **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * phase  phase
-    * pointStatuses  升级流程中的各个任务项的执行状态
-    * lineStatuses  表示该升级流程的任务执行线路
+    * pointStatuses  **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lineStatuses  **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * phase  phase
-    * pointStatuses  升级流程中的各个任务项的执行状态
-    * lineStatuses  表示该升级流程的任务执行线路
+    * pointStatuses  **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * lineStatuses  **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets pointStatuses
-    *  升级流程中的各个任务项的执行状态
+    *  **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\PointStatus[]|null
     */
@@ -232,7 +232,7 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     /**
     * Sets pointStatuses
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\PointStatus[]|null $pointStatuses 升级流程中的各个任务项的执行状态
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\PointStatus[]|null $pointStatuses **参数解释：** 升级流程中的各个任务项的执行状态 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineStatuses
-    *  表示该升级流程的任务执行线路
+    *  **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\LineStatus[]|null
     */
@@ -256,7 +256,7 @@ class WorkFlowStatus implements ModelInterface, ArrayAccess
     /**
     * Sets lineStatuses
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\LineStatus[]|null $lineStatuses 表示该升级流程的任务执行线路
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\LineStatus[]|null $lineStatuses **参数解释：** 表示该升级流程的任务执行线路 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

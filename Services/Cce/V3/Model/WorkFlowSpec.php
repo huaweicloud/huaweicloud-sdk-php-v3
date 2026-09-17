@@ -20,9 +20,9 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群ID，资源唯一标识，创建成功后自动生成，填写无效
-    * clusterVersion  本次集群升级的当前版本
-    * targetVersion  本次集群升级的目标版本
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterVersion  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群ID，资源唯一标识，创建成功后自动生成，填写无效
-    * clusterVersion  本次集群升级的当前版本
-    * targetVersion  本次集群升级的目标版本
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterVersion  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群ID，资源唯一标识，创建成功后自动生成，填写无效
-    * clusterVersion  本次集群升级的当前版本
-    * targetVersion  本次集群升级的目标版本
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterVersion  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群ID，资源唯一标识，创建成功后自动生成，填写无效
-    * clusterVersion  本次集群升级的当前版本
-    * targetVersion  本次集群升级的目标版本
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterVersion  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群ID，资源唯一标识，创建成功后自动生成，填写无效
-    * clusterVersion  本次集群升级的当前版本
-    * targetVersion  本次集群升级的目标版本
+    * clusterId  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * clusterVersion  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersion  **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群ID，资源唯一标识，创建成功后自动生成，填写无效
+    *  **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群ID，资源唯一标识，创建成功后自动生成，填写无效
+    * @param string|null $clusterId **参数解释：** 集群ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterVersion
-    *  本次集群升级的当前版本
+    *  **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterVersion
     *
-    * @param string|null $clusterVersion 本次集群升级的当前版本
+    * @param string|null $clusterVersion **参数解释：** 当前集群版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersion
-    *  本次集群升级的目标版本
+    *  **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class WorkFlowSpec implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersion
     *
-    * @param string $targetVersion 本次集群升级的目标版本
+    * @param string $targetVersion **参数解释：** 本次集群升级的目标版本 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

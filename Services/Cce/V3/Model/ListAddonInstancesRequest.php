@@ -20,7 +20,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * clusterId  **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * clusterId  **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * clusterId  **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * clusterId  **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * clusterId  **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    *  **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -192,7 +192,7 @@ class ListAddonInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群 ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)
+    * @param string $clusterId **参数解释**： 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

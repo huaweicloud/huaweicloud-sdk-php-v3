@@ -28,9 +28,9 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'value' => 'float',
-            'total' => 'float',
-            'contrast' => 'float',
+            'value' => 'double',
+            'total' => 'double',
+            'contrast' => 'double',
             'unit' => 'string'
     ];
 
@@ -44,9 +44,9 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'value' => 'float',
-        'total' => 'float',
-        'contrast' => 'float',
+        'value' => 'double',
+        'total' => 'double',
+        'contrast' => 'double',
         'unit' => null
     ];
 
@@ -209,7 +209,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     * Gets value
     *  当前使用量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getValue()
     {
@@ -219,7 +219,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param float|null $value 当前使用量。
+    * @param double|null $value 当前使用量。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     * Gets total
     *  总量。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getTotal()
     {
@@ -243,7 +243,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param float|null $total 总量。
+    * @param double|null $total 总量。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     * Gets contrast
     *  对比值。
     *
-    * @return float|null
+    * @return double|null
     */
     public function getContrast()
     {
@@ -267,7 +267,7 @@ class ResourceUsage implements ModelInterface, ArrayAccess
     /**
     * Sets contrast
     *
-    * @param float|null $contrast 对比值。
+    * @param double|null $contrast 对比值。
     *
     * @return $this
     */

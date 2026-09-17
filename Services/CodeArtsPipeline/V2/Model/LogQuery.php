@@ -24,6 +24,8 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
+    * offset  **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * level  **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'int',
             'endOffset' => 'int',
             'limit' => 'int',
-            'sort' => 'string'
+            'sort' => 'string',
+            'offset' => 'int',
+            'level' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
+    * offset  **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * level  **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class LogQuery implements ModelInterface, ArrayAccess
         'startOffset' => 'int64',
         'endOffset' => 'int64',
         'limit' => 'int64',
-        'sort' => null
+        'sort' => null,
+        'offset' => 'int64',
+        'level' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
+    * offset  **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * level  **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'start_offset',
             'endOffset' => 'end_offset',
             'limit' => 'limit',
-            'sort' => 'sort'
+            'sort' => 'sort',
+            'offset' => 'offset',
+            'level' => 'level'
     ];
 
     /**
@@ -93,6 +105,8 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
+    * offset  **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * level  **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'setStartOffset',
             'endOffset' => 'setEndOffset',
             'limit' => 'setLimit',
-            'sort' => 'setSort'
+            'sort' => 'setSort',
+            'offset' => 'setOffset',
+            'level' => 'setLevel'
     ];
 
     /**
@@ -109,6 +125,8 @@ class LogQuery implements ModelInterface, ArrayAccess
     * endOffset  **参数解释**： 日志结束偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 最大日志行数。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sort  **参数解释**： 排序规则。 **约束限制**： 不涉及。 **取值范围**： - asc：按排序字段升序。 - desc：按排序字段降序 **默认取值**： 不涉及。
+    * offset  **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * level  **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class LogQuery implements ModelInterface, ArrayAccess
             'startOffset' => 'getStartOffset',
             'endOffset' => 'getEndOffset',
             'limit' => 'getLimit',
-            'sort' => 'getSort'
+            'sort' => 'getSort',
+            'offset' => 'getOffset',
+            'level' => 'getLevel'
     ];
 
     /**
@@ -181,6 +201,8 @@ class LogQuery implements ModelInterface, ArrayAccess
         $this->container['endOffset'] = isset($data['endOffset']) ? $data['endOffset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['level'] = isset($data['level']) ? $data['level'] : null;
     }
 
     /**
@@ -304,6 +326,54 @@ class LogQuery implements ModelInterface, ArrayAccess
     public function setSort($sort)
     {
         $this->container['sort'] = $sort;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**： 日志偏移量。仅查询Jenkins日志时使用，其余场景请使用start_offset和end_offset。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets level
+    *  **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLevel()
+    {
+        return $this->container['level'];
+    }
+
+    /**
+    * Sets level
+    *
+    * @param string|null $level **参数解释**： 日志级别。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setLevel($level)
+    {
+        $this->container['level'] = $level;
         return $this;
     }
 

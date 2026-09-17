@@ -21,7 +21,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
-    * deleteExternalNode  是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    * deleteExternalNode  是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
-    * deleteExternalNode  是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    * deleteExternalNode  是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * edgeNodeId  边缘节点ID
-    * deleteExternalNode  是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    * deleteExternalNode  是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
-    * deleteExternalNode  是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    * deleteExternalNode  是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
-    * deleteExternalNode  是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    * deleteExternalNode  是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @var string[]
     */
@@ -221,7 +221,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets deleteExternalNode
-    *  是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    *  是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @return bool|null
     */
@@ -233,7 +233,7 @@ class DeleteEdgeNodeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets deleteExternalNode
     *
-    * @param bool|null $deleteExternalNode 是否同时删除外部节点（仅对高级版有效），默认为false不删除IEF侧的边缘节点
+    * @param bool|null $deleteExternalNode 是否同时删除外部节点（仅对专业版有效），默认为false不删除IEF侧的边缘节点
     *
     * @return $this
     */

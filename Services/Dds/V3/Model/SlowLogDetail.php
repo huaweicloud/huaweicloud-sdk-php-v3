@@ -32,6 +32,7 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
     * collection  日志所属的数据库表名。
     * logTime  日志产生时间，UTC时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * lineNum  日志单行序列号
+    * indexRecommendation  推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
             'database' => 'string',
             'collection' => 'string',
             'logTime' => 'string',
-            'lineNum' => 'string'
+            'lineNum' => 'string',
+            'indexRecommendation' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
     * collection  日志所属的数据库表名。
     * logTime  日志产生时间，UTC时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * lineNum  日志单行序列号
+    * indexRecommendation  推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
         'database' => null,
         'collection' => null,
         'logTime' => null,
-        'lineNum' => null
+        'lineNum' => null,
+        'indexRecommendation' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
     * collection  日志所属的数据库表名。
     * logTime  日志产生时间，UTC时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * lineNum  日志单行序列号
+    * indexRecommendation  推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
             'database' => 'database',
             'collection' => 'collection',
             'logTime' => 'log_time',
-            'lineNum' => 'line_num'
+            'lineNum' => 'line_num',
+            'indexRecommendation' => 'index_recommendation'
     ];
 
     /**
@@ -149,6 +155,7 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
     * collection  日志所属的数据库表名。
     * logTime  日志产生时间，UTC时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * lineNum  日志单行序列号
+    * indexRecommendation  推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
             'database' => 'setDatabase',
             'collection' => 'setCollection',
             'logTime' => 'setLogTime',
-            'lineNum' => 'setLineNum'
+            'lineNum' => 'setLineNum',
+            'indexRecommendation' => 'setIndexRecommendation'
     ];
 
     /**
@@ -181,6 +189,7 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
     * collection  日志所属的数据库表名。
     * logTime  日志产生时间，UTC时间。 格式为“yyyy-mm-ddThh:mm:ssZ”。 其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * lineNum  日志单行序列号
+    * indexRecommendation  推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
             'database' => 'getDatabase',
             'collection' => 'getCollection',
             'logTime' => 'getLogTime',
-            'lineNum' => 'getLineNum'
+            'lineNum' => 'getLineNum',
+            'indexRecommendation' => 'getIndexRecommendation'
     ];
 
     /**
@@ -269,6 +279,7 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
         $this->container['collection'] = isset($data['collection']) ? $data['collection'] : null;
         $this->container['logTime'] = isset($data['logTime']) ? $data['logTime'] : null;
         $this->container['lineNum'] = isset($data['lineNum']) ? $data['lineNum'] : null;
+        $this->container['indexRecommendation'] = isset($data['indexRecommendation']) ? $data['indexRecommendation'] : null;
     }
 
     /**
@@ -314,6 +325,9 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
         }
         if ($this->container['lineNum'] === null) {
             $invalidProperties[] = "'lineNum' can't be null";
+        }
+        if ($this->container['indexRecommendation'] === null) {
+            $invalidProperties[] = "'indexRecommendation' can't be null";
         }
         return $invalidProperties;
     }
@@ -614,6 +628,30 @@ class SlowLogDetail implements ModelInterface, ArrayAccess
     public function setLineNum($lineNum)
     {
         $this->container['lineNum'] = $lineNum;
+        return $this;
+    }
+
+    /**
+    * Gets indexRecommendation
+    *  推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
+    *
+    * @return string
+    */
+    public function getIndexRecommendation()
+    {
+        return $this->container['indexRecommendation'];
+    }
+
+    /**
+    * Sets indexRecommendation
+    *
+    * @param string $indexRecommendation 推荐的创建索引命令。使用此命令创建索引可优化该慢查询语句。如果结果为空，说明不需要推荐索引，或AI未识别出可优化的索引。
+    *
+    * @return $this
+    */
+    public function setIndexRecommendation($indexRecommendation)
+    {
+        $this->container['indexRecommendation'] = $indexRecommendation;
         return $this;
     }
 

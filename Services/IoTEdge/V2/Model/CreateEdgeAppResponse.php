@@ -31,6 +31,7 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
     * deployType  部署类型docker|process
     * protocol  驱动协议类型OPCUA|Modbus-TCP
     * edgeAppName  应用名称
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -44,7 +45,8 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
             'functionType' => 'string',
             'deployType' => 'string',
             'protocol' => 'string',
-            'edgeAppName' => 'string'
+            'edgeAppName' => 'string',
+            'deliveredApp' => 'bool'
     ];
 
     /**
@@ -59,6 +61,7 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
     * deployType  部署类型docker|process
     * protocol  驱动协议类型OPCUA|Modbus-TCP
     * edgeAppName  应用名称
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -72,7 +75,8 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
         'functionType' => null,
         'deployType' => null,
         'protocol' => null,
-        'edgeAppName' => null
+        'edgeAppName' => null,
+        'deliveredApp' => null
     ];
 
     /**
@@ -108,6 +112,7 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
     * deployType  部署类型docker|process
     * protocol  驱动协议类型OPCUA|Modbus-TCP
     * edgeAppName  应用名称
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -121,7 +126,8 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
             'functionType' => 'function_type',
             'deployType' => 'deploy_type',
             'protocol' => 'protocol',
-            'edgeAppName' => 'edge_app_name'
+            'edgeAppName' => 'edge_app_name',
+            'deliveredApp' => 'delivered_app'
     ];
 
     /**
@@ -136,6 +142,7 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
     * deployType  部署类型docker|process
     * protocol  驱动协议类型OPCUA|Modbus-TCP
     * edgeAppName  应用名称
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -149,7 +156,8 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
             'functionType' => 'setFunctionType',
             'deployType' => 'setDeployType',
             'protocol' => 'setProtocol',
-            'edgeAppName' => 'setEdgeAppName'
+            'edgeAppName' => 'setEdgeAppName',
+            'deliveredApp' => 'setDeliveredApp'
     ];
 
     /**
@@ -164,6 +172,7 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
     * deployType  部署类型docker|process
     * protocol  驱动协议类型OPCUA|Modbus-TCP
     * edgeAppName  应用名称
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -177,7 +186,8 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
             'functionType' => 'getFunctionType',
             'deployType' => 'getDeployType',
             'protocol' => 'getProtocol',
-            'edgeAppName' => 'getEdgeAppName'
+            'edgeAppName' => 'getEdgeAppName',
+            'deliveredApp' => 'getDeliveredApp'
     ];
 
     /**
@@ -248,6 +258,7 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
         $this->container['deployType'] = isset($data['deployType']) ? $data['deployType'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['edgeAppName'] = isset($data['edgeAppName']) ? $data['edgeAppName'] : null;
+        $this->container['deliveredApp'] = isset($data['deliveredApp']) ? $data['deliveredApp'] : null;
     }
 
     /**
@@ -569,6 +580,30 @@ class CreateEdgeAppResponse implements ModelInterface, ArrayAccess
     public function setEdgeAppName($edgeAppName)
     {
         $this->container['edgeAppName'] = $edgeAppName;
+        return $this;
+    }
+
+    /**
+    * Gets deliveredApp
+    *  是否是下发到端侧网关上应用。
+    *
+    * @return bool|null
+    */
+    public function getDeliveredApp()
+    {
+        return $this->container['deliveredApp'];
+    }
+
+    /**
+    * Sets deliveredApp
+    *
+    * @param bool|null $deliveredApp 是否是下发到端侧网关上应用。
+    *
+    * @return $this
+    */
+    public function setDeliveredApp($deliveredApp)
+    {
+        $this->container['deliveredApp'] = $deliveredApp;
         return $this;
     }
 

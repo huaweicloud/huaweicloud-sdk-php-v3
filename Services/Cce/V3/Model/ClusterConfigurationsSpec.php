@@ -20,7 +20,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * packages  组件配置项列表
+    * packages  **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * packages  组件配置项列表
+    * packages  **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * packages  组件配置项列表
+    * packages  **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * packages  组件配置项列表
+    * packages  **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * packages  组件配置项列表
+    * packages  **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets packages
-    *  组件配置项列表
+    *  **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\ClusterConfigurationsSpecPackages[]
     */
@@ -189,7 +189,7 @@ class ClusterConfigurationsSpec implements ModelInterface, ArrayAccess
     /**
     * Sets packages
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterConfigurationsSpecPackages[] $packages 组件配置项列表
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ClusterConfigurationsSpecPackages[] $packages **参数解释：** 组件配置项列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

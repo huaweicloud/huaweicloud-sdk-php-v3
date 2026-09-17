@@ -24,7 +24,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
     * nodeId  节点ID
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的外部实体归属到IoDA哪个资源空间下的边缘节点设备下，否则创建的外部实体将会归属到默认资源空间下对应的边缘节点下,对应于IoDA的app_id.
     * externalId  外部实体ID
-    * protocol  接入协议类型
+    * protocol  接入协议类型：MQTT，HTTP。
     * connectionType  连接类型(client和server)
     * createTime  创建时间
     * lastModifyTime  最后修改时间
@@ -46,7 +46,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
     * nodeId  节点ID
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的外部实体归属到IoDA哪个资源空间下的边缘节点设备下，否则创建的外部实体将会归属到默认资源空间下对应的边缘节点下,对应于IoDA的app_id.
     * externalId  外部实体ID
-    * protocol  接入协议类型
+    * protocol  接入协议类型：MQTT，HTTP。
     * connectionType  连接类型(client和server)
     * createTime  创建时间
     * lastModifyTime  最后修改时间
@@ -89,7 +89,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
     * nodeId  节点ID
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的外部实体归属到IoDA哪个资源空间下的边缘节点设备下，否则创建的外部实体将会归属到默认资源空间下对应的边缘节点下,对应于IoDA的app_id.
     * externalId  外部实体ID
-    * protocol  接入协议类型
+    * protocol  接入协议类型：MQTT，HTTP。
     * connectionType  连接类型(client和server)
     * createTime  创建时间
     * lastModifyTime  最后修改时间
@@ -111,7 +111,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
     * nodeId  节点ID
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的外部实体归属到IoDA哪个资源空间下的边缘节点设备下，否则创建的外部实体将会归属到默认资源空间下对应的边缘节点下,对应于IoDA的app_id.
     * externalId  外部实体ID
-    * protocol  接入协议类型
+    * protocol  接入协议类型：MQTT，HTTP。
     * connectionType  连接类型(client和server)
     * createTime  创建时间
     * lastModifyTime  最后修改时间
@@ -133,7 +133,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
     * nodeId  节点ID
     * spaceId  资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，建议携带该参数指定创建的外部实体归属到IoDA哪个资源空间下的边缘节点设备下，否则创建的外部实体将会归属到默认资源空间下对应的边缘节点下,对应于IoDA的app_id.
     * externalId  外部实体ID
-    * protocol  接入协议类型
+    * protocol  接入协议类型：MQTT，HTTP。
     * connectionType  连接类型(client和server)
     * createTime  创建时间
     * lastModifyTime  最后修改时间
@@ -358,7 +358,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  接入协议类型
+    *  接入协议类型：MQTT，HTTP。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class CreateExternalEntityResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 接入协议类型
+    * @param string|null $protocol 接入协议类型：MQTT，HTTP。
     *
     * @return $this
     */

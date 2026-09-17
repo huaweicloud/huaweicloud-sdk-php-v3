@@ -39,6 +39,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * sslOption  **参数解释：** SSL开关选项。 **约束限制：** 不涉及。 **取值范围：** - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认不启用SSL连接。 **默认取值：** 不涉及。
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
+    * drInfo  drInfo
     * port  **参数解释：** 数据库访问端口号。 **约束限制：** 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。  不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。  如果该实例计划用于搭建双活容灾场景，请配置为8635端口。 **取值范围：** 取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 **默认取值：** 6379。
     * availabilityZoneDetail  availabilityZoneDetail
     * lbAccessControlSettings  lbAccessControlSettings
@@ -65,6 +66,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'sslOption' => 'string',
             'chargeInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ChargeInfoOption',
             'restoreInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\RestoreInfo',
+            'drInfo' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DRInfo',
             'port' => 'string',
             'availabilityZoneDetail' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\AvailabilityZoneDetail',
             'lbAccessControlSettings' => '\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\LbAccessControlSettings'
@@ -91,6 +93,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * sslOption  **参数解释：** SSL开关选项。 **约束限制：** 不涉及。 **取值范围：** - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认不启用SSL连接。 **默认取值：** 不涉及。
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
+    * drInfo  drInfo
     * port  **参数解释：** 数据库访问端口号。 **约束限制：** 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。  不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。  如果该实例计划用于搭建双活容灾场景，请配置为8635端口。 **取值范围：** 取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 **默认取值：** 6379。
     * availabilityZoneDetail  availabilityZoneDetail
     * lbAccessControlSettings  lbAccessControlSettings
@@ -117,6 +120,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         'sslOption' => null,
         'chargeInfo' => null,
         'restoreInfo' => null,
+        'drInfo' => null,
         'port' => null,
         'availabilityZoneDetail' => null,
         'lbAccessControlSettings' => null
@@ -164,6 +168,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * sslOption  **参数解释：** SSL开关选项。 **约束限制：** 不涉及。 **取值范围：** - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认不启用SSL连接。 **默认取值：** 不涉及。
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
+    * drInfo  drInfo
     * port  **参数解释：** 数据库访问端口号。 **约束限制：** 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。  不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。  如果该实例计划用于搭建双活容灾场景，请配置为8635端口。 **取值范围：** 取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 **默认取值：** 6379。
     * availabilityZoneDetail  availabilityZoneDetail
     * lbAccessControlSettings  lbAccessControlSettings
@@ -190,6 +195,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'sslOption' => 'ssl_option',
             'chargeInfo' => 'charge_info',
             'restoreInfo' => 'restore_info',
+            'drInfo' => 'dr_info',
             'port' => 'port',
             'availabilityZoneDetail' => 'availability_zone_detail',
             'lbAccessControlSettings' => 'lb_access_control_settings'
@@ -216,6 +222,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * sslOption  **参数解释：** SSL开关选项。 **约束限制：** 不涉及。 **取值范围：** - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认不启用SSL连接。 **默认取值：** 不涉及。
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
+    * drInfo  drInfo
     * port  **参数解释：** 数据库访问端口号。 **约束限制：** 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。  不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。  如果该实例计划用于搭建双活容灾场景，请配置为8635端口。 **取值范围：** 取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 **默认取值：** 6379。
     * availabilityZoneDetail  availabilityZoneDetail
     * lbAccessControlSettings  lbAccessControlSettings
@@ -242,6 +249,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'sslOption' => 'setSslOption',
             'chargeInfo' => 'setChargeInfo',
             'restoreInfo' => 'setRestoreInfo',
+            'drInfo' => 'setDrInfo',
             'port' => 'setPort',
             'availabilityZoneDetail' => 'setAvailabilityZoneDetail',
             'lbAccessControlSettings' => 'setLbAccessControlSettings'
@@ -268,6 +276,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     * sslOption  **参数解释：** SSL开关选项。 **约束限制：** 不涉及。 **取值范围：** - 取“0”，表示DDS实例默认不启用SSL连接。 - 取“1”，表示DDS实例默认启用SSL连接。 - 不传该参数时，默认不启用SSL连接。 **默认取值：** 不涉及。
     * chargeInfo  chargeInfo
     * restoreInfo  restoreInfo
+    * drInfo  drInfo
     * port  **参数解释：** 数据库访问端口号。 **约束限制：** 目前仅支持GeminiDB Redis实例支持自定义端口，取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。  不指定端口时，创建GeminiDB Redis实例的访问端口默认为6379。  如果该实例计划用于搭建双活容灾场景，请配置为8635端口。 **取值范围：** 取值范围为：1024~65535，禁用端口号为：2180、2887、3887、6377、6378、6380、8018、8079、8091、8479、8484、8999、12017、12333、50069。 **默认取值：** 6379。
     * availabilityZoneDetail  availabilityZoneDetail
     * lbAccessControlSettings  lbAccessControlSettings
@@ -294,6 +303,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
             'sslOption' => 'getSslOption',
             'chargeInfo' => 'getChargeInfo',
             'restoreInfo' => 'getRestoreInfo',
+            'drInfo' => 'getDrInfo',
             'port' => 'getPort',
             'availabilityZoneDetail' => 'getAvailabilityZoneDetail',
             'lbAccessControlSettings' => 'getLbAccessControlSettings'
@@ -376,6 +386,7 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['sslOption'] = isset($data['sslOption']) ? $data['sslOption'] : null;
         $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
         $this->container['restoreInfo'] = isset($data['restoreInfo']) ? $data['restoreInfo'] : null;
+        $this->container['drInfo'] = isset($data['drInfo']) ? $data['drInfo'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['availabilityZoneDetail'] = isset($data['availabilityZoneDetail']) ? $data['availabilityZoneDetail'] : null;
         $this->container['lbAccessControlSettings'] = isset($data['lbAccessControlSettings']) ? $data['lbAccessControlSettings'] : null;
@@ -886,6 +897,30 @@ class CreateInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setRestoreInfo($restoreInfo)
     {
         $this->container['restoreInfo'] = $restoreInfo;
+        return $this;
+    }
+
+    /**
+    * Gets drInfo
+    *  drInfo
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DRInfo|null
+    */
+    public function getDrInfo()
+    {
+        return $this->container['drInfo'];
+    }
+
+    /**
+    * Sets drInfo
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DRInfo|null $drInfo drInfo
+    *
+    * @return $this
+    */
+    public function setDrInfo($drInfo)
+    {
+        $this->container['drInfo'] = $drInfo;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
-    * expireTimeStamp  检查结果过期时间
-    * message  信息，一般是执行错误的日志信息
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterCheckStatus  clusterCheckStatus
     * addonCheckStatus  addonCheckStatus
     * nodeCheckStatus  nodeCheckStatus
@@ -40,9 +40,9 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
-    * expireTimeStamp  检查结果过期时间
-    * message  信息，一般是执行错误的日志信息
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterCheckStatus  clusterCheckStatus
     * addonCheckStatus  addonCheckStatus
     * nodeCheckStatus  nodeCheckStatus
@@ -81,9 +81,9 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
-    * expireTimeStamp  检查结果过期时间
-    * message  信息，一般是执行错误的日志信息
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterCheckStatus  clusterCheckStatus
     * addonCheckStatus  addonCheckStatus
     * nodeCheckStatus  nodeCheckStatus
@@ -101,9 +101,9 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
-    * expireTimeStamp  检查结果过期时间
-    * message  信息，一般是执行错误的日志信息
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterCheckStatus  clusterCheckStatus
     * addonCheckStatus  addonCheckStatus
     * nodeCheckStatus  nodeCheckStatus
@@ -121,9 +121,9 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
-    * expireTimeStamp  检查结果过期时间
-    * message  信息，一般是执行错误的日志信息
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterCheckStatus  clusterCheckStatus
     * addonCheckStatus  addonCheckStatus
     * nodeCheckStatus  nodeCheckStatus
@@ -229,7 +229,7 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
+    *  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase 状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败 - Error 错误
+    * @param string|null $phase **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败 - Error：错误  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTimeStamp
-    *  检查结果过期时间
+    *  **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
     /**
     * Sets expireTimeStamp
     *
-    * @param string|null $expireTimeStamp 检查结果过期时间
+    * @param string|null $expireTimeStamp **参数解释：** 检查结果过期时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  信息，一般是执行错误的日志信息
+    *  **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class PrecheckStatus implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 信息，一般是执行错误的日志信息
+    * @param string|null $message **参数解释：** 信息，一般是执行错误的日志信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

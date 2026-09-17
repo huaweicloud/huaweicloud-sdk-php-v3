@@ -77,7 +77,7 @@ class UpdatePipelineInfoRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'pipelineId' => 'pipeline_id',
-            'componentId' => 'componentId',
+            'componentId' => 'component_id',
             'body' => 'body'
     ];
 

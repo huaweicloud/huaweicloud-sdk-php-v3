@@ -215,8 +215,8 @@ class HttpGetDTO implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['path']) < 2)) {
                 $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 2.";
             }
-            if (!preg_match("/^\/(\\w+\/?)+$/", $this->container['path'])) {
-                $invalidProperties[] = "invalid value for 'path', must be conform to the pattern /^\/(\\w+\/?)+$/.";
+            if (!preg_match("/^\/[\\w\/]{1,63}$/", $this->container['path'])) {
+                $invalidProperties[] = "invalid value for 'path', must be conform to the pattern /^\/[\\w\/]{1,63}$/.";
             }
         if ($this->container['port'] === null) {
             $invalidProperties[] = "'port' can't be null";
@@ -247,12 +247,6 @@ class HttpGetDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['scheme']) > 64)) {
-                $invalidProperties[] = "invalid value for 'scheme', the character length must be smaller than or equal to 64.";
-            }
-            if ((mb_strlen($this->container['scheme']) < 1)) {
-                $invalidProperties[] = "invalid value for 'scheme', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 

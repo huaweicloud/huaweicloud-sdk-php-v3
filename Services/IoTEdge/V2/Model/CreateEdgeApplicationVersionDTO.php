@@ -28,7 +28,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * containerSettings  containerSettings
     * livenessProbe  livenessProbe
     * readinessProbe  readinessProbe
-    * arch  架构
+    * arch  架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     * command  启动命令
     * args  启动参数
     * outputs  应用输出路由端点
@@ -36,6 +36,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * services  应用实现的服务列表
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
             'inputs' => 'object',
             'services' => 'object',
             'supplier' => 'string',
-            'tplId' => 'string'
+            'tplId' => 'string',
+            'preUpgradeProbe' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\PreUpgradeProbeDTO'
     ];
 
     /**
@@ -68,7 +70,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * containerSettings  containerSettings
     * livenessProbe  livenessProbe
     * readinessProbe  readinessProbe
-    * arch  架构
+    * arch  架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     * command  启动命令
     * args  启动参数
     * outputs  应用输出路由端点
@@ -76,6 +78,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * services  应用实现的服务列表
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
         'inputs' => null,
         'services' => null,
         'supplier' => null,
-        'tplId' => null
+        'tplId' => null,
+        'preUpgradeProbe' => null
     ];
 
     /**
@@ -129,7 +133,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * containerSettings  containerSettings
     * livenessProbe  livenessProbe
     * readinessProbe  readinessProbe
-    * arch  架构
+    * arch  架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     * command  启动命令
     * args  启动参数
     * outputs  应用输出路由端点
@@ -137,6 +141,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * services  应用实现的服务列表
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
             'inputs' => 'inputs',
             'services' => 'services',
             'supplier' => 'supplier',
-            'tplId' => 'tpl_id'
+            'tplId' => 'tpl_id',
+            'preUpgradeProbe' => 'pre_upgrade_probe'
     ];
 
     /**
@@ -169,7 +175,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * containerSettings  containerSettings
     * livenessProbe  livenessProbe
     * readinessProbe  readinessProbe
-    * arch  架构
+    * arch  架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     * command  启动命令
     * args  启动参数
     * outputs  应用输出路由端点
@@ -177,6 +183,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * services  应用实现的服务列表
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
             'inputs' => 'setInputs',
             'services' => 'setServices',
             'supplier' => 'setSupplier',
-            'tplId' => 'setTplId'
+            'tplId' => 'setTplId',
+            'preUpgradeProbe' => 'setPreUpgradeProbe'
     ];
 
     /**
@@ -209,7 +217,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * containerSettings  containerSettings
     * livenessProbe  livenessProbe
     * readinessProbe  readinessProbe
-    * arch  架构
+    * arch  架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     * command  启动命令
     * args  启动参数
     * outputs  应用输出路由端点
@@ -217,6 +225,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     * services  应用实现的服务列表
     * supplier  驱动厂商
     * tplId  模板id
+    * preUpgradeProbe  preUpgradeProbe
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
             'inputs' => 'getInputs',
             'services' => 'getServices',
             'supplier' => 'getSupplier',
-            'tplId' => 'getTplId'
+            'tplId' => 'getTplId',
+            'preUpgradeProbe' => 'getPreUpgradeProbe'
     ];
 
     /**
@@ -328,6 +338,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
         $this->container['services'] = isset($data['services']) ? $data['services'] : null;
         $this->container['supplier'] = isset($data['supplier']) ? $data['supplier'] : null;
         $this->container['tplId'] = isset($data['tplId']) ? $data['tplId'] : null;
+        $this->container['preUpgradeProbe'] = isset($data['preUpgradeProbe']) ? $data['preUpgradeProbe'] : null;
     }
 
     /**
@@ -376,12 +387,6 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['deployType']) && (mb_strlen($this->container['deployType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'deployType', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['deployType']) && (mb_strlen($this->container['deployType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'deployType', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['containerSettings'] === null) {
             $invalidProperties[] = "'containerSettings' can't be null";
         }
@@ -614,7 +619,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets arch
-    *  架构
+    *  架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     *
     * @return object
     */
@@ -626,7 +631,7 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     /**
     * Sets arch
     *
-    * @param object $arch 架构
+    * @param object $arch 架构（x86_64|arm32|arm64）,示例：[\"x86_64\"]
     *
     * @return $this
     */
@@ -801,6 +806,30 @@ class CreateEdgeApplicationVersionDTO implements ModelInterface, ArrayAccess
     public function setTplId($tplId)
     {
         $this->container['tplId'] = $tplId;
+        return $this;
+    }
+
+    /**
+    * Gets preUpgradeProbe
+    *  preUpgradeProbe
+    *
+    * @return \HuaweiCloud\SDK\IoTEdge\V2\Model\PreUpgradeProbeDTO|null
+    */
+    public function getPreUpgradeProbe()
+    {
+        return $this->container['preUpgradeProbe'];
+    }
+
+    /**
+    * Sets preUpgradeProbe
+    *
+    * @param \HuaweiCloud\SDK\IoTEdge\V2\Model\PreUpgradeProbeDTO|null $preUpgradeProbe preUpgradeProbe
+    *
+    * @return $this
+    */
+    public function setPreUpgradeProbe($preUpgradeProbe)
+    {
+        $this->container['preUpgradeProbe'] = $preUpgradeProbe;
         return $this;
     }
 

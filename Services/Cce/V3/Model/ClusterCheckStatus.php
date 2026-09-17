@@ -20,8 +20,8 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * itemsStatus  检查项状态集合
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * itemsStatus  **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * itemsStatus  检查项状态集合
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * itemsStatus  **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * itemsStatus  检查项状态集合
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * itemsStatus  **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * itemsStatus  检查项状态集合
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * itemsStatus  **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
-    * itemsStatus  检查项状态集合
+    * phase  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
+    * itemsStatus  **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
+    *  **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string|null $phase 状态，取值如下 - Init: 初始化 - Running 运行中 - Success 成功 - Failed 失败
+    * @param string|null $phase **参数解释：** 状态 **约束限制：** 不涉及 **取值范围：** - Init：初始化 - Running：运行中 - Success：成功 - Failed：失败  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets itemsStatus
-    *  检查项状态集合
+    *  **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\PreCheckItemStatus[]|null
     */
@@ -221,7 +221,7 @@ class ClusterCheckStatus implements ModelInterface, ArrayAccess
     /**
     * Sets itemsStatus
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\PreCheckItemStatus[]|null $itemsStatus 检查项状态集合
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\PreCheckItemStatus[]|null $itemsStatus **参数解释：** 检查项状态集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

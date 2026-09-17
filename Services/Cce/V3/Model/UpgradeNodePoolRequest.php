@@ -21,7 +21,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * nodepoolId  节点池ID
+    * nodepoolId  **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     * body  body
     *
     * @var string[]
@@ -189,8 +189,8 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
         if ($this->container['nodepoolId'] === null) {
             $invalidProperties[] = "'nodepoolId' can't be null";
         }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['nodepoolId'])) {
-                $invalidProperties[] = "invalid value for 'nodepoolId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            if (!preg_match("/^([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|DefaultPool)$/", $this->container['nodepoolId'])) {
+                $invalidProperties[] = "invalid value for 'nodepoolId', must be conform to the pattern /^([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|DefaultPool)$/.";
             }
         return $invalidProperties;
     }
@@ -232,7 +232,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodepoolId
-    *  节点池ID
+    *  **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class UpgradeNodePoolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nodepoolId
     *
-    * @param string $nodepoolId 节点池ID
+    * @param string $nodepoolId **参数解释**： 选择需要同步/升级的节点池 **约束限制**： 不涉及 **取值范围**： - 节点池ID：同步指定节点池中的配置，节点池ID获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。 - DefaultPool：升级默认节点池的配置  **默认取值**： 不涉及
     *
     * @return $this
     */

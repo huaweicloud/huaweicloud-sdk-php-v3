@@ -22,24 +22,28 @@ class Nic implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * eth  网卡信息，如eth0,eth1
     * ip  网卡ip
+    * maskLen  子网掩码的位数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'eth' => 'string',
-            'ip' => 'string'
+            'ip' => 'string',
+            'maskLen' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * eth  网卡信息，如eth0,eth1
     * ip  网卡ip
+    * maskLen  子网掩码的位数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'eth' => null,
-        'ip' => null
+        'ip' => null,
+        'maskLen' => 'int16'
     ];
 
     /**
@@ -67,36 +71,42 @@ class Nic implements ModelInterface, ArrayAccess
     * and the value is the original name
     * eth  网卡信息，如eth0,eth1
     * ip  网卡ip
+    * maskLen  子网掩码的位数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'eth' => 'eth',
-            'ip' => 'ip'
+            'ip' => 'ip',
+            'maskLen' => 'mask_len'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * eth  网卡信息，如eth0,eth1
     * ip  网卡ip
+    * maskLen  子网掩码的位数
     *
     * @var string[]
     */
     protected static $setters = [
             'eth' => 'setEth',
-            'ip' => 'setIp'
+            'ip' => 'setIp',
+            'maskLen' => 'setMaskLen'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * eth  网卡信息，如eth0,eth1
     * ip  网卡ip
+    * maskLen  子网掩码的位数
     *
     * @var string[]
     */
     protected static $getters = [
             'eth' => 'getEth',
-            'ip' => 'getIp'
+            'ip' => 'getIp',
+            'maskLen' => 'getMaskLen'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Nic implements ModelInterface, ArrayAccess
     {
         $this->container['eth'] = isset($data['eth']) ? $data['eth'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
+        $this->container['maskLen'] = isset($data['maskLen']) ? $data['maskLen'] : null;
     }
 
     /**
@@ -180,6 +191,12 @@ class Nic implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['maskLen']) && ($this->container['maskLen'] > 32)) {
+                $invalidProperties[] = "invalid value for 'maskLen', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['maskLen']) && ($this->container['maskLen'] < 0)) {
+                $invalidProperties[] = "invalid value for 'maskLen', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -240,6 +257,30 @@ class Nic implements ModelInterface, ArrayAccess
     public function setIp($ip)
     {
         $this->container['ip'] = $ip;
+        return $this;
+    }
+
+    /**
+    * Gets maskLen
+    *  子网掩码的位数
+    *
+    * @return int|null
+    */
+    public function getMaskLen()
+    {
+        return $this->container['maskLen'];
+    }
+
+    /**
+    * Sets maskLen
+    *
+    * @param int|null $maskLen 子网掩码的位数
+    *
+    * @return $this
+    */
+    public function setMaskLen($maskLen)
+    {
+        $this->container['maskLen'] = $maskLen;
         return $this;
     }
 

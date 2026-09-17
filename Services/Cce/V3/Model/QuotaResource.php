@@ -20,12 +20,12 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * quotaKey  资源类型
-    * quotaLimit  配额值
-    * used  已创建的资源个数
-    * unit  单位
-    * regionId  局点ID。若资源不涉及此参数，则不返回该参数。
-    * availabilityZoneId  可用区ID。若资源不涉及此参数，则不返回该参数。
+    * quotaKey  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
+    * quotaLimit  **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * unit  **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
+    * regionId  **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * availabilityZoneId  **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * quotaKey  资源类型
-    * quotaLimit  配额值
-    * used  已创建的资源个数
-    * unit  单位
-    * regionId  局点ID。若资源不涉及此参数，则不返回该参数。
-    * availabilityZoneId  可用区ID。若资源不涉及此参数，则不返回该参数。
+    * quotaKey  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
+    * quotaLimit  **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * unit  **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
+    * regionId  **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * availabilityZoneId  **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * quotaKey  资源类型
-    * quotaLimit  配额值
-    * used  已创建的资源个数
-    * unit  单位
-    * regionId  局点ID。若资源不涉及此参数，则不返回该参数。
-    * availabilityZoneId  可用区ID。若资源不涉及此参数，则不返回该参数。
+    * quotaKey  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
+    * quotaLimit  **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * unit  **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
+    * regionId  **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * availabilityZoneId  **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * quotaKey  资源类型
-    * quotaLimit  配额值
-    * used  已创建的资源个数
-    * unit  单位
-    * regionId  局点ID。若资源不涉及此参数，则不返回该参数。
-    * availabilityZoneId  可用区ID。若资源不涉及此参数，则不返回该参数。
+    * quotaKey  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
+    * quotaLimit  **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * unit  **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
+    * regionId  **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * availabilityZoneId  **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * quotaKey  资源类型
-    * quotaLimit  配额值
-    * used  已创建的资源个数
-    * unit  单位
-    * regionId  局点ID。若资源不涉及此参数，则不返回该参数。
-    * availabilityZoneId  可用区ID。若资源不涉及此参数，则不返回该参数。
+    * quotaKey  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
+    * quotaLimit  **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * unit  **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
+    * regionId  **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * availabilityZoneId  **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaKey
-    *  资源类型
+    *  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets quotaKey
     *
-    * @param string|null $quotaKey 资源类型
+    * @param string|null $quotaKey **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** - cluster：表示集群配额  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets quotaLimit
-    *  配额值
+    *  **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -265,7 +265,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets quotaLimit
     *
-    * @param int|null $quotaLimit 配额值
+    * @param int|null $quotaLimit **参数解释：** 资源配额值 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -277,7 +277,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  已创建的资源个数
+    *  **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -289,7 +289,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param int|null $used 已创建的资源个数
+    * @param int|null $used **参数解释：** 已创建的资源个数 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  单位
+    *  **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 单位
+    * @param string|null $unit **参数解释：** 资源单位 **约束限制：** 不涉及 **取值范围：** - count：个数  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  局点ID。若资源不涉及此参数，则不返回该参数。
+    *  **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 局点ID。若资源不涉及此参数，则不返回该参数。
+    * @param string|null $regionId **参数解释：** 局点ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZoneId
-    *  可用区ID。若资源不涉及此参数，则不返回该参数。
+    *  **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class QuotaResource implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZoneId
     *
-    * @param string|null $availabilityZoneId 可用区ID。若资源不涉及此参数，则不返回该参数。
+    * @param string|null $availabilityZoneId **参数解释：** 可用区ID。若资源不涉及此参数，则不返回该参数。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -183,11 +183,11 @@ class PointScalingDTO implements ModelInterface, ArrayAccess
         if ($this->container['ratio'] === null) {
             $invalidProperties[] = "'ratio' can't be null";
         }
-            if (($this->container['ratio'] > 1E+4)) {
-                $invalidProperties[] = "invalid value for 'ratio', must be smaller than or equal to 1E+4.";
+            if (($this->container['ratio'] > 2E+4)) {
+                $invalidProperties[] = "invalid value for 'ratio', must be smaller than or equal to 2E+4.";
             }
-            if (($this->container['ratio'] < -1E+4)) {
-                $invalidProperties[] = "invalid value for 'ratio', must be bigger than or equal to -1E+4.";
+            if (($this->container['ratio'] < -2E+4)) {
+                $invalidProperties[] = "invalid value for 'ratio', must be bigger than or equal to -2E+4.";
             }
         if ($this->container['base'] === null) {
             $invalidProperties[] = "'base' can't be null";

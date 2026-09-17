@@ -21,10 +21,10 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  集群升级任务列表
+    * items  **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  集群升级任务列表
+    * items  **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -74,10 +74,10 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  集群升级任务列表
+    * items  **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -90,10 +90,10 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  集群升级任务列表
+    * items  **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -106,10 +106,10 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * metadata  metadata
-    * items  集群升级任务列表
+    * items  **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Gets apiVersion
-    *  api版本，默认为v3
+    *  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion api版本，默认为v3
+    * @param string|null $apiVersion **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Gets kind
-    *  资源类型
+    *  **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
     /**
     * Sets kind
     *
-    * @param string|null $kind 资源类型
+    * @param string|null $kind **参数解释：** 资源类型 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
 
     /**
     * Gets items
-    *  集群升级任务列表
+    *  **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\UpgradeTaskResponseBody[]|null
     */
@@ -292,7 +292,7 @@ class ListAutopilotUpgradeClusterTasksResponse implements ModelInterface, ArrayA
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeTaskResponseBody[]|null $items 集群升级任务列表
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeTaskResponseBody[]|null $items **参数解释：** 集群升级任务列表 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -31,6 +31,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelineRunUpdateTime  **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    * excludePipelineId  **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * includePipelineId  **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersionList  **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
@@ -40,6 +45,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
     * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
     * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    * devUcSecurityLevelList  **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -55,6 +61,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'executorIds' => 'string[]',
             'startTime' => 'string',
             'endTime' => 'string',
+            'pipelineRunUpdateTime' => 'string',
+            'excludePipelineId' => 'string',
+            'includePipelineId' => 'string',
+            'tagList' => 'string[]',
+            'manifestVersionList' => 'string[]',
             'offset' => 'int',
             'limit' => 'int',
             'sortKey' => 'string',
@@ -63,7 +74,8 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'byGroup' => 'bool',
             'isBanned' => 'bool',
             'queryNew' => 'bool',
-            'securityLevelList' => 'int[]'
+            'securityLevelList' => 'int[]',
+            'devUcSecurityLevelList' => 'int[]'
     ];
 
     /**
@@ -79,6 +91,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelineRunUpdateTime  **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    * excludePipelineId  **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * includePipelineId  **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersionList  **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
@@ -88,6 +105,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
     * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
     * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    * devUcSecurityLevelList  **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -103,6 +121,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
         'executorIds' => null,
         'startTime' => null,
         'endTime' => null,
+        'pipelineRunUpdateTime' => null,
+        'excludePipelineId' => null,
+        'includePipelineId' => null,
+        'tagList' => null,
+        'manifestVersionList' => null,
         'offset' => 'int64',
         'limit' => 'int64',
         'sortKey' => null,
@@ -111,7 +134,8 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
         'byGroup' => null,
         'isBanned' => null,
         'queryNew' => null,
-        'securityLevelList' => null
+        'securityLevelList' => null,
+        'devUcSecurityLevelList' => null
     ];
 
     /**
@@ -148,6 +172,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelineRunUpdateTime  **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    * excludePipelineId  **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * includePipelineId  **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersionList  **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
@@ -157,6 +186,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
     * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
     * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    * devUcSecurityLevelList  **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -172,6 +202,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'executorIds' => 'executor_ids',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
+            'pipelineRunUpdateTime' => 'pipeline_run_update_time',
+            'excludePipelineId' => 'exclude_pipeline_id',
+            'includePipelineId' => 'include_pipeline_id',
+            'tagList' => 'tag_list',
+            'manifestVersionList' => 'manifest_version_list',
             'offset' => 'offset',
             'limit' => 'limit',
             'sortKey' => 'sort_key',
@@ -180,7 +215,8 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'byGroup' => 'by_group',
             'isBanned' => 'is_banned',
             'queryNew' => 'query_new',
-            'securityLevelList' => 'security_level_list'
+            'securityLevelList' => 'security_level_list',
+            'devUcSecurityLevelList' => 'dev_uc_security_level_list'
     ];
 
     /**
@@ -196,6 +232,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelineRunUpdateTime  **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    * excludePipelineId  **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * includePipelineId  **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersionList  **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
@@ -205,6 +246,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
     * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
     * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    * devUcSecurityLevelList  **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -220,6 +262,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'executorIds' => 'setExecutorIds',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
+            'pipelineRunUpdateTime' => 'setPipelineRunUpdateTime',
+            'excludePipelineId' => 'setExcludePipelineId',
+            'includePipelineId' => 'setIncludePipelineId',
+            'tagList' => 'setTagList',
+            'manifestVersionList' => 'setManifestVersionList',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'sortKey' => 'setSortKey',
@@ -228,7 +275,8 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'byGroup' => 'setByGroup',
             'isBanned' => 'setIsBanned',
             'queryNew' => 'setQueryNew',
-            'securityLevelList' => 'setSecurityLevelList'
+            'securityLevelList' => 'setSecurityLevelList',
+            'devUcSecurityLevelList' => 'setDevUcSecurityLevelList'
     ];
 
     /**
@@ -244,6 +292,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * executorIds  **参数解释**： 执行人ID列表。 **约束限制**： 不涉及。 **取值范围**： 每个ID为32位字符串。 **默认取值**： 不涉及。
     * startTime  **参数解释**： 流水线开始时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * endTime  **参数解释**： 流水线结束时间。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * pipelineRunUpdateTime  **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    * excludePipelineId  **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * includePipelineId  **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * manifestVersionList  **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * offset  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * limit  **参数解释**： 查询数量。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * sortKey  **参数解释**： 排序字段名称。 **约束限制**： 不涉及。 **取值范围**： - name：流水线名。 - create_time：创建时间。 - update_time：更新时间。 **默认取值**： 不涉及。
@@ -253,6 +306,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     * isBanned  **参数解释**： 是否包含被禁用的流水线。 **约束限制**： 不涉及。 **取值范围**： - true：包含被禁用的流水线。 - false：不包含被禁用的流水线。 **默认取值**： 不涉及。
     * queryNew  **参数解释**： 是否只查询新版流水线。 **约束限制**： 不涉及。 **取值范围**： - true：只查询新版流水线。 - false：不只查询新版流水线。 **默认取值**： true。
     * securityLevelList  **参数解释**： 流水线密集等级。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    * devUcSecurityLevelList  **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -268,6 +322,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'executorIds' => 'getExecutorIds',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
+            'pipelineRunUpdateTime' => 'getPipelineRunUpdateTime',
+            'excludePipelineId' => 'getExcludePipelineId',
+            'includePipelineId' => 'getIncludePipelineId',
+            'tagList' => 'getTagList',
+            'manifestVersionList' => 'getManifestVersionList',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'sortKey' => 'getSortKey',
@@ -276,7 +335,8 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
             'byGroup' => 'getByGroup',
             'isBanned' => 'getIsBanned',
             'queryNew' => 'getQueryNew',
-            'securityLevelList' => 'getSecurityLevelList'
+            'securityLevelList' => 'getSecurityLevelList',
+            'devUcSecurityLevelList' => 'getDevUcSecurityLevelList'
     ];
 
     /**
@@ -348,6 +408,11 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
         $this->container['executorIds'] = isset($data['executorIds']) ? $data['executorIds'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['pipelineRunUpdateTime'] = isset($data['pipelineRunUpdateTime']) ? $data['pipelineRunUpdateTime'] : null;
+        $this->container['excludePipelineId'] = isset($data['excludePipelineId']) ? $data['excludePipelineId'] : null;
+        $this->container['includePipelineId'] = isset($data['includePipelineId']) ? $data['includePipelineId'] : null;
+        $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
+        $this->container['manifestVersionList'] = isset($data['manifestVersionList']) ? $data['manifestVersionList'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
@@ -357,6 +422,7 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
         $this->container['isBanned'] = isset($data['isBanned']) ? $data['isBanned'] : null;
         $this->container['queryNew'] = isset($data['queryNew']) ? $data['queryNew'] : null;
         $this->container['securityLevelList'] = isset($data['securityLevelList']) ? $data['securityLevelList'] : null;
+        $this->container['devUcSecurityLevelList'] = isset($data['devUcSecurityLevelList']) ? $data['devUcSecurityLevelList'] : null;
     }
 
     /**
@@ -646,6 +712,126 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets pipelineRunUpdateTime
+    *  **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPipelineRunUpdateTime()
+    {
+        return $this->container['pipelineRunUpdateTime'];
+    }
+
+    /**
+    * Sets pipelineRunUpdateTime
+    *
+    * @param string|null $pipelineRunUpdateTime **参数解释**： 流水线运行更新时间。 **约束限制**： 不涉及。 **取值范围**： 时间戳或yyyy-MM-dd HH:mm:ss格式。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setPipelineRunUpdateTime($pipelineRunUpdateTime)
+    {
+        $this->container['pipelineRunUpdateTime'] = $pipelineRunUpdateTime;
+        return $this;
+    }
+
+    /**
+    * Gets excludePipelineId
+    *  **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getExcludePipelineId()
+    {
+        return $this->container['excludePipelineId'];
+    }
+
+    /**
+    * Sets excludePipelineId
+    *
+    * @param string|null $excludePipelineId **参数解释**： 排除的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setExcludePipelineId($excludePipelineId)
+    {
+        $this->container['excludePipelineId'] = $excludePipelineId;
+        return $this;
+    }
+
+    /**
+    * Gets includePipelineId
+    *  **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getIncludePipelineId()
+    {
+        return $this->container['includePipelineId'];
+    }
+
+    /**
+    * Sets includePipelineId
+    *
+    * @param string|null $includePipelineId **参数解释**： 包含的流水线ID。 **约束限制**： 不涉及。 **取值范围**： 32位字符，仅由数字和字母组成。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setIncludePipelineId($includePipelineId)
+    {
+        $this->container['includePipelineId'] = $includePipelineId;
+        return $this;
+    }
+
+    /**
+    * Gets tagList
+    *  **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getTagList()
+    {
+        return $this->container['tagList'];
+    }
+
+    /**
+    * Sets tagList
+    *
+    * @param string[]|null $tagList **参数解释**： 流水线标签列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTagList($tagList)
+    {
+        $this->container['tagList'] = $tagList;
+        return $this;
+    }
+
+    /**
+    * Gets manifestVersionList
+    *  **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return string[]|null
+    */
+    public function getManifestVersionList()
+    {
+        return $this->container['manifestVersionList'];
+    }
+
+    /**
+    * Sets manifestVersionList
+    *
+    * @param string[]|null $manifestVersionList **参数解释**： 流水线版本列表。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setManifestVersionList($manifestVersionList)
+    {
+        $this->container['manifestVersionList'] = $manifestVersionList;
+        return $this;
+    }
+
+    /**
     * Gets offset
     *  **参数解释**： 起始偏移。 **约束限制**： 不涉及。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
@@ -858,6 +1044,30 @@ class ListPipelineQuery implements ModelInterface, ArrayAccess
     public function setSecurityLevelList($securityLevelList)
     {
         $this->container['securityLevelList'] = $securityLevelList;
+        return $this;
+    }
+
+    /**
+    * Gets devUcSecurityLevelList
+    *  **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    *
+    * @return int[]|null
+    */
+    public function getDevUcSecurityLevelList()
+    {
+        return $this->container['devUcSecurityLevelList'];
+    }
+
+    /**
+    * Sets devUcSecurityLevelList
+    *
+    * @param int[]|null $devUcSecurityLevelList **参数解释**： DevUC流水线密级列表。 **约束限制**： 非涉密场景无该字段。 **取值范围**： 零及以上正整数。 0：未设置密级。 1：最低密级。 **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDevUcSecurityLevelList($devUcSecurityLevelList)
+    {
+        $this->container['devUcSecurityLevelList'] = $devUcSecurityLevelList;
         return $this;
     }
 

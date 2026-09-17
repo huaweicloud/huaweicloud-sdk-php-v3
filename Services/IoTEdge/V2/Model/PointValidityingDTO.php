@@ -22,24 +22,28 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * min  点位上报值的最小值，小于该值则上报告警
     * max  点位上报值的最大值，大于该值则上报告警
+    * outlierFiltering  异常值过滤
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'min' => 'int',
-            'max' => 'int'
+            'min' => 'object',
+            'max' => 'object',
+            'outlierFiltering' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * min  点位上报值的最小值，小于该值则上报告警
     * max  点位上报值的最大值，大于该值则上报告警
+    * outlierFiltering  异常值过滤
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'min' => 'int64',
-        'max' => 'int64'
+        'min' => null,
+        'max' => null,
+        'outlierFiltering' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * min  点位上报值的最小值，小于该值则上报告警
     * max  点位上报值的最大值，大于该值则上报告警
+    * outlierFiltering  异常值过滤
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'min' => 'min',
-            'max' => 'max'
+            'max' => 'max',
+            'outlierFiltering' => 'outlier_filtering'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * min  点位上报值的最小值，小于该值则上报告警
     * max  点位上报值的最大值，大于该值则上报告警
+    * outlierFiltering  异常值过滤
     *
     * @var string[]
     */
     protected static $setters = [
             'min' => 'setMin',
-            'max' => 'setMax'
+            'max' => 'setMax',
+            'outlierFiltering' => 'setOutlierFiltering'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * min  点位上报值的最小值，小于该值则上报告警
     * max  点位上报值的最大值，大于该值则上报告警
+    * outlierFiltering  异常值过滤
     *
     * @var string[]
     */
     protected static $getters = [
             'min' => 'getMin',
-            'max' => 'getMax'
+            'max' => 'getMax',
+            'outlierFiltering' => 'getOutlierFiltering'
     ];
 
     /**
@@ -159,6 +169,7 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     {
         $this->container['min'] = isset($data['min']) ? $data['min'] : null;
         $this->container['max'] = isset($data['max']) ? $data['max'] : null;
+        $this->container['outlierFiltering'] = isset($data['outlierFiltering']) ? $data['outlierFiltering'] : null;
     }
 
     /**
@@ -172,21 +183,9 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
         if ($this->container['min'] === null) {
             $invalidProperties[] = "'min' can't be null";
         }
-            if (($this->container['min'] > 9007199254740991)) {
-                $invalidProperties[] = "invalid value for 'min', must be smaller than or equal to 9007199254740991.";
-            }
-            if (($this->container['min'] < -9007199254740991)) {
-                $invalidProperties[] = "invalid value for 'min', must be bigger than or equal to -9007199254740991.";
-            }
         if ($this->container['max'] === null) {
             $invalidProperties[] = "'max' can't be null";
         }
-            if (($this->container['max'] > 9007199254740992)) {
-                $invalidProperties[] = "invalid value for 'max', must be smaller than or equal to 9007199254740992.";
-            }
-            if (($this->container['max'] < -9007199254740992)) {
-                $invalidProperties[] = "invalid value for 'max', must be bigger than or equal to -9007199254740992.";
-            }
         return $invalidProperties;
     }
 
@@ -205,7 +204,7 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     * Gets min
     *  点位上报值的最小值，小于该值则上报告警
     *
-    * @return int
+    * @return object
     */
     public function getMin()
     {
@@ -215,7 +214,7 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     /**
     * Sets min
     *
-    * @param int $min 点位上报值的最小值，小于该值则上报告警
+    * @param object $min 点位上报值的最小值，小于该值则上报告警
     *
     * @return $this
     */
@@ -229,7 +228,7 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     * Gets max
     *  点位上报值的最大值，大于该值则上报告警
     *
-    * @return int
+    * @return object
     */
     public function getMax()
     {
@@ -239,13 +238,37 @@ class PointValidityingDTO implements ModelInterface, ArrayAccess
     /**
     * Sets max
     *
-    * @param int $max 点位上报值的最大值，大于该值则上报告警
+    * @param object $max 点位上报值的最大值，大于该值则上报告警
     *
     * @return $this
     */
     public function setMax($max)
     {
         $this->container['max'] = $max;
+        return $this;
+    }
+
+    /**
+    * Gets outlierFiltering
+    *  异常值过滤
+    *
+    * @return bool|null
+    */
+    public function getOutlierFiltering()
+    {
+        return $this->container['outlierFiltering'];
+    }
+
+    /**
+    * Sets outlierFiltering
+    *
+    * @param bool|null $outlierFiltering 异常值过滤
+    *
+    * @return $this
+    */
+    public function setOutlierFiltering($outlierFiltering)
+    {
+        $this->container['outlierFiltering'] = $outlierFiltering;
         return $this;
     }
 

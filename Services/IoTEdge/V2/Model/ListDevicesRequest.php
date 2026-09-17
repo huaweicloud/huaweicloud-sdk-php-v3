@@ -21,8 +21,10 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
-    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     * deviceName  设备名称
+    * moduleId  设备所属的模块id
+    * deviceId  设备ID
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -32,6 +34,8 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
             'edgeNodeId' => 'string',
             'gatewayId' => 'string',
             'deviceName' => 'string',
+            'moduleId' => 'string',
+            'deviceId' => 'string',
             'offset' => 'int',
             'limit' => 'int'
     ];
@@ -39,8 +43,10 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * edgeNodeId  边缘节点ID
-    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     * deviceName  设备名称
+    * moduleId  设备所属的模块id
+    * deviceId  设备ID
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -50,6 +56,8 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
         'edgeNodeId' => null,
         'gatewayId' => null,
         'deviceName' => null,
+        'moduleId' => null,
+        'deviceId' => null,
         'offset' => 'int32',
         'limit' => 'int32'
     ];
@@ -78,8 +86,10 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * edgeNodeId  边缘节点ID
-    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     * deviceName  设备名称
+    * moduleId  设备所属的模块id
+    * deviceId  设备ID
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -89,6 +99,8 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
             'edgeNodeId' => 'edge_node_id',
             'gatewayId' => 'gateway_id',
             'deviceName' => 'device_name',
+            'moduleId' => 'module_id',
+            'deviceId' => 'device_id',
             'offset' => 'offset',
             'limit' => 'limit'
     ];
@@ -96,8 +108,10 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * edgeNodeId  边缘节点ID
-    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     * deviceName  设备名称
+    * moduleId  设备所属的模块id
+    * deviceId  设备ID
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -107,6 +121,8 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
             'edgeNodeId' => 'setEdgeNodeId',
             'gatewayId' => 'setGatewayId',
             'deviceName' => 'setDeviceName',
+            'moduleId' => 'setModuleId',
+            'deviceId' => 'setDeviceId',
             'offset' => 'setOffset',
             'limit' => 'setLimit'
     ];
@@ -114,8 +130,10 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * edgeNodeId  边缘节点ID
-    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    * gatewayId  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     * deviceName  设备名称
+    * moduleId  设备所属的模块id
+    * deviceId  设备ID
     * offset  查询的起始位置，取值范围为非负整数，默认为0
     * limit  每页记录数，默认值为10，取值区间为1-1000
     *
@@ -125,6 +143,8 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
             'edgeNodeId' => 'getEdgeNodeId',
             'gatewayId' => 'getGatewayId',
             'deviceName' => 'getDeviceName',
+            'moduleId' => 'getModuleId',
+            'deviceId' => 'getDeviceId',
             'offset' => 'getOffset',
             'limit' => 'getLimit'
     ];
@@ -190,6 +210,8 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
         $this->container['edgeNodeId'] = isset($data['edgeNodeId']) ? $data['edgeNodeId'] : null;
         $this->container['gatewayId'] = isset($data['gatewayId']) ? $data['gatewayId'] : null;
         $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
+        $this->container['moduleId'] = isset($data['moduleId']) ? $data['moduleId'] : null;
+        $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -228,6 +250,27 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['deviceName']) && (mb_strlen($this->container['deviceName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'deviceName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['deviceName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/", $this->container['deviceName'])) {
+                $invalidProperties[] = "invalid value for 'deviceName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/.";
+            }
+            if (!is_null($this->container['moduleId']) && (mb_strlen($this->container['moduleId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'moduleId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['moduleId']) && (mb_strlen($this->container['moduleId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'moduleId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['moduleId']) && !preg_match("/^[A-Za-z0-9-_]*$/", $this->container['moduleId'])) {
+                $invalidProperties[] = "invalid value for 'moduleId', must be conform to the pattern /^[A-Za-z0-9-_]*$/.";
+            }
+            if (!is_null($this->container['deviceId']) && (mb_strlen($this->container['deviceId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'deviceId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['deviceId']) && (mb_strlen($this->container['deviceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'deviceId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['deviceId']) && !preg_match("/^[a-zA-Z0-9_-]*$/", $this->container['deviceId'])) {
+                $invalidProperties[] = "invalid value for 'deviceId', must be conform to the pattern /^[a-zA-Z0-9_-]*$/.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] > 1000000)) {
                 $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 1000000.";
@@ -281,7 +324,7 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets gatewayId
-    *  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    *  父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     *
     * @return string|null
     */
@@ -293,7 +336,7 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets gatewayId
     *
-    * @param string|null $gatewayId 父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表查询网关直连设备
+    * @param string|null $gatewayId 父设备ID,对应之前的gatewayId的概念，传该参数时代表查询网关下的子设备，不传代表节点下的
     *
     * @return $this
     */
@@ -324,6 +367,54 @@ class ListDevicesRequest implements ModelInterface, ArrayAccess
     public function setDeviceName($deviceName)
     {
         $this->container['deviceName'] = $deviceName;
+        return $this;
+    }
+
+    /**
+    * Gets moduleId
+    *  设备所属的模块id
+    *
+    * @return string|null
+    */
+    public function getModuleId()
+    {
+        return $this->container['moduleId'];
+    }
+
+    /**
+    * Sets moduleId
+    *
+    * @param string|null $moduleId 设备所属的模块id
+    *
+    * @return $this
+    */
+    public function setModuleId($moduleId)
+    {
+        $this->container['moduleId'] = $moduleId;
+        return $this;
+    }
+
+    /**
+    * Gets deviceId
+    *  设备ID
+    *
+    * @return string|null
+    */
+    public function getDeviceId()
+    {
+        return $this->container['deviceId'];
+    }
+
+    /**
+    * Sets deviceId
+    *
+    * @param string|null $deviceId 设备ID
+    *
+    * @return $this
+    */
+    public function setDeviceId($deviceId)
+    {
+        $this->container['deviceId'] = $deviceId;
         return $this;
     }
 

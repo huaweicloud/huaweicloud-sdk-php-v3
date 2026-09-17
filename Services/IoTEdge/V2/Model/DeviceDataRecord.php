@@ -22,7 +22,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * diskQuota  磁盘配额，单位MB，参考值，只能保证在这个值左右
     * age  老化时间，日志压缩文件名时间戳老于这个时间就会发生老化删除
-    * state  配置开关，true启用数据打印，false不启用数据打印
+    * state  配置开关，on启用数据打印，off不启用数据打印
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * diskQuota  磁盘配额，单位MB，参考值，只能保证在这个值左右
     * age  老化时间，日志压缩文件名时间戳老于这个时间就会发生老化删除
-    * state  配置开关，true启用数据打印，false不启用数据打印
+    * state  配置开关，on启用数据打印，off不启用数据打印
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
     * and the value is the original name
     * diskQuota  磁盘配额，单位MB，参考值，只能保证在这个值左右
     * age  老化时间，日志压缩文件名时间戳老于这个时间就会发生老化删除
-    * state  配置开关，true启用数据打印，false不启用数据打印
+    * state  配置开关，on启用数据打印，off不启用数据打印
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * diskQuota  磁盘配额，单位MB，参考值，只能保证在这个值左右
     * age  老化时间，日志压缩文件名时间戳老于这个时间就会发生老化删除
-    * state  配置开关，true启用数据打印，false不启用数据打印
+    * state  配置开关，on启用数据打印，off不启用数据打印
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * diskQuota  磁盘配额，单位MB，参考值，只能保证在这个值左右
     * age  老化时间，日志压缩文件名时间戳老于这个时间就会发生老化删除
-    * state  配置开关，true启用数据打印，false不启用数据打印
+    * state  配置开关，on启用数据打印，off不启用数据打印
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  配置开关，true启用数据打印，false不启用数据打印
+    *  配置开关，on启用数据打印，off不启用数据打印
     *
     * @return string
     */
@@ -286,7 +286,7 @@ class DeviceDataRecord implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state 配置开关，true启用数据打印，false不启用数据打印
+    * @param string $state 配置开关，on启用数据打印，off不启用数据打印
     *
     * @return $this
     */

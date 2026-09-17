@@ -20,14 +20,14 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  集群id
-    * version  插件模板版本号，如1.0.0
-    * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * addonTemplateLogo  插件模板logo图片的地址
-    * addonTemplateLabels  插件模板所属类型
-    * description  插件模板描述
-    * values  插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    * clusterId  **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * version  **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateName  **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateType  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * addonTemplateLogo  **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateLabels  **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * values  **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  集群id
-    * version  插件模板版本号，如1.0.0
-    * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * addonTemplateLogo  插件模板logo图片的地址
-    * addonTemplateLabels  插件模板所属类型
-    * description  插件模板描述
-    * values  插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    * clusterId  **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * version  **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateName  **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateType  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * addonTemplateLogo  **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateLabels  **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * values  **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  集群id
-    * version  插件模板版本号，如1.0.0
-    * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * addonTemplateLogo  插件模板logo图片的地址
-    * addonTemplateLabels  插件模板所属类型
-    * description  插件模板描述
-    * values  插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    * clusterId  **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * version  **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateName  **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateType  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * addonTemplateLogo  **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateLabels  **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * values  **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  集群id
-    * version  插件模板版本号，如1.0.0
-    * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * addonTemplateLogo  插件模板logo图片的地址
-    * addonTemplateLabels  插件模板所属类型
-    * description  插件模板描述
-    * values  插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    * clusterId  **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * version  **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateName  **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateType  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * addonTemplateLogo  **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateLabels  **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * values  **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  集群id
-    * version  插件模板版本号，如1.0.0
-    * addonTemplateName  插件模板名称，如coredns
-    * addonTemplateType  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
-    * addonTemplateLogo  插件模板logo图片的地址
-    * addonTemplateLabels  插件模板所属类型
-    * description  插件模板描述
-    * values  插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    * clusterId  **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * version  **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateName  **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateType  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
+    * addonTemplateLogo  **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * addonTemplateLabels  **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * description  **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * values  **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -272,7 +272,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -284,7 +284,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId 集群id
+    * @param string $clusterId **参数解释**： 集群ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  插件模板版本号，如1.0.0
+    *  **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -308,7 +308,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 插件模板版本号，如1.0.0
+    * @param string $version **参数解释**： 插件模板版本号，如1.0.0。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateName
-    *  插件模板名称，如coredns
+    *  **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateName
     *
-    * @param string $addonTemplateName 插件模板名称，如coredns
+    * @param string $addonTemplateName **参数解释**： 插件模板名称，如coredns。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateType
-    *  **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
+    *  **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -356,7 +356,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateType
     *
-    * @param string $addonTemplateType **参数解释：** 插件模板类型 **约束限制：** 不涉及 **取值范围：** - helm: 表示使用Helm包进行部署的模板类型 - static: 表示静态模板类型  **默认取值：** 不涉及
+    * @param string $addonTemplateType **参数解释**： 插件模板类型。 **约束限制**： 不涉及 **取值范围**： - helm：表示使用Helm包进行部署的模板类型 - static：表示静态模板类型  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateLogo
-    *  插件模板logo图片的地址
+    *  **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateLogo
     *
-    * @param string|null $addonTemplateLogo 插件模板logo图片的地址
+    * @param string|null $addonTemplateLogo **参数解释**： 插件模板logo图片的地址。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateLabels
-    *  插件模板所属类型
+    *  **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -404,7 +404,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateLabels
     *
-    * @param string[]|null $addonTemplateLabels 插件模板所属类型
+    * @param string[]|null $addonTemplateLabels **参数解释**： 插件模板所属类型。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  插件模板描述
+    *  **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string
     */
@@ -428,7 +428,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 插件模板描述
+    * @param string $description **参数解释**： 插件模板描述。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    *  **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return map[string,object]
     */
@@ -452,7 +452,7 @@ class InstanceSpec implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param map[string,object] $values 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。
+    * @param map[string,object] $values **参数解释**： 插件模板安装参数（各插件不同），请根据具体插件模板信息填写安装参数。 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

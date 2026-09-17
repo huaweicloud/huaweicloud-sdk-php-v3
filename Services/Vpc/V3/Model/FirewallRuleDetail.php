@@ -24,7 +24,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
     * name  功能说明：ACL规则名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL规则描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * action  功能说明：ACL规则对流量执行的操作放通或拒绝 取值范围：allow放通；deny拒绝
-    * projectId  功能说明：资源所属项目ID
     * protocol  功能说明：ACL规则协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：ACL规则的ip版本 取值范围：4, 表示ipv4；6, 表示ipv6
     * sourceIpAddress  功能说明：ACL规则源IP地址或者CIDR 约束：source_ip_address和source_address_group_id不能同时设置
@@ -42,7 +41,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'action' => 'string',
-            'projectId' => 'string',
             'protocol' => 'string',
             'ipVersion' => 'int',
             'sourceIpAddress' => 'string',
@@ -60,7 +58,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
     * name  功能说明：ACL规则名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL规则描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * action  功能说明：ACL规则对流量执行的操作放通或拒绝 取值范围：allow放通；deny拒绝
-    * projectId  功能说明：资源所属项目ID
     * protocol  功能说明：ACL规则协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：ACL规则的ip版本 取值范围：4, 表示ipv4；6, 表示ipv6
     * sourceIpAddress  功能说明：ACL规则源IP地址或者CIDR 约束：source_ip_address和source_address_group_id不能同时设置
@@ -78,7 +75,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'action' => null,
-        'projectId' => null,
         'protocol' => null,
         'ipVersion' => 'int32',
         'sourceIpAddress' => null,
@@ -117,7 +113,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
     * name  功能说明：ACL规则名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL规则描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * action  功能说明：ACL规则对流量执行的操作放通或拒绝 取值范围：allow放通；deny拒绝
-    * projectId  功能说明：资源所属项目ID
     * protocol  功能说明：ACL规则协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：ACL规则的ip版本 取值范围：4, 表示ipv4；6, 表示ipv6
     * sourceIpAddress  功能说明：ACL规则源IP地址或者CIDR 约束：source_ip_address和source_address_group_id不能同时设置
@@ -135,7 +130,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'action' => 'action',
-            'projectId' => 'project_id',
             'protocol' => 'protocol',
             'ipVersion' => 'ip_version',
             'sourceIpAddress' => 'source_ip_address',
@@ -153,7 +147,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
     * name  功能说明：ACL规则名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL规则描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * action  功能说明：ACL规则对流量执行的操作放通或拒绝 取值范围：allow放通；deny拒绝
-    * projectId  功能说明：资源所属项目ID
     * protocol  功能说明：ACL规则协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：ACL规则的ip版本 取值范围：4, 表示ipv4；6, 表示ipv6
     * sourceIpAddress  功能说明：ACL规则源IP地址或者CIDR 约束：source_ip_address和source_address_group_id不能同时设置
@@ -171,7 +164,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'action' => 'setAction',
-            'projectId' => 'setProjectId',
             'protocol' => 'setProtocol',
             'ipVersion' => 'setIpVersion',
             'sourceIpAddress' => 'setSourceIpAddress',
@@ -189,7 +181,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
     * name  功能说明：ACL规则名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL规则描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * action  功能说明：ACL规则对流量执行的操作放通或拒绝 取值范围：allow放通；deny拒绝
-    * projectId  功能说明：资源所属项目ID
     * protocol  功能说明：ACL规则协议 取值范围：支持TCP,UDP,ICMP, ICMPV6或者IP协议号（0-255）
     * ipVersion  功能说明：ACL规则的ip版本 取值范围：4, 表示ipv4；6, 表示ipv6
     * sourceIpAddress  功能说明：ACL规则源IP地址或者CIDR 约束：source_ip_address和source_address_group_id不能同时设置
@@ -207,7 +198,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'action' => 'getAction',
-            'projectId' => 'getProjectId',
             'protocol' => 'getProtocol',
             'ipVersion' => 'getIpVersion',
             'sourceIpAddress' => 'getSourceIpAddress',
@@ -281,7 +271,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['sourceIpAddress'] = isset($data['sourceIpAddress']) ? $data['sourceIpAddress'] : null;
@@ -312,9 +301,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
         }
         if ($this->container['action'] === null) {
             $invalidProperties[] = "'action' can't be null";
-        }
-        if ($this->container['projectId'] === null) {
-            $invalidProperties[] = "'projectId' can't be null";
         }
         if ($this->container['protocol'] === null) {
             $invalidProperties[] = "'protocol' can't be null";
@@ -450,30 +436,6 @@ class FirewallRuleDetail implements ModelInterface, ArrayAccess
     public function setAction($action)
     {
         $this->container['action'] = $action;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  功能说明：资源所属项目ID
-    *
-    * @return string
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string $projectId 功能说明：资源所属项目ID
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
         return $this;
     }
 

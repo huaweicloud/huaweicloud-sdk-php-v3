@@ -215,8 +215,8 @@ class CreateEdgeModuleReqDTO implements ModelInterface, ArrayAccess
             if (!preg_match("/^[A-Za-z0-9-_.]*$/", $this->container['appVersion'])) {
                 $invalidProperties[] = "invalid value for 'appVersion', must be conform to the pattern /^[A-Za-z0-9-_.]*$/.";
             }
-            if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'moduleName', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'moduleName', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'moduleName', the character length must be bigger than or equal to 0.";

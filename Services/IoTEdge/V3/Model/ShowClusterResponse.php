@@ -28,6 +28,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
     * state  边缘集群状态
     * os  操作系统
     * arch  集群架构
+    * license  license
+    * resourceId  资源id
+    * clusterType  集群类型
+    * kubernetesVersion  kubernetes版本
+    * licenseStatus  集群license状态
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -41,6 +47,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
             'state' => 'string',
             'os' => 'string',
             'arch' => 'string',
+            'license' => '\HuaweiCloud\SDK\IoTEdge\V3\Model\LicenseInfo',
+            'resourceId' => 'string',
+            'clusterType' => 'string',
+            'kubernetesVersion' => 'string',
+            'licenseStatus' => 'string',
+            'clusterAddr' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -54,6 +66,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
     * state  边缘集群状态
     * os  操作系统
     * arch  集群架构
+    * license  license
+    * resourceId  资源id
+    * clusterType  集群类型
+    * kubernetesVersion  kubernetes版本
+    * licenseStatus  集群license状态
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -67,6 +85,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
         'state' => null,
         'os' => null,
         'arch' => null,
+        'license' => null,
+        'resourceId' => null,
+        'clusterType' => null,
+        'kubernetesVersion' => null,
+        'licenseStatus' => null,
+        'clusterAddr' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -101,6 +125,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
     * state  边缘集群状态
     * os  操作系统
     * arch  集群架构
+    * license  license
+    * resourceId  资源id
+    * clusterType  集群类型
+    * kubernetesVersion  kubernetes版本
+    * licenseStatus  集群license状态
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -114,6 +144,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
             'state' => 'state',
             'os' => 'os',
             'arch' => 'arch',
+            'license' => 'license',
+            'resourceId' => 'resource_id',
+            'clusterType' => 'cluster_type',
+            'kubernetesVersion' => 'kubernetes_version',
+            'licenseStatus' => 'license_status',
+            'clusterAddr' => 'cluster_addr',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -127,6 +163,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
     * state  边缘集群状态
     * os  操作系统
     * arch  集群架构
+    * license  license
+    * resourceId  资源id
+    * clusterType  集群类型
+    * kubernetesVersion  kubernetes版本
+    * licenseStatus  集群license状态
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -140,6 +182,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'os' => 'setOs',
             'arch' => 'setArch',
+            'license' => 'setLicense',
+            'resourceId' => 'setResourceId',
+            'clusterType' => 'setClusterType',
+            'kubernetesVersion' => 'setKubernetesVersion',
+            'licenseStatus' => 'setLicenseStatus',
+            'clusterAddr' => 'setClusterAddr',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -153,6 +201,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
     * state  边缘集群状态
     * os  操作系统
     * arch  集群架构
+    * license  license
+    * resourceId  资源id
+    * clusterType  集群类型
+    * kubernetesVersion  kubernetes版本
+    * licenseStatus  集群license状态
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -166,6 +220,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'os' => 'getOs',
             'arch' => 'getArch',
+            'license' => 'getLicense',
+            'resourceId' => 'getResourceId',
+            'clusterType' => 'getClusterType',
+            'kubernetesVersion' => 'getKubernetesVersion',
+            'licenseStatus' => 'getLicenseStatus',
+            'clusterAddr' => 'getClusterAddr',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -235,6 +295,12 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['os'] = isset($data['os']) ? $data['os'] : null;
         $this->container['arch'] = isset($data['arch']) ? $data['arch'] : null;
+        $this->container['license'] = isset($data['license']) ? $data['license'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
+        $this->container['kubernetesVersion'] = isset($data['kubernetesVersion']) ? $data['kubernetesVersion'] : null;
+        $this->container['licenseStatus'] = isset($data['licenseStatus']) ? $data['licenseStatus'] : null;
+        $this->container['clusterAddr'] = isset($data['clusterAddr']) ? $data['clusterAddr'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -450,6 +516,150 @@ class ShowClusterResponse implements ModelInterface, ArrayAccess
     public function setArch($arch)
     {
         $this->container['arch'] = $arch;
+        return $this;
+    }
+
+    /**
+    * Gets license
+    *  license
+    *
+    * @return \HuaweiCloud\SDK\IoTEdge\V3\Model\LicenseInfo|null
+    */
+    public function getLicense()
+    {
+        return $this->container['license'];
+    }
+
+    /**
+    * Sets license
+    *
+    * @param \HuaweiCloud\SDK\IoTEdge\V3\Model\LicenseInfo|null $license license
+    *
+    * @return $this
+    */
+    public function setLicense($license)
+    {
+        $this->container['license'] = $license;
+        return $this;
+    }
+
+    /**
+    * Gets resourceId
+    *  资源id
+    *
+    * @return string|null
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string|null $resourceId 资源id
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
+    * Gets clusterType
+    *  集群类型
+    *
+    * @return string|null
+    */
+    public function getClusterType()
+    {
+        return $this->container['clusterType'];
+    }
+
+    /**
+    * Sets clusterType
+    *
+    * @param string|null $clusterType 集群类型
+    *
+    * @return $this
+    */
+    public function setClusterType($clusterType)
+    {
+        $this->container['clusterType'] = $clusterType;
+        return $this;
+    }
+
+    /**
+    * Gets kubernetesVersion
+    *  kubernetes版本
+    *
+    * @return string|null
+    */
+    public function getKubernetesVersion()
+    {
+        return $this->container['kubernetesVersion'];
+    }
+
+    /**
+    * Sets kubernetesVersion
+    *
+    * @param string|null $kubernetesVersion kubernetes版本
+    *
+    * @return $this
+    */
+    public function setKubernetesVersion($kubernetesVersion)
+    {
+        $this->container['kubernetesVersion'] = $kubernetesVersion;
+        return $this;
+    }
+
+    /**
+    * Gets licenseStatus
+    *  集群license状态
+    *
+    * @return string|null
+    */
+    public function getLicenseStatus()
+    {
+        return $this->container['licenseStatus'];
+    }
+
+    /**
+    * Sets licenseStatus
+    *
+    * @param string|null $licenseStatus 集群license状态
+    *
+    * @return $this
+    */
+    public function setLicenseStatus($licenseStatus)
+    {
+        $this->container['licenseStatus'] = $licenseStatus;
+        return $this;
+    }
+
+    /**
+    * Gets clusterAddr
+    *  集群地址
+    *
+    * @return string|null
+    */
+    public function getClusterAddr()
+    {
+        return $this->container['clusterAddr'];
+    }
+
+    /**
+    * Sets clusterAddr
+    *
+    * @param string|null $clusterAddr 集群地址
+    *
+    * @return $this
+    */
+    public function setClusterAddr($clusterAddr)
+    {
+        $this->container['clusterAddr'] = $clusterAddr;
         return $this;
     }
 

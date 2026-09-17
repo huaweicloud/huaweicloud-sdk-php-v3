@@ -20,26 +20,26 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * flavor  **参数解释**： 超节点规格
-    * nodepoolId  **参数解释**： 所属节点池ID
-    * nodeTemplate  **参数解释**： 超节点下节点相关的配置。
-    * chargeMode  **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    * flavor  **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
+    * chargeMode  **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'flavor' => 'string',
             'nodepoolId' => 'string',
-            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplateInHyperNode[]',
+            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplateInHyperNode',
             'chargeMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * flavor  **参数解释**： 超节点规格
-    * nodepoolId  **参数解释**： 所属节点池ID
-    * nodeTemplate  **参数解释**： 超节点下节点相关的配置。
-    * chargeMode  **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    * flavor  **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
+    * chargeMode  **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * flavor  **参数解释**： 超节点规格
-    * nodepoolId  **参数解释**： 所属节点池ID
-    * nodeTemplate  **参数解释**： 超节点下节点相关的配置。
-    * chargeMode  **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    * flavor  **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
+    * chargeMode  **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * flavor  **参数解释**： 超节点规格
-    * nodepoolId  **参数解释**： 所属节点池ID
-    * nodeTemplate  **参数解释**： 超节点下节点相关的配置。
-    * chargeMode  **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    * flavor  **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
+    * chargeMode  **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * flavor  **参数解释**： 超节点规格
-    * nodepoolId  **参数解释**： 所属节点池ID
-    * nodeTemplate  **参数解释**： 超节点下节点相关的配置。
-    * chargeMode  **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    * flavor  **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodepoolId  **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
+    * nodeTemplate  nodeTemplate
+    * chargeMode  **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  **参数解释**： 超节点规格
+    *  **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor **参数解释**： 超节点规格
+    * @param string|null $flavor **参数解释**： 超节点规格 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodepoolId
-    *  **参数解释**： 所属节点池ID
+    *  **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets nodepoolId
     *
-    * @param string|null $nodepoolId **参数解释**： 所属节点池ID
+    * @param string|null $nodepoolId **参数解释**： 所属节点池ID **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -255,9 +255,9 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeTemplate
-    *  **参数解释**： 超节点下节点相关的配置。
+    *  nodeTemplate
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplateInHyperNode[]|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplateInHyperNode|null
     */
     public function getNodeTemplate()
     {
@@ -267,7 +267,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets nodeTemplate
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplateInHyperNode[]|null $nodeTemplate **参数解释**： 超节点下节点相关的配置。
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplateInHyperNode|null $nodeTemplate nodeTemplate
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    *  **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class HyperNodeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode **参数解释**： 付费方式 **取值范围**： - prepaid: 预付费，即包年包月； - postpaid: 后付费，即按需付费；
+    * @param string|null $chargeMode **参数解释**： 付费方式 **约束限制**： 不涉及 **取值范围**： - prepaid：预付费，即包年包月； - postpaid：后付费，即按需付费；  **默认取值**： 不涉及
     *
     * @return $this
     */

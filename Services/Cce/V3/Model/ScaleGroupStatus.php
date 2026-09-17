@@ -27,7 +27,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
-    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -59,7 +59,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
-    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -112,7 +112,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
-    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -144,7 +144,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
-    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -176,7 +176,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     * phase  伸缩组状态。 - 空值：可用（伸缩组当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（伸缩组当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（伸缩组当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：伸缩组当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述伸缩组状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 伸缩组扩缩状态：可通过desiredNodeCount/existingNodeCount/upcomingNodeCount节点状态统计信息，精确感知当前伸缩组扩缩状态。 > - 伸缩组可扩容状态：可通过conditions感知伸缩组详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * desiredNodeCount  伸缩组期望节点数
     * unpaidScaleNodeCount  订单未支付节点个数
-    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    * activeNodeCount  **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     * existingNodeCount  existingNodeCount
     * upcomingNodeCount  upcomingNodeCount
     * scaleDownDisabledNodeCount  伸缩组禁止缩容的节点数
@@ -492,7 +492,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeNodeCount
-    *  **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    *  **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -504,7 +504,7 @@ class ScaleGroupStatus implements ModelInterface, ArrayAccess
     /**
     * Sets activeNodeCount
     *
-    * @param int|null $activeNodeCount **参数解释**： 伸缩组就绪节点个数 **取值范围**： 不涉及
+    * @param int|null $activeNodeCount **参数解释**： 伸缩组就绪节点个数 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -32,6 +32,9 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * latestRun  latestRun
     * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    * banned  **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    * description  **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -47,7 +50,10 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'createTime' => 'int',
             'latestRun' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageLatestRun',
             'convertSign' => 'int',
-            'securityLevel' => 'int'
+            'securityLevel' => 'int',
+            'banned' => 'bool',
+            'description' => 'string',
+            'tagList' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageTagList[]'
     ];
 
     /**
@@ -64,6 +70,9 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * latestRun  latestRun
     * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    * banned  **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    * description  **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -79,7 +88,10 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
         'createTime' => 'int64',
         'latestRun' => null,
         'convertSign' => null,
-        'securityLevel' => null
+        'securityLevel' => null,
+        'banned' => null,
+        'description' => null,
+        'tagList' => null
     ];
 
     /**
@@ -117,6 +129,9 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * latestRun  latestRun
     * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    * banned  **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    * description  **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -132,7 +147,10 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'latestRun' => 'latest_run',
             'convertSign' => 'convert_sign',
-            'securityLevel' => 'security_level'
+            'securityLevel' => 'security_level',
+            'banned' => 'banned',
+            'description' => 'description',
+            'tagList' => 'tag_list'
     ];
 
     /**
@@ -149,6 +167,9 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * latestRun  latestRun
     * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    * banned  **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    * description  **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -164,7 +185,10 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'latestRun' => 'setLatestRun',
             'convertSign' => 'setConvertSign',
-            'securityLevel' => 'setSecurityLevel'
+            'securityLevel' => 'setSecurityLevel',
+            'banned' => 'setBanned',
+            'description' => 'setDescription',
+            'tagList' => 'setTagList'
     ];
 
     /**
@@ -181,6 +205,9 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     * latestRun  latestRun
     * convertSign  **参数解释**： 旧版转新版标识。 **取值范围**： 不涉及。
     * securityLevel  **参数解释**： 流水线涉密等级。 **取值范围**： 正整数。 null：未设置密级。 1：最低密级。
+    * banned  **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    * description  **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    * tagList  **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +223,10 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'latestRun' => 'getLatestRun',
             'convertSign' => 'getConvertSign',
-            'securityLevel' => 'getSecurityLevel'
+            'securityLevel' => 'getSecurityLevel',
+            'banned' => 'getBanned',
+            'description' => 'getDescription',
+            'tagList' => 'getTagList'
     ];
 
     /**
@@ -269,6 +299,9 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
         $this->container['latestRun'] = isset($data['latestRun']) ? $data['latestRun'] : null;
         $this->container['convertSign'] = isset($data['convertSign']) ? $data['convertSign'] : null;
         $this->container['securityLevel'] = isset($data['securityLevel']) ? $data['securityLevel'] : null;
+        $this->container['banned'] = isset($data['banned']) ? $data['banned'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['tagList'] = isset($data['tagList']) ? $data['tagList'] : null;
     }
 
     /**
@@ -578,6 +611,78 @@ class ListPipelinesPagePipelines implements ModelInterface, ArrayAccess
     public function setSecurityLevel($securityLevel)
     {
         $this->container['securityLevel'] = $securityLevel;
+        return $this;
+    }
+
+    /**
+    * Gets banned
+    *  **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    *
+    * @return bool|null
+    */
+    public function getBanned()
+    {
+        return $this->container['banned'];
+    }
+
+    /**
+    * Sets banned
+    *
+    * @param bool|null $banned **参数解释**： 是否禁用流水线。 **取值范围**： - true：流水线已禁用。 - false：流水线未禁用。
+    *
+    * @return $this
+    */
+    public function setBanned($banned)
+    {
+        $this->container['banned'] = $banned;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description **参数解释**： 流水线描述。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets tagList
+    *  **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageTagList[]|null
+    */
+    public function getTagList()
+    {
+        return $this->container['tagList'];
+    }
+
+    /**
+    * Sets tagList
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\ListPipelinesPageTagList[]|null $tagList **参数解释**： 流水线标签列表。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setTagList($tagList)
+    {
+        $this->container['tagList'] = $tagList;
         return $this;
     }
 

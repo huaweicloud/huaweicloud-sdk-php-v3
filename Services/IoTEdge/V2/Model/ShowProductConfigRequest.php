@@ -167,8 +167,8 @@ class ShowProductConfigRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['protocolType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'protocolType', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/(Modbus|ONVIF|MQTT|OPC-UA|OPC-DA)/", $this->container['protocolType'])) {
-                $invalidProperties[] = "invalid value for 'protocolType', must be conform to the pattern /(Modbus|ONVIF|MQTT|OPC-UA|OPC-DA)/.";
+            if (!preg_match("/(Modbus|ONVIF|MQTT|OPC-UA|OPC-DA|GB28181)/", $this->container['protocolType'])) {
+                $invalidProperties[] = "invalid value for 'protocolType', must be conform to the pattern /(Modbus|ONVIF|MQTT|OPC-UA|OPC-DA|GB28181)/.";
             }
         return $invalidProperties;
     }

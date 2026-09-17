@@ -20,8 +20,8 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为UpgradeTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为UpgradeTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为UpgradeTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为UpgradeTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为UpgradeTask
+    * apiVersion  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  api版本，默认为v3
+    *  **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string $apiVersion api版本，默认为v3
+    * @param string $apiVersion **参数解释：** API版本，固定值\"v3\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - v3  **默认取值：** v3
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  资源类型，默认为UpgradeTask
+    *  **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class UpgradeClusterRequestMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string $kind 资源类型，默认为UpgradeTask
+    * @param string $kind **参数解释：** API类型，固定值\"UpgradeTask\"，该值不可修改。 **约束限制：** 该值不可修改 **取值范围：** - UpgradeTask  **默认取值：** UpgradeTask
     *
     * @return $this
     */

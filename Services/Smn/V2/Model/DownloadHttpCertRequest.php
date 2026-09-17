@@ -20,7 +20,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * certificateId  证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    * certificateId  证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * certificateId  证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    * certificateId  证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * certificateId  证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    * certificateId  证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * certificateId  证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    * certificateId  证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * certificateId  证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    * certificateId  证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateId
-    *  证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    *  证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DownloadHttpCertRequest implements ModelInterface, ArrayAccess
     /**
     * Sets certificateId
     *
-    * @param string $certificateId 证书文件ID名称，格式为SMN-{RegionID}-{UUID}.pem
+    * @param string $certificateId 证书文件ID名称，格式为SMN_{RegionID}_{UUID}.pem
     *
     * @return $this
     */

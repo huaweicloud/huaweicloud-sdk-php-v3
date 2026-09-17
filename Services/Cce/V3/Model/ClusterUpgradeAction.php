@@ -20,12 +20,13 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * addons  插件配置列表
-    * nodeOrder  节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
-    * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    * addons  **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeOrder  **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodePoolOrder  **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    * targetVersion  **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
+    * isOnlyUpgrade  **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
     *
     * @var string[]
     */
@@ -35,17 +36,19 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodePoolOrder' => 'map[string,int]',
             'strategy' => '\HuaweiCloud\SDK\Cce\V3\Model\UpgradeStrategy',
             'targetVersion' => 'string',
-            'isOnlyUpgrade' => 'bool'
+            'isOnlyUpgrade' => 'bool',
+            'agencyName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * addons  插件配置列表
-    * nodeOrder  节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
-    * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    * addons  **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeOrder  **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodePoolOrder  **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    * targetVersion  **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
+    * isOnlyUpgrade  **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
         'nodePoolOrder' => null,
         'strategy' => null,
         'targetVersion' => null,
-        'isOnlyUpgrade' => null
+        'isOnlyUpgrade' => null,
+        'agencyName' => null
     ];
 
     /**
@@ -81,12 +85,13 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * addons  插件配置列表
-    * nodeOrder  节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
-    * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    * addons  **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeOrder  **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodePoolOrder  **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    * targetVersion  **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
+    * isOnlyUpgrade  **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
     *
     * @var string[]
     */
@@ -96,17 +101,19 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodePoolOrder' => 'nodePoolOrder',
             'strategy' => 'strategy',
             'targetVersion' => 'targetVersion',
-            'isOnlyUpgrade' => 'isOnlyUpgrade'
+            'isOnlyUpgrade' => 'isOnlyUpgrade',
+            'agencyName' => 'agencyName'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * addons  插件配置列表
-    * nodeOrder  节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
-    * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    * addons  **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeOrder  **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodePoolOrder  **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    * targetVersion  **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
+    * isOnlyUpgrade  **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
     *
     * @var string[]
     */
@@ -116,17 +123,19 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodePoolOrder' => 'setNodePoolOrder',
             'strategy' => 'setStrategy',
             'targetVersion' => 'setTargetVersion',
-            'isOnlyUpgrade' => 'setIsOnlyUpgrade'
+            'isOnlyUpgrade' => 'setIsOnlyUpgrade',
+            'agencyName' => 'setAgencyName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * addons  插件配置列表
-    * nodeOrder  节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
-    * nodePoolOrder  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    * addons  **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeOrder  **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodePoolOrder  **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * strategy  strategy
-    * targetVersion  目标集群版本，例如\"v1.23\"
-    * isOnlyUpgrade  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    * targetVersion  **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
+    * isOnlyUpgrade  **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
+    * agencyName  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
             'nodePoolOrder' => 'getNodePoolOrder',
             'strategy' => 'getStrategy',
             'targetVersion' => 'getTargetVersion',
-            'isOnlyUpgrade' => 'getIsOnlyUpgrade'
+            'isOnlyUpgrade' => 'getIsOnlyUpgrade',
+            'agencyName' => 'getAgencyName'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
         $this->container['strategy'] = isset($data['strategy']) ? $data['strategy'] : null;
         $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
         $this->container['isOnlyUpgrade'] = isset($data['isOnlyUpgrade']) ? $data['isOnlyUpgrade'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
     }
 
     /**
@@ -235,7 +246,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets addons
-    *  插件配置列表
+    *  **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\UpgradeAddonConfig[]|null
     */
@@ -247,7 +258,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     /**
     * Sets addons
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeAddonConfig[]|null $addons 插件配置列表
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeAddonConfig[]|null $addons **参数解释：** 插件配置列表，CCE会在集群升级过程中按照配置对插件进行升级 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -259,7 +270,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeOrder
-    *  节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
+    *  **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return map[string,\HuaweiCloud\SDK\Cce\V3\Model\NodePriority[]]|null
     */
@@ -271,7 +282,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     /**
     * Sets nodeOrder
     *
-    * @param map[string,\HuaweiCloud\SDK\Cce\V3\Model\NodePriority[]]|null $nodeOrder 节点池内节点升级顺序配置。 > key表示节点池ID，默认节点池取值为\"DefaultPool\"
+    * @param map[string,\HuaweiCloud\SDK\Cce\V3\Model\NodePriority[]]|null $nodeOrder **参数解释：** 节点池内节点升级顺序配置。key表示节点池ID，默认节点池取值为\"DefaultPool\" **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -283,7 +294,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodePoolOrder
-    *  节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    *  **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return map[string,int]|null
     */
@@ -295,7 +306,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     /**
     * Sets nodePoolOrder
     *
-    * @param map[string,int]|null $nodePoolOrder 节点池升级顺序配置，key/value对格式。 > key表示节点池ID，默认节点池取值为\"DefaultPool\" > value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高
+    * @param map[string,int]|null $nodePoolOrder **参数解释：** 节点池升级顺序配置，key/value对格式。key表示节点池ID，默认节点池取值为\"DefaultPool\"，value表示对应节点池的优先级，默认值为0，优先级最低，数值越大优先级越高 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -331,7 +342,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersion
-    *  目标集群版本，例如\"v1.23\"
+    *  **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -343,7 +354,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersion
     *
-    * @param string $targetVersion 目标集群版本，例如\"v1.23\"
+    * @param string $targetVersion **参数解释：** 升级的目标集群版本，例如\"v1.23\" **约束限制：** 只能升级到高版本，不允许填写等于或低于当前集群版本的值 **取值范围：** CCE支持的集群版本 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -355,7 +366,7 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOnlyUpgrade
-    *  是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    *  **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
     *
     * @return bool|null
     */
@@ -367,13 +378,37 @@ class ClusterUpgradeAction implements ModelInterface, ArrayAccess
     /**
     * Sets isOnlyUpgrade
     *
-    * @param bool|null $isOnlyUpgrade 是否在集群升级流程中执行升级前检查。默认为false，表示会执行升级前检查，如果您在集群升级编排中调用了升级前检查的API，则升级时可用将该字段置为false，不再额外执行一次检查
+    * @param bool|null $isOnlyUpgrade **参数解释：** 是否在集群升级流程中跳过升级前检查。 **约束限制：** 不涉及 **取值范围：** - false：表示在集群升级流程中会执行升级前检查。 - true：表示在集群升级流程中跳过升级前检查。  **默认取值：** false
     *
     * @return $this
     */
     public function setIsOnlyUpgrade($isOnlyUpgrade)
     {
         $this->container['isOnlyUpgrade'] = $isOnlyUpgrade;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName **参数解释：** 指定集群使用的委托。该委托用于生成集群中组件使用的临时访问凭证，在集群中自动创建其他相关云服务的资源时会使用该委托权限。 当不传时，集群将优先继承原有配置，若原先未配置，则自动选择使用CCE的默认委托CCEAutoClusterAgency；当传空时，自动选择使用CCE的默认委托CCEAutoClusterAgency。  [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0556.html)](tag:hws) [ > 关于CCE系统委托的说明详情参见[系统委托说明](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0556.html)](tag:hws_hk)  **约束限制：** 仅v1.28.15-r90、v1.29.15-r50、v1.30.14-r50、v1.31.14-r10、v1.32.9-r10、v1.33.7-r10、v1.34.3-r0及以上版本集群支持该参数 **取值范围：** 不涉及 **默认取值：** 空
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

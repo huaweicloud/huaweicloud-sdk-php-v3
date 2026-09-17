@@ -52,7 +52,7 @@ class PipelineTemplateSimpleVO implements ModelInterface, ArrayAccess
             'creatorName' => 'string',
             'updaterId' => 'string',
             'isCollect' => 'bool',
-            'isShowSource' => 'string',
+            'isShowSource' => 'bool',
             'stages' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineTemplateSimpleVOStages[]'
     ];
 
@@ -642,7 +642,7 @@ class PipelineTemplateSimpleVO implements ModelInterface, ArrayAccess
     * Gets isShowSource
     *  **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getIsShowSource()
     {
@@ -652,7 +652,7 @@ class PipelineTemplateSimpleVO implements ModelInterface, ArrayAccess
     /**
     * Sets isShowSource
     *
-    * @param string|null $isShowSource **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
+    * @param bool|null $isShowSource **参数解释**： 是否展示流水线源。 **取值范围**： - true：展示流水线源。 - false：不展示流水线源。
     *
     * @return $this
     */

@@ -184,8 +184,8 @@ class NodeConfig implements ModelInterface, ArrayAccess
             if (!is_null($this->container['nodeName']) && (mb_strlen($this->container['nodeName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'nodeName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['nodeName']) && !preg_match("/^[A-Za-z0-9-_.]*$/", $this->container['nodeName'])) {
-                $invalidProperties[] = "invalid value for 'nodeName', must be conform to the pattern /^[A-Za-z0-9-_.]*$/.";
+            if (!is_null($this->container['nodeName']) && !preg_match("/^[a-z0-9]{1,32}-(master|worker)-[0-9]{4}$/", $this->container['nodeName'])) {
+                $invalidProperties[] = "invalid value for 'nodeName', must be conform to the pattern /^[a-z0-9]{1,32}-(master|worker)-[0-9]{4}$/.";
             }
         return $invalidProperties;
     }

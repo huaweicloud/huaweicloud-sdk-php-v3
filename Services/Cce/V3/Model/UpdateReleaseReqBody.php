@@ -20,8 +20,8 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chartId  模板ID
-    * action  更新操作，升级为upgrade，回退为rollback
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -36,8 +36,8 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chartId  模板ID
-    * action  更新操作，升级为upgrade，回退为rollback
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -73,8 +73,8 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chartId  模板ID
-    * action  更新操作，升级为upgrade，回退为rollback
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -89,8 +89,8 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chartId  模板ID
-    * action  更新操作，升级为upgrade，回退为rollback
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -105,8 +105,8 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chartId  模板ID
-    * action  更新操作，升级为upgrade，回退为rollback
+    * chartId  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * action  **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     * parameters  parameters
     * values  values
     *
@@ -242,7 +242,7 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets chartId
-    *  模板ID
+    *  **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -254,7 +254,7 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets chartId
     *
-    * @param string $chartId 模板ID
+    * @param string $chartId **参数解释：** 模板ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  更新操作，升级为upgrade，回退为rollback
+    *  **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -278,7 +278,7 @@ class UpdateReleaseReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 更新操作，升级为upgrade，回退为rollback
+    * @param string $action **参数解释：** 更新操作，升级为upgrade，回退为rollback **约束限制：** 不涉及 **取值范围：** - upgrade：升级 - rollback：回退  **默认取值：** 不涉及
     *
     * @return $this
     */

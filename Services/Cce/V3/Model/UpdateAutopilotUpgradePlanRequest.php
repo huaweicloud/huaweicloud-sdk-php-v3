@@ -21,7 +21,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * upgradePlanId  集群自动升级计划ID
+    * upgradePlanId  **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * upgradePlanId  集群自动升级计划ID
+    * upgradePlanId  **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * upgradePlanId  集群自动升级计划ID
+    * upgradePlanId  **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * upgradePlanId  集群自动升级计划ID
+    * upgradePlanId  **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * upgradePlanId  集群自动升级计划ID
+    * upgradePlanId  **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * body  body
     *
     * @var string[]
@@ -232,7 +232,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradePlanId
-    *  集群自动升级计划ID
+    *  **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class UpdateAutopilotUpgradePlanRequest implements ModelInterface, ArrayAccess
     /**
     * Sets upgradePlanId
     *
-    * @param string $upgradePlanId 集群自动升级计划ID
+    * @param string $upgradePlanId **参数解释：** 集群自动升级计划ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

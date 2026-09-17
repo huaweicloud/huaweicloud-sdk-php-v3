@@ -28,6 +28,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
             'definition' => 'string',
             'isSystem' => 'bool',
             'domainId' => 'string',
-            'isShowSource' => 'bool'
+            'isShowSource' => 'bool',
+            'manifestVersion' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
         'definition' => null,
         'isSystem' => null,
         'domainId' => null,
-        'isShowSource' => null
+        'isShowSource' => null,
+        'manifestVersion' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
             'definition' => 'definition',
             'isSystem' => 'is_system',
             'domainId' => 'domain_id',
-            'isShowSource' => 'is_show_source'
+            'isShowSource' => 'is_show_source',
+            'manifestVersion' => 'manifest_version'
     ];
 
     /**
@@ -121,6 +127,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
             'definition' => 'setDefinition',
             'isSystem' => 'setIsSystem',
             'domainId' => 'setDomainId',
-            'isShowSource' => 'setIsShowSource'
+            'isShowSource' => 'setIsShowSource',
+            'manifestVersion' => 'setManifestVersion'
     ];
 
     /**
@@ -145,6 +153,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     * isSystem  **参数解释**： 是否系统模板。 **约束限制**： 不涉及。 **取值范围**： - true：是系统模板。 - false：不是系统模板。 **默认取值**： 不涉及。
     * domainId  **参数解释**： 租户id。 **约束限制**： 不涉及。 **取值范围**： 32位字符，由数字和字母组成。 **默认取值**： 不涉及。
     * isShowSource  **参数解释**： 是否显示流水线源。 **约束限制**： 不涉及。 **取值范围**： - true：显示流水线源。 - false：不显示流水线源。 **默认取值**： 不涉及。
+    * manifestVersion  **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
             'definition' => 'getDefinition',
             'isSystem' => 'getIsSystem',
             'domainId' => 'getDomainId',
-            'isShowSource' => 'getIsShowSource'
+            'isShowSource' => 'getIsShowSource',
+            'manifestVersion' => 'getManifestVersion'
     ];
 
     /**
@@ -225,6 +235,7 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
         $this->container['isSystem'] = isset($data['isSystem']) ? $data['isSystem'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['isShowSource'] = isset($data['isShowSource']) ? $data['isShowSource'] : null;
+        $this->container['manifestVersion'] = isset($data['manifestVersion']) ? $data['manifestVersion'] : null;
     }
 
     /**
@@ -456,6 +467,30 @@ class PipelineTemplateDTO implements ModelInterface, ArrayAccess
     public function setIsShowSource($isShowSource)
     {
         $this->container['isShowSource'] = $isShowSource;
+        return $this;
+    }
+
+    /**
+    * Gets manifestVersion
+    *  **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
+    *
+    * @return string|null
+    */
+    public function getManifestVersion()
+    {
+        return $this->container['manifestVersion'];
+    }
+
+    /**
+    * Sets manifestVersion
+    *
+    * @param string|null $manifestVersion **参数解释**： 模板manifest版本。 **约束限制**： 不涉及。 **取值范围**： - 3.0：CLASSIC版本。 - 2.0.0：YAML版本。 - 4.0：PAC版本。 - 5.0：DATAOPS版本。 - 6.0：GITCODE_ACTIONS_NEW版本。 **默认取值**： 3.0。
+    *
+    * @return $this
+    */
+    public function setManifestVersion($manifestVersion)
+    {
+        $this->container['manifestVersion'] = $manifestVersion;
         return $this;
     }
 

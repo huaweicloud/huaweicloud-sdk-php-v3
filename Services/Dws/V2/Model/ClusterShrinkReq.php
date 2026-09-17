@@ -20,13 +20,13 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * shrinkNumber  **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
-    * online  **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * retry  **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * needAgency  **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
-    * parallelJobs  **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
-    * type  **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * forceBackup  **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * shrinkNumber  **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
+    * online  **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * retry  **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * needAgency  **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
+    * type  **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * forceBackup  **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * shrinkNumber  **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
-    * online  **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * retry  **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * needAgency  **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
-    * parallelJobs  **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
-    * type  **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * forceBackup  **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * shrinkNumber  **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
+    * online  **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * retry  **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * needAgency  **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
+    * type  **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * forceBackup  **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * shrinkNumber  **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
-    * online  **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * retry  **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * needAgency  **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
-    * parallelJobs  **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
-    * type  **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * forceBackup  **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * shrinkNumber  **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
+    * online  **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * retry  **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * needAgency  **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
+    * type  **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * forceBackup  **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * shrinkNumber  **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
-    * online  **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * retry  **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * needAgency  **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
-    * parallelJobs  **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
-    * type  **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * forceBackup  **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * shrinkNumber  **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
+    * online  **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * retry  **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * needAgency  **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
+    * type  **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * forceBackup  **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * shrinkNumber  **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
-    * online  **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * retry  **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
-    * needAgency  **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
-    * parallelJobs  **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
-    * type  **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * forceBackup  **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * shrinkNumber  **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
+    * online  **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * retry  **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
+    * needAgency  **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
+    * parallelJobs  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
+    * type  **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
+    * forceBackup  **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets shrinkNumber
-    *  **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
+    *  **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
     *
     * @return int|null
     */
@@ -252,7 +252,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets shrinkNumber
     *
-    * @param int|null $shrinkNumber **参数解释**：  缩容节点个数。  **约束限制**：  该值不能为空。  **取值范围**：  大于0的整数。  **默认取值**：  不涉及。
+    * @param int|null $shrinkNumber **参数解释**： 缩容节点个数。 **约束限制**：  该值不能为空。  **取值范围**： 大于0的整数。 **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets online
-    *  **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
+    *  **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
     *
     * @return bool|null
     */
@@ -276,7 +276,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets online
     *
-    * @param bool|null $online **参数解释**：  是否是在线缩容。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
+    * @param bool|null $online **参数解释**： 是否是在线缩容。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets retry
-    *  **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
+    *  **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
     *
     * @return bool|null
     */
@@ -300,7 +300,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets retry
     *
-    * @param bool|null $retry **参数解释**：  是否是缩容失败后重试。  **约束限制**：  不涉及。  **取值范围**：  false|true。  **默认取值**：  false。
+    * @param bool|null $retry **参数解释**： 是否是缩容失败后重试。 **约束限制**：  不涉及。  **取值范围**： false|true。 **默认取值**：  false。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets needAgency
-    *  **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
+    *  **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets needAgency
     *
-    * @param bool|null $needAgency **参数解释**：  是否需要委托。  **约束限制**：  不涉及。  **取值范围**：  false或true。  **默认取值**：  false。
+    * @param bool|null $needAgency **参数解释**： 是否需要委托。 **约束限制**：  不涉及。  **取值范围**： false或true。 **默认取值**：  false。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets parallelJobs
-    *  **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
+    *  **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets parallelJobs
     *
-    * @param int|null $parallelJobs **参数解释**：  重分布并发配置数。  **约束限制**：  不涉及。  **取值范围**：  1~200。  **默认取值**：  4。
+    * @param int|null $parallelJobs **参数解释**： 重分布并发配置数。 **约束限制**：  不涉及。  **取值范围**： 1~200。 **默认取值**：  4。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *  **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**：  类型字段，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param string|null $type **参数解释**： 类型字段，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets forceBackup
-    *  **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    *  **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return bool|null
     */
@@ -396,7 +396,7 @@ class ClusterShrinkReq implements ModelInterface, ArrayAccess
     /**
     * Sets forceBackup
     *
-    * @param bool|null $forceBackup **参数解释**：  操作前是否执行备份，字段已废弃不再生效。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param bool|null $forceBackup **参数解释**： 操作前是否执行备份，字段已废弃不再生效。 **约束限制**：  不涉及。  **取值范围**： 不涉及。 **默认取值**：  不涉及。
     *
     * @return $this
     */

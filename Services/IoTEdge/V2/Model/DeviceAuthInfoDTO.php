@@ -20,7 +20,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * authType  边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    * authType  边缘节点认证方式。
     * fingerprint  证书指纹，认证类型使用证书认证接入(CERTIFICATES)需填写该字段。
     * localPath  localPath
     *
@@ -34,7 +34,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * authType  边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    * authType  边缘节点认证方式。
     * fingerprint  证书指纹，认证类型使用证书认证接入(CERTIFICATES)需填写该字段。
     * localPath  localPath
     *
@@ -69,7 +69,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * authType  边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    * authType  边缘节点认证方式。
     * fingerprint  证书指纹，认证类型使用证书认证接入(CERTIFICATES)需填写该字段。
     * localPath  localPath
     *
@@ -83,7 +83,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * authType  边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    * authType  边缘节点认证方式。
     * fingerprint  证书指纹，认证类型使用证书认证接入(CERTIFICATES)需填写该字段。
     * localPath  localPath
     *
@@ -97,7 +97,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * authType  边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    * authType  边缘节点认证方式。
     * fingerprint  证书指纹，认证类型使用证书认证接入(CERTIFICATES)需填写该字段。
     * localPath  localPath
     *
@@ -211,7 +211,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    *  边缘节点认证方式。
     *
     * @return string
     */
@@ -223,7 +223,7 @@ class DeviceAuthInfoDTO implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string $authType 边缘节点认证方式，不填默认为密钥认证接入方式(SECRET)。
+    * @param string $authType 边缘节点认证方式。
     *
     * @return $this
     */

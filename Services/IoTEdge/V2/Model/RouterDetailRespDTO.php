@@ -27,6 +27,7 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
     * output  输出点名称
     * sql  sql參數
     * available  是否可用
+    * type  路由类型：standard|customized
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
             'input' => 'string',
             'output' => 'string',
             'sql' => 'string',
-            'available' => 'bool'
+            'available' => 'bool',
+            'type' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
     * output  输出点名称
     * sql  sql參數
     * available  是否可用
+    * type  路由类型：standard|customized
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
         'input' => null,
         'output' => null,
         'sql' => null,
-        'available' => null
+        'available' => null,
+        'type' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
     * output  输出点名称
     * sql  sql參數
     * available  是否可用
+    * type  路由类型：standard|customized
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
             'input' => 'input',
             'output' => 'output',
             'sql' => 'sql',
-            'available' => 'available'
+            'available' => 'available',
+            'type' => 'type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
     * output  输出点名称
     * sql  sql參數
     * available  是否可用
+    * type  路由类型：standard|customized
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
             'input' => 'setInput',
             'output' => 'setOutput',
             'sql' => 'setSql',
-            'available' => 'setAvailable'
+            'available' => 'setAvailable',
+            'type' => 'setType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
     * output  输出点名称
     * sql  sql參數
     * available  是否可用
+    * type  路由类型：standard|customized
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
             'input' => 'getInput',
             'output' => 'getOutput',
             'sql' => 'getSql',
-            'available' => 'getAvailable'
+            'available' => 'getAvailable',
+            'type' => 'getType'
     ];
 
     /**
@@ -214,6 +224,7 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
         $this->container['output'] = isset($data['output']) ? $data['output'] : null;
         $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
         $this->container['available'] = isset($data['available']) ? $data['available'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -227,8 +238,8 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
         if ($this->container['routeId'] === null) {
             $invalidProperties[] = "'routeId' can't be null";
         }
-            if ((mb_strlen($this->container['routeId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'routeId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['routeId']) > 96)) {
+                $invalidProperties[] = "invalid value for 'routeId', the character length must be smaller than or equal to 96.";
             }
             if ((mb_strlen($this->container['routeId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'routeId', the character length must be bigger than or equal to 0.";
@@ -457,6 +468,30 @@ class RouterDetailRespDTO implements ModelInterface, ArrayAccess
     public function setAvailable($available)
     {
         $this->container['available'] = $available;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  路由类型：standard|customized
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 路由类型：standard|customized
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

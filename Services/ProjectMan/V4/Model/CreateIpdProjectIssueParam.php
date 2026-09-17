@@ -24,6 +24,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * description  描述信息
     * status  状态[\"Committed\", \"Analyse\", \"ToBeConfirmed\", \"Plan\", \"Doing\", \"Delivered\", \"Checking\"]
     * srcDomain  提出项目domainId
+    * featureSet  所属特性集，适用于SF类型工作项
     * submittedBy  提交人Id
     * domainId  归属项目domainId
     * recipient  承接人id
@@ -39,6 +40,12 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * workloadManDay  计划工时
     * businessDomain  领域
     * needBreak  是否需要分解
+    * categoryLayerId  工作项层级ID
+    * parentId  父工作项ID
+    * ir2rr  IR关联的RR的ID
+    * us2rr  US关联的RR的ID
+    * link  关联工作项ID，多值使用英文逗号分隔
+    * ir2feature  IR关联的SF的ID
     *
     * @var string[]
     */
@@ -47,6 +54,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'description' => 'string',
             'status' => 'string',
             'srcDomain' => 'string',
+            'featureSet' => 'string',
             'submittedBy' => 'string',
             'domainId' => 'string',
             'recipient' => 'string[]',
@@ -61,7 +69,13 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'planEndDate' => 'int',
             'workloadManDay' => 'int',
             'businessDomain' => 'string',
-            'needBreak' => 'string'
+            'needBreak' => 'string',
+            'categoryLayerId' => 'string',
+            'parentId' => 'string',
+            'ir2rr' => 'string',
+            'us2rr' => 'string',
+            'link' => 'string',
+            'ir2feature' => 'string'
     ];
 
     /**
@@ -70,6 +84,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * description  描述信息
     * status  状态[\"Committed\", \"Analyse\", \"ToBeConfirmed\", \"Plan\", \"Doing\", \"Delivered\", \"Checking\"]
     * srcDomain  提出项目domainId
+    * featureSet  所属特性集，适用于SF类型工作项
     * submittedBy  提交人Id
     * domainId  归属项目domainId
     * recipient  承接人id
@@ -85,6 +100,12 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * workloadManDay  计划工时
     * businessDomain  领域
     * needBreak  是否需要分解
+    * categoryLayerId  工作项层级ID
+    * parentId  父工作项ID
+    * ir2rr  IR关联的RR的ID
+    * us2rr  US关联的RR的ID
+    * link  关联工作项ID，多值使用英文逗号分隔
+    * ir2feature  IR关联的SF的ID
     *
     * @var string[]
     */
@@ -93,6 +114,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
         'description' => null,
         'status' => null,
         'srcDomain' => null,
+        'featureSet' => null,
         'submittedBy' => null,
         'domainId' => null,
         'recipient' => null,
@@ -107,7 +129,13 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
         'planEndDate' => 'int64',
         'workloadManDay' => 'int32',
         'businessDomain' => null,
-        'needBreak' => null
+        'needBreak' => null,
+        'categoryLayerId' => null,
+        'parentId' => null,
+        'ir2rr' => null,
+        'us2rr' => null,
+        'link' => null,
+        'ir2feature' => null
     ];
 
     /**
@@ -137,6 +165,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * description  描述信息
     * status  状态[\"Committed\", \"Analyse\", \"ToBeConfirmed\", \"Plan\", \"Doing\", \"Delivered\", \"Checking\"]
     * srcDomain  提出项目domainId
+    * featureSet  所属特性集，适用于SF类型工作项
     * submittedBy  提交人Id
     * domainId  归属项目domainId
     * recipient  承接人id
@@ -152,6 +181,12 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * workloadManDay  计划工时
     * businessDomain  领域
     * needBreak  是否需要分解
+    * categoryLayerId  工作项层级ID
+    * parentId  父工作项ID
+    * ir2rr  IR关联的RR的ID
+    * us2rr  US关联的RR的ID
+    * link  关联工作项ID，多值使用英文逗号分隔
+    * ir2feature  IR关联的SF的ID
     *
     * @var string[]
     */
@@ -160,6 +195,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'description' => 'description',
             'status' => 'status',
             'srcDomain' => 'src_domain',
+            'featureSet' => 'feature_set',
             'submittedBy' => 'submitted_by',
             'domainId' => 'domain_id',
             'recipient' => 'recipient',
@@ -174,7 +210,13 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'planEndDate' => 'plan_end_date',
             'workloadManDay' => 'workload_man_day',
             'businessDomain' => 'business_domain',
-            'needBreak' => 'need_break'
+            'needBreak' => 'need_break',
+            'categoryLayerId' => 'category_layer_id',
+            'parentId' => 'parent_id',
+            'ir2rr' => 'ir2rr',
+            'us2rr' => 'us2rr',
+            'link' => 'link',
+            'ir2feature' => 'ir2feature'
     ];
 
     /**
@@ -183,6 +225,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * description  描述信息
     * status  状态[\"Committed\", \"Analyse\", \"ToBeConfirmed\", \"Plan\", \"Doing\", \"Delivered\", \"Checking\"]
     * srcDomain  提出项目domainId
+    * featureSet  所属特性集，适用于SF类型工作项
     * submittedBy  提交人Id
     * domainId  归属项目domainId
     * recipient  承接人id
@@ -198,6 +241,12 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * workloadManDay  计划工时
     * businessDomain  领域
     * needBreak  是否需要分解
+    * categoryLayerId  工作项层级ID
+    * parentId  父工作项ID
+    * ir2rr  IR关联的RR的ID
+    * us2rr  US关联的RR的ID
+    * link  关联工作项ID，多值使用英文逗号分隔
+    * ir2feature  IR关联的SF的ID
     *
     * @var string[]
     */
@@ -206,6 +255,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'status' => 'setStatus',
             'srcDomain' => 'setSrcDomain',
+            'featureSet' => 'setFeatureSet',
             'submittedBy' => 'setSubmittedBy',
             'domainId' => 'setDomainId',
             'recipient' => 'setRecipient',
@@ -220,7 +270,13 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'planEndDate' => 'setPlanEndDate',
             'workloadManDay' => 'setWorkloadManDay',
             'businessDomain' => 'setBusinessDomain',
-            'needBreak' => 'setNeedBreak'
+            'needBreak' => 'setNeedBreak',
+            'categoryLayerId' => 'setCategoryLayerId',
+            'parentId' => 'setParentId',
+            'ir2rr' => 'setIr2rr',
+            'us2rr' => 'setUs2rr',
+            'link' => 'setLink',
+            'ir2feature' => 'setIr2feature'
     ];
 
     /**
@@ -229,6 +285,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * description  描述信息
     * status  状态[\"Committed\", \"Analyse\", \"ToBeConfirmed\", \"Plan\", \"Doing\", \"Delivered\", \"Checking\"]
     * srcDomain  提出项目domainId
+    * featureSet  所属特性集，适用于SF类型工作项
     * submittedBy  提交人Id
     * domainId  归属项目domainId
     * recipient  承接人id
@@ -244,6 +301,12 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     * workloadManDay  计划工时
     * businessDomain  领域
     * needBreak  是否需要分解
+    * categoryLayerId  工作项层级ID
+    * parentId  父工作项ID
+    * ir2rr  IR关联的RR的ID
+    * us2rr  US关联的RR的ID
+    * link  关联工作项ID，多值使用英文逗号分隔
+    * ir2feature  IR关联的SF的ID
     *
     * @var string[]
     */
@@ -252,6 +315,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'status' => 'getStatus',
             'srcDomain' => 'getSrcDomain',
+            'featureSet' => 'getFeatureSet',
             'submittedBy' => 'getSubmittedBy',
             'domainId' => 'getDomainId',
             'recipient' => 'getRecipient',
@@ -266,7 +330,13 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
             'planEndDate' => 'getPlanEndDate',
             'workloadManDay' => 'getWorkloadManDay',
             'businessDomain' => 'getBusinessDomain',
-            'needBreak' => 'getNeedBreak'
+            'needBreak' => 'getNeedBreak',
+            'categoryLayerId' => 'getCategoryLayerId',
+            'parentId' => 'getParentId',
+            'ir2rr' => 'getIr2rr',
+            'us2rr' => 'getUs2rr',
+            'link' => 'getLink',
+            'ir2feature' => 'getIr2feature'
     ];
 
     /**
@@ -331,6 +401,7 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['srcDomain'] = isset($data['srcDomain']) ? $data['srcDomain'] : null;
+        $this->container['featureSet'] = isset($data['featureSet']) ? $data['featureSet'] : null;
         $this->container['submittedBy'] = isset($data['submittedBy']) ? $data['submittedBy'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
@@ -346,6 +417,12 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
         $this->container['workloadManDay'] = isset($data['workloadManDay']) ? $data['workloadManDay'] : null;
         $this->container['businessDomain'] = isset($data['businessDomain']) ? $data['businessDomain'] : null;
         $this->container['needBreak'] = isset($data['needBreak']) ? $data['needBreak'] : null;
+        $this->container['categoryLayerId'] = isset($data['categoryLayerId']) ? $data['categoryLayerId'] : null;
+        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
+        $this->container['ir2rr'] = isset($data['ir2rr']) ? $data['ir2rr'] : null;
+        $this->container['us2rr'] = isset($data['us2rr']) ? $data['us2rr'] : null;
+        $this->container['link'] = isset($data['link']) ? $data['link'] : null;
+        $this->container['ir2feature'] = isset($data['ir2feature']) ? $data['ir2feature'] : null;
     }
 
     /**
@@ -463,6 +540,30 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     public function setSrcDomain($srcDomain)
     {
         $this->container['srcDomain'] = $srcDomain;
+        return $this;
+    }
+
+    /**
+    * Gets featureSet
+    *  所属特性集，适用于SF类型工作项
+    *
+    * @return string|null
+    */
+    public function getFeatureSet()
+    {
+        return $this->container['featureSet'];
+    }
+
+    /**
+    * Sets featureSet
+    *
+    * @param string|null $featureSet 所属特性集，适用于SF类型工作项
+    *
+    * @return $this
+    */
+    public function setFeatureSet($featureSet)
+    {
+        $this->container['featureSet'] = $featureSet;
         return $this;
     }
 
@@ -823,6 +924,150 @@ class CreateIpdProjectIssueParam implements ModelInterface, ArrayAccess
     public function setNeedBreak($needBreak)
     {
         $this->container['needBreak'] = $needBreak;
+        return $this;
+    }
+
+    /**
+    * Gets categoryLayerId
+    *  工作项层级ID
+    *
+    * @return string|null
+    */
+    public function getCategoryLayerId()
+    {
+        return $this->container['categoryLayerId'];
+    }
+
+    /**
+    * Sets categoryLayerId
+    *
+    * @param string|null $categoryLayerId 工作项层级ID
+    *
+    * @return $this
+    */
+    public function setCategoryLayerId($categoryLayerId)
+    {
+        $this->container['categoryLayerId'] = $categoryLayerId;
+        return $this;
+    }
+
+    /**
+    * Gets parentId
+    *  父工作项ID
+    *
+    * @return string|null
+    */
+    public function getParentId()
+    {
+        return $this->container['parentId'];
+    }
+
+    /**
+    * Sets parentId
+    *
+    * @param string|null $parentId 父工作项ID
+    *
+    * @return $this
+    */
+    public function setParentId($parentId)
+    {
+        $this->container['parentId'] = $parentId;
+        return $this;
+    }
+
+    /**
+    * Gets ir2rr
+    *  IR关联的RR的ID
+    *
+    * @return string|null
+    */
+    public function getIr2rr()
+    {
+        return $this->container['ir2rr'];
+    }
+
+    /**
+    * Sets ir2rr
+    *
+    * @param string|null $ir2rr IR关联的RR的ID
+    *
+    * @return $this
+    */
+    public function setIr2rr($ir2rr)
+    {
+        $this->container['ir2rr'] = $ir2rr;
+        return $this;
+    }
+
+    /**
+    * Gets us2rr
+    *  US关联的RR的ID
+    *
+    * @return string|null
+    */
+    public function getUs2rr()
+    {
+        return $this->container['us2rr'];
+    }
+
+    /**
+    * Sets us2rr
+    *
+    * @param string|null $us2rr US关联的RR的ID
+    *
+    * @return $this
+    */
+    public function setUs2rr($us2rr)
+    {
+        $this->container['us2rr'] = $us2rr;
+        return $this;
+    }
+
+    /**
+    * Gets link
+    *  关联工作项ID，多值使用英文逗号分隔
+    *
+    * @return string|null
+    */
+    public function getLink()
+    {
+        return $this->container['link'];
+    }
+
+    /**
+    * Sets link
+    *
+    * @param string|null $link 关联工作项ID，多值使用英文逗号分隔
+    *
+    * @return $this
+    */
+    public function setLink($link)
+    {
+        $this->container['link'] = $link;
+        return $this;
+    }
+
+    /**
+    * Gets ir2feature
+    *  IR关联的SF的ID
+    *
+    * @return string|null
+    */
+    public function getIr2feature()
+    {
+        return $this->container['ir2feature'];
+    }
+
+    /**
+    * Sets ir2feature
+    *
+    * @param string|null $ir2feature IR关联的SF的ID
+    *
+    * @return $this
+    */
+    public function setIr2feature($ir2feature)
+    {
+        $this->container['ir2feature'] = $ir2feature;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  virtualSpace的名称，当前仅支持四种类型：share、kubernetes、runtime、user。 - share：共享磁盘空间配置(取消runtime和kubernetes分区)，需配置lvmConfig； - kubernetes：k8s空间配置，需配置lvmConfig； - runtime：运行时空间配置，需配置runtimeConfig； - user：用户空间配置，需配置lvmConfig
-    * size  virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    * size  **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     * lvmConfig  lvmConfig
     * runtimeConfig  runtimeConfig
     *
@@ -37,7 +37,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  virtualSpace的名称，当前仅支持四种类型：share、kubernetes、runtime、user。 - share：共享磁盘空间配置(取消runtime和kubernetes分区)，需配置lvmConfig； - kubernetes：k8s空间配置，需配置lvmConfig； - runtime：运行时空间配置，需配置runtimeConfig； - user：用户空间配置，需配置lvmConfig
-    * size  virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    * size  **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     * lvmConfig  lvmConfig
     * runtimeConfig  runtimeConfig
     *
@@ -74,7 +74,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  virtualSpace的名称，当前仅支持四种类型：share、kubernetes、runtime、user。 - share：共享磁盘空间配置(取消runtime和kubernetes分区)，需配置lvmConfig； - kubernetes：k8s空间配置，需配置lvmConfig； - runtime：运行时空间配置，需配置runtimeConfig； - user：用户空间配置，需配置lvmConfig
-    * size  virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    * size  **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     * lvmConfig  lvmConfig
     * runtimeConfig  runtimeConfig
     *
@@ -90,7 +90,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  virtualSpace的名称，当前仅支持四种类型：share、kubernetes、runtime、user。 - share：共享磁盘空间配置(取消runtime和kubernetes分区)，需配置lvmConfig； - kubernetes：k8s空间配置，需配置lvmConfig； - runtime：运行时空间配置，需配置runtimeConfig； - user：用户空间配置，需配置lvmConfig
-    * size  virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    * size  **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     * lvmConfig  lvmConfig
     * runtimeConfig  runtimeConfig
     *
@@ -106,7 +106,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  virtualSpace的名称，当前仅支持四种类型：share、kubernetes、runtime、user。 - share：共享磁盘空间配置(取消runtime和kubernetes分区)，需配置lvmConfig； - kubernetes：k8s空间配置，需配置lvmConfig； - runtime：运行时空间配置，需配置runtimeConfig； - user：用户空间配置，需配置lvmConfig
-    * size  virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    * size  **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     * lvmConfig  lvmConfig
     * runtimeConfig  runtimeConfig
     *
@@ -237,7 +237,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    *  **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     *
     * @return string
     */
@@ -249,7 +249,7 @@ class VirtualSpace implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param string $size virtualSpace的大小，仅支持整数百分比。例如：90%。 >一个group中所有virtualSpace的百分比之和不得超过100%
+    * @param string $size **参数解释**： virtualSpace的大小，仅支持整数百分比。例如：90%。 **约束限制**： - 同一StorageGroup内所有VirtualSpace的size之和≤100% - 单个VirtualSpace的size必须≥1%且≤100% **取值范围**： 1% ~ 100% **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -25,6 +25,9 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     * limit  每页记录数，默认值为10，取值区间为1-1000
     * appType  应用类型
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocolTypes  协议类型列表
+    * moduleName  边缘模块名称
     *
     * @var string[]
     */
@@ -33,7 +36,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'appType' => 'string',
-            'functionType' => 'string'
+            'functionType' => 'string',
+            'functionTypes' => 'string[]',
+            'protocolTypes' => 'string[]',
+            'moduleName' => 'string'
     ];
 
     /**
@@ -43,6 +49,9 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     * limit  每页记录数，默认值为10，取值区间为1-1000
     * appType  应用类型
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocolTypes  协议类型列表
+    * moduleName  边缘模块名称
     *
     * @var string[]
     */
@@ -51,7 +60,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'limit' => 'int32',
         'appType' => null,
-        'functionType' => null
+        'functionType' => null,
+        'functionTypes' => null,
+        'protocolTypes' => null,
+        'moduleName' => null
     ];
 
     /**
@@ -82,6 +94,9 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     * limit  每页记录数，默认值为10，取值区间为1-1000
     * appType  应用类型
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocolTypes  协议类型列表
+    * moduleName  边缘模块名称
     *
     * @var string[]
     */
@@ -90,7 +105,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'appType' => 'app_type',
-            'functionType' => 'function_type'
+            'functionType' => 'function_type',
+            'functionTypes' => 'function_types',
+            'protocolTypes' => 'protocol_types',
+            'moduleName' => 'module_name'
     ];
 
     /**
@@ -100,6 +118,9 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     * limit  每页记录数，默认值为10，取值区间为1-1000
     * appType  应用类型
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocolTypes  协议类型列表
+    * moduleName  边缘模块名称
     *
     * @var string[]
     */
@@ -108,7 +129,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'appType' => 'setAppType',
-            'functionType' => 'setFunctionType'
+            'functionType' => 'setFunctionType',
+            'functionTypes' => 'setFunctionTypes',
+            'protocolTypes' => 'setProtocolTypes',
+            'moduleName' => 'setModuleName'
     ];
 
     /**
@@ -118,6 +142,9 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     * limit  每页记录数，默认值为10，取值区间为1-1000
     * appType  应用类型
     * functionType  功能类型
+    * functionTypes  功能类型列表
+    * protocolTypes  协议类型列表
+    * moduleName  边缘模块名称
     *
     * @var string[]
     */
@@ -126,7 +153,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'appType' => 'getAppType',
-            'functionType' => 'getFunctionType'
+            'functionType' => 'getFunctionType',
+            'functionTypes' => 'getFunctionTypes',
+            'protocolTypes' => 'getProtocolTypes',
+            'moduleName' => 'getModuleName'
     ];
 
     /**
@@ -175,6 +205,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     const FUNCTION_TYPE_DATA_PROCESSING = 'DATA_PROCESSING';
     const FUNCTION_TYPE_PROTOCOL_PARSING = 'PROTOCOL_PARSING';
     const FUNCTION_TYPE_ON_PREMISE_INTEGRATION = 'ON_PREMISE_INTEGRATION';
+    const FUNCTION_TYPE_GATEWAY_MANAGER = 'GATEWAY_MANAGER';
+    const FUNCTION_TYPE_COMPOSITE_APPLICATION = 'COMPOSITE_APPLICATION';
+    const FUNCTION_TYPE_DATA_COLLECTION = 'DATA_COLLECTION';
+    const FUNCTION_TYPE_MODEL_INFERENCE = 'MODEL_INFERENCE';
     
 
     /**
@@ -202,6 +236,10 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
             self::FUNCTION_TYPE_DATA_PROCESSING,
             self::FUNCTION_TYPE_PROTOCOL_PARSING,
             self::FUNCTION_TYPE_ON_PREMISE_INTEGRATION,
+            self::FUNCTION_TYPE_GATEWAY_MANAGER,
+            self::FUNCTION_TYPE_COMPOSITE_APPLICATION,
+            self::FUNCTION_TYPE_DATA_COLLECTION,
+            self::FUNCTION_TYPE_MODEL_INFERENCE,
         ];
     }
 
@@ -226,6 +264,9 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['functionType'] = isset($data['functionType']) ? $data['functionType'] : null;
+        $this->container['functionTypes'] = isset($data['functionTypes']) ? $data['functionTypes'] : null;
+        $this->container['protocolTypes'] = isset($data['protocolTypes']) ? $data['protocolTypes'] : null;
+        $this->container['moduleName'] = isset($data['moduleName']) ? $data['moduleName'] : null;
     }
 
     /**
@@ -291,8 +332,17 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['functionType']) && (mb_strlen($this->container['functionType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'functionType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['functionType']) && !preg_match("/(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION)/", $this->container['functionType'])) {
-                $invalidProperties[] = "invalid value for 'functionType', must be conform to the pattern /(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION)/.";
+            if (!is_null($this->container['functionType']) && !preg_match("/(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION|MODEL_INFERENCE)/", $this->container['functionType'])) {
+                $invalidProperties[] = "invalid value for 'functionType', must be conform to the pattern /(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION|MODEL_INFERENCE)/.";
+            }
+            if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'moduleName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['moduleName']) && (mb_strlen($this->container['moduleName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'moduleName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['moduleName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/", $this->container['moduleName'])) {
+                $invalidProperties[] = "invalid value for 'moduleName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/.";
             }
         return $invalidProperties;
     }
@@ -425,6 +475,78 @@ class BatchListModulesRequest implements ModelInterface, ArrayAccess
     public function setFunctionType($functionType)
     {
         $this->container['functionType'] = $functionType;
+        return $this;
+    }
+
+    /**
+    * Gets functionTypes
+    *  功能类型列表
+    *
+    * @return string[]|null
+    */
+    public function getFunctionTypes()
+    {
+        return $this->container['functionTypes'];
+    }
+
+    /**
+    * Sets functionTypes
+    *
+    * @param string[]|null $functionTypes 功能类型列表
+    *
+    * @return $this
+    */
+    public function setFunctionTypes($functionTypes)
+    {
+        $this->container['functionTypes'] = $functionTypes;
+        return $this;
+    }
+
+    /**
+    * Gets protocolTypes
+    *  协议类型列表
+    *
+    * @return string[]|null
+    */
+    public function getProtocolTypes()
+    {
+        return $this->container['protocolTypes'];
+    }
+
+    /**
+    * Sets protocolTypes
+    *
+    * @param string[]|null $protocolTypes 协议类型列表
+    *
+    * @return $this
+    */
+    public function setProtocolTypes($protocolTypes)
+    {
+        $this->container['protocolTypes'] = $protocolTypes;
+        return $this;
+    }
+
+    /**
+    * Gets moduleName
+    *  边缘模块名称
+    *
+    * @return string|null
+    */
+    public function getModuleName()
+    {
+        return $this->container['moduleName'];
+    }
+
+    /**
+    * Sets moduleName
+    *
+    * @param string|null $moduleName 边缘模块名称
+    *
+    * @return $this
+    */
+    public function setModuleName($moduleName)
+    {
+        $this->container['moduleName'] = $moduleName;
         return $this;
     }
 

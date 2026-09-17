@@ -21,7 +21,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * nodeInfo  nodeInfo
-    * itemsStatus  检查项状态集合
+    * itemsStatus  **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * nodeInfo  nodeInfo
-    * itemsStatus  检查项状态集合
+    * itemsStatus  **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * nodeInfo  nodeInfo
-    * itemsStatus  检查项状态集合
+    * itemsStatus  **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * nodeInfo  nodeInfo
-    * itemsStatus  检查项状态集合
+    * itemsStatus  **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * nodeInfo  nodeInfo
-    * itemsStatus  检查项状态集合
+    * itemsStatus  **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets itemsStatus
-    *  检查项状态集合
+    *  **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\PreCheckItemStatus[]|null
     */
@@ -221,7 +221,7 @@ class NodeStageStatus implements ModelInterface, ArrayAccess
     /**
     * Sets itemsStatus
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\PreCheckItemStatus[]|null $itemsStatus 检查项状态集合
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\PreCheckItemStatus[]|null $itemsStatus **参数解释：** 检查项状态集合。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

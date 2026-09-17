@@ -27,7 +27,7 @@ class ShowRiskInfoResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'risks' => '\HuaweiCloud\SDK\Rds\V3\Model\EngineRiskDesc[]',
+            'risks' => '\HuaweiCloud\SDK\Rds\V3\Model\ShowRiskInfoEngineRiskDesc[]',
             'xRequestId' => 'string'
     ];
 
@@ -188,7 +188,7 @@ class ShowRiskInfoResponse implements ModelInterface, ArrayAccess
     * Gets risks
     *  风险版本信息
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\EngineRiskDesc[]|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\ShowRiskInfoEngineRiskDesc[]|null
     */
     public function getRisks()
     {
@@ -198,7 +198,7 @@ class ShowRiskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets risks
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\EngineRiskDesc[]|null $risks 风险版本信息
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\ShowRiskInfoEngineRiskDesc[]|null $risks 风险版本信息
     *
     * @return $this
     */

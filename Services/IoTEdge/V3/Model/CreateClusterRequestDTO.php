@@ -23,13 +23,15 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * description  集群描述
     * clusterNodeConfig  clusterNodeConfig
+    * clusterType  集群类型
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterName' => 'string',
             'description' => 'string',
-            'clusterNodeConfig' => '\HuaweiCloud\SDK\IoTEdge\V3\Model\ClusterNodeConfig'
+            'clusterNodeConfig' => '\HuaweiCloud\SDK\IoTEdge\V3\Model\ClusterNodeConfig',
+            'clusterType' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * description  集群描述
     * clusterNodeConfig  clusterNodeConfig
+    * clusterType  集群类型
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterName' => null,
         'description' => null,
-        'clusterNodeConfig' => null
+        'clusterNodeConfig' => null,
+        'clusterType' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * description  集群描述
     * clusterNodeConfig  clusterNodeConfig
+    * clusterType  集群类型
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterName' => 'cluster_name',
             'description' => 'description',
-            'clusterNodeConfig' => 'cluster_node_config'
+            'clusterNodeConfig' => 'cluster_node_config',
+            'clusterType' => 'cluster_type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * description  集群描述
     * clusterNodeConfig  clusterNodeConfig
+    * clusterType  集群类型
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterName' => 'setClusterName',
             'description' => 'setDescription',
-            'clusterNodeConfig' => 'setClusterNodeConfig'
+            'clusterNodeConfig' => 'setClusterNodeConfig',
+            'clusterType' => 'setClusterType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
     * clusterName  集群名称
     * description  集群描述
     * clusterNodeConfig  clusterNodeConfig
+    * clusterType  集群类型
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterName' => 'getClusterName',
             'description' => 'getDescription',
-            'clusterNodeConfig' => 'getClusterNodeConfig'
+            'clusterNodeConfig' => 'getClusterNodeConfig',
+            'clusterType' => 'getClusterType'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
         $this->container['clusterName'] = isset($data['clusterName']) ? $data['clusterName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['clusterNodeConfig'] = isset($data['clusterNodeConfig']) ? $data['clusterNodeConfig'] : null;
+        $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
     }
 
     /**
@@ -192,8 +203,23 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
             if (!preg_match("/^[A-Za-z0-9-_]*$/", $this->container['clusterName'])) {
                 $invalidProperties[] = "invalid value for 'clusterName', must be conform to the pattern /^[A-Za-z0-9-_]*$/.";
             }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['description']) && !preg_match("/^[a-zA-Z0-9_；：？！，;:、,.?!。\\-\\s\\u4e00-\\u9fa5]*$/", $this->container['description'])) {
                 $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[a-zA-Z0-9_；：？！，;:、,.?!。\\-\\s\\u4e00-\\u9fa5]*$/.";
+            }
+            if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'clusterType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['clusterType']) && (mb_strlen($this->container['clusterType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'clusterType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['clusterType']) && !preg_match("/(IoTEdge|ThirdParty)/", $this->container['clusterType'])) {
+                $invalidProperties[] = "invalid value for 'clusterType', must be conform to the pattern /(IoTEdge|ThirdParty)/.";
             }
         return $invalidProperties;
     }
@@ -278,6 +304,30 @@ class CreateClusterRequestDTO implements ModelInterface, ArrayAccess
     public function setClusterNodeConfig($clusterNodeConfig)
     {
         $this->container['clusterNodeConfig'] = $clusterNodeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets clusterType
+    *  集群类型
+    *
+    * @return string|null
+    */
+    public function getClusterType()
+    {
+        return $this->container['clusterType'];
+    }
+
+    /**
+    * Sets clusterType
+    *
+    * @param string|null $clusterType 集群类型
+    *
+    * @return $this
+    */
+    public function setClusterType($clusterType)
+    {
+        $this->container['clusterType'] = $clusterType;
         return $this;
     }
 

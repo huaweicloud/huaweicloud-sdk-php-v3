@@ -29,6 +29,10 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见PeriodProductRatingResult。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -41,7 +45,11 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
             'discountType' => 'int',
             'discountName' => 'string',
             'bestOffer' => 'int',
-            'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductRatingResult[]'
+            'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductRatingResult[]',
+            'installmentOfficialWebsiteAmount' => 'string',
+            'installmentOfficialDiscountAmount' => 'string',
+            'installmentAmount' => 'string',
+            'installmentPeriodType' => 'int'
     ];
 
     /**
@@ -55,6 +63,10 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见PeriodProductRatingResult。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -67,7 +79,11 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
         'discountType' => 'int32',
         'discountName' => null,
         'bestOffer' => 'int32',
-        'productRatingResults' => null
+        'productRatingResults' => null,
+        'installmentOfficialWebsiteAmount' => null,
+        'installmentOfficialDiscountAmount' => null,
+        'installmentAmount' => null,
+        'installmentPeriodType' => 'int32'
     ];
 
     /**
@@ -102,6 +118,10 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见PeriodProductRatingResult。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -114,7 +134,11 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
             'discountType' => 'discount_type',
             'discountName' => 'discount_name',
             'bestOffer' => 'best_offer',
-            'productRatingResults' => 'product_rating_results'
+            'productRatingResults' => 'product_rating_results',
+            'installmentOfficialWebsiteAmount' => 'installment_official_website_amount',
+            'installmentOfficialDiscountAmount' => 'installment_official_discount_amount',
+            'installmentAmount' => 'installment_amount',
+            'installmentPeriodType' => 'installment_period_type'
     ];
 
     /**
@@ -128,6 +152,10 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见PeriodProductRatingResult。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -140,7 +168,11 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
             'discountType' => 'setDiscountType',
             'discountName' => 'setDiscountName',
             'bestOffer' => 'setBestOffer',
-            'productRatingResults' => 'setProductRatingResults'
+            'productRatingResults' => 'setProductRatingResults',
+            'installmentOfficialWebsiteAmount' => 'setInstallmentOfficialWebsiteAmount',
+            'installmentOfficialDiscountAmount' => 'setInstallmentOfficialDiscountAmount',
+            'installmentAmount' => 'setInstallmentAmount',
+            'installmentPeriodType' => 'setInstallmentPeriodType'
     ];
 
     /**
@@ -154,6 +186,10 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * discountName  折扣名称。
     * bestOffer  是否为最优折扣。 0：不是最优折扣，为缺省值。1：是最优折扣最优折扣：在商务折扣、伙伴折扣中选择（优惠金额最大的折扣为最优，优惠金额相等则按此顺序排优先级），促销折扣，折扣券不参与最优折扣的计算。
     * productRatingResults  产品询价结果，具体参见PeriodProductRatingResult。
+    * installmentOfficialWebsiteAmount  分期金额的官网价。 说明：暂只支持ECS产品。
+    * installmentOfficialDiscountAmount  分期金额的折扣价。 说明：暂只支持ECS产品。
+    * installmentAmount  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    * installmentPeriodType  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -166,7 +202,11 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
             'discountType' => 'getDiscountType',
             'discountName' => 'getDiscountName',
             'bestOffer' => 'getBestOffer',
-            'productRatingResults' => 'getProductRatingResults'
+            'productRatingResults' => 'getProductRatingResults',
+            'installmentOfficialWebsiteAmount' => 'getInstallmentOfficialWebsiteAmount',
+            'installmentOfficialDiscountAmount' => 'getInstallmentOfficialDiscountAmount',
+            'installmentAmount' => 'getInstallmentAmount',
+            'installmentPeriodType' => 'getInstallmentPeriodType'
     ];
 
     /**
@@ -236,6 +276,10 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
         $this->container['discountName'] = isset($data['discountName']) ? $data['discountName'] : null;
         $this->container['bestOffer'] = isset($data['bestOffer']) ? $data['bestOffer'] : null;
         $this->container['productRatingResults'] = isset($data['productRatingResults']) ? $data['productRatingResults'] : null;
+        $this->container['installmentOfficialWebsiteAmount'] = isset($data['installmentOfficialWebsiteAmount']) ? $data['installmentOfficialWebsiteAmount'] : null;
+        $this->container['installmentOfficialDiscountAmount'] = isset($data['installmentOfficialDiscountAmount']) ? $data['installmentOfficialDiscountAmount'] : null;
+        $this->container['installmentAmount'] = isset($data['installmentAmount']) ? $data['installmentAmount'] : null;
+        $this->container['installmentPeriodType'] = isset($data['installmentPeriodType']) ? $data['installmentPeriodType'] : null;
     }
 
     /**
@@ -485,6 +529,102 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     public function setProductRatingResults($productRatingResults)
     {
         $this->container['productRatingResults'] = $productRatingResults;
+        return $this;
+    }
+
+    /**
+    * Gets installmentOfficialWebsiteAmount
+    *  分期金额的官网价。 说明：暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentOfficialWebsiteAmount()
+    {
+        return $this->container['installmentOfficialWebsiteAmount'];
+    }
+
+    /**
+    * Sets installmentOfficialWebsiteAmount
+    *
+    * @param string|null $installmentOfficialWebsiteAmount 分期金额的官网价。 说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentOfficialWebsiteAmount($installmentOfficialWebsiteAmount)
+    {
+        $this->container['installmentOfficialWebsiteAmount'] = $installmentOfficialWebsiteAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentOfficialDiscountAmount
+    *  分期金额的折扣价。 说明：暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentOfficialDiscountAmount()
+    {
+        return $this->container['installmentOfficialDiscountAmount'];
+    }
+
+    /**
+    * Sets installmentOfficialDiscountAmount
+    *
+    * @param string|null $installmentOfficialDiscountAmount 分期金额的折扣价。 说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentOfficialDiscountAmount($installmentOfficialDiscountAmount)
+    {
+        $this->container['installmentOfficialDiscountAmount'] = $installmentOfficialDiscountAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentAmount
+    *  分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getInstallmentAmount()
+    {
+        return $this->container['installmentAmount'];
+    }
+
+    /**
+    * Sets installmentAmount
+    *
+    * @param string|null $installmentAmount 分期金额的成交价。 说明：分期金额的成交价=分期金额的官网价-分期金额的折扣价。暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentAmount($installmentAmount)
+    {
+        $this->container['installmentAmount'] = $installmentAmount;
+        return $this;
+    }
+
+    /**
+    * Gets installmentPeriodType
+    *  分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
+    *
+    * @return int|null
+    */
+    public function getInstallmentPeriodType()
+    {
+        return $this->container['installmentPeriodType'];
+    }
+
+    /**
+    * Sets installmentPeriodType
+    *
+    * @param int|null $installmentPeriodType 分期付款的周期类型。 2：月。说明：暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setInstallmentPeriodType($installmentPeriodType)
+    {
+        $this->container['installmentPeriodType'] = $installmentPeriodType;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class ResourceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
-    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * key  键。  - 最大长度128个unicode字符。  - key不能为空。
+    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
-    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * key  键。  - 最大长度128个unicode字符。  - key不能为空。
+    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
-    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * key  键。  - 最大长度128个unicode字符。  - key不能为空。
+    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
-    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * key  键。  - 最大长度128个unicode字符。  - key不能为空。
+    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。  - 最大长度127个unicode字符。  - key不能为空。
-    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * key  键。  - 最大长度128个unicode字符。  - key不能为空。
+    * values  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ResourceTags implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。  - 最大长度127个unicode字符。  - key不能为空。
+    *  键。  - 最大长度128个unicode字符。  - key不能为空。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ResourceTags implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。  - 最大长度127个unicode字符。  - key不能为空。
+    * @param string $key 键。  - 最大长度128个unicode字符。  - key不能为空。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ResourceTags implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    *  值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class ResourceTags implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度255个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
+    * @param string[] $values 值列表。  - 最多10个value。  - value不允许重复。  - 每个值最大长度256个unicode字符。  - 如果values为空则表示any_value。  - value之间为或的关系。
     *
     * @return $this
     */

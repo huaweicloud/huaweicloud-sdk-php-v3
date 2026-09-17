@@ -20,8 +20,8 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
+    * name  **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
+    * name  **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
+    * name  **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
+    * name  **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  模板实例名称
-    * namespace  模板实例所在的命名空间
+    * name  **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * namespace  **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @var string[]
@@ -208,7 +208,7 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  模板实例名称
+    *  **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -220,7 +220,7 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 模板实例名称
+    * @param string $name **参数解释：** 模板实例名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  模板实例所在的命名空间
+    *  **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -244,7 +244,7 @@ class ShowReleaseHistoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace 模板实例所在的命名空间
+    * @param string $namespace **参数解释：** 模板实例所在的命名空间。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

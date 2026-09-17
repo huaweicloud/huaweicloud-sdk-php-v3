@@ -21,21 +21,29 @@ class ContainerSettingsReqDTO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * configs  configs
+    * customEnvs  自定义环境变量
+    * extraHosts  域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'configs' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ContainerConfigsReqDTO'
+            'configs' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ContainerConfigsReqDTO',
+            'customEnvs' => 'object',
+            'extraHosts' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * configs  configs
+    * customEnvs  自定义环境变量
+    * extraHosts  域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'configs' => null
+        'configs' => null,
+        'customEnvs' => null,
+        'extraHosts' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ContainerSettingsReqDTO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * configs  configs
+    * customEnvs  自定义环境变量
+    * extraHosts  域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'configs' => 'configs'
+            'configs' => 'configs',
+            'customEnvs' => 'custom_envs',
+            'extraHosts' => 'extra_hosts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * configs  configs
+    * customEnvs  自定义环境变量
+    * extraHosts  域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
     *
     * @var string[]
     */
     protected static $setters = [
-            'configs' => 'setConfigs'
+            'configs' => 'setConfigs',
+            'customEnvs' => 'setCustomEnvs',
+            'extraHosts' => 'setExtraHosts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * configs  configs
+    * customEnvs  自定义环境变量
+    * extraHosts  域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
     *
     * @var string[]
     */
     protected static $getters = [
-            'configs' => 'getConfigs'
+            'configs' => 'getConfigs',
+            'customEnvs' => 'getCustomEnvs',
+            'extraHosts' => 'getExtraHosts'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ContainerSettingsReqDTO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['configs'] = isset($data['configs']) ? $data['configs'] : null;
+        $this->container['customEnvs'] = isset($data['customEnvs']) ? $data['customEnvs'] : null;
+        $this->container['extraHosts'] = isset($data['extraHosts']) ? $data['extraHosts'] : null;
     }
 
     /**
@@ -193,6 +215,54 @@ class ContainerSettingsReqDTO implements ModelInterface, ArrayAccess
     public function setConfigs($configs)
     {
         $this->container['configs'] = $configs;
+        return $this;
+    }
+
+    /**
+    * Gets customEnvs
+    *  自定义环境变量
+    *
+    * @return object|null
+    */
+    public function getCustomEnvs()
+    {
+        return $this->container['customEnvs'];
+    }
+
+    /**
+    * Sets customEnvs
+    *
+    * @param object|null $customEnvs 自定义环境变量
+    *
+    * @return $this
+    */
+    public function setCustomEnvs($customEnvs)
+    {
+        $this->container['customEnvs'] = $customEnvs;
+        return $this;
+    }
+
+    /**
+    * Gets extraHosts
+    *  域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
+    *
+    * @return object|null
+    */
+    public function getExtraHosts()
+    {
+        return $this->container['extraHosts'];
+    }
+
+    /**
+    * Sets extraHosts
+    *
+    * @param object|null $extraHosts 域名解析配置集合。示例：[{\"hostname\":\"endpoint\",\"ip\":\"127.0.0.1\"}]
+    *
+    * @return $this
+    */
+    public function setExtraHosts($extraHosts)
+    {
+        $this->container['extraHosts'] = $extraHosts;
         return $this;
     }
 

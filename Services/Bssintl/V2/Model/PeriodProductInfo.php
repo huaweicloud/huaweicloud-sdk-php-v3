@@ -31,6 +31,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
+    * feeInstallmentMode  费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'int',
             'periodType' => 'int',
             'periodNum' => 'int',
-            'subscriptionNum' => 'int'
+            'subscriptionNum' => 'int',
+            'feeInstallmentMode' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
+    * feeInstallmentMode  费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
         'sizeMeasureId' => 'int32',
         'periodType' => 'int32',
         'periodNum' => 'int32',
-        'subscriptionNum' => 'int32'
+        'subscriptionNum' => 'int32',
+        'feeInstallmentMode' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
+    * feeInstallmentMode  费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'size_measure_id',
             'periodType' => 'period_type',
             'periodNum' => 'period_num',
-            'subscriptionNum' => 'subscription_num'
+            'subscriptionNum' => 'subscription_num',
+            'feeInstallmentMode' => 'fee_installment_mode'
     ];
 
     /**
@@ -142,6 +148,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
+    * feeInstallmentMode  费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'setSizeMeasureId',
             'periodType' => 'setPeriodType',
             'periodNum' => 'setPeriodNum',
-            'subscriptionNum' => 'setSubscriptionNum'
+            'subscriptionNum' => 'setSubscriptionNum',
+            'feeInstallmentMode' => 'setFeeInstallmentMode'
     ];
 
     /**
@@ -172,6 +180,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     * periodType  订购包年/包月产品的周期类型。 0：天2：月3：年4：小时
     * periodNum  订购包年/包月产品的周期数。
     * subscriptionNum  订购包年/包月产品的数量。
+    * feeInstallmentMode  费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             'sizeMeasureId' => 'getSizeMeasureId',
             'periodType' => 'getPeriodType',
             'periodNum' => 'getPeriodNum',
-            'subscriptionNum' => 'getSubscriptionNum'
+            'subscriptionNum' => 'getSubscriptionNum',
+            'feeInstallmentMode' => 'getFeeInstallmentMode'
     ];
 
     /**
@@ -258,6 +268,7 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
         $this->container['subscriptionNum'] = isset($data['subscriptionNum']) ? $data['subscriptionNum'] : null;
+        $this->container['feeInstallmentMode'] = isset($data['feeInstallmentMode']) ? $data['feeInstallmentMode'] : null;
     }
 
     /**
@@ -357,6 +368,12 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
             }
             if (($this->container['subscriptionNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'subscriptionNum', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['feeInstallmentMode']) && (mb_strlen($this->container['feeInstallmentMode']) > 64)) {
+                $invalidProperties[] = "invalid value for 'feeInstallmentMode', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['feeInstallmentMode']) && (mb_strlen($this->container['feeInstallmentMode']) < 0)) {
+                $invalidProperties[] = "invalid value for 'feeInstallmentMode', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -633,6 +650,30 @@ class PeriodProductInfo implements ModelInterface, ArrayAccess
     public function setSubscriptionNum($subscriptionNum)
     {
         $this->container['subscriptionNum'] = $subscriptionNum;
+        return $this;
+    }
+
+    /**
+    * Gets feeInstallmentMode
+    *  费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
+    *
+    * @return string|null
+    */
+    public function getFeeInstallmentMode()
+    {
+        return $this->container['feeInstallmentMode'];
+    }
+
+    /**
+    * Sets feeInstallmentMode
+    *
+    * @param string|null $feeInstallmentMode 费用分期模式。HALF_PAY：半付 ZERO_PAY：零付 NA：不支持费用分期模式。说明：此参数不携带或携带值为空串或携带值为null时，默认值为“NA”。暂只支持ECS产品。
+    *
+    * @return $this
+    */
+    public function setFeeInstallmentMode($feeInstallmentMode)
+    {
+        $this->container['feeInstallmentMode'] = $feeInstallmentMode;
         return $this;
     }
 

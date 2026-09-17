@@ -183,12 +183,6 @@ class SpecResizeRequest implements ModelInterface, ArrayAccess
         if ($this->container['targetFlavorId'] === null) {
             $invalidProperties[] = "'targetFlavorId' can't be null";
         }
-            if (!is_null($this->container['changeMode']) && (mb_strlen($this->container['changeMode']) > 16)) {
-                $invalidProperties[] = "invalid value for 'changeMode', the character length must be smaller than or equal to 16.";
-            }
-            if (!is_null($this->container['changeMode']) && (mb_strlen($this->container['changeMode']) < 0)) {
-                $invalidProperties[] = "invalid value for 'changeMode', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 

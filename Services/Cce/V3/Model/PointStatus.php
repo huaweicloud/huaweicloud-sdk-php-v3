@@ -21,11 +21,11 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * taskType  taskType
-    * taskId  升级任务项ID
+    * taskId  **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
-    * startTimeStamp  升级任务开始时间
-    * endTimeStamp  升级任务结束时间
-    * expireTimeStamp  升级任务过期时间（当前仅升级前检查任务适用）
+    * startTimeStamp  **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * endTimeStamp  **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -41,11 +41,11 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * taskType  taskType
-    * taskId  升级任务项ID
+    * taskId  **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
-    * startTimeStamp  升级任务开始时间
-    * endTimeStamp  升级任务结束时间
-    * expireTimeStamp  升级任务过期时间（当前仅升级前检查任务适用）
+    * startTimeStamp  **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * endTimeStamp  **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -82,11 +82,11 @@ class PointStatus implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * taskType  taskType
-    * taskId  升级任务项ID
+    * taskId  **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
-    * startTimeStamp  升级任务开始时间
-    * endTimeStamp  升级任务结束时间
-    * expireTimeStamp  升级任务过期时间（当前仅升级前检查任务适用）
+    * startTimeStamp  **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * endTimeStamp  **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -102,11 +102,11 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * taskType  taskType
-    * taskId  升级任务项ID
+    * taskId  **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
-    * startTimeStamp  升级任务开始时间
-    * endTimeStamp  升级任务结束时间
-    * expireTimeStamp  升级任务过期时间（当前仅升级前检查任务适用）
+    * startTimeStamp  **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * endTimeStamp  **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -122,11 +122,11 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * taskType  taskType
-    * taskId  升级任务项ID
+    * taskId  **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * status  status
-    * startTimeStamp  升级任务开始时间
-    * endTimeStamp  升级任务结束时间
-    * expireTimeStamp  升级任务过期时间（当前仅升级前检查任务适用）
+    * startTimeStamp  **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * endTimeStamp  **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * expireTimeStamp  **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class PointStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  升级任务项ID
+    *  **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 升级任务项ID
+    * @param string|null $taskId **参数解释：** 升级任务项ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class PointStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTimeStamp
-    *  升级任务开始时间
+    *  **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Sets startTimeStamp
     *
-    * @param string|null $startTimeStamp 升级任务开始时间
+    * @param string|null $startTimeStamp **参数解释：** 升级任务开始时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class PointStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTimeStamp
-    *  升级任务结束时间
+    *  **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Sets endTimeStamp
     *
-    * @param string|null $endTimeStamp 升级任务结束时间
+    * @param string|null $endTimeStamp **参数解释：** 升级任务结束时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class PointStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets expireTimeStamp
-    *  升级任务过期时间（当前仅升级前检查任务适用）
+    *  **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class PointStatus implements ModelInterface, ArrayAccess
     /**
     * Sets expireTimeStamp
     *
-    * @param string|null $expireTimeStamp 升级任务过期时间（当前仅升级前检查任务适用）
+    * @param string|null $expireTimeStamp **参数解释：** 升级任务过期时间（当前仅升级前检查任务适用） **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

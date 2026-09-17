@@ -24,8 +24,8 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     * imageUrl  镜像存储地址
     * envs  环境变量
     * volumes  卷配置
-    * npuType  NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
-    * vnpuTemplate  NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    * npuType  NPU类型
+    * vnpuTemplate  NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     * resources  resources
     * extDevices  外挂设备配置
     *
@@ -48,8 +48,8 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     * imageUrl  镜像存储地址
     * envs  环境变量
     * volumes  卷配置
-    * npuType  NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
-    * vnpuTemplate  NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    * npuType  NPU类型
+    * vnpuTemplate  NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     * resources  resources
     * extDevices  外挂设备配置
     *
@@ -93,8 +93,8 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     * imageUrl  镜像存储地址
     * envs  环境变量
     * volumes  卷配置
-    * npuType  NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
-    * vnpuTemplate  NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    * npuType  NPU类型
+    * vnpuTemplate  NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     * resources  resources
     * extDevices  外挂设备配置
     *
@@ -117,8 +117,8 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     * imageUrl  镜像存储地址
     * envs  环境变量
     * volumes  卷配置
-    * npuType  NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
-    * vnpuTemplate  NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    * npuType  NPU类型
+    * vnpuTemplate  NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     * resources  resources
     * extDevices  外挂设备配置
     *
@@ -141,8 +141,8 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     * imageUrl  镜像存储地址
     * envs  环境变量
     * volumes  卷配置
-    * npuType  NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
-    * vnpuTemplate  NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    * npuType  NPU类型
+    * vnpuTemplate  NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     * resources  resources
     * extDevices  外挂设备配置
     *
@@ -282,8 +282,8 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
         if ($this->container['imageUrl'] === null) {
             $invalidProperties[] = "'imageUrl' can't be null";
         }
-            if ((mb_strlen($this->container['imageUrl']) > 1000000)) {
-                $invalidProperties[] = "invalid value for 'imageUrl', the character length must be smaller than or equal to 1000000.";
+            if ((mb_strlen($this->container['imageUrl']) > 10000)) {
+                $invalidProperties[] = "invalid value for 'imageUrl', the character length must be smaller than or equal to 10000.";
             }
             if ((mb_strlen($this->container['imageUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'imageUrl', the character length must be bigger than or equal to 1.";
@@ -299,15 +299,6 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['npuType']) && (mb_strlen($this->container['npuType']) > 16)) {
-                $invalidProperties[] = "invalid value for 'npuType', the character length must be smaller than or equal to 16.";
-            }
-            if (!is_null($this->container['npuType']) && (mb_strlen($this->container['npuType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'npuType', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['npuType']) && !preg_match("/(D310|D310P|D910)/", $this->container['npuType'])) {
-                $invalidProperties[] = "invalid value for 'npuType', must be conform to the pattern /(D310|D310P|D910)/.";
-            }
             $allowedValues = $this->getVnpuTemplateAllowableValues();
                 if (!is_null($this->container['vnpuTemplate']) && !in_array($this->container['vnpuTemplate'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -316,15 +307,6 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['vnpuTemplate']) && (mb_strlen($this->container['vnpuTemplate']) > 32)) {
-                $invalidProperties[] = "invalid value for 'vnpuTemplate', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['vnpuTemplate']) && (mb_strlen($this->container['vnpuTemplate']) < 0)) {
-                $invalidProperties[] = "invalid value for 'vnpuTemplate', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['vnpuTemplate']) && !preg_match("/(vir01|vir02|vir04|vir08|vir02_1c|vir04_3c|vir04_3c_ndvpp|vir04_4c_dvpp)/", $this->container['vnpuTemplate'])) {
-                $invalidProperties[] = "invalid value for 'vnpuTemplate', must be conform to the pattern /(vir01|vir02|vir04|vir08|vir02_1c|vir04_3c|vir04_3c_ndvpp|vir04_4c_dvpp)/.";
-            }
         return $invalidProperties;
     }
 
@@ -437,7 +419,7 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets npuType
-    *  NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
+    *  NPU类型
     *
     * @return string|null
     */
@@ -449,7 +431,7 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets npuType
     *
-    * @param string|null $npuType NPU类型, D310:昇腾310推理卡，D910:昇腾910训练卡;D310P：昇腾710或者310P加速卡
+    * @param string|null $npuType NPU类型
     *
     * @return $this
     */
@@ -461,7 +443,7 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets vnpuTemplate
-    *  NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    *  NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     *
     * @return string|null
     */
@@ -473,7 +455,7 @@ class ContainerSettingsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets vnpuTemplate
     *
-    * @param string|null $vnpuTemplate NPU算力切分模板,昇腾D310Pro，支持：vir01、vir02、vir02_1c、vir04、vir04_4c_dvpp、vir04_3c、vir04_3c_ndvpp 昇腾D910芯片支持:vir01|vir02|vir04|vir08 可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
+    * @param string|null $vnpuTemplate NPU算力切分模板，可在对应芯片的机器上通过npu-smi info -t template-info命令查询其详细信息
     *
     * @return $this
     */

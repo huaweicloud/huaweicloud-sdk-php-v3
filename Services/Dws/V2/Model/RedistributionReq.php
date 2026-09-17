@@ -139,22 +139,7 @@ class RedistributionReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const REDIS_MODE_OFFLINE = 'offline';
-    const REDIS_MODE_ONLINE = 'online';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getRedisModeAllowableValues()
-    {
-        return [
-            self::REDIS_MODE_OFFLINE,
-            self::REDIS_MODE_ONLINE,
-        ];
-    }
 
 
     /**
@@ -187,14 +172,6 @@ class RedistributionReq implements ModelInterface, ArrayAccess
         if ($this->container['redisMode'] === null) {
             $invalidProperties[] = "'redisMode' can't be null";
         }
-            $allowedValues = $this->getRedisModeAllowableValues();
-                if (!is_null($this->container['redisMode']) && !in_array($this->container['redisMode'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'redisMode', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if ((mb_strlen($this->container['redisMode']) > 16)) {
                 $invalidProperties[] = "invalid value for 'redisMode', the character length must be smaller than or equal to 16.";
             }

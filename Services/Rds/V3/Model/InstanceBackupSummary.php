@@ -20,38 +20,38 @@ class InstanceBackupSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * name  **参数解释**：  实例名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * backupUseSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * backupUsedSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * datastore  datastore
-    * spaces  spaces
+    * space  space
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
+            'instanceId' => 'string',
             'name' => 'string',
-            'backupUseSpace' => 'double',
+            'backupUsedSpace' => 'double',
             'datastore' => '\HuaweiCloud\SDK\Rds\V3\Model\InstanceBackupDatastore',
-            'spaces' => '\HuaweiCloud\SDK\Rds\V3\Model\Spaces'
+            'space' => '\HuaweiCloud\SDK\Rds\V3\Model\Space'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * name  **参数解释**：  实例名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * backupUseSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * backupUsedSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * datastore  datastore
-    * spaces  spaces
+    * space  space
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
+        'instanceId' => null,
         'name' => null,
-        'backupUseSpace' => 'double',
+        'backupUsedSpace' => 'double',
         'datastore' => null,
-        'spaces' => null
+        'space' => null
     ];
 
     /**
@@ -77,56 +77,56 @@ class InstanceBackupSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * name  **参数解释**：  实例名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * backupUseSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * backupUsedSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * datastore  datastore
-    * spaces  spaces
+    * space  space
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
+            'instanceId' => 'instance_id',
             'name' => 'name',
-            'backupUseSpace' => 'backup_use_space',
+            'backupUsedSpace' => 'backup_used_space',
             'datastore' => 'datastore',
-            'spaces' => 'spaces'
+            'space' => 'space'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * name  **参数解释**：  实例名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * backupUseSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * backupUsedSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * datastore  datastore
-    * spaces  spaces
+    * space  space
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
+            'instanceId' => 'setInstanceId',
             'name' => 'setName',
-            'backupUseSpace' => 'setBackupUseSpace',
+            'backupUsedSpace' => 'setBackupUsedSpace',
             'datastore' => 'setDatastore',
-            'spaces' => 'setSpaces'
+            'space' => 'setSpace'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * instanceId  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * name  **参数解释**：  实例名称。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
-    * backupUseSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * backupUsedSpace  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     * datastore  datastore
-    * spaces  spaces
+    * space  space
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
+            'instanceId' => 'getInstanceId',
             'name' => 'getName',
-            'backupUseSpace' => 'getBackupUseSpace',
+            'backupUsedSpace' => 'getBackupUsedSpace',
             'datastore' => 'getDatastore',
-            'spaces' => 'getSpaces'
+            'space' => 'getSpace'
     ];
 
     /**
@@ -187,11 +187,11 @@ class InstanceBackupSummary implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['backupUseSpace'] = isset($data['backupUseSpace']) ? $data['backupUseSpace'] : null;
+        $this->container['backupUsedSpace'] = isset($data['backupUsedSpace']) ? $data['backupUsedSpace'] : null;
         $this->container['datastore'] = isset($data['datastore']) ? $data['datastore'] : null;
-        $this->container['spaces'] = isset($data['spaces']) ? $data['spaces'] : null;
+        $this->container['space'] = isset($data['space']) ? $data['space'] : null;
     }
 
     /**
@@ -217,26 +217,26 @@ class InstanceBackupSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
+    * Gets instanceId
     *  **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return string|null
     */
-    public function getId()
+    public function getInstanceId()
     {
-        return $this->container['id'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets id
+    * Sets instanceId
     *
-    * @param string|null $id **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param string|null $instanceId **参数解释**：  实例ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setId($id)
+    public function setInstanceId($instanceId)
     {
-        $this->container['id'] = $id;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
@@ -265,26 +265,26 @@ class InstanceBackupSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets backupUseSpace
+    * Gets backupUsedSpace
     *  **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return double|null
     */
-    public function getBackupUseSpace()
+    public function getBackupUsedSpace()
     {
-        return $this->container['backupUseSpace'];
+        return $this->container['backupUsedSpace'];
     }
 
     /**
-    * Sets backupUseSpace
+    * Sets backupUsedSpace
     *
-    * @param double|null $backupUseSpace **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
+    * @param double|null $backupUsedSpace **参数解释**：  备份用量，单位MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及。
     *
     * @return $this
     */
-    public function setBackupUseSpace($backupUseSpace)
+    public function setBackupUsedSpace($backupUsedSpace)
     {
-        $this->container['backupUseSpace'] = $backupUseSpace;
+        $this->container['backupUsedSpace'] = $backupUsedSpace;
         return $this;
     }
 
@@ -313,26 +313,26 @@ class InstanceBackupSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets spaces
-    *  spaces
+    * Gets space
+    *  space
     *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\Spaces|null
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\Space|null
     */
-    public function getSpaces()
+    public function getSpace()
     {
-        return $this->container['spaces'];
+        return $this->container['space'];
     }
 
     /**
-    * Sets spaces
+    * Sets space
     *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\Spaces|null $spaces spaces
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\Space|null $space space
     *
     * @return $this
     */
-    public function setSpaces($spaces)
+    public function setSpace($space)
     {
-        $this->container['spaces'] = $spaces;
+        $this->container['space'] = $space;
         return $this;
     }
 

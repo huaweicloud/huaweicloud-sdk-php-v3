@@ -24,6 +24,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * az  **参数解释**： 待创建节点所在的可用区，需要指定可用区（AZ）的名称，通过api创建节点不支持随机可用区。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws) [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制**： 创建节点池并设置伸缩组时，该参数不允许填写为random。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * os  **参数解释**： 节点的操作系统类型。具体支持的操作系统请参见[节点操作系统说明](node-os.xml)。 **约束限制**： - 若在创建节点时未指定该配置，CCE会根据集群版本自动选择支持的OS版本。 - 若当前集群版本不支持该OS类型，则会自动替换为当前集群版本支持的同系列OS类型。 - 若在创建节点时指定了extendParam中的alpha.cce/NodeImageID参数，节点将使用私有镜像，则该参数为非必选参数。 [- 若在创建节点时指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。当用户未配置私有镜像时，该参数必须为“Huawei Cloud EulerOS 2.0”；当用户配置了私有镜像且私有镜像操作系统类型为HCE2.0，则该参数为非必选参数。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
+    * volumeConfig  volumeConfig
     * rootVolume  rootVolume
     * dataVolumes  **参数解释**： 节点的数据盘参数。针对专属云节点，参数解释与rootVolume一致。 **约束限制**： - 磁盘挂载上限为虚拟机不超过16块，裸金属不超过10块。在此基础上还受限于虚拟机/裸金属规格可挂载磁盘数上限。（目前支持通过控制台和API为CCE节点添加多块数据盘）。 - 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 - 仅在选择系统盘作为系统组件存储磁盘时，允许为空。
     * storage  storage
@@ -53,6 +54,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'az' => 'string',
             'os' => 'string',
             'login' => '\HuaweiCloud\SDK\Cce\V3\Model\Login',
+            'volumeConfig' => '\HuaweiCloud\SDK\Cce\V3\Model\VolumeConfig',
             'rootVolume' => '\HuaweiCloud\SDK\Cce\V3\Model\Volume',
             'dataVolumes' => '\HuaweiCloud\SDK\Cce\V3\Model\Volume[]',
             'storage' => '\HuaweiCloud\SDK\Cce\V3\Model\Storage',
@@ -82,6 +84,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * az  **参数解释**： 待创建节点所在的可用区，需要指定可用区（AZ）的名称，通过api创建节点不支持随机可用区。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws) [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制**： 创建节点池并设置伸缩组时，该参数不允许填写为random。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * os  **参数解释**： 节点的操作系统类型。具体支持的操作系统请参见[节点操作系统说明](node-os.xml)。 **约束限制**： - 若在创建节点时未指定该配置，CCE会根据集群版本自动选择支持的OS版本。 - 若当前集群版本不支持该OS类型，则会自动替换为当前集群版本支持的同系列OS类型。 - 若在创建节点时指定了extendParam中的alpha.cce/NodeImageID参数，节点将使用私有镜像，则该参数为非必选参数。 [- 若在创建节点时指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。当用户未配置私有镜像时，该参数必须为“Huawei Cloud EulerOS 2.0”；当用户配置了私有镜像且私有镜像操作系统类型为HCE2.0，则该参数为非必选参数。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
+    * volumeConfig  volumeConfig
     * rootVolume  rootVolume
     * dataVolumes  **参数解释**： 节点的数据盘参数。针对专属云节点，参数解释与rootVolume一致。 **约束限制**： - 磁盘挂载上限为虚拟机不超过16块，裸金属不超过10块。在此基础上还受限于虚拟机/裸金属规格可挂载磁盘数上限。（目前支持通过控制台和API为CCE节点添加多块数据盘）。 - 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 - 仅在选择系统盘作为系统组件存储磁盘时，允许为空。
     * storage  storage
@@ -111,6 +114,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
         'az' => null,
         'os' => null,
         'login' => null,
+        'volumeConfig' => null,
         'rootVolume' => null,
         'dataVolumes' => null,
         'storage' => null,
@@ -161,6 +165,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * az  **参数解释**： 待创建节点所在的可用区，需要指定可用区（AZ）的名称，通过api创建节点不支持随机可用区。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws) [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制**： 创建节点池并设置伸缩组时，该参数不允许填写为random。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * os  **参数解释**： 节点的操作系统类型。具体支持的操作系统请参见[节点操作系统说明](node-os.xml)。 **约束限制**： - 若在创建节点时未指定该配置，CCE会根据集群版本自动选择支持的OS版本。 - 若当前集群版本不支持该OS类型，则会自动替换为当前集群版本支持的同系列OS类型。 - 若在创建节点时指定了extendParam中的alpha.cce/NodeImageID参数，节点将使用私有镜像，则该参数为非必选参数。 [- 若在创建节点时指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。当用户未配置私有镜像时，该参数必须为“Huawei Cloud EulerOS 2.0”；当用户配置了私有镜像且私有镜像操作系统类型为HCE2.0，则该参数为非必选参数。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
+    * volumeConfig  volumeConfig
     * rootVolume  rootVolume
     * dataVolumes  **参数解释**： 节点的数据盘参数。针对专属云节点，参数解释与rootVolume一致。 **约束限制**： - 磁盘挂载上限为虚拟机不超过16块，裸金属不超过10块。在此基础上还受限于虚拟机/裸金属规格可挂载磁盘数上限。（目前支持通过控制台和API为CCE节点添加多块数据盘）。 - 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 - 仅在选择系统盘作为系统组件存储磁盘时，允许为空。
     * storage  storage
@@ -190,6 +195,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'az' => 'az',
             'os' => 'os',
             'login' => 'login',
+            'volumeConfig' => 'volumeConfig',
             'rootVolume' => 'rootVolume',
             'dataVolumes' => 'dataVolumes',
             'storage' => 'storage',
@@ -219,6 +225,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * az  **参数解释**： 待创建节点所在的可用区，需要指定可用区（AZ）的名称，通过api创建节点不支持随机可用区。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws) [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制**： 创建节点池并设置伸缩组时，该参数不允许填写为random。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * os  **参数解释**： 节点的操作系统类型。具体支持的操作系统请参见[节点操作系统说明](node-os.xml)。 **约束限制**： - 若在创建节点时未指定该配置，CCE会根据集群版本自动选择支持的OS版本。 - 若当前集群版本不支持该OS类型，则会自动替换为当前集群版本支持的同系列OS类型。 - 若在创建节点时指定了extendParam中的alpha.cce/NodeImageID参数，节点将使用私有镜像，则该参数为非必选参数。 [- 若在创建节点时指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。当用户未配置私有镜像时，该参数必须为“Huawei Cloud EulerOS 2.0”；当用户配置了私有镜像且私有镜像操作系统类型为HCE2.0，则该参数为非必选参数。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
+    * volumeConfig  volumeConfig
     * rootVolume  rootVolume
     * dataVolumes  **参数解释**： 节点的数据盘参数。针对专属云节点，参数解释与rootVolume一致。 **约束限制**： - 磁盘挂载上限为虚拟机不超过16块，裸金属不超过10块。在此基础上还受限于虚拟机/裸金属规格可挂载磁盘数上限。（目前支持通过控制台和API为CCE节点添加多块数据盘）。 - 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 - 仅在选择系统盘作为系统组件存储磁盘时，允许为空。
     * storage  storage
@@ -248,6 +255,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'az' => 'setAz',
             'os' => 'setOs',
             'login' => 'setLogin',
+            'volumeConfig' => 'setVolumeConfig',
             'rootVolume' => 'setRootVolume',
             'dataVolumes' => 'setDataVolumes',
             'storage' => 'setStorage',
@@ -277,6 +285,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     * az  **参数解释**： 待创建节点所在的可用区，需要指定可用区（AZ）的名称，通过api创建节点不支持随机可用区。 [CCE支持的可用区请参考[地区和终端节点](https://console.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws) [CCE支持的可用区请参考[地区和终端节点](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CCE)。](tag:hws_hk) **约束限制**： 创建节点池并设置伸缩组时，该参数不允许填写为random。 **取值范围**： 不涉及 **默认取值**： 不涉及
     * os  **参数解释**： 节点的操作系统类型。具体支持的操作系统请参见[节点操作系统说明](node-os.xml)。 **约束限制**： - 若在创建节点时未指定该配置，CCE会根据集群版本自动选择支持的OS版本。 - 若当前集群版本不支持该OS类型，则会自动替换为当前集群版本支持的同系列OS类型。 - 若在创建节点时指定了extendParam中的alpha.cce/NodeImageID参数，节点将使用私有镜像，则该参数为非必选参数。 [- 若在创建节点时指定了extendParam中的securityReinforcementType参数为cybersecurity，节点将开启安全等保加固功能，则节点的操作系统类型必须使用HCE2.0。当用户未配置私有镜像时，该参数必须为“Huawei Cloud EulerOS 2.0”；当用户配置了私有镜像且私有镜像操作系统类型为HCE2.0，则该参数为非必选参数。](tag:hws)  **取值范围**： 不涉及 **默认取值**： 不涉及
     * login  login
+    * volumeConfig  volumeConfig
     * rootVolume  rootVolume
     * dataVolumes  **参数解释**： 节点的数据盘参数。针对专属云节点，参数解释与rootVolume一致。 **约束限制**： - 磁盘挂载上限为虚拟机不超过16块，裸金属不超过10块。在此基础上还受限于虚拟机/裸金属规格可挂载磁盘数上限。（目前支持通过控制台和API为CCE节点添加多块数据盘）。 - 如果数据盘正供容器运行时和Kubelet组件使用，则不可被卸载，否则将导致节点不可用。 - 仅在选择系统盘作为系统组件存储磁盘时，允许为空。
     * storage  storage
@@ -306,6 +315,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
             'az' => 'getAz',
             'os' => 'getOs',
             'login' => 'getLogin',
+            'volumeConfig' => 'getVolumeConfig',
             'rootVolume' => 'getRootVolume',
             'dataVolumes' => 'getDataVolumes',
             'storage' => 'getStorage',
@@ -406,6 +416,7 @@ class NodeTemplate implements ModelInterface, ArrayAccess
         $this->container['az'] = isset($data['az']) ? $data['az'] : null;
         $this->container['os'] = isset($data['os']) ? $data['os'] : null;
         $this->container['login'] = isset($data['login']) ? $data['login'] : null;
+        $this->container['volumeConfig'] = isset($data['volumeConfig']) ? $data['volumeConfig'] : null;
         $this->container['rootVolume'] = isset($data['rootVolume']) ? $data['rootVolume'] : null;
         $this->container['dataVolumes'] = isset($data['dataVolumes']) ? $data['dataVolumes'] : null;
         $this->container['storage'] = isset($data['storage']) ? $data['storage'] : null;
@@ -567,6 +578,30 @@ class NodeTemplate implements ModelInterface, ArrayAccess
     public function setLogin($login)
     {
         $this->container['login'] = $login;
+        return $this;
+    }
+
+    /**
+    * Gets volumeConfig
+    *  volumeConfig
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\VolumeConfig|null
+    */
+    public function getVolumeConfig()
+    {
+        return $this->container['volumeConfig'];
+    }
+
+    /**
+    * Sets volumeConfig
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\VolumeConfig|null $volumeConfig volumeConfig
+    *
+    * @return $this
+    */
+    public function setVolumeConfig($volumeConfig)
+    {
+        $this->container['volumeConfig'] = $volumeConfig;
         return $this;
     }
 

@@ -20,21 +20,25 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deviceName  设备名称。
     * config  设备配置，内容由产品的$config服务定义。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'deviceName' => 'string',
             'config' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deviceName  设备名称。
     * config  设备配置，内容由产品的$config服务定义。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'deviceName' => null,
         'config' => null
     ];
 
@@ -61,31 +65,37 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deviceName  设备名称。
     * config  设备配置，内容由产品的$config服务定义。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'deviceName' => 'device_name',
             'config' => 'config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deviceName  设备名称。
     * config  设备配置，内容由产品的$config服务定义。
     *
     * @var string[]
     */
     protected static $setters = [
+            'deviceName' => 'setDeviceName',
             'config' => 'setConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deviceName  设备名称。
     * config  设备配置，内容由产品的$config服务定义。
     *
     * @var string[]
     */
     protected static $getters = [
+            'deviceName' => 'getDeviceName',
             'config' => 'getConfig'
     ];
 
@@ -147,6 +157,7 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['deviceName'] = isset($data['deviceName']) ? $data['deviceName'] : null;
         $this->container['config'] = isset($data['config']) ? $data['config'] : null;
     }
 
@@ -158,6 +169,15 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['deviceName']) && (mb_strlen($this->container['deviceName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'deviceName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['deviceName']) && (mb_strlen($this->container['deviceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'deviceName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['deviceName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/", $this->container['deviceName'])) {
+                $invalidProperties[] = "invalid value for 'deviceName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_?'#()\\.,&%@!-]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -170,6 +190,30 @@ class UpdateDesireds implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets deviceName
+    *  设备名称。
+    *
+    * @return string|null
+    */
+    public function getDeviceName()
+    {
+        return $this->container['deviceName'];
+    }
+
+    /**
+    * Sets deviceName
+    *
+    * @param string|null $deviceName 设备名称。
+    *
+    * @return $this
+    */
+    public function setDeviceName($deviceName)
+    {
+        $this->container['deviceName'] = $deviceName;
+        return $this;
     }
 
     /**

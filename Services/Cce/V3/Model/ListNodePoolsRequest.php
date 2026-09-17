@@ -22,24 +22,28 @@ class ListNodePoolsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * showDefaultNodePool  是否展示默认节点池。默认不展示，指定为“true”时展示默认节点池。
+    * advanceStatus  **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
-            'showDefaultNodePool' => 'string'
+            'showDefaultNodePool' => 'string',
+            'advanceStatus' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * showDefaultNodePool  是否展示默认节点池。默认不展示，指定为“true”时展示默认节点池。
+    * advanceStatus  **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
-        'showDefaultNodePool' => null
+        'showDefaultNodePool' => null,
+        'advanceStatus' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ListNodePoolsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * showDefaultNodePool  是否展示默认节点池。默认不展示，指定为“true”时展示默认节点池。
+    * advanceStatus  **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
-            'showDefaultNodePool' => 'showDefaultNodePool'
+            'showDefaultNodePool' => 'showDefaultNodePool',
+            'advanceStatus' => 'advanceStatus'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * showDefaultNodePool  是否展示默认节点池。默认不展示，指定为“true”时展示默认节点池。
+    * advanceStatus  **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
-            'showDefaultNodePool' => 'setShowDefaultNodePool'
+            'showDefaultNodePool' => 'setShowDefaultNodePool',
+            'advanceStatus' => 'setAdvanceStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     * showDefaultNodePool  是否展示默认节点池。默认不展示，指定为“true”时展示默认节点池。
+    * advanceStatus  **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
-            'showDefaultNodePool' => 'getShowDefaultNodePool'
+            'showDefaultNodePool' => 'getShowDefaultNodePool',
+            'advanceStatus' => 'getAdvanceStatus'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ListNodePoolsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['showDefaultNodePool'] = isset($data['showDefaultNodePool']) ? $data['showDefaultNodePool'] : null;
+        $this->container['advanceStatus'] = isset($data['advanceStatus']) ? $data['advanceStatus'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class ListNodePoolsRequest implements ModelInterface, ArrayAccess
     public function setShowDefaultNodePool($showDefaultNodePool)
     {
         $this->container['showDefaultNodePool'] = $showDefaultNodePool;
+        return $this;
+    }
+
+    /**
+    * Gets advanceStatus
+    *  **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
+    *
+    * @return bool|null
+    */
+    public function getAdvanceStatus()
+    {
+        return $this->container['advanceStatus'];
+    }
+
+    /**
+    * Sets advanceStatus
+    *
+    * @param bool|null $advanceStatus **参数解释：** 节点池conditions是否反映整个节点池整体状态。 **约束限制：** 不涉及 **取值范围：** - true: 节点池的conditions反映整个节点池整体状态。 - false: 节点池的conditions仅反映默认伸缩组的状态。  **默认取值：** 不指定时默认为false
+    *
+    * @return $this
+    */
+    public function setAdvanceStatus($advanceStatus)
+    {
+        $this->container['advanceStatus'] = $advanceStatus;
         return $this;
     }
 

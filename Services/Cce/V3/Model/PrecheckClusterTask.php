@@ -20,8 +20,8 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为PreCheckTask
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     * metadata  metadata
     * spec  spec
     * status  status
@@ -38,8 +38,8 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为PreCheckTask
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     * metadata  metadata
     * spec  spec
     * status  status
@@ -77,8 +77,8 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为PreCheckTask
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     * metadata  metadata
     * spec  spec
     * status  status
@@ -95,8 +95,8 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为PreCheckTask
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     * metadata  metadata
     * spec  spec
     * status  status
@@ -113,8 +113,8 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiVersion  api版本，默认为v3
-    * kind  资源类型，默认为PreCheckTask
+    * apiVersion  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
+    * kind  **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     * metadata  metadata
     * spec  spec
     * status  status
@@ -218,7 +218,7 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiVersion
-    *  api版本，默认为v3
+    *  **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
     /**
     * Sets apiVersion
     *
-    * @param string|null $apiVersion api版本，默认为v3
+    * @param string|null $apiVersion **参数解释：** API版本，默认为v3 **约束限制：** 不涉及 **取值范围：** - v3  **默认取值：** v3
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets kind
-    *  资源类型，默认为PreCheckTask
+    *  **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class PrecheckClusterTask implements ModelInterface, ArrayAccess
     /**
     * Sets kind
     *
-    * @param string|null $kind 资源类型，默认为PreCheckTask
+    * @param string|null $kind **参数解释：** 资源类型，默认为PreCheckTask **约束限制：** 不涉及 **取值范围：** - PreCheckTask  **默认取值：** PreCheckTask
     *
     * @return $this
     */

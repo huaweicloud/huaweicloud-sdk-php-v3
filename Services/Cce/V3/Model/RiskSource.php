@@ -20,10 +20,10 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configurationRisks  配置风险项
-    * deprecatedApiRisks  废弃API风险
-    * nodeRisks  节点风险
-    * addonRisks  插件风险
+    * configurationRisks  **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * deprecatedApiRisks  **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeRisks  **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addonRisks  **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configurationRisks  配置风险项
-    * deprecatedApiRisks  废弃API风险
-    * nodeRisks  节点风险
-    * addonRisks  插件风险
+    * configurationRisks  **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * deprecatedApiRisks  **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeRisks  **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addonRisks  **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class RiskSource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configurationRisks  配置风险项
-    * deprecatedApiRisks  废弃API风险
-    * nodeRisks  节点风险
-    * addonRisks  插件风险
+    * configurationRisks  **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * deprecatedApiRisks  **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeRisks  **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addonRisks  **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configurationRisks  配置风险项
-    * deprecatedApiRisks  废弃API风险
-    * nodeRisks  节点风险
-    * addonRisks  插件风险
+    * configurationRisks  **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * deprecatedApiRisks  **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeRisks  **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addonRisks  **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configurationRisks  配置风险项
-    * deprecatedApiRisks  废弃API风险
-    * nodeRisks  节点风险
-    * addonRisks  插件风险
+    * configurationRisks  **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * deprecatedApiRisks  **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * nodeRisks  **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * addonRisks  **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets configurationRisks
-    *  配置风险项
+    *  **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\ConfigurationRisks[]|null
     */
@@ -219,7 +219,7 @@ class RiskSource implements ModelInterface, ArrayAccess
     /**
     * Sets configurationRisks
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ConfigurationRisks[]|null $configurationRisks 配置风险项
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ConfigurationRisks[]|null $configurationRisks **参数解释：** 配置风险项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets deprecatedApiRisks
-    *  废弃API风险
+    *  **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\DeprecatedAPIRisks[]|null
     */
@@ -243,7 +243,7 @@ class RiskSource implements ModelInterface, ArrayAccess
     /**
     * Sets deprecatedApiRisks
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\DeprecatedAPIRisks[]|null $deprecatedApiRisks 废弃API风险
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\DeprecatedAPIRisks[]|null $deprecatedApiRisks **参数解释：** 废弃API风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeRisks
-    *  节点风险
+    *  **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeRisks[]|null
     */
@@ -267,7 +267,7 @@ class RiskSource implements ModelInterface, ArrayAccess
     /**
     * Sets nodeRisks
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeRisks[]|null $nodeRisks 节点风险
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeRisks[]|null $nodeRisks **参数解释：** 节点风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class RiskSource implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonRisks
-    *  插件风险
+    *  **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\AddonRisks[]|null
     */
@@ -291,7 +291,7 @@ class RiskSource implements ModelInterface, ArrayAccess
     /**
     * Sets addonRisks
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddonRisks[]|null $addonRisks 插件风险
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddonRisks[]|null $addonRisks **参数解释：** 插件风险。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

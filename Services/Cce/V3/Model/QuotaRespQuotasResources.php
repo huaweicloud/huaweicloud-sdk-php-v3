@@ -20,9 +20,9 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
-    * quota  配额
-    * used  已使用量
+    * type  **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
+    * quota  **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
-    * quota  配额
-    * used  已使用量
+    * type  **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
+    * quota  **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
-    * quota  配额
-    * used  已使用量
+    * type  **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
+    * quota  **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
-    * quota  配额
-    * used  已使用量
+    * type  **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
+    * quota  **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
-    * quota  配额
-    * used  已使用量
+    * type  **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
+    * quota  **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * used  **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
+    *  **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 类型 **取值范围**： - Charts：配额类型为模板
+    * @param string|null $type **参数解释：** 类型 **约束限制：** 不涉及 **取值范围：** - Charts：配额类型为模板  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets quota
-    *  配额
+    *  **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
     /**
     * Sets quota
     *
-    * @param int|null $quota 配额
+    * @param int|null $quota **参数解释：** 配额 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
 
     /**
     * Gets used
-    *  已使用量
+    *  **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class QuotaRespQuotasResources implements ModelInterface, ArrayAccess
     /**
     * Sets used
     *
-    * @param int|null $used 已使用量
+    * @param int|null $used **参数解释：** 已使用量 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

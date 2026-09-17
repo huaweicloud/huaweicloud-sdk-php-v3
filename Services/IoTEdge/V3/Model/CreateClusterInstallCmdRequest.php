@@ -210,8 +210,8 @@ class CreateClusterInstallCmdRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['os']) && (mb_strlen($this->container['os']) < 1)) {
                 $invalidProperties[] = "invalid value for 'os', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['os']) && !preg_match("/(OpenEuler|Euler|KylinSec|Centos7)/", $this->container['os'])) {
-                $invalidProperties[] = "invalid value for 'os', must be conform to the pattern /(OpenEuler|Euler|KylinSec|Centos7)/.";
+            if (!is_null($this->container['os']) && !preg_match("/(OpenEuler|Euler|KylinSec|Centos7|KylinV10|HCE)/", $this->container['os'])) {
+                $invalidProperties[] = "invalid value for 'os', must be conform to the pattern /(OpenEuler|Euler|KylinSec|Centos7|KylinV10|HCE)/.";
             }
         return $invalidProperties;
     }

@@ -20,10 +20,10 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * release  正式版本号，如：v1.19.10
-    * patch  补丁版本号，如r0
-    * suggestPatch  推荐升级的目标补丁版本号，如r0
-    * targetVersions  升级目标版本集合
+    * release  **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * patch  **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * suggestPatch  **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersions  **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * release  正式版本号，如：v1.19.10
-    * patch  补丁版本号，如r0
-    * suggestPatch  推荐升级的目标补丁版本号，如r0
-    * targetVersions  升级目标版本集合
+    * release  **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * patch  **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * suggestPatch  **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersions  **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * release  正式版本号，如：v1.19.10
-    * patch  补丁版本号，如r0
-    * suggestPatch  推荐升级的目标补丁版本号，如r0
-    * targetVersions  升级目标版本集合
+    * release  **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * patch  **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * suggestPatch  **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersions  **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * release  正式版本号，如：v1.19.10
-    * patch  补丁版本号，如r0
-    * suggestPatch  推荐升级的目标补丁版本号，如r0
-    * targetVersions  升级目标版本集合
+    * release  **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * patch  **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * suggestPatch  **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersions  **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * release  正式版本号，如：v1.19.10
-    * patch  补丁版本号，如r0
-    * suggestPatch  推荐升级的目标补丁版本号，如r0
-    * targetVersions  升级目标版本集合
+    * release  **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * patch  **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * suggestPatch  **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * targetVersions  **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets release
-    *  正式版本号，如：v1.19.10
+    *  **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets release
     *
-    * @param string|null $release 正式版本号，如：v1.19.10
+    * @param string|null $release **参数解释：** 正式版本号，如：v1.19.10 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets patch
-    *  补丁版本号，如r0
+    *  **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets patch
     *
-    * @param string|null $patch 补丁版本号，如r0
+    * @param string|null $patch **参数解释：** 补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestPatch
-    *  推荐升级的目标补丁版本号，如r0
+    *  **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets suggestPatch
     *
-    * @param string|null $suggestPatch 推荐升级的目标补丁版本号，如r0
+    * @param string|null $suggestPatch **参数解释：** 推荐升级的目标补丁版本号，如r0 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetVersions
-    *  升级目标版本集合
+    *  **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string[]|null
     */
@@ -291,7 +291,7 @@ class UpgradeVersionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets targetVersions
     *
-    * @param string[]|null $targetVersions 升级目标版本集合
+    * @param string[]|null $targetVersions **参数解释：** 升级目标版本集合 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

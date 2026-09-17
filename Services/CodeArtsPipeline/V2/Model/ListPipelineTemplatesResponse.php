@@ -45,9 +45,9 @@ class ListPipelineTemplatesResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'offset' => 'int32',
-        'limit' => 'int32',
-        'total' => 'int32',
+        'offset' => 'int64',
+        'limit' => 'int64',
+        'total' => 'int64',
         'templates' => null
     ];
 

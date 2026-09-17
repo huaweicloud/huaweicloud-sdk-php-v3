@@ -20,7 +20,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resources  资源
+    * resources  **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resources  资源
+    * resources  **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resources  资源
+    * resources  **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resources  资源
+    * resources  **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resources  资源
+    * resources  **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
 
     /**
     * Gets resources
-    *  资源
+    *  **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\QuotaRespQuotasResources[]|null
     */
@@ -186,7 +186,7 @@ class QuotaRespQuotas implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\QuotaRespQuotasResources[]|null $resources 资源
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\QuotaRespQuotasResources[]|null $resources **参数解释：** 资源 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

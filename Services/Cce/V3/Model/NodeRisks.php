@@ -20,7 +20,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeId  用户节点ID
+    * nodeId  **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeId  用户节点ID
+    * nodeId  **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeId  用户节点ID
+    * nodeId  **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeId  用户节点ID
+    * nodeId  **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeId  用户节点ID
+    * nodeId  **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeId
-    *  用户节点ID
+    *  **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class NodeRisks implements ModelInterface, ArrayAccess
     /**
     * Sets nodeId
     *
-    * @param string|null $nodeId 用户节点ID
+    * @param string|null $nodeId **参数解释：** 用户节点ID。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -37,7 +37,7 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
             'skippedNodes' => 'string[]',
             'nodeIDs' => 'string[]',
             'nodePoolId' => 'string',
-            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate'
+            'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\UpgradeNodePoolSpecNodeTemplate'
     ];
 
     /**
@@ -395,7 +395,7 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     * Gets nodeTemplate
     *  nodeTemplate
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\UpgradeNodePoolSpecNodeTemplate|null
     */
     public function getNodeTemplate()
     {
@@ -405,7 +405,7 @@ class NodePoolUpgradeSpec implements ModelInterface, ArrayAccess
     /**
     * Sets nodeTemplate
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeTemplate|null $nodeTemplate nodeTemplate
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\UpgradeNodePoolSpecNodeTemplate|null $nodeTemplate nodeTemplate
     *
     * @return $this
     */

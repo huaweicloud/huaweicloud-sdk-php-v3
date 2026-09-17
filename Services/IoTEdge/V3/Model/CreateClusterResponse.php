@@ -26,9 +26,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * description  集群描述
     * version  边缘集群版本
     * state  边缘集群状态
+    * isUpgradeable  是否可升级
+    * clusterType  集群类型
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
-    * isUpgradeable  是否可升级
     *
     * @var string[]
     */
@@ -38,9 +40,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'description' => 'string',
             'version' => 'string',
             'state' => 'string',
+            'isUpgradeable' => 'bool',
+            'clusterType' => 'string',
+            'clusterAddr' => 'string',
             'createTime' => 'string',
-            'updateTime' => 'string',
-            'isUpgradeable' => 'bool'
+            'updateTime' => 'string'
     ];
 
     /**
@@ -50,9 +54,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * description  集群描述
     * version  边缘集群版本
     * state  边缘集群状态
+    * isUpgradeable  是否可升级
+    * clusterType  集群类型
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
-    * isUpgradeable  是否可升级
     *
     * @var string[]
     */
@@ -62,9 +68,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
         'description' => null,
         'version' => null,
         'state' => null,
+        'isUpgradeable' => null,
+        'clusterType' => null,
+        'clusterAddr' => null,
         'createTime' => null,
-        'updateTime' => null,
-        'isUpgradeable' => null
+        'updateTime' => null
     ];
 
     /**
@@ -95,9 +103,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * description  集群描述
     * version  边缘集群版本
     * state  边缘集群状态
+    * isUpgradeable  是否可升级
+    * clusterType  集群类型
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
-    * isUpgradeable  是否可升级
     *
     * @var string[]
     */
@@ -107,9 +117,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'description' => 'description',
             'version' => 'version',
             'state' => 'state',
+            'isUpgradeable' => 'is_upgradeable',
+            'clusterType' => 'cluster_type',
+            'clusterAddr' => 'cluster_addr',
             'createTime' => 'create_time',
-            'updateTime' => 'update_time',
-            'isUpgradeable' => 'is_upgradeable'
+            'updateTime' => 'update_time'
     ];
 
     /**
@@ -119,9 +131,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * description  集群描述
     * version  边缘集群版本
     * state  边缘集群状态
+    * isUpgradeable  是否可升级
+    * clusterType  集群类型
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
-    * isUpgradeable  是否可升级
     *
     * @var string[]
     */
@@ -131,9 +145,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'version' => 'setVersion',
             'state' => 'setState',
+            'isUpgradeable' => 'setIsUpgradeable',
+            'clusterType' => 'setClusterType',
+            'clusterAddr' => 'setClusterAddr',
             'createTime' => 'setCreateTime',
-            'updateTime' => 'setUpdateTime',
-            'isUpgradeable' => 'setIsUpgradeable'
+            'updateTime' => 'setUpdateTime'
     ];
 
     /**
@@ -143,9 +159,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     * description  集群描述
     * version  边缘集群版本
     * state  边缘集群状态
+    * isUpgradeable  是否可升级
+    * clusterType  集群类型
+    * clusterAddr  集群地址
     * createTime  创建时间
     * updateTime  最后一次修改时间
-    * isUpgradeable  是否可升级
     *
     * @var string[]
     */
@@ -155,9 +173,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'version' => 'getVersion',
             'state' => 'getState',
+            'isUpgradeable' => 'getIsUpgradeable',
+            'clusterType' => 'getClusterType',
+            'clusterAddr' => 'getClusterAddr',
             'createTime' => 'getCreateTime',
-            'updateTime' => 'getUpdateTime',
-            'isUpgradeable' => 'getIsUpgradeable'
+            'updateTime' => 'getUpdateTime'
     ];
 
     /**
@@ -223,9 +243,11 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['isUpgradeable'] = isset($data['isUpgradeable']) ? $data['isUpgradeable'] : null;
+        $this->container['clusterType'] = isset($data['clusterType']) ? $data['clusterType'] : null;
+        $this->container['clusterAddr'] = isset($data['clusterAddr']) ? $data['clusterAddr'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['isUpgradeable'] = isset($data['isUpgradeable']) ? $data['isUpgradeable'] : null;
     }
 
     /**
@@ -395,6 +417,78 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isUpgradeable
+    *  是否可升级
+    *
+    * @return bool|null
+    */
+    public function getIsUpgradeable()
+    {
+        return $this->container['isUpgradeable'];
+    }
+
+    /**
+    * Sets isUpgradeable
+    *
+    * @param bool|null $isUpgradeable 是否可升级
+    *
+    * @return $this
+    */
+    public function setIsUpgradeable($isUpgradeable)
+    {
+        $this->container['isUpgradeable'] = $isUpgradeable;
+        return $this;
+    }
+
+    /**
+    * Gets clusterType
+    *  集群类型
+    *
+    * @return string|null
+    */
+    public function getClusterType()
+    {
+        return $this->container['clusterType'];
+    }
+
+    /**
+    * Sets clusterType
+    *
+    * @param string|null $clusterType 集群类型
+    *
+    * @return $this
+    */
+    public function setClusterType($clusterType)
+    {
+        $this->container['clusterType'] = $clusterType;
+        return $this;
+    }
+
+    /**
+    * Gets clusterAddr
+    *  集群地址
+    *
+    * @return string|null
+    */
+    public function getClusterAddr()
+    {
+        return $this->container['clusterAddr'];
+    }
+
+    /**
+    * Sets clusterAddr
+    *
+    * @param string|null $clusterAddr 集群地址
+    *
+    * @return $this
+    */
+    public function setClusterAddr($clusterAddr)
+    {
+        $this->container['clusterAddr'] = $clusterAddr;
+        return $this;
+    }
+
+    /**
     * Gets createTime
     *  创建时间
     *
@@ -439,30 +533,6 @@ class CreateClusterResponse implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
-        return $this;
-    }
-
-    /**
-    * Gets isUpgradeable
-    *  是否可升级
-    *
-    * @return bool|null
-    */
-    public function getIsUpgradeable()
-    {
-        return $this->container['isUpgradeable'];
-    }
-
-    /**
-    * Sets isUpgradeable
-    *
-    * @param bool|null $isUpgradeable 是否可升级
-    *
-    * @return $this
-    */
-    public function setIsUpgradeable($isUpgradeable)
-    {
-        $this->container['isUpgradeable'] = $isUpgradeable;
         return $this;
     }
 

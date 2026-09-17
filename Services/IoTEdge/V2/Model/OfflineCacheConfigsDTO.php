@@ -22,28 +22,32 @@ class OfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先 sequential按时序上报，默认realtime_first
     * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
+    * channelCacheState  路由转发开启离线缓存
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'publishOrder' => 'string',
             'period' => 'int',
-            'capacity' => 'int'
+            'capacity' => 'int',
+            'channelCacheState' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先 sequential按时序上报，默认realtime_first
     * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
+    * channelCacheState  路由转发开启离线缓存
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'publishOrder' => null,
         'period' => 'int32',
-        'capacity' => 'int32'
+        'capacity' => 'int32',
+        'channelCacheState' => null
     ];
 
     /**
@@ -71,42 +75,48 @@ class OfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先 sequential按时序上报，默认realtime_first
     * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
+    * channelCacheState  路由转发开启离线缓存
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'publishOrder' => 'publish_order',
             'period' => 'period',
-            'capacity' => 'capacity'
+            'capacity' => 'capacity',
+            'channelCacheState' => 'channel_cache_state'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先 sequential按时序上报，默认realtime_first
     * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
+    * channelCacheState  路由转发开启离线缓存
     *
     * @var string[]
     */
     protected static $setters = [
             'publishOrder' => 'setPublishOrder',
             'period' => 'setPeriod',
-            'capacity' => 'setCapacity'
+            'capacity' => 'setCapacity',
+            'channelCacheState' => 'setChannelCacheState'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * publishOrder  数据上报优先级，可选项：realtime_first实时数据优先 sequential按时序上报，默认realtime_first
     * period  节点离线缓存数据的储存天数，默认7，取值范围-1~14，-1表示存储天数没有限制
-    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    * capacity  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
+    * channelCacheState  路由转发开启离线缓存
     *
     * @var string[]
     */
     protected static $getters = [
             'publishOrder' => 'getPublishOrder',
             'period' => 'getPeriod',
-            'capacity' => 'getCapacity'
+            'capacity' => 'getCapacity',
+            'channelCacheState' => 'getChannelCacheState'
     ];
 
     /**
@@ -170,6 +180,7 @@ class OfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
         $this->container['publishOrder'] = isset($data['publishOrder']) ? $data['publishOrder'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['capacity'] = isset($data['capacity']) ? $data['capacity'] : null;
+        $this->container['channelCacheState'] = isset($data['channelCacheState']) ? $data['channelCacheState'] : null;
     }
 
     /**
@@ -189,11 +200,20 @@ class OfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
             if (!is_null($this->container['period']) && ($this->container['period'] < -1)) {
                 $invalidProperties[] = "invalid value for 'period', must be bigger than or equal to -1.";
             }
-            if (!is_null($this->container['capacity']) && ($this->container['capacity'] > 8192)) {
-                $invalidProperties[] = "invalid value for 'capacity', must be smaller than or equal to 8192.";
+            if (!is_null($this->container['capacity']) && ($this->container['capacity'] > 1048576)) {
+                $invalidProperties[] = "invalid value for 'capacity', must be smaller than or equal to 1048576.";
             }
             if (!is_null($this->container['capacity']) && ($this->container['capacity'] < 500)) {
                 $invalidProperties[] = "invalid value for 'capacity', must be bigger than or equal to 500.";
+            }
+            if (!is_null($this->container['channelCacheState']) && (mb_strlen($this->container['channelCacheState']) > 3)) {
+                $invalidProperties[] = "invalid value for 'channelCacheState', the character length must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['channelCacheState']) && (mb_strlen($this->container['channelCacheState']) < 2)) {
+                $invalidProperties[] = "invalid value for 'channelCacheState', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['channelCacheState']) && !preg_match("/(off|on)/", $this->container['channelCacheState'])) {
+                $invalidProperties[] = "invalid value for 'channelCacheState', must be conform to the pattern /(off|on)/.";
             }
         return $invalidProperties;
     }
@@ -259,7 +279,7 @@ class OfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets capacity
-    *  节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    *  节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @return int|null
     */
@@ -271,13 +291,37 @@ class OfflineCacheConfigsDTO implements ModelInterface, ArrayAccess
     /**
     * Sets capacity
     *
-    * @param int|null $capacity 节点离线缓存容量，单位MB，默认2048，取值范围500-8192
+    * @param int|null $capacity 节点离线缓存容量，单位MB，默认2048，取值范围500-1048576
     *
     * @return $this
     */
     public function setCapacity($capacity)
     {
         $this->container['capacity'] = $capacity;
+        return $this;
+    }
+
+    /**
+    * Gets channelCacheState
+    *  路由转发开启离线缓存
+    *
+    * @return string|null
+    */
+    public function getChannelCacheState()
+    {
+        return $this->container['channelCacheState'];
+    }
+
+    /**
+    * Sets channelCacheState
+    *
+    * @param string|null $channelCacheState 路由转发开启离线缓存
+    *
+    * @return $this
+    */
+    public function setChannelCacheState($channelCacheState)
+    {
+        $this->container['channelCacheState'] = $channelCacheState;
         return $this;
     }
 

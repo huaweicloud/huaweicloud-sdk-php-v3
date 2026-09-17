@@ -29,6 +29,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
     * dataType  点位数据类型
     * dsId  采集数据源id，节点下唯一
     * processingConfig  processingConfig
+    * active  点位启停状态
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -43,6 +44,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
             'dataType' => 'string',
             'dsId' => 'string',
             'processingConfig' => '\HuaweiCloud\SDK\IoTEdge\V2\Model\ProcessingConfigDTO',
+            'active' => 'bool',
             'createTime' => 'string',
             'updateTime' => 'string'
     ];
@@ -57,6 +59,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
     * dataType  点位数据类型
     * dsId  采集数据源id，节点下唯一
     * processingConfig  processingConfig
+    * active  点位启停状态
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -71,6 +74,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
         'dataType' => null,
         'dsId' => null,
         'processingConfig' => null,
+        'active' => null,
         'createTime' => null,
         'updateTime' => null
     ];
@@ -106,6 +110,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
     * dataType  点位数据类型
     * dsId  采集数据源id，节点下唯一
     * processingConfig  processingConfig
+    * active  点位启停状态
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -120,6 +125,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
             'dataType' => 'data_type',
             'dsId' => 'ds_id',
             'processingConfig' => 'processing_config',
+            'active' => 'active',
             'createTime' => 'create_time',
             'updateTime' => 'update_time'
     ];
@@ -134,6 +140,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
     * dataType  点位数据类型
     * dsId  采集数据源id，节点下唯一
     * processingConfig  processingConfig
+    * active  点位启停状态
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -148,6 +155,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
             'dataType' => 'setDataType',
             'dsId' => 'setDsId',
             'processingConfig' => 'setProcessingConfig',
+            'active' => 'setActive',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime'
     ];
@@ -162,6 +170,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
     * dataType  点位数据类型
     * dsId  采集数据源id，节点下唯一
     * processingConfig  processingConfig
+    * active  点位启停状态
     * createTime  创建时间
     * updateTime  最后一次修改时间
     *
@@ -176,6 +185,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
             'dataType' => 'getDataType',
             'dsId' => 'getDsId',
             'processingConfig' => 'getProcessingConfig',
+            'active' => 'getActive',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime'
     ];
@@ -246,6 +256,7 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['dsId'] = isset($data['dsId']) ? $data['dsId'] : null;
         $this->container['processingConfig'] = isset($data['processingConfig']) ? $data['processingConfig'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
     }
@@ -518,6 +529,30 @@ class CreateDcPointResponse implements ModelInterface, ArrayAccess
     public function setProcessingConfig($processingConfig)
     {
         $this->container['processingConfig'] = $processingConfig;
+        return $this;
+    }
+
+    /**
+    * Gets active
+    *  点位启停状态
+    *
+    * @return bool|null
+    */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+    * Sets active
+    *
+    * @param bool|null $active 点位启停状态
+    *
+    * @return $this
+    */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imagePullPolicy  镜像拉取策略
-    * imageTag  镜像标签
+    * imagePullPolicy  **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * imageTag  **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imagePullPolicy  镜像拉取策略
-    * imageTag  镜像标签
+    * imagePullPolicy  **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * imageTag  **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imagePullPolicy  镜像拉取策略
-    * imageTag  镜像标签
+    * imagePullPolicy  **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * imageTag  **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imagePullPolicy  镜像拉取策略
-    * imageTag  镜像标签
+    * imagePullPolicy  **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * imageTag  **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imagePullPolicy  镜像拉取策略
-    * imageTag  镜像标签
+    * imagePullPolicy  **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * imageTag  **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagePullPolicy
-    *  镜像拉取策略
+    *  **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
     /**
     * Sets imagePullPolicy
     *
-    * @param string|null $imagePullPolicy 镜像拉取策略
+    * @param string|null $imagePullPolicy **参数解释：** 镜像拉取策略 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageTag
-    *  镜像标签
+    *  **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class CreateReleaseReqBodyValues implements ModelInterface, ArrayAccess
     /**
     * Sets imageTag
     *
-    * @param string|null $imageTag 镜像标签
+    * @param string|null $imageTag **参数解释：** 镜像标签 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

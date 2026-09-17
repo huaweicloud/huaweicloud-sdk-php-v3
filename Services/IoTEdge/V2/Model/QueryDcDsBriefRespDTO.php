@@ -26,7 +26,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
     * moduleId  模块id
     * tplId  模板id，节点下唯一
     * qualityReport  质量上报开关，不携带或值不为true，默认为false
-    * edgeAppName  应用ID
+    * edgeAppName  应用名称
     * connectionInfo  数采连接信息
     * moduleState  数采连接状态,RUNNING|STOPPED
     * count  数采连接下点位数
@@ -62,7 +62,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
     * moduleId  模块id
     * tplId  模板id，节点下唯一
     * qualityReport  质量上报开关，不携带或值不为true，默认为false
-    * edgeAppName  应用ID
+    * edgeAppName  应用名称
     * connectionInfo  数采连接信息
     * moduleState  数采连接状态,RUNNING|STOPPED
     * count  数采连接下点位数
@@ -119,7 +119,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
     * moduleId  模块id
     * tplId  模板id，节点下唯一
     * qualityReport  质量上报开关，不携带或值不为true，默认为false
-    * edgeAppName  应用ID
+    * edgeAppName  应用名称
     * connectionInfo  数采连接信息
     * moduleState  数采连接状态,RUNNING|STOPPED
     * count  数采连接下点位数
@@ -155,7 +155,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
     * moduleId  模块id
     * tplId  模板id，节点下唯一
     * qualityReport  质量上报开关，不携带或值不为true，默认为false
-    * edgeAppName  应用ID
+    * edgeAppName  应用名称
     * connectionInfo  数采连接信息
     * moduleState  数采连接状态,RUNNING|STOPPED
     * count  数采连接下点位数
@@ -191,7 +191,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
     * moduleId  模块id
     * tplId  模板id，节点下唯一
     * qualityReport  质量上报开关，不携带或值不为true，默认为false
-    * edgeAppName  应用ID
+    * edgeAppName  应用名称
     * connectionInfo  数采连接信息
     * moduleState  数采连接状态,RUNNING|STOPPED
     * count  数采连接下点位数
@@ -542,7 +542,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets edgeAppName
-    *  应用ID
+    *  应用名称
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class QueryDcDsBriefRespDTO implements ModelInterface, ArrayAccess
     /**
     * Sets edgeAppName
     *
-    * @param string|null $edgeAppName 应用ID
+    * @param string|null $edgeAppName 应用名称
     *
     * @return $this
     */

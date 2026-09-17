@@ -20,12 +20,12 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  子任务ID
+    * id  **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
-    * creationTimestamp  任务创建时间
-    * updateTimestamp  任务更新时间
-    * message  信息
+    * creationTimestamp  **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTimestamp  **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  子任务ID
+    * id  **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
-    * creationTimestamp  任务创建时间
-    * updateTimestamp  任务更新时间
-    * message  信息
+    * creationTimestamp  **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTimestamp  **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  子任务ID
+    * id  **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
-    * creationTimestamp  任务创建时间
-    * updateTimestamp  任务更新时间
-    * message  信息
+    * creationTimestamp  **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTimestamp  **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  子任务ID
+    * id  **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
-    * creationTimestamp  任务创建时间
-    * updateTimestamp  任务更新时间
-    * message  信息
+    * creationTimestamp  **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTimestamp  **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  子任务ID
+    * id  **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * type  **参数解释**： 子任务类型 **取值范围**： - master-backup：集群EVS备份 - master-backup-rollback：集群EVS回滚 **默认取值**： 不涉及
     * status  **参数解释**： 状态 **取值范围**： - Init：初始化 - Queuing：等待 - Running：运行中 - Pause：暂停 - Success：成功 - Failed：失败 **默认取值**： 不涉及
-    * creationTimestamp  任务创建时间
-    * updateTimestamp  任务更新时间
-    * message  信息
+    * creationTimestamp  **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * updateTimestamp  **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * message  **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -229,7 +229,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  子任务ID
+    *  **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -241,7 +241,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 子任务ID
+    * @param string|null $id **参数解释：** 子任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets creationTimestamp
-    *  任务创建时间
+    *  **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Sets creationTimestamp
     *
-    * @param string|null $creationTimestamp 任务创建时间
+    * @param string|null $creationTimestamp **参数解释：** 任务创建时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTimestamp
-    *  任务更新时间
+    *  **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Sets updateTimestamp
     *
-    * @param string|null $updateTimestamp 任务更新时间
+    * @param string|null $updateTimestamp **参数解释：** 任务更新时间 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  信息
+    *  **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class SnapshotSpecItems implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 信息
+    * @param string|null $message **参数解释：** 信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

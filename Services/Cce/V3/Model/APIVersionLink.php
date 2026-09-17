@@ -20,8 +20,8 @@ class APIVersionLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * href  API版本信息的链接。
-    * rel  链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    * href  **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * rel  **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class APIVersionLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * href  API版本信息的链接。
-    * rel  链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    * href  **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * rel  **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class APIVersionLink implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * href  API版本信息的链接。
-    * rel  链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    * href  **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * rel  **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class APIVersionLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * href  API版本信息的链接。
-    * rel  链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    * href  **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * rel  **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class APIVersionLink implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * href  API版本信息的链接。
-    * rel  链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    * href  **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * rel  **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class APIVersionLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets href
-    *  API版本信息的链接。
+    *  **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -224,7 +224,7 @@ class APIVersionLink implements ModelInterface, ArrayAccess
     /**
     * Sets href
     *
-    * @param string $href API版本信息的链接。
+    * @param string $href **参数解释：** API版本信息的链接。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -236,7 +236,7 @@ class APIVersionLink implements ModelInterface, ArrayAccess
 
     /**
     * Gets rel
-    *  链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    *  **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -248,7 +248,7 @@ class APIVersionLink implements ModelInterface, ArrayAccess
     /**
     * Sets rel
     *
-    * @param string $rel 链接属性。self：自助链接包含版本链接的资源。立即链接后使用这些链接。
+    * @param string $rel **参数解释：** 链接属性。 **约束限制：** 不涉及 **取值范围：** - self：自助链接包含版本链接的资源。立即链接后使用这些链接。  **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     * description  应用描述
     * functionType  功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
     * protocol  驱动协议类型OPCUA|Modbus-TCP
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
             'edgeAppName' => 'string',
             'description' => 'string',
             'functionType' => 'string',
-            'protocol' => 'string'
+            'protocol' => 'string',
+            'deliveredApp' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     * description  应用描述
     * functionType  功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
     * protocol  驱动协议类型OPCUA|Modbus-TCP
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
         'edgeAppName' => null,
         'description' => null,
         'functionType' => null,
-        'protocol' => null
+        'protocol' => null,
+        'deliveredApp' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     * description  应用描述
     * functionType  功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
     * protocol  驱动协议类型OPCUA|Modbus-TCP
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
             'edgeAppName' => 'edge_app_name',
             'description' => 'description',
             'functionType' => 'function_type',
-            'protocol' => 'protocol'
+            'protocol' => 'protocol',
+            'deliveredApp' => 'delivered_app'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     * description  应用描述
     * functionType  功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
     * protocol  驱动协议类型OPCUA|Modbus-TCP
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
             'edgeAppName' => 'setEdgeAppName',
             'description' => 'setDescription',
             'functionType' => 'setFunctionType',
-            'protocol' => 'setProtocol'
+            'protocol' => 'setProtocol',
+            'deliveredApp' => 'setDeliveredApp'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     * description  应用描述
     * functionType  功能类型,分为数据处理（DATA_PROCESSING）、协议解析（PROTOCOL_PARSING）、IT集成（ON_PREMISE_INTEGRATION）和混合应用（COMPOSITE_APPLICATION），数据默认为DATA_PROCESSING，数据处理模块可以传输消息，协议解析为驱动类型，IT集成为部署南向3rdIA使用，混合应用可同时实现数据处理和协议解析。
     * protocol  驱动协议类型OPCUA|Modbus-TCP
+    * deliveredApp  是否是下发到端侧网关上应用。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
             'edgeAppName' => 'getEdgeAppName',
             'description' => 'getDescription',
             'functionType' => 'getFunctionType',
-            'protocol' => 'getProtocol'
+            'protocol' => 'getProtocol',
+            'deliveredApp' => 'getDeliveredApp'
     ];
 
     /**
@@ -175,6 +185,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     const FUNCTION_TYPE_GATEWAY_MANAGER = 'GATEWAY_MANAGER';
     const FUNCTION_TYPE_COMPOSITE_APPLICATION = 'COMPOSITE_APPLICATION';
     const FUNCTION_TYPE_DATA_COLLECTION = 'DATA_COLLECTION';
+    const FUNCTION_TYPE_MODEL_INFERENCE = 'MODEL_INFERENCE';
     
 
     /**
@@ -191,6 +202,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
             self::FUNCTION_TYPE_GATEWAY_MANAGER,
             self::FUNCTION_TYPE_COMPOSITE_APPLICATION,
             self::FUNCTION_TYPE_DATA_COLLECTION,
+            self::FUNCTION_TYPE_MODEL_INFERENCE,
         ];
     }
 
@@ -215,6 +227,7 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['functionType'] = isset($data['functionType']) ? $data['functionType'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
+        $this->container['deliveredApp'] = isset($data['deliveredApp']) ? $data['deliveredApp'] : null;
     }
 
     /**
@@ -263,15 +276,6 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['functionType']) && (mb_strlen($this->container['functionType']) > 255)) {
-                $invalidProperties[] = "invalid value for 'functionType', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['functionType']) && (mb_strlen($this->container['functionType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'functionType', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['functionType']) && !preg_match("/(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION)/", $this->container['functionType'])) {
-                $invalidProperties[] = "invalid value for 'functionType', must be conform to the pattern /(DATA_PROCESSING|PROTOCOL_PARSING|ON_PREMISE_INTEGRATION|GATEWAY_MANAGER|COMPOSITE_APPLICATION|DATA_COLLECTION)/.";
-            }
             if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 64)) {
                 $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 64.";
             }
@@ -412,6 +416,30 @@ class CreateEdgeApplicationRequestDTO implements ModelInterface, ArrayAccess
     public function setProtocol($protocol)
     {
         $this->container['protocol'] = $protocol;
+        return $this;
+    }
+
+    /**
+    * Gets deliveredApp
+    *  是否是下发到端侧网关上应用。
+    *
+    * @return bool|null
+    */
+    public function getDeliveredApp()
+    {
+        return $this->container['deliveredApp'];
+    }
+
+    /**
+    * Sets deliveredApp
+    *
+    * @param bool|null $deliveredApp 是否是下发到端侧网关上应用。
+    *
+    * @return $this
+    */
+    public function setDeliveredApp($deliveredApp)
+    {
+        $this->container['deliveredApp'] = $deliveredApp;
         return $this;
     }
 

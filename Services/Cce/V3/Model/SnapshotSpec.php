@@ -20,7 +20,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * items  备份任务详情
+    * items  **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * items  备份任务详情
+    * items  **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * items  备份任务详情
+    * items  **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * items  备份任务详情
+    * items  **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * items  备份任务详情
+    * items  **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
 
     /**
     * Gets items
-    *  备份任务详情
+    *  **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cce\V3\Model\SnapshotSpecItems[]|null
     */
@@ -186,7 +186,7 @@ class SnapshotSpec implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\SnapshotSpecItems[]|null $items 备份任务详情
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\SnapshotSpecItems[]|null $items **参数解释：** 备份任务详情 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -3182,7 +3182,7 @@ class GaussDBforNoSQLAsyncClient extends Client
     }
 
     /**
-     * 查询指定条件下的所有实例规格信息
+     * 查询所有实例规格信息
      *
      * 查询指定条件下的所有实例规格信息。
      * 

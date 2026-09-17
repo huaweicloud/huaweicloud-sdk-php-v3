@@ -22,24 +22,28 @@ class ShowPipelineRunDetailRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * pipelineRunNumber  流水线运行编号
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'pipelineId' => 'string',
-            'pipelineRunId' => 'string'
+            'pipelineRunId' => 'string',
+            'pipelineRunNumber' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * pipelineRunNumber  流水线运行编号
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'pipelineId' => null,
-        'pipelineRunId' => null
+        'pipelineRunId' => null,
+        'pipelineRunNumber' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShowPipelineRunDetailRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * pipelineRunNumber  流水线运行编号
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'pipelineId' => 'pipeline_id',
-            'pipelineRunId' => 'pipeline_run_id'
+            'pipelineRunId' => 'pipeline_run_id',
+            'pipelineRunNumber' => 'pipeline_run_number'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * pipelineRunNumber  流水线运行编号
     *
     * @var string[]
     */
     protected static $setters = [
             'pipelineId' => 'setPipelineId',
-            'pipelineRunId' => 'setPipelineRunId'
+            'pipelineRunId' => 'setPipelineRunId',
+            'pipelineRunNumber' => 'setPipelineRunNumber'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pipelineId  流水线ID
     * pipelineRunId  流水线运行实例ID
+    * pipelineRunNumber  流水线运行编号
     *
     * @var string[]
     */
     protected static $getters = [
             'pipelineId' => 'getPipelineId',
-            'pipelineRunId' => 'getPipelineRunId'
+            'pipelineRunId' => 'getPipelineRunId',
+            'pipelineRunNumber' => 'getPipelineRunNumber'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShowPipelineRunDetailRequest implements ModelInterface, ArrayAccess
     {
         $this->container['pipelineId'] = isset($data['pipelineId']) ? $data['pipelineId'] : null;
         $this->container['pipelineRunId'] = isset($data['pipelineRunId']) ? $data['pipelineRunId'] : null;
+        $this->container['pipelineRunNumber'] = isset($data['pipelineRunNumber']) ? $data['pipelineRunNumber'] : null;
     }
 
     /**
@@ -237,6 +248,30 @@ class ShowPipelineRunDetailRequest implements ModelInterface, ArrayAccess
     public function setPipelineRunId($pipelineRunId)
     {
         $this->container['pipelineRunId'] = $pipelineRunId;
+        return $this;
+    }
+
+    /**
+    * Gets pipelineRunNumber
+    *  流水线运行编号
+    *
+    * @return string|null
+    */
+    public function getPipelineRunNumber()
+    {
+        return $this->container['pipelineRunNumber'];
+    }
+
+    /**
+    * Sets pipelineRunNumber
+    *
+    * @param string|null $pipelineRunNumber 流水线运行编号
+    *
+    * @return $this
+    */
+    public function setPipelineRunNumber($pipelineRunNumber)
+    {
+        $this->container['pipelineRunNumber'] = $pipelineRunNumber;
         return $this;
     }
 

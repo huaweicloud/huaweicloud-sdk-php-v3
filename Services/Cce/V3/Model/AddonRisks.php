@@ -20,8 +20,8 @@ class AddonRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * addonTemplateName  插件模板名称
-    * alias  插件别名
+    * addonTemplateName  **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * alias  **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AddonRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * addonTemplateName  插件模板名称
-    * alias  插件别名
+    * addonTemplateName  **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * alias  **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AddonRisks implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * addonTemplateName  插件模板名称
-    * alias  插件别名
+    * addonTemplateName  **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * alias  **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AddonRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * addonTemplateName  插件模板名称
-    * alias  插件别名
+    * addonTemplateName  **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * alias  **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AddonRisks implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * addonTemplateName  插件模板名称
-    * alias  插件别名
+    * addonTemplateName  **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * alias  **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class AddonRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets addonTemplateName
-    *  插件模板名称
+    *  **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class AddonRisks implements ModelInterface, ArrayAccess
     /**
     * Sets addonTemplateName
     *
-    * @param string|null $addonTemplateName 插件模板名称
+    * @param string|null $addonTemplateName **参数解释：** 插件模板名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class AddonRisks implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  插件别名
+    *  **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class AddonRisks implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 插件别名
+    * @param string|null $alias **参数解释：** 插件别名。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
