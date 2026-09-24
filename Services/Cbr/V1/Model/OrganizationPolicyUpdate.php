@@ -36,7 +36,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
             'policyName' => 'string',
             'policyEnabled' => 'bool',
             'policyOperationDefinition' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyoODCreate',
-            'policyTrigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq',
+            'policyTrigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerUpdateReq',
             'effectiveScope' => 'string'
     ];
 
@@ -386,7 +386,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     * Gets policyTrigger
     *  policyTrigger
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerUpdateReq|null
     */
     public function getPolicyTrigger()
     {
@@ -396,7 +396,7 @@ class OrganizationPolicyUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets policyTrigger
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq|null $policyTrigger policyTrigger
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerUpdateReq|null $policyTrigger policyTrigger
     *
     * @return $this
     */

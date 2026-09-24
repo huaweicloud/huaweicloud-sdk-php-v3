@@ -22,7 +22,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
-    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像列表 **取值范围**： 不涉及
     * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
@@ -31,7 +31,7 @@ class Resources implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'clusterId' => 'string',
             'clusterName' => 'string',
-            'images' => 'string',
+            'images' => 'string[]',
             'labels' => 'string[]',
             'namespace' => 'string'
     ];
@@ -40,7 +40,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
-    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像列表 **取值范围**： 不涉及
     * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
@@ -79,7 +79,7 @@ class Resources implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
-    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像列表 **取值范围**： 不涉及
     * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
@@ -97,7 +97,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
-    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像列表 **取值范围**： 不涉及
     * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
@@ -115,7 +115,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  **参数解释**： 集群id **取值范围**： 不涉及
     * clusterName  **参数解释**： 集群名称 **取值范围**： 不涉及
-    * images  **参数解释**： 镜像 **取值范围**： 不涉及
+    * images  **参数解释**： 镜像列表 **取值范围**： 不涉及
     * labels  **参数解释**： 标签列表 **取值范围**： 不涉及
     * namespace  **参数解释**： 命名空间 **取值范围**： 不涉及
     *
@@ -214,12 +214,6 @@ class Resources implements ModelInterface, ArrayAccess
             if (!is_null($this->container['clusterName']) && (mb_strlen($this->container['clusterName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'clusterName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['images']) && (mb_strlen($this->container['images']) > 256)) {
-                $invalidProperties[] = "invalid value for 'images', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['images']) && (mb_strlen($this->container['images']) < 1)) {
-                $invalidProperties[] = "invalid value for 'images', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['namespace']) && (mb_strlen($this->container['namespace']) > 256)) {
                 $invalidProperties[] = "invalid value for 'namespace', the character length must be smaller than or equal to 256.";
             }
@@ -290,9 +284,9 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets images
-    *  **参数解释**： 镜像 **取值范围**： 不涉及
+    *  **参数解释**： 镜像列表 **取值范围**： 不涉及
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getImages()
     {
@@ -302,7 +296,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets images
     *
-    * @param string|null $images **参数解释**： 镜像 **取值范围**： 不涉及
+    * @param string[]|null $images **参数解释**： 镜像列表 **取值范围**： 不涉及
     *
     * @return $this
     */

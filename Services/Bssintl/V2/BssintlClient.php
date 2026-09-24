@@ -2101,6 +2101,71 @@ class BssintlClient extends Client
     }
 
     /**
+     * 查询云服务类型资源规格定价
+     *
+     * 客户或伙伴在自建平台查询云服务类型资源规格定价，辅助购买决策
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourceSpecsPrice($request)
+    {
+        return $this->listResourceSpecsPriceWithHttpInfo($request);
+    }
+
+    public function listResourceSpecsPriceWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/products/resource-specs-price/query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListResourceSpecsPriceResponse',
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListResourceSpecsPriceRequest');
+    }
+
+    /**
      * 查询资源类型列表
      *
      * 伙伴在伙伴销售平台查询资源类型的列表。

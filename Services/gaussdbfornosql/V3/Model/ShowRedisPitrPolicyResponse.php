@@ -21,9 +21,9 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
-    * keepDays  指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
-    * keepDays  指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
-    * keepDays  指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
-    * keepDays  指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
-    * keepDays  指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
+    *  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
     *
     * @return bool|null
     */
@@ -209,7 +209,7 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
+    * @param bool|null $enabled **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：**  - “true”，表示实例开启Redis指定时间点恢复功能。  - “false”，表示实例不启用Redis指定时间点恢复功能。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets interval
-    *  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
+    *  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets interval
     *
-    * @param int|null $interval 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。
+    * @param int|null $interval **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDays
-    *  指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    *  **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class ShowRedisPitrPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keepDays
     *
-    * @param int|null $keepDays 指定已生成的备份文件可以保存的天数，仅在开启时返回。
+    * @param int|null $keepDays **参数解释：** 指定已生成的备份文件可以保存的天数，仅在开启时返回。 **取值范围：** 不涉及。
     *
     * @return $this
     */

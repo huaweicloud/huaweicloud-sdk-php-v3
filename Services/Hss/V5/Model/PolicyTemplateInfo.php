@@ -295,12 +295,6 @@ class PolicyTemplateInfo implements ModelInterface, ArrayAccess
         if ($this->container['constraintTemplate'] === null) {
             $invalidProperties[] = "'constraintTemplate' can't be null";
         }
-            if ((mb_strlen($this->container['constraintTemplate']) > 65535)) {
-                $invalidProperties[] = "invalid value for 'constraintTemplate', the character length must be smaller than or equal to 65535.";
-            }
-            if ((mb_strlen($this->container['constraintTemplate']) < 1)) {
-                $invalidProperties[] = "invalid value for 'constraintTemplate', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 

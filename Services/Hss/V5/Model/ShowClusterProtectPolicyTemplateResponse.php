@@ -281,12 +281,6 @@ class ShowClusterProtectPolicyTemplateResponse implements ModelInterface, ArrayA
             if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) < 1)) {
                 $invalidProperties[] = "invalid value for 'level', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['constraintTemplate']) && (mb_strlen($this->container['constraintTemplate']) > 65535)) {
-                $invalidProperties[] = "invalid value for 'constraintTemplate', the character length must be smaller than or equal to 65535.";
-            }
-            if (!is_null($this->container['constraintTemplate']) && (mb_strlen($this->container['constraintTemplate']) < 1)) {
-                $invalidProperties[] = "invalid value for 'constraintTemplate', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 

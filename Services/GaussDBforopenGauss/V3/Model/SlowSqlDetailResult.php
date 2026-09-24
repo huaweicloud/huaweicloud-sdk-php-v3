@@ -31,8 +31,8 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * sqlText  **参数解释**: SQL模版。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * startTime  **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-    * finishTime  **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * startTime  **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     * returnedRows  **参数解释**: 返回行。 **取值范围**: 不涉及。
     * fetchedRows  **参数解释**: 扫描行。 **取值范围**: 不涉及。
     * fetchedPages  **参数解释**: 扫描页。 **取值范围**: 不涉及。
@@ -58,18 +58,18 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
             'nodeName' => 'string',
             'sqlText' => 'string',
             'queryPlan' => 'string',
-            'startTime' => 'int',
-            'finishTime' => 'int',
+            'startTime' => 'string',
+            'finishTime' => 'string',
             'returnedRows' => 'int',
             'fetchedRows' => 'int',
             'fetchedPages' => 'int',
             'hitPages' => 'int',
-            'totalTime' => 'int',
-            'cpuTime' => 'int',
-            'planTime' => 'int',
-            'ioTime' => 'int',
+            'totalTime' => 'string',
+            'cpuTime' => 'string',
+            'planTime' => 'string',
+            'ioTime' => 'string',
             'lockCount' => 'int',
-            'lockTime' => 'int'
+            'lockTime' => 'string'
     ];
 
     /**
@@ -85,8 +85,8 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * sqlText  **参数解释**: SQL模版。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * startTime  **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-    * finishTime  **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * startTime  **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     * returnedRows  **参数解释**: 返回行。 **取值范围**: 不涉及。
     * fetchedRows  **参数解释**: 扫描行。 **取值范围**: 不涉及。
     * fetchedPages  **参数解释**: 扫描页。 **取值范围**: 不涉及。
@@ -160,8 +160,8 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * sqlText  **参数解释**: SQL模版。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * startTime  **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-    * finishTime  **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * startTime  **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     * returnedRows  **参数解释**: 返回行。 **取值范围**: 不涉及。
     * fetchedRows  **参数解释**: 扫描行。 **取值范围**: 不涉及。
     * fetchedPages  **参数解释**: 扫描页。 **取值范围**: 不涉及。
@@ -214,8 +214,8 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * sqlText  **参数解释**: SQL模版。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * startTime  **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-    * finishTime  **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * startTime  **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     * returnedRows  **参数解释**: 返回行。 **取值范围**: 不涉及。
     * fetchedRows  **参数解释**: 扫描行。 **取值范围**: 不涉及。
     * fetchedPages  **参数解释**: 扫描页。 **取值范围**: 不涉及。
@@ -268,8 +268,8 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * nodeName  **参数解释**: 节点名称。 **取值范围**: 不涉及。
     * sqlText  **参数解释**: SQL模版。 **取值范围**: 不涉及。
     * queryPlan  **参数解释**: 执行计划。 **取值范围**: 不涉及。
-    * startTime  **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
-    * finishTime  **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * startTime  **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
+    * finishTime  **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     * returnedRows  **参数解释**: 返回行。 **取值范围**: 不涉及。
     * fetchedRows  **参数解释**: 扫描行。 **取值范围**: 不涉及。
     * fetchedPages  **参数解释**: 扫描页。 **取值范围**: 不涉及。
@@ -680,9 +680,9 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    *  **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getStartTime()
     {
@@ -692,7 +692,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime **参数解释**: 开始时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * @param string|null $startTime **参数解释**: 开始时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -704,9 +704,9 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets finishTime
-    *  **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    *  **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getFinishTime()
     {
@@ -716,7 +716,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets finishTime
     *
-    * @param int|null $finishTime **参数解释**: 结束时间UTC时间。 **取值范围**: 格式为yyyy-mm-ddThh:mm:ss+0000。
+    * @param string|null $finishTime **参数解释**: 结束时间UTC时间，格式为yyyy-mm-ddThh:mm:ss+0000。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -826,7 +826,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * Gets totalTime
     *  **参数解释**: 总耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTotalTime()
     {
@@ -836,7 +836,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets totalTime
     *
-    * @param int|null $totalTime **参数解释**: 总耗时（单位：微秒）。 **取值范围**: 不涉及。
+    * @param string|null $totalTime **参数解释**: 总耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -850,7 +850,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * Gets cpuTime
     *  **参数解释**: CPU耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getCpuTime()
     {
@@ -860,7 +860,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets cpuTime
     *
-    * @param int|null $cpuTime **参数解释**: CPU耗时（单位：微秒）。 **取值范围**: 不涉及。
+    * @param string|null $cpuTime **参数解释**: CPU耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -874,7 +874,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * Gets planTime
     *  **参数解释**: 计划耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getPlanTime()
     {
@@ -884,7 +884,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets planTime
     *
-    * @param int|null $planTime **参数解释**: 计划耗时（单位：微秒）。 **取值范围**: 不涉及。
+    * @param string|null $planTime **参数解释**: 计划耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -898,7 +898,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * Gets ioTime
     *  **参数解释**: IO耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getIoTime()
     {
@@ -908,7 +908,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets ioTime
     *
-    * @param int|null $ioTime **参数解释**: IO耗时（单位：微秒）。 **取值范围**: 不涉及。
+    * @param string|null $ioTime **参数解释**: IO耗时（单位：微秒）。 **取值范围**: 不涉及。
     *
     * @return $this
     */
@@ -946,7 +946,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     * Gets lockTime
     *  **参数解释**: 加锁耗时(单位：微秒)。 **取值范围**: 不涉及。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getLockTime()
     {
@@ -956,7 +956,7 @@ class SlowSqlDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets lockTime
     *
-    * @param int|null $lockTime **参数解释**: 加锁耗时(单位：微秒)。 **取值范围**: 不涉及。
+    * @param string|null $lockTime **参数解释**: 加锁耗时(单位：微秒)。 **取值范围**: 不涉及。
     *
     * @return $this
     */

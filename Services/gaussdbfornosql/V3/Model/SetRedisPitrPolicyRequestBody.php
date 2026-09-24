@@ -20,9 +20,9 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
-    * keepDays  指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
-    * keepDays  指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
-    * keepDays  指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
-    * keepDays  指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enabled  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
-    * interval  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
-    * keepDays  指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    * enabled  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
+    * interval  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
+    * keepDays  **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
+    *  **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
     *
     * @return bool
     */
@@ -211,7 +211,7 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool $enabled 标识Redis实例是否开启指定时间点恢复。 “true”，表示实例开启Redis指定时间点恢复功能。 “false”，表示实例不启用Redis指定时间点恢复功能。
+    * @param bool $enabled **参数解释：** 标识Redis实例是否开启指定时间点恢复。 **取值范围：** - “true”，表示实例开启Redis指定时间点恢复功能。 - “false”，表示实例不启用Redis指定时间点恢复功能。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets interval
-    *  数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
+    *  **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
     *
     * @return int|null
     */
@@ -235,7 +235,7 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets interval
     *
-    * @param int|null $interval 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 取值范围：5～120  单位：分钟  例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。
+    * @param int|null $interval **参数解释：** 数据备份的时间间隔，该数据备份控制redis实例可恢复时间点的间隔，默认值为 20分钟。 例如，当interval 为20min时，可恢复时间点的间隔为20min，其interval约小，对性能影响越大，存储空间膨胀约明显。 **取值范围：** 5～120  单位：分钟
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keepDays
-    *  指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    *  **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @return int|null
     */
@@ -259,7 +259,7 @@ class SetRedisPitrPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keepDays
     *
-    * @param int|null $keepDays 指定已生成的备份文件可以保存的天数，默认值为 1 天。 取值范围：1～7  单位：天
+    * @param int|null $keepDays **参数解释：** 指定已生成的备份文件可以保存的天数，默认值为 1 天。 **取值范围：** 1～7  单位：天
     *
     * @return $this
     */

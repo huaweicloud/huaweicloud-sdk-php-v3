@@ -29,6 +29,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     * ports  云服务器端口信息
     * server  云服务器信息
     * volumes  云服务器卷信息
+    * workspace  云桌面信息，取值范围不涉及。
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
             'interface' => 'string',
             'ports' => 'string[]',
             'server' => 'string',
-            'volumes' => 'string[]'
+            'volumes' => 'string[]',
+            'workspace' => 'string'
     ];
 
     /**
@@ -53,6 +55,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     * ports  云服务器端口信息
     * server  云服务器信息
     * volumes  云服务器卷信息
+    * workspace  云桌面信息，取值范围不涉及。
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
         'interface' => null,
         'ports' => null,
         'server' => null,
-        'volumes' => null
+        'volumes' => null,
+        'workspace' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     * ports  云服务器端口信息
     * server  云服务器信息
     * volumes  云服务器卷信息
+    * workspace  云桌面信息，取值范围不涉及。
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
             'interface' => 'interface',
             'ports' => 'ports',
             'server' => 'server',
-            'volumes' => 'volumes'
+            'volumes' => 'volumes',
+            'workspace' => 'workspace'
     ];
 
     /**
@@ -122,6 +128,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     * ports  云服务器端口信息
     * server  云服务器信息
     * volumes  云服务器卷信息
+    * workspace  云桌面信息，取值范围不涉及。
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
             'interface' => 'setInterface',
             'ports' => 'setPorts',
             'server' => 'setServer',
-            'volumes' => 'setVolumes'
+            'volumes' => 'setVolumes',
+            'workspace' => 'setWorkspace'
     ];
 
     /**
@@ -146,6 +154,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     * ports  云服务器端口信息
     * server  云服务器信息
     * volumes  云服务器卷信息
+    * workspace  云桌面信息，取值范围不涉及。
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
             'interface' => 'getInterface',
             'ports' => 'getPorts',
             'server' => 'getServer',
-            'volumes' => 'getVolumes'
+            'volumes' => 'getVolumes',
+            'workspace' => 'getWorkspace'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
         $this->container['server'] = isset($data['server']) ? $data['server'] : null;
         $this->container['volumes'] = isset($data['volumes']) ? $data['volumes'] : null;
+        $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
     }
 
     /**
@@ -439,6 +450,30 @@ class ShowMetadataResponse implements ModelInterface, ArrayAccess
     public function setVolumes($volumes)
     {
         $this->container['volumes'] = $volumes;
+        return $this;
+    }
+
+    /**
+    * Gets workspace
+    *  云桌面信息，取值范围不涉及。
+    *
+    * @return string|null
+    */
+    public function getWorkspace()
+    {
+        return $this->container['workspace'];
+    }
+
+    /**
+    * Sets workspace
+    *
+    * @param string|null $workspace 云桌面信息，取值范围不涉及。
+    *
+    * @return $this
+    */
+    public function setWorkspace($workspace)
+    {
+        $this->container['workspace'] = $workspace;
         return $this;
     }
 

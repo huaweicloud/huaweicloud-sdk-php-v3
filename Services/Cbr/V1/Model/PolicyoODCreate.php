@@ -32,6 +32,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
+    * advancedRetentionRules  advancedRetentionRules
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'weekBackups' => 'int',
             'yearBackups' => 'int',
             'fullBackupInterval' => 'int',
-            'crossAccountUrn' => 'string'
+            'crossAccountUrn' => 'string',
+            'advancedRetentionRules' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyAdvancedRetentionRules'
     ];
 
     /**
@@ -64,6 +66,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
+    * advancedRetentionRules  advancedRetentionRules
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         'weekBackups' => 'int32',
         'yearBackups' => 'int32',
         'fullBackupInterval' => 'int32',
-        'crossAccountUrn' => null
+        'crossAccountUrn' => null,
+        'advancedRetentionRules' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
+    * advancedRetentionRules  advancedRetentionRules
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'weekBackups' => 'week_backups',
             'yearBackups' => 'year_backups',
             'fullBackupInterval' => 'full_backup_interval',
-            'crossAccountUrn' => 'cross_account_urn'
+            'crossAccountUrn' => 'cross_account_urn',
+            'advancedRetentionRules' => 'advanced_retention_rules'
     ];
 
     /**
@@ -149,6 +155,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
+    * advancedRetentionRules  advancedRetentionRules
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'weekBackups' => 'setWeekBackups',
             'yearBackups' => 'setYearBackups',
             'fullBackupInterval' => 'setFullBackupInterval',
-            'crossAccountUrn' => 'setCrossAccountUrn'
+            'crossAccountUrn' => 'setCrossAccountUrn',
+            'advancedRetentionRules' => 'setAdvancedRetentionRules'
     ];
 
     /**
@@ -181,6 +189,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     * yearBackups  保留年备个数，该备份不受保留最大备份数限制。取值为0到100。若选择该参数，则timezone 也必选。
     * fullBackupInterval  每间隔多少次执行一次全量备份，当取值为 -1 时，不执行全量备份。  最小值：-1  最大值：100
     * crossAccountUrn  跨账户复制策略所关联的跨账户复制存储库标识
+    * advancedRetentionRules  advancedRetentionRules
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
             'weekBackups' => 'getWeekBackups',
             'yearBackups' => 'getYearBackups',
             'fullBackupInterval' => 'getFullBackupInterval',
-            'crossAccountUrn' => 'getCrossAccountUrn'
+            'crossAccountUrn' => 'getCrossAccountUrn',
+            'advancedRetentionRules' => 'getAdvancedRetentionRules'
     ];
 
     /**
@@ -269,6 +279,7 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
         $this->container['yearBackups'] = isset($data['yearBackups']) ? $data['yearBackups'] : null;
         $this->container['fullBackupInterval'] = isset($data['fullBackupInterval']) ? $data['fullBackupInterval'] : null;
         $this->container['crossAccountUrn'] = isset($data['crossAccountUrn']) ? $data['crossAccountUrn'] : null;
+        $this->container['advancedRetentionRules'] = isset($data['advancedRetentionRules']) ? $data['advancedRetentionRules'] : null;
     }
 
     /**
@@ -620,6 +631,30 @@ class PolicyoODCreate implements ModelInterface, ArrayAccess
     public function setCrossAccountUrn($crossAccountUrn)
     {
         $this->container['crossAccountUrn'] = $crossAccountUrn;
+        return $this;
+    }
+
+    /**
+    * Gets advancedRetentionRules
+    *  advancedRetentionRules
+    *
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\PolicyAdvancedRetentionRules|null
+    */
+    public function getAdvancedRetentionRules()
+    {
+        return $this->container['advancedRetentionRules'];
+    }
+
+    /**
+    * Sets advancedRetentionRules
+    *
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\PolicyAdvancedRetentionRules|null $advancedRetentionRules advancedRetentionRules
+    *
+    * @return $this
+    */
+    public function setAdvancedRetentionRules($advancedRetentionRules)
+    {
+        $this->container['advancedRetentionRules'] = $advancedRetentionRules;
         return $this;
     }
 

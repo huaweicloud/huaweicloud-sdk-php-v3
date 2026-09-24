@@ -224,13 +224,16 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['chargingMode']) && (mb_strlen($this->container['chargingMode']) > 16)) {
+        if ($this->container['chargingMode'] === null) {
+            $invalidProperties[] = "'chargingMode' can't be null";
+        }
+            if ((mb_strlen($this->container['chargingMode']) > 16)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', the character length must be smaller than or equal to 16.";
             }
-            if (!is_null($this->container['chargingMode']) && (mb_strlen($this->container['chargingMode']) < 8)) {
+            if ((mb_strlen($this->container['chargingMode']) < 8)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', the character length must be bigger than or equal to 8.";
             }
-            if (!is_null($this->container['chargingMode']) && !preg_match("/^[a-zA-Z0-9_\\-]*$/", $this->container['chargingMode'])) {
+            if (!preg_match("/^[a-zA-Z0-9_\\-]*$/", $this->container['chargingMode'])) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be conform to the pattern /^[a-zA-Z0-9_\\-]*$/.";
             }
         if ($this->container['periodType'] === null) {
@@ -254,6 +257,12 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
             if (($this->container['periodNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'periodNum', must be bigger than or equal to 1.";
             }
+        if ($this->container['isAutoRenew'] === null) {
+            $invalidProperties[] = "'isAutoRenew' can't be null";
+        }
+        if ($this->container['isAutoPay'] === null) {
+            $invalidProperties[] = "'isAutoPay' can't be null";
+        }
             if (!is_null($this->container['consoleUrl']) && (mb_strlen($this->container['consoleUrl']) > 255)) {
                 $invalidProperties[] = "invalid value for 'consoleUrl', the character length must be smaller than or equal to 255.";
             }
@@ -281,7 +290,7 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     * Gets chargingMode
     *  付费模式，当前仅可选择：pre_paid
     *
-    * @return string|null
+    * @return string
     */
     public function getChargingMode()
     {
@@ -291,7 +300,7 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式，当前仅可选择：pre_paid
+    * @param string $chargingMode 付费模式，当前仅可选择：pre_paid
     *
     * @return $this
     */
@@ -353,7 +362,7 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     * Gets isAutoRenew
     *  到期后是否自动续期，默认不续期
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsAutoRenew()
     {
@@ -363,7 +372,7 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param bool|null $isAutoRenew 到期后是否自动续期，默认不续期
+    * @param bool $isAutoRenew 到期后是否自动续期，默认不续期
     *
     * @return $this
     */
@@ -377,7 +386,7 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     * Gets isAutoPay
     *  是否自动付费，默认为不自动付费
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsAutoPay()
     {
@@ -387,7 +396,7 @@ class ChangeToPeriod implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param bool|null $isAutoPay 是否自动付费，默认为不自动付费
+    * @param bool $isAutoPay 是否自动付费，默认为不自动付费
     *
     * @return $this
     */

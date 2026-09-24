@@ -751,7 +751,7 @@ class EcsClient extends Client
     }
 
     /**
-     * 批量卸载卷
+     * 批量卸载指定共享盘
      *
      * 
      * Please refer to HUAWEI cloud API Explorer for details.

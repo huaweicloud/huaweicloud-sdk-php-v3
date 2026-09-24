@@ -31,7 +31,7 @@ class PolicyUpdate implements ModelInterface, ArrayAccess
             'enabled' => 'bool',
             'name' => 'string',
             'operationDefinition' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyoODCreate',
-            'trigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq'
+            'trigger' => '\HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerUpdateReq'
     ];
 
     /**
@@ -290,7 +290,7 @@ class PolicyUpdate implements ModelInterface, ArrayAccess
     * Gets trigger
     *  trigger
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerUpdateReq|null
     */
     public function getTrigger()
     {
@@ -300,7 +300,7 @@ class PolicyUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets trigger
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerReq|null $trigger trigger
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\PolicyTriggerUpdateReq|null $trigger trigger
     *
     * @return $this
     */

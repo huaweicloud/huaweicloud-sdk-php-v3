@@ -36,6 +36,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
     * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * scheduledOperationId  策略ID，取值范围不涉及。
     * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
@@ -65,6 +66,7 @@ class BackupResp implements ModelInterface, ArrayAccess
             'resourceName' => 'string',
             'resourceSize' => 'int',
             'resourceType' => 'string',
+            'scheduledOperationId' => 'string',
             'status' => 'string',
             'updatedAt' => '\DateTime',
             'vaultId' => 'string',
@@ -94,6 +96,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
     * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * scheduledOperationId  策略ID，取值范围不涉及。
     * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
@@ -123,6 +126,7 @@ class BackupResp implements ModelInterface, ArrayAccess
         'resourceName' => null,
         'resourceSize' => 'int32',
         'resourceType' => null,
+        'scheduledOperationId' => null,
         'status' => null,
         'updatedAt' => 'date-time',
         'vaultId' => null,
@@ -173,6 +177,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
     * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * scheduledOperationId  策略ID，取值范围不涉及。
     * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
@@ -202,6 +207,7 @@ class BackupResp implements ModelInterface, ArrayAccess
             'resourceName' => 'resource_name',
             'resourceSize' => 'resource_size',
             'resourceType' => 'resource_type',
+            'scheduledOperationId' => 'scheduled_operation_id',
             'status' => 'status',
             'updatedAt' => 'updated_at',
             'vaultId' => 'vault_id',
@@ -231,6 +237,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
     * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * scheduledOperationId  策略ID，取值范围不涉及。
     * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
@@ -260,6 +267,7 @@ class BackupResp implements ModelInterface, ArrayAccess
             'resourceName' => 'setResourceName',
             'resourceSize' => 'setResourceSize',
             'resourceType' => 'setResourceType',
+            'scheduledOperationId' => 'setScheduledOperationId',
             'status' => 'setStatus',
             'updatedAt' => 'setUpdatedAt',
             'vaultId' => 'setVaultId',
@@ -289,6 +297,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * resourceName  资源名称
     * resourceSize  资源大小，单位为GB
     * resourceType  [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Native::Server, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:hws,hws_hk) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo](tag:hk_g42,sbc,dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Ironic::BareMetalServer, OS::Sfs::Turbo](tag:fcs_vm,ctc,ocb,tm) [资源类型: OS::Nova::Server, OS::Cinder::Volume](tag:tlf,cmcc,hcso_dt) [资源类型: OS::Nova::Server, OS::Cinder::Volume, OS::Sfs::Turbo, OS::Workspace::DesktopV2](tag:g42)
+    * scheduledOperationId  策略ID，取值范围不涉及。
     * status  备份状态 - available: 可用 - protecting: 保护中 - deleting: 删除中 - restoring: 恢复中 - error: 异常 - waiting_protect: 等待保护 - waiting_delete: 等待删除 - waiting_restore: 等待恢复
     * updatedAt  更新时间，例如:\"2020-02-05T10:38:34.209782\"
     * vaultId  存储库ID
@@ -318,6 +327,7 @@ class BackupResp implements ModelInterface, ArrayAccess
             'resourceName' => 'getResourceName',
             'resourceSize' => 'getResourceSize',
             'resourceType' => 'getResourceType',
+            'scheduledOperationId' => 'getScheduledOperationId',
             'status' => 'getStatus',
             'updatedAt' => 'getUpdatedAt',
             'vaultId' => 'getVaultId',
@@ -430,6 +440,7 @@ class BackupResp implements ModelInterface, ArrayAccess
         $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['resourceSize'] = isset($data['resourceSize']) ? $data['resourceSize'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['scheduledOperationId'] = isset($data['scheduledOperationId']) ? $data['scheduledOperationId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
@@ -912,6 +923,30 @@ class BackupResp implements ModelInterface, ArrayAccess
     public function setResourceType($resourceType)
     {
         $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets scheduledOperationId
+    *  策略ID，取值范围不涉及。
+    *
+    * @return string|null
+    */
+    public function getScheduledOperationId()
+    {
+        return $this->container['scheduledOperationId'];
+    }
+
+    /**
+    * Sets scheduledOperationId
+    *
+    * @param string|null $scheduledOperationId 策略ID，取值范围不涉及。
+    *
+    * @return $this
+    */
+    public function setScheduledOperationId($scheduledOperationId)
+    {
+        $this->container['scheduledOperationId'] = $scheduledOperationId;
         return $this;
     }
 

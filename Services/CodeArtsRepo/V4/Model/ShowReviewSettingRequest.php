@@ -22,24 +22,28 @@ class ShowReviewSettingRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[[查询用户所有仓库](https://support.huaweicloud.com/intl/zh-cn/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk_ch)[[查询用户所有仓库](https://support.huaweicloud.com/eu/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_eu)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     * withDefaultReviewCategories  **参数解释：** 额外返回可勾选检视意见分类和系统预置检视意见分类。 **取值范围：** - true, 返回可勾选检视意见分类和系统预置检视意见分类。 - false, 不返回可勾选检视意见分类和系统预置检视意见分类。
+    * takeEffect  **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'repositoryId' => 'int',
-            'withDefaultReviewCategories' => 'bool'
+            'withDefaultReviewCategories' => 'bool',
+            'takeEffect' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[[查询用户所有仓库](https://support.huaweicloud.com/intl/zh-cn/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk_ch)[[查询用户所有仓库](https://support.huaweicloud.com/eu/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_eu)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     * withDefaultReviewCategories  **参数解释：** 额外返回可勾选检视意见分类和系统预置检视意见分类。 **取值范围：** - true, 返回可勾选检视意见分类和系统预置检视意见分类。 - false, 不返回可勾选检视意见分类和系统预置检视意见分类。
+    * takeEffect  **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'repositoryId' => null,
-        'withDefaultReviewCategories' => null
+        'withDefaultReviewCategories' => null,
+        'takeEffect' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShowReviewSettingRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[[查询用户所有仓库](https://support.huaweicloud.com/intl/zh-cn/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk_ch)[[查询用户所有仓库](https://support.huaweicloud.com/eu/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_eu)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     * withDefaultReviewCategories  **参数解释：** 额外返回可勾选检视意见分类和系统预置检视意见分类。 **取值范围：** - true, 返回可勾选检视意见分类和系统预置检视意见分类。 - false, 不返回可勾选检视意见分类和系统预置检视意见分类。
+    * takeEffect  **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'repositoryId' => 'repository_id',
-            'withDefaultReviewCategories' => 'with_default_review_categories'
+            'withDefaultReviewCategories' => 'with_default_review_categories',
+            'takeEffect' => 'take_effect'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[[查询用户所有仓库](https://support.huaweicloud.com/intl/zh-cn/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk_ch)[[查询用户所有仓库](https://support.huaweicloud.com/eu/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_eu)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     * withDefaultReviewCategories  **参数解释：** 额外返回可勾选检视意见分类和系统预置检视意见分类。 **取值范围：** - true, 返回可勾选检视意见分类和系统预置检视意见分类。 - false, 不返回可勾选检视意见分类和系统预置检视意见分类。
+    * takeEffect  **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
     *
     * @var string[]
     */
     protected static $setters = [
             'repositoryId' => 'setRepositoryId',
-            'withDefaultReviewCategories' => 'setWithDefaultReviewCategories'
+            'withDefaultReviewCategories' => 'setWithDefaultReviewCategories',
+            'takeEffect' => 'setTakeEffect'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * repositoryId  **参数解释：** 仓库的ID，通过[[查询用户所有仓库](https://support.huaweicloud.com/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws)[[查询用户所有仓库](https://support.huaweicloud.com/intl/en-us/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk)[[查询用户所有仓库](https://support.huaweicloud.com/intl/zh-cn/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_hk_ch)[[查询用户所有仓库](https://support.huaweicloud.com/eu/api-codeartsrepo/ListUserAllRepositories.html)](tag:hws_eu)[查询项目列表](tag:hcs,hcs_sm)接口查询项目列表获取。 **约束限制：** 不涉及。 **默认取值：** 不涉及。
     * withDefaultReviewCategories  **参数解释：** 额外返回可勾选检视意见分类和系统预置检视意见分类。 **取值范围：** - true, 返回可勾选检视意见分类和系统预置检视意见分类。 - false, 不返回可勾选检视意见分类和系统预置检视意见分类。
+    * takeEffect  **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
     *
     * @var string[]
     */
     protected static $getters = [
             'repositoryId' => 'getRepositoryId',
-            'withDefaultReviewCategories' => 'getWithDefaultReviewCategories'
+            'withDefaultReviewCategories' => 'getWithDefaultReviewCategories',
+            'takeEffect' => 'getTakeEffect'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShowReviewSettingRequest implements ModelInterface, ArrayAccess
     {
         $this->container['repositoryId'] = isset($data['repositoryId']) ? $data['repositoryId'] : null;
         $this->container['withDefaultReviewCategories'] = isset($data['withDefaultReviewCategories']) ? $data['withDefaultReviewCategories'] : null;
+        $this->container['takeEffect'] = isset($data['takeEffect']) ? $data['takeEffect'] : null;
     }
 
     /**
@@ -237,6 +248,30 @@ class ShowReviewSettingRequest implements ModelInterface, ArrayAccess
     public function setWithDefaultReviewCategories($withDefaultReviewCategories)
     {
         $this->container['withDefaultReviewCategories'] = $withDefaultReviewCategories;
+        return $this;
+    }
+
+    /**
+    * Gets takeEffect
+    *  **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
+    *
+    * @return bool|null
+    */
+    public function getTakeEffect()
+    {
+        return $this->container['takeEffect'];
+    }
+
+    /**
+    * Sets takeEffect
+    *
+    * @param bool|null $takeEffect **参数解释：** 设置是否继承上层配置。 **取值范围：** - true, 返回从上层继承配置。 - false, 只返回自身配置。
+    *
+    * @return $this
+    */
+    public function setTakeEffect($takeEffect)
+    {
+        $this->container['takeEffect'] = $takeEffect;
         return $this;
     }
 

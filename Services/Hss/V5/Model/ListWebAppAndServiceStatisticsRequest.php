@@ -25,7 +25,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
     * name  **参数解释**: web应用，web服务或数据库名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-64 **默认取值**: 不涉及
-    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * catalogue  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -261,8 +261,8 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
             if ((mb_strlen($this->container['catalogue']) < 1)) {
                 $invalidProperties[] = "invalid value for 'catalogue', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^web-app|web-service|database$/", $this->container['catalogue'])) {
-                $invalidProperties[] = "invalid value for 'catalogue', must be conform to the pattern /^web-app|web-service|database$/.";
+            if (!preg_match("/^web_cms|web_service|database$/", $this->container['catalogue'])) {
+                $invalidProperties[] = "invalid value for 'catalogue', must be conform to the pattern /^web_cms|web_service|database$/.";
             }
         return $invalidProperties;
     }
@@ -400,7 +400,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets catalogue
-    *  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    *  **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -412,7 +412,7 @@ class ListWebAppAndServiceStatisticsRequest implements ModelInterface, ArrayAcce
     /**
     * Sets catalogue
     *
-    * @param string $catalogue **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web-app：web应用 - web-service：web服务 - database：数据库  **默认取值**: 不涉及
+    * @param string $catalogue **参数解释**: 资产类型 **约束限制**: 不涉及 **取值范围**: - web_cms：web应用 - web_service：web服务 - database：数据库  **默认取值**: 不涉及
     *
     * @return $this
     */

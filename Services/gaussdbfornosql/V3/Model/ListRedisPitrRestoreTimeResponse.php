@@ -21,8 +21,8 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * restoreTime  Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
-    * totalCount  Redis实例可恢复时间点总数。
+    * restoreTime  **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * restoreTime  Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
-    * totalCount  Redis实例可恢复时间点总数。
+    * restoreTime  **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * restoreTime  Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
-    * totalCount  Redis实例可恢复时间点总数。
+    * restoreTime  **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * restoreTime  Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
-    * totalCount  Redis实例可恢复时间点总数。
+    * restoreTime  **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * restoreTime  Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
-    * totalCount  Redis实例可恢复时间点总数。
+    * restoreTime  **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
+    * totalCount  **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTime
-    *  Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
+    *  **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return string[]|null
     */
@@ -198,7 +198,7 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param string[]|null $restoreTime Redis可恢复时间点列表。 yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。
+    * @param string[]|null $restoreTime **参数解释：** Redis可恢复时间点列表。yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  Redis实例可恢复时间点总数。
+    *  **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListRedisPitrRestoreTimeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount Redis实例可恢复时间点总数。
+    * @param int|null $totalCount **参数解释：** Redis实例可恢复时间点总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */

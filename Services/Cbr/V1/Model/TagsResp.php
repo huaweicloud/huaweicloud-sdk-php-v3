@@ -27,7 +27,7 @@ class TagsResp implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'values' => 'string'
+            'values' => 'string[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class TagsResp implements ModelInterface, ArrayAccess
     * Gets values
     *  值列表。  value最大长度43个字符。  value可以为空字符串。  key只能由中文，字母，数字，“-”，“_”组成。
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getValues()
     {
@@ -221,7 +221,7 @@ class TagsResp implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string|null $values 值列表。  value最大长度43个字符。  value可以为空字符串。  key只能由中文，字母，数字，“-”，“_”组成。
+    * @param string[]|null $values 值列表。  value最大长度43个字符。  value可以为空字符串。  key只能由中文，字母，数字，“-”，“_”组成。
     *
     * @return $this
     */

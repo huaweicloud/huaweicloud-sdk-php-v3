@@ -27,7 +27,7 @@ class BulkCreateAndDeleteVaultTagsReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Cbr\V1\Model\Tag[]',
+            'tags' => '\HuaweiCloud\SDK\Cbr\V1\Model\BulkCreateAndDeleteTags[]',
             'sysTags' => '\HuaweiCloud\SDK\Cbr\V1\Model\SysTag[]',
             'action' => 'string'
     ];
@@ -224,7 +224,7 @@ class BulkCreateAndDeleteVaultTagsReq implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表。  tags不允许为空列表。  tags中最多包含10个key。  tags中key不允许重复。
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\Tag[]|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\BulkCreateAndDeleteTags[]|null
     */
     public function getTags()
     {
@@ -234,7 +234,7 @@ class BulkCreateAndDeleteVaultTagsReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\Tag[]|null $tags 标签列表。  tags不允许为空列表。  tags中最多包含10个key。  tags中key不允许重复。
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\BulkCreateAndDeleteTags[]|null $tags 标签列表。  tags不允许为空列表。  tags中最多包含10个key。  tags中key不允许重复。
     *
     * @return $this
     */

@@ -20,13 +20,14 @@ class CheckpointParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * autoTrigger  是否自动触发,true:自动触发，false：非自动触发。
+    * autoTrigger  是否自动触发,true：自动触发，false：非自动触发。
     * description  备份描述
-    * incremental  是否增量备份，true:增量备份，false：非增量备份。
+    * incremental  是否增量备份，true：增量备份，false：非增量备份。
     * name  备份名称
     * resources  待备份的资源id列表:uuid
     * resourceDetails  资源详情
     * policyId  自动备份时的策略id
+    * retentionDurationDays  **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class CheckpointParam implements ModelInterface, ArrayAccess
             'name' => 'string',
             'resources' => 'string[]',
             'resourceDetails' => '\HuaweiCloud\SDK\Cbr\V1\Model\Resource[]',
-            'policyId' => 'string'
+            'policyId' => 'string',
+            'retentionDurationDays' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * autoTrigger  是否自动触发,true:自动触发，false：非自动触发。
+    * autoTrigger  是否自动触发,true：自动触发，false：非自动触发。
     * description  备份描述
-    * incremental  是否增量备份，true:增量备份，false：非增量备份。
+    * incremental  是否增量备份，true：增量备份，false：非增量备份。
     * name  备份名称
     * resources  待备份的资源id列表:uuid
     * resourceDetails  资源详情
     * policyId  自动备份时的策略id
+    * retentionDurationDays  **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CheckpointParam implements ModelInterface, ArrayAccess
         'name' => null,
         'resources' => null,
         'resourceDetails' => null,
-        'policyId' => null
+        'policyId' => null,
+        'retentionDurationDays' => 'int32'
     ];
 
     /**
@@ -85,13 +89,14 @@ class CheckpointParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * autoTrigger  是否自动触发,true:自动触发，false：非自动触发。
+    * autoTrigger  是否自动触发,true：自动触发，false：非自动触发。
     * description  备份描述
-    * incremental  是否增量备份，true:增量备份，false：非增量备份。
+    * incremental  是否增量备份，true：增量备份，false：非增量备份。
     * name  备份名称
     * resources  待备份的资源id列表:uuid
     * resourceDetails  资源详情
     * policyId  自动备份时的策略id
+    * retentionDurationDays  **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class CheckpointParam implements ModelInterface, ArrayAccess
             'name' => 'name',
             'resources' => 'resources',
             'resourceDetails' => 'resource_details',
-            'policyId' => 'policy_id'
+            'policyId' => 'policy_id',
+            'retentionDurationDays' => 'retention_duration_days'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * autoTrigger  是否自动触发,true:自动触发，false：非自动触发。
+    * autoTrigger  是否自动触发,true：自动触发，false：非自动触发。
     * description  备份描述
-    * incremental  是否增量备份，true:增量备份，false：非增量备份。
+    * incremental  是否增量备份，true：增量备份，false：非增量备份。
     * name  备份名称
     * resources  待备份的资源id列表:uuid
     * resourceDetails  资源详情
     * policyId  自动备份时的策略id
+    * retentionDurationDays  **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class CheckpointParam implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'resources' => 'setResources',
             'resourceDetails' => 'setResourceDetails',
-            'policyId' => 'setPolicyId'
+            'policyId' => 'setPolicyId',
+            'retentionDurationDays' => 'setRetentionDurationDays'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * autoTrigger  是否自动触发,true:自动触发，false：非自动触发。
+    * autoTrigger  是否自动触发,true：自动触发，false：非自动触发。
     * description  备份描述
-    * incremental  是否增量备份，true:增量备份，false：非增量备份。
+    * incremental  是否增量备份，true：增量备份，false：非增量备份。
     * name  备份名称
     * resources  待备份的资源id列表:uuid
     * resourceDetails  资源详情
     * policyId  自动备份时的策略id
+    * retentionDurationDays  **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CheckpointParam implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'resources' => 'getResources',
             'resourceDetails' => 'getResourceDetails',
-            'policyId' => 'getPolicyId'
+            'policyId' => 'getPolicyId',
+            'retentionDurationDays' => 'getRetentionDurationDays'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CheckpointParam implements ModelInterface, ArrayAccess
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['resourceDetails'] = isset($data['resourceDetails']) ? $data['resourceDetails'] : null;
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
+        $this->container['retentionDurationDays'] = isset($data['retentionDurationDays']) ? $data['retentionDurationDays'] : null;
     }
 
     /**
@@ -264,7 +275,7 @@ class CheckpointParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoTrigger
-    *  是否自动触发,true:自动触发，false：非自动触发。
+    *  是否自动触发,true：自动触发，false：非自动触发。
     *
     * @return bool|null
     */
@@ -276,7 +287,7 @@ class CheckpointParam implements ModelInterface, ArrayAccess
     /**
     * Sets autoTrigger
     *
-    * @param bool|null $autoTrigger 是否自动触发,true:自动触发，false：非自动触发。
+    * @param bool|null $autoTrigger 是否自动触发,true：自动触发，false：非自动触发。
     *
     * @return $this
     */
@@ -312,7 +323,7 @@ class CheckpointParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets incremental
-    *  是否增量备份，true:增量备份，false：非增量备份。
+    *  是否增量备份，true：增量备份，false：非增量备份。
     *
     * @return bool|null
     */
@@ -324,7 +335,7 @@ class CheckpointParam implements ModelInterface, ArrayAccess
     /**
     * Sets incremental
     *
-    * @param bool|null $incremental 是否增量备份，true:增量备份，false：非增量备份。
+    * @param bool|null $incremental 是否增量备份，true：增量备份，false：非增量备份。
     *
     * @return $this
     */
@@ -427,6 +438,30 @@ class CheckpointParam implements ModelInterface, ArrayAccess
     public function setPolicyId($policyId)
     {
         $this->container['policyId'] = $policyId;
+        return $this;
+    }
+
+    /**
+    * Gets retentionDurationDays
+    *  **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
+    *
+    * @return int|null
+    */
+    public function getRetentionDurationDays()
+    {
+        return $this->container['retentionDurationDays'];
+    }
+
+    /**
+    * Sets retentionDurationDays
+    *
+    * @param int|null $retentionDurationDays **参数解释**： 手动备份的保留时长，单位为天。设置该参数后，备份副本将在保留时长到期后自动删除。用于为手动备份设置自动过期时间，避免手动备份堆积导致存储容量浪费。不设置此参数时，备份将永久保留。 **约束限制**： 当auto_trigger为true时不支持传此参数，自动备份的保留时间由关联的备份策略指定。auto_trigger不传或为false时支持指定此参数。 **取值范围**： -  1~36500：指定保留天数，备份将在创建时间 + 该天数后到期并自动删除。 - -1：永久保留，备份不会自动过期。  **默认取值**： -1 > 该特性目前处于公测阶段，部分Region可能无法使用
+    *
+    * @return $this
+    */
+    public function setRetentionDurationDays($retentionDurationDays)
+    {
+        $this->container['retentionDurationDays'] = $retentionDurationDays;
         return $this;
     }
 

@@ -22,25 +22,21 @@ class AddMemberResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * members  添加备份共享成员响应信息
-    * count  备份共享成员数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'members' => '\HuaweiCloud\SDK\Cbr\V1\Model\Member[]',
-            'count' => 'int'
+            'members' => '\HuaweiCloud\SDK\Cbr\V1\Model\Member[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * members  添加备份共享成员响应信息
-    * count  备份共享成员数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'members' => null,
-        'count' => 'int32'
+        'members' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class AddMemberResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * members  添加备份共享成员响应信息
-    * count  备份共享成员数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'members' => 'members',
-            'count' => 'count'
+            'members' => 'members'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * members  添加备份共享成员响应信息
-    * count  备份共享成员数量
     *
     * @var string[]
     */
     protected static $setters = [
-            'members' => 'setMembers',
-            'count' => 'setCount'
+            'members' => 'setMembers'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * members  添加备份共享成员响应信息
-    * count  备份共享成员数量
     *
     * @var string[]
     */
     protected static $getters = [
-            'members' => 'getMembers',
-            'count' => 'getCount'
+            'members' => 'getMembers'
     ];
 
     /**
@@ -159,7 +149,6 @@ class AddMemberResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['members'] = isset($data['members']) ? $data['members'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -205,30 +194,6 @@ class AddMemberResponse implements ModelInterface, ArrayAccess
     public function setMembers($members)
     {
         $this->container['members'] = $members;
-        return $this;
-    }
-
-    /**
-    * Gets count
-    *  备份共享成员数量
-    *
-    * @return int|null
-    */
-    public function getCount()
-    {
-        return $this->container['count'];
-    }
-
-    /**
-    * Sets count
-    *
-    * @param int|null $count 备份共享成员数量
-    *
-    * @return $this
-    */
-    public function setCount($count)
-    {
-        $this->container['count'] = $count;
         return $this;
     }
 

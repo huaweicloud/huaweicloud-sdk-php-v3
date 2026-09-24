@@ -20,7 +20,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * restoreTime  恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    * restoreTime  **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * restoreTime  恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    * restoreTime  **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * restoreTime  恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    * restoreTime  **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * restoreTime  恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    * restoreTime  **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * restoreTime  恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    * restoreTime  **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTime
-    *  恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    *  **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class RestoreRedisPitrRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param string $restoreTime 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。  获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。
+    * @param string $restoreTime **参数解释：** 恢复的指定时间点, 格式为yyyy-mm-ddThh:mm:ssZ字符串格式，T指某个时间的开始，Z指时区偏移量。 获取方法请参见 查询Redis可恢复时间点 中响应“restore_time”字段下参数的值。 **取值范围：** 不涉及。
     *
     * @return $this
     */

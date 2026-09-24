@@ -34,7 +34,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
             'name' => 'string',
             'namespace' => 'string',
             'policyContent' => '\HuaweiCloud\SDK\Hss\V5\Model\NetworkPolicyBody',
-            'createTime' => '\DateTime',
+            'createTime' => 'string',
             'deployStatus' => 'bool'
     ];
 
@@ -54,7 +54,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
         'name' => null,
         'namespace' => null,
         'policyContent' => null,
-        'createTime' => 'date-time',
+        'createTime' => null,
         'deployStatus' => null
     ];
 
@@ -345,7 +345,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     * Gets createTime
     *  创建时间
     *
-    * @return \DateTime|null
+    * @return string|null
     */
     public function getCreateTime()
     {
@@ -355,7 +355,7 @@ class GetNetworkPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param string|null $createTime 创建时间
     *
     * @return $this
     */

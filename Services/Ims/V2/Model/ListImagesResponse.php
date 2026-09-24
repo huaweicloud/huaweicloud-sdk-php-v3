@@ -22,21 +22,25 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * images  镜像列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'images' => '\HuaweiCloud\SDK\Ims\V2\Model\ImageInfo[]'
+            'images' => '\HuaweiCloud\SDK\Ims\V2\Model\ImageInfo[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Ims\V2\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * images  镜像列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'images' => null
+        'images' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * images  镜像列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'images' => 'images'
+            'images' => 'images',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * images  镜像列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'images' => 'setImages'
+            'images' => 'setImages',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * images  镜像列表
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'images' => 'getImages'
+            'images' => 'getImages',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['images'] = isset($data['images']) ? $data['images'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListImagesResponse implements ModelInterface, ArrayAccess
     public function setImages($images)
     {
         $this->container['images'] = $images;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Ims\V2\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Ims\V2\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

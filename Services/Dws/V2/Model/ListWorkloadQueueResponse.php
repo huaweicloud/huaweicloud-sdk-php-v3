@@ -21,30 +21,30 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
-    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
-    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueList  资源池队列详情
+    * workloadQueueNameList  资源池名称队列
+    * workloadResCode  资源池队列查询返回码
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'queueList' => '\HuaweiCloud\SDK\Dws\V2\Model\PlanStageQueue[]',
             'workloadQueueNameList' => 'string[]',
-            'workloadResCode' => 'int',
-            'workloadResStr' => 'string'
+            'workloadResCode' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
-    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
-    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueList  资源池队列详情
+    * workloadQueueNameList  资源池名称队列
+    * workloadResCode  资源池队列查询返回码
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'queueList' => null,
         'workloadQueueNameList' => null,
-        'workloadResCode' => null,
-        'workloadResStr' => null
+        'workloadResCode' => 'int32'
     ];
 
     /**
@@ -70,44 +70,44 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
-    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
-    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueList  资源池队列详情
+    * workloadQueueNameList  资源池名称队列
+    * workloadResCode  资源池队列查询返回码
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'queueList' => 'queue_list',
             'workloadQueueNameList' => 'workload_queue_name_list',
-            'workloadResCode' => 'workload_res_code',
-            'workloadResStr' => 'workload_res_str'
+            'workloadResCode' => 'workload_res_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
-    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
-    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueList  资源池队列详情
+    * workloadQueueNameList  资源池名称队列
+    * workloadResCode  资源池队列查询返回码
     *
     * @var string[]
     */
     protected static $setters = [
+            'queueList' => 'setQueueList',
             'workloadQueueNameList' => 'setWorkloadQueueNameList',
-            'workloadResCode' => 'setWorkloadResCode',
-            'workloadResStr' => 'setWorkloadResStr'
+            'workloadResCode' => 'setWorkloadResCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workloadQueueNameList  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
-    * workloadResCode  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
-    * workloadResStr  **参数解释**： 结果描述。 **取值范围**： 不涉及。
+    * queueList  资源池队列详情
+    * workloadQueueNameList  资源池名称队列
+    * workloadResCode  资源池队列查询返回码
     *
     * @var string[]
     */
     protected static $getters = [
+            'queueList' => 'getQueueList',
             'workloadQueueNameList' => 'getWorkloadQueueNameList',
-            'workloadResCode' => 'getWorkloadResCode',
-            'workloadResStr' => 'getWorkloadResStr'
+            'workloadResCode' => 'getWorkloadResCode'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['queueList'] = isset($data['queueList']) ? $data['queueList'] : null;
         $this->container['workloadQueueNameList'] = isset($data['workloadQueueNameList']) ? $data['workloadQueueNameList'] : null;
         $this->container['workloadResCode'] = isset($data['workloadResCode']) ? $data['workloadResCode'] : null;
-        $this->container['workloadResStr'] = isset($data['workloadResStr']) ? $data['workloadResStr'] : null;
     }
 
     /**
@@ -196,8 +196,32 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets queueList
+    *  资源池队列详情
+    *
+    * @return \HuaweiCloud\SDK\Dws\V2\Model\PlanStageQueue[]|null
+    */
+    public function getQueueList()
+    {
+        return $this->container['queueList'];
+    }
+
+    /**
+    * Sets queueList
+    *
+    * @param \HuaweiCloud\SDK\Dws\V2\Model\PlanStageQueue[]|null $queueList 资源池队列详情
+    *
+    * @return $this
+    */
+    public function setQueueList($queueList)
+    {
+        $this->container['queueList'] = $queueList;
+        return $this;
+    }
+
+    /**
     * Gets workloadQueueNameList
-    *  **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    *  资源池名称队列
     *
     * @return string[]|null
     */
@@ -209,7 +233,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadQueueNameList
     *
-    * @param string[]|null $workloadQueueNameList **参数解释**： 资源池名称。 **取值范围**： 不涉及。
+    * @param string[]|null $workloadQueueNameList 资源池名称队列
     *
     * @return $this
     */
@@ -221,7 +245,7 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets workloadResCode
-    *  **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    *  资源池队列查询返回码
     *
     * @return int|null
     */
@@ -233,37 +257,13 @@ class ListWorkloadQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Sets workloadResCode
     *
-    * @param int|null $workloadResCode **参数解释**： 结果状态码。 **取值范围**： 不涉及。
+    * @param int|null $workloadResCode 资源池队列查询返回码
     *
     * @return $this
     */
     public function setWorkloadResCode($workloadResCode)
     {
         $this->container['workloadResCode'] = $workloadResCode;
-        return $this;
-    }
-
-    /**
-    * Gets workloadResStr
-    *  **参数解释**： 结果描述。 **取值范围**： 不涉及。
-    *
-    * @return string|null
-    */
-    public function getWorkloadResStr()
-    {
-        return $this->container['workloadResStr'];
-    }
-
-    /**
-    * Sets workloadResStr
-    *
-    * @param string|null $workloadResStr **参数解释**： 结果描述。 **取值范围**： 不涉及。
-    *
-    * @return $this
-    */
-    public function setWorkloadResStr($workloadResStr)
-    {
-        $this->container['workloadResStr'] = $workloadResStr;
         return $this;
     }
 

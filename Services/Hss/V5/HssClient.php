@@ -2950,6 +2950,74 @@ class HssClient extends Client
     }
 
     /**
+     * 查询告警白名单生详情
+     *
+     * 查询告警白名单生详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAlarmWhiteListHostDetail($request)
+    {
+        return $this->listAlarmWhiteListHostDetailWithHttpInfo($request);
+    }
+
+    public function listAlarmWhiteListHostDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/event/white-list/rule/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['ruleId'] !== null) {
+            $queryParams['rule_id'] = $localVarParams['ruleId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams[$arr['region']] = $localVarParams['region'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAlarmWhiteListHostDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAlarmWhiteListHostDetailRequest');
+    }
+
+    /**
      * 获取软件信息的历史变动记录
      *
      * 获取软件信息的历史变动记录。
@@ -5048,11 +5116,11 @@ class HssClient extends Client
         if ($localVarParams['containerTags'] !== null) {
             $queryParams['container_tags'] = $localVarParams['containerTags'];
         }
-        if ($localVarParams['containerNode'] !== null) {
-            $queryParams['container_node'] = $localVarParams['containerNode'];
-        }
         if ($localVarParams['version'] !== null) {
             $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['containerNode'] !== null) {
+            $queryParams['container_node'] = $localVarParams['containerNode'];
         }
         if ($localVarParams['region'] !== null) {
             $headerParams[$arr['region']] = $localVarParams['region'];
@@ -5492,11 +5560,11 @@ class HssClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/zip', 'application/json']
+                ['application/zip']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/zip', 'application/json'],
+                ['application/zip'],
                 []
             );
         }
@@ -13909,6 +13977,74 @@ class HssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\SyncSecurityGroupPoliciesResponse',
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\SyncSecurityGroupPoliciesRequest');
+    }
+
+    /**
+     * 编辑告警白名单生效主机
+     *
+     * 编辑告警白名单主机相关信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAlarmWhiteListHost($request)
+    {
+        return $this->updateAlarmWhiteListHostWithHttpInfo($request);
+    }
+
+    public function updateAlarmWhiteListHostWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/event/white-list/alarm';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams[$arr['region']] = $localVarParams['region'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateAlarmWhiteListHostResponse',
+            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateAlarmWhiteListHostRequest');
     }
 
     /**
@@ -23343,142 +23479,6 @@ class HssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateCustomRuleConfigResponse',
             $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateCustomRuleConfigRequest');
-    }
-
-    /**
-     * 查询告警白名单生详情
-     *
-     * 查询告警白名单生详情
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAlarmWhiteListHostDetail($request)
-    {
-        return $this->listAlarmWhiteListHostDetailWithHttpInfo($request);
-    }
-
-    public function listAlarmWhiteListHostDetailWithHttpInfo($request)
-    {
-        $resourcePath = '/v5/{project_id}/event/white-list/rule/detail';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['ruleId'] !== null) {
-            $queryParams['rule_id'] = $localVarParams['ruleId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams[$arr['region']] = $localVarParams['region'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\ListAlarmWhiteListHostDetailResponse',
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\ListAlarmWhiteListHostDetailRequest');
-    }
-
-    /**
-     * 编辑告警白名单生效主机
-     *
-     * 编辑告警白名单主机相关信息
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateAlarmWhiteListHost($request)
-    {
-        return $this->updateAlarmWhiteListHostWithHttpInfo($request);
-    }
-
-    public function updateAlarmWhiteListHostWithHttpInfo($request)
-    {
-        $resourcePath = '/v5/{project_id}/event/white-list/alarm';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['enterpriseProjectId'] !== null) {
-            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
-        }
-        if ($localVarParams['region'] !== null) {
-            $headerParams[$arr['region']] = $localVarParams['region'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateAlarmWhiteListHostResponse',
-            $requestType='\HuaweiCloud\SDK\Hss\V5\Model\UpdateAlarmWhiteListHostRequest');
     }
 
     /**

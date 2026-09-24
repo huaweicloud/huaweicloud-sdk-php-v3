@@ -29,6 +29,7 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
     * resource  resource
     * restore  restore
     * vaultDelete  vaultDelete
+    * updateExpirationTime  updateExpirationTime
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
             'replication' => '\HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoReplication',
             'resource' => '\HuaweiCloud\SDK\Cbr\V1\Model\Resource',
             'restore' => '\HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoRestore',
-            'vaultDelete' => '\HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoVaultDelete'
+            'vaultDelete' => '\HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoVaultDelete',
+            'updateExpirationTime' => '\HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoUpdateExpirationTime'
     ];
 
     /**
@@ -55,6 +57,7 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
     * resource  resource
     * restore  restore
     * vaultDelete  vaultDelete
+    * updateExpirationTime  updateExpirationTime
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
         'replication' => null,
         'resource' => null,
         'restore' => null,
-        'vaultDelete' => null
+        'vaultDelete' => null,
+        'updateExpirationTime' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
     * resource  resource
     * restore  restore
     * vaultDelete  vaultDelete
+    * updateExpirationTime  updateExpirationTime
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
             'replication' => 'replication',
             'resource' => 'resource',
             'restore' => 'restore',
-            'vaultDelete' => 'vault_delete'
+            'vaultDelete' => 'vault_delete',
+            'updateExpirationTime' => 'update_expiration_time'
     ];
 
     /**
@@ -128,6 +134,7 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
     * resource  resource
     * restore  restore
     * vaultDelete  vaultDelete
+    * updateExpirationTime  updateExpirationTime
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
             'replication' => 'setReplication',
             'resource' => 'setResource',
             'restore' => 'setRestore',
-            'vaultDelete' => 'setVaultDelete'
+            'vaultDelete' => 'setVaultDelete',
+            'updateExpirationTime' => 'setUpdateExpirationTime'
     ];
 
     /**
@@ -154,6 +162,7 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
     * resource  resource
     * restore  restore
     * vaultDelete  vaultDelete
+    * updateExpirationTime  updateExpirationTime
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
             'replication' => 'getReplication',
             'resource' => 'getResource',
             'restore' => 'getRestore',
-            'vaultDelete' => 'getVaultDelete'
+            'vaultDelete' => 'getVaultDelete',
+            'updateExpirationTime' => 'getUpdateExpirationTime'
     ];
 
     /**
@@ -236,6 +246,7 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
         $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
         $this->container['restore'] = isset($data['restore']) ? $data['restore'] : null;
         $this->container['vaultDelete'] = isset($data['vaultDelete']) ? $data['vaultDelete'] : null;
+        $this->container['updateExpirationTime'] = isset($data['updateExpirationTime']) ? $data['updateExpirationTime'] : null;
     }
 
     /**
@@ -479,6 +490,30 @@ class OpExtraInfo implements ModelInterface, ArrayAccess
     public function setVaultDelete($vaultDelete)
     {
         $this->container['vaultDelete'] = $vaultDelete;
+        return $this;
+    }
+
+    /**
+    * Gets updateExpirationTime
+    *  updateExpirationTime
+    *
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoUpdateExpirationTime|null
+    */
+    public function getUpdateExpirationTime()
+    {
+        return $this->container['updateExpirationTime'];
+    }
+
+    /**
+    * Sets updateExpirationTime
+    *
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\OpExtendInfoUpdateExpirationTime|null $updateExpirationTime updateExpirationTime
+    *
+    * @return $this
+    */
+    public function setUpdateExpirationTime($updateExpirationTime)
+    {
+        $this->container['updateExpirationTime'] = $updateExpirationTime;
         return $this;
     }
 

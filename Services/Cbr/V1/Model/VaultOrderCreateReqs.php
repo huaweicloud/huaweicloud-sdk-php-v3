@@ -25,7 +25,7 @@ class VaultOrderCreateReqs implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'vault' => '\HuaweiCloud\SDK\Cbr\V1\Model\VaultOrder'
+            'vault' => '\HuaweiCloud\SDK\Cbr\V1\Model\PrePaidVaultOrder'
     ];
 
     /**
@@ -179,7 +179,7 @@ class VaultOrderCreateReqs implements ModelInterface, ArrayAccess
     * Gets vault
     *  vault
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\VaultOrder
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\PrePaidVaultOrder
     */
     public function getVault()
     {
@@ -189,7 +189,7 @@ class VaultOrderCreateReqs implements ModelInterface, ArrayAccess
     /**
     * Sets vault
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\VaultOrder $vault vault
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\PrePaidVaultOrder $vault vault
     *
     * @return $this
     */

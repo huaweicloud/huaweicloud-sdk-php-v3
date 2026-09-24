@@ -21,21 +21,25 @@ class PolicyTriggerPropertiesReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * pattern  调度规则。限制24条规则。调度器的调度规则，可参照iCalendar RFC 2445规范中的事件规则，但仅支持FREQ、BYDAY、BYHOUR、BYMINUTE、INTERVAL等参数，其中FREQ仅支持WEEKLY和DAILY，BYDAY支持一周七天（MO、TU、WE、TH、FR、SA、SU），BYHOUR支持0-23小时，BYMINUTE支持0-59分钟，并且间隔不能小于一小时，一天最大24个时间点。例如，周一到周天，每天UTC时间的14:00调度，其规则为：'FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=14;BYMINUTE=00'。例如：某个地区的时间为 UTC+8，如果在该地区每天14:00调度，则在14点基础上减8，其规则为'FREQ=DAILY;INTERVAL=1;BYHOUR=6;BYMINUTE=00'。
+    * startWindowMinutes  启动时间窗口大小
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pattern' => 'string[]'
+            'pattern' => 'string[]',
+            'startWindowMinutes' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * pattern  调度规则。限制24条规则。调度器的调度规则，可参照iCalendar RFC 2445规范中的事件规则，但仅支持FREQ、BYDAY、BYHOUR、BYMINUTE、INTERVAL等参数，其中FREQ仅支持WEEKLY和DAILY，BYDAY支持一周七天（MO、TU、WE、TH、FR、SA、SU），BYHOUR支持0-23小时，BYMINUTE支持0-59分钟，并且间隔不能小于一小时，一天最大24个时间点。例如，周一到周天，每天UTC时间的14:00调度，其规则为：'FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=14;BYMINUTE=00'。例如：某个地区的时间为 UTC+8，如果在该地区每天14:00调度，则在14点基础上减8，其规则为'FREQ=DAILY;INTERVAL=1;BYHOUR=6;BYMINUTE=00'。
+    * startWindowMinutes  启动时间窗口大小
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pattern' => null
+        'pattern' => null,
+        'startWindowMinutes' => 'int32'
     ];
 
     /**
@@ -62,31 +66,37 @@ class PolicyTriggerPropertiesReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * pattern  调度规则。限制24条规则。调度器的调度规则，可参照iCalendar RFC 2445规范中的事件规则，但仅支持FREQ、BYDAY、BYHOUR、BYMINUTE、INTERVAL等参数，其中FREQ仅支持WEEKLY和DAILY，BYDAY支持一周七天（MO、TU、WE、TH、FR、SA、SU），BYHOUR支持0-23小时，BYMINUTE支持0-59分钟，并且间隔不能小于一小时，一天最大24个时间点。例如，周一到周天，每天UTC时间的14:00调度，其规则为：'FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=14;BYMINUTE=00'。例如：某个地区的时间为 UTC+8，如果在该地区每天14:00调度，则在14点基础上减8，其规则为'FREQ=DAILY;INTERVAL=1;BYHOUR=6;BYMINUTE=00'。
+    * startWindowMinutes  启动时间窗口大小
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'pattern' => 'pattern'
+            'pattern' => 'pattern',
+            'startWindowMinutes' => 'start_window_minutes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * pattern  调度规则。限制24条规则。调度器的调度规则，可参照iCalendar RFC 2445规范中的事件规则，但仅支持FREQ、BYDAY、BYHOUR、BYMINUTE、INTERVAL等参数，其中FREQ仅支持WEEKLY和DAILY，BYDAY支持一周七天（MO、TU、WE、TH、FR、SA、SU），BYHOUR支持0-23小时，BYMINUTE支持0-59分钟，并且间隔不能小于一小时，一天最大24个时间点。例如，周一到周天，每天UTC时间的14:00调度，其规则为：'FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=14;BYMINUTE=00'。例如：某个地区的时间为 UTC+8，如果在该地区每天14:00调度，则在14点基础上减8，其规则为'FREQ=DAILY;INTERVAL=1;BYHOUR=6;BYMINUTE=00'。
+    * startWindowMinutes  启动时间窗口大小
     *
     * @var string[]
     */
     protected static $setters = [
-            'pattern' => 'setPattern'
+            'pattern' => 'setPattern',
+            'startWindowMinutes' => 'setStartWindowMinutes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * pattern  调度规则。限制24条规则。调度器的调度规则，可参照iCalendar RFC 2445规范中的事件规则，但仅支持FREQ、BYDAY、BYHOUR、BYMINUTE、INTERVAL等参数，其中FREQ仅支持WEEKLY和DAILY，BYDAY支持一周七天（MO、TU、WE、TH、FR、SA、SU），BYHOUR支持0-23小时，BYMINUTE支持0-59分钟，并且间隔不能小于一小时，一天最大24个时间点。例如，周一到周天，每天UTC时间的14:00调度，其规则为：'FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU;BYHOUR=14;BYMINUTE=00'。例如：某个地区的时间为 UTC+8，如果在该地区每天14:00调度，则在14点基础上减8，其规则为'FREQ=DAILY;INTERVAL=1;BYHOUR=6;BYMINUTE=00'。
+    * startWindowMinutes  启动时间窗口大小
     *
     * @var string[]
     */
     protected static $getters = [
-            'pattern' => 'getPattern'
+            'pattern' => 'getPattern',
+            'startWindowMinutes' => 'getStartWindowMinutes'
     ];
 
     /**
@@ -148,6 +158,7 @@ class PolicyTriggerPropertiesReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['pattern'] = isset($data['pattern']) ? $data['pattern'] : null;
+        $this->container['startWindowMinutes'] = isset($data['startWindowMinutes']) ? $data['startWindowMinutes'] : null;
     }
 
     /**
@@ -161,6 +172,12 @@ class PolicyTriggerPropertiesReq implements ModelInterface, ArrayAccess
         if ($this->container['pattern'] === null) {
             $invalidProperties[] = "'pattern' can't be null";
         }
+            if (!is_null($this->container['startWindowMinutes']) && ($this->container['startWindowMinutes'] > 480)) {
+                $invalidProperties[] = "invalid value for 'startWindowMinutes', must be smaller than or equal to 480.";
+            }
+            if (!is_null($this->container['startWindowMinutes']) && ($this->container['startWindowMinutes'] < 60)) {
+                $invalidProperties[] = "invalid value for 'startWindowMinutes', must be bigger than or equal to 60.";
+            }
         return $invalidProperties;
     }
 
@@ -196,6 +213,30 @@ class PolicyTriggerPropertiesReq implements ModelInterface, ArrayAccess
     public function setPattern($pattern)
     {
         $this->container['pattern'] = $pattern;
+        return $this;
+    }
+
+    /**
+    * Gets startWindowMinutes
+    *  启动时间窗口大小
+    *
+    * @return int|null
+    */
+    public function getStartWindowMinutes()
+    {
+        return $this->container['startWindowMinutes'];
+    }
+
+    /**
+    * Sets startWindowMinutes
+    *
+    * @param int|null $startWindowMinutes 启动时间窗口大小
+    *
+    * @return $this
+    */
+    public function setStartWindowMinutes($startWindowMinutes)
+    {
+        $this->container['startWindowMinutes'] = $startWindowMinutes;
         return $this;
     }
 

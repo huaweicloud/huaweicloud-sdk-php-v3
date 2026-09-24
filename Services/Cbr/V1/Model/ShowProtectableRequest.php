@@ -21,7 +21,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  资源ID
-    * protectableType  可保护性类型
+    * protectableType  **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  资源ID
-    * protectableType  可保护性类型
+    * protectableType  **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  资源ID
-    * protectableType  可保护性类型
+    * protectableType  **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  资源ID
-    * protectableType  可保护性类型
+    * protectableType  **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  资源ID
-    * protectableType  可保护性类型
+    * protectableType  **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -141,6 +141,9 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     }
     const PROTECTABLE_TYPE_SERVER = 'server';
     const PROTECTABLE_TYPE_DISK = 'disk';
+    const PROTECTABLE_TYPE_TURBO = 'turbo';
+    const PROTECTABLE_TYPE_WORKSPACE = 'workspace';
+    const PROTECTABLE_TYPE_WORKSPACE_V2 = 'workspace_v2';
     
 
     /**
@@ -153,6 +156,9 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
         return [
             self::PROTECTABLE_TYPE_SERVER,
             self::PROTECTABLE_TYPE_DISK,
+            self::PROTECTABLE_TYPE_TURBO,
+            self::PROTECTABLE_TYPE_WORKSPACE,
+            self::PROTECTABLE_TYPE_WORKSPACE_V2,
         ];
     }
 
@@ -238,7 +244,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectableType
-    *  可保护性类型
+    *  **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -250,7 +256,7 @@ class ShowProtectableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protectableType
     *
-    * @param string $protectableType 可保护性类型
+    * @param string $protectableType **参数解释：** 可保护性类型 **约束限制：** 不涉及 **取值范围：** 可选参数为server,disk,turbo,workspace和workspace_v2 server： 云服务器类型 disk：云硬盘类型 turbo：turbo类型 workspace：workspace类型 workspace_v2：workspace_v2类型 **默认取值：** 不涉及
     *
     * @return $this
     */

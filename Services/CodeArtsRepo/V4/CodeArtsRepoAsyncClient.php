@@ -1207,6 +1207,9 @@ class CodeArtsRepoAsyncClient extends Client
         if ($localVarParams['withDefaultReviewCategories'] !== null) {
             $queryParams['with_default_review_categories'] = $localVarParams['withDefaultReviewCategories'];
         }
+        if ($localVarParams['takeEffect'] !== null) {
+            $queryParams['take_effect'] = $localVarParams['takeEffect'];
+        }
         if ($localVarParams['repositoryId'] !== null) {
             $pathParams['repository_id'] = $localVarParams['repositoryId'];
         }

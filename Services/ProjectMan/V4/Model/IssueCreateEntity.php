@@ -441,13 +441,10 @@ class IssueCreateEntity implements ModelInterface, ArrayAccess
         if ($this->container['categoryLayerId'] === null) {
             $invalidProperties[] = "'categoryLayerId' can't be null";
         }
-        if ($this->container['parentId'] === null) {
-            $invalidProperties[] = "'parentId' can't be null";
-        }
-            if ((mb_strlen($this->container['parentId']) > 19)) {
+            if (!is_null($this->container['parentId']) && (mb_strlen($this->container['parentId']) > 19)) {
                 $invalidProperties[] = "invalid value for 'parentId', the character length must be smaller than or equal to 19.";
             }
-            if ((mb_strlen($this->container['parentId']) < 0)) {
+            if (!is_null($this->container['parentId']) && (mb_strlen($this->container['parentId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'parentId', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['status'] === null) {
@@ -642,7 +639,7 @@ class IssueCreateEntity implements ModelInterface, ArrayAccess
     * Gets parentId
     *  **参数解释**： 父工作项ID。 **约束限制**： 创建子工作项时必填，其他场景非必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getParentId()
     {
@@ -652,7 +649,7 @@ class IssueCreateEntity implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string $parentId **参数解释**： 父工作项ID。 **约束限制**： 创建子工作项时必填，其他场景非必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
+    * @param string|null $parentId **参数解释**： 父工作项ID。 **约束限制**： 创建子工作项时必填，其他场景非必填。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     *
     * @return $this
     */

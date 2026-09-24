@@ -25,7 +25,7 @@ class VaultTagsCreateReq implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tag' => '\HuaweiCloud\SDK\Cbr\V1\Model\Tag'
+            'tag' => '\HuaweiCloud\SDK\Cbr\V1\Model\TagCreate'
     ];
 
     /**
@@ -158,6 +158,9 @@ class VaultTagsCreateReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['tag'] === null) {
+            $invalidProperties[] = "'tag' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class VaultTagsCreateReq implements ModelInterface, ArrayAccess
     * Gets tag
     *  tag
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\Tag|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\TagCreate
     */
     public function getTag()
     {
@@ -186,7 +189,7 @@ class VaultTagsCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\Tag|null $tag tag
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\TagCreate $tag tag
     *
     * @return $this
     */
