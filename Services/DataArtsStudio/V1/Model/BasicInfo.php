@@ -21,7 +21,8 @@ class BasicInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * owner  作业责任人
-    * priority  作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    * priority  执行优先级。
+    * taskPriority  作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
     * executeUser  作业执行用户，必须是已存在的用户名。
     * instanceTimeout  实例超时时间，单位是分钟。
     * customFields  用户自定义属性字段
@@ -31,6 +32,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'owner' => 'string',
             'priority' => 'int',
+            'taskPriority' => 'int',
             'executeUser' => 'string',
             'instanceTimeout' => 'int',
             'customFields' => 'object'
@@ -39,7 +41,8 @@ class BasicInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * owner  作业责任人
-    * priority  作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    * priority  执行优先级。
+    * taskPriority  作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
     * executeUser  作业执行用户，必须是已存在的用户名。
     * instanceTimeout  实例超时时间，单位是分钟。
     * customFields  用户自定义属性字段
@@ -49,6 +52,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'owner' => null,
         'priority' => 'int32',
+        'taskPriority' => 'int32',
         'executeUser' => null,
         'instanceTimeout' => 'int32',
         'customFields' => null
@@ -78,7 +82,8 @@ class BasicInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * owner  作业责任人
-    * priority  作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    * priority  执行优先级。
+    * taskPriority  作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
     * executeUser  作业执行用户，必须是已存在的用户名。
     * instanceTimeout  实例超时时间，单位是分钟。
     * customFields  用户自定义属性字段
@@ -88,6 +93,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'owner' => 'owner',
             'priority' => 'priority',
+            'taskPriority' => 'task_priority',
             'executeUser' => 'execute_user',
             'instanceTimeout' => 'instance_timeout',
             'customFields' => 'custom_fields'
@@ -96,7 +102,8 @@ class BasicInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * owner  作业责任人
-    * priority  作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    * priority  执行优先级。
+    * taskPriority  作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
     * executeUser  作业执行用户，必须是已存在的用户名。
     * instanceTimeout  实例超时时间，单位是分钟。
     * customFields  用户自定义属性字段
@@ -106,6 +113,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'owner' => 'setOwner',
             'priority' => 'setPriority',
+            'taskPriority' => 'setTaskPriority',
             'executeUser' => 'setExecuteUser',
             'instanceTimeout' => 'setInstanceTimeout',
             'customFields' => 'setCustomFields'
@@ -114,7 +122,8 @@ class BasicInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * owner  作业责任人
-    * priority  作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    * priority  执行优先级。
+    * taskPriority  作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
     * executeUser  作业执行用户，必须是已存在的用户名。
     * instanceTimeout  实例超时时间，单位是分钟。
     * customFields  用户自定义属性字段
@@ -124,6 +133,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'owner' => 'getOwner',
             'priority' => 'getPriority',
+            'taskPriority' => 'getTaskPriority',
             'executeUser' => 'getExecuteUser',
             'instanceTimeout' => 'getInstanceTimeout',
             'customFields' => 'getCustomFields'
@@ -189,6 +199,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
     {
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['taskPriority'] = isset($data['taskPriority']) ? $data['taskPriority'] : null;
         $this->container['executeUser'] = isset($data['executeUser']) ? $data['executeUser'] : null;
         $this->container['instanceTimeout'] = isset($data['instanceTimeout']) ? $data['instanceTimeout'] : null;
         $this->container['customFields'] = isset($data['customFields']) ? $data['customFields'] : null;
@@ -202,11 +213,11 @@ class BasicInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['priority']) && ($this->container['priority'] > 2)) {
-                $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 2.";
+            if (!is_null($this->container['taskPriority']) && ($this->container['taskPriority'] > 2)) {
+                $invalidProperties[] = "invalid value for 'taskPriority', must be smaller than or equal to 2.";
             }
-            if (!is_null($this->container['priority']) && ($this->container['priority'] < 0)) {
-                $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 0.";
+            if (!is_null($this->container['taskPriority']) && ($this->container['taskPriority'] < 0)) {
+                $invalidProperties[] = "invalid value for 'taskPriority', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['instanceTimeout']) && ($this->container['instanceTimeout'] > 1440)) {
                 $invalidProperties[] = "invalid value for 'instanceTimeout', must be smaller than or equal to 1440.";
@@ -254,7 +265,7 @@ class BasicInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    *  执行优先级。
     *
     * @return int|null
     */
@@ -266,13 +277,37 @@ class BasicInfo implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 作业优先级，0代表高优先级，1代表中优先级，2代表低优先级。
+    * @param int|null $priority 执行优先级。
     *
     * @return $this
     */
     public function setPriority($priority)
     {
         $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets taskPriority
+    *  作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
+    *
+    * @return int|null
+    */
+    public function getTaskPriority()
+    {
+        return $this->container['taskPriority'];
+    }
+
+    /**
+    * Sets taskPriority
+    *
+    * @param int|null $taskPriority 作业优先级，取值范围[0, 2]，默认值是0。0代表高优先级，1代表中优先级，2代表低优先级。
+    *
+    * @return $this
+    */
+    public function setTaskPriority($taskPriority)
+    {
+        $this->container['taskPriority'] = $taskPriority;
         return $this;
     }
 

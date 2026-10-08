@@ -21,7 +21,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释：** CMDB分配的云厂商账户ID。 **取值范围：** 不涉及。
-    * vendor  **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    * vendor  **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     * accountId  **参数解释：** 供应商的账户ID。 **取值范围：** 字符串，长度0到64个字符。
     * domainId  **参数解释：** 租户id。 **取值范围：** 不涉及。
     * accountName  **参数解释：** 账户名。 **取值范围：** 字符串，长度0到64个字符。
@@ -51,7 +51,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释：** CMDB分配的云厂商账户ID。 **取值范围：** 不涉及。
-    * vendor  **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    * vendor  **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     * accountId  **参数解释：** 供应商的账户ID。 **取值范围：** 字符串，长度0到64个字符。
     * domainId  **参数解释：** 租户id。 **取值范围：** 不涉及。
     * accountName  **参数解释：** 账户名。 **取值范围：** 字符串，长度0到64个字符。
@@ -102,7 +102,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释：** CMDB分配的云厂商账户ID。 **取值范围：** 不涉及。
-    * vendor  **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    * vendor  **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     * accountId  **参数解释：** 供应商的账户ID。 **取值范围：** 字符串，长度0到64个字符。
     * domainId  **参数解释：** 租户id。 **取值范围：** 不涉及。
     * accountName  **参数解释：** 账户名。 **取值范围：** 字符串，长度0到64个字符。
@@ -132,7 +132,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释：** CMDB分配的云厂商账户ID。 **取值范围：** 不涉及。
-    * vendor  **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    * vendor  **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     * accountId  **参数解释：** 供应商的账户ID。 **取值范围：** 字符串，长度0到64个字符。
     * domainId  **参数解释：** 租户id。 **取值范围：** 不涉及。
     * accountName  **参数解释：** 账户名。 **取值范围：** 字符串，长度0到64个字符。
@@ -162,7 +162,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释：** CMDB分配的云厂商账户ID。 **取值范围：** 不涉及。
-    * vendor  **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    * vendor  **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     * accountId  **参数解释：** 供应商的账户ID。 **取值范围：** 字符串，长度0到64个字符。
     * domainId  **参数解释：** 租户id。 **取值范围：** 不涉及。
     * accountName  **参数解释：** 账户名。 **取值范围：** 字符串，长度0到64个字符。
@@ -365,7 +365,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets vendor
-    *  **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    *  **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     *
     * @return string|null
     */
@@ -377,7 +377,7 @@ class BatchListVendorAccountResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets vendor
     *
-    * @param string|null $vendor **参数解释：** 云广商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云广商。
+    * @param string|null $vendor **参数解释：** 云厂商信息。 **取值范围：** - RMS： 华为云。 - AWS：亚马逊。 - AZURE：微软。 - ALI：阿里云。 - VMWARE：VMware。 - OPENSTACK：openstack云平台。 - HCS：Huawei Cloud Stack。 - OTHER：其他云厂商。
     *
     * @return $this
     */

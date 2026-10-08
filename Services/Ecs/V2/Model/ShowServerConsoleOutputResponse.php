@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\ModelArts\V1\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowObsUrlOfTrainingJobLogsResponse implements ModelInterface, ArrayAccess
+class ShowServerConsoleOutputResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,30 +17,26 @@ class ShowObsUrlOfTrainingJobLogsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowObsUrlOfTrainingJobLogsResponse';
+    protected static $openAPIModelName = 'ShowServerConsoleOutputResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * obsUrl  日志OBS临时链接（复制到浏览器可查看当前全量日志）。
-    * shards  shards
+    * output  云服务器控制台日志。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'obsUrl' => 'string',
-            'shards' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Shards'
+            'output' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * obsUrl  日志OBS临时链接（复制到浏览器可查看当前全量日志）。
-    * shards  shards
+    * output  云服务器控制台日志。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'obsUrl' => null,
-        'shards' => null
+        'output' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ShowObsUrlOfTrainingJobLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * obsUrl  日志OBS临时链接（复制到浏览器可查看当前全量日志）。
-    * shards  shards
+    * output  云服务器控制台日志。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'obsUrl' => 'obs_url',
-            'shards' => 'shards'
+            'output' => 'output'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * obsUrl  日志OBS临时链接（复制到浏览器可查看当前全量日志）。
-    * shards  shards
+    * output  云服务器控制台日志。
     *
     * @var string[]
     */
     protected static $setters = [
-            'obsUrl' => 'setObsUrl',
-            'shards' => 'setShards'
+            'output' => 'setOutput'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * obsUrl  日志OBS临时链接（复制到浏览器可查看当前全量日志）。
-    * shards  shards
+    * output  云服务器控制台日志。
     *
     * @var string[]
     */
     protected static $getters = [
-            'obsUrl' => 'getObsUrl',
-            'shards' => 'getShards'
+            'output' => 'getOutput'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ShowObsUrlOfTrainingJobLogsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['obsUrl'] = isset($data['obsUrl']) ? $data['obsUrl'] : null;
-        $this->container['shards'] = isset($data['shards']) ? $data['shards'] : null;
+        $this->container['output'] = isset($data['output']) ? $data['output'] : null;
     }
 
     /**
@@ -185,50 +174,26 @@ class ShowObsUrlOfTrainingJobLogsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets obsUrl
-    *  日志OBS临时链接（复制到浏览器可查看当前全量日志）。
+    * Gets output
+    *  云服务器控制台日志。
     *
     * @return string|null
     */
-    public function getObsUrl()
+    public function getOutput()
     {
-        return $this->container['obsUrl'];
+        return $this->container['output'];
     }
 
     /**
-    * Sets obsUrl
+    * Sets output
     *
-    * @param string|null $obsUrl 日志OBS临时链接（复制到浏览器可查看当前全量日志）。
+    * @param string|null $output 云服务器控制台日志。
     *
     * @return $this
     */
-    public function setObsUrl($obsUrl)
+    public function setOutput($output)
     {
-        $this->container['obsUrl'] = $obsUrl;
-        return $this;
-    }
-
-    /**
-    * Gets shards
-    *  shards
-    *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\Shards|null
-    */
-    public function getShards()
-    {
-        return $this->container['shards'];
-    }
-
-    /**
-    * Sets shards
-    *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\Shards|null $shards shards
-    *
-    * @return $this
-    */
-    public function setShards($shards)
-    {
-        $this->container['shards'] = $shards;
+        $this->container['output'] = $output;
         return $this;
     }
 

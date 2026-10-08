@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\ModelArts\V1\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowObsUrlOfTrainingJobLogsRequest implements ModelInterface, ArrayAccess
+class ShowServerConsoleOutputRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class ShowObsUrlOfTrainingJobLogsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowObsUrlOfTrainingJobLogsRequest';
+    protected static $openAPIModelName = 'ShowServerConsoleOutputRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
-    * taskId  训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
-    * contentType  消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
+    * serverId  云服务器ID。
+    * length  - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'trainingJobId' => 'string',
-            'taskId' => 'string',
-            'contentType' => 'string'
+            'serverId' => 'string',
+            'length' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
-    * taskId  训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
-    * contentType  消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
+    * serverId  云服务器ID。
+    * length  - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'trainingJobId' => null,
-        'taskId' => null,
-        'contentType' => null
+        'serverId' => null,
+        'length' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class ShowObsUrlOfTrainingJobLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
-    * taskId  训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
-    * contentType  消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
+    * serverId  云服务器ID。
+    * length  - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'trainingJobId' => 'training_job_id',
-            'taskId' => 'task_id',
-            'contentType' => 'Content-Type'
+            'serverId' => 'server_id',
+            'length' => 'length'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
-    * taskId  训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
-    * contentType  消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
+    * serverId  云服务器ID。
+    * length  - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
     * @var string[]
     */
     protected static $setters = [
-            'trainingJobId' => 'setTrainingJobId',
-            'taskId' => 'setTaskId',
-            'contentType' => 'setContentType'
+            'serverId' => 'setServerId',
+            'length' => 'setLength'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * trainingJobId  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
-    * taskId  训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
-    * contentType  消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
+    * serverId  云服务器ID。
+    * length  - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
     * @var string[]
     */
     protected static $getters = [
-            'trainingJobId' => 'getTrainingJobId',
-            'taskId' => 'getTaskId',
-            'contentType' => 'getContentType'
+            'serverId' => 'getServerId',
+            'length' => 'getLength'
     ];
 
     /**
@@ -167,9 +157,8 @@ class ShowObsUrlOfTrainingJobLogsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['trainingJobId'] = isset($data['trainingJobId']) ? $data['trainingJobId'] : null;
-        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['length'] = isset($data['length']) ? $data['length'] : null;
     }
 
     /**
@@ -180,11 +169,8 @@ class ShowObsUrlOfTrainingJobLogsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['trainingJobId'] === null) {
-            $invalidProperties[] = "'trainingJobId' can't be null";
-        }
-        if ($this->container['taskId'] === null) {
-            $invalidProperties[] = "'taskId' can't be null";
+        if ($this->container['serverId'] === null) {
+            $invalidProperties[] = "'serverId' can't be null";
         }
         return $invalidProperties;
     }
@@ -201,74 +187,50 @@ class ShowObsUrlOfTrainingJobLogsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets trainingJobId
-    *  训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
+    * Gets serverId
+    *  云服务器ID。
     *
     * @return string
     */
-    public function getTrainingJobId()
+    public function getServerId()
     {
-        return $this->container['trainingJobId'];
+        return $this->container['serverId'];
     }
 
     /**
-    * Sets trainingJobId
+    * Sets serverId
     *
-    * @param string $trainingJobId 训练作业ID。获取方法请参见[查询训练作业列表](ListTrainingJobs.xml)。
+    * @param string $serverId 云服务器ID。
     *
     * @return $this
     */
-    public function setTrainingJobId($trainingJobId)
+    public function setServerId($serverId)
     {
-        $this->container['trainingJobId'] = $trainingJobId;
+        $this->container['serverId'] = $serverId;
         return $this;
     }
 
     /**
-    * Gets taskId
-    *  训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
+    * Gets length
+    *  - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
-    * @return string
+    * @return int|null
     */
-    public function getTaskId()
+    public function getLength()
     {
-        return $this->container['taskId'];
+        return $this->container['length'];
     }
 
     /**
-    * Sets taskId
+    * Sets length
     *
-    * @param string $taskId 训练作业的任务名称。可从训练作业详情中的status.tasks字段中获取。
+    * @param int|null $length - 参数解释： 请求log行数。 - 约束限制： 不涉及。 - 取值范围： 大于等于-1。其中-1代表不限长度输出。 - 默认取值： 不填时默认50。
     *
     * @return $this
     */
-    public function setTaskId($taskId)
+    public function setLength($length)
     {
-        $this->container['taskId'] = $taskId;
-        return $this;
-    }
-
-    /**
-    * Gets contentType
-    *  消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
-    *
-    * @return string|null
-    */
-    public function getContentType()
-    {
-        return $this->container['contentType'];
-    }
-
-    /**
-    * Sets contentType
-    *
-    * @param string|null $contentType 消息体的类型。设置为text/plain，返回临时预览链接。设置为application/octet-stream，返回临时下载链接。
-    *
-    * @return $this
-    */
-    public function setContentType($contentType)
-    {
-        $this->container['contentType'] = $contentType;
+        $this->container['length'] = $length;
         return $this;
     }
 

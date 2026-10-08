@@ -3381,11 +3381,11 @@ class IoTEdgeAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -5293,7 +5293,7 @@ class IoTEdgeAsyncClient extends Client
     }
 
     /**
-     * 更新调度计划，机机接口，全量更新字段
+     * 更新调度计划
      *
      * 用户通过北向接口修改边缘节点上调度计划
      * 

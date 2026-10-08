@@ -25,7 +25,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
     * continueTaskName  续训任务名称。
     * continueTrainType  续训训练类型。
     * skippedSteps  跳过步数，0表示不跳过。
-    * restoreTraining  是否续训任务。  0: 非续训, 1:续训。
+    * restoreTraining  是否续训任务。 0: 非续训, 1:续训。
     * createTime  创建时间。
     * checkpointConfig  中间产物配置信息。
     *
@@ -49,7 +49,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
     * continueTaskName  续训任务名称。
     * continueTrainType  续训训练类型。
     * skippedSteps  跳过步数，0表示不跳过。
-    * restoreTraining  是否续训任务。  0: 非续训, 1:续训。
+    * restoreTraining  是否续训任务。 0: 非续训, 1:续训。
     * createTime  创建时间。
     * checkpointConfig  中间产物配置信息。
     *
@@ -94,7 +94,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
     * continueTaskName  续训任务名称。
     * continueTrainType  续训训练类型。
     * skippedSteps  跳过步数，0表示不跳过。
-    * restoreTraining  是否续训任务。  0: 非续训, 1:续训。
+    * restoreTraining  是否续训任务。 0: 非续训, 1:续训。
     * createTime  创建时间。
     * checkpointConfig  中间产物配置信息。
     *
@@ -118,7 +118,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
     * continueTaskName  续训任务名称。
     * continueTrainType  续训训练类型。
     * skippedSteps  跳过步数，0表示不跳过。
-    * restoreTraining  是否续训任务。  0: 非续训, 1:续训。
+    * restoreTraining  是否续训任务。 0: 非续训, 1:续训。
     * createTime  创建时间。
     * checkpointConfig  中间产物配置信息。
     *
@@ -142,7 +142,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
     * continueTaskName  续训任务名称。
     * continueTrainType  续训训练类型。
     * skippedSteps  跳过步数，0表示不跳过。
-    * restoreTraining  是否续训任务。  0: 非续训, 1:续训。
+    * restoreTraining  是否续训任务。 0: 非续训, 1:续训。
     * createTime  创建时间。
     * checkpointConfig  中间产物配置信息。
     *
@@ -419,7 +419,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets restoreTraining
-    *  是否续训任务。  0: 非续训, 1:续训。
+    *  是否续训任务。 0: 非续训, 1:续训。
     *
     * @return int|null
     */
@@ -431,7 +431,7 @@ class ContinueTrainTask implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTraining
     *
-    * @param int|null $restoreTraining 是否续训任务。  0: 非续训, 1:续训。
+    * @param int|null $restoreTraining 是否续训任务。 0: 非续训, 1:续训。
     *
     * @return $this
     */

@@ -28,7 +28,7 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
-    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * retentionTime  **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
-    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * retentionTime  **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
-    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * retentionTime  **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
-    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * retentionTime  **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class Status implements ModelInterface, ArrayAccess
     * startTime  训练作业开始时间，格式为时间戳。
     * taskStatuses  训练在子任务状态信息。
     * runningRecords  训练作业运行及故障恢复记录。
-    * retentionTime  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * retentionTime  **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     * taskIps  **参数解释**：训练作业各 Task 的 IP 信息。 **约束限制**：仅当查询请求携带 `host_ips` 时返回；且仅返回与筛选 IP 匹配的记录。 **取值范围**：不涉及。 **默认取值**：不传 `host_ips` 时不返回。
     *
     * @var string[]
@@ -465,7 +465,7 @@ class Status implements ModelInterface, ArrayAccess
 
     /**
     * Gets retentionTime
-    *  **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    *  **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     *
     * @return int|null
     */
@@ -477,7 +477,7 @@ class Status implements ModelInterface, ArrayAccess
     /**
     * Sets retentionTime
     *
-    * @param int|null $retentionTime **参数解释**：作业已经保留时长。  **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。  **取值范围**：不涉及。    **默认取值**：不涉及。
+    * @param int|null $retentionTime **参数解释**：作业已经保留时长。 **约束限制**：仅当创建训练作业时，设置了`reserved_time`时返回。 **取值范围**：不涉及。    **默认取值**：不涉及。
     *
     * @return $this
     */

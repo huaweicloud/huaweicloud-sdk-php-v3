@@ -32,7 +32,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
@@ -70,7 +70,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
@@ -129,7 +129,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
@@ -167,7 +167,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
@@ -205,7 +205,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * logConfigs  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     * tags  **参数解释：** 服务标签,上限20个 **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
     * workspaceId  **参数解释：** 工作空间id，默认是“0” **约束限制：** 不填保留原有值。 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * schedule  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * schedule  **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     * customMetricsPath  **参数解释：** 该参数值由英文逗号隔开的协议、端口号、地址组成，其中地址长度不超过255 ，且需要与镜像给定的协议、地址、端口一致，否则指标无法上报。 **约束限制：** 不填保留原有值。
     * taskType  **参数解释：** 模型类型。 **约束限制：** 不填保留原有值。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
     *
@@ -616,7 +616,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets schedule
-    *  **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    *  **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     *
     * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null
     */
@@ -628,7 +628,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets schedule
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null $schedule **参数解释：**  定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]|null $schedule **参数解释：** 定时停止配置。 **约束限制：** 1.不填保留原有值。 2.仅当body中另一个参数description为空时，此参数才生效。
     *
     * @return $this
     */

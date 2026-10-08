@@ -288,12 +288,6 @@ class ListTemplateDatabaseComparisonsRequest implements ModelInterface, ArrayAcc
         if ($this->container['endAt1'] === null) {
             $invalidProperties[] = "'endAt1' can't be null";
         }
-        if ($this->container['startAt2'] === null) {
-            $invalidProperties[] = "'startAt2' can't be null";
-        }
-        if ($this->container['endAt2'] === null) {
-            $invalidProperties[] = "'endAt2' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -408,7 +402,7 @@ class ListTemplateDatabaseComparisonsRequest implements ModelInterface, ArrayAcc
     * Gets startAt2
     *  比较时间段2的开始时间，Unix timestamp，单位：毫秒
     *
-    * @return int
+    * @return int|null
     */
     public function getStartAt2()
     {
@@ -418,7 +412,7 @@ class ListTemplateDatabaseComparisonsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets startAt2
     *
-    * @param int $startAt2 比较时间段2的开始时间，Unix timestamp，单位：毫秒
+    * @param int|null $startAt2 比较时间段2的开始时间，Unix timestamp，单位：毫秒
     *
     * @return $this
     */
@@ -432,7 +426,7 @@ class ListTemplateDatabaseComparisonsRequest implements ModelInterface, ArrayAcc
     * Gets endAt2
     *  比较时间段2的结束时间，Unix timestamp，单位：毫秒
     *
-    * @return int
+    * @return int|null
     */
     public function getEndAt2()
     {
@@ -442,7 +436,7 @@ class ListTemplateDatabaseComparisonsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets endAt2
     *
-    * @param int $endAt2 比较时间段2的结束时间，Unix timestamp，单位：毫秒
+    * @param int|null $endAt2 比较时间段2的结束时间，Unix timestamp，单位：毫秒
     *
     * @return $this
     */

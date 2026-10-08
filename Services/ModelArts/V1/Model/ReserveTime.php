@@ -20,8 +20,8 @@ class ReserveTime implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeUnit  **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
-    * duration  **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    * timeUnit  **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
+    * duration  **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ReserveTime implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeUnit  **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
-    * duration  **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    * timeUnit  **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
+    * duration  **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ReserveTime implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeUnit  **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
-    * duration  **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    * timeUnit  **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
+    * duration  **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ReserveTime implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeUnit  **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
-    * duration  **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    * timeUnit  **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
+    * duration  **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ReserveTime implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeUnit  **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
-    * duration  **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    * timeUnit  **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
+    * duration  **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ReserveTime implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeUnit
-    *  **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
+    *  **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ReserveTime implements ModelInterface, ArrayAccess
     /**
     * Sets timeUnit
     *
-    * @param string $timeUnit **参数解释**：时间单位。  **约束限制**：不涉及。  **取值范围**：  - HOURS：小时   **默认取值**：不涉及。
+    * @param string $timeUnit **参数解释**：时间单位。 **约束限制**：不涉及。 **取值范围**： - HOURS：小时  **默认取值**：不涉及。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ReserveTime implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    *  **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @return int
     */
@@ -227,7 +227,7 @@ class ReserveTime implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int $duration **参数解释**：保留时长。  **约束限制**：不涉及。  **取值范围**：最小值为1。  **默认取值**：不涉及。
+    * @param int $duration **参数解释**：保留时长。 **约束限制**：不涉及。 **取值范围**：最小值为1。 **默认取值**：不涉及。
     *
     * @return $this
     */
