@@ -20,7 +20,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobs  批量结束与删除任务请求列表
+    * jobs  **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobs  批量结束与删除任务请求列表
+    * jobs  **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobs  批量结束与删除任务请求列表
+    * jobs  **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobs  批量结束与删除任务请求列表
+    * jobs  **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobs  批量结束与删除任务请求列表
+    * jobs  **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobs
-    *  批量结束与删除任务请求列表
+    *  **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\DeleteJobReq[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\DeleteJobReq[] $jobs 批量结束与删除任务请求列表
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\DeleteJobReq[] $jobs **参数解释**：  批量结束与删除任务请求列表，指定需要结束或删除的任务信息。详情请参见DeleteJobReq对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * delayTime  订阅延迟时间(单位为s)
-    * rtoDelay  rto延迟时间
-    * rpoDelay  rpo延迟时间
-    * alarmToUser  异常告警是否通知用户
-    * subscriptions  收件方式与信息体
+    * delayTime  **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rtoDelay  **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rpoDelay  **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * alarmToUser  **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
+    * subscriptions  **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * delayTime  订阅延迟时间(单位为s)
-    * rtoDelay  rto延迟时间
-    * rpoDelay  rpo延迟时间
-    * alarmToUser  异常告警是否通知用户
-    * subscriptions  收件方式与信息体
+    * delayTime  **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rtoDelay  **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rpoDelay  **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * alarmToUser  **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
+    * subscriptions  **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * delayTime  订阅延迟时间(单位为s)
-    * rtoDelay  rto延迟时间
-    * rpoDelay  rpo延迟时间
-    * alarmToUser  异常告警是否通知用户
-    * subscriptions  收件方式与信息体
+    * delayTime  **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rtoDelay  **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rpoDelay  **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * alarmToUser  **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
+    * subscriptions  **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * delayTime  订阅延迟时间(单位为s)
-    * rtoDelay  rto延迟时间
-    * rpoDelay  rpo延迟时间
-    * alarmToUser  异常告警是否通知用户
-    * subscriptions  收件方式与信息体
+    * delayTime  **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rtoDelay  **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rpoDelay  **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * alarmToUser  **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
+    * subscriptions  **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * delayTime  订阅延迟时间(单位为s)
-    * rtoDelay  rto延迟时间
-    * rpoDelay  rpo延迟时间
-    * alarmToUser  异常告警是否通知用户
-    * subscriptions  收件方式与信息体
+    * delayTime  **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rtoDelay  **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * rpoDelay  **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
+    * alarmToUser  **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
+    * subscriptions  **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -236,7 +236,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets delayTime
-    *  订阅延迟时间(单位为s)
+    *  **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
     *
     * @return int|null
     */
@@ -248,7 +248,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets delayTime
     *
-    * @param int|null $delayTime 订阅延迟时间(单位为s)
+    * @param int|null $delayTime **参数解释**：  订阅延迟时间，即异常告警通知的延迟时间，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
     *
     * @return $this
     */
@@ -260,7 +260,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rtoDelay
-    *  rto延迟时间
+    *  **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
     *
     * @return int|null
     */
@@ -272,7 +272,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rtoDelay
     *
-    * @param int|null $rtoDelay rto延迟时间
+    * @param int|null $rtoDelay **参数解释**：  RTO（Recovery Time Objective，恢复时间目标）延迟时间，即容灾恢复时间目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
     *
     * @return $this
     */
@@ -284,7 +284,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rpoDelay
-    *  rpo延迟时间
+    *  **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
     *
     * @return int|null
     */
@@ -296,7 +296,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rpoDelay
     *
-    * @param int|null $rpoDelay rpo延迟时间
+    * @param int|null $rpoDelay **参数解释**：  RPO（Recovery Point Objective，恢复点目标）延迟时间，即容灾恢复点目标的延迟阈值，单位为秒。  **约束限制**：  不涉及。  **取值范围**：  1-3600。  **默认取值**：  0
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets alarmToUser
-    *  异常告警是否通知用户
+    *  **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
     *
     * @return bool|null
     */
@@ -320,7 +320,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alarmToUser
     *
-    * @param bool|null $alarmToUser 异常告警是否通知用户
+    * @param bool|null $alarmToUser **参数解释**：  异常告警是否通知用户。  **约束限制**：  不涉及。  **取值范围**：  - true：通知用户 - false：不通知用户  **默认取值**：  false
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptions
-    *  收件方式与信息体
+    *  **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\SubscriptionInfo[]|null
     */
@@ -344,7 +344,7 @@ class AlarmNotifyInfo implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptions
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\SubscriptionInfo[]|null $subscriptions 收件方式与信息体
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\SubscriptionInfo[]|null $subscriptions **参数解释**：  收件方式与信息体列表，用于配置异常告警的通知渠道，最多填写两个，详情请参见SubscriptionInfo对象定义。  **约束限制**：  - 最多填写两个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

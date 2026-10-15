@@ -26,6 +26,7 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     * columnMappedName  列映射后的名称
     * status  该列是否过滤
     * partition  该列是否partitionKey
+    * desensitizationAlgorithm  列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ColumnInfo implements ModelInterface, ArrayAccess
             'keyType' => 'string',
             'columnMappedName' => 'string',
             'status' => 'bool',
-            'partition' => 'bool'
+            'partition' => 'bool',
+            'desensitizationAlgorithm' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     * columnMappedName  列映射后的名称
     * status  该列是否过滤
     * partition  该列是否partitionKey
+    * desensitizationAlgorithm  列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ColumnInfo implements ModelInterface, ArrayAccess
         'keyType' => null,
         'columnMappedName' => null,
         'status' => null,
-        'partition' => null
+        'partition' => null,
+        'desensitizationAlgorithm' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     * columnMappedName  列映射后的名称
     * status  该列是否过滤
     * partition  该列是否partitionKey
+    * desensitizationAlgorithm  列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ColumnInfo implements ModelInterface, ArrayAccess
             'keyType' => 'key_type',
             'columnMappedName' => 'column_mapped_name',
             'status' => 'status',
-            'partition' => 'partition'
+            'partition' => 'partition',
+            'desensitizationAlgorithm' => 'desensitization_algorithm'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     * columnMappedName  列映射后的名称
     * status  该列是否过滤
     * partition  该列是否partitionKey
+    * desensitizationAlgorithm  列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ColumnInfo implements ModelInterface, ArrayAccess
             'keyType' => 'setKeyType',
             'columnMappedName' => 'setColumnMappedName',
             'status' => 'setStatus',
-            'partition' => 'setPartition'
+            'partition' => 'setPartition',
+            'desensitizationAlgorithm' => 'setDesensitizationAlgorithm'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     * columnMappedName  列映射后的名称
     * status  该列是否过滤
     * partition  该列是否partitionKey
+    * desensitizationAlgorithm  列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ColumnInfo implements ModelInterface, ArrayAccess
             'keyType' => 'getKeyType',
             'columnMappedName' => 'getColumnMappedName',
             'status' => 'getStatus',
-            'partition' => 'getPartition'
+            'partition' => 'getPartition',
+            'desensitizationAlgorithm' => 'getDesensitizationAlgorithm'
     ];
 
     /**
@@ -179,7 +189,36 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const DESENSITIZATION_ALGORITHM_NAME = 'name';
+    const DESENSITIZATION_ALGORITHM_PHONE = 'phone';
+    const DESENSITIZATION_ALGORITHM_IDENTITY_CARD = 'identity_card';
+    const DESENSITIZATION_ALGORITHM_BANK_CARD = 'bank_card';
+    const DESENSITIZATION_ALGORITHM_EMAIL = 'email';
+    const DESENSITIZATION_ALGORITHM_ADDRESS = 'address';
+    const DESENSITIZATION_ALGORITHM_DATE = 'date';
+    const DESENSITIZATION_ALGORITHM_NUMERIC = 'numeric';
+    const DESENSITIZATION_ALGORITHM_SECRET_CONTENT = 'secret_content';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDesensitizationAlgorithmAllowableValues()
+    {
+        return [
+            self::DESENSITIZATION_ALGORITHM_NAME,
+            self::DESENSITIZATION_ALGORITHM_PHONE,
+            self::DESENSITIZATION_ALGORITHM_IDENTITY_CARD,
+            self::DESENSITIZATION_ALGORITHM_BANK_CARD,
+            self::DESENSITIZATION_ALGORITHM_EMAIL,
+            self::DESENSITIZATION_ALGORITHM_ADDRESS,
+            self::DESENSITIZATION_ALGORITHM_DATE,
+            self::DESENSITIZATION_ALGORITHM_NUMERIC,
+            self::DESENSITIZATION_ALGORITHM_SECRET_CONTENT,
+        ];
+    }
 
 
     /**
@@ -203,6 +242,7 @@ class ColumnInfo implements ModelInterface, ArrayAccess
         $this->container['columnMappedName'] = isset($data['columnMappedName']) ? $data['columnMappedName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['partition'] = isset($data['partition']) ? $data['partition'] : null;
+        $this->container['desensitizationAlgorithm'] = isset($data['desensitizationAlgorithm']) ? $data['desensitizationAlgorithm'] : null;
     }
 
     /**
@@ -213,6 +253,14 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getDesensitizationAlgorithmAllowableValues();
+                if (!is_null($this->container['desensitizationAlgorithm']) && !in_array($this->container['desensitizationAlgorithm'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'desensitizationAlgorithm', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -368,6 +416,30 @@ class ColumnInfo implements ModelInterface, ArrayAccess
     public function setPartition($partition)
     {
         $this->container['partition'] = $partition;
+        return $this;
+    }
+
+    /**
+    * Gets desensitizationAlgorithm
+    *  列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
+    *
+    * @return string|null
+    */
+    public function getDesensitizationAlgorithm()
+    {
+        return $this->container['desensitizationAlgorithm'];
+    }
+
+    /**
+    * Sets desensitizationAlgorithm
+    *
+    * @param string|null $desensitizationAlgorithm 列的脱敏算法类型（主键和唯一键不支持）。取值： - NAME ：姓名中间遮盖。 - PHONE ：电话中间遮盖。 - IDENTITY_CARD ：证件号码中间遮盖。  - BANK_CARD ：银行卡号中间遮盖。 - EMAIL ：邮箱前缀首字母后遮盖。 - ADDRESS ：地址后缀遮盖。  - DATE ：仅保留年代日期替换为1月1日。  - NUMERIC ：数字变0。 - SECRET_CONTENT ：大段文本全替换。
+    *
+    * @return $this
+    */
+    public function setDesensitizationAlgorithm($desensitizationAlgorithm)
+    {
+        $this->container['desensitizationAlgorithm'] = $desensitizationAlgorithm;
         return $this;
     }
 

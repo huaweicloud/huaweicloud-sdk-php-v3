@@ -20,13 +20,13 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * item  检查项。
-    * result  检查结果
-    * failedReason  失败原因。
-    * data  加密的数据。
-    * rawErrorMsg  行错误信息。
-    * group  检查项分组
-    * failedSubJobs  失败的子任务信息。
+    * item  **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * result  **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
+    * failedReason  **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * data  **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * rawErrorMsg  **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * group  **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * failedSubJobs  **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * item  检查项。
-    * result  检查结果
-    * failedReason  失败原因。
-    * data  加密的数据。
-    * rawErrorMsg  行错误信息。
-    * group  检查项分组
-    * failedSubJobs  失败的子任务信息。
+    * item  **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * result  **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
+    * failedReason  **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * data  **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * rawErrorMsg  **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * group  **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * failedSubJobs  **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * item  检查项。
-    * result  检查结果
-    * failedReason  失败原因。
-    * data  加密的数据。
-    * rawErrorMsg  行错误信息。
-    * group  检查项分组
-    * failedSubJobs  失败的子任务信息。
+    * item  **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * result  **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
+    * failedReason  **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * data  **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * rawErrorMsg  **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * group  **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * failedSubJobs  **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * item  检查项。
-    * result  检查结果
-    * failedReason  失败原因。
-    * data  加密的数据。
-    * rawErrorMsg  行错误信息。
-    * group  检查项分组
-    * failedSubJobs  失败的子任务信息。
+    * item  **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * result  **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
+    * failedReason  **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * data  **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * rawErrorMsg  **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * group  **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * failedSubJobs  **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * item  检查项。
-    * result  检查结果
-    * failedReason  失败原因。
-    * data  加密的数据。
-    * rawErrorMsg  行错误信息。
-    * group  检查项分组
-    * failedSubJobs  失败的子任务信息。
+    * item  **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * result  **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
+    * failedReason  **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * data  **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * rawErrorMsg  **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * group  **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * failedSubJobs  **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -265,7 +265,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets item
-    *  检查项。
+    *  **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets item
     *
-    * @param string|null $item 检查项。
+    * @param string|null $item **参数解释**：  预检查的具体检查项名称，用于标识预检查中执行的具体检查项目。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  检查结果
+    *  **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 检查结果
+    * @param string|null $result **参数解释**：  预检查项的检查结果，表示该检查项是否通过。  **约束限制**：  不涉及。  **取值范围**：  - PASSED：通过 - ALARM：告警 - FAILED：失败  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedReason
-    *  失败原因。
+    *  **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets failedReason
     *
-    * @param string|null $failedReason 失败原因。
+    * @param string|null $failedReason **参数解释**：  预检查项的失败原因，当检查结果为FAILED或ALARM时返回的具体失败描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  加密的数据。
+    *  **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param string|null $data 加密的数据。
+    * @param string|null $data **参数解释**：  预检查项的加密数据，包含检查项的详细检测数据，以JSON格式加密返回。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets rawErrorMsg
-    *  行错误信息。
+    *  **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets rawErrorMsg
     *
-    * @param string|null $rawErrorMsg 行错误信息。
+    * @param string|null $rawErrorMsg **参数解释**：  原始错误信息，预检查过程中产生的原始错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  检查项分组
+    *  **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string|null $group 检查项分组
+    * @param string|null $group **参数解释**：  检查项分组，用于将预检查项按类别归类展示。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedSubJobs
-    *  失败的子任务信息。
+    *  **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\PrecheckFailSubJobVO[]|null
     */
@@ -421,7 +421,7 @@ class PrecheckResult implements ModelInterface, ArrayAccess
     /**
     * Sets failedSubJobs
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\PrecheckFailSubJobVO[]|null $failedSubJobs 失败的子任务信息。
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\PrecheckFailSubJobVO[]|null $failedSubJobs **参数解释**：  失败的子任务信息集合，包含预检查中失败的子任务详情，详情请参见PrecheckFailSubJobVO对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  标签列表
+    * tags  **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  标签列表
+    * tags  **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  标签列表
+    * tags  **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  标签列表
+    * tags  **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  标签列表
+    * tags  **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表
+    *  **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\BatchResourceTag[]|null
     */
@@ -187,7 +187,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\BatchResourceTag[]|null $tags 标签列表
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\BatchResourceTag[]|null $tags **参数解释**：  资源标签列表，包含该实例下所有标签的键值对信息。详情请参见BatchResourceTag。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

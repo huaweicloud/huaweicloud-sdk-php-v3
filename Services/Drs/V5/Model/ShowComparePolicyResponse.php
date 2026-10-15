@@ -29,6 +29,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
             'compareType' => 'string[]',
             'nextCompareTime' => 'string',
             'comparePolicy' => 'string',
-            'intervalHour' => 'int'
+            'intervalHour' => 'int',
+            'conflictStrategy' => 'string'
     ];
 
     /**
@@ -53,6 +55,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
         'compareType' => null,
         'nextCompareTime' => null,
         'comparePolicy' => null,
-        'intervalHour' => 'int32'
+        'intervalHour' => 'int32',
+        'conflictStrategy' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
             'compareType' => 'compare_type',
             'nextCompareTime' => 'next_compare_time',
             'comparePolicy' => 'compare_policy',
-            'intervalHour' => 'interval_hour'
+            'intervalHour' => 'interval_hour',
+            'conflictStrategy' => 'conflict_strategy'
     ];
 
     /**
@@ -122,6 +128,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
             'compareType' => 'setCompareType',
             'nextCompareTime' => 'setNextCompareTime',
             'comparePolicy' => 'setComparePolicy',
-            'intervalHour' => 'setIntervalHour'
+            'intervalHour' => 'setIntervalHour',
+            'conflictStrategy' => 'setConflictStrategy'
     ];
 
     /**
@@ -146,6 +154,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
             'compareType' => 'getCompareType',
             'nextCompareTime' => 'getNextCompareTime',
             'comparePolicy' => 'getComparePolicy',
-            'intervalHour' => 'getIntervalHour'
+            'intervalHour' => 'getIntervalHour',
+            'conflictStrategy' => 'getConflictStrategy'
     ];
 
     /**
@@ -243,6 +253,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
         $this->container['nextCompareTime'] = isset($data['nextCompareTime']) ? $data['nextCompareTime'] : null;
         $this->container['comparePolicy'] = isset($data['comparePolicy']) ? $data['comparePolicy'] : null;
         $this->container['intervalHour'] = isset($data['intervalHour']) ? $data['intervalHour'] : null;
+        $this->container['conflictStrategy'] = isset($data['conflictStrategy']) ? $data['conflictStrategy'] : null;
     }
 
     /**
@@ -464,6 +475,30 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     public function setIntervalHour($intervalHour)
     {
         $this->container['intervalHour'] = $intervalHour;
+        return $this;
+    }
+
+    /**
+    * Gets conflictStrategy
+    *  **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
+    *
+    * @return string|null
+    */
+    public function getConflictStrategy()
+    {
+        return $this->container['conflictStrategy'];
+    }
+
+    /**
+    * Sets conflictStrategy
+    *
+    * @param string|null $conflictStrategy **参数解释：** 冲突策略。 **约束限制：** 不涉及 **取值范围：** 不涉及 默认取值： 不涉及
+    *
+    * @return $this
+    */
+    public function setConflictStrategy($conflictStrategy)
+    {
+        $this->container['conflictStrategy'] = $conflictStrategy;
         return $this;
     }
 

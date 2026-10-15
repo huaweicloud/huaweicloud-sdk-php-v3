@@ -20,8 +20,8 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * endpoints  短信或者邮件列表
-    * protocol  收件方式，sms：短信,email：邮件
+    * endpoints  **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * protocol  **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * endpoints  短信或者邮件列表
-    * protocol  收件方式，sms：短信,email：邮件
+    * endpoints  **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * protocol  **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * endpoints  短信或者邮件列表
-    * protocol  收件方式，sms：短信,email：邮件
+    * endpoints  **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * protocol  **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * endpoints  短信或者邮件列表
-    * protocol  收件方式，sms：短信,email：邮件
+    * endpoints  **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * protocol  **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * endpoints  短信或者邮件列表
-    * protocol  收件方式，sms：短信,email：邮件
+    * endpoints  **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * protocol  **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpoints
-    *  短信或者邮件列表
+    *  **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string[]|null
     */
@@ -220,7 +220,7 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endpoints
     *
-    * @param string[]|null $endpoints 短信或者邮件列表
+    * @param string[]|null $endpoints **参数解释**：  手机号或者邮箱列表，用于接收异常告警通知的联系方式。  **约束限制**：  - 最多支持10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  收件方式，sms：短信,email：邮件
+    *  **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class SubscriptionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 收件方式，sms：短信,email：邮件
+    * @param string|null $protocol **参数解释**：  收件方式，指定异常告警的通知渠道。  **约束限制**：  不涉及。  **取值范围**：  - sms：短信 - email：邮件  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobs  批量更新数据库对象请求任务ID列表
+    * jobs  **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobs  批量更新数据库对象请求任务ID列表
+    * jobs  **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobs  批量更新数据库对象请求任务ID列表
+    * jobs  **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobs  批量更新数据库对象请求任务ID列表
+    * jobs  **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobs  批量更新数据库对象请求任务ID列表
+    * jobs  **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobs
-    *  批量更新数据库对象请求任务ID列表
+    *  **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\UpdateDatabaseObjectReq[]
     */
@@ -189,7 +189,7 @@ class BatchUpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\UpdateDatabaseObjectReq[] $jobs 批量更新数据库对象请求任务ID列表
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\UpdateDatabaseObjectReq[] $jobs **参数解释**：  批量更新数据库对象选择的任务信息列表，每个元素包含一个任务的对象选择配置。  **约束限制**：  - 建议批量调用数量不超过10个。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

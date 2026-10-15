@@ -20,10 +20,10 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkPoint  检查点
-    * delay  延迟
-    * gtidSet  gtid集合
-    * time  当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    * checkPoint  **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * delay  **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * gtidSet  **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * time  **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkPoint  检查点
-    * delay  延迟
-    * gtidSet  gtid集合
-    * time  当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    * checkPoint  **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * delay  **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * gtidSet  **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * time  **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkPoint  检查点
-    * delay  延迟
-    * gtidSet  gtid集合
-    * time  当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    * checkPoint  **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * delay  **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * gtidSet  **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * time  **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkPoint  检查点
-    * delay  延迟
-    * gtidSet  gtid集合
-    * time  当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    * checkPoint  **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * delay  **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * gtidSet  **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * time  **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkPoint  检查点
-    * delay  延迟
-    * gtidSet  gtid集合
-    * time  当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    * checkPoint  **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * delay  **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * gtidSet  **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * time  **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkPoint
-    *  检查点
+    *  **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkPoint
     *
-    * @param string|null $checkPoint 检查点
+    * @param string|null $checkPoint **参数解释**：  数据复制的检查点位置，标识已同步数据的Binlog位置。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets delay
-    *  延迟
+    *  **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
     /**
     * Sets delay
     *
-    * @param string|null $delay 延迟
+    * @param string|null $delay **参数解释**：  数据同步延迟时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets gtidSet
-    *  gtid集合
+    *  **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
     /**
     * Sets gtidSet
     *
-    * @param string|null $gtidSet gtid集合
+    * @param string|null $gtidSet **参数解释**：  全局事务ID集合（Global Transaction Identifier），用于标识已执行的事务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets time
-    *  当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    *  **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class RpoAndRtoInfo implements ModelInterface, ArrayAccess
     /**
     * Sets time
     *
-    * @param string|null $time 当前时间 ，格式为“yyyy-MM-dd HH:mm:ss”
+    * @param string|null $time **参数解释**：  RPO或RTO的统计时间点，格式为\"yyyy-MM-dd HH:mm:ss\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

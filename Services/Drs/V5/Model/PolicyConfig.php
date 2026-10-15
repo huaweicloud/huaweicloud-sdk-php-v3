@@ -20,16 +20,16 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * filterDdlPolicy  过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
-    * conflictPolicy  增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    * filterDdlPolicy  **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
+    * conflictPolicy  **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     * indexTrans  对象同步范围：是否同步普通索引。DRS将默认同步主键/唯一索引，普通索引是指除主键/唯一索引以外的其他类型索引。取值： - true：将会同步全部的索引。 - false：仅同步主键/唯一索引，普通索引不会同步。
     * ddlTrans  对象同步范围：同步增量阶段是否同步DDL。取值： - true：增量阶段同步DDL。 - false：增量阶段不同步DDL。
     * dataSyncTopologyType  数据同步拓扑。数据同步功能支持多种同步拓扑，您可以根据业务需求规划您的同步实例。参考链接。取值： - one2one：一对一。 - one2many：一对多。 - many2one：多对一。
-    * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
-    * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
-    * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
-    * dmlTypes  DML同步类型。
-    * isCreateTableWithIndex  索引与表结构是否同时建立。
+    * supportDdlInfo  **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
+    * syncTypePolicy  **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
+    * incrementReadMode  **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
+    * dmlTypes  **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isCreateTableWithIndex  **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * filterDdlPolicy  过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
-    * conflictPolicy  增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    * filterDdlPolicy  **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
+    * conflictPolicy  **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     * indexTrans  对象同步范围：是否同步普通索引。DRS将默认同步主键/唯一索引，普通索引是指除主键/唯一索引以外的其他类型索引。取值： - true：将会同步全部的索引。 - false：仅同步主键/唯一索引，普通索引不会同步。
     * ddlTrans  对象同步范围：同步增量阶段是否同步DDL。取值： - true：增量阶段同步DDL。 - false：增量阶段不同步DDL。
     * dataSyncTopologyType  数据同步拓扑。数据同步功能支持多种同步拓扑，您可以根据业务需求规划您的同步实例。参考链接。取值： - one2one：一对一。 - one2many：一对多。 - many2one：多对一。
-    * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
-    * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
-    * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
-    * dmlTypes  DML同步类型。
-    * isCreateTableWithIndex  索引与表结构是否同时建立。
+    * supportDdlInfo  **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
+    * syncTypePolicy  **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
+    * incrementReadMode  **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
+    * dmlTypes  **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isCreateTableWithIndex  **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * filterDdlPolicy  过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
-    * conflictPolicy  增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    * filterDdlPolicy  **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
+    * conflictPolicy  **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     * indexTrans  对象同步范围：是否同步普通索引。DRS将默认同步主键/唯一索引，普通索引是指除主键/唯一索引以外的其他类型索引。取值： - true：将会同步全部的索引。 - false：仅同步主键/唯一索引，普通索引不会同步。
     * ddlTrans  对象同步范围：同步增量阶段是否同步DDL。取值： - true：增量阶段同步DDL。 - false：增量阶段不同步DDL。
     * dataSyncTopologyType  数据同步拓扑。数据同步功能支持多种同步拓扑，您可以根据业务需求规划您的同步实例。参考链接。取值： - one2one：一对一。 - one2many：一对多。 - many2one：多对一。
-    * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
-    * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
-    * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
-    * dmlTypes  DML同步类型。
-    * isCreateTableWithIndex  索引与表结构是否同时建立。
+    * supportDdlInfo  **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
+    * syncTypePolicy  **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
+    * incrementReadMode  **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
+    * dmlTypes  **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isCreateTableWithIndex  **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * filterDdlPolicy  过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
-    * conflictPolicy  增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    * filterDdlPolicy  **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
+    * conflictPolicy  **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     * indexTrans  对象同步范围：是否同步普通索引。DRS将默认同步主键/唯一索引，普通索引是指除主键/唯一索引以外的其他类型索引。取值： - true：将会同步全部的索引。 - false：仅同步主键/唯一索引，普通索引不会同步。
     * ddlTrans  对象同步范围：同步增量阶段是否同步DDL。取值： - true：增量阶段同步DDL。 - false：增量阶段不同步DDL。
     * dataSyncTopologyType  数据同步拓扑。数据同步功能支持多种同步拓扑，您可以根据业务需求规划您的同步实例。参考链接。取值： - one2one：一对一。 - one2many：一对多。 - many2one：多对一。
-    * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
-    * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
-    * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
-    * dmlTypes  DML同步类型。
-    * isCreateTableWithIndex  索引与表结构是否同时建立。
+    * supportDdlInfo  **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
+    * syncTypePolicy  **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
+    * incrementReadMode  **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
+    * dmlTypes  **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isCreateTableWithIndex  **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * filterDdlPolicy  过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
-    * conflictPolicy  增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    * filterDdlPolicy  **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
+    * conflictPolicy  **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     * indexTrans  对象同步范围：是否同步普通索引。DRS将默认同步主键/唯一索引，普通索引是指除主键/唯一索引以外的其他类型索引。取值： - true：将会同步全部的索引。 - false：仅同步主键/唯一索引，普通索引不会同步。
     * ddlTrans  对象同步范围：同步增量阶段是否同步DDL。取值： - true：增量阶段同步DDL。 - false：增量阶段不同步DDL。
     * dataSyncTopologyType  数据同步拓扑。数据同步功能支持多种同步拓扑，您可以根据业务需求规划您的同步实例。参考链接。取值： - one2one：一对一。 - one2many：一对多。 - many2one：多对一。
-    * supportDdlInfo  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
-    * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
-    * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
-    * dmlTypes  DML同步类型。
-    * isCreateTableWithIndex  索引与表结构是否同时建立。
+    * supportDdlInfo  **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
+    * syncTypePolicy  **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
+    * incrementReadMode  **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
+    * dmlTypes  **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isCreateTableWithIndex  **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -379,7 +379,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets filterDdlPolicy
-    *  过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
+    *  **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -391,7 +391,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets filterDdlPolicy
     *
-    * @param string|null $filterDdlPolicy 过滤DDL策略。取值： - drop_database  场景区别： - 实时迁移场景：MySQL迁移可填\"\"，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填\"drop_database\"。
+    * @param string|null $filterDdlPolicy **参数解释**：  过滤DDL策略，指定增量同步阶段需要过滤的DDL操作类型。  **约束限制**：  - 实时迁移场景：MySQL迁移可填空，表示不过滤DROP DATABASE。 - 实时同步场景：MySQL同步只能填drop_database。  **取值范围**：  - drop_database：过滤DROP DATABASE操作  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets conflictPolicy
-    *  增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    *  **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -415,7 +415,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets conflictPolicy
     *
-    * @param string|null $conflictPolicy 增量阶段冲突策略。该冲突策略特指增量同步中的冲突处理策略,全量阶段的冲突默认忽略。取值： - ignore：忽略。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），DRS将忽略源库的冲突数据，并保留目标库中的冲突数据，继续进行后续同步。  - stop：报错。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），同步任务将失败并立即中止。可在同步日志中查看详细信息。  - overwrite：覆盖。当同步数据与目标库已有数据冲突时（主键/唯一键重复等），将覆盖原来的冲突数据。  场景区别： - 实时迁移场景：不支持。 - 实时同步场景：支持。
+    * @param string|null $conflictPolicy **参数解释**：  增量阶段冲突策略，指定当目标库已存在相同数据时的处理方式。该冲突策略特指增量同步中的冲突处理策略，全量阶段的冲突默认忽略。  **约束限制**：  - 实时迁移场景：不支持。 - 实时同步场景：支持。  **取值范围**：  - ignore：忽略，保留目标库中的冲突数据，继续进行后续同步 - stop：报错，同步任务将失败并立即中止 - overwrite：覆盖，用源库数据覆盖目标库已有数据  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -499,7 +499,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportDdlInfo
-    *  增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
+    *  **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -511,7 +511,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets supportDdlInfo
     *
-    * @param string|null $supportDdlInfo 增量支持的DDL。取值： - \"CREATE_TABLE,ADD_COLUMN,MODIFY_COLUMN,CHANGE_COLUMN,DROP_INDEX,ADD_INDEX,CREATE_INDEX,RENAME_INDEX\"。 - 含义解释： - CREATE_TABLE：创建表。 - ADD_COLUMN：加列。 - MODIFY_COLUMN：改列属性。 - CHANGE_COLUMN：改列属性。 - DROP_INDEX：删除索引。 - ADD_INDEX：加索引。 - CREATE_INDEX：创建索引。 - RENAME_INDEX：重命名索引。 - 使用提示： 1.一对一，一对多场景，如果业务上认为源和目标应该使用保持严格一致，那么高危类DDL也应该勾选并同步。 2.一对一，一对多场景，如果业务上确定某个高危DDL不应该发生，则可以不勾选同步高危类DDL，这样DRS将拦截过滤这个DDL，从而起到保护目标数据的作用，但需要知晓过滤DDL的附带问题是可能导致同步失败，例如过滤删列动作。 3.多对一数据聚合场景，最佳实践是推荐只选择同步加列DDL，其他大部分DDL同步都因目标表修改而导致其他任务失败/数据不一致的情况发生，常见情况有：a、同步truncate导致目标数据全部被清空； b、同步创建索引导致目标表被锁定； c、同步rename导致其他任务找不到目标表而失败；d、同步改列导致其他任务因数据类型不兼容而失败；
+    * @param string|null $supportDdlInfo **参数解释**：  增量支持的DDL，指定增量同步阶段允许同步的DDL操作类型。  **约束限制**：  不涉及。  **取值范围**：  - CREATE_TABLE：创建表 - ADD_COLUMN：加列 - MODIFY_COLUMN：改列属性 - CHANGE_COLUMN：改列属性 - DROP_INDEX：删除索引 - ADD_INDEX：加索引 - CREATE_INDEX：创建索引 - RENAME_INDEX：重命名索引  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -523,7 +523,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncTypePolicy
-    *  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
+    *  **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -535,7 +535,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets syncTypePolicy
     *
-    * @param string|null $syncTypePolicy 同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
+    * @param string|null $syncTypePolicy **参数解释**：  同步数据类型，指定增量同步阶段需要同步的数据类型范围。  **约束限制**：  不涉及。  **取值范围**：  - supportAllType：同步所有类型 - tableData：同步数据 - tableStructure：同步表结构 - constraintData：索引同步  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -547,7 +547,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets incrementReadMode
-    *  oracle-gausssdb增量读取方式：logminer，xstream
+    *  **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets incrementReadMode
     *
-    * @param string|null $incrementReadMode oracle-gausssdb增量读取方式：logminer，xstream
+    * @param string|null $incrementReadMode **参数解释**：  Oracle-GaussDB增量读取方式，指定Oracle同步到GaussDB时增量数据的读取模式。  **约束限制**：  不涉及。  **取值范围**：  - logminer：Logminer方式 - xstream：Xstream方式  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -571,7 +571,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets dmlTypes
-    *  DML同步类型。
+    *  **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -583,7 +583,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets dmlTypes
     *
-    * @param string|null $dmlTypes DML同步类型。
+    * @param string|null $dmlTypes **参数解释**：  DML同步类型，指定增量同步阶段需要同步的数据操作类型，包括插入、更新和删除操作。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCreateTableWithIndex
-    *  索引与表结构是否同时建立。
+    *  **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @return bool|null
     */
@@ -607,7 +607,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     /**
     * Sets isCreateTableWithIndex
     *
-    * @param bool|null $isCreateTableWithIndex 索引与表结构是否同时建立。
+    * @param bool|null $isCreateTableWithIndex **参数解释**：  索引与表结构是否同时建立，指定在同步过程中创建表时是否同时创建索引。  **约束限制**：  不涉及。  **取值范围**：  - true：索引与表结构同时建立 - false：索引与表结构不同时建立  **默认取值**：  不涉及
     *
     * @return $this
     */

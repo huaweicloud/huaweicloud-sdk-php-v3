@@ -20,9 +20,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
-    * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
+    * endpointType  **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
+    * endpointRole  **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     * endpoint  endpoint
     * cloud  cloud
     * vpc  vpc
@@ -46,9 +46,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
-    * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
+    * endpointType  **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
+    * endpointRole  **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     * endpoint  endpoint
     * cloud  cloud
     * vpc  vpc
@@ -93,9 +93,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
-    * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
+    * endpointType  **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
+    * endpointRole  **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     * endpoint  endpoint
     * cloud  cloud
     * vpc  vpc
@@ -119,9 +119,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
-    * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
+    * endpointType  **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
+    * endpointRole  **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     * endpoint  endpoint
     * cloud  cloud
     * vpc  vpc
@@ -145,9 +145,9 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
-    * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
-    * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
+    * endpointType  **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
+    * endpointRole  **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     * endpoint  endpoint
     * cloud  cloud
     * vpc  vpc
@@ -353,7 +353,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
+    *  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -365,7 +365,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string $dbType 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
+    * @param string $dbType **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - oracle：Oracle - gaussdbv5：GaussDB分布式版 - redis：Redis - rediscluster：Redis集群版 - gaussredis：GeminiDB Redis - mysql：MySQL  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointType
-    *  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    *  **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -389,7 +389,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endpointType
     *
-    * @param string $endpointType 数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
+    * @param string $endpointType **参数解释**：  数据库实例类型，标识数据库的部署方式。  **约束限制**：  不涉及。  **取值范围**：  - offline：自建数据库 - ecs：华为云ECS自建数据库 - cloud：华为云数据库  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -401,7 +401,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets endpointRole
-    *  数据库实例角色。取值： - so：源库。 - ta：目标库。
+    *  **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -413,7 +413,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets endpointRole
     *
-    * @param string $endpointRole 数据库实例角色。取值： - so：源库。 - ta：目标库。
+    * @param string $endpointRole **参数解释**：  数据库实例角色，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  不涉及
     *
     * @return $this
     */

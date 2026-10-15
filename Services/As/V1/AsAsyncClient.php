@@ -1350,7 +1350,7 @@ class AsAsyncClient extends Client
     /**
      * 创建标签
      *
-     * 创建或删除指定资源的标签。每个伸缩组最多添加10个标签。
+     * 创建或删除指定资源的标签。每个伸缩组或伸缩配置最多添加10个标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1915,7 +1915,7 @@ class AsAsyncClient extends Client
     /**
      * 删除标签
      *
-     * 创建或删除指定资源的标签。每个伸缩组最多添加10个标签。
+     * 创建或删除指定资源的标签。每个伸缩组或伸缩配置最多添加10个标签。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

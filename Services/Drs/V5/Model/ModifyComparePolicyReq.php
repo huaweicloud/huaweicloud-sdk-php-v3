@@ -24,9 +24,10 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     * period  对比策略周期。 - 每周对比：格式示例：“* * 1,3,5” ，其中“1,3,5”对应星期一、星期三、星期五，根据实际填写。 - 每天对比：固定填写“* * 1,2,3,4,5,6,7”。 - 按小时对比：固定填写“* * 1,2,3,4,5,6,7”。
     * beginTime  对比策略生效开始时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：00:00:00，表示UTC时间的00:00:00，北京时间（UTC+08:00）的08:00:00。
     * endTime  对比策略生效结束时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：04:00:00，表示UTC时间的04:00:00，北京时间（UTC+08:00）的12:00:00。
-    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     * comparePolicy  对比策略： - normal：普通对比。 - manyToOne：多对一对比。
     * intervalHour  间隔时间，按小时对比时填写，表示每隔多久执行一次对比，单位是小时。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
             'endTime' => 'string',
             'compareType' => 'string[]',
             'comparePolicy' => 'string',
-            'intervalHour' => 'int'
+            'intervalHour' => 'int',
+            'conflictStrategy' => 'string'
     ];
 
     /**
@@ -46,9 +48,10 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     * period  对比策略周期。 - 每周对比：格式示例：“* * 1,3,5” ，其中“1,3,5”对应星期一、星期三、星期五，根据实际填写。 - 每天对比：固定填写“* * 1,2,3,4,5,6,7”。 - 按小时对比：固定填写“* * 1,2,3,4,5,6,7”。
     * beginTime  对比策略生效开始时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：00:00:00，表示UTC时间的00:00:00，北京时间（UTC+08:00）的08:00:00。
     * endTime  对比策略生效结束时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：04:00:00，表示UTC时间的04:00:00，北京时间（UTC+08:00）的12:00:00。
-    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     * comparePolicy  对比策略： - normal：普通对比。 - manyToOne：多对一对比。
     * intervalHour  间隔时间，按小时对比时填写，表示每隔多久执行一次对比，单位是小时。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
         'endTime' => null,
         'compareType' => null,
         'comparePolicy' => null,
-        'intervalHour' => 'int32'
+        'intervalHour' => 'int32',
+        'conflictStrategy' => null
     ];
 
     /**
@@ -89,9 +93,10 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     * period  对比策略周期。 - 每周对比：格式示例：“* * 1,3,5” ，其中“1,3,5”对应星期一、星期三、星期五，根据实际填写。 - 每天对比：固定填写“* * 1,2,3,4,5,6,7”。 - 按小时对比：固定填写“* * 1,2,3,4,5,6,7”。
     * beginTime  对比策略生效开始时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：00:00:00，表示UTC时间的00:00:00，北京时间（UTC+08:00）的08:00:00。
     * endTime  对比策略生效结束时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：04:00:00，表示UTC时间的04:00:00，北京时间（UTC+08:00）的12:00:00。
-    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     * comparePolicy  对比策略： - normal：普通对比。 - manyToOne：多对一对比。
     * intervalHour  间隔时间，按小时对比时填写，表示每隔多久执行一次对比，单位是小时。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
             'endTime' => 'end_time',
             'compareType' => 'compare_type',
             'comparePolicy' => 'compare_policy',
-            'intervalHour' => 'interval_hour'
+            'intervalHour' => 'interval_hour',
+            'conflictStrategy' => 'conflict_strategy'
     ];
 
     /**
@@ -111,9 +117,10 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     * period  对比策略周期。 - 每周对比：格式示例：“* * 1,3,5” ，其中“1,3,5”对应星期一、星期三、星期五，根据实际填写。 - 每天对比：固定填写“* * 1,2,3,4,5,6,7”。 - 按小时对比：固定填写“* * 1,2,3,4,5,6,7”。
     * beginTime  对比策略生效开始时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：00:00:00，表示UTC时间的00:00:00，北京时间（UTC+08:00）的08:00:00。
     * endTime  对比策略生效结束时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：04:00:00，表示UTC时间的04:00:00，北京时间（UTC+08:00）的12:00:00。
-    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     * comparePolicy  对比策略： - normal：普通对比。 - manyToOne：多对一对比。
     * intervalHour  间隔时间，按小时对比时填写，表示每隔多久执行一次对比，单位是小时。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
             'endTime' => 'setEndTime',
             'compareType' => 'setCompareType',
             'comparePolicy' => 'setComparePolicy',
-            'intervalHour' => 'setIntervalHour'
+            'intervalHour' => 'setIntervalHour',
+            'conflictStrategy' => 'setConflictStrategy'
     ];
 
     /**
@@ -133,9 +141,10 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     * period  对比策略周期。 - 每周对比：格式示例：“* * 1,3,5” ，其中“1,3,5”对应星期一、星期三、星期五，根据实际填写。 - 每天对比：固定填写“* * 1,2,3,4,5,6,7”。 - 按小时对比：固定填写“* * 1,2,3,4,5,6,7”。
     * beginTime  对比策略生效开始时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：00:00:00，表示UTC时间的00:00:00，北京时间（UTC+08:00）的08:00:00。
     * endTime  对比策略生效结束时间，UTC时间，24小时制，时间格式HH:mm:ss，例如：04:00:00，表示UTC时间的04:00:00，北京时间（UTC+08:00）的12:00:00。
-    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    * compareType  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     * comparePolicy  对比策略： - normal：普通对比。 - manyToOne：多对一对比。
     * intervalHour  间隔时间，按小时对比时填写，表示每隔多久执行一次对比，单位是小时。
+    * conflictStrategy  **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
             'endTime' => 'getEndTime',
             'compareType' => 'getCompareType',
             'comparePolicy' => 'getComparePolicy',
-            'intervalHour' => 'getIntervalHour'
+            'intervalHour' => 'getIntervalHour',
+            'conflictStrategy' => 'getConflictStrategy'
     ];
 
     /**
@@ -191,6 +201,8 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     }
     const COMPARE_POLICY_NORMAL = 'normal';
     const COMPARE_POLICY_MANY_TO_ONE = 'manyToOne';
+    const CONFLICT_STRATEGY_COVER = 'cover';
+    const CONFLICT_STRATEGY_IGNORE = 'ignore';
     
 
     /**
@@ -203,6 +215,19 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
         return [
             self::COMPARE_POLICY_NORMAL,
             self::COMPARE_POLICY_MANY_TO_ONE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getConflictStrategyAllowableValues()
+    {
+        return [
+            self::CONFLICT_STRATEGY_COVER,
+            self::CONFLICT_STRATEGY_IGNORE,
         ];
     }
 
@@ -229,6 +254,7 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
         $this->container['compareType'] = isset($data['compareType']) ? $data['compareType'] : null;
         $this->container['comparePolicy'] = isset($data['comparePolicy']) ? $data['comparePolicy'] : null;
         $this->container['intervalHour'] = isset($data['intervalHour']) ? $data['intervalHour'] : null;
+        $this->container['conflictStrategy'] = isset($data['conflictStrategy']) ? $data['conflictStrategy'] : null;
     }
 
     /**
@@ -246,6 +272,14 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['comparePolicy']) && !in_array($this->container['comparePolicy'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'comparePolicy', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getConflictStrategyAllowableValues();
+                if (!is_null($this->container['conflictStrategy']) && !in_array($this->container['conflictStrategy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'conflictStrategy', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -362,7 +396,7 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets compareType
-    *  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    *  对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     *
     * @return string[]|null
     */
@@ -374,7 +408,7 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     /**
     * Sets compareType
     *
-    * @param string[]|null $compareType 对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
+    * @param string[]|null $compareType 对比类型列表： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。 - contents: 内容对比。
     *
     * @return $this
     */
@@ -429,6 +463,30 @@ class ModifyComparePolicyReq implements ModelInterface, ArrayAccess
     public function setIntervalHour($intervalHour)
     {
         $this->container['intervalHour'] = $intervalHour;
+        return $this;
+    }
+
+    /**
+    * Gets conflictStrategy
+    *  **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getConflictStrategy()
+    {
+        return $this->container['conflictStrategy'];
+    }
+
+    /**
+    * Sets conflictStrategy
+    *
+    * @param string|null $conflictStrategy **参数解释：** 冲突策略。 **约束限制：** 对存在正在执行中的对比任务时的周期性对比策略 支持链路范围：MySQL-MySQL、MySQL-TaurusDB迁移、MySQL-MySQL同步，MySQL-GaussDB集中式，GaussDB分布式-GaussDB集中式，GaussDB集中式-MySQL，GaussDBV1-GaussDB集中式，GaussDB集中式-GaussDBV1，MySQL-MySQL灾备，GaussDB集中式-GaussDB集中式，OpenGauss-GaussDB分布式，OpenGauss-GaussDB集中式，GaussDB集中式-Oracle，Oracle-GaussDB集中式，GaussDB分布式-GaussDB分布式，GaussDB分布式-Oracle，Oracle-GaussDB分布式，MySQL-TaurusDB，TaurusDB-TaurusDB，TaurusDB-MySQL，GaussDB集中式-GaussDB透明多写，GaussDB分布式-GaussDB透明多写，GaussDB透明多写-GaussDB透明多写，GaussDB透明多写-GaussDB分布式，GaussDB透明多写-GaussDB集中式，Oracle-GaussDB透明多写，GaussDB透明多写-Oracle，DB2-GaussDB分布式，DB2-GaussDB集中式，GaussDB分布式-DB2，GaussDB集中式-DB2 **取值范围：** cover: 覆盖表示取消正在执行的任务，开始新对比 ignore：忽略表示忽略本次周期性对比 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setConflictStrategy($conflictStrategy)
+    {
+        $this->container['conflictStrategy'] = $conflictStrategy;
         return $this;
     }
 

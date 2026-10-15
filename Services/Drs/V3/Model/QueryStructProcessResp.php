@@ -24,6 +24,7 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息
     * structProcess  structProcess
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'errorCode' => 'string',
             'errorMessage' => 'string',
-            'structProcess' => '\HuaweiCloud\SDK\Drs\V3\Model\StructProcessResp'
+            'structProcess' => '\HuaweiCloud\SDK\Drs\V3\Model\StructProcessResp',
+            'databaseInfo' => 'object'
     ];
 
     /**
@@ -40,6 +42,7 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息
     * structProcess  structProcess
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
         'jobId' => null,
         'errorCode' => null,
         'errorMessage' => null,
-        'structProcess' => null
+        'structProcess' => null,
+        'databaseInfo' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息
     * structProcess  structProcess
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'errorCode' => 'error_code',
             'errorMessage' => 'error_message',
-            'structProcess' => 'struct_process'
+            'structProcess' => 'struct_process',
+            'databaseInfo' => 'database_info'
     ];
 
     /**
@@ -93,6 +99,7 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息
     * structProcess  structProcess
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'errorCode' => 'setErrorCode',
             'errorMessage' => 'setErrorMessage',
-            'structProcess' => 'setStructProcess'
+            'structProcess' => 'setStructProcess',
+            'databaseInfo' => 'setDatabaseInfo'
     ];
 
     /**
@@ -109,6 +117,7 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
     * errorCode  错误码
     * errorMessage  错误信息
     * structProcess  structProcess
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'errorCode' => 'getErrorCode',
             'errorMessage' => 'getErrorMessage',
-            'structProcess' => 'getStructProcess'
+            'structProcess' => 'getStructProcess',
+            'databaseInfo' => 'getDatabaseInfo'
     ];
 
     /**
@@ -181,6 +191,7 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
         $this->container['structProcess'] = isset($data['structProcess']) ? $data['structProcess'] : null;
+        $this->container['databaseInfo'] = isset($data['databaseInfo']) ? $data['databaseInfo'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class QueryStructProcessResp implements ModelInterface, ArrayAccess
     public function setStructProcess($structProcess)
     {
         $this->container['structProcess'] = $structProcess;
+        return $this;
+    }
+
+    /**
+    * Gets databaseInfo
+    *  灾备数据库信息。
+    *
+    * @return object|null
+    */
+    public function getDatabaseInfo()
+    {
+        return $this->container['databaseInfo'];
+    }
+
+    /**
+    * Sets databaseInfo
+    *
+    * @param object|null $databaseInfo 灾备数据库信息。
+    *
+    * @return $this
+    */
+    public function setDatabaseInfo($databaseInfo)
+    {
+        $this->container['databaseInfo'] = $databaseInfo;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class StartJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务id
-    * status  状态。
+    * id  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     * errorCode  错误码。
     * errorMsg  错误信息。
     *
@@ -36,8 +36,8 @@ class StartJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务id
-    * status  状态。
+    * id  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     * errorCode  错误码。
     * errorMsg  错误信息。
     *
@@ -73,8 +73,8 @@ class StartJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务id
-    * status  状态。
+    * id  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     * errorCode  错误码。
     * errorMsg  错误信息。
     *
@@ -89,8 +89,8 @@ class StartJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务id
-    * status  状态。
+    * id  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     * errorCode  错误码。
     * errorMsg  错误信息。
     *
@@ -105,8 +105,8 @@ class StartJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务id
-    * status  状态。
+    * id  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     * errorCode  错误码。
     * errorMsg  错误信息。
     *
@@ -233,7 +233,7 @@ class StartJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务id
+    *  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class StartJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 任务id
+    * @param string $id **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class StartJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态。
+    *  **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -269,7 +269,7 @@ class StartJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态。
+    * @param string|null $status **参数解释**：  启动任务的操作状态，表示批量启动任务中单个任务的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - success：启动成功 - failed：启动失败  **默认取值**：  不涉及
     *
     * @return $this
     */

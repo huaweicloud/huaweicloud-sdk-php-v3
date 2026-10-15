@@ -21,8 +21,8 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * begin  开始限速时间, 此时间为UTC时间，开始时间为整时，若有分钟，则会忽略，格式为hh:mm，小时数为两位，例如：01:00。
-    * end  结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
-    * speed  限速，取值范围为1~9999 ,单位为MB/s
+    * end  结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
+    * speed  限速，取值范围为1~9999，单位为MB/s。
     * isUtc  是否为UTC时间
     *
     * @var string[]
@@ -37,8 +37,8 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * begin  开始限速时间, 此时间为UTC时间，开始时间为整时，若有分钟，则会忽略，格式为hh:mm，小时数为两位，例如：01:00。
-    * end  结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
-    * speed  限速，取值范围为1~9999 ,单位为MB/s
+    * end  结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
+    * speed  限速，取值范围为1~9999，单位为MB/s。
     * isUtc  是否为UTC时间
     *
     * @var string[]
@@ -74,8 +74,8 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * begin  开始限速时间, 此时间为UTC时间，开始时间为整时，若有分钟，则会忽略，格式为hh:mm，小时数为两位，例如：01:00。
-    * end  结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
-    * speed  限速，取值范围为1~9999 ,单位为MB/s
+    * end  结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
+    * speed  限速，取值范围为1~9999，单位为MB/s。
     * isUtc  是否为UTC时间
     *
     * @var string[]
@@ -90,8 +90,8 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * begin  开始限速时间, 此时间为UTC时间，开始时间为整时，若有分钟，则会忽略，格式为hh:mm，小时数为两位，例如：01:00。
-    * end  结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
-    * speed  限速，取值范围为1~9999 ,单位为MB/s
+    * end  结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
+    * speed  限速，取值范围为1~9999，单位为MB/s。
     * isUtc  是否为UTC时间
     *
     * @var string[]
@@ -106,8 +106,8 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * begin  开始限速时间, 此时间为UTC时间，开始时间为整时，若有分钟，则会忽略，格式为hh:mm，小时数为两位，例如：01:00。
-    * end  结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
-    * speed  限速，取值范围为1~9999 ,单位为MB/s
+    * end  结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
+    * speed  限速，取值范围为1~9999，单位为MB/s。
     * isUtc  是否为UTC时间
     *
     * @var string[]
@@ -240,7 +240,7 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets end
-    *  结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
+    *  结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     /**
     * Sets end
     *
-    * @param string $end 结束时间,此时间为UTC时间,输入必须为59分结尾，格式为hh:mm，小时数为两位，例如：05:59。
+    * @param string $end 结束时间，此时间为UTC时间，输入必须为59分结尾，格式为hh:mm，例如：15:59。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets speed
-    *  限速，取值范围为1~9999 ,单位为MB/s
+    *  限速，取值范围为1~9999，单位为MB/s。
     *
     * @return string
     */
@@ -276,7 +276,7 @@ class SpeedLimitInfo implements ModelInterface, ArrayAccess
     /**
     * Sets speed
     *
-    * @param string $speed 限速，取值范围为1~9999 ,单位为MB/s
+    * @param string $speed 限速，取值范围为1~9999，单位为MB/s。
     *
     * @return $this
     */

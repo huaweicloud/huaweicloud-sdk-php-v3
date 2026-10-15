@@ -27,6 +27,7 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'string[]',
             'epId' => 'string[]',
             'projectId' => 'string[]',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'groupId' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
         'regionId' => null,
         'epId' => null,
         'projectId' => null,
-        'tags' => null
+        'tags' => null,
+        'groupId' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'epId' => 'ep_id',
             'projectId' => 'project_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'groupId' => 'group_id'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'epId' => 'setEpId',
             'projectId' => 'setProjectId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'groupId' => 'setGroupId'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * groupId  资源组ID
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'epId' => 'getEpId',
             'projectId' => 'getProjectId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'groupId' => 'getGroupId'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['epId'] = isset($data['epId']) ? $data['epId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
     }
 
     /**
@@ -235,6 +246,15 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['name']) && !preg_match("/[^']+/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /[^']+/.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) > 40)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be smaller than or equal to 40.";
+            }
+            if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['groupId']) && !preg_match("/[\\w-]+/", $this->container['groupId'])) {
+                $invalidProperties[] = "invalid value for 'groupId', must be conform to the pattern /[\\w-]+/.";
             }
         return $invalidProperties;
     }
@@ -415,6 +435,30 @@ class CountAllResourcesRequest implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets groupId
+    *  资源组ID
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 资源组ID
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
         return $this;
     }
 

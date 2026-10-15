@@ -995,7 +995,7 @@ class RcClient extends Client
     /**
      * 列举资源概要
      *
-     * 查询当前帐号的资源概览，需要当前用户有rc::listResourceSummary权限。
+     * 查询当前帐号的资源概览，需要当前用户有resourcecenter::listResourceSummary权限。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1120,6 +1120,9 @@ class RcClient extends Client
         }
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $queryParams['group_id'] = $localVarParams['groupId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

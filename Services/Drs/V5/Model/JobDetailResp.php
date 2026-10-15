@@ -20,14 +20,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务ID。
-    * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * createTime  任务创建时间。
-    * totalCount  列表中的项目总数，与分页无关。
-    * masterJobId  多任务主节点的任务ID。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
+    * createTime  **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * masterJobId  **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * baseInfo  baseInfo
-    * sourceEndpoint  任务源数据库信息体。
-    * targetEndpoint  任务目标数据库信息体。
+    * sourceEndpoint  **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * targetEndpoint  **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * alarmNotify  alarmNotify
     * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
@@ -36,26 +36,27 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * tuningParams  tuningParams
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
-    * logs  日志查询结果信息体。
-    * networkResults  网络打通测试结果信息体。
+    * logs  **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * networkResults  **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * precheckResult  precheckResult
     * progressInfo  progressInfo
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
     * supportImportFileResp  supportImportFileResp
-    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
-    * taskVersion  任务版本。
+    * instanceFeatures  **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * taskVersion  **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * connectionManagement  connectionManagement
-    * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
-    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
-    * diagnoses  一键诊断结果。
+    * publicIpList  **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * bindPublicIpState  **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
+    * children  **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * isWritable  **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
+    * diagnoses  **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
-    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    * repairExportStatus  **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
+    * jobKernelDirection  **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
+    * syncMode  同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
     *
     * @var string[]
     */
@@ -95,19 +96,20 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'repairProgressInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\JobDetailRespRepairProgressInfo',
             'repairDetailInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\QueryRepairDetailResp',
             'repairExportStatus' => 'string',
-            'jobKernelDirection' => 'string'
+            'jobKernelDirection' => 'string',
+            'syncMode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务ID。
-    * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * createTime  任务创建时间。
-    * totalCount  列表中的项目总数，与分页无关。
-    * masterJobId  多任务主节点的任务ID。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
+    * createTime  **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * masterJobId  **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * baseInfo  baseInfo
-    * sourceEndpoint  任务源数据库信息体。
-    * targetEndpoint  任务目标数据库信息体。
+    * sourceEndpoint  **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * targetEndpoint  **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * alarmNotify  alarmNotify
     * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
@@ -116,26 +118,27 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * tuningParams  tuningParams
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
-    * logs  日志查询结果信息体。
-    * networkResults  网络打通测试结果信息体。
+    * logs  **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * networkResults  **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * precheckResult  precheckResult
     * progressInfo  progressInfo
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
     * supportImportFileResp  supportImportFileResp
-    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
-    * taskVersion  任务版本。
+    * instanceFeatures  **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * taskVersion  **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * connectionManagement  connectionManagement
-    * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
-    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
-    * diagnoses  一键诊断结果。
+    * publicIpList  **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * bindPublicIpState  **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
+    * children  **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * isWritable  **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
+    * diagnoses  **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
-    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    * repairExportStatus  **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
+    * jobKernelDirection  **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
+    * syncMode  同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
     *
     * @var string[]
     */
@@ -175,7 +178,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'repairProgressInfo' => null,
         'repairDetailInfo' => null,
         'repairExportStatus' => null,
-        'jobKernelDirection' => null
+        'jobKernelDirection' => null,
+        'syncMode' => null
     ];
 
     /**
@@ -201,14 +205,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务ID。
-    * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * createTime  任务创建时间。
-    * totalCount  列表中的项目总数，与分页无关。
-    * masterJobId  多任务主节点的任务ID。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
+    * createTime  **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * masterJobId  **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * baseInfo  baseInfo
-    * sourceEndpoint  任务源数据库信息体。
-    * targetEndpoint  任务目标数据库信息体。
+    * sourceEndpoint  **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * targetEndpoint  **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * alarmNotify  alarmNotify
     * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
@@ -217,26 +221,27 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * tuningParams  tuningParams
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
-    * logs  日志查询结果信息体。
-    * networkResults  网络打通测试结果信息体。
+    * logs  **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * networkResults  **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * precheckResult  precheckResult
     * progressInfo  progressInfo
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
     * supportImportFileResp  supportImportFileResp
-    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
-    * taskVersion  任务版本。
+    * instanceFeatures  **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * taskVersion  **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * connectionManagement  connectionManagement
-    * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
-    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
-    * diagnoses  一键诊断结果。
+    * publicIpList  **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * bindPublicIpState  **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
+    * children  **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * isWritable  **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
+    * diagnoses  **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
-    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    * repairExportStatus  **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
+    * jobKernelDirection  **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
+    * syncMode  同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
     *
     * @var string[]
     */
@@ -276,19 +281,20 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'repairProgressInfo' => 'repair_progress_info',
             'repairDetailInfo' => 'repair_detail_info',
             'repairExportStatus' => 'repair_export_status',
-            'jobKernelDirection' => 'job_kernel_direction'
+            'jobKernelDirection' => 'job_kernel_direction',
+            'syncMode' => 'sync_mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务ID。
-    * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * createTime  任务创建时间。
-    * totalCount  列表中的项目总数，与分页无关。
-    * masterJobId  多任务主节点的任务ID。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
+    * createTime  **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * masterJobId  **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * baseInfo  baseInfo
-    * sourceEndpoint  任务源数据库信息体。
-    * targetEndpoint  任务目标数据库信息体。
+    * sourceEndpoint  **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * targetEndpoint  **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * alarmNotify  alarmNotify
     * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
@@ -297,26 +303,27 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * tuningParams  tuningParams
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
-    * logs  日志查询结果信息体。
-    * networkResults  网络打通测试结果信息体。
+    * logs  **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * networkResults  **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * precheckResult  precheckResult
     * progressInfo  progressInfo
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
     * supportImportFileResp  supportImportFileResp
-    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
-    * taskVersion  任务版本。
+    * instanceFeatures  **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * taskVersion  **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * connectionManagement  connectionManagement
-    * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
-    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
-    * diagnoses  一键诊断结果。
+    * publicIpList  **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * bindPublicIpState  **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
+    * children  **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * isWritable  **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
+    * diagnoses  **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
-    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    * repairExportStatus  **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
+    * jobKernelDirection  **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
+    * syncMode  同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
     *
     * @var string[]
     */
@@ -356,19 +363,20 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'repairProgressInfo' => 'setRepairProgressInfo',
             'repairDetailInfo' => 'setRepairDetailInfo',
             'repairExportStatus' => 'setRepairExportStatus',
-            'jobKernelDirection' => 'setJobKernelDirection'
+            'jobKernelDirection' => 'setJobKernelDirection',
+            'syncMode' => 'setSyncMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务ID。
-    * status  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
-    * createTime  任务创建时间。
-    * totalCount  列表中的项目总数，与分页无关。
-    * masterJobId  多任务主节点的任务ID。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
+    * createTime  **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * masterJobId  **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * baseInfo  baseInfo
-    * sourceEndpoint  任务源数据库信息体。
-    * targetEndpoint  任务目标数据库信息体。
+    * sourceEndpoint  **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * targetEndpoint  **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * alarmNotify  alarmNotify
     * speedLimit  限速信息体。 - 限速：自定义的最大迁移速度，迁移过程中的迁移速度将不会超过该速度。  - 不限速：对迁移速度不进行限制，通常会最大化使用源数据库的出口带宽。该流速模式同时会对源数据库造成读消耗，消耗取决于源数据库的出口带宽。比如：源数据库的出口带宽为100MB/s，假设高速模式使用了80%带宽，则迁移对源数据库将造成80MB/s的读操作IO消耗。
     * userMigration  userMigration
@@ -377,26 +385,27 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * tuningParams  tuningParams
     * periodOrder  periodOrder
     * nodeInfo  nodeInfo
-    * logs  日志查询结果信息体。
-    * networkResults  网络打通测试结果信息体。
+    * logs  **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * networkResults  **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * precheckResult  precheckResult
     * progressInfo  progressInfo
     * migrationObjectProgressInfo  migrationObjectProgressInfo
     * metrics  metrics
     * compareResult  compareResult
     * supportImportFileResp  supportImportFileResp
-    * instanceFeatures  由开关和版本共同控制的任务级别的功能列表。
-    * taskVersion  任务版本。
+    * instanceFeatures  **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * taskVersion  **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * connectionManagement  connectionManagement
-    * publicIpList  指定公网IP的信息
-    * bindPublicIpState  是否成功绑定公网IP 取值：SUCCESS，FAILED
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
-    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
-    * diagnoses  一键诊断结果。
+    * publicIpList  **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * bindPublicIpState  **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
+    * children  **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
+    * isWritable  **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
+    * diagnoses  **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     * repairProgressInfo  repairProgressInfo
     * repairDetailInfo  repairDetailInfo
-    * repairExportStatus  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
-    * jobKernelDirection  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    * repairExportStatus  **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
+    * jobKernelDirection  **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
+    * syncMode  同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
     *
     * @var string[]
     */
@@ -436,7 +445,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'repairProgressInfo' => 'getRepairProgressInfo',
             'repairDetailInfo' => 'getRepairDetailInfo',
             'repairExportStatus' => 'getRepairExportStatus',
-            'jobKernelDirection' => 'getJobKernelDirection'
+            'jobKernelDirection' => 'getJobKernelDirection',
+            'syncMode' => 'getSyncMode'
     ];
 
     /**
@@ -512,6 +522,11 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     const IS_WRITABLE_SUCCESS = 'success';
     const JOB_KERNEL_DIRECTION_UP = 'up';
     const JOB_KERNEL_DIRECTION_DOWN = 'down';
+    const SYNC_MODE_DB_LEVEL = 'DB_LEVEL';
+    const SYNC_MODE_SCHEMA_LEVEL = 'SCHEMA_LEVEL';
+    const SYNC_MODE_TABLE_LEVEL = 'TABLE_LEVEL';
+    const SYNC_MODE_FILE_IMPORT = 'FILE_IMPORT';
+    const SYNC_MODE_INSTANCE_LEVEL = 'INSTANCE_LEVEL';
     
 
     /**
@@ -580,6 +595,22 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSyncModeAllowableValues()
+    {
+        return [
+            self::SYNC_MODE_DB_LEVEL,
+            self::SYNC_MODE_SCHEMA_LEVEL,
+            self::SYNC_MODE_TABLE_LEVEL,
+            self::SYNC_MODE_FILE_IMPORT,
+            self::SYNC_MODE_INSTANCE_LEVEL,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -632,6 +663,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['repairDetailInfo'] = isset($data['repairDetailInfo']) ? $data['repairDetailInfo'] : null;
         $this->container['repairExportStatus'] = isset($data['repairExportStatus']) ? $data['repairExportStatus'] : null;
         $this->container['jobKernelDirection'] = isset($data['jobKernelDirection']) ? $data['jobKernelDirection'] : null;
+        $this->container['syncMode'] = isset($data['syncMode']) ? $data['syncMode'] : null;
     }
 
     /**
@@ -666,6 +698,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getSyncModeAllowableValues();
+                if (!is_null($this->container['syncMode']) && !in_array($this->container['syncMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'syncMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -682,7 +722,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID。
+    *  **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -694,7 +734,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务ID。
+    * @param string|null $id **参数解释**：  任务ID，用于唯一标识一个数据复制任务。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -706,7 +746,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
+    *  **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -718,7 +758,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 任务状态。 - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败
+    * @param string|null $status **参数解释**：  任务当前运行状态。  **约束限制**：  不涉及。  **取值范围**：  - CREATING：创建中 - CREATE_FAILED：创建失败 - CONFIGURATION：配置中 - STARTJOBING：启动中 - WAITING_FOR_START：等待启动中 - START_JOB_FAILED：启动失败 - PAUSING：已暂停 - FULL_TRANSFER_STARTED：全量开始，灾备场景下为初始化 - FULL_TRANSFER_FAILED：全量失败，灾备场景下为初始化失败 - FULL_TRANSFER_COMPLETE：全量完成，灾备场景下为初始化完成 - INCRE_TRANSFER_STARTED：增量开始，灾备场景下为灾备中 - INCRE_TRANSFER_FAILED：增量失败，灾备场景下为灾备异常 - RELEASE_RESOURCE_STARTED：结束任务中 - RELEASE_RESOURCE_FAILED：结束任务失败 - RELEASE_RESOURCE_COMPLETE：已结束 - REBUILD_NODE_STARTED：故障恢复中 - REBUILD_NODE_FAILED：故障恢复失败 - CHANGE_JOB_STARTED：任务变更中 - CHANGE_JOB_FAILED：任务变更失败 - DELETED：已删除 - CHILD_TRANSFER_STARTING：再编辑子任务启动中 - CHILD_TRANSFER_STARTED：再编辑子任务迁移中 - CHILD_TRANSFER_COMPLETE：再编辑子任务迁移完成 - CHILD_TRANSFER_FAILED：再编辑子任务迁移失败 - RELEASE_CHILD_TRANSFER_STARTED：再编辑子任务结束中 - RELEASE_CHILD_TRANSFER_COMPLETE：再编辑子任务已结束 - NODE_UPGRADE_START：升级开始 - NODE_UPGRADE_COMPLETE：升级完成 - NODE_UPGRADE_FAILED：升级失败  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -730,7 +770,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  任务创建时间。
+    *  **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -742,7 +782,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 任务创建时间。
+    * @param string|null $createTime **参数解释**：  任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -754,7 +794,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  列表中的项目总数，与分页无关。
+    *  **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -766,7 +806,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 列表中的项目总数，与分页无关。
+    * @param int|null $totalCount **参数解释**：  列表中的项目总数，与分页无关。表示满足查询条件的记录总数量，用于分页计算。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -778,7 +818,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets masterJobId
-    *  多任务主节点的任务ID。
+    *  **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -790,7 +830,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets masterJobId
     *
-    * @param string|null $masterJobId 多任务主节点的任务ID。
+    * @param string|null $masterJobId **参数解释**：  多任务主节点的任务ID，在多对一同步场景中标识主任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -826,7 +866,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceEndpoint
-    *  任务源数据库信息体。
+    *  **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]|null
     */
@@ -838,7 +878,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets sourceEndpoint
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]|null $sourceEndpoint 任务源数据库信息体。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]|null $sourceEndpoint **参数解释**：  任务源数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -850,7 +890,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetEndpoint
-    *  任务目标数据库信息体。
+    *  **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]|null
     */
@@ -862,7 +902,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets targetEndpoint
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]|null $targetEndpoint 任务目标数据库信息体。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobEndpointInfo[]|null $targetEndpoint **参数解释**：  任务目标数据库信息体，详情请参见JobEndpointInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1066,7 +1106,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets logs
-    *  日志查询结果信息体。
+    *  **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\TaskLogInfo[]|null
     */
@@ -1078,7 +1118,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets logs
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\TaskLogInfo[]|null $logs 日志查询结果信息体。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\TaskLogInfo[]|null $logs **参数解释**：  日志查询结果信息体，详情请参见TaskLogInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1090,7 +1130,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkResults
-    *  网络打通测试结果信息体。
+    *  **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\QueryNetworkResult[]|null
     */
@@ -1102,7 +1142,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets networkResults
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\QueryNetworkResult[]|null $networkResults 网络打通测试结果信息体。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\QueryNetworkResult[]|null $networkResults **参数解释**：  网络打通测试结果信息体，详情请参见QueryNetworkResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1258,7 +1298,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceFeatures
-    *  由开关和版本共同控制的任务级别的功能列表。
+    *  **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return map[string,string]|null
     */
@@ -1270,7 +1310,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets instanceFeatures
     *
-    * @param map[string,string]|null $instanceFeatures 由开关和版本共同控制的任务级别的功能列表。
+    * @param map[string,string]|null $instanceFeatures **参数解释**：  由开关和版本共同控制的任务级别的功能列表，格式为key/value键值对。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1282,7 +1322,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskVersion
-    *  任务版本。
+    *  **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -1294,7 +1334,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets taskVersion
     *
-    * @param string|null $taskVersion 任务版本。
+    * @param string|null $taskVersion **参数解释**：  任务版本，标识当前数据复制任务所使用的版本号。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1330,7 +1370,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpList
-    *  指定公网IP的信息
+    *  **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null
     */
@@ -1342,7 +1382,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpList
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null $publicIpList 指定公网IP的信息
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]|null $publicIpList **参数解释**：  指定公网IP的信息列表，详情请参见PublicIpConfig对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1354,7 +1394,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindPublicIpState
-    *  是否成功绑定公网IP 取值：SUCCESS，FAILED
+    *  **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -1366,7 +1406,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets bindPublicIpState
     *
-    * @param string|null $bindPublicIpState 是否成功绑定公网IP 取值：SUCCESS，FAILED
+    * @param string|null $bindPublicIpState **参数解释**：  是否成功绑定公网IP，标识为任务绑定公网IP操作的执行结果。  **约束限制**：  不涉及。  **取值范围**：  - SUCCESS：成功 - FAILED：失败  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1378,7 +1418,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  多任务时，存在子任务绑定失败时，返回子任务的信息
+    *  **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]|null
     */
@@ -1390,7 +1430,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]|null $children 多任务时，存在子任务绑定失败时，返回子任务的信息
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]|null $children **参数解释**：  多任务时存在子任务绑定失败时返回的子任务信息列表，详情请参见FailedToBindEipChildInfo对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1402,7 +1442,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets isWritable
-    *  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    *  **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -1414,7 +1454,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets isWritable
     *
-    * @param string|null $isWritable 解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    * @param string|null $isWritable **参数解释**：  解除目标库只读操作后，目标库解除只读是否成功。  **约束限制**：  不涉及。  **取值范围**：  - pending：目标库解除操作进行中 - success：目标库解除只读操作成功  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1426,7 +1466,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets diagnoses
-    *  一键诊断结果。
+    *  **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]|null
     */
@@ -1438,7 +1478,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets diagnoses
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]|null $diagnoses 一键诊断结果。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\QueryDiagnosisResult[]|null $diagnoses **参数解释**：  一键诊断结果列表，详情请参见QueryDiagnosisResult对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1498,7 +1538,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairExportStatus
-    *  修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    *  **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -1510,7 +1550,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets repairExportStatus
     *
-    * @param string|null $repairExportStatus 修复SQL导出状态。 INIT：初始状态，EXPORTING：比对结果导出中，EXPORT_COMPLETE：比对结果导出完成，EXPORT_COMMON_FAILED：比对结果导出失败
+    * @param string|null $repairExportStatus **参数解释**：  修复SQL导出状态，标识数据修复SQL文件的导出进度。  **约束限制**：  不涉及。  **取值范围**：  - INIT：初始状态 - EXPORTING：比对结果导出中 - EXPORT_COMPLETE：比对结果导出完成 - EXPORT_COMMON_FAILED：比对结果导出失败  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -1522,7 +1562,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobKernelDirection
-    *  灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    *  **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -1534,13 +1574,37 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets jobKernelDirection
     *
-    * @param string|null $jobKernelDirection 灾备任务内核方向，up上云，down下云。当任务处于倒换中，与灾备任务方向相反，否则相同。
+    * @param string|null $jobKernelDirection **参数解释**：  灾备内核方向，非倒换中与job_direction取值相同，倒换中与job_direction取值相反。  **约束限制**：  不涉及。  **取值范围**：  - up：入云，灾备场景时对应本云为备 - down：出云，灾备场景时对应本云为主  **默认取值**：  不涉及
     *
     * @return $this
     */
     public function setJobKernelDirection($jobKernelDirection)
     {
         $this->container['jobKernelDirection'] = $jobKernelDirection;
+        return $this;
+    }
+
+    /**
+    * Gets syncMode
+    *  同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
+    *
+    * @return string|null
+    */
+    public function getSyncMode()
+    {
+        return $this->container['syncMode'];
+    }
+
+    /**
+    * Sets syncMode
+    *
+    * @param string|null $syncMode 同步模式 DB_LEVEL：库级 SCHEMA_LEVEL：schema级 TABLE_LEVEL：表级 FILE_IMPORT：文件导入 INSTANCE_LEVEL：实例级
+    *
+    * @return $this
+    */
+    public function setSyncMode($syncMode)
+    {
+        $this->container['syncMode'] = $syncMode;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  指定公网IP的ID
-    * publicIp  指定公网IP
-    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    * id  指定公网IP的ID。
+    * publicIp  指定公网IP。
+    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  指定公网IP的ID
-    * publicIp  指定公网IP
-    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    * id  指定公网IP的ID。
+    * publicIp  指定公网IP。
+    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  指定公网IP的ID
-    * publicIp  指定公网IP
-    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    * id  指定公网IP的ID。
+    * publicIp  指定公网IP。
+    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  指定公网IP的ID
-    * publicIp  指定公网IP
-    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    * id  指定公网IP的ID。
+    * publicIp  指定公网IP。
+    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  指定公网IP的ID
-    * publicIp  指定公网IP
-    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    * id  指定公网IP的ID。
+    * publicIp  指定公网IP。
+    * type  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @var string[]
     */
@@ -228,7 +228,7 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  指定公网IP的ID
+    *  指定公网IP的ID。
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 指定公网IP的ID
+    * @param string $id 指定公网IP的ID。
     *
     * @return $this
     */
@@ -252,7 +252,7 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  指定公网IP
+    *  指定公网IP。
     *
     * @return string
     */
@@ -264,7 +264,7 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string $publicIp 指定公网IP
+    * @param string $publicIp 指定公网IP。
     *
     * @return $this
     */
@@ -276,7 +276,7 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    *  指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class PublicIpConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave - 其他固定为master
+    * @param string $type 指定公网IP绑定任务的类型： - 主备任务：主是master，备是slave。 - 其他固定为master。
     *
     * @return $this
     */

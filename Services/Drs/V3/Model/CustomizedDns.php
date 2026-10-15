@@ -20,9 +20,9 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSetDns  是否设置客户自定义DNS。
-    * setDnsAction  设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
-    * dnsIp  设置客户自定义DNS IP。
+    * isSetDns  **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
+    * setDnsAction  **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
+    * dnsIp  **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSetDns  是否设置客户自定义DNS。
-    * setDnsAction  设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
-    * dnsIp  设置客户自定义DNS IP。
+    * isSetDns  **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
+    * setDnsAction  **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
+    * dnsIp  **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CustomizedDns implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSetDns  是否设置客户自定义DNS。
-    * setDnsAction  设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
-    * dnsIp  设置客户自定义DNS IP。
+    * isSetDns  **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
+    * setDnsAction  **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
+    * dnsIp  **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSetDns  是否设置客户自定义DNS。
-    * setDnsAction  设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
-    * dnsIp  设置客户自定义DNS IP。
+    * isSetDns  **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
+    * setDnsAction  **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
+    * dnsIp  **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSetDns  是否设置客户自定义DNS。
-    * setDnsAction  设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
-    * dnsIp  设置客户自定义DNS IP。
+    * isSetDns  **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
+    * setDnsAction  **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
+    * dnsIp  **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -238,7 +238,7 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSetDns
-    *  是否设置客户自定义DNS。
+    *  **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
     *
     * @return bool
     */
@@ -250,7 +250,7 @@ class CustomizedDns implements ModelInterface, ArrayAccess
     /**
     * Sets isSetDns
     *
-    * @param bool $isSetDns 是否设置客户自定义DNS。
+    * @param bool $isSetDns **参数解释**：  是否设置客户自定义DNS。  **约束限制**：  不涉及。  **取值范围**：  - true：设置客户自定义DNS - false：不设置客户自定义DNS  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Gets setDnsAction
-    *  设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
+    *  **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -274,7 +274,7 @@ class CustomizedDns implements ModelInterface, ArrayAccess
     /**
     * Sets setDnsAction
     *
-    * @param string $setDnsAction 设置客户自定义DNS的行为。 - add：新增客户自定义DNS IP。 - keep：保持客户自定义DNS IP。 - update：更新客户自定义DNS IP（当DNS IP变化时更新生效）。 - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）。
+    * @param string $setDnsAction **参数解释**：  设置客户自定义DNS的行为。  **约束限制**：  不涉及。  **取值范围**：  - add：新增客户自定义DNS IP - keep：保持客户自定义DNS IP - update：更新客户自定义DNS IP（当DNS IP变化时更新生效） - recover：还原系统默认DNS IP（还原时可能会导致域名解析失败，请谨慎操作）  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class CustomizedDns implements ModelInterface, ArrayAccess
 
     /**
     * Gets dnsIp
-    *  设置客户自定义DNS IP。
+    *  **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -298,7 +298,7 @@ class CustomizedDns implements ModelInterface, ArrayAccess
     /**
     * Sets dnsIp
     *
-    * @param string $dnsIp 设置客户自定义DNS IP。
+    * @param string $dnsIp **参数解释**：  设置客户自定义DNS IP地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

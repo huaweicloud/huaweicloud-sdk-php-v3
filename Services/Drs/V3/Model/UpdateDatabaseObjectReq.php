@@ -20,10 +20,10 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID
-    * selected  是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
-    * syncDatabase  是否库级同步
-    * job  数据对象选择信息，selected为true时必填。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * selected  **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
+    * syncDatabase  **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
+    * job  **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID
-    * selected  是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
-    * syncDatabase  是否库级同步
-    * job  数据对象选择信息，selected为true时必填。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * selected  **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
+    * syncDatabase  **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
+    * job  **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID
-    * selected  是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
-    * syncDatabase  是否库级同步
-    * job  数据对象选择信息，selected为true时必填。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * selected  **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
+    * syncDatabase  **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
+    * job  **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID
-    * selected  是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
-    * syncDatabase  是否库级同步
-    * job  数据对象选择信息，selected为true时必填。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * selected  **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
+    * syncDatabase  **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
+    * job  **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID
-    * selected  是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
-    * syncDatabase  是否库级同步
-    * job  数据对象选择信息，selected为true时必填。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * selected  **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
+    * syncDatabase  **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
+    * job  **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID
+    *  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 任务ID
+    * @param string $jobId **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets selected
-    *  是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
+    *  **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
     *
     * @return bool|null
     */
@@ -246,7 +246,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Sets selected
     *
-    * @param bool|null $selected 是否进行对象选择，是：自定义迁移对象，否：全部迁移，不填默认为否。
+    * @param bool|null $selected **参数解释**：  是否进行对象选择，决定是自定义选择迁移对象还是迁移全部对象。  **约束限制**：  不涉及。  **取值范围**：  - true：自定义迁移对象，需要通过job字段指定具体迁移对象 - false：全部迁移，迁移源库所有对象  **默认取值**：  false
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncDatabase
-    *  是否库级同步
+    *  **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
     *
     * @return bool|null
     */
@@ -270,7 +270,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Sets syncDatabase
     *
-    * @param bool|null $syncDatabase 是否库级同步
+    * @param bool|null $syncDatabase **参数解释**：  是否库级同步，指定同步任务是否以库为粒度进行对象选择。  **约束限制**：  不涉及。  **取值范围**：  - true：库级同步 - false：非库级同步  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets job
-    *  数据对象选择信息，selected为true时必填。
+    *  **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\DatabaseInfo[]|null
     */
@@ -294,7 +294,7 @@ class UpdateDatabaseObjectReq implements ModelInterface, ArrayAccess
     /**
     * Sets job
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\DatabaseInfo[]|null $job 数据对象选择信息，selected为true时必填。
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\DatabaseInfo[]|null $job **参数解释**：  数据对象选择信息列表，包含需要迁移的数据库、表、视图等对象的详细配置。  **约束限制**：  - selected为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -21,8 +21,8 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * results  任务状态信息
-    * count  返回任务数量
+    * results  **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * results  任务状态信息
-    * count  返回任务数量
+    * results  **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * results  任务状态信息
-    * count  返回任务数量
+    * results  **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * results  任务状态信息
-    * count  返回任务数量
+    * results  **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * results  任务状态信息
-    * count  返回任务数量
+    * results  **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets results
-    *  任务状态信息
+    *  **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\QueryJobStatusResp[]|null
     */
@@ -198,7 +198,7 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\QueryJobStatusResp[]|null $results 任务状态信息
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\QueryJobStatusResp[]|null $results **参数解释**：  批量查询返回的各任务状态列表，每个元素对应一个查询任务的状态信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  返回任务数量
+    *  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class BatchListJobStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 返回任务数量
+    * @param int|null $count **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

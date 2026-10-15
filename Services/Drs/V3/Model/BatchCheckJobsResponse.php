@@ -21,8 +21,8 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * results  预检查响应体
-    * count  总数
+    * results  **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * results  预检查响应体
-    * count  总数
+    * results  **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * results  预检查响应体
-    * count  总数
+    * results  **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * results  预检查响应体
-    * count  总数
+    * results  **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * results  预检查响应体
-    * count  总数
+    * results  **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets results
-    *  预检查响应体
+    *  **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\PostPreCheckResp[]|null
     */
@@ -198,7 +198,7 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\PostPreCheckResp[]|null $results 预检查响应体
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\PostPreCheckResp[]|null $results **参数解释**：  预检查响应体，详情请参见PostPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数
+    *  **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class BatchCheckJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数
+    * @param int|null $count **参数解释**：  返回的预检查结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

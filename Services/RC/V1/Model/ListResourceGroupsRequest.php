@@ -175,14 +175,14 @@ class ListResourceGroupsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 400)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 400.";
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 24)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 24.";
             }
-            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 4)) {
-                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 4.";
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 24)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 24.";
             }
-            if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9+\/=%\\-_]+/", $this->container['marker'])) {
-                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9+\/=%\\-_]+/.";
+            if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9]+/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9]+/.";
             }
         return $invalidProperties;
     }

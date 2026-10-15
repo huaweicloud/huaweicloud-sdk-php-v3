@@ -20,7 +20,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nodeType  实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    * nodeType  **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nodeType  实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    * nodeType  **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nodeType  实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    * nodeType  **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nodeType  实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    * nodeType  **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nodeType  实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    * nodeType  **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -204,7 +204,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    *  **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -216,7 +216,7 @@ class JobNodeSpecInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType 实例规格编码。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。
+    * @param string $nodeType **参数解释**：  DRS任务实例规格编码，决定迁移实例的计算资源大小。  **约束限制**：  除实时同步任务以外，其他类型任务的规格只支持取high。  **取值范围**：  - micro：极小规格 - small：小规格 - medium：中规格 - high：大规格  **默认取值**：  不涉及
     *
     * @return $this
     */

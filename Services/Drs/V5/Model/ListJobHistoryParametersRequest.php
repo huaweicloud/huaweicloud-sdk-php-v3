@@ -24,8 +24,8 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示从此偏移量开始查询，offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
-    * beginTime  开始时间，UTC时间，例如：2020-09-01T18:50:20Z
-    * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    * beginTime  开始时间，格式为毫秒级时间戳。
+    * endTime  结束时间，格式为毫秒级时间戳。
     * name  参数名称。
     *
     * @var string[]
@@ -46,8 +46,8 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示从此偏移量开始查询，offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
-    * beginTime  开始时间，UTC时间，例如：2020-09-01T18:50:20Z
-    * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    * beginTime  开始时间，格式为毫秒级时间戳。
+    * endTime  结束时间，格式为毫秒级时间戳。
     * name  参数名称。
     *
     * @var string[]
@@ -89,8 +89,8 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示从此偏移量开始查询，offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
-    * beginTime  开始时间，UTC时间，例如：2020-09-01T18:50:20Z
-    * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    * beginTime  开始时间，格式为毫秒级时间戳。
+    * endTime  结束时间，格式为毫秒级时间戳。
     * name  参数名称。
     *
     * @var string[]
@@ -111,8 +111,8 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示从此偏移量开始查询，offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
-    * beginTime  开始时间，UTC时间，例如：2020-09-01T18:50:20Z
-    * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    * beginTime  开始时间，格式为毫秒级时间戳。
+    * endTime  结束时间，格式为毫秒级时间戳。
     * name  参数名称。
     *
     * @var string[]
@@ -133,8 +133,8 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示从此偏移量开始查询，offset 大于等于 0。默认为0
     * limit  每页显示的条目数量。默认为10，取值范围【1-1000】
-    * beginTime  开始时间，UTC时间，例如：2020-09-01T18:50:20Z
-    * endTime  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    * beginTime  开始时间，格式为毫秒级时间戳。
+    * endTime  结束时间，格式为毫秒级时间戳。
     * name  参数名称。
     *
     * @var string[]
@@ -339,7 +339,7 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  开始时间，UTC时间，例如：2020-09-01T18:50:20Z
+    *  开始时间，格式为毫秒级时间戳。
     *
     * @return string|null
     */
@@ -351,7 +351,7 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 开始时间，UTC时间，例如：2020-09-01T18:50:20Z
+    * @param string|null $beginTime 开始时间，格式为毫秒级时间戳。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    *  结束时间，格式为毫秒级时间戳。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class ListJobHistoryParametersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 结束时间，UTC时间，例如：2020-09-01T19:50:20Z
+    * @param string|null $endTime 结束时间，格式为毫秒级时间戳。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
-    * domainName  批量异步创建的任务的租户名。
-    * userName  批量异步创建的任务的用户名。
-    * createTime  批量异步创建的任务的创建时间。
+    * asyncJobId  **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
+    * domainName  **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * userName  **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * createTime  **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
-    * domainName  批量异步创建的任务的租户名。
-    * userName  批量异步创建的任务的用户名。
-    * createTime  批量异步创建的任务的创建时间。
+    * asyncJobId  **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
+    * domainName  **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * userName  **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * createTime  **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
-    * domainName  批量异步创建的任务的租户名。
-    * userName  批量异步创建的任务的用户名。
-    * createTime  批量异步创建的任务的创建时间。
+    * asyncJobId  **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
+    * domainName  **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * userName  **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * createTime  **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
-    * domainName  批量异步创建的任务的租户名。
-    * userName  批量异步创建的任务的用户名。
-    * createTime  批量异步创建的任务的创建时间。
+    * asyncJobId  **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
+    * domainName  **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * userName  **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * createTime  **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * asyncJobId  批量异步创建的任务ID。
-    * status  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
-    * domainName  批量异步创建的任务的租户名。
-    * userName  批量异步创建的任务的用户名。
-    * createTime  批量异步创建的任务的创建时间。
+    * asyncJobId  **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
+    * domainName  **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * userName  **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * createTime  **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -260,7 +260,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets asyncJobId
-    *  批量异步创建的任务ID。
+    *  **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -272,7 +272,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets asyncJobId
     *
-    * @param string $asyncJobId 批量异步创建的任务ID。
+    * @param string $asyncJobId **参数解释**：  批量异步创建的任务ID，唯一标识一个批量异步创建任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -284,7 +284,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
+    *  **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -296,7 +296,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 批量异步创建的任务状态。取值： - ASYNC_JOB_VALIDATING：批量异步任务参数校验中。 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败。 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功。 - COMMIT_SUCCESS：批量异步任务提交成功。
+    * @param string $status **参数解释**：  批量异步创建的任务状态，表示异步任务的当前执行阶段。  **约束限制**：  不涉及。  **取值范围**：  - ASYNC_JOB_VALIDATING：批量异步任务参数校验中 - ASYNC_JOB_VALIDATE_FAILED：批量异步任务参数校验失败 - AUTO_PARAM_VALIDATE_SUCCESS：批量异步任务参数校验成功 - COMMIT_SUCCESS：批量异步任务提交成功  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  批量异步创建的任务的租户名。
+    *  **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -320,7 +320,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string $domainName 批量异步创建的任务的租户名。
+    * @param string $domainName **参数解释**：  批量异步创建任务的租户名，标识创建该任务所属的租户（域名）。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  批量异步创建的任务的用户名。
+    *  **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -344,7 +344,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string $userName 批量异步创建的任务的用户名。
+    * @param string $userName **参数解释**：  批量异步创建任务的用户名，标识创建该任务的具体IAM用户。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  批量异步创建的任务的创建时间。
+    *  **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -368,7 +368,7 @@ class AsyncJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string $createTime 批量异步创建的任务的创建时间。
+    * @param string $createTime **参数解释**：  批量异步创建任务的创建时间，表示任务首次被创建的时间戳。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

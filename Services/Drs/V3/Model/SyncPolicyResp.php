@@ -20,10 +20,10 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务ID
-    * status  状态 - success：成功 - failed：失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * id  **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务ID
-    * status  状态 - success：成功 - failed：失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * id  **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务ID
-    * status  状态 - success：成功 - failed：失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * id  **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务ID
-    * status  状态 - success：成功 - failed：失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * id  **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务ID
-    * status  状态 - success：成功 - failed：失败
-    * errorCode  错误码
-    * errorMsg  错误信息
+    * id  **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * status  **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID
+    *  **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务ID
+    * @param string|null $id **参数解释**：  设置同步策略的任务ID，用于标识策略设置结果对应的任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态 - success：成功 - failed：失败
+    *  **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态 - success：成功 - failed：失败
+    * @param string|null $status **参数解释**：  策略设置结果状态，表示同步策略是否设置成功。  **约束限制**：  不涉及。  **取值范围**：  - success：设置成功 - failed：设置失败  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码
+    *  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码
+    * @param string|null $errorCode **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误信息
+    *  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class SyncPolicyResp implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误信息
+    * @param string|null $errorMsg **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

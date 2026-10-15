@@ -21,8 +21,8 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * results  批量查询预检查结果响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * results  批量查询预检查结果响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * results  批量查询预检查结果响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * results  批量查询预检查结果响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * results  批量查询预检查结果响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets results
-    *  批量查询预检查结果响应体集合。
+    *  **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\QueryPreCheckResp[]|null
     */
@@ -198,7 +198,7 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\QueryPreCheckResp[]|null $results 批量查询预检查结果响应体集合。
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\QueryPreCheckResp[]|null $results **参数解释**：  批量查询预检查结果响应体集合，包含每个任务的预检查结果详情，详情请参见QueryPreCheckResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总记录数。
+    *  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class BatchCheckResultsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总记录数。
+    * @param int|null $count **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

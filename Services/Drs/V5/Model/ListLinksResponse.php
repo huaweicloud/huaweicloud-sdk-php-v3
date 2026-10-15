@@ -21,8 +21,8 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobLinks  可用链路信息。
-    * totalCount  可用链路总条数。
+    * jobLinks  **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobLinks  可用链路信息。
-    * totalCount  可用链路总条数。
+    * jobLinks  **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobLinks  可用链路信息。
-    * totalCount  可用链路总条数。
+    * jobLinks  **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobLinks  可用链路信息。
-    * totalCount  可用链路总条数。
+    * jobLinks  **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobLinks  可用链路信息。
-    * totalCount  可用链路总条数。
+    * jobLinks  **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * totalCount  **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobLinks
-    *  可用链路信息。
+    *  **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V5\Model\JobLinkResp[]|null
     */
@@ -198,7 +198,7 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobLinks
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobLinkResp[]|null $jobLinks 可用链路信息。
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\JobLinkResp[]|null $jobLinks **参数解释**：  可用链路信息列表，包含每条可用链路的详细配置信息，详情请参见JobLinkResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalCount
-    *  可用链路总条数。
+    *  **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListLinksResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalCount
     *
-    * @param int|null $totalCount 可用链路总条数。
+    * @param int|null $totalCount **参数解释**：  可用链路总条数，表示满足查询条件的链路记录总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

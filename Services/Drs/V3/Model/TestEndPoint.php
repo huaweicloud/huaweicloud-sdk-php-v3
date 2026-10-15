@@ -20,25 +20,25 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务ID
-    * netType  网络类型
-    * dbType  数据库类型
-    * ip  数据库IP
-    * dbPort  数据库端口，Mongo、DDS必填为0。
-    * instId  RDS实例id，RDS实例必填。
-    * dbUser  数据库帐号。
-    * dbPassword  数据库密码。
-    * sslLink  是否SSL安全连接。
-    * sslCertKey  SSL证书内容，base64加密后的值，源库安全连接必选。
-    * sslCertName  SSL证书名字，源库安全连接必选。
-    * sslCertCheckSum  SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
-    * sslCertPassword  SSL证书密码，证书文件后缀为.p12，需要密码。
-    * vpcId  vpcid，数据库为RDS时必选。
-    * subnetId  subnetid，数据库为RDS必选。
-    * endPointType  源库：so,目标库：ta
-    * region  rds实例region，数据库为RDS时必填。
-    * projectId  用户所处region的projectId。
-    * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    * id  **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * netType  **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
+    * ip  **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPort  **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * instId  **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbUser  **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPassword  **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslLink  **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
+    * sslCertKey  **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertName  **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertCheckSum  **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertPassword  **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * vpcId  **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * subnetId  **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * endPointType  **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
+    * region  **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * projectId  **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbName  **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * kafkaSecurityConfig  kafkaSecurityConfig
     * customizedDns  customizedDns
     *
@@ -70,25 +70,25 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务ID
-    * netType  网络类型
-    * dbType  数据库类型
-    * ip  数据库IP
-    * dbPort  数据库端口，Mongo、DDS必填为0。
-    * instId  RDS实例id，RDS实例必填。
-    * dbUser  数据库帐号。
-    * dbPassword  数据库密码。
-    * sslLink  是否SSL安全连接。
-    * sslCertKey  SSL证书内容，base64加密后的值，源库安全连接必选。
-    * sslCertName  SSL证书名字，源库安全连接必选。
-    * sslCertCheckSum  SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
-    * sslCertPassword  SSL证书密码，证书文件后缀为.p12，需要密码。
-    * vpcId  vpcid，数据库为RDS时必选。
-    * subnetId  subnetid，数据库为RDS必选。
-    * endPointType  源库：so,目标库：ta
-    * region  rds实例region，数据库为RDS时必填。
-    * projectId  用户所处region的projectId。
-    * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    * id  **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * netType  **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
+    * ip  **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPort  **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * instId  **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbUser  **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPassword  **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslLink  **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
+    * sslCertKey  **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertName  **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertCheckSum  **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertPassword  **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * vpcId  **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * subnetId  **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * endPointType  **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
+    * region  **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * projectId  **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbName  **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * kafkaSecurityConfig  kafkaSecurityConfig
     * customizedDns  customizedDns
     *
@@ -141,25 +141,25 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务ID
-    * netType  网络类型
-    * dbType  数据库类型
-    * ip  数据库IP
-    * dbPort  数据库端口，Mongo、DDS必填为0。
-    * instId  RDS实例id，RDS实例必填。
-    * dbUser  数据库帐号。
-    * dbPassword  数据库密码。
-    * sslLink  是否SSL安全连接。
-    * sslCertKey  SSL证书内容，base64加密后的值，源库安全连接必选。
-    * sslCertName  SSL证书名字，源库安全连接必选。
-    * sslCertCheckSum  SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
-    * sslCertPassword  SSL证书密码，证书文件后缀为.p12，需要密码。
-    * vpcId  vpcid，数据库为RDS时必选。
-    * subnetId  subnetid，数据库为RDS必选。
-    * endPointType  源库：so,目标库：ta
-    * region  rds实例region，数据库为RDS时必填。
-    * projectId  用户所处region的projectId。
-    * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    * id  **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * netType  **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
+    * ip  **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPort  **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * instId  **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbUser  **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPassword  **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslLink  **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
+    * sslCertKey  **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertName  **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertCheckSum  **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertPassword  **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * vpcId  **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * subnetId  **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * endPointType  **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
+    * region  **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * projectId  **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbName  **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * kafkaSecurityConfig  kafkaSecurityConfig
     * customizedDns  customizedDns
     *
@@ -191,25 +191,25 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务ID
-    * netType  网络类型
-    * dbType  数据库类型
-    * ip  数据库IP
-    * dbPort  数据库端口，Mongo、DDS必填为0。
-    * instId  RDS实例id，RDS实例必填。
-    * dbUser  数据库帐号。
-    * dbPassword  数据库密码。
-    * sslLink  是否SSL安全连接。
-    * sslCertKey  SSL证书内容，base64加密后的值，源库安全连接必选。
-    * sslCertName  SSL证书名字，源库安全连接必选。
-    * sslCertCheckSum  SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
-    * sslCertPassword  SSL证书密码，证书文件后缀为.p12，需要密码。
-    * vpcId  vpcid，数据库为RDS时必选。
-    * subnetId  subnetid，数据库为RDS必选。
-    * endPointType  源库：so,目标库：ta
-    * region  rds实例region，数据库为RDS时必填。
-    * projectId  用户所处region的projectId。
-    * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    * id  **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * netType  **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
+    * ip  **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPort  **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * instId  **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbUser  **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPassword  **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslLink  **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
+    * sslCertKey  **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertName  **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertCheckSum  **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertPassword  **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * vpcId  **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * subnetId  **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * endPointType  **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
+    * region  **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * projectId  **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbName  **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * kafkaSecurityConfig  kafkaSecurityConfig
     * customizedDns  customizedDns
     *
@@ -241,25 +241,25 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务ID
-    * netType  网络类型
-    * dbType  数据库类型
-    * ip  数据库IP
-    * dbPort  数据库端口，Mongo、DDS必填为0。
-    * instId  RDS实例id，RDS实例必填。
-    * dbUser  数据库帐号。
-    * dbPassword  数据库密码。
-    * sslLink  是否SSL安全连接。
-    * sslCertKey  SSL证书内容，base64加密后的值，源库安全连接必选。
-    * sslCertName  SSL证书名字，源库安全连接必选。
-    * sslCertCheckSum  SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
-    * sslCertPassword  SSL证书密码，证书文件后缀为.p12，需要密码。
-    * vpcId  vpcid，数据库为RDS时必选。
-    * subnetId  subnetid，数据库为RDS必选。
-    * endPointType  源库：so,目标库：ta
-    * region  rds实例region，数据库为RDS时必填。
-    * projectId  用户所处region的projectId。
-    * dbName  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    * id  **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * netType  **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
+    * dbType  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
+    * ip  **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPort  **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * instId  **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbUser  **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbPassword  **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslLink  **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
+    * sslCertKey  **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertName  **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertCheckSum  **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * sslCertPassword  **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * vpcId  **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * subnetId  **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * endPointType  **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
+    * region  **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * projectId  **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dbName  **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * kafkaSecurityConfig  kafkaSecurityConfig
     * customizedDns  customizedDns
     *
@@ -496,7 +496,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID
+    *  **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -508,7 +508,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 任务ID
+    * @param string $id **参数解释**：  DRS任务ID，用于唯一标识一个数据复制任务，可从任务列表或任务详情页面获取。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -520,7 +520,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets netType
-    *  网络类型
+    *  **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -532,7 +532,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets netType
     *
-    * @param string $netType 网络类型
+    * @param string $netType **参数解释**：  任务使用的网络类型。  **约束限制**：  不涉及。  **取值范围**：  - vpn：虚拟专用网络 - vpc：虚拟私有云 - eip：弹性公网IP  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -544,7 +544,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型
+    *  **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -556,7 +556,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string $dbType 数据库类型
+    * @param string $dbType **参数解释**：  数据库类型，标识源库或目标库的数据库引擎种类。  **约束限制**：  不涉及。  **取值范围**：  - mysql：MySQL - mongodb：MongoDB - gaussdbv5：GaussDB分布式版 - postgresql：PostgreSQL - kafka：Kafka - gaussdbv5ha：GaussDB集中式版 - taurus：TaurusDB  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -568,7 +568,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  数据库IP
+    *  **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -580,7 +580,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 数据库IP
+    * @param string $ip **参数解释**：  数据库IP地址，用于指定连接数据库的服务器地址。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -592,7 +592,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbPort
-    *  数据库端口，Mongo、DDS必填为0。
+    *  **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -604,7 +604,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets dbPort
     *
-    * @param int|null $dbPort 数据库端口，Mongo、DDS必填为0。
+    * @param int|null $dbPort **参数解释**：  数据库端口号，用于指定连接数据库的服务端口。  **约束限制**：  - db_type为MongoDB、DDS时端口必填取值为0。 - db_type为Oracle时为必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -616,7 +616,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets instId
-    *  RDS实例id，RDS实例必填。
+    *  **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -628,7 +628,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets instId
     *
-    * @param string|null $instId RDS实例id，RDS实例必填。
+    * @param string|null $instId **参数解释**：  RDS实例ID，用于标识华为云RDS数据库实例。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -640,7 +640,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbUser
-    *  数据库帐号。
+    *  **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -652,7 +652,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets dbUser
     *
-    * @param string $dbUser 数据库帐号。
+    * @param string $dbUser **参数解释**：  数据库帐号，用于连接数据库的用户名。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -664,7 +664,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbPassword
-    *  数据库密码。
+    *  **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -676,7 +676,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets dbPassword
     *
-    * @param string $dbPassword 数据库密码。
+    * @param string $dbPassword **参数解释**：  数据库密码，用于连接数据库的认证密码。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -688,7 +688,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslLink
-    *  是否SSL安全连接。
+    *  **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
     *
     * @return bool|null
     */
@@ -700,7 +700,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets sslLink
     *
-    * @param bool|null $sslLink 是否SSL安全连接。
+    * @param bool|null $sslLink **参数解释**：  是否使用SSL安全连接，指定数据库连接是否启用SSL加密传输。  **约束限制**：  - 该参数为true时，需填写SSL证书相关信息参数。  **取值范围**：  - true：使用SSL安全连接 - false：不使用SSL安全连接  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslCertKey
-    *  SSL证书内容，base64加密后的值，源库安全连接必选。
+    *  **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -724,7 +724,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets sslCertKey
     *
-    * @param string|null $sslCertKey SSL证书内容，base64加密后的值，源库安全连接必选。
+    * @param string|null $sslCertKey **参数解释**：  SSL证书内容，获取SSL证书后将内容通过BASE64加密后所得的字符串。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -736,7 +736,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslCertName
-    *  SSL证书名字，源库安全连接必选。
+    *  **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -748,7 +748,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets sslCertName
     *
-    * @param string|null $sslCertName SSL证书名字，源库安全连接必选。
+    * @param string|null $sslCertName **参数解释**：  SSL证书名字。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -760,7 +760,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslCertCheckSum
-    *  SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
+    *  **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -772,7 +772,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets sslCertCheckSum
     *
-    * @param string|null $sslCertCheckSum SSL证书内容checksum值，证书经过sha256加密后的值，后端校验，源库安全连接必选。
+    * @param string|null $sslCertCheckSum **参数解释**：  SSL证书内容checksum值，获取SSL证书后将内容经过SHA256加密后的值，后端校验用。  **约束限制**：  - ssl_link为true时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -784,7 +784,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets sslCertPassword
-    *  SSL证书密码，证书文件后缀为.p12，需要密码。
+    *  **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -796,7 +796,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets sslCertPassword
     *
-    * @param string|null $sslCertPassword SSL证书密码，证书文件后缀为.p12，需要密码。
+    * @param string|null $sslCertPassword **参数解释**：  SSL证书密码。  **约束限制**：  - 证书文件后缀为.p12时需要填写密码。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -808,7 +808,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  vpcid，数据库为RDS时必选。
+    *  **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -820,7 +820,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpcid，数据库为RDS时必选。
+    * @param string|null $vpcId **参数解释**：  虚拟私有云ID，用于标识数据库所在的VPC。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -832,7 +832,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetId
-    *  subnetid，数据库为RDS必选。
+    *  **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -844,7 +844,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets subnetId
     *
-    * @param string|null $subnetId subnetid，数据库为RDS必选。
+    * @param string|null $subnetId **参数解释**：  子网ID，用于标识数据库所在的子网。  **约束限制**：  - 网络类型为VPC时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -856,7 +856,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets endPointType
-    *  源库：so,目标库：ta
+    *  **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
     *
     * @return string
     */
@@ -868,7 +868,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets endPointType
     *
-    * @param string $endPointType 源库：so,目标库：ta
+    * @param string $endPointType **参数解释**：  数据库端点类型，标识该数据库在数据复制任务中是源端还是目标端。  **约束限制**：  不涉及。  **取值范围**：  - so：源库 - ta：目标库  **默认取值**：  so
     *
     * @return $this
     */
@@ -880,7 +880,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  rds实例region，数据库为RDS时必填。
+    *  **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -892,7 +892,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region rds实例region，数据库为RDS时必填。
+    * @param string|null $region **参数解释**：  RDS实例所在区域，用于标识数据库实例的地理区域。  **约束限制**：  - 数据库为RDS实例时必填。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -904,7 +904,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  用户所处region的projectId。
+    *  **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -916,7 +916,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 用户所处region的projectId。
+    * @param string|null $projectId **参数解释**：  数据库实例所在Region的项目ID，数据库为云上实例时填写数据库实例所在Region下的项目ID，否则填写当前任务所在Region下的项目ID。获取方法请参见获取项目ID。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -928,7 +928,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    *  **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -940,7 +940,7 @@ class TestEndPoint implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName 数据库用户名，DDS的账号认证数据库，Oracle的serviceName。
+    * @param string|null $dbName **参数解释**：  数据库名称，Oracle场景下为serviceName。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

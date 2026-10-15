@@ -21,8 +21,8 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * results  批量测试连接响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * results  批量测试连接响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * results  批量测试连接响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * results  批量测试连接响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * results  批量测试连接响应体集合。
-    * count  总记录数。
+    * results  **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * count  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
 
     /**
     * Gets results
-    *  批量测试连接响应体集合。
+    *  **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\CheckJobResp[]|null
     */
@@ -198,7 +198,7 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\CheckJobResp[]|null $results 批量测试连接响应体集合。
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\CheckJobResp[]|null $results **参数解释**：  批量测试连接响应体集合，包含每个任务测试连接的结果信息。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
 
     /**
     * Gets count
-    *  总记录数。
+    *  **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class BatchValidateClustersConnectionsResponse implements ModelInterface, ArrayA
     /**
     * Sets count
     *
-    * @param int|null $count 总记录数。
+    * @param int|null $count **参数解释**：  返回的任务信息总数，表示本次查询成功返回的任务数量，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

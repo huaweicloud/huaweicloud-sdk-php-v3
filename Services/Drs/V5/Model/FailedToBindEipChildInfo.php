@@ -20,8 +20,8 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  子任务ID
-    * name  子任务名称
+    * id  子任务ID。
+    * name  子任务名称。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  子任务ID
-    * name  子任务名称
+    * id  子任务ID。
+    * name  子任务名称。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  子任务ID
-    * name  子任务名称
+    * id  子任务ID。
+    * name  子任务名称。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  子任务ID
-    * name  子任务名称
+    * id  子任务ID。
+    * name  子任务名称。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  子任务ID
-    * name  子任务名称
+    * id  子任务ID。
+    * name  子任务名称。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  子任务ID
+    *  子任务ID。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 子任务ID
+    * @param string|null $id 子任务ID。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  子任务名称
+    *  子任务名称。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class FailedToBindEipChildInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 子任务名称
+    * @param string|null $name 子任务名称。
     *
     * @return $this
     */

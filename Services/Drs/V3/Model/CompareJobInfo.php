@@ -30,6 +30,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签，当前仅涉及对比策略时返回。
     * proportionValue  抽样比例，对比类型为抽样对比时填写。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'string',
             'reportRemainSeconds' => 'int',
             'compareJobTag' => 'map[string,string]',
-            'proportionValue' => 'string'
+            'proportionValue' => 'string',
+            'databaseInfo' => 'object'
     ];
 
     /**
@@ -58,6 +60,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签，当前仅涉及对比策略时返回。
     * proportionValue  抽样比例，对比类型为抽样对比时填写。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
         'exportStatus' => null,
         'reportRemainSeconds' => 'int64',
         'compareJobTag' => null,
-        'proportionValue' => null
+        'proportionValue' => null,
+        'databaseInfo' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签，当前仅涉及对比策略时返回。
     * proportionValue  抽样比例，对比类型为抽样对比时填写。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'export_status',
             'reportRemainSeconds' => 'report_remain_seconds',
             'compareJobTag' => 'compare_job_tag',
-            'proportionValue' => 'proportion_value'
+            'proportionValue' => 'proportion_value',
+            'databaseInfo' => 'database_info'
     ];
 
     /**
@@ -135,6 +141,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签，当前仅涉及对比策略时返回。
     * proportionValue  抽样比例，对比类型为抽样对比时填写。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'setExportStatus',
             'reportRemainSeconds' => 'setReportRemainSeconds',
             'compareJobTag' => 'setCompareJobTag',
-            'proportionValue' => 'setProportionValue'
+            'proportionValue' => 'setProportionValue',
+            'databaseInfo' => 'setDatabaseInfo'
     ];
 
     /**
@@ -163,6 +171,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签，当前仅涉及对比策略时返回。
     * proportionValue  抽样比例，对比类型为抽样对比时填写。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'getExportStatus',
             'reportRemainSeconds' => 'getReportRemainSeconds',
             'compareJobTag' => 'getCompareJobTag',
-            'proportionValue' => 'getProportionValue'
+            'proportionValue' => 'getProportionValue',
+            'databaseInfo' => 'getDatabaseInfo'
     ];
 
     /**
@@ -247,6 +257,7 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
         $this->container['reportRemainSeconds'] = isset($data['reportRemainSeconds']) ? $data['reportRemainSeconds'] : null;
         $this->container['compareJobTag'] = isset($data['compareJobTag']) ? $data['compareJobTag'] : null;
         $this->container['proportionValue'] = isset($data['proportionValue']) ? $data['proportionValue'] : null;
+        $this->container['databaseInfo'] = isset($data['databaseInfo']) ? $data['databaseInfo'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     public function setProportionValue($proportionValue)
     {
         $this->container['proportionValue'] = $proportionValue;
+        return $this;
+    }
+
+    /**
+    * Gets databaseInfo
+    *  灾备数据库信息。
+    *
+    * @return object|null
+    */
+    public function getDatabaseInfo()
+    {
+        return $this->container['databaseInfo'];
+    }
+
+    /**
+    * Sets databaseInfo
+    *
+    * @param object|null $databaseInfo 灾备数据库信息。
+    *
+    * @return $this
+    */
+    public function setDatabaseInfo($databaseInfo)
+    {
+        $this->container['databaseInfo'] = $databaseInfo;
         return $this;
     }
 

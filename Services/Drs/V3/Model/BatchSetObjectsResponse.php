@@ -21,8 +21,8 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * allCounts  总数
-    * results  批量对象选择响应列表
+    * allCounts  **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * allCounts  总数
-    * results  批量对象选择响应列表
+    * allCounts  **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * allCounts  总数
-    * results  批量对象选择响应列表
+    * allCounts  **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * allCounts  总数
-    * results  批量对象选择响应列表
+    * allCounts  **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * allCounts  总数
-    * results  批量对象选择响应列表
+    * allCounts  **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets allCounts
-    *  总数
+    *  **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets allCounts
     *
-    * @param int|null $allCounts 总数
+    * @param int|null $allCounts **参数解释**：  批量对象选择操作的任务总数，表示本次请求中处理的对象选择任务总数量。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets results
-    *  批量对象选择响应列表
+    *  **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\DatabaseObjectResp[]|null
     */
@@ -222,7 +222,7 @@ class BatchSetObjectsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\DatabaseObjectResp[]|null $results 批量对象选择响应列表
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\DatabaseObjectResp[]|null $results **参数解释**：  批量对象选择操作的响应列表，详情请参见DatabaseObjectResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -39,6 +39,8 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。  PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。 COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * cpuOptions  cpuOptions
+    * tags  伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    * tagTransmissionPolicy  标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
     *
     * @var string[]
     */
@@ -61,7 +63,9 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
             'dedicatedHostId' => 'string',
             'marketType' => 'string',
             'multiFlavorPriorityPolicy' => 'string',
-            'cpuOptions' => '\HuaweiCloud\SDK\_As\V1\Model\CpuOptions'
+            'cpuOptions' => '\HuaweiCloud\SDK\_As\V1\Model\CpuOptions',
+            'tags' => '\HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]',
+            'tagTransmissionPolicy' => 'string'
     ];
 
     /**
@@ -85,6 +89,8 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。  PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。 COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * cpuOptions  cpuOptions
+    * tags  伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    * tagTransmissionPolicy  标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
     *
     * @var string[]
     */
@@ -107,7 +113,9 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
         'dedicatedHostId' => null,
         'marketType' => null,
         'multiFlavorPriorityPolicy' => null,
-        'cpuOptions' => null
+        'cpuOptions' => null,
+        'tags' => null,
+        'tagTransmissionPolicy' => null
     ];
 
     /**
@@ -152,6 +160,8 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。  PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。 COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * cpuOptions  cpuOptions
+    * tags  伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    * tagTransmissionPolicy  标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
     *
     * @var string[]
     */
@@ -174,7 +184,9 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
             'dedicatedHostId' => 'dedicated_host_id',
             'marketType' => 'market_type',
             'multiFlavorPriorityPolicy' => 'multi_flavor_priority_policy',
-            'cpuOptions' => 'cpu_options'
+            'cpuOptions' => 'cpu_options',
+            'tags' => 'tags',
+            'tagTransmissionPolicy' => 'tag_transmission_policy'
     ];
 
     /**
@@ -198,6 +210,8 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。  PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。 COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * cpuOptions  cpuOptions
+    * tags  伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    * tagTransmissionPolicy  标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
     *
     * @var string[]
     */
@@ -220,7 +234,9 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
             'dedicatedHostId' => 'setDedicatedHostId',
             'marketType' => 'setMarketType',
             'multiFlavorPriorityPolicy' => 'setMultiFlavorPriorityPolicy',
-            'cpuOptions' => 'setCpuOptions'
+            'cpuOptions' => 'setCpuOptions',
+            'tags' => 'setTags',
+            'tagTransmissionPolicy' => 'setTagTransmissionPolicy'
     ];
 
     /**
@@ -244,6 +260,8 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
     * marketType  云服务器的计费模式，可以选择竞价计费或按需计费。
     * multiFlavorPriorityPolicy  使用伸缩配置创建云主机的时候，多规格使用的优先级策略。  PICK_FIRST（默认）：选择优先，虚拟机扩容时规格的选择按照flavorRef列表的顺序进行优先级排序。 COST_FIRST：成本优化，虚拟机扩容时规格的选择按照价格最优原则进行优先级排序。
     * cpuOptions  cpuOptions
+    * tags  伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    * tagTransmissionPolicy  标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
     *
     * @var string[]
     */
@@ -266,7 +284,9 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
             'dedicatedHostId' => 'getDedicatedHostId',
             'marketType' => 'getMarketType',
             'multiFlavorPriorityPolicy' => 'getMultiFlavorPriorityPolicy',
-            'cpuOptions' => 'getCpuOptions'
+            'cpuOptions' => 'getCpuOptions',
+            'tags' => 'getTags',
+            'tagTransmissionPolicy' => 'getTagTransmissionPolicy'
     ];
 
     /**
@@ -346,6 +366,8 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
         $this->container['marketType'] = isset($data['marketType']) ? $data['marketType'] : null;
         $this->container['multiFlavorPriorityPolicy'] = isset($data['multiFlavorPriorityPolicy']) ? $data['multiFlavorPriorityPolicy'] : null;
         $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['tagTransmissionPolicy'] = isset($data['tagTransmissionPolicy']) ? $data['tagTransmissionPolicy'] : null;
     }
 
     /**
@@ -838,6 +860,54 @@ class InstanceConfigResult implements ModelInterface, ArrayAccess
     public function setCpuOptions($cpuOptions)
     {
         $this->container['cpuOptions'] = $cpuOptions;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    *
+    * @return \HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]|null $tags 伸缩配置标签列表。每个伸缩配置最多添加20个标签。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets tagTransmissionPolicy
+    *  标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
+    *
+    * @return string|null
+    */
+    public function getTagTransmissionPolicy()
+    {
+        return $this->container['tagTransmissionPolicy'];
+    }
+
+    /**
+    * Sets tagTransmissionPolicy
+    *
+    * @param string|null $tagTransmissionPolicy 标签传递策略，OVERRIDE表示扩容时使用伸缩配置标签，SUPPRESS表示扩容时使用伸缩组标签，默认SUPPRESS
+    *
+    * @return $this
+    */
+    public function setTagTransmissionPolicy($tagTransmissionPolicy)
+    {
+        $this->container['tagTransmissionPolicy'] = $tagTransmissionPolicy;
         return $this;
     }
 

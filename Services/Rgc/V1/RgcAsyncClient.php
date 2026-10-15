@@ -1530,6 +1530,68 @@ class RgcAsyncClient extends Client
     }
 
     /**
+     * 列出Landing Zone版本列表
+     *
+     * 列出Landing Zone版本列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listLandingZoneVersionAsync($request)
+    {
+        return $this->listLandingZoneVersionAsyncWithHttpInfo($request);
+    }
+    
+    public function listLandingZoneVersionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/landing-zone/version';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rgc\V1\Model\ListLandingZoneVersionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rgc\V1\Model\ListLandingZoneVersionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 设置Landing Zone
      *
      * 在当前区域创建或者更新Landing Zone。

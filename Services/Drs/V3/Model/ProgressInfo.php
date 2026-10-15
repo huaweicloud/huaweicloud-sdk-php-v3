@@ -20,8 +20,8 @@ class ProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * completed  完成进度
-    * remainingTime  预计剩余时间
+    * completed  **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * remainingTime  **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * completed  完成进度
-    * remainingTime  预计剩余时间
+    * completed  **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * remainingTime  **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ProgressInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * completed  完成进度
-    * remainingTime  预计剩余时间
+    * completed  **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * remainingTime  **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * completed  完成进度
-    * remainingTime  预计剩余时间
+    * completed  **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * remainingTime  **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * completed  完成进度
-    * remainingTime  预计剩余时间
+    * completed  **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * remainingTime  **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets completed
-    *  完成进度
+    *  **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ProgressInfo implements ModelInterface, ArrayAccess
     /**
     * Sets completed
     *
-    * @param string|null $completed 完成进度
+    * @param string|null $completed **参数解释**：  完成进度，以百分比形式表示，如\"94%\"、\"100%\"。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ProgressInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets remainingTime
-    *  预计剩余时间
+    *  **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ProgressInfo implements ModelInterface, ArrayAccess
     /**
     * Sets remainingTime
     *
-    * @param string|null $remainingTime 预计剩余时间
+    * @param string|null $remainingTime **参数解释**：  该子项迁移的预计剩余时间。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

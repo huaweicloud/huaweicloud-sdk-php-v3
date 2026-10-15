@@ -25,6 +25,7 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
     * isOnlyShowSent  是否仅查询已下发的加工对象，默认为否。
     * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
     * limit  查询返回记录的数量限制，默认为10。
+    * fetchAll  是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'isOnlyShowSent' => 'bool',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'fetchAll' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
     * isOnlyShowSent  是否仅查询已下发的加工对象，默认为否。
     * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
     * limit  查询返回记录的数量限制，默认为10。
+    * fetchAll  是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'isOnlyShowSent' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'fetchAll' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
     * isOnlyShowSent  是否仅查询已下发的加工对象，默认为否。
     * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
     * limit  查询返回记录的数量限制，默认为10。
+    * fetchAll  是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'isOnlyShowSent' => 'is_only_show_sent',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'fetchAll' => 'fetch_all'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
     * isOnlyShowSent  是否仅查询已下发的加工对象，默认为否。
     * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
     * limit  查询返回记录的数量限制，默认为10。
+    * fetchAll  是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'isOnlyShowSent' => 'setIsOnlyShowSent',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'fetchAll' => 'setFetchAll'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
     * isOnlyShowSent  是否仅查询已下发的加工对象，默认为否。
     * offset  偏移量，表示查询该偏移量后面的记录，默认为0。
     * limit  查询返回记录的数量限制，默认为10。
+    * fetchAll  是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'isOnlyShowSent' => 'getIsOnlyShowSent',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'fetchAll' => 'getFetchAll'
     ];
 
     /**
@@ -207,6 +217,7 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
         $this->container['isOnlyShowSent'] = isset($data['isOnlyShowSent']) ? $data['isOnlyShowSent'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['fetchAll'] = isset($data['fetchAll']) ? $data['fetchAll'] : null;
     }
 
     /**
@@ -359,6 +370,30 @@ class ListExtraColumnsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets fetchAll
+    *  是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
+    *
+    * @return bool|null
+    */
+    public function getFetchAll()
+    {
+        return $this->container['fetchAll'];
+    }
+
+    /**
+    * Sets fetchAll
+    *
+    * @param bool|null $fetchAll 是否查询所有数据，值为\"true\"时会使得offset和limit参数失效并返回所有记录，默认值为\"false\"。
+    *
+    * @return $this
+    */
+    public function setFetchAll($fetchAll)
+    {
+        $this->container['fetchAll'] = $fetchAll;
         return $this;
     }
 

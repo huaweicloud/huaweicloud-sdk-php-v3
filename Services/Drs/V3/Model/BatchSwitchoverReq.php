@@ -21,21 +21,25 @@ class BatchSwitchoverReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobs  批量主备调换的任务详情ID请求列表
+    * isPauseJob  灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobs' => 'string[]'
+            'jobs' => 'string[]',
+            'isPauseJob' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobs  批量主备调换的任务详情ID请求列表
+    * isPauseJob  灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobs' => null
+        'jobs' => null,
+        'isPauseJob' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class BatchSwitchoverReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobs  批量主备调换的任务详情ID请求列表
+    * isPauseJob  灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobs' => 'jobs'
+            'jobs' => 'jobs',
+            'isPauseJob' => 'is_pause_job'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobs  批量主备调换的任务详情ID请求列表
+    * isPauseJob  灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobs' => 'setJobs'
+            'jobs' => 'setJobs',
+            'isPauseJob' => 'setIsPauseJob'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobs  批量主备调换的任务详情ID请求列表
+    * isPauseJob  灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobs' => 'getJobs'
+            'jobs' => 'getJobs',
+            'isPauseJob' => 'getIsPauseJob'
     ];
 
     /**
@@ -148,6 +158,7 @@ class BatchSwitchoverReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobs'] = isset($data['jobs']) ? $data['jobs'] : null;
+        $this->container['isPauseJob'] = isset($data['isPauseJob']) ? $data['isPauseJob'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class BatchSwitchoverReq implements ModelInterface, ArrayAccess
     public function setJobs($jobs)
     {
         $this->container['jobs'] = $jobs;
+        return $this;
+    }
+
+    /**
+    * Gets isPauseJob
+    *  灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
+    *
+    * @return bool|null
+    */
+    public function getIsPauseJob()
+    {
+        return $this->container['isPauseJob'];
+    }
+
+    /**
+    * Sets isPauseJob
+    *
+    * @param bool|null $isPauseJob 灾备倒换后是否暂停任务。默认值为false，不暂停灾备任务。
+    *
+    * @return $this
+    */
+    public function setIsPauseJob($isPauseJob)
+    {
+        $this->container['isPauseJob'] = $isPauseJob;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务id
+    * jobId  任务ID。
     * speedLimit  限速信息请求体
     *
     * @var string[]
@@ -32,7 +32,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务id
+    * jobId  任务ID。
     * speedLimit  限速信息请求体
     *
     * @var string[]
@@ -65,7 +65,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务id
+    * jobId  任务ID。
     * speedLimit  限速信息请求体
     *
     * @var string[]
@@ -77,7 +77,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务id
+    * jobId  任务ID。
     * speedLimit  限速信息请求体
     *
     * @var string[]
@@ -89,7 +89,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务id
+    * jobId  任务ID。
     * speedLimit  限速信息请求体
     *
     * @var string[]
@@ -194,7 +194,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务id
+    *  任务ID。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class LimitSpeedReq implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 任务id
+    * @param string $jobId 任务ID。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * asyncJobId  批量异步创建的任务ID，由创建批量异步任务接口返回。
-    * xLanguage  请求语言类型。
+    * xLanguage  **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     *
@@ -37,7 +37,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * asyncJobId  批量异步创建的任务ID，由创建批量异步任务接口返回。
-    * xLanguage  请求语言类型。
+    * xLanguage  **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     *
@@ -74,7 +74,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * asyncJobId  批量异步创建的任务ID，由创建批量异步任务接口返回。
-    * xLanguage  请求语言类型。
+    * xLanguage  **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     *
@@ -90,7 +90,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * asyncJobId  批量异步创建的任务ID，由创建批量异步任务接口返回。
-    * xLanguage  请求语言类型。
+    * xLanguage  **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     *
@@ -106,7 +106,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * asyncJobId  批量异步创建的任务ID，由创建批量异步任务接口返回。
-    * xLanguage  请求语言类型。
+    * xLanguage  **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
     *
@@ -257,7 +257,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  请求语言类型。
+    *  **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     *
     * @return string|null
     */
@@ -269,7 +269,7 @@ class ListAsyncJobDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 请求语言类型。
+    * @param string|null $xLanguage **参数解释**：  请求语言类型。  **约束限制**：  不涉及。  **取值范围**：  - en-us：英文 - zh-cn：中文  **默认取值**：  en-us
     *
     * @return $this
     */

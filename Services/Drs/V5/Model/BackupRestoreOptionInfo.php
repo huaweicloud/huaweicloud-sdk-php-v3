@@ -28,6 +28,7 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     * dbNames  数据库名称。
     * resetDbNameMap  该字段为一个map，目前使用格式key是\"\"，value是新数据库名字。 该功能将忽略备份文件中原有的数据库名，通过DRS将其恢复为指定的新数据库名。 使用条件： - 备份文件中只有一个数据库。 - 备份文件是全量备份类型（待恢复备份类型选择：全量备份），且是一次性恢复（最后一个备份选择：是）。
     * isDeleteBackupFile  该参数控制使用OBS桶中备份文件恢复时，当任务结束时是否删除下载到RDS for SQL server磁盘中的OBS备份文件，默认删除。 - true 删除 - false 不删除
+    * consistencyCheckMode  DBCC一致性校验模式。 - sync 同步 - async 异步
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
             'recoveryMode' => 'string',
             'dbNames' => 'string[]',
             'resetDbNameMap' => 'map[string,string]',
-            'isDeleteBackupFile' => 'bool'
+            'isDeleteBackupFile' => 'bool',
+            'consistencyCheckMode' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     * dbNames  数据库名称。
     * resetDbNameMap  该字段为一个map，目前使用格式key是\"\"，value是新数据库名字。 该功能将忽略备份文件中原有的数据库名，通过DRS将其恢复为指定的新数据库名。 使用条件： - 备份文件中只有一个数据库。 - 备份文件是全量备份类型（待恢复备份类型选择：全量备份），且是一次性恢复（最后一个备份选择：是）。
     * isDeleteBackupFile  该参数控制使用OBS桶中备份文件恢复时，当任务结束时是否删除下载到RDS for SQL server磁盘中的OBS备份文件，默认删除。 - true 删除 - false 不删除
+    * consistencyCheckMode  DBCC一致性校验模式。 - sync 同步 - async 异步
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
         'recoveryMode' => null,
         'dbNames' => null,
         'resetDbNameMap' => null,
-        'isDeleteBackupFile' => null
+        'isDeleteBackupFile' => null,
+        'consistencyCheckMode' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     * dbNames  数据库名称。
     * resetDbNameMap  该字段为一个map，目前使用格式key是\"\"，value是新数据库名字。 该功能将忽略备份文件中原有的数据库名，通过DRS将其恢复为指定的新数据库名。 使用条件： - 备份文件中只有一个数据库。 - 备份文件是全量备份类型（待恢复备份类型选择：全量备份），且是一次性恢复（最后一个备份选择：是）。
     * isDeleteBackupFile  该参数控制使用OBS桶中备份文件恢复时，当任务结束时是否删除下载到RDS for SQL server磁盘中的OBS备份文件，默认删除。 - true 删除 - false 不删除
+    * consistencyCheckMode  DBCC一致性校验模式。 - sync 同步 - async 异步
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
             'recoveryMode' => 'recovery_mode',
             'dbNames' => 'db_names',
             'resetDbNameMap' => 'reset_db_name_map',
-            'isDeleteBackupFile' => 'is_delete_backup_file'
+            'isDeleteBackupFile' => 'is_delete_backup_file',
+            'consistencyCheckMode' => 'consistency_check_mode'
     ];
 
     /**
@@ -121,6 +127,7 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     * dbNames  数据库名称。
     * resetDbNameMap  该字段为一个map，目前使用格式key是\"\"，value是新数据库名字。 该功能将忽略备份文件中原有的数据库名，通过DRS将其恢复为指定的新数据库名。 使用条件： - 备份文件中只有一个数据库。 - 备份文件是全量备份类型（待恢复备份类型选择：全量备份），且是一次性恢复（最后一个备份选择：是）。
     * isDeleteBackupFile  该参数控制使用OBS桶中备份文件恢复时，当任务结束时是否删除下载到RDS for SQL server磁盘中的OBS备份文件，默认删除。 - true 删除 - false 不删除
+    * consistencyCheckMode  DBCC一致性校验模式。 - sync 同步 - async 异步
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
             'recoveryMode' => 'setRecoveryMode',
             'dbNames' => 'setDbNames',
             'resetDbNameMap' => 'setResetDbNameMap',
-            'isDeleteBackupFile' => 'setIsDeleteBackupFile'
+            'isDeleteBackupFile' => 'setIsDeleteBackupFile',
+            'consistencyCheckMode' => 'setConsistencyCheckMode'
     ];
 
     /**
@@ -145,6 +153,7 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     * dbNames  数据库名称。
     * resetDbNameMap  该字段为一个map，目前使用格式key是\"\"，value是新数据库名字。 该功能将忽略备份文件中原有的数据库名，通过DRS将其恢复为指定的新数据库名。 使用条件： - 备份文件中只有一个数据库。 - 备份文件是全量备份类型（待恢复备份类型选择：全量备份），且是一次性恢复（最后一个备份选择：是）。
     * isDeleteBackupFile  该参数控制使用OBS桶中备份文件恢复时，当任务结束时是否删除下载到RDS for SQL server磁盘中的OBS备份文件，默认删除。 - true 删除 - false 不删除
+    * consistencyCheckMode  DBCC一致性校验模式。 - sync 同步 - async 异步
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
             'recoveryMode' => 'getRecoveryMode',
             'dbNames' => 'getDbNames',
             'resetDbNameMap' => 'getResetDbNameMap',
-            'isDeleteBackupFile' => 'getIsDeleteBackupFile'
+            'isDeleteBackupFile' => 'getIsDeleteBackupFile',
+            'consistencyCheckMode' => 'getConsistencyCheckMode'
     ];
 
     /**
@@ -201,6 +211,8 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     }
     const RECOVERY_MODE_FULL = 'full';
     const RECOVERY_MODE_INCRE = 'incre';
+    const CONSISTENCY_CHECK_MODE_SYNC = 'sync';
+    const CONSISTENCY_CHECK_MODE_ASYNC = 'async';
     
 
     /**
@@ -213,6 +225,19 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
         return [
             self::RECOVERY_MODE_FULL,
             self::RECOVERY_MODE_INCRE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getConsistencyCheckModeAllowableValues()
+    {
+        return [
+            self::CONSISTENCY_CHECK_MODE_SYNC,
+            self::CONSISTENCY_CHECK_MODE_ASYNC,
         ];
     }
 
@@ -240,6 +265,7 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
         $this->container['dbNames'] = isset($data['dbNames']) ? $data['dbNames'] : null;
         $this->container['resetDbNameMap'] = isset($data['resetDbNameMap']) ? $data['resetDbNameMap'] : null;
         $this->container['isDeleteBackupFile'] = isset($data['isDeleteBackupFile']) ? $data['isDeleteBackupFile'] : null;
+        $this->container['consistencyCheckMode'] = isset($data['consistencyCheckMode']) ? $data['consistencyCheckMode'] : null;
     }
 
     /**
@@ -273,6 +299,14 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['recoveryMode']) < 0)) {
                 $invalidProperties[] = "invalid value for 'recoveryMode', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getConsistencyCheckModeAllowableValues();
+                if (!is_null($this->container['consistencyCheckMode']) && !in_array($this->container['consistencyCheckMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'consistencyCheckMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -476,6 +510,30 @@ class BackupRestoreOptionInfo implements ModelInterface, ArrayAccess
     public function setIsDeleteBackupFile($isDeleteBackupFile)
     {
         $this->container['isDeleteBackupFile'] = $isDeleteBackupFile;
+        return $this;
+    }
+
+    /**
+    * Gets consistencyCheckMode
+    *  DBCC一致性校验模式。 - sync 同步 - async 异步
+    *
+    * @return string|null
+    */
+    public function getConsistencyCheckMode()
+    {
+        return $this->container['consistencyCheckMode'];
+    }
+
+    /**
+    * Sets consistencyCheckMode
+    *
+    * @param string|null $consistencyCheckMode DBCC一致性校验模式。 - sync 同步 - async 异步
+    *
+    * @return $this
+    */
+    public function setConsistencyCheckMode($consistencyCheckMode)
+    {
+        $this->container['consistencyCheckMode'] = $consistencyCheckMode;
         return $this;
     }
 

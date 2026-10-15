@@ -20,7 +20,7 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * refresh  是否重新从node获取列信息
+    * refresh  是否重新从node获取列信息，默认为否。
     * objectIds  列所属的对象信息
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * refresh  是否重新从node获取列信息
+    * refresh  是否重新从node获取列信息，默认为否。
     * objectIds  列所属的对象信息
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * refresh  是否重新从node获取列信息
+    * refresh  是否重新从node获取列信息，默认为否。
     * objectIds  列所属的对象信息
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * refresh  是否重新从node获取列信息
+    * refresh  是否重新从node获取列信息，默认为否。
     * objectIds  列所属的对象信息
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * refresh  是否重新从node获取列信息
+    * refresh  是否重新从node获取列信息，默认为否。
     * objectIds  列所属的对象信息
     *
     * @var string[]
@@ -169,9 +169,6 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['refresh'] === null) {
-            $invalidProperties[] = "'refresh' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -188,9 +185,9 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets refresh
-    *  是否重新从node获取列信息
+    *  是否重新从node获取列信息，默认为否。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getRefresh()
     {
@@ -200,7 +197,7 @@ class ShowColumnInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets refresh
     *
-    * @param bool $refresh 是否重新从node获取列信息
+    * @param bool|null $refresh 是否重新从node获取列信息，默认为否。
     *
     * @return $this
     */

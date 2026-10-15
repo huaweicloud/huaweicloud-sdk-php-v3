@@ -20,7 +20,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobs  批量查询任务详情
+    * jobs  **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * pageReq  pageReq
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobs  批量查询任务详情
+    * jobs  **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * pageReq  pageReq
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobs  批量查询任务详情
+    * jobs  **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * pageReq  pageReq
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobs  批量查询任务详情
+    * jobs  **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * pageReq  pageReq
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobs  批量查询任务详情
+    * jobs  **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * pageReq  pageReq
     *
     * @var string[]
@@ -188,7 +188,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobs
-    *  批量查询任务详情
+    *  **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string[]
     */
@@ -200,7 +200,7 @@ class BatchQueryJobReqPage implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param string[] $jobs 批量查询任务详情
+    * @param string[] $jobs **参数解释**：  批量查询任务ID列表，通过该参数指定需要查询的一个或多个任务。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

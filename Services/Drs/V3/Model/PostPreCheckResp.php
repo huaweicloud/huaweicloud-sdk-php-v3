@@ -20,11 +20,11 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务id。
-    * precheckId  预检查id。
-    * status  成功或失败的状态
-    * errorCode  错误码。
-    * errorMsg  错误信息。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * precheckId  **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务id。
-    * precheckId  预检查id。
-    * status  成功或失败的状态
-    * errorCode  错误码。
-    * errorMsg  错误信息。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * precheckId  **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务id。
-    * precheckId  预检查id。
-    * status  成功或失败的状态
-    * errorCode  错误码。
-    * errorMsg  错误信息。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * precheckId  **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务id。
-    * precheckId  预检查id。
-    * status  成功或失败的状态
-    * errorCode  错误码。
-    * errorMsg  错误信息。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * precheckId  **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务id。
-    * precheckId  预检查id。
-    * status  成功或失败的状态
-    * errorCode  错误码。
-    * errorMsg  错误信息。
+    * id  **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * precheckId  **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * status  **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
+    * errorCode  **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务id。
+    *  **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务id。
+    * @param string|null $id **参数解释**：  任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets precheckId
-    *  预检查id。
+    *  **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
     /**
     * Sets precheckId
     *
-    * @param string|null $precheckId 预检查id。
+    * @param string|null $precheckId **参数解释**：  预检查后返回的ID，可用于查询预检查结果。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  成功或失败的状态
+    *  **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 成功或失败的状态
+    * @param string|null $status **参数解释**：  预检查结果状态，表示预检查是否通过。  **约束限制**：  不涉及。  **取值范围**：  - success：预检查成功 - failed：预检查失败  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码。
+    *  **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 错误码。
+    * @param string|null $errorCode **参数解释**：  错误码，当预检查失败时返回的错误代码。  **约束限制**：  不涉及。  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误信息。
+    *  **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class PostPreCheckResp implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string|null $errorMsg 错误信息。
+    * @param string|null $errorMsg **参数解释**：  错误详细信息，当预检查失败时返回的具体错误描述。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -26,6 +26,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     * startTime  对比开始时间，UTC时间。
     * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
             'status' => 'string',
             'startTime' => 'string',
             'endTime' => 'string',
-            'computeType' => 'string'
+            'computeType' => 'string',
+            'databaseInfo' => 'object'
     ];
 
     /**
@@ -46,6 +48,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     * startTime  对比开始时间，UTC时间。
     * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
         'status' => null,
         'startTime' => null,
         'endTime' => null,
-        'computeType' => null
+        'computeType' => null,
+        'databaseInfo' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     * startTime  对比开始时间，UTC时间。
     * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
             'status' => 'status',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
-            'computeType' => 'compute_type'
+            'computeType' => 'compute_type',
+            'databaseInfo' => 'database_info'
     ];
 
     /**
@@ -107,6 +113,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     * startTime  对比开始时间，UTC时间。
     * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
-            'computeType' => 'setComputeType'
+            'computeType' => 'setComputeType',
+            'databaseInfo' => 'setDatabaseInfo'
     ];
 
     /**
@@ -127,6 +135,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     * startTime  对比开始时间，UTC时间。
     * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
-            'computeType' => 'getComputeType'
+            'computeType' => 'getComputeType',
+            'databaseInfo' => 'getDatabaseInfo'
     ];
 
     /**
@@ -203,6 +213,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['computeType'] = isset($data['computeType']) ? $data['computeType'] : null;
+        $this->container['databaseInfo'] = isset($data['databaseInfo']) ? $data['databaseInfo'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     public function setComputeType($computeType)
     {
         $this->container['computeType'] = $computeType;
+        return $this;
+    }
+
+    /**
+    * Gets databaseInfo
+    *  灾备数据库信息。
+    *
+    * @return object|null
+    */
+    public function getDatabaseInfo()
+    {
+        return $this->container['databaseInfo'];
+    }
+
+    /**
+    * Sets databaseInfo
+    *
+    * @param object|null $databaseInfo 灾备数据库信息。
+    *
+    * @return $this
+    */
+    public function setDatabaseInfo($databaseInfo)
+    {
+        $this->container['databaseInfo'] = $databaseInfo;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * periodType  订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
-    * periodNum  订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
-    * isAutoRenew  是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    * periodType  **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
+    * periodNum  **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
+    * isAutoRenew  **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * periodType  订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
-    * periodNum  订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
-    * isAutoRenew  是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    * periodType  **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
+    * periodNum  **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
+    * isAutoRenew  **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * periodType  订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
-    * periodNum  订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
-    * isAutoRenew  是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    * periodType  **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
+    * periodNum  **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
+    * isAutoRenew  **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * periodType  订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
-    * periodNum  订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
-    * isAutoRenew  是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    * periodType  **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
+    * periodNum  **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
+    * isAutoRenew  **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * periodType  订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
-    * periodNum  订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
-    * isAutoRenew  是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    * periodType  **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
+    * periodNum  **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
+    * isAutoRenew  **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
+    *  **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int|null $periodType 订购周期类型。 取值范围： - 2：表示周期类型为月。 - 3：表示周期类型为年。
+    * @param int|null $periodType **参数解释**：  订购周期类型。  **约束限制**：  不涉及。  **取值范围**：  - 2：周期类型为月 - 3：周期类型为年  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodNum
-    *  订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
+    *  **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
     /**
     * Sets periodNum
     *
-    * @param int|null $periodNum 订购周期数。 取值范围： - period_type=2（周期类型为月）时，取值为[1，9]。 - period_type=3（周期类型为年）时，取值为[1，3]。
+    * @param int|null $periodNum **参数解释**：  订购周期数。  **约束限制**：  不涉及。  **取值范围**：  - period_type为2（月）时，取值为1-9 - period_type为3（年）时，取值为1-3  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    *  **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class PeriodOrderInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param int|null $isAutoRenew 是否自动续订。 取值范围： - 0：表示不自动续订。 - 1：表示自动续订。
+    * @param int|null $isAutoRenew **参数解释**：  是否自动续订。  **约束限制**：  不涉及。  **取值范围**：  - 0：不自动续订 - 1：自动续订  **默认取值**：  不涉及
     *
     * @return $this
     */

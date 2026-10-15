@@ -21,27 +21,27 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bandwidth  EIP带宽，单位：MB/S
-    * isSrcNormal  源库连接状态是否正常。
-    * isDstNormal  目标库连接状态是否正常。
-    * srcOffset  源库offSet位点。
-    * nodeOffset  迁移实例offSet位点。
-    * dstOffset  目标库offSet位点。
-    * srcDelay  源库时延。
-    * dstDelay  目标库时延。
-    * srcRps  源库RPS。
-    * srcIo  源库IO。
-    * dstRps  目标库RPS。
-    * dstIo  目标库IO。
-    * transData  迁移数据量。单位：MB
-    * transLines  迁移数据行数。
-    * usedVolumes  磁盘使用量。单位：GB
-    * usedMemory  内存使用量。单位：MB
-    * usedCpuPercent  CPU使用百分比。
-    * nodeVolumeSize  node磁盘总大小。单位：GB
-    * nodeMemorySize  node内存总大小。单位：MB
-    * updateTime  更新时间。
-    * applyRate  同步速度。单位：byte/s
+    * bandwidth  **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isSrcNormal  **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
+    * isDstNormal  **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
+    * srcOffset  **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeOffset  **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstOffset  **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcDelay  **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstDelay  **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcRps  **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcIo  **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstRps  **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstIo  **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transData  **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transLines  **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedVolumes  **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedMemory  **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedCpuPercent  **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeVolumeSize  **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeMemorySize  **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * updateTime  **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * applyRate  **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -71,27 +71,27 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bandwidth  EIP带宽，单位：MB/S
-    * isSrcNormal  源库连接状态是否正常。
-    * isDstNormal  目标库连接状态是否正常。
-    * srcOffset  源库offSet位点。
-    * nodeOffset  迁移实例offSet位点。
-    * dstOffset  目标库offSet位点。
-    * srcDelay  源库时延。
-    * dstDelay  目标库时延。
-    * srcRps  源库RPS。
-    * srcIo  源库IO。
-    * dstRps  目标库RPS。
-    * dstIo  目标库IO。
-    * transData  迁移数据量。单位：MB
-    * transLines  迁移数据行数。
-    * usedVolumes  磁盘使用量。单位：GB
-    * usedMemory  内存使用量。单位：MB
-    * usedCpuPercent  CPU使用百分比。
-    * nodeVolumeSize  node磁盘总大小。单位：GB
-    * nodeMemorySize  node内存总大小。单位：MB
-    * updateTime  更新时间。
-    * applyRate  同步速度。单位：byte/s
+    * bandwidth  **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isSrcNormal  **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
+    * isDstNormal  **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
+    * srcOffset  **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeOffset  **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstOffset  **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcDelay  **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstDelay  **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcRps  **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcIo  **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstRps  **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstIo  **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transData  **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transLines  **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedVolumes  **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedMemory  **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedCpuPercent  **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeVolumeSize  **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeMemorySize  **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * updateTime  **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * applyRate  **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -142,27 +142,27 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bandwidth  EIP带宽，单位：MB/S
-    * isSrcNormal  源库连接状态是否正常。
-    * isDstNormal  目标库连接状态是否正常。
-    * srcOffset  源库offSet位点。
-    * nodeOffset  迁移实例offSet位点。
-    * dstOffset  目标库offSet位点。
-    * srcDelay  源库时延。
-    * dstDelay  目标库时延。
-    * srcRps  源库RPS。
-    * srcIo  源库IO。
-    * dstRps  目标库RPS。
-    * dstIo  目标库IO。
-    * transData  迁移数据量。单位：MB
-    * transLines  迁移数据行数。
-    * usedVolumes  磁盘使用量。单位：GB
-    * usedMemory  内存使用量。单位：MB
-    * usedCpuPercent  CPU使用百分比。
-    * nodeVolumeSize  node磁盘总大小。单位：GB
-    * nodeMemorySize  node内存总大小。单位：MB
-    * updateTime  更新时间。
-    * applyRate  同步速度。单位：byte/s
+    * bandwidth  **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isSrcNormal  **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
+    * isDstNormal  **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
+    * srcOffset  **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeOffset  **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstOffset  **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcDelay  **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstDelay  **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcRps  **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcIo  **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstRps  **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstIo  **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transData  **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transLines  **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedVolumes  **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedMemory  **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedCpuPercent  **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeVolumeSize  **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeMemorySize  **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * updateTime  **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * applyRate  **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -192,27 +192,27 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bandwidth  EIP带宽，单位：MB/S
-    * isSrcNormal  源库连接状态是否正常。
-    * isDstNormal  目标库连接状态是否正常。
-    * srcOffset  源库offSet位点。
-    * nodeOffset  迁移实例offSet位点。
-    * dstOffset  目标库offSet位点。
-    * srcDelay  源库时延。
-    * dstDelay  目标库时延。
-    * srcRps  源库RPS。
-    * srcIo  源库IO。
-    * dstRps  目标库RPS。
-    * dstIo  目标库IO。
-    * transData  迁移数据量。单位：MB
-    * transLines  迁移数据行数。
-    * usedVolumes  磁盘使用量。单位：GB
-    * usedMemory  内存使用量。单位：MB
-    * usedCpuPercent  CPU使用百分比。
-    * nodeVolumeSize  node磁盘总大小。单位：GB
-    * nodeMemorySize  node内存总大小。单位：MB
-    * updateTime  更新时间。
-    * applyRate  同步速度。单位：byte/s
+    * bandwidth  **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isSrcNormal  **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
+    * isDstNormal  **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
+    * srcOffset  **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeOffset  **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstOffset  **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcDelay  **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstDelay  **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcRps  **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcIo  **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstRps  **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstIo  **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transData  **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transLines  **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedVolumes  **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedMemory  **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedCpuPercent  **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeVolumeSize  **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeMemorySize  **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * updateTime  **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * applyRate  **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -242,27 +242,27 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bandwidth  EIP带宽，单位：MB/S
-    * isSrcNormal  源库连接状态是否正常。
-    * isDstNormal  目标库连接状态是否正常。
-    * srcOffset  源库offSet位点。
-    * nodeOffset  迁移实例offSet位点。
-    * dstOffset  目标库offSet位点。
-    * srcDelay  源库时延。
-    * dstDelay  目标库时延。
-    * srcRps  源库RPS。
-    * srcIo  源库IO。
-    * dstRps  目标库RPS。
-    * dstIo  目标库IO。
-    * transData  迁移数据量。单位：MB
-    * transLines  迁移数据行数。
-    * usedVolumes  磁盘使用量。单位：GB
-    * usedMemory  内存使用量。单位：MB
-    * usedCpuPercent  CPU使用百分比。
-    * nodeVolumeSize  node磁盘总大小。单位：GB
-    * nodeMemorySize  node内存总大小。单位：MB
-    * updateTime  更新时间。
-    * applyRate  同步速度。单位：byte/s
+    * bandwidth  **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * isSrcNormal  **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
+    * isDstNormal  **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
+    * srcOffset  **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeOffset  **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstOffset  **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcDelay  **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstDelay  **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcRps  **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * srcIo  **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstRps  **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * dstIo  **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transData  **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * transLines  **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedVolumes  **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedMemory  **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * usedCpuPercent  **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeVolumeSize  **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * nodeMemorySize  **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * updateTime  **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * applyRate  **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -395,7 +395,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  EIP带宽，单位：MB/S
+    *  **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param string|null $bandwidth EIP带宽，单位：MB/S
+    * @param string|null $bandwidth **参数解释**：  EIP带宽，用于评估公网传输速率是否满足迁移需求。单位：MB/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSrcNormal
-    *  源库连接状态是否正常。
+    *  **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
     *
     * @return bool|null
     */
@@ -431,7 +431,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSrcNormal
     *
-    * @param bool|null $isSrcNormal 源库连接状态是否正常。
+    * @param bool|null $isSrcNormal **参数解释**：  源库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：源库连接正常 - false：源库连接异常  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -443,7 +443,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDstNormal
-    *  目标库连接状态是否正常。
+    *  **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
     *
     * @return bool|null
     */
@@ -455,7 +455,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isDstNormal
     *
-    * @param bool|null $isDstNormal 目标库连接状态是否正常。
+    * @param bool|null $isDstNormal **参数解释**：  目标库连接状态是否正常。  **约束限制**：  不涉及。  **取值范围**：  - true：目标库连接正常 - false：目标库连接异常  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcOffset
-    *  源库offSet位点。
+    *  **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -479,7 +479,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets srcOffset
     *
-    * @param string|null $srcOffset 源库offSet位点。
+    * @param string|null $srcOffset **参数解释**：  源库offset位点，用于判断源库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -491,7 +491,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeOffset
-    *  迁移实例offSet位点。
+    *  **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -503,7 +503,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodeOffset
     *
-    * @param string|null $nodeOffset 迁移实例offSet位点。
+    * @param string|null $nodeOffset **参数解释**：  迁移实例offset位点，用于判断迁移实例数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -515,7 +515,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dstOffset
-    *  目标库offSet位点。
+    *  **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -527,7 +527,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dstOffset
     *
-    * @param string|null $dstOffset 目标库offSet位点。
+    * @param string|null $dstOffset **参数解释**：  目标库offset位点，用于判断目标库数据同步进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -539,7 +539,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcDelay
-    *  源库时延。
+    *  **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -551,7 +551,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets srcDelay
     *
-    * @param int|null $srcDelay 源库时延。
+    * @param int|null $srcDelay **参数解释**：  源库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -563,7 +563,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dstDelay
-    *  目标库时延。
+    *  **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -575,7 +575,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dstDelay
     *
-    * @param int|null $dstDelay 目标库时延。
+    * @param int|null $dstDelay **参数解释**：  目标库时延，用于判断数据同步的实时性。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -587,7 +587,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcRps
-    *  源库RPS。
+    *  **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -599,7 +599,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets srcRps
     *
-    * @param string|null $srcRps 源库RPS。
+    * @param string|null $srcRps **参数解释**：  源库RPS（Requests Per Second，每秒请求数），用于评估源库的数据变更速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -611,7 +611,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcIo
-    *  源库IO。
+    *  **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -623,7 +623,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets srcIo
     *
-    * @param string|null $srcIo 源库IO。
+    * @param string|null $srcIo **参数解释**：  源库IO（Input/Output，每秒输入输出操作量），用于评估源库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -635,7 +635,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dstRps
-    *  目标库RPS。
+    *  **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -647,7 +647,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dstRps
     *
-    * @param string|null $dstRps 目标库RPS。
+    * @param string|null $dstRps **参数解释**：  目标库RPS（Requests Per Second，每秒请求数），用于评估目标库的数据写入速率。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -659,7 +659,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets dstIo
-    *  目标库IO。
+    *  **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -671,7 +671,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets dstIo
     *
-    * @param string|null $dstIo 目标库IO。
+    * @param string|null $dstIo **参数解释**：  目标库IO（Input/Output，每秒输入输出操作量），用于评估目标库的磁盘读写负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -683,7 +683,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets transData
-    *  迁移数据量。单位：MB
+    *  **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -695,7 +695,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets transData
     *
-    * @param string|null $transData 迁移数据量。单位：MB
+    * @param string|null $transData **参数解释**：  已迁移的数据量，用于评估迁移进度。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -707,7 +707,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets transLines
-    *  迁移数据行数。
+    *  **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -719,7 +719,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets transLines
     *
-    * @param string|null $transLines 迁移数据行数。
+    * @param string|null $transLines **参数解释**：  已迁移的数据行数，用于评估迁移进度。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -731,7 +731,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedVolumes
-    *  磁盘使用量。单位：GB
+    *  **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -743,7 +743,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedVolumes
     *
-    * @param string|null $usedVolumes 磁盘使用量。单位：GB
+    * @param string|null $usedVolumes **参数解释**：  迁移实例磁盘使用量，用于监控迁移实例存储容量。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -755,7 +755,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedMemory
-    *  内存使用量。单位：MB
+    *  **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -767,7 +767,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedMemory
     *
-    * @param string|null $usedMemory 内存使用量。单位：MB
+    * @param string|null $usedMemory **参数解释**：  迁移实例内存使用量，用于监控迁移实例内存消耗。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -779,7 +779,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedCpuPercent
-    *  CPU使用百分比。
+    *  **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -791,7 +791,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedCpuPercent
     *
-    * @param string|null $usedCpuPercent CPU使用百分比。
+    * @param string|null $usedCpuPercent **参数解释**：  迁移实例CPU使用百分比，用于监控迁移实例计算负载。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -803,7 +803,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeVolumeSize
-    *  node磁盘总大小。单位：GB
+    *  **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -815,7 +815,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodeVolumeSize
     *
-    * @param int|null $nodeVolumeSize node磁盘总大小。单位：GB
+    * @param int|null $nodeVolumeSize **参数解释**：  迁移实例磁盘总大小，与used_volumes配合评估磁盘使用率。单位：GB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -827,7 +827,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeMemorySize
-    *  node内存总大小。单位：MB
+    *  **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -839,7 +839,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nodeMemorySize
     *
-    * @param int|null $nodeMemorySize node内存总大小。单位：MB
+    * @param int|null $nodeMemorySize **参数解释**：  迁移实例内存总大小，与used_memory配合评估内存使用率。单位：MB。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -851,7 +851,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间。
+    *  **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -863,7 +863,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间。
+    * @param string|null $updateTime **参数解释**：  监控数据的更新时间，UTC格式，如2023-07-19T03:09:25Z。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -875,7 +875,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyRate
-    *  同步速度。单位：byte/s
+    *  **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -887,7 +887,7 @@ class ShowMonitorDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets applyRate
     *
-    * @param int|null $applyRate 同步速度。单位：byte/s
+    * @param int|null $applyRate **参数解释**：  同步速度，用于评估数据回放速率。单位：byte/s。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
-    * value  标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    * key  **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * value  **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
-    * value  标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    * key  **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * value  **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
-    * value  标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    * key  **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * value  **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
-    * value  标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    * key  **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * value  **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
-    * value  标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    * key  **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * value  **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
+    *  **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签键。 - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。
+    * @param string $key **参数解释**：  标签键。  **约束限制**：  - 长度为1-128个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@，但首尾不能含有空格，不能以_sys_开头。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    *  **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class BatchResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 标签值，删除标签时非必填。 - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。
+    * @param string|null $value **参数解释**：  标签值，删除标签时非必填。  **约束限制**：  - 最大长度255个unicode字符。 - 可以包含任何语种字母、数字、空格和_.:=+-@。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

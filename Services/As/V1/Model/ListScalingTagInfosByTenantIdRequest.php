@@ -21,7 +21,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  项目ID
-    * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    * resourceType  资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  项目ID
-    * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    * resourceType  资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  项目ID
-    * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    * resourceType  资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  项目ID
-    * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    * resourceType  资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  项目ID
-    * resourceType  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    * resourceType  资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @var string[]
     */
@@ -140,6 +140,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
     const RESOURCE_TYPE_SCALING_GROUP_TAG = 'scaling_group_tag';
+    const RESOURCE_TYPE_SCALING_CONFIGURATION_TAG = 'scaling_configuration_tag';
     
 
     /**
@@ -151,6 +152,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     {
         return [
             self::RESOURCE_TYPE_SCALING_GROUP_TAG,
+            self::RESOURCE_TYPE_SCALING_CONFIGURATION_TAG,
         ];
     }
 
@@ -236,7 +238,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets resourceType
-    *  资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    *  资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @return string
     */
@@ -248,7 +250,7 @@ class ListScalingTagInfosByTenantIdRequest implements ModelInterface, ArrayAcces
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型，枚举类：scaling_group_tag。scaling_group_tag表示资源类型为伸缩组。
+    * @param string $resourceType 资源类型，枚举类：scaling_group_tag、scaling_configuration_tag。scaling_group_tag表示资源类型为伸缩组，scaling_configuration_tag表示资源类型为伸缩配置。
     *
     * @return $this
     */

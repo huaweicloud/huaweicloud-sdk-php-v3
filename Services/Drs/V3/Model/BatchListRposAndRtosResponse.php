@@ -21,8 +21,8 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  总数
-    * results  批量查询RPO&RTO的响应体集合
+    * count  **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  总数
-    * results  批量查询RPO&RTO的响应体集合
+    * count  **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  总数
-    * results  批量查询RPO&RTO的响应体集合
+    * count  **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  总数
-    * results  批量查询RPO&RTO的响应体集合
+    * count  **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  总数
-    * results  批量查询RPO&RTO的响应体集合
+    * count  **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
+    * results  **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  总数
+    *  **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 总数
+    * @param int|null $count **参数解释**：  返回的RPO和RTO查询结果总数，与results数组的长度一致。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets results
-    *  批量查询RPO&RTO的响应体集合
+    *  **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\QueryRpoAndRtoResp[]|null
     */
@@ -222,7 +222,7 @@ class BatchListRposAndRtosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets results
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\QueryRpoAndRtoResp[]|null $results 批量查询RPO&RTO的响应体集合
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\QueryRpoAndRtoResp[]|null $results **参数解释**：  批量查询RPO和RTO的响应体集合，每个元素包含一个任务的RPO和RTO信息。详情请参见QueryRpoAndRtoResp对象定义。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

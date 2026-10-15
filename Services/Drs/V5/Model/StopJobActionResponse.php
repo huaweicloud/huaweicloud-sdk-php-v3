@@ -21,8 +21,8 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * id  任务ID。
     * name  任务名称。
     * status  操作结果。 success，failed
@@ -39,8 +39,8 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * id  任务ID。
     * name  任务名称。
     * status  操作结果。 success，failed
@@ -78,8 +78,8 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * id  任务ID。
     * name  任务名称。
     * status  操作结果。 success，failed
@@ -96,8 +96,8 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * id  任务ID。
     * name  任务名称。
     * status  操作结果。 success，failed
@@ -114,8 +114,8 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码。
-    * errorMsg  错误描述。
+    * errorCode  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
+    * errorMsg  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     * id  任务ID。
     * name  任务名称。
     * status  操作结果。 success，failed
@@ -246,7 +246,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码。
+    *  **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -258,7 +258,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string $errorCode 错误码。
+    * @param string $errorCode **参数解释**：  错误码，当任务报错时返回的错误代码。  **约束限制**：  - 最小长度：12 - 最大长度：12  **取值范围**：  格式为DRS.XXXXXX。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -270,7 +270,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMsg
-    *  错误描述。
+    *  **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -282,7 +282,7 @@ class StopJobActionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMsg
     *
-    * @param string $errorMsg 错误描述。
+    * @param string $errorMsg **参数解释**：  错误详细信息，当任务执行失败时返回的具体错误描述。  **约束限制**：  - 最小长度：1 - 最大长度：512  **取值范围**：  不涉及。  **默认取值**：  不涉及
     *
     * @return $this
     */

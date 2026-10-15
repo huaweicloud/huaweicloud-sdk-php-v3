@@ -20,10 +20,10 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
-    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
-    * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * isOnlyInitTask  **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
+    * isAutoCreateCompare  **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
+    * startTime  **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
-    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
-    * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * isOnlyInitTask  **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
+    * isAutoCreateCompare  **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
+    * startTime  **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
-    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
-    * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * isOnlyInitTask  **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
+    * isAutoCreateCompare  **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
+    * startTime  **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
-    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
-    * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * isOnlyInitTask  **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
+    * isAutoCreateCompare  **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
+    * startTime  **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务id。
-    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
-    * isAutoCreateCompare  是否在任务结束时自动创建对比任务，不填默认设置为true。
-    * startTime  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    * jobId  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
+    * isOnlyInitTask  **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
+    * isAutoCreateCompare  **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
+    * startTime  **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务id。
+    *  **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 任务id。
+    * @param string $jobId **参数解释**：  迁移任务ID，用于唯一标识一个数据复制任务，在查询、修改、删除等操作中作为任务的识别凭证。  **约束限制**：  不涉及。  **取值范围**：  UUID格式字符串。  **默认取值**：  不涉及
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isOnlyInitTask
-    *  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    *  **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
     *
     * @return bool|null
     */
@@ -246,7 +246,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isOnlyInitTask
     *
-    * @param bool|null $isOnlyInitTask 是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    * @param bool|null $isOnlyInitTask **参数解释**：  是否只初始化任务，指定启动任务时是否仅执行初始化而不启动数据迁移。  **约束限制**：  - 仅支持白名单用户使用，需要提交工单申请才能使用。  **取值范围**：  - true：只初始化任务 - false：正常启动任务  **默认取值**：  false
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoCreateCompare
-    *  是否在任务结束时自动创建对比任务，不填默认设置为true。
+    *  **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
     *
     * @return bool|null
     */
@@ -270,7 +270,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoCreateCompare
     *
-    * @param bool|null $isAutoCreateCompare 是否在任务结束时自动创建对比任务，不填默认设置为true。
+    * @param bool|null $isAutoCreateCompare **参数解释**：  是否在任务结束时自动创建对比任务，指定任务完成后是否自动触发数据对比以验证迁移一致性。  **约束限制**：  不涉及。  **取值范围**：  - true：自动创建对比任务 - false：不自动创建对比任务  **默认取值**：  true
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class StartInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    *  **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class StartInfo implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 任务启动时间，时间戳格式精确到毫秒，例如：1679966489593，取值为空代表立即启动。
+    * @param string|null $startTime **参数解释**：  任务启动时间，指定任务开始执行的时间，时间戳格式精确到毫秒。  **约束限制**：  不涉及。  **取值范围**：  不涉及。  **默认取值**：  不涉及，取值为空代表立即启动
     *
     * @return $this
     */

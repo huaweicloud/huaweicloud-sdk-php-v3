@@ -29,6 +29,7 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
     * compareJobId  对比任务ID。
     * errorMsg  失败原因。
     * compareResult  对比结果。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
             'reportRemainSeconds' => 'int',
             'compareJobId' => 'string',
             'errorMsg' => 'string',
-            'compareResult' => '\HuaweiCloud\SDK\Drs\V3\Model\ObjectsCompareOverviewInfo[]'
+            'compareResult' => '\HuaweiCloud\SDK\Drs\V3\Model\ObjectsCompareOverviewInfo[]',
+            'databaseInfo' => 'object'
     ];
 
     /**
@@ -53,6 +55,7 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
     * compareJobId  对比任务ID。
     * errorMsg  失败原因。
     * compareResult  对比结果。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
         'reportRemainSeconds' => 'int64',
         'compareJobId' => null,
         'errorMsg' => null,
-        'compareResult' => null
+        'compareResult' => null,
+        'databaseInfo' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
     * compareJobId  对比任务ID。
     * errorMsg  失败原因。
     * compareResult  对比结果。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
             'reportRemainSeconds' => 'report_remain_seconds',
             'compareJobId' => 'compare_job_id',
             'errorMsg' => 'error_msg',
-            'compareResult' => 'compare_result'
+            'compareResult' => 'compare_result',
+            'databaseInfo' => 'database_info'
     ];
 
     /**
@@ -122,6 +128,7 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
     * compareJobId  对比任务ID。
     * errorMsg  失败原因。
     * compareResult  对比结果。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
             'reportRemainSeconds' => 'setReportRemainSeconds',
             'compareJobId' => 'setCompareJobId',
             'errorMsg' => 'setErrorMsg',
-            'compareResult' => 'setCompareResult'
+            'compareResult' => 'setCompareResult',
+            'databaseInfo' => 'setDatabaseInfo'
     ];
 
     /**
@@ -146,6 +154,7 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
     * compareJobId  对比任务ID。
     * errorMsg  失败原因。
     * compareResult  对比结果。
+    * databaseInfo  灾备数据库信息。
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
             'reportRemainSeconds' => 'getReportRemainSeconds',
             'compareJobId' => 'getCompareJobId',
             'errorMsg' => 'getErrorMsg',
-            'compareResult' => 'getCompareResult'
+            'compareResult' => 'getCompareResult',
+            'databaseInfo' => 'getDatabaseInfo'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
         $this->container['compareJobId'] = isset($data['compareJobId']) ? $data['compareJobId'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['compareResult'] = isset($data['compareResult']) ? $data['compareResult'] : null;
+        $this->container['databaseInfo'] = isset($data['databaseInfo']) ? $data['databaseInfo'] : null;
     }
 
     /**
@@ -439,6 +450,30 @@ class ListObejectLevelCompareOverviewResponse implements ModelInterface, ArrayAc
     public function setCompareResult($compareResult)
     {
         $this->container['compareResult'] = $compareResult;
+        return $this;
+    }
+
+    /**
+    * Gets databaseInfo
+    *  灾备数据库信息。
+    *
+    * @return object|null
+    */
+    public function getDatabaseInfo()
+    {
+        return $this->container['databaseInfo'];
+    }
+
+    /**
+    * Sets databaseInfo
+    *
+    * @param object|null $databaseInfo 灾备数据库信息。
+    *
+    * @return $this
+    */
+    public function setDatabaseInfo($databaseInfo)
+    {
+        $this->container['databaseInfo'] = $databaseInfo;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class PageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * curPage  当前页, 不能超过item除每页任务数量的最大页
-    * perPage  每页item数量，填0获取全部item
+    * curPage  **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
+    * perPage  **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class PageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * curPage  当前页, 不能超过item除每页任务数量的最大页
-    * perPage  每页item数量，填0获取全部item
+    * curPage  **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
+    * perPage  **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class PageReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * curPage  当前页, 不能超过item除每页任务数量的最大页
-    * perPage  每页item数量，填0获取全部item
+    * curPage  **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
+    * perPage  **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class PageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * curPage  当前页, 不能超过item除每页任务数量的最大页
-    * perPage  每页item数量，填0获取全部item
+    * curPage  **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
+    * perPage  **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class PageReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * curPage  当前页, 不能超过item除每页任务数量的最大页
-    * perPage  每页item数量，填0获取全部item
+    * curPage  **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
+    * perPage  **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class PageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets curPage
-    *  当前页, 不能超过item除每页任务数量的最大页
+    *  **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
     *
     * @return int|null
     */
@@ -203,7 +203,7 @@ class PageReq implements ModelInterface, ArrayAccess
     /**
     * Sets curPage
     *
-    * @param int|null $curPage 当前页, 不能超过item除每页任务数量的最大页
+    * @param int|null $curPage **参数解释**：  当前页码，用于分页查询时指定返回第几页的数据。填0可获取全部数据项。  **约束限制**：  - 当per_page填0时，cur_page只能填0或1。 - 不能超过传入jobID数量除每页任务数量的最大页。  **取值范围**：  不涉及。  **默认取值**：  1
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class PageReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets perPage
-    *  每页item数量，填0获取全部item
+    *  **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @return int|null
     */
@@ -227,7 +227,7 @@ class PageReq implements ModelInterface, ArrayAccess
     /**
     * Sets perPage
     *
-    * @param int|null $perPage 每页item数量，填0获取全部item
+    * @param int|null $perPage **参数解释**：  每页返回的记录数，用于分页查询时控制每页数据量。填0可获取全部数据项。  **约束限制**：  - 填0时，cur_page只能填0或1。  **取值范围**：  0-100。  **默认取值**：  5
     *
     * @return $this
     */

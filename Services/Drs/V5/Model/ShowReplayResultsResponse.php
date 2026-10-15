@@ -29,6 +29,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
     * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
+    * compareResults  SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
     *
     * @var string[]
     */
@@ -40,7 +41,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'errorSqls' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorSqlResp[]',
             'errorSqlTemplates' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorSqlTemplateResp[]',
             'replayingSqls' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayingSqlResp[]',
-            'errorClassifications' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorClassification[]'
+            'errorClassifications' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorClassification[]',
+            'compareResults' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayCompareResultResp[]'
     ];
 
     /**
@@ -53,6 +55,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
     * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
+    * compareResults  SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
     *
     * @var string[]
     */
@@ -64,7 +67,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
         'errorSqls' => null,
         'errorSqlTemplates' => null,
         'replayingSqls' => null,
-        'errorClassifications' => null
+        'errorClassifications' => null,
+        'compareResults' => null
     ];
 
     /**
@@ -98,6 +102,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
     * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
+    * compareResults  SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
     *
     * @var string[]
     */
@@ -109,7 +114,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'errorSqls' => 'error_sqls',
             'errorSqlTemplates' => 'error_sql_templates',
             'replayingSqls' => 'replaying_sqls',
-            'errorClassifications' => 'error_classifications'
+            'errorClassifications' => 'error_classifications',
+            'compareResults' => 'compare_results'
     ];
 
     /**
@@ -122,6 +128,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
     * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
+    * compareResults  SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
     *
     * @var string[]
     */
@@ -133,7 +140,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'errorSqls' => 'setErrorSqls',
             'errorSqlTemplates' => 'setErrorSqlTemplates',
             'replayingSqls' => 'setReplayingSqls',
-            'errorClassifications' => 'setErrorClassifications'
+            'errorClassifications' => 'setErrorClassifications',
+            'compareResults' => 'setCompareResults'
     ];
 
     /**
@@ -146,6 +154,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
     * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
+    * compareResults  SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
     *
     * @var string[]
     */
@@ -157,7 +166,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'errorSqls' => 'getErrorSqls',
             'errorSqlTemplates' => 'getErrorSqlTemplates',
             'replayingSqls' => 'getReplayingSqls',
-            'errorClassifications' => 'getErrorClassifications'
+            'errorClassifications' => 'getErrorClassifications',
+            'compareResults' => 'getCompareResults'
     ];
 
     /**
@@ -226,6 +236,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
         $this->container['errorSqlTemplates'] = isset($data['errorSqlTemplates']) ? $data['errorSqlTemplates'] : null;
         $this->container['replayingSqls'] = isset($data['replayingSqls']) ? $data['replayingSqls'] : null;
         $this->container['errorClassifications'] = isset($data['errorClassifications']) ? $data['errorClassifications'] : null;
+        $this->container['compareResults'] = isset($data['compareResults']) ? $data['compareResults'] : null;
     }
 
     /**
@@ -439,6 +450,30 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     public function setErrorClassifications($errorClassifications)
     {
         $this->container['errorClassifications'] = $errorClassifications;
+        return $this;
+    }
+
+    /**
+    * Gets compareResults
+    *  SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\ReplayCompareResultResp[]|null
+    */
+    public function getCompareResults()
+    {
+        return $this->container['compareResults'];
+    }
+
+    /**
+    * Sets compareResults
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\ReplayCompareResultResp[]|null $compareResults SQL执行结果不一致数据，在type为sql_result_inconsistent时返回
+    *
+    * @return $this
+    */
+    public function setCompareResults($compareResults)
+    {
+        $this->container['compareResults'] = $compareResults;
         return $this;
     }
 
