@@ -37,8 +37,8 @@ class CreateDevServerJobResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'createAt' => 'string',
-            'updateAt' => 'string',
+            'createAt' => 'int',
+            'updateAt' => 'int',
             'id' => 'string',
             'name' => 'string',
             'type' => 'string',
@@ -69,8 +69,8 @@ class CreateDevServerJobResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'createAt' => null,
-        'updateAt' => null,
+        'createAt' => 'int64',
+        'updateAt' => 'int64',
         'id' => null,
         'name' => null,
         'type' => null,
@@ -298,7 +298,7 @@ class CreateDevServerJobResponse implements ModelInterface, ArrayAccess
     * Gets createAt
     *  **参数解释**：创建时间。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreateAt()
     {
@@ -308,7 +308,7 @@ class CreateDevServerJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt **参数解释**：创建时间。 **取值范围**：不涉及。
+    * @param int|null $createAt **参数解释**：创建时间。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class CreateDevServerJobResponse implements ModelInterface, ArrayAccess
     * Gets updateAt
     *  **参数解释**：更新时间。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getUpdateAt()
     {
@@ -332,7 +332,7 @@ class CreateDevServerJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt **参数解释**：更新时间。 **取值范围**：不涉及。
+    * @param int|null $updateAt **参数解释**：更新时间。 **取值范围**：不涉及。
     *
     * @return $this
     */

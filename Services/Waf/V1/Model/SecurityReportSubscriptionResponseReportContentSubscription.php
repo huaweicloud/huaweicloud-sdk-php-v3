@@ -31,7 +31,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
     * topAttackSourceIpsEnable  **参数解释：** 是否启用TOP攻击源IP统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackedUrlsEnable  **参数解释：** 是否启用TOP被攻击URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackSourceLocationsEnable  **参数解释：** 是否启用TOP攻击源地理位置统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
-    * topAbnormalUrlsEnable  **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * topErrorPagesEnable  **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @var string[]
     */
@@ -47,7 +47,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
             'topAttackSourceIpsEnable' => 'bool',
             'topAttackedUrlsEnable' => 'bool',
             'topAttackSourceLocationsEnable' => 'bool',
-            'topAbnormalUrlsEnable' => 'bool'
+            'topErrorPagesEnable' => 'bool'
     ];
 
     /**
@@ -63,7 +63,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
     * topAttackSourceIpsEnable  **参数解释：** 是否启用TOP攻击源IP统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackedUrlsEnable  **参数解释：** 是否启用TOP被攻击URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackSourceLocationsEnable  **参数解释：** 是否启用TOP攻击源地理位置统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
-    * topAbnormalUrlsEnable  **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * topErrorPagesEnable  **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
         'topAttackSourceIpsEnable' => null,
         'topAttackedUrlsEnable' => null,
         'topAttackSourceLocationsEnable' => null,
-        'topAbnormalUrlsEnable' => null
+        'topErrorPagesEnable' => null
     ];
 
     /**
@@ -116,7 +116,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
     * topAttackSourceIpsEnable  **参数解释：** 是否启用TOP攻击源IP统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackedUrlsEnable  **参数解释：** 是否启用TOP被攻击URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackSourceLocationsEnable  **参数解释：** 是否启用TOP攻击源地理位置统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
-    * topAbnormalUrlsEnable  **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * topErrorPagesEnable  **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @var string[]
     */
@@ -132,7 +132,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
             'topAttackSourceIpsEnable' => 'top_attack_source_ips_enable',
             'topAttackedUrlsEnable' => 'top_attacked_urls_enable',
             'topAttackSourceLocationsEnable' => 'top_attack_source_locations_enable',
-            'topAbnormalUrlsEnable' => 'top_abnormal_urls_enable'
+            'topErrorPagesEnable' => 'top_error_pages_enable'
     ];
 
     /**
@@ -148,7 +148,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
     * topAttackSourceIpsEnable  **参数解释：** 是否启用TOP攻击源IP统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackedUrlsEnable  **参数解释：** 是否启用TOP被攻击URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackSourceLocationsEnable  **参数解释：** 是否启用TOP攻击源地理位置统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
-    * topAbnormalUrlsEnable  **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * topErrorPagesEnable  **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @var string[]
     */
@@ -164,7 +164,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
             'topAttackSourceIpsEnable' => 'setTopAttackSourceIpsEnable',
             'topAttackedUrlsEnable' => 'setTopAttackedUrlsEnable',
             'topAttackSourceLocationsEnable' => 'setTopAttackSourceLocationsEnable',
-            'topAbnormalUrlsEnable' => 'setTopAbnormalUrlsEnable'
+            'topErrorPagesEnable' => 'setTopErrorPagesEnable'
     ];
 
     /**
@@ -180,7 +180,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
     * topAttackSourceIpsEnable  **参数解释：** 是否启用TOP攻击源IP统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackedUrlsEnable  **参数解释：** 是否启用TOP被攻击URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     * topAttackSourceLocationsEnable  **参数解释：** 是否启用TOP攻击源地理位置统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
-    * topAbnormalUrlsEnable  **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * topErrorPagesEnable  **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
             'topAttackSourceIpsEnable' => 'getTopAttackSourceIpsEnable',
             'topAttackedUrlsEnable' => 'getTopAttackedUrlsEnable',
             'topAttackSourceLocationsEnable' => 'getTopAttackSourceLocationsEnable',
-            'topAbnormalUrlsEnable' => 'getTopAbnormalUrlsEnable'
+            'topErrorPagesEnable' => 'getTopErrorPagesEnable'
     ];
 
     /**
@@ -268,7 +268,7 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
         $this->container['topAttackSourceIpsEnable'] = isset($data['topAttackSourceIpsEnable']) ? $data['topAttackSourceIpsEnable'] : null;
         $this->container['topAttackedUrlsEnable'] = isset($data['topAttackedUrlsEnable']) ? $data['topAttackedUrlsEnable'] : null;
         $this->container['topAttackSourceLocationsEnable'] = isset($data['topAttackSourceLocationsEnable']) ? $data['topAttackSourceLocationsEnable'] : null;
-        $this->container['topAbnormalUrlsEnable'] = isset($data['topAbnormalUrlsEnable']) ? $data['topAbnormalUrlsEnable'] : null;
+        $this->container['topErrorPagesEnable'] = isset($data['topErrorPagesEnable']) ? $data['topErrorPagesEnable'] : null;
     }
 
     /**
@@ -558,26 +558,26 @@ class SecurityReportSubscriptionResponseReportContentSubscription implements Mod
     }
 
     /**
-    * Gets topAbnormalUrlsEnable
-    *  **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * Gets topErrorPagesEnable
+    *  **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @return bool|null
     */
-    public function getTopAbnormalUrlsEnable()
+    public function getTopErrorPagesEnable()
     {
-        return $this->container['topAbnormalUrlsEnable'];
+        return $this->container['topErrorPagesEnable'];
     }
 
     /**
-    * Sets topAbnormalUrlsEnable
+    * Sets topErrorPagesEnable
     *
-    * @param bool|null $topAbnormalUrlsEnable **参数解释：** 是否启用TOP异常URL统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
+    * @param bool|null $topErrorPagesEnable **参数解释：** 是否启用TOP异常页面统计（true表示启用，false表示禁用）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** true
     *
     * @return $this
     */
-    public function setTopAbnormalUrlsEnable($topAbnormalUrlsEnable)
+    public function setTopErrorPagesEnable($topErrorPagesEnable)
     {
-        $this->container['topAbnormalUrlsEnable'] = $topAbnormalUrlsEnable;
+        $this->container['topErrorPagesEnable'] = $topErrorPagesEnable;
         return $this;
     }
 

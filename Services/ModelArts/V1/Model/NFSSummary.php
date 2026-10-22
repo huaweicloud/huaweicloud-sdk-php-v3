@@ -20,7 +20,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * nfsPath  **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets nfsPath
-    *  **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class NFSSummary implements ModelInterface, ArrayAccess
     /**
     * Sets nfsPath
     *
-    * @param string $nfsPath **参数解释**：sfsTurbo弹性文件系统url。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string $nfsPath **参数解释**：sfsTurbo弹性文件系统url，如“140f956f-c31-*****.150f886f-c37-*****.sfsturbo.internal:/”。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @return $this
     */

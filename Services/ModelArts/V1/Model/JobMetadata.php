@@ -23,7 +23,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     * name  训练作业名称。限制为1-64位只含数字、字母、下划线和中划线的名称。
     * workspaceId  指定作业所处的工作空间，默认值为“0”。
     * description  对训练作业的描述，默认为“NULL”，字符串的长度限制为[0, 256]。
-    * annotations  训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    * annotations  **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     * trainingExperimentReference  trainingExperimentReference
     *
     * @var string[]
@@ -41,7 +41,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     * name  训练作业名称。限制为1-64位只含数字、字母、下划线和中划线的名称。
     * workspaceId  指定作业所处的工作空间，默认值为“0”。
     * description  对训练作业的描述，默认为“NULL”，字符串的长度限制为[0, 256]。
-    * annotations  训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    * annotations  **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     * trainingExperimentReference  trainingExperimentReference
     *
     * @var string[]
@@ -80,7 +80,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     * name  训练作业名称。限制为1-64位只含数字、字母、下划线和中划线的名称。
     * workspaceId  指定作业所处的工作空间，默认值为“0”。
     * description  对训练作业的描述，默认为“NULL”，字符串的长度限制为[0, 256]。
-    * annotations  训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    * annotations  **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     * trainingExperimentReference  trainingExperimentReference
     *
     * @var string[]
@@ -98,7 +98,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     * name  训练作业名称。限制为1-64位只含数字、字母、下划线和中划线的名称。
     * workspaceId  指定作业所处的工作空间，默认值为“0”。
     * description  对训练作业的描述，默认为“NULL”，字符串的长度限制为[0, 256]。
-    * annotations  训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    * annotations  **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     * trainingExperimentReference  trainingExperimentReference
     *
     * @var string[]
@@ -116,7 +116,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     * name  训练作业名称。限制为1-64位只含数字、字母、下划线和中划线的名称。
     * workspaceId  指定作业所处的工作空间，默认值为“0”。
     * description  对训练作业的描述，默认为“NULL”，字符串的长度限制为[0, 256]。
-    * annotations  训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    * annotations  **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     * trainingExperimentReference  trainingExperimentReference
     *
     * @var string[]
@@ -293,7 +293,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
 
     /**
     * Gets annotations
-    *  训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    *  **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     *
     * @return map[string,string]|null
     */
@@ -305,7 +305,7 @@ class JobMetadata implements ModelInterface, ArrayAccess
     /**
     * Sets annotations
     *
-    * @param map[string,string]|null $annotations 训练作业高级功能配置，可选取值如下： - \"job_template\": \"Template RL\"（异构作业）。 - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）。 - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）
+    * @param map[string,string]|null $annotations **参数解释**：训练作业高级功能配置。可选取值如下：   - \"job_template\": \"Template RL\"（异构作业）   - \"fault-tolerance/job-retry-num\": \"3\"（故障自动重启次数）   - \"fault-tolerance/job-unconditional-retry\": \"true\"（无条件重启）   - \"fault-tolerance/hang-retry\": \"true\"（卡死重启）   - \"jupyter-lab/enable\": \"true\"（JupyterLab训练应用程序）   - \"tensorboard/enable\": \"true\"（TensorBoard训练应用程序）   - \"mindstudio-insight/enable\": \"true\"（MindStudio Insight训练应用程序）   - \"fault-tolerance/hccl_op_retry\":\"true\"（算子重执行）   - \"performance_diagnosis_enabled\":\"true\"（性能诊断功能）   - \"record/code-dir\": \"obs dir\"（代码备份功能）   - \"fault-tolerance/pod-retry-num\": \"3\"（Pod级故障自动重启次数） **约束限制**：不涉及。
     *
     * @return $this
     */

@@ -32,6 +32,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * files  **参数解释：** 模型和代码相关配置，用户可以在此处选择模型及权重文件配合镜像使用以及代码所在的obs路径等。 **约束限制：** 不涉及。
     * dumps  **参数解释：** 用户转储配置，用户可以在此处选择要转储的目的obs。 **约束限制：** 最多配置20组。
     * count  **参数解释：** 配置实例个数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * cmd  **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * terminationGrace  terminationGrace
     * envs  **参数解释：** 环境变量。 **约束限制：** 变量键长度不大于64，由字母、数字、下划线、中划线、点组成，不能以数字开头。值的输入内容不能存在HTML标签，包括<^>。
@@ -45,6 +46,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * affinity  affinity
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -61,6 +63,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'files' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FileInfo[]',
             'dumps' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Dump[]',
             'count' => 'int',
+            'cpuAffinity' => 'bool',
             'cmd' => 'string',
             'terminationGrace' => '\HuaweiCloud\SDK\ModelArts\V1\Model\TerminationGrace',
             'envs' => 'map[string,string]',
@@ -73,7 +76,8 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'groupCount' => 'int',
             'affinity' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Affinity',
             'securityConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceSecurityConfig',
-            'poolResourceFlavor' => 'string'
+            'poolResourceFlavor' => 'string',
+            'groupPolicy' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UnitGroupPolicy'
     ];
 
     /**
@@ -90,6 +94,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * files  **参数解释：** 模型和代码相关配置，用户可以在此处选择模型及权重文件配合镜像使用以及代码所在的obs路径等。 **约束限制：** 不涉及。
     * dumps  **参数解释：** 用户转储配置，用户可以在此处选择要转储的目的obs。 **约束限制：** 最多配置20组。
     * count  **参数解释：** 配置实例个数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * cmd  **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * terminationGrace  terminationGrace
     * envs  **参数解释：** 环境变量。 **约束限制：** 变量键长度不大于64，由字母、数字、下划线、中划线、点组成，不能以数字开头。值的输入内容不能存在HTML标签，包括<^>。
@@ -103,6 +108,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * affinity  affinity
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -119,6 +125,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
         'files' => null,
         'dumps' => null,
         'count' => 'int32',
+        'cpuAffinity' => null,
         'cmd' => null,
         'terminationGrace' => null,
         'envs' => null,
@@ -131,7 +138,8 @@ class UnitConfig implements ModelInterface, ArrayAccess
         'groupCount' => 'int32',
         'affinity' => null,
         'securityConfig' => null,
-        'poolResourceFlavor' => null
+        'poolResourceFlavor' => null,
+        'groupPolicy' => null
     ];
 
     /**
@@ -169,6 +177,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * files  **参数解释：** 模型和代码相关配置，用户可以在此处选择模型及权重文件配合镜像使用以及代码所在的obs路径等。 **约束限制：** 不涉及。
     * dumps  **参数解释：** 用户转储配置，用户可以在此处选择要转储的目的obs。 **约束限制：** 最多配置20组。
     * count  **参数解释：** 配置实例个数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * cmd  **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * terminationGrace  terminationGrace
     * envs  **参数解释：** 环境变量。 **约束限制：** 变量键长度不大于64，由字母、数字、下划线、中划线、点组成，不能以数字开头。值的输入内容不能存在HTML标签，包括<^>。
@@ -182,6 +191,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * affinity  affinity
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -198,6 +208,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'files' => 'files',
             'dumps' => 'dumps',
             'count' => 'count',
+            'cpuAffinity' => 'cpu_affinity',
             'cmd' => 'cmd',
             'terminationGrace' => 'termination_grace',
             'envs' => 'envs',
@@ -210,7 +221,8 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'groupCount' => 'group_count',
             'affinity' => 'affinity',
             'securityConfig' => 'security_config',
-            'poolResourceFlavor' => 'pool_resource_flavor'
+            'poolResourceFlavor' => 'pool_resource_flavor',
+            'groupPolicy' => 'group_policy'
     ];
 
     /**
@@ -227,6 +239,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * files  **参数解释：** 模型和代码相关配置，用户可以在此处选择模型及权重文件配合镜像使用以及代码所在的obs路径等。 **约束限制：** 不涉及。
     * dumps  **参数解释：** 用户转储配置，用户可以在此处选择要转储的目的obs。 **约束限制：** 最多配置20组。
     * count  **参数解释：** 配置实例个数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * cmd  **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * terminationGrace  terminationGrace
     * envs  **参数解释：** 环境变量。 **约束限制：** 变量键长度不大于64，由字母、数字、下划线、中划线、点组成，不能以数字开头。值的输入内容不能存在HTML标签，包括<^>。
@@ -240,6 +253,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * affinity  affinity
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -256,6 +270,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'files' => 'setFiles',
             'dumps' => 'setDumps',
             'count' => 'setCount',
+            'cpuAffinity' => 'setCpuAffinity',
             'cmd' => 'setCmd',
             'terminationGrace' => 'setTerminationGrace',
             'envs' => 'setEnvs',
@@ -268,7 +283,8 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'groupCount' => 'setGroupCount',
             'affinity' => 'setAffinity',
             'securityConfig' => 'setSecurityConfig',
-            'poolResourceFlavor' => 'setPoolResourceFlavor'
+            'poolResourceFlavor' => 'setPoolResourceFlavor',
+            'groupPolicy' => 'setGroupPolicy'
     ];
 
     /**
@@ -285,6 +301,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * files  **参数解释：** 模型和代码相关配置，用户可以在此处选择模型及权重文件配合镜像使用以及代码所在的obs路径等。 **约束限制：** 不涉及。
     * dumps  **参数解释：** 用户转储配置，用户可以在此处选择要转储的目的obs。 **约束限制：** 最多配置20组。
     * count  **参数解释：** 配置实例个数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * cmd  **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     * terminationGrace  terminationGrace
     * envs  **参数解释：** 环境变量。 **约束限制：** 变量键长度不大于64，由字母、数字、下划线、中划线、点组成，不能以数字开头。值的输入内容不能存在HTML标签，包括<^>。
@@ -298,6 +315,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
     * affinity  affinity
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -314,6 +332,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'files' => 'getFiles',
             'dumps' => 'getDumps',
             'count' => 'getCount',
+            'cpuAffinity' => 'getCpuAffinity',
             'cmd' => 'getCmd',
             'terminationGrace' => 'getTerminationGrace',
             'envs' => 'getEnvs',
@@ -326,7 +345,8 @@ class UnitConfig implements ModelInterface, ArrayAccess
             'groupCount' => 'getGroupCount',
             'affinity' => 'getAffinity',
             'securityConfig' => 'getSecurityConfig',
-            'poolResourceFlavor' => 'getPoolResourceFlavor'
+            'poolResourceFlavor' => 'getPoolResourceFlavor',
+            'groupPolicy' => 'getGroupPolicy'
     ];
 
     /**
@@ -399,6 +419,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['dumps'] = isset($data['dumps']) ? $data['dumps'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['cpuAffinity'] = isset($data['cpuAffinity']) ? $data['cpuAffinity'] : null;
         $this->container['cmd'] = isset($data['cmd']) ? $data['cmd'] : null;
         $this->container['terminationGrace'] = isset($data['terminationGrace']) ? $data['terminationGrace'] : null;
         $this->container['envs'] = isset($data['envs']) ? $data['envs'] : null;
@@ -412,6 +433,7 @@ class UnitConfig implements ModelInterface, ArrayAccess
         $this->container['affinity'] = isset($data['affinity']) ? $data['affinity'] : null;
         $this->container['securityConfig'] = isset($data['securityConfig']) ? $data['securityConfig'] : null;
         $this->container['poolResourceFlavor'] = isset($data['poolResourceFlavor']) ? $data['poolResourceFlavor'] : null;
+        $this->container['groupPolicy'] = isset($data['groupPolicy']) ? $data['groupPolicy'] : null;
     }
 
     /**
@@ -734,6 +756,30 @@ class UnitConfig implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets cpuAffinity
+    *  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
+    *
+    * @return bool|null
+    */
+    public function getCpuAffinity()
+    {
+        return $this->container['cpuAffinity'];
+    }
+
+    /**
+    * Sets cpuAffinity
+    *
+    * @param bool|null $cpuAffinity **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
+    *
+    * @return $this
+    */
+    public function setCpuAffinity($cpuAffinity)
+    {
+        $this->container['cpuAffinity'] = $cpuAffinity;
+        return $this;
+    }
+
+    /**
     * Gets cmd
     *  **参数解释：** 启动命令。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
@@ -1042,6 +1088,30 @@ class UnitConfig implements ModelInterface, ArrayAccess
     public function setPoolResourceFlavor($poolResourceFlavor)
     {
         $this->container['poolResourceFlavor'] = $poolResourceFlavor;
+        return $this;
+    }
+
+    /**
+    * Gets groupPolicy
+    *  groupPolicy
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\UnitGroupPolicy|null
+    */
+    public function getGroupPolicy()
+    {
+        return $this->container['groupPolicy'];
+    }
+
+    /**
+    * Sets groupPolicy
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\UnitGroupPolicy|null $groupPolicy groupPolicy
+    *
+    * @return $this
+    */
+    public function setGroupPolicy($groupPolicy)
+    {
+        $this->container['groupPolicy'] = $groupPolicy;
         return $this;
     }
 

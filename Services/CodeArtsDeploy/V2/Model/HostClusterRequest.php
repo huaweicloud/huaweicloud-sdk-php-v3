@@ -23,13 +23,17 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     * name  主机集群名称
     * description  主机集群描述
     * slaveClusterId  slave集群id，默认为null时使用八爪鱼slave集群，用户自定义slave时为slave集群id
+    * slaveResourceType  资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    * ansibleType  是否切换新系统支持，1：是 0：否
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'slaveClusterId' => 'string'
+            'slaveClusterId' => 'string',
+            'slaveResourceType' => 'string',
+            'ansibleType' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     * name  主机集群名称
     * description  主机集群描述
     * slaveClusterId  slave集群id，默认为null时使用八爪鱼slave集群，用户自定义slave时为slave集群id
+    * slaveResourceType  资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    * ansibleType  是否切换新系统支持，1：是 0：否
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
-        'slaveClusterId' => null
+        'slaveClusterId' => null,
+        'slaveResourceType' => null,
+        'ansibleType' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     * name  主机集群名称
     * description  主机集群描述
     * slaveClusterId  slave集群id，默认为null时使用八爪鱼slave集群，用户自定义slave时为slave集群id
+    * slaveResourceType  资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    * ansibleType  是否切换新系统支持，1：是 0：否
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'description' => 'description',
-            'slaveClusterId' => 'slave_cluster_id'
+            'slaveClusterId' => 'slave_cluster_id',
+            'slaveResourceType' => 'slave_resource_type',
+            'ansibleType' => 'ansible_type'
     ];
 
     /**
@@ -86,13 +98,17 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     * name  主机集群名称
     * description  主机集群描述
     * slaveClusterId  slave集群id，默认为null时使用八爪鱼slave集群，用户自定义slave时为slave集群id
+    * slaveResourceType  资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    * ansibleType  是否切换新系统支持，1：是 0：否
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'description' => 'setDescription',
-            'slaveClusterId' => 'setSlaveClusterId'
+            'slaveClusterId' => 'setSlaveClusterId',
+            'slaveResourceType' => 'setSlaveResourceType',
+            'ansibleType' => 'setAnsibleType'
     ];
 
     /**
@@ -100,13 +116,17 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     * name  主机集群名称
     * description  主机集群描述
     * slaveClusterId  slave集群id，默认为null时使用八爪鱼slave集群，用户自定义slave时为slave集群id
+    * slaveResourceType  资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    * ansibleType  是否切换新系统支持，1：是 0：否
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'description' => 'getDescription',
-            'slaveClusterId' => 'getSlaveClusterId'
+            'slaveClusterId' => 'getSlaveClusterId',
+            'slaveResourceType' => 'getSlaveResourceType',
+            'ansibleType' => 'getAnsibleType'
     ];
 
     /**
@@ -149,7 +169,22 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SLAVE_RESOURCE_TYPE_SELF_HOSTED = 'self-hosted';
+    const SLAVE_RESOURCE_TYPE_EXCLUSIVE = 'exclusive';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSlaveResourceTypeAllowableValues()
+    {
+        return [
+            self::SLAVE_RESOURCE_TYPE_SELF_HOSTED,
+            self::SLAVE_RESOURCE_TYPE_EXCLUSIVE,
+        ];
+    }
 
 
     /**
@@ -170,6 +205,8 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['slaveClusterId'] = isset($data['slaveClusterId']) ? $data['slaveClusterId'] : null;
+        $this->container['slaveResourceType'] = isset($data['slaveResourceType']) ? $data['slaveResourceType'] : null;
+        $this->container['ansibleType'] = isset($data['ansibleType']) ? $data['ansibleType'] : null;
     }
 
     /**
@@ -207,6 +244,14 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['slaveClusterId']) && !preg_match("/^[A-Za-z0-9]{1,32}$/", $this->container['slaveClusterId'])) {
                 $invalidProperties[] = "invalid value for 'slaveClusterId', must be conform to the pattern /^[A-Za-z0-9]{1,32}$/.";
             }
+            $allowedValues = $this->getSlaveResourceTypeAllowableValues();
+                if (!is_null($this->container['slaveResourceType']) && !in_array($this->container['slaveResourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'slaveResourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -290,6 +335,54 @@ class HostClusterRequest implements ModelInterface, ArrayAccess
     public function setSlaveClusterId($slaveClusterId)
     {
         $this->container['slaveClusterId'] = $slaveClusterId;
+        return $this;
+    }
+
+    /**
+    * Gets slaveResourceType
+    *  资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    *
+    * @return string|null
+    */
+    public function getSlaveResourceType()
+    {
+        return $this->container['slaveResourceType'];
+    }
+
+    /**
+    * Sets slaveResourceType
+    *
+    * @param string|null $slaveResourceType 资源池类型，self-hosted 自托管资源池，exclusive 独享资源池
+    *
+    * @return $this
+    */
+    public function setSlaveResourceType($slaveResourceType)
+    {
+        $this->container['slaveResourceType'] = $slaveResourceType;
+        return $this;
+    }
+
+    /**
+    * Gets ansibleType
+    *  是否切换新系统支持，1：是 0：否
+    *
+    * @return int|null
+    */
+    public function getAnsibleType()
+    {
+        return $this->container['ansibleType'];
+    }
+
+    /**
+    * Sets ansibleType
+    *
+    * @param int|null $ansibleType 是否切换新系统支持，1：是 0：否
+    *
+    * @return $this
+    */
+    public function setAnsibleType($ansibleType)
+    {
+        $this->container['ansibleType'] = $ansibleType;
         return $this;
     }
 

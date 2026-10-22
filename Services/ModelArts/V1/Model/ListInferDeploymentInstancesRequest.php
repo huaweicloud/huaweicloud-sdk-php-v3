@@ -25,7 +25,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释：** 服务实例状态，一次支持多种状态筛选，多种状态以\",\"连接，不能存在空格。默认不过滤。取值范围有4种RUNNING（运行中）、ERROR（错误）、INIT（初始化）、DELETED（已删除)。 **约束限制：** 不涉及。
     * limit  **参数解释：** 指定每一页返回的最大条目数。 **约束限制：** 不涉及。 **取值范围：** [1,500] **默认取值：** 10。
     * offset  **参数解释：** 分页列表的起始页。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
-    * podName  **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -35,7 +35,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
             'status' => 'string[]',
             'limit' => 'int',
             'offset' => 'string',
-            'podName' => 'string'
+            'instanceName' => 'string'
     ];
 
     /**
@@ -45,7 +45,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释：** 服务实例状态，一次支持多种状态筛选，多种状态以\",\"连接，不能存在空格。默认不过滤。取值范围有4种RUNNING（运行中）、ERROR（错误）、INIT（初始化）、DELETED（已删除)。 **约束限制：** 不涉及。
     * limit  **参数解释：** 指定每一页返回的最大条目数。 **约束限制：** 不涉及。 **取值范围：** [1,500] **默认取值：** 10。
     * offset  **参数解释：** 分页列表的起始页。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
-    * podName  **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +55,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'limit' => 'int32',
         'offset' => null,
-        'podName' => null
+        'instanceName' => null
     ];
 
     /**
@@ -86,7 +86,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释：** 服务实例状态，一次支持多种状态筛选，多种状态以\",\"连接，不能存在空格。默认不过滤。取值范围有4种RUNNING（运行中）、ERROR（错误）、INIT（初始化）、DELETED（已删除)。 **约束限制：** 不涉及。
     * limit  **参数解释：** 指定每一页返回的最大条目数。 **约束限制：** 不涉及。 **取值范围：** [1,500] **默认取值：** 10。
     * offset  **参数解释：** 分页列表的起始页。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
-    * podName  **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'limit' => 'limit',
             'offset' => 'offset',
-            'podName' => 'pod_name'
+            'instanceName' => 'instance_name'
     ];
 
     /**
@@ -106,7 +106,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释：** 服务实例状态，一次支持多种状态筛选，多种状态以\",\"连接，不能存在空格。默认不过滤。取值范围有4种RUNNING（运行中）、ERROR（错误）、INIT（初始化）、DELETED（已删除)。 **约束限制：** 不涉及。
     * limit  **参数解释：** 指定每一页返回的最大条目数。 **约束限制：** 不涉及。 **取值范围：** [1,500] **默认取值：** 10。
     * offset  **参数解释：** 分页列表的起始页。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
-    * podName  **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'podName' => 'setPodName'
+            'instanceName' => 'setInstanceName'
     ];
 
     /**
@@ -126,7 +126,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
     * status  **参数解释：** 服务实例状态，一次支持多种状态筛选，多种状态以\",\"连接，不能存在空格。默认不过滤。取值范围有4种RUNNING（运行中）、ERROR（错误）、INIT（初始化）、DELETED（已删除)。 **约束限制：** 不涉及。
     * limit  **参数解释：** 指定每一页返回的最大条目数。 **约束限制：** 不涉及。 **取值范围：** [1,500] **默认取值：** 10。
     * offset  **参数解释：** 分页列表的起始页。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 0。
-    * podName  **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * instanceName  **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -136,7 +136,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'podName' => 'getPodName'
+            'instanceName' => 'getInstanceName'
     ];
 
     /**
@@ -202,7 +202,7 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['podName'] = isset($data['podName']) ? $data['podName'] : null;
+        $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
     }
 
     /**
@@ -360,26 +360,26 @@ class ListInferDeploymentInstancesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets podName
-    *  **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * Gets instanceName
+    *  **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
-    public function getPodName()
+    public function getInstanceName()
     {
-        return $this->container['podName'];
+        return $this->container['instanceName'];
     }
 
     /**
-    * Sets podName
+    * Sets instanceName
     *
-    * @param string|null $podName **参数解释：** pod名字。 **取值范围：** 不涉及。
+    * @param string|null $instanceName **参数解释：** 服务实例名字。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
-    public function setPodName($podName)
+    public function setInstanceName($instanceName)
     {
-        $this->container['podName'] = $podName;
+        $this->container['instanceName'] = $instanceName;
         return $this;
     }
 

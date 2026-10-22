@@ -28,6 +28,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     * action  action
     * options  options
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
+    * scanProtectionOptions  scanProtectionOptions
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
@@ -44,6 +45,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
             'action' => '\HuaweiCloud\SDK\Waf\V1\Model\PolicyAction',
             'options' => '\HuaweiCloud\SDK\Waf\V1\Model\PolicyOption',
             'modulexOptions' => 'map[string,object]',
+            'scanProtectionOptions' => '\HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption',
             'hosts' => 'string[]',
             'bindHost' => '\HuaweiCloud\SDK\Waf\V1\Model\BindHost[]',
             'extend' => 'map[string,string]',
@@ -60,6 +62,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     * action  action
     * options  options
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
+    * scanProtectionOptions  scanProtectionOptions
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
@@ -76,6 +79,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
         'action' => null,
         'options' => null,
         'modulexOptions' => null,
+        'scanProtectionOptions' => null,
         'hosts' => null,
         'bindHost' => null,
         'extend' => null,
@@ -113,6 +117,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     * action  action
     * options  options
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
+    * scanProtectionOptions  scanProtectionOptions
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
@@ -129,6 +134,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
             'action' => 'action',
             'options' => 'options',
             'modulexOptions' => 'modulex_options',
+            'scanProtectionOptions' => 'scan_protection_options',
             'hosts' => 'hosts',
             'bindHost' => 'bind_host',
             'extend' => 'extend',
@@ -145,6 +151,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     * action  action
     * options  options
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
+    * scanProtectionOptions  scanProtectionOptions
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
@@ -161,6 +168,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
             'action' => 'setAction',
             'options' => 'setOptions',
             'modulexOptions' => 'setModulexOptions',
+            'scanProtectionOptions' => 'setScanProtectionOptions',
             'hosts' => 'setHosts',
             'bindHost' => 'setBindHost',
             'extend' => 'setExtend',
@@ -177,6 +185,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     * action  action
     * options  options
     * modulexOptions  智能访问控制防护项相关配置信息，目前该特性还处于公测阶段，只有部分局点支持该特性
+    * scanProtectionOptions  scanProtectionOptions
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
@@ -193,6 +202,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
             'action' => 'getAction',
             'options' => 'getOptions',
             'modulexOptions' => 'getModulexOptions',
+            'scanProtectionOptions' => 'getScanProtectionOptions',
             'hosts' => 'getHosts',
             'bindHost' => 'getBindHost',
             'extend' => 'getExtend',
@@ -265,6 +275,7 @@ class PolicyResponse implements ModelInterface, ArrayAccess
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['modulexOptions'] = isset($data['modulexOptions']) ? $data['modulexOptions'] : null;
+        $this->container['scanProtectionOptions'] = isset($data['scanProtectionOptions']) ? $data['scanProtectionOptions'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['bindHost'] = isset($data['bindHost']) ? $data['bindHost'] : null;
         $this->container['extend'] = isset($data['extend']) ? $data['extend'] : null;
@@ -482,6 +493,30 @@ class PolicyResponse implements ModelInterface, ArrayAccess
     public function setModulexOptions($modulexOptions)
     {
         $this->container['modulexOptions'] = $modulexOptions;
+        return $this;
+    }
+
+    /**
+    * Gets scanProtectionOptions
+    *  scanProtectionOptions
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption|null
+    */
+    public function getScanProtectionOptions()
+    {
+        return $this->container['scanProtectionOptions'];
+    }
+
+    /**
+    * Sets scanProtectionOptions
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption|null $scanProtectionOptions scanProtectionOptions
+    *
+    * @return $this
+    */
+    public function setScanProtectionOptions($scanProtectionOptions)
+    {
+        $this->container['scanProtectionOptions'] = $scanProtectionOptions;
         return $this;
     }
 

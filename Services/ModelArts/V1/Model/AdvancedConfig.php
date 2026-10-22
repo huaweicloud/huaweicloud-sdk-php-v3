@@ -30,13 +30,14 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     * metricApiPort  **参数解释：** 智能路由指标采集端口
     * metricApiPath  **参数解释：** 智能路由指标采集地址
     * customMetricsPath  **参数解释：** 自定义监控采集指标地址
+    * mooncakeEnable  **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
     * port  **参数解释：** 容器端口
     * protocol  **参数解释：** 容器请求协议。当选择WSS与WS时，服务接口会升级为WebSocket。开启WebSocket时，不支持同时设置“服务流量限制”。 **取值范围：** - HTTP：HTTP协议。 - HTTPS：HTTPS协议。 - WSS：WebSocket Secure协议。 - WS：WebSocket协议。 - TCP：传输控制协议。 - NA：不使用任何协议。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'deployTimeoutMinutes' => 'string',
+            'deployTimeoutMinutes' => 'int',
             'upgradeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UpgradeConfig',
             'serviceSecret' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceSecret',
             'dynamicRoutingEnable' => 'bool',
@@ -46,6 +47,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
             'metricApiPort' => 'string',
             'metricApiPath' => 'string',
             'customMetricsPath' => 'string',
+            'mooncakeEnable' => 'bool',
             'port' => 'int',
             'protocol' => 'string'
     ];
@@ -62,13 +64,14 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     * metricApiPort  **参数解释：** 智能路由指标采集端口
     * metricApiPath  **参数解释：** 智能路由指标采集地址
     * customMetricsPath  **参数解释：** 自定义监控采集指标地址
+    * mooncakeEnable  **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
     * port  **参数解释：** 容器端口
     * protocol  **参数解释：** 容器请求协议。当选择WSS与WS时，服务接口会升级为WebSocket。开启WebSocket时，不支持同时设置“服务流量限制”。 **取值范围：** - HTTP：HTTP协议。 - HTTPS：HTTPS协议。 - WSS：WebSocket Secure协议。 - WS：WebSocket协议。 - TCP：传输控制协议。 - NA：不使用任何协议。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'deployTimeoutMinutes' => null,
+        'deployTimeoutMinutes' => 'int32',
         'upgradeConfig' => null,
         'serviceSecret' => null,
         'dynamicRoutingEnable' => null,
@@ -78,6 +81,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
         'metricApiPort' => null,
         'metricApiPath' => null,
         'customMetricsPath' => null,
+        'mooncakeEnable' => null,
         'port' => 'int32',
         'protocol' => null
     ];
@@ -115,6 +119,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     * metricApiPort  **参数解释：** 智能路由指标采集端口
     * metricApiPath  **参数解释：** 智能路由指标采集地址
     * customMetricsPath  **参数解释：** 自定义监控采集指标地址
+    * mooncakeEnable  **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
     * port  **参数解释：** 容器端口
     * protocol  **参数解释：** 容器请求协议。当选择WSS与WS时，服务接口会升级为WebSocket。开启WebSocket时，不支持同时设置“服务流量限制”。 **取值范围：** - HTTP：HTTP协议。 - HTTPS：HTTPS协议。 - WSS：WebSocket Secure协议。 - WS：WebSocket协议。 - TCP：传输控制协议。 - NA：不使用任何协议。
     *
@@ -131,6 +136,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
             'metricApiPort' => 'metric_api_port',
             'metricApiPath' => 'metric_api_path',
             'customMetricsPath' => 'custom_metrics_path',
+            'mooncakeEnable' => 'mooncake_enable',
             'port' => 'port',
             'protocol' => 'protocol'
     ];
@@ -147,6 +153,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     * metricApiPort  **参数解释：** 智能路由指标采集端口
     * metricApiPath  **参数解释：** 智能路由指标采集地址
     * customMetricsPath  **参数解释：** 自定义监控采集指标地址
+    * mooncakeEnable  **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
     * port  **参数解释：** 容器端口
     * protocol  **参数解释：** 容器请求协议。当选择WSS与WS时，服务接口会升级为WebSocket。开启WebSocket时，不支持同时设置“服务流量限制”。 **取值范围：** - HTTP：HTTP协议。 - HTTPS：HTTPS协议。 - WSS：WebSocket Secure协议。 - WS：WebSocket协议。 - TCP：传输控制协议。 - NA：不使用任何协议。
     *
@@ -163,6 +170,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
             'metricApiPort' => 'setMetricApiPort',
             'metricApiPath' => 'setMetricApiPath',
             'customMetricsPath' => 'setCustomMetricsPath',
+            'mooncakeEnable' => 'setMooncakeEnable',
             'port' => 'setPort',
             'protocol' => 'setProtocol'
     ];
@@ -179,6 +187,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     * metricApiPort  **参数解释：** 智能路由指标采集端口
     * metricApiPath  **参数解释：** 智能路由指标采集地址
     * customMetricsPath  **参数解释：** 自定义监控采集指标地址
+    * mooncakeEnable  **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
     * port  **参数解释：** 容器端口
     * protocol  **参数解释：** 容器请求协议。当选择WSS与WS时，服务接口会升级为WebSocket。开启WebSocket时，不支持同时设置“服务流量限制”。 **取值范围：** - HTTP：HTTP协议。 - HTTPS：HTTPS协议。 - WSS：WebSocket Secure协议。 - WS：WebSocket协议。 - TCP：传输控制协议。 - NA：不使用任何协议。
     *
@@ -195,6 +204,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
             'metricApiPort' => 'getMetricApiPort',
             'metricApiPath' => 'getMetricApiPath',
             'customMetricsPath' => 'getCustomMetricsPath',
+            'mooncakeEnable' => 'getMooncakeEnable',
             'port' => 'getPort',
             'protocol' => 'getProtocol'
     ];
@@ -267,6 +277,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
         $this->container['metricApiPort'] = isset($data['metricApiPort']) ? $data['metricApiPort'] : null;
         $this->container['metricApiPath'] = isset($data['metricApiPath']) ? $data['metricApiPath'] : null;
         $this->container['customMetricsPath'] = isset($data['customMetricsPath']) ? $data['customMetricsPath'] : null;
+        $this->container['mooncakeEnable'] = isset($data['mooncakeEnable']) ? $data['mooncakeEnable'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
     }
@@ -312,7 +323,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     * Gets deployTimeoutMinutes
     *  **参数解释：** 部署超时时间
     *
-    * @return string|null
+    * @return int|null
     */
     public function getDeployTimeoutMinutes()
     {
@@ -322,7 +333,7 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     /**
     * Sets deployTimeoutMinutes
     *
-    * @param string|null $deployTimeoutMinutes **参数解释：** 部署超时时间
+    * @param int|null $deployTimeoutMinutes **参数解释：** 部署超时时间
     *
     * @return $this
     */
@@ -545,6 +556,30 @@ class AdvancedConfig implements ModelInterface, ArrayAccess
     public function setCustomMetricsPath($customMetricsPath)
     {
         $this->container['customMetricsPath'] = $customMetricsPath;
+        return $this;
+    }
+
+    /**
+    * Gets mooncakeEnable
+    *  **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
+    *
+    * @return bool|null
+    */
+    public function getMooncakeEnable()
+    {
+        return $this->container['mooncakeEnable'];
+    }
+
+    /**
+    * Sets mooncakeEnable
+    *
+    * @param bool|null $mooncakeEnable **参数解释：** Mooncake缓存开关。 **约束限制：** 不涉及。 **取值范围：** - true：开启Mooncake缓存开关。 - false：关闭Mooncake缓存开关。 **默认取值：** false
+    *
+    * @return $this
+    */
+    public function setMooncakeEnable($mooncakeEnable)
+    {
+        $this->container['mooncakeEnable'] = $mooncakeEnable;
         return $this;
     }
 

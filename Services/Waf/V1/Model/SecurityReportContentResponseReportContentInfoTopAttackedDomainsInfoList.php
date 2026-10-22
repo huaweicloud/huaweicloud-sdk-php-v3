@@ -23,13 +23,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
     * key  **参数解释：** 域名标识，包含域名及端口（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * webTag  **参数解释：** 域名的Web标签，用于标识域名所属业务类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
             'num' => 'int',
-            'webTag' => 'string'
+            'webTag' => 'string',
+            'host' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
     * key  **参数解释：** 域名标识，包含域名及端口（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * webTag  **参数解释：** 域名的Web标签，用于标识域名所属业务类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
         'num' => 'int32',
-        'webTag' => null
+        'webTag' => null,
+        'host' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
     * key  **参数解释：** 域名标识，包含域名及端口（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * webTag  **参数解释：** 域名的Web标签，用于标识域名所属业务类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
             'num' => 'num',
-            'webTag' => 'web_tag'
+            'webTag' => 'web_tag',
+            'host' => 'host'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
     * key  **参数解释：** 域名标识，包含域名及端口（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * webTag  **参数解释：** 域名的Web标签，用于标识域名所属业务类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
             'num' => 'setNum',
-            'webTag' => 'setWebTag'
+            'webTag' => 'setWebTag',
+            'host' => 'setHost'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
     * key  **参数解释：** 域名标识，包含域名及端口（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * webTag  **参数解释：** 域名的Web标签，用于标识域名所属业务类型。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
             'num' => 'getNum',
-            'webTag' => 'getWebTag'
+            'webTag' => 'getWebTag',
+            'host' => 'getHost'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
         $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
+        $this->container['host'] = isset($data['host']) ? $data['host'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class SecurityReportContentResponseReportContentInfoTopAttackedDomainsInfoList i
     public function setWebTag($webTag)
     {
         $this->container['webTag'] = $webTag;
+        return $this;
+    }
+
+    /**
+    * Gets host
+    *  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getHost()
+    {
+        return $this->container['host'];
+    }
+
+    /**
+    * Sets host
+    *
+    * @param string|null $host **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setHost($host)
+    {
+        $this->container['host'] = $host;
         return $this;
     }
 

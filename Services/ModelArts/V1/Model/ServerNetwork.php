@@ -27,6 +27,7 @@ class ServerNetwork implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：服务器所在虚拟私有云ID。表示服务器所属的虚拟私有云ID。 **约束限制**：不涉及。 **取值范围**：必须是UUID格式的字符串。 **默认取值**：不涉及。
     * hyperCluster  hyperCluster
     * allowedAddressPairs  **参数解释：** IP/Mac对列表。 **约束限制：** - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目的地址检查开关。 - 如果是虚拟IP绑定云服务器，       则mac_address可为空或者填写被绑定云服务器网卡的Mac地址。       被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 **取值范围：** 不涉及 **默认取值：** 不涉及\"
+    * hyperGroup  hyperGroup
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ServerNetwork implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'vpcId' => 'string',
             'hyperCluster' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServerNetworkHyperCluster',
-            'allowedAddressPairs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AllowedAddressPairs[]'
+            'allowedAddressPairs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AllowedAddressPairs[]',
+            'hyperGroup' => '\HuaweiCloud\SDK\ModelArts\V1\Model\HyperGroup'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ServerNetwork implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：服务器所在虚拟私有云ID。表示服务器所属的虚拟私有云ID。 **约束限制**：不涉及。 **取值范围**：必须是UUID格式的字符串。 **默认取值**：不涉及。
     * hyperCluster  hyperCluster
     * allowedAddressPairs  **参数解释：** IP/Mac对列表。 **约束限制：** - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目的地址检查开关。 - 如果是虚拟IP绑定云服务器，       则mac_address可为空或者填写被绑定云服务器网卡的Mac地址。       被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 **取值范围：** 不涉及 **默认取值：** 不涉及\"
+    * hyperGroup  hyperGroup
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ServerNetwork implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'vpcId' => null,
         'hyperCluster' => null,
-        'allowedAddressPairs' => null
+        'allowedAddressPairs' => null,
+        'hyperGroup' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ServerNetwork implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：服务器所在虚拟私有云ID。表示服务器所属的虚拟私有云ID。 **约束限制**：不涉及。 **取值范围**：必须是UUID格式的字符串。 **默认取值**：不涉及。
     * hyperCluster  hyperCluster
     * allowedAddressPairs  **参数解释：** IP/Mac对列表。 **约束限制：** - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目的地址检查开关。 - 如果是虚拟IP绑定云服务器，       则mac_address可为空或者填写被绑定云服务器网卡的Mac地址。       被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 **取值范围：** 不涉及 **默认取值：** 不涉及\"
+    * hyperGroup  hyperGroup
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ServerNetwork implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'vpcId' => 'vpc_id',
             'hyperCluster' => 'hyper_cluster',
-            'allowedAddressPairs' => 'allowed_address_pairs'
+            'allowedAddressPairs' => 'allowed_address_pairs',
+            'hyperGroup' => 'hyper_group'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ServerNetwork implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：服务器所在虚拟私有云ID。表示服务器所属的虚拟私有云ID。 **约束限制**：不涉及。 **取值范围**：必须是UUID格式的字符串。 **默认取值**：不涉及。
     * hyperCluster  hyperCluster
     * allowedAddressPairs  **参数解释：** IP/Mac对列表。 **约束限制：** - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目的地址检查开关。 - 如果是虚拟IP绑定云服务器，       则mac_address可为空或者填写被绑定云服务器网卡的Mac地址。       被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 **取值范围：** 不涉及 **默认取值：** 不涉及\"
+    * hyperGroup  hyperGroup
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ServerNetwork implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'vpcId' => 'setVpcId',
             'hyperCluster' => 'setHyperCluster',
-            'allowedAddressPairs' => 'setAllowedAddressPairs'
+            'allowedAddressPairs' => 'setAllowedAddressPairs',
+            'hyperGroup' => 'setHyperGroup'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ServerNetwork implements ModelInterface, ArrayAccess
     * vpcId  **参数解释**：服务器所在虚拟私有云ID。表示服务器所属的虚拟私有云ID。 **约束限制**：不涉及。 **取值范围**：必须是UUID格式的字符串。 **默认取值**：不涉及。
     * hyperCluster  hyperCluster
     * allowedAddressPairs  **参数解释：** IP/Mac对列表。 **约束限制：** - IP地址不允许为 “0.0.0.0/0”。 - 如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组。 - 如果allowed_address_pairs为“1.1.1.1/0”，表示关闭源目的地址检查开关。 - 如果是虚拟IP绑定云服务器，       则mac_address可为空或者填写被绑定云服务器网卡的Mac地址。       被绑定的云服务器网卡allowed_address_pairs的IP地址填“1.1.1.1/0”。 **取值范围：** 不涉及 **默认取值：** 不涉及\"
+    * hyperGroup  hyperGroup
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ServerNetwork implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'vpcId' => 'getVpcId',
             'hyperCluster' => 'getHyperCluster',
-            'allowedAddressPairs' => 'getAllowedAddressPairs'
+            'allowedAddressPairs' => 'getAllowedAddressPairs',
+            'hyperGroup' => 'getHyperGroup'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ServerNetwork implements ModelInterface, ArrayAccess
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['hyperCluster'] = isset($data['hyperCluster']) ? $data['hyperCluster'] : null;
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
+        $this->container['hyperGroup'] = isset($data['hyperGroup']) ? $data['hyperGroup'] : null;
     }
 
     /**
@@ -424,6 +435,30 @@ class ServerNetwork implements ModelInterface, ArrayAccess
     public function setAllowedAddressPairs($allowedAddressPairs)
     {
         $this->container['allowedAddressPairs'] = $allowedAddressPairs;
+        return $this;
+    }
+
+    /**
+    * Gets hyperGroup
+    *  hyperGroup
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\HyperGroup|null
+    */
+    public function getHyperGroup()
+    {
+        return $this->container['hyperGroup'];
+    }
+
+    /**
+    * Sets hyperGroup
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\HyperGroup|null $hyperGroup hyperGroup
+    *
+    * @return $this
+    */
+    public function setHyperGroup($hyperGroup)
+    {
+        $this->container['hyperGroup'] = $hyperGroup;
         return $this;
     }
 

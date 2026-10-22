@@ -48,7 +48,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
             'runtimeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RuntimeConfigUpdateRequest',
             'upgradeConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UpgradeConfig',
             'ltsStrategy' => 'string',
-            'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]',
+            'logConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfigurationV2[]',
             'tags' => 'string',
             'workspaceId' => 'string',
             'schedule' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfig[]',
@@ -546,7 +546,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     * Gets logConfigs
     *  **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfigurationV2[]|null
     */
     public function getLogConfigs()
     {
@@ -556,7 +556,7 @@ class ServiceUpdateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logConfigs
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfiguration[]|null $logConfigs **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\LtsConfigurationV2[]|null $logConfigs **参数解释：** 服务日志配置。 **约束限制：** 1.不填保留原有值 2.数量上限为[3](tag:hws,hws_hk,fcs,fcs_super)[2](tag:hcs,hcs_sm)个，且每种类型只可配置一个。
     *
     * @return $this
     */

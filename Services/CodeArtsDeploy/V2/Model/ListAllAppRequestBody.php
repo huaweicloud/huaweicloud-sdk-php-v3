@@ -21,6 +21,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  项目id
+    * search  检索关键字，应用名称模糊匹配
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
@@ -32,6 +33,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
+            'search' => 'string',
             'page' => 'int',
             'size' => 'int',
             'sortName' => 'string',
@@ -43,6 +45,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  项目id
+    * search  检索关键字，应用名称模糊匹配
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
@@ -54,6 +57,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'projectId' => null,
+        'search' => null,
         'page' => 'int32',
         'size' => 'int32',
         'sortName' => null,
@@ -86,6 +90,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  项目id
+    * search  检索关键字，应用名称模糊匹配
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
@@ -97,6 +102,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'projectId' => 'project_id',
+            'search' => 'search',
             'page' => 'page',
             'size' => 'size',
             'sortName' => 'sort_name',
@@ -108,6 +114,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  项目id
+    * search  检索关键字，应用名称模糊匹配
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
@@ -119,6 +126,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'projectId' => 'setProjectId',
+            'search' => 'setSearch',
             'page' => 'setPage',
             'size' => 'setSize',
             'sortName' => 'setSortName',
@@ -130,6 +138,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  项目id
+    * search  检索关键字，应用名称模糊匹配
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * sortName  排序字段的名称，当前仅支持name和startTime
@@ -141,6 +150,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'projectId' => 'getProjectId',
+            'search' => 'getSearch',
             'page' => 'getPage',
             'size' => 'getSize',
             'sortName' => 'getSortName',
@@ -250,6 +260,7 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['search'] = isset($data['search']) ? $data['search'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['sortName'] = isset($data['sortName']) ? $data['sortName'] : null;
@@ -277,6 +288,15 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[A-Za-z0-9]{32}$/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[A-Za-z0-9]{32}$/.";
+            }
+            if (!is_null($this->container['search']) && (mb_strlen($this->container['search']) > 128)) {
+                $invalidProperties[] = "invalid value for 'search', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['search']) && (mb_strlen($this->container['search']) < 3)) {
+                $invalidProperties[] = "invalid value for 'search', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['search']) && !preg_match("/^[a-zA-Z0-9\\u4E00-\\u9FA5-_]+$/", $this->container['search'])) {
+                $invalidProperties[] = "invalid value for 'search', must be conform to the pattern /^[a-zA-Z0-9\\u4E00-\\u9FA5-_]+$/.";
             }
         if ($this->container['page'] === null) {
             $invalidProperties[] = "'page' can't be null";
@@ -330,6 +350,30 @@ class ListAllAppRequestBody implements ModelInterface, ArrayAccess
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets search
+    *  检索关键字，应用名称模糊匹配
+    *
+    * @return string|null
+    */
+    public function getSearch()
+    {
+        return $this->container['search'];
+    }
+
+    /**
+    * Sets search
+    *
+    * @param string|null $search 检索关键字，应用名称模糊匹配
+    *
+    * @return $this
+    */
+    public function setSearch($search)
+    {
+        $this->container['search'] = $search;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * overviewStatisticsListInfo  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * overviewStatisticsInfoList  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * requestStatisticsInfoList  **参数解释：** 请求次数统计信息，包含各维度按时间线的请求数量统计。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * qpsStatisticsInfo  qpsStatisticsInfo
     * bandwidthStatisticsInfo  bandwidthStatisticsInfo
@@ -30,12 +30,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     * topAttackSourceIpsInfoList  **参数解释：** TOP攻击的源IP信息，按攻击次数排序的攻击源IP列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackedUrlsInfoList  **参数解释：** TOP被攻击的URL信息，按被攻击次数排序的URL列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackSourceLocationsInfoList  **参数解释：** TOP攻击的源地理位置信息，按攻击次数排序的地理位置列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * topAbnormalUrlsInfo  topAbnormalUrlsInfo
+    * topErrorPagesInfo  topErrorPagesInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'overviewStatisticsListInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoOverviewStatisticsListInfo[]',
+            'overviewStatisticsInfoList' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoOverviewStatisticsInfoList[]',
             'requestStatisticsInfoList' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoRequestStatisticsInfoList[]',
             'qpsStatisticsInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoQpsStatisticsInfo',
             'bandwidthStatisticsInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoBandwidthStatisticsInfo',
@@ -45,12 +45,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
             'topAttackSourceIpsInfoList' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopAttackSourceIpsInfoList[]',
             'topAttackedUrlsInfoList' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList[]',
             'topAttackSourceLocationsInfoList' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopAttackSourceLocationsInfoList[]',
-            'topAbnormalUrlsInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopAbnormalUrlsInfo'
+            'topErrorPagesInfo' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopErrorPagesInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * overviewStatisticsListInfo  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * overviewStatisticsInfoList  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * requestStatisticsInfoList  **参数解释：** 请求次数统计信息，包含各维度按时间线的请求数量统计。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * qpsStatisticsInfo  qpsStatisticsInfo
     * bandwidthStatisticsInfo  bandwidthStatisticsInfo
@@ -60,12 +60,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     * topAttackSourceIpsInfoList  **参数解释：** TOP攻击的源IP信息，按攻击次数排序的攻击源IP列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackedUrlsInfoList  **参数解释：** TOP被攻击的URL信息，按被攻击次数排序的URL列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackSourceLocationsInfoList  **参数解释：** TOP攻击的源地理位置信息，按攻击次数排序的地理位置列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * topAbnormalUrlsInfo  topAbnormalUrlsInfo
+    * topErrorPagesInfo  topErrorPagesInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'overviewStatisticsListInfo' => null,
+        'overviewStatisticsInfoList' => null,
         'requestStatisticsInfoList' => null,
         'qpsStatisticsInfo' => null,
         'bandwidthStatisticsInfo' => null,
@@ -75,7 +75,7 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
         'topAttackSourceIpsInfoList' => null,
         'topAttackedUrlsInfoList' => null,
         'topAttackSourceLocationsInfoList' => null,
-        'topAbnormalUrlsInfo' => null
+        'topErrorPagesInfo' => null
     ];
 
     /**
@@ -101,7 +101,7 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * overviewStatisticsListInfo  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * overviewStatisticsInfoList  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * requestStatisticsInfoList  **参数解释：** 请求次数统计信息，包含各维度按时间线的请求数量统计。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * qpsStatisticsInfo  qpsStatisticsInfo
     * bandwidthStatisticsInfo  bandwidthStatisticsInfo
@@ -111,12 +111,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     * topAttackSourceIpsInfoList  **参数解释：** TOP攻击的源IP信息，按攻击次数排序的攻击源IP列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackedUrlsInfoList  **参数解释：** TOP被攻击的URL信息，按被攻击次数排序的URL列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackSourceLocationsInfoList  **参数解释：** TOP攻击的源地理位置信息，按攻击次数排序的地理位置列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * topAbnormalUrlsInfo  topAbnormalUrlsInfo
+    * topErrorPagesInfo  topErrorPagesInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'overviewStatisticsListInfo' => 'overview_statistics_list_info',
+            'overviewStatisticsInfoList' => 'overview_statistics_info_list',
             'requestStatisticsInfoList' => 'request_statistics_info_list',
             'qpsStatisticsInfo' => 'qps_statistics_info',
             'bandwidthStatisticsInfo' => 'bandwidth_statistics_info',
@@ -126,12 +126,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
             'topAttackSourceIpsInfoList' => 'top_attack_source_ips_info_list',
             'topAttackedUrlsInfoList' => 'top_attacked_urls_info_list',
             'topAttackSourceLocationsInfoList' => 'top_attack_source_locations_info_list',
-            'topAbnormalUrlsInfo' => 'top_abnormal_urls_info'
+            'topErrorPagesInfo' => 'top_error_pages_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * overviewStatisticsListInfo  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * overviewStatisticsInfoList  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * requestStatisticsInfoList  **参数解释：** 请求次数统计信息，包含各维度按时间线的请求数量统计。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * qpsStatisticsInfo  qpsStatisticsInfo
     * bandwidthStatisticsInfo  bandwidthStatisticsInfo
@@ -141,12 +141,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     * topAttackSourceIpsInfoList  **参数解释：** TOP攻击的源IP信息，按攻击次数排序的攻击源IP列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackedUrlsInfoList  **参数解释：** TOP被攻击的URL信息，按被攻击次数排序的URL列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackSourceLocationsInfoList  **参数解释：** TOP攻击的源地理位置信息，按攻击次数排序的地理位置列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * topAbnormalUrlsInfo  topAbnormalUrlsInfo
+    * topErrorPagesInfo  topErrorPagesInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'overviewStatisticsListInfo' => 'setOverviewStatisticsListInfo',
+            'overviewStatisticsInfoList' => 'setOverviewStatisticsInfoList',
             'requestStatisticsInfoList' => 'setRequestStatisticsInfoList',
             'qpsStatisticsInfo' => 'setQpsStatisticsInfo',
             'bandwidthStatisticsInfo' => 'setBandwidthStatisticsInfo',
@@ -156,12 +156,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
             'topAttackSourceIpsInfoList' => 'setTopAttackSourceIpsInfoList',
             'topAttackedUrlsInfoList' => 'setTopAttackedUrlsInfoList',
             'topAttackSourceLocationsInfoList' => 'setTopAttackSourceLocationsInfoList',
-            'topAbnormalUrlsInfo' => 'setTopAbnormalUrlsInfo'
+            'topErrorPagesInfo' => 'setTopErrorPagesInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * overviewStatisticsListInfo  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * overviewStatisticsInfoList  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * requestStatisticsInfoList  **参数解释：** 请求次数统计信息，包含各维度按时间线的请求数量统计。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * qpsStatisticsInfo  qpsStatisticsInfo
     * bandwidthStatisticsInfo  bandwidthStatisticsInfo
@@ -171,12 +171,12 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     * topAttackSourceIpsInfoList  **参数解释：** TOP攻击的源IP信息，按攻击次数排序的攻击源IP列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackedUrlsInfoList  **参数解释：** TOP被攻击的URL信息，按被攻击次数排序的URL列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * topAttackSourceLocationsInfoList  **参数解释：** TOP攻击的源地理位置信息，按攻击次数排序的地理位置列表。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * topAbnormalUrlsInfo  topAbnormalUrlsInfo
+    * topErrorPagesInfo  topErrorPagesInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'overviewStatisticsListInfo' => 'getOverviewStatisticsListInfo',
+            'overviewStatisticsInfoList' => 'getOverviewStatisticsInfoList',
             'requestStatisticsInfoList' => 'getRequestStatisticsInfoList',
             'qpsStatisticsInfo' => 'getQpsStatisticsInfo',
             'bandwidthStatisticsInfo' => 'getBandwidthStatisticsInfo',
@@ -186,7 +186,7 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
             'topAttackSourceIpsInfoList' => 'getTopAttackSourceIpsInfoList',
             'topAttackedUrlsInfoList' => 'getTopAttackedUrlsInfoList',
             'topAttackSourceLocationsInfoList' => 'getTopAttackSourceLocationsInfoList',
-            'topAbnormalUrlsInfo' => 'getTopAbnormalUrlsInfo'
+            'topErrorPagesInfo' => 'getTopErrorPagesInfo'
     ];
 
     /**
@@ -247,7 +247,7 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     */
     public function __construct(array $data = null)
     {
-        $this->container['overviewStatisticsListInfo'] = isset($data['overviewStatisticsListInfo']) ? $data['overviewStatisticsListInfo'] : null;
+        $this->container['overviewStatisticsInfoList'] = isset($data['overviewStatisticsInfoList']) ? $data['overviewStatisticsInfoList'] : null;
         $this->container['requestStatisticsInfoList'] = isset($data['requestStatisticsInfoList']) ? $data['requestStatisticsInfoList'] : null;
         $this->container['qpsStatisticsInfo'] = isset($data['qpsStatisticsInfo']) ? $data['qpsStatisticsInfo'] : null;
         $this->container['bandwidthStatisticsInfo'] = isset($data['bandwidthStatisticsInfo']) ? $data['bandwidthStatisticsInfo'] : null;
@@ -257,7 +257,7 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
         $this->container['topAttackSourceIpsInfoList'] = isset($data['topAttackSourceIpsInfoList']) ? $data['topAttackSourceIpsInfoList'] : null;
         $this->container['topAttackedUrlsInfoList'] = isset($data['topAttackedUrlsInfoList']) ? $data['topAttackedUrlsInfoList'] : null;
         $this->container['topAttackSourceLocationsInfoList'] = isset($data['topAttackSourceLocationsInfoList']) ? $data['topAttackSourceLocationsInfoList'] : null;
-        $this->container['topAbnormalUrlsInfo'] = isset($data['topAbnormalUrlsInfo']) ? $data['topAbnormalUrlsInfo'] : null;
+        $this->container['topErrorPagesInfo'] = isset($data['topErrorPagesInfo']) ? $data['topErrorPagesInfo'] : null;
     }
 
     /**
@@ -283,26 +283,26 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     }
 
     /**
-    * Gets overviewStatisticsListInfo
+    * Gets overviewStatisticsInfoList
     *  **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoOverviewStatisticsListInfo[]|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoOverviewStatisticsInfoList[]|null
     */
-    public function getOverviewStatisticsListInfo()
+    public function getOverviewStatisticsInfoList()
     {
-        return $this->container['overviewStatisticsListInfo'];
+        return $this->container['overviewStatisticsInfoList'];
     }
 
     /**
-    * Sets overviewStatisticsListInfo
+    * Sets overviewStatisticsInfoList
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoOverviewStatisticsListInfo[]|null $overviewStatisticsListInfo **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoOverviewStatisticsInfoList[]|null $overviewStatisticsInfoList **参数解释：** 总览统计信息，包含各维度的汇总统计数据及TOP域名详情。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
-    public function setOverviewStatisticsListInfo($overviewStatisticsListInfo)
+    public function setOverviewStatisticsInfoList($overviewStatisticsInfoList)
     {
-        $this->container['overviewStatisticsListInfo'] = $overviewStatisticsListInfo;
+        $this->container['overviewStatisticsInfoList'] = $overviewStatisticsInfoList;
         return $this;
     }
 
@@ -523,26 +523,26 @@ class SecurityReportContentResponseReportContentInfo implements ModelInterface, 
     }
 
     /**
-    * Gets topAbnormalUrlsInfo
-    *  topAbnormalUrlsInfo
+    * Gets topErrorPagesInfo
+    *  topErrorPagesInfo
     *
-    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopAbnormalUrlsInfo|null
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopErrorPagesInfo|null
     */
-    public function getTopAbnormalUrlsInfo()
+    public function getTopErrorPagesInfo()
     {
-        return $this->container['topAbnormalUrlsInfo'];
+        return $this->container['topErrorPagesInfo'];
     }
 
     /**
-    * Sets topAbnormalUrlsInfo
+    * Sets topErrorPagesInfo
     *
-    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopAbnormalUrlsInfo|null $topAbnormalUrlsInfo topAbnormalUrlsInfo
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoTopErrorPagesInfo|null $topErrorPagesInfo topErrorPagesInfo
     *
     * @return $this
     */
-    public function setTopAbnormalUrlsInfo($topAbnormalUrlsInfo)
+    public function setTopErrorPagesInfo($topErrorPagesInfo)
     {
-        $this->container['topAbnormalUrlsInfo'] = $topAbnormalUrlsInfo;
+        $this->container['topErrorPagesInfo'] = $topErrorPagesInfo;
         return $this;
     }
 

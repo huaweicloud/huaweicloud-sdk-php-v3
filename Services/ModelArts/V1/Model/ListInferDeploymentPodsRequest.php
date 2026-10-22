@@ -30,6 +30,7 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
     * podId  **参数解释：** pod ID。 **取值范围：** 不涉及。
     * podNodeIp  **参数解释：** pod节点IP地址。 **取值范围：** 不涉及。
     * podNodeName  **参数解释：** pod节点名称。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
             'podName' => 'string',
             'podId' => 'string',
             'podNodeIp' => 'string',
-            'podNodeName' => 'string'
+            'podNodeName' => 'string',
+            'podRoleName' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
     * podId  **参数解释：** pod ID。 **取值范围：** 不涉及。
     * podNodeIp  **参数解释：** pod节点IP地址。 **取值范围：** 不涉及。
     * podNodeName  **参数解释：** pod节点名称。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
         'podName' => null,
         'podId' => null,
         'podNodeIp' => null,
-        'podNodeName' => null
+        'podNodeName' => null,
+        'podRoleName' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
     * podId  **参数解释：** pod ID。 **取值范围：** 不涉及。
     * podNodeIp  **参数解释：** pod节点IP地址。 **取值范围：** 不涉及。
     * podNodeName  **参数解释：** pod节点名称。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
             'podName' => 'pod_name',
             'podId' => 'pod_id',
             'podNodeIp' => 'pod_node_ip',
-            'podNodeName' => 'pod_node_name'
+            'podNodeName' => 'pod_node_name',
+            'podRoleName' => 'pod_role_name'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
     * podId  **参数解释：** pod ID。 **取值范围：** 不涉及。
     * podNodeIp  **参数解释：** pod节点IP地址。 **取值范围：** 不涉及。
     * podNodeName  **参数解释：** pod节点名称。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
             'podName' => 'setPodName',
             'podId' => 'setPodId',
             'podNodeIp' => 'setPodNodeIp',
-            'podNodeName' => 'setPodNodeName'
+            'podNodeName' => 'setPodNodeName',
+            'podRoleName' => 'setPodRoleName'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
     * podId  **参数解释：** pod ID。 **取值范围：** 不涉及。
     * podNodeIp  **参数解释：** pod节点IP地址。 **取值范围：** 不涉及。
     * podNodeName  **参数解释：** pod节点名称。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
             'podName' => 'getPodName',
             'podId' => 'getPodId',
             'podNodeIp' => 'getPodNodeIp',
-            'podNodeName' => 'getPodNodeName'
+            'podNodeName' => 'getPodNodeName',
+            'podRoleName' => 'getPodRoleName'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
         $this->container['podId'] = isset($data['podId']) ? $data['podId'] : null;
         $this->container['podNodeIp'] = isset($data['podNodeIp']) ? $data['podNodeIp'] : null;
         $this->container['podNodeName'] = isset($data['podNodeName']) ? $data['podNodeName'] : null;
+        $this->container['podRoleName'] = isset($data['podRoleName']) ? $data['podRoleName'] : null;
     }
 
     /**
@@ -523,6 +534,30 @@ class ListInferDeploymentPodsRequest implements ModelInterface, ArrayAccess
     public function setPodNodeName($podNodeName)
     {
         $this->container['podNodeName'] = $podNodeName;
+        return $this;
+    }
+
+    /**
+    * Gets podRoleName
+    *  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPodRoleName()
+    {
+        return $this->container['podRoleName'];
+    }
+
+    /**
+    * Sets podRoleName
+    *
+    * @param string|null $podRoleName **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setPodRoleName($podRoleName)
+    {
+        $this->container['podRoleName'] = $podRoleName;
         return $this;
     }
 

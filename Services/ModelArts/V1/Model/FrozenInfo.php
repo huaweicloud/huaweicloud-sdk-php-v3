@@ -20,8 +20,8 @@ class FrozenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scene  冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
-    * effect  冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    * scene  **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    * effect  **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class FrozenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scene  冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
-    * effect  冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    * scene  **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    * effect  **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class FrozenInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scene  冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
-    * effect  冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    * scene  **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    * effect  **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class FrozenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scene  冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
-    * effect  冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    * scene  **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    * effect  **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class FrozenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scene  冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
-    * effect  冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    * scene  **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    * effect  **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class FrozenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scene
-    *  冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    *  **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class FrozenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scene
     *
-    * @param string|null $scene 冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
+    * @param string|null $scene **参数解释：**冻结场景。可选值如下： - ARREAR：欠费冻结 - POLICE：公安冻结 - ILLEGAL：违规冻结
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class FrozenInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets effect
-    *  冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    *  **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class FrozenInfo implements ModelInterface, ArrayAccess
     /**
     * Sets effect
     *
-    * @param int|null $effect 冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
+    * @param int|null $effect **参数解释：**冻结后的影响。可选值如下： - 1：冻结后可释放 - 2：冻结后不可释放
     *
     * @return $this
     */

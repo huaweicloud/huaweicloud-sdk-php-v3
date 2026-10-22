@@ -27,6 +27,7 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
     * podRole  **参数解释：** pod角色。 **取值范围：** 不涉及。
     * status  **参数解释：** pod服务状态。 **取值范围：** 有7种状态。RUNNING（运行中）、PENDING（未就绪）、SUCCEEDED（成功）、FAILED（失败）、ABNORMAL（异常）、UNKNOWN（未知）、DELETED（已删除）。
     * updateTime  **参数解释：** 最近更新时间。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
             'podNodeName' => 'string',
             'podRole' => 'string',
             'status' => 'string',
-            'updateTime' => 'int'
+            'updateTime' => 'int',
+            'podRoleName' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
     * podRole  **参数解释：** pod角色。 **取值范围：** 不涉及。
     * status  **参数解释：** pod服务状态。 **取值范围：** 有7种状态。RUNNING（运行中）、PENDING（未就绪）、SUCCEEDED（成功）、FAILED（失败）、ABNORMAL（异常）、UNKNOWN（未知）、DELETED（已删除）。
     * updateTime  **参数解释：** 最近更新时间。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
         'podNodeName' => null,
         'podRole' => null,
         'status' => null,
-        'updateTime' => 'int64'
+        'updateTime' => 'int64',
+        'podRoleName' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
     * podRole  **参数解释：** pod角色。 **取值范围：** 不涉及。
     * status  **参数解释：** pod服务状态。 **取值范围：** 有7种状态。RUNNING（运行中）、PENDING（未就绪）、SUCCEEDED（成功）、FAILED（失败）、ABNORMAL（异常）、UNKNOWN（未知）、DELETED（已删除）。
     * updateTime  **参数解释：** 最近更新时间。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
             'podNodeName' => 'pod_node_name',
             'podRole' => 'pod_role',
             'status' => 'status',
-            'updateTime' => 'update_time'
+            'updateTime' => 'update_time',
+            'podRoleName' => 'pod_role_name'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
     * podRole  **参数解释：** pod角色。 **取值范围：** 不涉及。
     * status  **参数解释：** pod服务状态。 **取值范围：** 有7种状态。RUNNING（运行中）、PENDING（未就绪）、SUCCEEDED（成功）、FAILED（失败）、ABNORMAL（异常）、UNKNOWN（未知）、DELETED（已删除）。
     * updateTime  **参数解释：** 最近更新时间。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
             'podNodeName' => 'setPodNodeName',
             'podRole' => 'setPodRole',
             'status' => 'setStatus',
-            'updateTime' => 'setUpdateTime'
+            'updateTime' => 'setUpdateTime',
+            'podRoleName' => 'setPodRoleName'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
     * podRole  **参数解释：** pod角色。 **取值范围：** 不涉及。
     * status  **参数解释：** pod服务状态。 **取值范围：** 有7种状态。RUNNING（运行中）、PENDING（未就绪）、SUCCEEDED（成功）、FAILED（失败）、ABNORMAL（异常）、UNKNOWN（未知）、DELETED（已删除）。
     * updateTime  **参数解释：** 最近更新时间。 **取值范围：** 不涉及。
+    * podRoleName  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
             'podNodeName' => 'getPodNodeName',
             'podRole' => 'getPodRole',
             'status' => 'getStatus',
-            'updateTime' => 'getUpdateTime'
+            'updateTime' => 'getUpdateTime',
+            'podRoleName' => 'getPodRoleName'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
         $this->container['podRole'] = isset($data['podRole']) ? $data['podRole'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['podRoleName'] = isset($data['podRoleName']) ? $data['podRoleName'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class ServicePodResponse implements ModelInterface, ArrayAccess
     public function setUpdateTime($updateTime)
     {
         $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets podRoleName
+    *  **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPodRoleName()
+    {
+        return $this->container['podRoleName'];
+    }
+
+    /**
+    * Sets podRoleName
+    *
+    * @param string|null $podRoleName **参数解释：** pod所属单元名称。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setPodRoleName($podRoleName)
+    {
+        $this->container['podRoleName'] = $podRoleName;
         return $this;
     }
 

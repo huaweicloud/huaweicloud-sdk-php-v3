@@ -22,24 +22,32 @@ class SecurityReportContentResponseReportContentInfoTopAttackSourceIpsInfoList i
     * Array of property to type mappings. Used for (de)serialization
     * key  **参数解释：** 攻击源IP地址。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该IP发起攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * host  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'num' => 'int'
+            'num' => 'int',
+            'host' => 'string',
+            'webTag' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  **参数解释：** 攻击源IP地址。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该IP发起攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * host  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
-        'num' => 'int32'
+        'num' => 'int32',
+        'host' => null,
+        'webTag' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class SecurityReportContentResponseReportContentInfoTopAttackSourceIpsInfoList i
     * and the value is the original name
     * key  **参数解释：** 攻击源IP地址。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该IP发起攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * host  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
-            'num' => 'num'
+            'num' => 'num',
+            'host' => 'host',
+            'webTag' => 'web_tag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  **参数解释：** 攻击源IP地址。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该IP发起攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * host  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
-            'num' => 'setNum'
+            'num' => 'setNum',
+            'host' => 'setHost',
+            'webTag' => 'setWebTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  **参数解释：** 攻击源IP地址。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该IP发起攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * host  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
-            'num' => 'getNum'
+            'num' => 'getNum',
+            'host' => 'getHost',
+            'webTag' => 'getWebTag'
     ];
 
     /**
@@ -159,6 +179,8 @@ class SecurityReportContentResponseReportContentInfoTopAttackSourceIpsInfoList i
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
+        $this->container['host'] = isset($data['host']) ? $data['host'] : null;
+        $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
     }
 
     /**
@@ -228,6 +250,54 @@ class SecurityReportContentResponseReportContentInfoTopAttackSourceIpsInfoList i
     public function setNum($num)
     {
         $this->container['num'] = $num;
+        return $this;
+    }
+
+    /**
+    * Gets host
+    *  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getHost()
+    {
+        return $this->container['host'];
+    }
+
+    /**
+    * Sets host
+    *
+    * @param string|null $host **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setHost($host)
+    {
+        $this->container['host'] = $host;
+        return $this;
+    }
+
+    /**
+    * Gets webTag
+    *  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getWebTag()
+    {
+        return $this->container['webTag'];
+    }
+
+    /**
+    * Sets webTag
+    *
+    * @param string|null $webTag **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setWebTag($webTag)
+    {
+        $this->container['webTag'] = $webTag;
         return $this;
     }
 

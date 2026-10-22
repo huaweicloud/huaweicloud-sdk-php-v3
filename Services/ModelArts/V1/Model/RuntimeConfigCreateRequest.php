@@ -24,6 +24,7 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
     * serviceLimit  serviceLimit
     * serviceSecret  serviceSecret
     * serverTaskLimit  serverTaskLimit
+    * smartRoutingEnable  **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
             'serviceInvoke' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceInvokeCreateRequest',
             'serviceLimit' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceLimit',
             'serviceSecret' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceSecret',
-            'serverTaskLimit' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServerTaskLimit'
+            'serverTaskLimit' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServerTaskLimit',
+            'smartRoutingEnable' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
     * serviceLimit  serviceLimit
     * serviceSecret  serviceSecret
     * serverTaskLimit  serverTaskLimit
+    * smartRoutingEnable  **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
         'serviceInvoke' => null,
         'serviceLimit' => null,
         'serviceSecret' => null,
-        'serverTaskLimit' => null
+        'serverTaskLimit' => null,
+        'smartRoutingEnable' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
     * serviceLimit  serviceLimit
     * serviceSecret  serviceSecret
     * serverTaskLimit  serverTaskLimit
+    * smartRoutingEnable  **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
             'serviceInvoke' => 'service_invoke',
             'serviceLimit' => 'service_limit',
             'serviceSecret' => 'service_secret',
-            'serverTaskLimit' => 'server_task_limit'
+            'serverTaskLimit' => 'server_task_limit',
+            'smartRoutingEnable' => 'smart_routing_enable'
     ];
 
     /**
@@ -93,6 +99,7 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
     * serviceLimit  serviceLimit
     * serviceSecret  serviceSecret
     * serverTaskLimit  serverTaskLimit
+    * smartRoutingEnable  **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
             'serviceInvoke' => 'setServiceInvoke',
             'serviceLimit' => 'setServiceLimit',
             'serviceSecret' => 'setServiceSecret',
-            'serverTaskLimit' => 'setServerTaskLimit'
+            'serverTaskLimit' => 'setServerTaskLimit',
+            'smartRoutingEnable' => 'setSmartRoutingEnable'
     ];
 
     /**
@@ -109,6 +117,7 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
     * serviceLimit  serviceLimit
     * serviceSecret  serviceSecret
     * serverTaskLimit  serverTaskLimit
+    * smartRoutingEnable  **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
             'serviceInvoke' => 'getServiceInvoke',
             'serviceLimit' => 'getServiceLimit',
             'serviceSecret' => 'getServiceSecret',
-            'serverTaskLimit' => 'getServerTaskLimit'
+            'serverTaskLimit' => 'getServerTaskLimit',
+            'smartRoutingEnable' => 'getSmartRoutingEnable'
     ];
 
     /**
@@ -181,6 +191,7 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
         $this->container['serviceLimit'] = isset($data['serviceLimit']) ? $data['serviceLimit'] : null;
         $this->container['serviceSecret'] = isset($data['serviceSecret']) ? $data['serviceSecret'] : null;
         $this->container['serverTaskLimit'] = isset($data['serverTaskLimit']) ? $data['serverTaskLimit'] : null;
+        $this->container['smartRoutingEnable'] = isset($data['smartRoutingEnable']) ? $data['smartRoutingEnable'] : null;
     }
 
     /**
@@ -304,6 +315,30 @@ class RuntimeConfigCreateRequest implements ModelInterface, ArrayAccess
     public function setServerTaskLimit($serverTaskLimit)
     {
         $this->container['serverTaskLimit'] = $serverTaskLimit;
+        return $this;
+    }
+
+    /**
+    * Gets smartRoutingEnable
+    *  **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
+    *
+    * @return bool|null
+    */
+    public function getSmartRoutingEnable()
+    {
+        return $this->container['smartRoutingEnable'];
+    }
+
+    /**
+    * Sets smartRoutingEnable
+    *
+    * @param bool|null $smartRoutingEnable **参数解释：** 智能分流开启字段。 **取值范围：** [true, false]。
+    *
+    * @return $this
+    */
+    public function setSmartRoutingEnable($smartRoutingEnable)
+    {
+        $this->container['smartRoutingEnable'] = $smartRoutingEnable;
         return $this;
     }
 

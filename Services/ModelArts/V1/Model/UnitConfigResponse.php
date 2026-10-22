@@ -31,6 +31,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * codes  **参数解释：** 代码相关配置，用户可以在此处选择代码所在的obs路径等。
     * dumps  **参数解释：** 转储相关配置，用户可以在此处选择转储的目的obs路径等。
     * count  **参数解释：** 配置实例个数。 **取值范围：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * groupCount  **参数解释：** 单元副本数，当部署类型deploy_type为SINGLE或工作负载类型workload_type为DEPLOYMENT时，该参数无效。 **取值范围：** [1, 100] 或者为空。 **默认取值：** 默认值为1。
     * cmd  **参数解释：** 启动命令。 **取值范围：** 不涉及。
     * envs  **参数解释：** 环境变量。
@@ -45,6 +46,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * terminationGrace  terminationGrace
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -60,6 +62,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'codes' => '\HuaweiCloud\SDK\ModelArts\V1\Model\CodeResponse[]',
             'dumps' => '\HuaweiCloud\SDK\ModelArts\V1\Model\DumpResponse[]',
             'count' => 'int',
+            'cpuAffinity' => 'bool',
             'groupCount' => 'int',
             'cmd' => 'string',
             'envs' => 'map[string,string]',
@@ -73,7 +76,8 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'flavorDisplayName' => 'string',
             'terminationGrace' => '\HuaweiCloud\SDK\ModelArts\V1\Model\TerminationGrace',
             'securityConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceSecurityConfig',
-            'poolResourceFlavor' => 'string'
+            'poolResourceFlavor' => 'string',
+            'groupPolicy' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UnitGroupPolicyResponse'
     ];
 
     /**
@@ -89,6 +93,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * codes  **参数解释：** 代码相关配置，用户可以在此处选择代码所在的obs路径等。
     * dumps  **参数解释：** 转储相关配置，用户可以在此处选择转储的目的obs路径等。
     * count  **参数解释：** 配置实例个数。 **取值范围：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * groupCount  **参数解释：** 单元副本数，当部署类型deploy_type为SINGLE或工作负载类型workload_type为DEPLOYMENT时，该参数无效。 **取值范围：** [1, 100] 或者为空。 **默认取值：** 默认值为1。
     * cmd  **参数解释：** 启动命令。 **取值范围：** 不涉及。
     * envs  **参数解释：** 环境变量。
@@ -103,6 +108,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * terminationGrace  terminationGrace
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -118,6 +124,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
         'codes' => null,
         'dumps' => null,
         'count' => 'int32',
+        'cpuAffinity' => null,
         'groupCount' => 'int32',
         'cmd' => null,
         'envs' => null,
@@ -131,7 +138,8 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
         'flavorDisplayName' => null,
         'terminationGrace' => null,
         'securityConfig' => null,
-        'poolResourceFlavor' => null
+        'poolResourceFlavor' => null,
+        'groupPolicy' => null
     ];
 
     /**
@@ -168,6 +176,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * codes  **参数解释：** 代码相关配置，用户可以在此处选择代码所在的obs路径等。
     * dumps  **参数解释：** 转储相关配置，用户可以在此处选择转储的目的obs路径等。
     * count  **参数解释：** 配置实例个数。 **取值范围：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * groupCount  **参数解释：** 单元副本数，当部署类型deploy_type为SINGLE或工作负载类型workload_type为DEPLOYMENT时，该参数无效。 **取值范围：** [1, 100] 或者为空。 **默认取值：** 默认值为1。
     * cmd  **参数解释：** 启动命令。 **取值范围：** 不涉及。
     * envs  **参数解释：** 环境变量。
@@ -182,6 +191,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * terminationGrace  terminationGrace
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -197,6 +207,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'codes' => 'codes',
             'dumps' => 'dumps',
             'count' => 'count',
+            'cpuAffinity' => 'cpu_affinity',
             'groupCount' => 'group_count',
             'cmd' => 'cmd',
             'envs' => 'envs',
@@ -210,7 +221,8 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'flavorDisplayName' => 'flavor_display_name',
             'terminationGrace' => 'termination_grace',
             'securityConfig' => 'security_config',
-            'poolResourceFlavor' => 'pool_resource_flavor'
+            'poolResourceFlavor' => 'pool_resource_flavor',
+            'groupPolicy' => 'group_policy'
     ];
 
     /**
@@ -226,6 +238,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * codes  **参数解释：** 代码相关配置，用户可以在此处选择代码所在的obs路径等。
     * dumps  **参数解释：** 转储相关配置，用户可以在此处选择转储的目的obs路径等。
     * count  **参数解释：** 配置实例个数。 **取值范围：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * groupCount  **参数解释：** 单元副本数，当部署类型deploy_type为SINGLE或工作负载类型workload_type为DEPLOYMENT时，该参数无效。 **取值范围：** [1, 100] 或者为空。 **默认取值：** 默认值为1。
     * cmd  **参数解释：** 启动命令。 **取值范围：** 不涉及。
     * envs  **参数解释：** 环境变量。
@@ -240,6 +253,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * terminationGrace  terminationGrace
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -255,6 +269,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'codes' => 'setCodes',
             'dumps' => 'setDumps',
             'count' => 'setCount',
+            'cpuAffinity' => 'setCpuAffinity',
             'groupCount' => 'setGroupCount',
             'cmd' => 'setCmd',
             'envs' => 'setEnvs',
@@ -268,7 +283,8 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'flavorDisplayName' => 'setFlavorDisplayName',
             'terminationGrace' => 'setTerminationGrace',
             'securityConfig' => 'setSecurityConfig',
-            'poolResourceFlavor' => 'setPoolResourceFlavor'
+            'poolResourceFlavor' => 'setPoolResourceFlavor',
+            'groupPolicy' => 'setGroupPolicy'
     ];
 
     /**
@@ -284,6 +300,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * codes  **参数解释：** 代码相关配置，用户可以在此处选择代码所在的obs路径等。
     * dumps  **参数解释：** 转储相关配置，用户可以在此处选择转储的目的obs路径等。
     * count  **参数解释：** 配置实例个数。 **取值范围：** 不涉及。
+    * cpuAffinity  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
     * groupCount  **参数解释：** 单元副本数，当部署类型deploy_type为SINGLE或工作负载类型workload_type为DEPLOYMENT时，该参数无效。 **取值范围：** [1, 100] 或者为空。 **默认取值：** 默认值为1。
     * cmd  **参数解释：** 启动命令。 **取值范围：** 不涉及。
     * envs  **参数解释：** 环境变量。
@@ -298,6 +315,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     * terminationGrace  terminationGrace
     * securityConfig  securityConfig
     * poolResourceFlavor  **参数解释：** 节点池资源规格。 **约束限制：** 只能包含字母、数字、点、中划线和下划线。 **取值范围：** 长度不超过128字符。 **默认取值：** 不涉及。
+    * groupPolicy  groupPolicy
     *
     * @var string[]
     */
@@ -313,6 +331,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'codes' => 'getCodes',
             'dumps' => 'getDumps',
             'count' => 'getCount',
+            'cpuAffinity' => 'getCpuAffinity',
             'groupCount' => 'getGroupCount',
             'cmd' => 'getCmd',
             'envs' => 'getEnvs',
@@ -326,7 +345,8 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
             'flavorDisplayName' => 'getFlavorDisplayName',
             'terminationGrace' => 'getTerminationGrace',
             'securityConfig' => 'getSecurityConfig',
-            'poolResourceFlavor' => 'getPoolResourceFlavor'
+            'poolResourceFlavor' => 'getPoolResourceFlavor',
+            'groupPolicy' => 'getGroupPolicy'
     ];
 
     /**
@@ -398,6 +418,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
         $this->container['codes'] = isset($data['codes']) ? $data['codes'] : null;
         $this->container['dumps'] = isset($data['dumps']) ? $data['dumps'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['cpuAffinity'] = isset($data['cpuAffinity']) ? $data['cpuAffinity'] : null;
         $this->container['groupCount'] = isset($data['groupCount']) ? $data['groupCount'] : null;
         $this->container['cmd'] = isset($data['cmd']) ? $data['cmd'] : null;
         $this->container['envs'] = isset($data['envs']) ? $data['envs'] : null;
@@ -412,6 +433,7 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
         $this->container['terminationGrace'] = isset($data['terminationGrace']) ? $data['terminationGrace'] : null;
         $this->container['securityConfig'] = isset($data['securityConfig']) ? $data['securityConfig'] : null;
         $this->container['poolResourceFlavor'] = isset($data['poolResourceFlavor']) ? $data['poolResourceFlavor'] : null;
+        $this->container['groupPolicy'] = isset($data['groupPolicy']) ? $data['groupPolicy'] : null;
     }
 
     /**
@@ -706,6 +728,30 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     public function setCount($count)
     {
         $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets cpuAffinity
+    *  **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
+    *
+    * @return bool|null
+    */
+    public function getCpuAffinity()
+    {
+        return $this->container['cpuAffinity'];
+    }
+
+    /**
+    * Sets cpuAffinity
+    *
+    * @param bool|null $cpuAffinity **参数解释：** 表示是否启用绑核加速。 **取值范围：** - true：启用绑核加速。 - false：不启用绑核加速。
+    *
+    * @return $this
+    */
+    public function setCpuAffinity($cpuAffinity)
+    {
+        $this->container['cpuAffinity'] = $cpuAffinity;
         return $this;
     }
 
@@ -1042,6 +1088,30 @@ class UnitConfigResponse implements ModelInterface, ArrayAccess
     public function setPoolResourceFlavor($poolResourceFlavor)
     {
         $this->container['poolResourceFlavor'] = $poolResourceFlavor;
+        return $this;
+    }
+
+    /**
+    * Gets groupPolicy
+    *  groupPolicy
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\UnitGroupPolicyResponse|null
+    */
+    public function getGroupPolicy()
+    {
+        return $this->container['groupPolicy'];
+    }
+
+    /**
+    * Sets groupPolicy
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\UnitGroupPolicyResponse|null $groupPolicy groupPolicy
+    *
+    * @return $this
+    */
+    public function setGroupPolicy($groupPolicy)
+    {
+        $this->container['groupPolicy'] = $groupPolicy;
         return $this;
     }
 

@@ -2282,6 +2282,83 @@ class GaussDBforNoSQLClient extends Client
     }
 
     /**
+     * 查询实例可搭建双活关系的候选实例
+     *
+     * 查询实例在目标Region可搭建双活关系的候选实例列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBiactiveInstanceCandidates($request)
+    {
+        return $this->listBiactiveInstanceCandidatesWithHttpInfo($request);
+    }
+
+    public function listBiactiveInstanceCandidatesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/disaster-recovery/biactive-instance-candidates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['targetRegionCode'] !== null) {
+            $queryParams['target_region_code'] = $localVarParams['targetRegionCode'];
+        }
+        if ($localVarParams['targetInstanceName'] !== null) {
+            $queryParams['target_instance_name'] = $localVarParams['targetInstanceName'];
+        }
+        if ($localVarParams['dataSyncMode'] !== null) {
+            $queryParams['data_sync_mode'] = $localVarParams['dataSyncMode'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ListBiactiveInstanceCandidatesResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\ListBiactiveInstanceCandidatesRequest');
+    }
+
+    /**
      * 查询GeminiDB(for Cassandra)数据库慢日志
      *
      * 查询GeminiDB(for Cassandra)数据库慢日志信息，支持日志关键字搜索。

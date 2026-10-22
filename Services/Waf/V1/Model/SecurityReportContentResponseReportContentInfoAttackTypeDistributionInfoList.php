@@ -22,24 +22,28 @@ class SecurityReportContentResponseReportContentInfoAttackTypeDistributionInfoLi
     * Array of property to type mappings. Used for (de)serialization
     * key  **参数解释：** 攻击类型标识（如custom_custom表示精准防护类攻击）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该攻击类型的总数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * detail  **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'num' => 'int'
+            'num' => 'int',
+            'detail' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoDetail[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  **参数解释：** 攻击类型标识（如custom_custom表示精准防护类攻击）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该攻击类型的总数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * detail  **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
-        'num' => 'int32'
+        'num' => 'int32',
+        'detail' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SecurityReportContentResponseReportContentInfoAttackTypeDistributionInfoLi
     * and the value is the original name
     * key  **参数解释：** 攻击类型标识（如custom_custom表示精准防护类攻击）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该攻击类型的总数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * detail  **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
-            'num' => 'num'
+            'num' => 'num',
+            'detail' => 'detail'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  **参数解释：** 攻击类型标识（如custom_custom表示精准防护类攻击）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该攻击类型的总数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * detail  **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
-            'num' => 'setNum'
+            'num' => 'setNum',
+            'detail' => 'setDetail'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  **参数解释：** 攻击类型标识（如custom_custom表示精准防护类攻击）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该攻击类型的总数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * detail  **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
-            'num' => 'getNum'
+            'num' => 'getNum',
+            'detail' => 'getDetail'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SecurityReportContentResponseReportContentInfoAttackTypeDistributionInfoLi
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
+        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class SecurityReportContentResponseReportContentInfoAttackTypeDistributionInfoLi
     public function setNum($num)
     {
         $this->container['num'] = $num;
+        return $this;
+    }
+
+    /**
+    * Gets detail
+    *  **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoDetail[]|null
+    */
+    public function getDetail()
+    {
+        return $this->container['detail'];
+    }
+
+    /**
+    * Sets detail
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoDetail[]|null $detail **参数解释：** 该攻击类型的详细分布信息。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setDetail($detail)
+    {
+        $this->container['detail'] = $detail;
         return $this;
     }
 

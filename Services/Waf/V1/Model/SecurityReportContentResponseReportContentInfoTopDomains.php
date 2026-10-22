@@ -20,26 +20,42 @@ class SecurityReportContentResponseReportContentInfoTopDomains implements ModelI
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * key  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名在对应统计维度下的数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * blockNum  **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    * onlyLogNum  **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'key' => 'string',
             'num' => 'int',
-            'host' => 'string'
+            'host' => 'string',
+            'webTag' => 'string',
+            'blockNum' => 'int',
+            'onlyLogNum' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * key  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名在对应统计维度下的数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * blockNum  **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    * onlyLogNum  **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'key' => null,
         'num' => 'int32',
-        'host' => null
+        'host' => null,
+        'webTag' => null,
+        'blockNum' => 'int64',
+        'onlyLogNum' => 'int64'
     ];
 
     /**
@@ -65,38 +81,62 @@ class SecurityReportContentResponseReportContentInfoTopDomains implements ModelI
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * key  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名在对应统计维度下的数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * blockNum  **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    * onlyLogNum  **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'key' => 'key',
             'num' => 'num',
-            'host' => 'host'
+            'host' => 'host',
+            'webTag' => 'web_tag',
+            'blockNum' => 'block_num',
+            'onlyLogNum' => 'only_log_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * key  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名在对应统计维度下的数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * blockNum  **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    * onlyLogNum  **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
+            'key' => 'setKey',
             'num' => 'setNum',
-            'host' => 'setHost'
+            'host' => 'setHost',
+            'webTag' => 'setWebTag',
+            'blockNum' => 'setBlockNum',
+            'onlyLogNum' => 'setOnlyLogNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * key  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该域名在对应统计维度下的数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 域名标识，包含域名及关联标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * blockNum  **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    * onlyLogNum  **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
+            'key' => 'getKey',
             'num' => 'getNum',
-            'host' => 'getHost'
+            'host' => 'getHost',
+            'webTag' => 'getWebTag',
+            'blockNum' => 'getBlockNum',
+            'onlyLogNum' => 'getOnlyLogNum'
     ];
 
     /**
@@ -157,8 +197,12 @@ class SecurityReportContentResponseReportContentInfoTopDomains implements ModelI
     */
     public function __construct(array $data = null)
     {
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
+        $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
+        $this->container['blockNum'] = isset($data['blockNum']) ? $data['blockNum'] : null;
+        $this->container['onlyLogNum'] = isset($data['onlyLogNum']) ? $data['onlyLogNum'] : null;
     }
 
     /**
@@ -181,6 +225,30 @@ class SecurityReportContentResponseReportContentInfoTopDomains implements ModelI
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets key
+    *  **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+    * Sets key
+    *
+    * @param string|null $key **参数解释：** 域名标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
+        return $this;
     }
 
     /**
@@ -228,6 +296,78 @@ class SecurityReportContentResponseReportContentInfoTopDomains implements ModelI
     public function setHost($host)
     {
         $this->container['host'] = $host;
+        return $this;
+    }
+
+    /**
+    * Gets webTag
+    *  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getWebTag()
+    {
+        return $this->container['webTag'];
+    }
+
+    /**
+    * Sets webTag
+    *
+    * @param string|null $webTag **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setWebTag($webTag)
+    {
+        $this->container['webTag'] = $webTag;
+        return $this;
+    }
+
+    /**
+    * Gets blockNum
+    *  **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getBlockNum()
+    {
+        return $this->container['blockNum'];
+    }
+
+    /**
+    * Sets blockNum
+    *
+    * @param int|null $blockNum **参数解释：** 该域名拦截数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setBlockNum($blockNum)
+    {
+        $this->container['blockNum'] = $blockNum;
+        return $this;
+    }
+
+    /**
+    * Gets onlyLogNum
+    *  **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getOnlyLogNum()
+    {
+        return $this->container['onlyLogNum'];
+    }
+
+    /**
+    * Sets onlyLogNum
+    *
+    * @param int|null $onlyLogNum **参数解释：** 该域名仅记录数量。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setOnlyLogNum($onlyLogNum)
+    {
+        $this->container['onlyLogNum'] = $onlyLogNum;
         return $this;
     }
 

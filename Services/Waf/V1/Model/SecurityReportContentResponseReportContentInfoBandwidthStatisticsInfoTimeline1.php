@@ -22,24 +22,28 @@ class SecurityReportContentResponseReportContentInfoBandwidthStatisticsInfoTimel
     * Array of property to type mappings. Used for (de)serialization
     * time  **参数解释：** 时间戳（毫秒级），标识统计数据对应的时间点。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该时间点对应统计维度的峰值带宽值。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * docCountItems  **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'time' => 'int',
-            'num' => 'int'
+            'num' => 'int',
+            'docCountItems' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoDocCountItems[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  **参数解释：** 时间戳（毫秒级），标识统计数据对应的时间点。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该时间点对应统计维度的峰值带宽值。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * docCountItems  **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'time' => 'int64',
-        'num' => 'int32'
+        'num' => 'int32',
+        'docCountItems' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class SecurityReportContentResponseReportContentInfoBandwidthStatisticsInfoTimel
     * and the value is the original name
     * time  **参数解释：** 时间戳（毫秒级），标识统计数据对应的时间点。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该时间点对应统计维度的峰值带宽值。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * docCountItems  **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'time' => 'time',
-            'num' => 'num'
+            'num' => 'num',
+            'docCountItems' => 'docCountItems'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  **参数解释：** 时间戳（毫秒级），标识统计数据对应的时间点。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该时间点对应统计维度的峰值带宽值。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * docCountItems  **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'time' => 'setTime',
-            'num' => 'setNum'
+            'num' => 'setNum',
+            'docCountItems' => 'setDocCountItems'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  **参数解释：** 时间戳（毫秒级），标识统计数据对应的时间点。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该时间点对应统计维度的峰值带宽值。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
+    * docCountItems  **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'time' => 'getTime',
-            'num' => 'getNum'
+            'num' => 'getNum',
+            'docCountItems' => 'getDocCountItems'
     ];
 
     /**
@@ -159,6 +169,7 @@ class SecurityReportContentResponseReportContentInfoBandwidthStatisticsInfoTimel
     {
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
+        $this->container['docCountItems'] = isset($data['docCountItems']) ? $data['docCountItems'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class SecurityReportContentResponseReportContentInfoBandwidthStatisticsInfoTimel
     public function setNum($num)
     {
         $this->container['num'] = $num;
+        return $this;
+    }
+
+    /**
+    * Gets docCountItems
+    *  **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoDocCountItems[]|null
+    */
+    public function getDocCountItems()
+    {
+        return $this->container['docCountItems'];
+    }
+
+    /**
+    * Sets docCountItems
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\SecurityReportContentResponseReportContentInfoDocCountItems[]|null $docCountItems **参数解释：** 该时间点各维度的详细统计项。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setDocCountItems($docCountItems)
+    {
+        $this->container['docCountItems'] = $docCountItems;
         return $this;
     }
 

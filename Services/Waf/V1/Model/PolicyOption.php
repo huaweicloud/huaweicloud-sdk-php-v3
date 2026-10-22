@@ -38,9 +38,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
+    * botManagerEnable  BOT管理是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
     * followedAction  攻击惩罚规则是否开启
     * anticrawler  反爬虫规则是否开启
+    * scanProtection  扫描防护总开关是否开启
+    * highFrequencyScanBlocking  高频扫描封禁是否开启
+    * directoryTraversalProtection  目录遍历防护是否开启
     *
     * @var string[]
     */
@@ -63,9 +67,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'bool',
             'antileakage' => 'bool',
             'botEnable' => 'bool',
+            'botManagerEnable' => 'bool',
             'modulexEnabled' => 'bool',
             'followedAction' => 'bool',
-            'anticrawler' => 'bool'
+            'anticrawler' => 'bool',
+            'scanProtection' => 'bool',
+            'highFrequencyScanBlocking' => 'bool',
+            'directoryTraversalProtection' => 'bool'
     ];
 
     /**
@@ -88,9 +96,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
+    * botManagerEnable  BOT管理是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
     * followedAction  攻击惩罚规则是否开启
     * anticrawler  反爬虫规则是否开启
+    * scanProtection  扫描防护总开关是否开启
+    * highFrequencyScanBlocking  高频扫描封禁是否开启
+    * directoryTraversalProtection  目录遍历防护是否开启
     *
     * @var string[]
     */
@@ -113,9 +125,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
         'antitamper' => null,
         'antileakage' => null,
         'botEnable' => null,
+        'botManagerEnable' => null,
         'modulexEnabled' => null,
         'followedAction' => null,
-        'anticrawler' => null
+        'anticrawler' => null,
+        'scanProtection' => null,
+        'highFrequencyScanBlocking' => null,
+        'directoryTraversalProtection' => null
     ];
 
     /**
@@ -159,9 +175,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
+    * botManagerEnable  BOT管理是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
     * followedAction  攻击惩罚规则是否开启
     * anticrawler  反爬虫规则是否开启
+    * scanProtection  扫描防护总开关是否开启
+    * highFrequencyScanBlocking  高频扫描封禁是否开启
+    * directoryTraversalProtection  目录遍历防护是否开启
     *
     * @var string[]
     */
@@ -184,9 +204,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'antitamper',
             'antileakage' => 'antileakage',
             'botEnable' => 'bot_enable',
+            'botManagerEnable' => 'bot_manager_enable',
             'modulexEnabled' => 'modulex_enabled',
             'followedAction' => 'followed_action',
-            'anticrawler' => 'anticrawler'
+            'anticrawler' => 'anticrawler',
+            'scanProtection' => 'scan_protection',
+            'highFrequencyScanBlocking' => 'high_frequency_scan_blocking',
+            'directoryTraversalProtection' => 'directory_traversal_protection'
     ];
 
     /**
@@ -209,9 +233,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
+    * botManagerEnable  BOT管理是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
     * followedAction  攻击惩罚规则是否开启
     * anticrawler  反爬虫规则是否开启
+    * scanProtection  扫描防护总开关是否开启
+    * highFrequencyScanBlocking  高频扫描封禁是否开启
+    * directoryTraversalProtection  目录遍历防护是否开启
     *
     * @var string[]
     */
@@ -234,9 +262,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'setAntitamper',
             'antileakage' => 'setAntileakage',
             'botEnable' => 'setBotEnable',
+            'botManagerEnable' => 'setBotManagerEnable',
             'modulexEnabled' => 'setModulexEnabled',
             'followedAction' => 'setFollowedAction',
-            'anticrawler' => 'setAnticrawler'
+            'anticrawler' => 'setAnticrawler',
+            'scanProtection' => 'setScanProtection',
+            'highFrequencyScanBlocking' => 'setHighFrequencyScanBlocking',
+            'directoryTraversalProtection' => 'setDirectoryTraversalProtection'
     ];
 
     /**
@@ -259,9 +291,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * antitamper  网页防篡改规则是否开启
     * antileakage  防敏感信息泄露规则是否开启
     * botEnable  网站反爬虫总开关是否开启
+    * botManagerEnable  BOT管理是否开启
     * modulexEnabled  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
     * followedAction  攻击惩罚规则是否开启
     * anticrawler  反爬虫规则是否开启
+    * scanProtection  扫描防护总开关是否开启
+    * highFrequencyScanBlocking  高频扫描封禁是否开启
+    * directoryTraversalProtection  目录遍历防护是否开启
     *
     * @var string[]
     */
@@ -284,9 +320,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
             'antitamper' => 'getAntitamper',
             'antileakage' => 'getAntileakage',
             'botEnable' => 'getBotEnable',
+            'botManagerEnable' => 'getBotManagerEnable',
             'modulexEnabled' => 'getModulexEnabled',
             'followedAction' => 'getFollowedAction',
-            'anticrawler' => 'getAnticrawler'
+            'anticrawler' => 'getAnticrawler',
+            'scanProtection' => 'getScanProtection',
+            'highFrequencyScanBlocking' => 'getHighFrequencyScanBlocking',
+            'directoryTraversalProtection' => 'getDirectoryTraversalProtection'
     ];
 
     /**
@@ -365,9 +405,13 @@ class PolicyOption implements ModelInterface, ArrayAccess
         $this->container['antitamper'] = isset($data['antitamper']) ? $data['antitamper'] : null;
         $this->container['antileakage'] = isset($data['antileakage']) ? $data['antileakage'] : null;
         $this->container['botEnable'] = isset($data['botEnable']) ? $data['botEnable'] : null;
+        $this->container['botManagerEnable'] = isset($data['botManagerEnable']) ? $data['botManagerEnable'] : null;
         $this->container['modulexEnabled'] = isset($data['modulexEnabled']) ? $data['modulexEnabled'] : null;
         $this->container['followedAction'] = isset($data['followedAction']) ? $data['followedAction'] : null;
         $this->container['anticrawler'] = isset($data['anticrawler']) ? $data['anticrawler'] : null;
+        $this->container['scanProtection'] = isset($data['scanProtection']) ? $data['scanProtection'] : null;
+        $this->container['highFrequencyScanBlocking'] = isset($data['highFrequencyScanBlocking']) ? $data['highFrequencyScanBlocking'] : null;
+        $this->container['directoryTraversalProtection'] = isset($data['directoryTraversalProtection']) ? $data['directoryTraversalProtection'] : null;
     }
 
     /**
@@ -825,6 +869,30 @@ class PolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets botManagerEnable
+    *  BOT管理是否开启
+    *
+    * @return bool|null
+    */
+    public function getBotManagerEnable()
+    {
+        return $this->container['botManagerEnable'];
+    }
+
+    /**
+    * Sets botManagerEnable
+    *
+    * @param bool|null $botManagerEnable BOT管理是否开启
+    *
+    * @return $this
+    */
+    public function setBotManagerEnable($botManagerEnable)
+    {
+        $this->container['botManagerEnable'] = $botManagerEnable;
+        return $this;
+    }
+
+    /**
     * Gets modulexEnabled
     *  modulex智能cc防护是否开启，该特性是公测特性，在公测期间，只支持仅记录模式。
     *
@@ -893,6 +961,78 @@ class PolicyOption implements ModelInterface, ArrayAccess
     public function setAnticrawler($anticrawler)
     {
         $this->container['anticrawler'] = $anticrawler;
+        return $this;
+    }
+
+    /**
+    * Gets scanProtection
+    *  扫描防护总开关是否开启
+    *
+    * @return bool|null
+    */
+    public function getScanProtection()
+    {
+        return $this->container['scanProtection'];
+    }
+
+    /**
+    * Sets scanProtection
+    *
+    * @param bool|null $scanProtection 扫描防护总开关是否开启
+    *
+    * @return $this
+    */
+    public function setScanProtection($scanProtection)
+    {
+        $this->container['scanProtection'] = $scanProtection;
+        return $this;
+    }
+
+    /**
+    * Gets highFrequencyScanBlocking
+    *  高频扫描封禁是否开启
+    *
+    * @return bool|null
+    */
+    public function getHighFrequencyScanBlocking()
+    {
+        return $this->container['highFrequencyScanBlocking'];
+    }
+
+    /**
+    * Sets highFrequencyScanBlocking
+    *
+    * @param bool|null $highFrequencyScanBlocking 高频扫描封禁是否开启
+    *
+    * @return $this
+    */
+    public function setHighFrequencyScanBlocking($highFrequencyScanBlocking)
+    {
+        $this->container['highFrequencyScanBlocking'] = $highFrequencyScanBlocking;
+        return $this;
+    }
+
+    /**
+    * Gets directoryTraversalProtection
+    *  目录遍历防护是否开启
+    *
+    * @return bool|null
+    */
+    public function getDirectoryTraversalProtection()
+    {
+        return $this->container['directoryTraversalProtection'];
+    }
+
+    /**
+    * Sets directoryTraversalProtection
+    *
+    * @param bool|null $directoryTraversalProtection 目录遍历防护是否开启
+    *
+    * @return $this
+    */
+    public function setDirectoryTraversalProtection($directoryTraversalProtection)
+    {
+        $this->container['directoryTraversalProtection'] = $directoryTraversalProtection;
         return $this;
     }
 

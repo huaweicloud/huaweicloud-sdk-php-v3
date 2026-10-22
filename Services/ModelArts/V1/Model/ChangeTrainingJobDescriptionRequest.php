@@ -27,7 +27,7 @@ class ChangeTrainingJobDescriptionRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'trainingJobId' => 'string',
-            'body' => '\HuaweiCloud\SDK\ModelArts\V1\Model\JobDescription'
+            'body' => '\HuaweiCloud\SDK\ModelArts\V1\Model\JobUpdateRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class ChangeTrainingJobDescriptionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\JobDescription|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\JobUpdateRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class ChangeTrainingJobDescriptionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\JobDescription|null $body body
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\JobUpdateRequestBody|null $body body
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class Resource implements ModelInterface, ArrayAccess
     * flavorName  **参数解释**：使用flavor_id时，由ModelArts返回的只读规格名称。 **取值范围**：不涉及。
     * nodeCount  **参数解释**：训练作业选择的资源副本数。 **取值范围**：不涉及。
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
+    * poolName  **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
     * poolGroupId  **参数解释**：训练作业选择的资源池联邦ID。 **取值范围**：不涉及。
     * flavorDetail  flavorDetail
     * mainContainerAllocatedResources  mainContainerAllocatedResources
@@ -38,6 +39,7 @@ class Resource implements ModelInterface, ArrayAccess
             'flavorName' => 'string',
             'nodeCount' => 'int',
             'poolId' => 'string',
+            'poolName' => 'string',
             'poolGroupId' => 'string',
             'flavorDetail' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FlavorDetail',
             'mainContainerAllocatedResources' => '\HuaweiCloud\SDK\ModelArts\V1\Model\MainContainerAllocatedResources',
@@ -51,6 +53,7 @@ class Resource implements ModelInterface, ArrayAccess
     * flavorName  **参数解释**：使用flavor_id时，由ModelArts返回的只读规格名称。 **取值范围**：不涉及。
     * nodeCount  **参数解释**：训练作业选择的资源副本数。 **取值范围**：不涉及。
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
+    * poolName  **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
     * poolGroupId  **参数解释**：训练作业选择的资源池联邦ID。 **取值范围**：不涉及。
     * flavorDetail  flavorDetail
     * mainContainerAllocatedResources  mainContainerAllocatedResources
@@ -64,6 +67,7 @@ class Resource implements ModelInterface, ArrayAccess
         'flavorName' => null,
         'nodeCount' => null,
         'poolId' => null,
+        'poolName' => null,
         'poolGroupId' => null,
         'flavorDetail' => null,
         'mainContainerAllocatedResources' => null,
@@ -98,6 +102,7 @@ class Resource implements ModelInterface, ArrayAccess
     * flavorName  **参数解释**：使用flavor_id时，由ModelArts返回的只读规格名称。 **取值范围**：不涉及。
     * nodeCount  **参数解释**：训练作业选择的资源副本数。 **取值范围**：不涉及。
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
+    * poolName  **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
     * poolGroupId  **参数解释**：训练作业选择的资源池联邦ID。 **取值范围**：不涉及。
     * flavorDetail  flavorDetail
     * mainContainerAllocatedResources  mainContainerAllocatedResources
@@ -111,6 +116,7 @@ class Resource implements ModelInterface, ArrayAccess
             'flavorName' => 'flavor_name',
             'nodeCount' => 'node_count',
             'poolId' => 'pool_id',
+            'poolName' => 'pool_name',
             'poolGroupId' => 'pool_group_id',
             'flavorDetail' => 'flavor_detail',
             'mainContainerAllocatedResources' => 'main_container_allocated_resources',
@@ -124,6 +130,7 @@ class Resource implements ModelInterface, ArrayAccess
     * flavorName  **参数解释**：使用flavor_id时，由ModelArts返回的只读规格名称。 **取值范围**：不涉及。
     * nodeCount  **参数解释**：训练作业选择的资源副本数。 **取值范围**：不涉及。
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
+    * poolName  **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
     * poolGroupId  **参数解释**：训练作业选择的资源池联邦ID。 **取值范围**：不涉及。
     * flavorDetail  flavorDetail
     * mainContainerAllocatedResources  mainContainerAllocatedResources
@@ -137,6 +144,7 @@ class Resource implements ModelInterface, ArrayAccess
             'flavorName' => 'setFlavorName',
             'nodeCount' => 'setNodeCount',
             'poolId' => 'setPoolId',
+            'poolName' => 'setPoolName',
             'poolGroupId' => 'setPoolGroupId',
             'flavorDetail' => 'setFlavorDetail',
             'mainContainerAllocatedResources' => 'setMainContainerAllocatedResources',
@@ -150,6 +158,7 @@ class Resource implements ModelInterface, ArrayAccess
     * flavorName  **参数解释**：使用flavor_id时，由ModelArts返回的只读规格名称。 **取值范围**：不涉及。
     * nodeCount  **参数解释**：训练作业选择的资源副本数。 **取值范围**：不涉及。
     * poolId  **参数解释**：训练作业选择的资源池ID。 **取值范围**：不涉及。
+    * poolName  **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
     * poolGroupId  **参数解释**：训练作业选择的资源池联邦ID。 **取值范围**：不涉及。
     * flavorDetail  flavorDetail
     * mainContainerAllocatedResources  mainContainerAllocatedResources
@@ -163,6 +172,7 @@ class Resource implements ModelInterface, ArrayAccess
             'flavorName' => 'getFlavorName',
             'nodeCount' => 'getNodeCount',
             'poolId' => 'getPoolId',
+            'poolName' => 'getPoolName',
             'poolGroupId' => 'getPoolGroupId',
             'flavorDetail' => 'getFlavorDetail',
             'mainContainerAllocatedResources' => 'getMainContainerAllocatedResources',
@@ -232,6 +242,7 @@ class Resource implements ModelInterface, ArrayAccess
         $this->container['flavorName'] = isset($data['flavorName']) ? $data['flavorName'] : null;
         $this->container['nodeCount'] = isset($data['nodeCount']) ? $data['nodeCount'] : null;
         $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
+        $this->container['poolName'] = isset($data['poolName']) ? $data['poolName'] : null;
         $this->container['poolGroupId'] = isset($data['poolGroupId']) ? $data['poolGroupId'] : null;
         $this->container['flavorDetail'] = isset($data['flavorDetail']) ? $data['flavorDetail'] : null;
         $this->container['mainContainerAllocatedResources'] = isset($data['mainContainerAllocatedResources']) ? $data['mainContainerAllocatedResources'] : null;
@@ -386,6 +397,30 @@ class Resource implements ModelInterface, ArrayAccess
     public function setPoolId($poolId)
     {
         $this->container['poolId'] = $poolId;
+        return $this;
+    }
+
+    /**
+    * Gets poolName
+    *  **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getPoolName()
+    {
+        return $this->container['poolName'];
+    }
+
+    /**
+    * Sets poolName
+    *
+    * @param string|null $poolName **参数解释**：训练作业选择的资源池名称。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setPoolName($poolName)
+    {
+        $this->container['poolName'] = $poolName;
         return $this;
     }
 

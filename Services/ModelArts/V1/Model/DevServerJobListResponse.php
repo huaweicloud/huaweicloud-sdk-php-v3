@@ -40,8 +40,8 @@ class DevServerJobListResponse implements ModelInterface, ArrayAccess
             'type' => 'string',
             'status' => 'string',
             'abnormalCount' => 'int',
-            'createAt' => 'string',
-            'updateAt' => 'string'
+            'createAt' => 'int',
+            'updateAt' => 'int'
     ];
 
     /**
@@ -66,8 +66,8 @@ class DevServerJobListResponse implements ModelInterface, ArrayAccess
         'type' => null,
         'status' => null,
         'abnormalCount' => 'int32',
-        'createAt' => null,
-        'updateAt' => null
+        'createAt' => 'int64',
+        'updateAt' => 'int64'
     ];
 
     /**
@@ -432,7 +432,7 @@ class DevServerJobListResponse implements ModelInterface, ArrayAccess
     * Gets createAt
     *  **参数解释**：创建时间。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreateAt()
     {
@@ -442,7 +442,7 @@ class DevServerJobListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt **参数解释**：创建时间。 **取值范围**：不涉及。
+    * @param int|null $createAt **参数解释**：创建时间。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -456,7 +456,7 @@ class DevServerJobListResponse implements ModelInterface, ArrayAccess
     * Gets updateAt
     *  **参数解释**：更新时间。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getUpdateAt()
     {
@@ -466,7 +466,7 @@ class DevServerJobListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt **参数解释**：更新时间。 **取值范围**：不涉及。
+    * @param int|null $updateAt **参数解释**：更新时间。 **取值范围**：不涉及。
     *
     * @return $this
     */

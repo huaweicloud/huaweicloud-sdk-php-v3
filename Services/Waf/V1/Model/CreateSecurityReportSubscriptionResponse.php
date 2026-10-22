@@ -22,57 +22,77 @@ class CreateSecurityReportSubscriptionResponse implements ModelInterface, ArrayA
     /**
     * Array of property to type mappings. Used for (de)serialization
     * subscriptionId  **参数解释：** 订阅ID，唯一标识当前安全报告订阅。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * reportId  **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * sendingPeriod  **参数解释：** 发送时间段，标识报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，当前安全报告订阅的报告名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * isAllEnterpriseProject  **参数解释：** 是否是所有企业项目，标识订阅是否适用于当前租户的所有企业项目（true表示适用，false表示仅适用指定项目）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
     * enterpriseProjectId  **参数解释：** 企业项目ID，订阅关联的企业项目唯一标识（is_all_enterprise_project为false时生效）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * templateEpsId  **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * isReportCreated  **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    * latestCreateTime  **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'subscriptionId' => 'string',
+            'reportId' => 'string',
             'sendingPeriod' => 'string',
             'reportName' => 'string',
             'reportCategory' => 'string',
+            'reportStatus' => 'string',
             'topicUrn' => 'string',
             'subscriptionType' => 'string',
             'reportContentSubscription' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportSubscriptionResponseReportContentSubscription',
             'statPeriod' => '\HuaweiCloud\SDK\Waf\V1\Model\SecurityReportSubscriptionResponseStatPeriod',
             'isAllEnterpriseProject' => 'bool',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'templateEpsId' => 'string',
+            'isReportCreated' => 'bool',
+            'latestCreateTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * subscriptionId  **参数解释：** 订阅ID，唯一标识当前安全报告订阅。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * reportId  **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * sendingPeriod  **参数解释：** 发送时间段，标识报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，当前安全报告订阅的报告名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * isAllEnterpriseProject  **参数解释：** 是否是所有企业项目，标识订阅是否适用于当前租户的所有企业项目（true表示适用，false表示仅适用指定项目）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
     * enterpriseProjectId  **参数解释：** 企业项目ID，订阅关联的企业项目唯一标识（is_all_enterprise_project为false时生效）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * templateEpsId  **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * isReportCreated  **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    * latestCreateTime  **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'subscriptionId' => null,
+        'reportId' => null,
         'sendingPeriod' => null,
         'reportName' => null,
         'reportCategory' => null,
+        'reportStatus' => null,
         'topicUrn' => null,
         'subscriptionType' => null,
         'reportContentSubscription' => null,
         'statPeriod' => null,
         'isAllEnterpriseProject' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'templateEpsId' => null,
+        'isReportCreated' => null,
+        'latestCreateTime' => 'int64'
     ];
 
     /**
@@ -99,85 +119,115 @@ class CreateSecurityReportSubscriptionResponse implements ModelInterface, ArrayA
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * subscriptionId  **参数解释：** 订阅ID，唯一标识当前安全报告订阅。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * reportId  **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * sendingPeriod  **参数解释：** 发送时间段，标识报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，当前安全报告订阅的报告名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * isAllEnterpriseProject  **参数解释：** 是否是所有企业项目，标识订阅是否适用于当前租户的所有企业项目（true表示适用，false表示仅适用指定项目）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
     * enterpriseProjectId  **参数解释：** 企业项目ID，订阅关联的企业项目唯一标识（is_all_enterprise_project为false时生效）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * templateEpsId  **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * isReportCreated  **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    * latestCreateTime  **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'subscriptionId' => 'subscription_id',
+            'reportId' => 'report_id',
             'sendingPeriod' => 'sending_period',
             'reportName' => 'report_name',
             'reportCategory' => 'report_category',
+            'reportStatus' => 'report_status',
             'topicUrn' => 'topic_urn',
             'subscriptionType' => 'subscription_type',
             'reportContentSubscription' => 'report_content_subscription',
             'statPeriod' => 'stat_period',
             'isAllEnterpriseProject' => 'is_all_enterprise_project',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'templateEpsId' => 'template_eps_id',
+            'isReportCreated' => 'is_report_created',
+            'latestCreateTime' => 'latest_create_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * subscriptionId  **参数解释：** 订阅ID，唯一标识当前安全报告订阅。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * reportId  **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * sendingPeriod  **参数解释：** 发送时间段，标识报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，当前安全报告订阅的报告名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * isAllEnterpriseProject  **参数解释：** 是否是所有企业项目，标识订阅是否适用于当前租户的所有企业项目（true表示适用，false表示仅适用指定项目）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
     * enterpriseProjectId  **参数解释：** 企业项目ID，订阅关联的企业项目唯一标识（is_all_enterprise_project为false时生效）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * templateEpsId  **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * isReportCreated  **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    * latestCreateTime  **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'subscriptionId' => 'setSubscriptionId',
+            'reportId' => 'setReportId',
             'sendingPeriod' => 'setSendingPeriod',
             'reportName' => 'setReportName',
             'reportCategory' => 'setReportCategory',
+            'reportStatus' => 'setReportStatus',
             'topicUrn' => 'setTopicUrn',
             'subscriptionType' => 'setSubscriptionType',
             'reportContentSubscription' => 'setReportContentSubscription',
             'statPeriod' => 'setStatPeriod',
             'isAllEnterpriseProject' => 'setIsAllEnterpriseProject',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'templateEpsId' => 'setTemplateEpsId',
+            'isReportCreated' => 'setIsReportCreated',
+            'latestCreateTime' => 'setLatestCreateTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * subscriptionId  **参数解释：** 订阅ID，唯一标识当前安全报告订阅。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * reportId  **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * sendingPeriod  **参数解释：** 发送时间段，标识报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，当前安全报告订阅的报告名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report ： 周报 - monthly_report ： 月报 - custom_report ： 自定义  **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * isAllEnterpriseProject  **参数解释：** 是否是所有企业项目，标识订阅是否适用于当前租户的所有企业项目（true表示适用，false表示仅适用指定项目）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
     * enterpriseProjectId  **参数解释：** 企业项目ID，订阅关联的企业项目唯一标识（is_all_enterprise_project为false时生效）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * templateEpsId  **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * isReportCreated  **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    * latestCreateTime  **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'subscriptionId' => 'getSubscriptionId',
+            'reportId' => 'getReportId',
             'sendingPeriod' => 'getSendingPeriod',
             'reportName' => 'getReportName',
             'reportCategory' => 'getReportCategory',
+            'reportStatus' => 'getReportStatus',
             'topicUrn' => 'getTopicUrn',
             'subscriptionType' => 'getSubscriptionType',
             'reportContentSubscription' => 'getReportContentSubscription',
             'statPeriod' => 'getStatPeriod',
             'isAllEnterpriseProject' => 'getIsAllEnterpriseProject',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'templateEpsId' => 'getTemplateEpsId',
+            'isReportCreated' => 'getIsReportCreated',
+            'latestCreateTime' => 'getLatestCreateTime'
     ];
 
     /**
@@ -239,15 +289,20 @@ class CreateSecurityReportSubscriptionResponse implements ModelInterface, ArrayA
     public function __construct(array $data = null)
     {
         $this->container['subscriptionId'] = isset($data['subscriptionId']) ? $data['subscriptionId'] : null;
+        $this->container['reportId'] = isset($data['reportId']) ? $data['reportId'] : null;
         $this->container['sendingPeriod'] = isset($data['sendingPeriod']) ? $data['sendingPeriod'] : null;
         $this->container['reportName'] = isset($data['reportName']) ? $data['reportName'] : null;
         $this->container['reportCategory'] = isset($data['reportCategory']) ? $data['reportCategory'] : null;
+        $this->container['reportStatus'] = isset($data['reportStatus']) ? $data['reportStatus'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['subscriptionType'] = isset($data['subscriptionType']) ? $data['subscriptionType'] : null;
         $this->container['reportContentSubscription'] = isset($data['reportContentSubscription']) ? $data['reportContentSubscription'] : null;
         $this->container['statPeriod'] = isset($data['statPeriod']) ? $data['statPeriod'] : null;
         $this->container['isAllEnterpriseProject'] = isset($data['isAllEnterpriseProject']) ? $data['isAllEnterpriseProject'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['templateEpsId'] = isset($data['templateEpsId']) ? $data['templateEpsId'] : null;
+        $this->container['isReportCreated'] = isset($data['isReportCreated']) ? $data['isReportCreated'] : null;
+        $this->container['latestCreateTime'] = isset($data['latestCreateTime']) ? $data['latestCreateTime'] : null;
     }
 
     /**
@@ -293,6 +348,30 @@ class CreateSecurityReportSubscriptionResponse implements ModelInterface, ArrayA
     public function setSubscriptionId($subscriptionId)
     {
         $this->container['subscriptionId'] = $subscriptionId;
+        return $this;
+    }
+
+    /**
+    * Gets reportId
+    *  **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getReportId()
+    {
+        return $this->container['reportId'];
+    }
+
+    /**
+    * Sets reportId
+    *
+    * @param string|null $reportId **参数解释：** 报告ID，关联当前订阅的最新安全报告唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setReportId($reportId)
+    {
+        $this->container['reportId'] = $reportId;
         return $this;
     }
 
@@ -365,6 +444,30 @@ class CreateSecurityReportSubscriptionResponse implements ModelInterface, ArrayA
     public function setReportCategory($reportCategory)
     {
         $this->container['reportCategory'] = $reportCategory;
+        return $this;
+    }
+
+    /**
+    * Gets reportStatus
+    *  **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getReportStatus()
+    {
+        return $this->container['reportStatus'];
+    }
+
+    /**
+    * Sets reportStatus
+    *
+    * @param string|null $reportStatus **参数解释：** 报告开启状态 **约束限制：** 不涉及 **取值范围：** - opened：已开启 - closed：已关闭 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setReportStatus($reportStatus)
+    {
+        $this->container['reportStatus'] = $reportStatus;
         return $this;
     }
 
@@ -509,6 +612,78 @@ class CreateSecurityReportSubscriptionResponse implements ModelInterface, ArrayA
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets templateEpsId
+    *  **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getTemplateEpsId()
+    {
+        return $this->container['templateEpsId'];
+    }
+
+    /**
+    * Sets templateEpsId
+    *
+    * @param string|null $templateEpsId **参数解释：** 模板企业项目ID，订阅关联的模板企业项目唯一标识。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setTemplateEpsId($templateEpsId)
+    {
+        $this->container['templateEpsId'] = $templateEpsId;
+        return $this;
+    }
+
+    /**
+    * Gets isReportCreated
+    *  **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    *
+    * @return bool|null
+    */
+    public function getIsReportCreated()
+    {
+        return $this->container['isReportCreated'];
+    }
+
+    /**
+    * Sets isReportCreated
+    *
+    * @param bool|null $isReportCreated **参数解释：** 是否已生成报告，标识当前订阅是否已生成过安全报告（true表示已生成，false表示未生成）。 **约束限制：** 不涉及 **取值范围：** 仅支持true、false两个布尔值 **默认取值：** false
+    *
+    * @return $this
+    */
+    public function setIsReportCreated($isReportCreated)
+    {
+        $this->container['isReportCreated'] = $isReportCreated;
+        return $this;
+    }
+
+    /**
+    * Gets latestCreateTime
+    *  **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getLatestCreateTime()
+    {
+        return $this->container['latestCreateTime'];
+    }
+
+    /**
+    * Sets latestCreateTime
+    *
+    * @param int|null $latestCreateTime **参数解释：** 最近生成时间，最近一次生成安全报告的时间戳（毫秒级）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setLatestCreateTime($latestCreateTime)
+    {
+        $this->container['latestCreateTime'] = $latestCreateTime;
         return $this;
     }
 

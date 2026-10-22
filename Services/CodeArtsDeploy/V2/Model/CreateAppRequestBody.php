@@ -29,6 +29,9 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -41,7 +44,10 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'createType' => 'string',
             'slaveClusterId' => 'string',
             'trigger' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskTriggerVO',
-            'arrangeInfos' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskV2RequestBody[]'
+            'arrangeInfos' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskV2RequestBody[]',
+            'agencyUrn' => 'string',
+            'slaveResourceType' => 'string',
+            'timeout' => 'int'
     ];
 
     /**
@@ -55,6 +61,9 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -67,7 +76,10 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
         'createType' => null,
         'slaveClusterId' => null,
         'trigger' => null,
-        'arrangeInfos' => null
+        'arrangeInfos' => null,
+        'agencyUrn' => null,
+        'slaveResourceType' => null,
+        'timeout' => 'int32'
     ];
 
     /**
@@ -102,6 +114,9 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -114,7 +129,10 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'createType' => 'create_type',
             'slaveClusterId' => 'slave_cluster_id',
             'trigger' => 'trigger',
-            'arrangeInfos' => 'arrange_infos'
+            'arrangeInfos' => 'arrange_infos',
+            'agencyUrn' => 'agency_urn',
+            'slaveResourceType' => 'slave_resource_type',
+            'timeout' => 'timeout'
     ];
 
     /**
@@ -128,6 +146,9 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -140,7 +161,10 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'createType' => 'setCreateType',
             'slaveClusterId' => 'setSlaveClusterId',
             'trigger' => 'setTrigger',
-            'arrangeInfos' => 'setArrangeInfos'
+            'arrangeInfos' => 'setArrangeInfos',
+            'agencyUrn' => 'setAgencyUrn',
+            'slaveResourceType' => 'setSlaveResourceType',
+            'timeout' => 'setTimeout'
     ];
 
     /**
@@ -154,6 +178,9 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -166,7 +193,10 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
             'createType' => 'getCreateType',
             'slaveClusterId' => 'getSlaveClusterId',
             'trigger' => 'getTrigger',
-            'arrangeInfos' => 'getArrangeInfos'
+            'arrangeInfos' => 'getArrangeInfos',
+            'agencyUrn' => 'getAgencyUrn',
+            'slaveResourceType' => 'getSlaveResourceType',
+            'timeout' => 'getTimeout'
     ];
 
     /**
@@ -249,6 +279,9 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
         $this->container['slaveClusterId'] = isset($data['slaveClusterId']) ? $data['slaveClusterId'] : null;
         $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
         $this->container['arrangeInfos'] = isset($data['arrangeInfos']) ? $data['arrangeInfos'] : null;
+        $this->container['agencyUrn'] = isset($data['agencyUrn']) ? $data['agencyUrn'] : null;
+        $this->container['slaveResourceType'] = isset($data['slaveResourceType']) ? $data['slaveResourceType'] : null;
+        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
     }
 
     /**
@@ -293,6 +326,18 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
 
             if (!is_null($this->container['slaveClusterId']) && !preg_match("/^[A-Za-z0-9]{1,32}$/", $this->container['slaveClusterId'])) {
                 $invalidProperties[] = "invalid value for 'slaveClusterId', must be conform to the pattern /^[A-Za-z0-9]{1,32}$/.";
+            }
+            if (!is_null($this->container['agencyUrn']) && !preg_match("/^iam::[A-Za-z0-9+\/=\\-_]{1,64}:agency:[\\s\\S]{1,64}$/", $this->container['agencyUrn'])) {
+                $invalidProperties[] = "invalid value for 'agencyUrn', must be conform to the pattern /^iam::[A-Za-z0-9+\/=\\-_]{1,64}:agency:[\\s\\S]{1,64}$/.";
+            }
+            if (!is_null($this->container['slaveResourceType']) && !preg_match("/exclusive|self-hosted/", $this->container['slaveResourceType'])) {
+                $invalidProperties[] = "invalid value for 'slaveResourceType', must be conform to the pattern /exclusive|self-hosted/.";
+            }
+            if (!is_null($this->container['timeout']) && ($this->container['timeout'] > 360)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be smaller than or equal to 360.";
+            }
+            if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 10)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 10.";
             }
         return $invalidProperties;
     }
@@ -521,6 +566,78 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     public function setArrangeInfos($arrangeInfos)
     {
         $this->container['arrangeInfos'] = $arrangeInfos;
+        return $this;
+    }
+
+    /**
+    * Gets agencyUrn
+    *  委托URN
+    *
+    * @return string|null
+    */
+    public function getAgencyUrn()
+    {
+        return $this->container['agencyUrn'];
+    }
+
+    /**
+    * Sets agencyUrn
+    *
+    * @param string|null $agencyUrn 委托URN
+    *
+    * @return $this
+    */
+    public function setAgencyUrn($agencyUrn)
+    {
+        $this->container['agencyUrn'] = $agencyUrn;
+        return $this;
+    }
+
+    /**
+    * Gets slaveResourceType
+    *  资源池类型
+    *
+    * @return string|null
+    */
+    public function getSlaveResourceType()
+    {
+        return $this->container['slaveResourceType'];
+    }
+
+    /**
+    * Sets slaveResourceType
+    *
+    * @param string|null $slaveResourceType 资源池类型
+    *
+    * @return $this
+    */
+    public function setSlaveResourceType($slaveResourceType)
+    {
+        $this->container['slaveResourceType'] = $slaveResourceType;
+        return $this;
+    }
+
+    /**
+    * Gets timeout
+    *  任务执行超时时间
+    *
+    * @return int|null
+    */
+    public function getTimeout()
+    {
+        return $this->container['timeout'];
+    }
+
+    /**
+    * Sets timeout
+    *
+    * @param int|null $timeout 任务执行超时时间
+    *
+    * @return $this
+    */
+    public function setTimeout($timeout)
+    {
+        $this->container['timeout'] = $timeout;
         return $this;
     }
 

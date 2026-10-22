@@ -20,25 +20,33 @@ class TaskV2RequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * deploySystem  部署系统，deployTemplate：部署模板
     * templateId  模板id
+    * ansibleType  是否切换新系统支持，1：是 0：否
     * operationList  部署编排列表信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'deploySystem' => 'string',
             'templateId' => 'string',
+            'ansibleType' => 'int',
             'operationList' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\DeployV2OperationsDO[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * deploySystem  部署系统，deployTemplate：部署模板
     * templateId  模板id
+    * ansibleType  是否切换新系统支持，1：是 0：否
     * operationList  部署编排列表信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'deploySystem' => null,
         'templateId' => null,
+        'ansibleType' => null,
         'operationList' => null
     ];
 
@@ -65,37 +73,49 @@ class TaskV2RequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * deploySystem  部署系统，deployTemplate：部署模板
     * templateId  模板id
+    * ansibleType  是否切换新系统支持，1：是 0：否
     * operationList  部署编排列表信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'deploySystem' => 'deploy_system',
             'templateId' => 'template_id',
+            'ansibleType' => 'ansible_type',
             'operationList' => 'operation_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * deploySystem  部署系统，deployTemplate：部署模板
     * templateId  模板id
+    * ansibleType  是否切换新系统支持，1：是 0：否
     * operationList  部署编排列表信息
     *
     * @var string[]
     */
     protected static $setters = [
+            'deploySystem' => 'setDeploySystem',
             'templateId' => 'setTemplateId',
+            'ansibleType' => 'setAnsibleType',
             'operationList' => 'setOperationList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * deploySystem  部署系统，deployTemplate：部署模板
     * templateId  模板id
+    * ansibleType  是否切换新系统支持，1：是 0：否
     * operationList  部署编排列表信息
     *
     * @var string[]
     */
     protected static $getters = [
+            'deploySystem' => 'getDeploySystem',
             'templateId' => 'getTemplateId',
+            'ansibleType' => 'getAnsibleType',
             'operationList' => 'getOperationList'
     ];
 
@@ -157,7 +177,9 @@ class TaskV2RequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['deploySystem'] = isset($data['deploySystem']) ? $data['deploySystem'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['ansibleType'] = isset($data['ansibleType']) ? $data['ansibleType'] : null;
         $this->container['operationList'] = isset($data['operationList']) ? $data['operationList'] : null;
     }
 
@@ -184,6 +206,30 @@ class TaskV2RequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets deploySystem
+    *  部署系统，deployTemplate：部署模板
+    *
+    * @return string|null
+    */
+    public function getDeploySystem()
+    {
+        return $this->container['deploySystem'];
+    }
+
+    /**
+    * Sets deploySystem
+    *
+    * @param string|null $deploySystem 部署系统，deployTemplate：部署模板
+    *
+    * @return $this
+    */
+    public function setDeploySystem($deploySystem)
+    {
+        $this->container['deploySystem'] = $deploySystem;
+        return $this;
+    }
+
+    /**
     * Gets templateId
     *  模板id
     *
@@ -204,6 +250,30 @@ class TaskV2RequestBody implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets ansibleType
+    *  是否切换新系统支持，1：是 0：否
+    *
+    * @return int|null
+    */
+    public function getAnsibleType()
+    {
+        return $this->container['ansibleType'];
+    }
+
+    /**
+    * Sets ansibleType
+    *
+    * @param int|null $ansibleType 是否切换新系统支持，1：是 0：否
+    *
+    * @return $this
+    */
+    public function setAnsibleType($ansibleType)
+    {
+        $this->container['ansibleType'] = $ansibleType;
         return $this;
     }
 

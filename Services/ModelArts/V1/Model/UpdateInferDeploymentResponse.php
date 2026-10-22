@@ -21,90 +21,150 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
-    * name  **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
-    * workspaceId  **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
-    * type  **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
-    * deployType  **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
-    * status  **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
-    * failureReason  **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
-    * version  version
-    * predictUrl  **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    * dispatcherGroupId  **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
-    * tags  **参数解释：** TMS对接标签类。
-    * deployTimeoutMinutes  **参数解释：** 部署超时时间。
-    * schedule  **参数解释：** 定时停止配置。
-    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
-    * provider  **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * id  参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
+    * name  **参数解释：** 服务部署名字
+    * deploymentName  参数解释： 服务部署名字。
+    * inferName  参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
+    * description  参数解释： 描述 取值范围： 不涉及。
+    * poolId  **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    * framework  **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    * version  **参数解释：** 当前部署版本信息。
+    * versionId  **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    * versionCount  **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    * count  **参数解释：** 服务部署实例数。
+    * weight  **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    * priority  **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    * secretType  **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    * secretName  **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    * status  **参数解释：** 服务部署状态
+    * deployType  **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * workloadType  **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
+    * highAvailSwitch  **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
+    * systemLogDumpEnable  **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    * scheduleStrategy  **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    * unitConfigs  **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    * model  model
+    * advancedConfig  advancedConfig
+    * mirrorTrafficEnable  **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    * mirrorTrafficWeight  **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
+    * userName  **参数解释：** 用户名。 **取值范围：** 不涉及。
+    * agencyName  **参数解释：** 委托名称。 **取值范围：** 不涉及。
+    * lastUsedTime  **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
+    * deploymentTaskLimit  deploymentTaskLimit
     * frozenInfos  **参数解释：** 当服务或者部署被冻结时返回的冻结类型信息。
+    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'workspaceId' => 'string',
-            'type' => 'string',
-            'deployType' => 'string',
+            'deploymentName' => 'string',
+            'inferName' => 'string',
+            'description' => 'string',
+            'poolId' => 'string',
+            'framework' => 'string',
+            'version' => 'string',
+            'versionId' => 'string',
+            'versionCount' => 'int',
+            'count' => 'int',
+            'weight' => 'int',
+            'priority' => 'int',
+            'secretType' => 'string',
+            'secretName' => 'string',
             'status' => 'string',
-            'failureReason' => 'string',
-            'version' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ServiceVersionResponse',
-            'predictUrl' => '\HuaweiCloud\SDK\ModelArts\V1\Model\PredictUrlResponse[]',
-            'dispatcherGroupId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\ModelArts\V1\Model\TagsResponse[]',
-            'deployTimeoutMinutes' => 'int',
-            'schedule' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfigResponse[]',
-            'createAt' => 'string',
-            'updateAt' => 'string',
-            'taskType' => 'string',
-            'provider' => 'string',
-            'frozenInfos' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FrozenInfo[]'
+            'deployType' => 'string',
+            'workloadType' => 'string',
+            'highAvailSwitch' => 'bool',
+            'systemLogDumpEnable' => 'bool',
+            'scheduleStrategy' => 'string',
+            'unitConfigs' => '\HuaweiCloud\SDK\ModelArts\V1\Model\UnitConfig[]',
+            'model' => '\HuaweiCloud\SDK\ModelArts\V1\Model\GroupModel',
+            'advancedConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AdvancedConfig',
+            'mirrorTrafficEnable' => 'bool',
+            'mirrorTrafficWeight' => 'int',
+            'userName' => 'string',
+            'agencyName' => 'string',
+            'lastUsedTime' => '\DateTime',
+            'deploymentTaskLimit' => '\HuaweiCloud\SDK\ModelArts\V1\Model\DeploymentTaskLimit',
+            'frozenInfos' => '\HuaweiCloud\SDK\ModelArts\V1\Model\FrozenInfo[]',
+            'createAt' => '\DateTime',
+            'updateAt' => '\DateTime'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
-    * name  **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
-    * workspaceId  **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
-    * type  **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
-    * deployType  **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
-    * status  **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
-    * failureReason  **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
-    * version  version
-    * predictUrl  **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    * dispatcherGroupId  **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
-    * tags  **参数解释：** TMS对接标签类。
-    * deployTimeoutMinutes  **参数解释：** 部署超时时间。
-    * schedule  **参数解释：** 定时停止配置。
-    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
-    * provider  **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * id  参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
+    * name  **参数解释：** 服务部署名字
+    * deploymentName  参数解释： 服务部署名字。
+    * inferName  参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
+    * description  参数解释： 描述 取值范围： 不涉及。
+    * poolId  **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    * framework  **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    * version  **参数解释：** 当前部署版本信息。
+    * versionId  **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    * versionCount  **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    * count  **参数解释：** 服务部署实例数。
+    * weight  **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    * priority  **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    * secretType  **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    * secretName  **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    * status  **参数解释：** 服务部署状态
+    * deployType  **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * workloadType  **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
+    * highAvailSwitch  **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
+    * systemLogDumpEnable  **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    * scheduleStrategy  **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    * unitConfigs  **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    * model  model
+    * advancedConfig  advancedConfig
+    * mirrorTrafficEnable  **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    * mirrorTrafficWeight  **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
+    * userName  **参数解释：** 用户名。 **取值范围：** 不涉及。
+    * agencyName  **参数解释：** 委托名称。 **取值范围：** 不涉及。
+    * lastUsedTime  **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
+    * deploymentTaskLimit  deploymentTaskLimit
     * frozenInfos  **参数解释：** 当服务或者部署被冻结时返回的冻结类型信息。
+    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'workspaceId' => null,
-        'type' => null,
-        'deployType' => null,
-        'status' => null,
-        'failureReason' => null,
+        'deploymentName' => null,
+        'inferName' => null,
+        'description' => null,
+        'poolId' => null,
+        'framework' => null,
         'version' => null,
-        'predictUrl' => null,
-        'dispatcherGroupId' => null,
-        'tags' => null,
-        'deployTimeoutMinutes' => 'int32',
-        'schedule' => null,
-        'createAt' => null,
-        'updateAt' => null,
-        'taskType' => null,
-        'provider' => null,
-        'frozenInfos' => null
+        'versionId' => null,
+        'versionCount' => 'int32',
+        'count' => 'int32',
+        'weight' => 'int32',
+        'priority' => 'int32',
+        'secretType' => null,
+        'secretName' => null,
+        'status' => null,
+        'deployType' => null,
+        'workloadType' => null,
+        'highAvailSwitch' => null,
+        'systemLogDumpEnable' => null,
+        'scheduleStrategy' => null,
+        'unitConfigs' => null,
+        'model' => null,
+        'advancedConfig' => null,
+        'mirrorTrafficEnable' => null,
+        'mirrorTrafficWeight' => 'int32',
+        'userName' => null,
+        'agencyName' => null,
+        'lastUsedTime' => 'date-time',
+        'deploymentTaskLimit' => null,
+        'frozenInfos' => null,
+        'createAt' => 'date-time',
+        'updateAt' => 'date-time'
     ];
 
     /**
@@ -130,134 +190,224 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
-    * name  **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
-    * workspaceId  **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
-    * type  **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
-    * deployType  **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
-    * status  **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
-    * failureReason  **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
-    * version  version
-    * predictUrl  **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    * dispatcherGroupId  **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
-    * tags  **参数解释：** TMS对接标签类。
-    * deployTimeoutMinutes  **参数解释：** 部署超时时间。
-    * schedule  **参数解释：** 定时停止配置。
-    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
-    * provider  **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * id  参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
+    * name  **参数解释：** 服务部署名字
+    * deploymentName  参数解释： 服务部署名字。
+    * inferName  参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
+    * description  参数解释： 描述 取值范围： 不涉及。
+    * poolId  **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    * framework  **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    * version  **参数解释：** 当前部署版本信息。
+    * versionId  **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    * versionCount  **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    * count  **参数解释：** 服务部署实例数。
+    * weight  **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    * priority  **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    * secretType  **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    * secretName  **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    * status  **参数解释：** 服务部署状态
+    * deployType  **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * workloadType  **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
+    * highAvailSwitch  **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
+    * systemLogDumpEnable  **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    * scheduleStrategy  **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    * unitConfigs  **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    * model  model
+    * advancedConfig  advancedConfig
+    * mirrorTrafficEnable  **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    * mirrorTrafficWeight  **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
+    * userName  **参数解释：** 用户名。 **取值范围：** 不涉及。
+    * agencyName  **参数解释：** 委托名称。 **取值范围：** 不涉及。
+    * lastUsedTime  **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
+    * deploymentTaskLimit  deploymentTaskLimit
     * frozenInfos  **参数解释：** 当服务或者部署被冻结时返回的冻结类型信息。
+    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'workspaceId' => 'workspace_id',
-            'type' => 'type',
-            'deployType' => 'deploy_type',
-            'status' => 'status',
-            'failureReason' => 'failure_reason',
+            'deploymentName' => 'deployment_name',
+            'inferName' => 'infer_name',
+            'description' => 'description',
+            'poolId' => 'pool_id',
+            'framework' => 'framework',
             'version' => 'version',
-            'predictUrl' => 'predict_url',
-            'dispatcherGroupId' => 'dispatcher_group_id',
-            'tags' => 'tags',
-            'deployTimeoutMinutes' => 'deploy_timeout_minutes',
-            'schedule' => 'schedule',
+            'versionId' => 'version_id',
+            'versionCount' => 'version_count',
+            'count' => 'count',
+            'weight' => 'weight',
+            'priority' => 'priority',
+            'secretType' => 'secret_type',
+            'secretName' => 'secret_name',
+            'status' => 'status',
+            'deployType' => 'deploy_type',
+            'workloadType' => 'workload_type',
+            'highAvailSwitch' => 'high_avail_switch',
+            'systemLogDumpEnable' => 'system_log_dump_enable',
+            'scheduleStrategy' => 'schedule_strategy',
+            'unitConfigs' => 'unit_configs',
+            'model' => 'model',
+            'advancedConfig' => 'advanced_config',
+            'mirrorTrafficEnable' => 'mirror_traffic_enable',
+            'mirrorTrafficWeight' => 'mirror_traffic_weight',
+            'userName' => 'user_name',
+            'agencyName' => 'agency_name',
+            'lastUsedTime' => 'last_used_time',
+            'deploymentTaskLimit' => 'deployment_task_limit',
+            'frozenInfos' => 'frozen_infos',
             'createAt' => 'create_at',
-            'updateAt' => 'update_at',
-            'taskType' => 'task_type',
-            'provider' => 'provider',
-            'frozenInfos' => 'frozen_infos'
+            'updateAt' => 'update_at'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
-    * name  **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
-    * workspaceId  **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
-    * type  **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
-    * deployType  **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
-    * status  **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
-    * failureReason  **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
-    * version  version
-    * predictUrl  **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    * dispatcherGroupId  **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
-    * tags  **参数解释：** TMS对接标签类。
-    * deployTimeoutMinutes  **参数解释：** 部署超时时间。
-    * schedule  **参数解释：** 定时停止配置。
-    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
-    * provider  **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * id  参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
+    * name  **参数解释：** 服务部署名字
+    * deploymentName  参数解释： 服务部署名字。
+    * inferName  参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
+    * description  参数解释： 描述 取值范围： 不涉及。
+    * poolId  **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    * framework  **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    * version  **参数解释：** 当前部署版本信息。
+    * versionId  **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    * versionCount  **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    * count  **参数解释：** 服务部署实例数。
+    * weight  **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    * priority  **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    * secretType  **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    * secretName  **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    * status  **参数解释：** 服务部署状态
+    * deployType  **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * workloadType  **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
+    * highAvailSwitch  **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
+    * systemLogDumpEnable  **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    * scheduleStrategy  **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    * unitConfigs  **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    * model  model
+    * advancedConfig  advancedConfig
+    * mirrorTrafficEnable  **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    * mirrorTrafficWeight  **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
+    * userName  **参数解释：** 用户名。 **取值范围：** 不涉及。
+    * agencyName  **参数解释：** 委托名称。 **取值范围：** 不涉及。
+    * lastUsedTime  **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
+    * deploymentTaskLimit  deploymentTaskLimit
     * frozenInfos  **参数解释：** 当服务或者部署被冻结时返回的冻结类型信息。
+    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
-            'workspaceId' => 'setWorkspaceId',
-            'type' => 'setType',
-            'deployType' => 'setDeployType',
-            'status' => 'setStatus',
-            'failureReason' => 'setFailureReason',
+            'deploymentName' => 'setDeploymentName',
+            'inferName' => 'setInferName',
+            'description' => 'setDescription',
+            'poolId' => 'setPoolId',
+            'framework' => 'setFramework',
             'version' => 'setVersion',
-            'predictUrl' => 'setPredictUrl',
-            'dispatcherGroupId' => 'setDispatcherGroupId',
-            'tags' => 'setTags',
-            'deployTimeoutMinutes' => 'setDeployTimeoutMinutes',
-            'schedule' => 'setSchedule',
+            'versionId' => 'setVersionId',
+            'versionCount' => 'setVersionCount',
+            'count' => 'setCount',
+            'weight' => 'setWeight',
+            'priority' => 'setPriority',
+            'secretType' => 'setSecretType',
+            'secretName' => 'setSecretName',
+            'status' => 'setStatus',
+            'deployType' => 'setDeployType',
+            'workloadType' => 'setWorkloadType',
+            'highAvailSwitch' => 'setHighAvailSwitch',
+            'systemLogDumpEnable' => 'setSystemLogDumpEnable',
+            'scheduleStrategy' => 'setScheduleStrategy',
+            'unitConfigs' => 'setUnitConfigs',
+            'model' => 'setModel',
+            'advancedConfig' => 'setAdvancedConfig',
+            'mirrorTrafficEnable' => 'setMirrorTrafficEnable',
+            'mirrorTrafficWeight' => 'setMirrorTrafficWeight',
+            'userName' => 'setUserName',
+            'agencyName' => 'setAgencyName',
+            'lastUsedTime' => 'setLastUsedTime',
+            'deploymentTaskLimit' => 'setDeploymentTaskLimit',
+            'frozenInfos' => 'setFrozenInfos',
             'createAt' => 'setCreateAt',
-            'updateAt' => 'setUpdateAt',
-            'taskType' => 'setTaskType',
-            'provider' => 'setProvider',
-            'frozenInfos' => 'setFrozenInfos'
+            'updateAt' => 'setUpdateAt'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
-    * name  **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
-    * workspaceId  **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
-    * type  **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
-    * deployType  **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
-    * status  **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
-    * failureReason  **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
-    * version  version
-    * predictUrl  **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    * dispatcherGroupId  **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
-    * tags  **参数解释：** TMS对接标签类。
-    * deployTimeoutMinutes  **参数解释：** 部署超时时间。
-    * schedule  **参数解释：** 定时停止配置。
-    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
-    * taskType  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
-    * provider  **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * id  参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
+    * name  **参数解释：** 服务部署名字
+    * deploymentName  参数解释： 服务部署名字。
+    * inferName  参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
+    * description  参数解释： 描述 取值范围： 不涉及。
+    * poolId  **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    * framework  **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    * version  **参数解释：** 当前部署版本信息。
+    * versionId  **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    * versionCount  **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    * count  **参数解释：** 服务部署实例数。
+    * weight  **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    * priority  **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    * secretType  **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    * secretName  **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    * status  **参数解释：** 服务部署状态
+    * deployType  **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * workloadType  **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
+    * highAvailSwitch  **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
+    * systemLogDumpEnable  **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    * scheduleStrategy  **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    * unitConfigs  **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    * model  model
+    * advancedConfig  advancedConfig
+    * mirrorTrafficEnable  **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    * mirrorTrafficWeight  **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
+    * userName  **参数解释：** 用户名。 **取值范围：** 不涉及。
+    * agencyName  **参数解释：** 委托名称。 **取值范围：** 不涉及。
+    * lastUsedTime  **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
+    * deploymentTaskLimit  deploymentTaskLimit
     * frozenInfos  **参数解释：** 当服务或者部署被冻结时返回的冻结类型信息。
+    * createAt  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    * updateAt  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
-            'workspaceId' => 'getWorkspaceId',
-            'type' => 'getType',
-            'deployType' => 'getDeployType',
-            'status' => 'getStatus',
-            'failureReason' => 'getFailureReason',
+            'deploymentName' => 'getDeploymentName',
+            'inferName' => 'getInferName',
+            'description' => 'getDescription',
+            'poolId' => 'getPoolId',
+            'framework' => 'getFramework',
             'version' => 'getVersion',
-            'predictUrl' => 'getPredictUrl',
-            'dispatcherGroupId' => 'getDispatcherGroupId',
-            'tags' => 'getTags',
-            'deployTimeoutMinutes' => 'getDeployTimeoutMinutes',
-            'schedule' => 'getSchedule',
+            'versionId' => 'getVersionId',
+            'versionCount' => 'getVersionCount',
+            'count' => 'getCount',
+            'weight' => 'getWeight',
+            'priority' => 'getPriority',
+            'secretType' => 'getSecretType',
+            'secretName' => 'getSecretName',
+            'status' => 'getStatus',
+            'deployType' => 'getDeployType',
+            'workloadType' => 'getWorkloadType',
+            'highAvailSwitch' => 'getHighAvailSwitch',
+            'systemLogDumpEnable' => 'getSystemLogDumpEnable',
+            'scheduleStrategy' => 'getScheduleStrategy',
+            'unitConfigs' => 'getUnitConfigs',
+            'model' => 'getModel',
+            'advancedConfig' => 'getAdvancedConfig',
+            'mirrorTrafficEnable' => 'getMirrorTrafficEnable',
+            'mirrorTrafficWeight' => 'getMirrorTrafficWeight',
+            'userName' => 'getUserName',
+            'agencyName' => 'getAgencyName',
+            'lastUsedTime' => 'getLastUsedTime',
+            'deploymentTaskLimit' => 'getDeploymentTaskLimit',
+            'frozenInfos' => 'getFrozenInfos',
             'createAt' => 'getCreateAt',
-            'updateAt' => 'getUpdateAt',
-            'taskType' => 'getTaskType',
-            'provider' => 'getProvider',
-            'frozenInfos' => 'getFrozenInfos'
+            'updateAt' => 'getUpdateAt'
     ];
 
     /**
@@ -320,22 +470,37 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['deployType'] = isset($data['deployType']) ? $data['deployType'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['failureReason'] = isset($data['failureReason']) ? $data['failureReason'] : null;
+        $this->container['deploymentName'] = isset($data['deploymentName']) ? $data['deploymentName'] : null;
+        $this->container['inferName'] = isset($data['inferName']) ? $data['inferName'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
+        $this->container['framework'] = isset($data['framework']) ? $data['framework'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
-        $this->container['predictUrl'] = isset($data['predictUrl']) ? $data['predictUrl'] : null;
-        $this->container['dispatcherGroupId'] = isset($data['dispatcherGroupId']) ? $data['dispatcherGroupId'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['deployTimeoutMinutes'] = isset($data['deployTimeoutMinutes']) ? $data['deployTimeoutMinutes'] : null;
-        $this->container['schedule'] = isset($data['schedule']) ? $data['schedule'] : null;
+        $this->container['versionId'] = isset($data['versionId']) ? $data['versionId'] : null;
+        $this->container['versionCount'] = isset($data['versionCount']) ? $data['versionCount'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['secretType'] = isset($data['secretType']) ? $data['secretType'] : null;
+        $this->container['secretName'] = isset($data['secretName']) ? $data['secretName'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['deployType'] = isset($data['deployType']) ? $data['deployType'] : null;
+        $this->container['workloadType'] = isset($data['workloadType']) ? $data['workloadType'] : null;
+        $this->container['highAvailSwitch'] = isset($data['highAvailSwitch']) ? $data['highAvailSwitch'] : null;
+        $this->container['systemLogDumpEnable'] = isset($data['systemLogDumpEnable']) ? $data['systemLogDumpEnable'] : null;
+        $this->container['scheduleStrategy'] = isset($data['scheduleStrategy']) ? $data['scheduleStrategy'] : null;
+        $this->container['unitConfigs'] = isset($data['unitConfigs']) ? $data['unitConfigs'] : null;
+        $this->container['model'] = isset($data['model']) ? $data['model'] : null;
+        $this->container['advancedConfig'] = isset($data['advancedConfig']) ? $data['advancedConfig'] : null;
+        $this->container['mirrorTrafficEnable'] = isset($data['mirrorTrafficEnable']) ? $data['mirrorTrafficEnable'] : null;
+        $this->container['mirrorTrafficWeight'] = isset($data['mirrorTrafficWeight']) ? $data['mirrorTrafficWeight'] : null;
+        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
+        $this->container['lastUsedTime'] = isset($data['lastUsedTime']) ? $data['lastUsedTime'] : null;
+        $this->container['deploymentTaskLimit'] = isset($data['deploymentTaskLimit']) ? $data['deploymentTaskLimit'] : null;
+        $this->container['frozenInfos'] = isset($data['frozenInfos']) ? $data['frozenInfos'] : null;
         $this->container['createAt'] = isset($data['createAt']) ? $data['createAt'] : null;
         $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
-        $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
-        $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
-        $this->container['frozenInfos'] = isset($data['frozenInfos']) ? $data['frozenInfos'] : null;
     }
 
     /**
@@ -346,6 +511,18 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['weight']) && ($this->container['weight'] > 100)) {
+                $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['weight']) && ($this->container['weight'] < 0)) {
+                $invalidProperties[] = "invalid value for 'weight', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] > 3)) {
+                $invalidProperties[] = "invalid value for 'priority', must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['priority']) && ($this->container['priority'] < 1)) {
+                $invalidProperties[] = "invalid value for 'priority', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -362,7 +539,7 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
+    *  参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
     *
     * @return string|null
     */
@@ -374,7 +551,7 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id **参数解释：** 服务ID，在[创建服务](CreateInferService.xml)时即可在返回体中获取，也可通过[查询服务列表](ListInferServices.xml)获取当前用户拥有的服务，其中service_id字段即为服务ID。 **取值范围：** 不涉及。
+    * @param string|null $id 参数解释： 部署ID，在[添加部署](CreateInferDeployment.xml)时即可在返回体中获取，也可通过[查询服务部署列表](ListInferDeployments.xml)获取当前用户拥有的部署，其中deployment_id字段即为部署ID。 约束限制： 不涉及。 取值范围： 部署ID。 默认取值： 不涉及。
     *
     * @return $this
     */
@@ -386,7 +563,7 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
+    *  **参数解释：** 服务部署名字
     *
     * @return string|null
     */
@@ -398,7 +575,7 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name **参数解释：** 服务名，用户在[创建服务](CreateInferService.xml)时自定义的名称。 **取值范围：** 支持1-64位字符，可包含字母、中文、数字、中划线、下划线。
+    * @param string|null $name **参数解释：** 服务部署名字
     *
     * @return $this
     */
@@ -409,80 +586,320 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets workspaceId
-    *  **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
+    * Gets deploymentName
+    *  参数解释： 服务部署名字。
     *
     * @return string|null
     */
-    public function getWorkspaceId()
+    public function getDeploymentName()
     {
-        return $this->container['workspaceId'];
+        return $this->container['deploymentName'];
     }
 
     /**
-    * Sets workspaceId
+    * Sets deploymentName
     *
-    * @param string|null $workspaceId **参数解释：** 工作空间ID。 **取值范围：** - 0：默认空间ID。 - 由数字和小写字母组成的32位字符：其他空间ID，可参考[工作空间创建](CreateWorkspace.xml)。
+    * @param string|null $deploymentName 参数解释： 服务部署名字。
     *
     * @return $this
     */
-    public function setWorkspaceId($workspaceId)
+    public function setDeploymentName($deploymentName)
     {
-        $this->container['workspaceId'] = $workspaceId;
+        $this->container['deploymentName'] = $deploymentName;
         return $this;
     }
 
     /**
-    * Gets type
-    *  **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
+    * Gets inferName
+    *  参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
     *
     * @return string|null
     */
-    public function getType()
+    public function getInferName()
     {
-        return $this->container['type'];
+        return $this->container['inferName'];
     }
 
     /**
-    * Sets type
+    * Sets inferName
     *
-    * @param string|null $type **参数解释：** 推理服务类型。 **取值范围：** - REAL_TIME：在线服务。 - ASYNC_REAL_TIME：异步服务。
+    * @param string|null $inferName 参数解释： 部署id（废弃字段）。 取值范围： 不涉及。
     *
     * @return $this
     */
-    public function setType($type)
+    public function setInferName($inferName)
     {
-        $this->container['type'] = $type;
+        $this->container['inferName'] = $inferName;
         return $this;
     }
 
     /**
-    * Gets deployType
-    *  **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * Gets description
+    *  参数解释： 描述 取值范围： 不涉及。
     *
     * @return string|null
     */
-    public function getDeployType()
+    public function getDescription()
     {
-        return $this->container['deployType'];
+        return $this->container['description'];
     }
 
     /**
-    * Sets deployType
+    * Sets description
     *
-    * @param string|null $deployType **参数解释：** 部署方式。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
+    * @param string|null $description 参数解释： 描述 取值范围： 不涉及。
     *
     * @return $this
     */
-    public function setDeployType($deployType)
+    public function setDescription($description)
     {
-        $this->container['deployType'] = $deployType;
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets poolId
+    *  **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getPoolId()
+    {
+        return $this->container['poolId'];
+    }
+
+    /**
+    * Sets poolId
+    *
+    * @param string|null $poolId **参数解释：** 专属资源池ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setPoolId($poolId)
+    {
+        $this->container['poolId'] = $poolId;
+        return $this;
+    }
+
+    /**
+    * Gets framework
+    *  **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    *
+    * @return string|null
+    */
+    public function getFramework()
+    {
+        return $this->container['framework'];
+    }
+
+    /**
+    * Sets framework
+    *
+    * @param string|null $framework **参数解释：** 算法框架。 **取值范围：** - COMMON： 普通在线服务。
+    *
+    * @return $this
+    */
+    public function setFramework($framework)
+    {
+        $this->container['framework'] = $framework;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  **参数解释：** 当前部署版本信息。
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version **参数解释：** 当前部署版本信息。
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets versionId
+    *  **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getVersionId()
+    {
+        return $this->container['versionId'];
+    }
+
+    /**
+    * Sets versionId
+    *
+    * @param string|null $versionId **参数解释：** 版本id，可通过查询version列表查询。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setVersionId($versionId)
+    {
+        $this->container['versionId'] = $versionId;
+        return $this;
+    }
+
+    /**
+    * Gets versionCount
+    *  **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getVersionCount()
+    {
+        return $this->container['versionCount'];
+    }
+
+    /**
+    * Sets versionCount
+    *
+    * @param int|null $versionCount **参数解释：** 服务版本数量。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setVersionCount($versionCount)
+    {
+        $this->container['versionCount'] = $versionCount;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  **参数解释：** 服务部署实例数。
+    *
+    * @return int|null
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int|null $count **参数解释：** 服务部署实例数。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
+        return $this;
+    }
+
+    /**
+    * Gets weight
+    *  **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getWeight()
+    {
+        return $this->container['weight'];
+    }
+
+    /**
+    * Sets weight
+    *
+    * @param int|null $weight **参数解释：** 权重百分比，分配到此模型的流量权重，仅当模型部署为在线服务时需要配置。 **约束限制：** 不涉及。 **取值范围：** [0, 100]。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setWeight($weight)
+    {
+        $this->container['weight'] = $weight;
+        return $this;
+    }
+
+    /**
+    * Gets priority
+    *  **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority **参数解释：** 服务优先级。 **约束限制：** 不涉及。 **取值范围：** [1, 3]。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
+    * Gets secretType
+    *  **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSecretType()
+    {
+        return $this->container['secretType'];
+    }
+
+    /**
+    * Sets secretType
+    *
+    * @param string|null $secretType **参数解释：** 凭证类型相关配置，用户可以在此处选择使用的凭证类型（dew，agency） **约束限制：** 不涉及。 **取值范围：** - [dew：DEW密钥。](tag:hws,hws_hk,fcs) - agency：临时委托凭证。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setSecretType($secretType)
+    {
+        $this->container['secretType'] = $secretType;
+        return $this;
+    }
+
+    /**
+    * Gets secretName
+    *  **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    *
+    * @return string|null
+    */
+    public function getSecretName()
+    {
+        return $this->container['secretName'];
+    }
+
+    /**
+    * Sets secretName
+    *
+    * @param string|null $secretName **参数解释：** 凭证名称，用户使用dew类型凭证时可以在此处选择使用的凭证。 **取值范围：** 1-64个字符，只能包含字母、数字、连字符和下划线。
+    *
+    * @return $this
+    */
+    public function setSecretName($secretName)
+    {
+        $this->container['secretName'] = $secretName;
         return $this;
     }
 
     /**
     * Gets status
-    *  **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
+    *  **参数解释：** 服务部署状态
     *
     * @return string|null
     */
@@ -494,7 +911,7 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 服务当前状态。 **取值范围：** - DEPLOYING：部署中 。 - FAILED：失败 。 - STOPPED：停止。 - RUNNING：运行中。 - DELETING：删除中 。 - STOPPING：停止中 。 - CONCERNING：告警 。 - UPGRADING：升级中 。 - ERROR：异常 。 - INIT：待部署。
+    * @param string|null $status **参数解释：** 服务部署状态
     *
     * @return $this
     */
@@ -505,266 +922,338 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets failureReason
-    *  **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
+    * Gets deployType
+    *  **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
     *
     * @return string|null
     */
-    public function getFailureReason()
+    public function getDeployType()
     {
-        return $this->container['failureReason'];
+        return $this->container['deployType'];
     }
 
     /**
-    * Sets failureReason
+    * Sets deployType
     *
-    * @param string|null $failureReason **参数解释：** 在线服务失败原因。 **取值范围：** 不涉及。
+    * @param string|null $deployType **参数解释：** 部署类型。 **取值范围：** - SINGLE：单机单卡。 - MULTI：多机多卡。
     *
     * @return $this
     */
-    public function setFailureReason($failureReason)
+    public function setDeployType($deployType)
     {
-        $this->container['failureReason'] = $failureReason;
+        $this->container['deployType'] = $deployType;
         return $this;
     }
 
     /**
-    * Gets version
-    *  version
-    *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ServiceVersionResponse|null
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ServiceVersionResponse|null $version version
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
-        return $this;
-    }
-
-    /**
-    * Gets predictUrl
-    *  **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\PredictUrlResponse[]|null
-    */
-    public function getPredictUrl()
-    {
-        return $this->container['predictUrl'];
-    }
-
-    /**
-    * Sets predictUrl
-    *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\PredictUrlResponse[]|null $predictUrl **参数解释：** 在线服务访问地址，创建服务接口无返回，详情接口中返回。
-    *
-    * @return $this
-    */
-    public function setPredictUrl($predictUrl)
-    {
-        $this->container['predictUrl'] = $predictUrl;
-        return $this;
-    }
-
-    /**
-    * Gets dispatcherGroupId
-    *  **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
+    * Gets workloadType
+    *  **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
     *
     * @return string|null
     */
-    public function getDispatcherGroupId()
+    public function getWorkloadType()
     {
-        return $this->container['dispatcherGroupId'];
+        return $this->container['workloadType'];
     }
 
     /**
-    * Sets dispatcherGroupId
+    * Sets workloadType
     *
-    * @param string|null $dispatcherGroupId **参数解释：** 服务绑定的dispatcher组ID，创建服务接口无返回，详情接口中返回。 **取值范围：** 不涉及。
+    * @param string|null $workloadType **参数解释：** 工作负载类型。 **取值范围：** - LWS - DEPLOYMENT **默认取值：** DEPLOYMENT
     *
     * @return $this
     */
-    public function setDispatcherGroupId($dispatcherGroupId)
+    public function setWorkloadType($workloadType)
     {
-        $this->container['dispatcherGroupId'] = $dispatcherGroupId;
+        $this->container['workloadType'] = $workloadType;
         return $this;
     }
 
     /**
-    * Gets tags
-    *  **参数解释：** TMS对接标签类。
+    * Gets highAvailSwitch
+    *  **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
     *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\TagsResponse[]|null
+    * @return bool|null
     */
-    public function getTags()
+    public function getHighAvailSwitch()
     {
-        return $this->container['tags'];
+        return $this->container['highAvailSwitch'];
     }
 
     /**
-    * Sets tags
+    * Sets highAvailSwitch
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\TagsResponse[]|null $tags **参数解释：** TMS对接标签类。
+    * @param bool|null $highAvailSwitch **参数解释：** 高可用开关，开启后不同实例的pod将尽量均匀分布到不同的节点上。 **约束限制：** 不涉及 **取值范围：** - true: 高可用开启。 - false: 高可用关闭。
     *
     * @return $this
     */
-    public function setTags($tags)
+    public function setHighAvailSwitch($highAvailSwitch)
     {
-        $this->container['tags'] = $tags;
+        $this->container['highAvailSwitch'] = $highAvailSwitch;
         return $this;
     }
 
     /**
-    * Gets deployTimeoutMinutes
-    *  **参数解释：** 部署超时时间。
+    * Gets systemLogDumpEnable
+    *  **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    *
+    * @return bool|null
+    */
+    public function getSystemLogDumpEnable()
+    {
+        return $this->container['systemLogDumpEnable'];
+    }
+
+    /**
+    * Sets systemLogDumpEnable
+    *
+    * @param bool|null $systemLogDumpEnable **参数解释：** 系统日志转储开关。 **约束限制：** 只有NPU资源池有，且逻辑池是没有的 **取值范围：** 不涉及 **默认取值：** false
+    *
+    * @return $this
+    */
+    public function setSystemLogDumpEnable($systemLogDumpEnable)
+    {
+        $this->container['systemLogDumpEnable'] = $systemLogDumpEnable;
+        return $this;
+    }
+
+    /**
+    * Gets scheduleStrategy
+    *  **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getScheduleStrategy()
+    {
+        return $this->container['scheduleStrategy'];
+    }
+
+    /**
+    * Sets scheduleStrategy
+    *
+    * @param string|null $scheduleStrategy **参数解释：** 调度策略。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setScheduleStrategy($scheduleStrategy)
+    {
+        $this->container['scheduleStrategy'] = $scheduleStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets unitConfigs
+    *  **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\UnitConfig[]|null
+    */
+    public function getUnitConfigs()
+    {
+        return $this->container['unitConfigs'];
+    }
+
+    /**
+    * Sets unitConfigs
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\UnitConfig[]|null $unitConfigs **参数解释：** 实例单元配置。 **约束限制：** 单机推理时，个数只会为1；如果是分布式推理时，根据不同框架，实例单元配置可灵活配置。
+    *
+    * @return $this
+    */
+    public function setUnitConfigs($unitConfigs)
+    {
+        $this->container['unitConfigs'] = $unitConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets model
+    *  model
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\GroupModel|null
+    */
+    public function getModel()
+    {
+        return $this->container['model'];
+    }
+
+    /**
+    * Sets model
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\GroupModel|null $model model
+    *
+    * @return $this
+    */
+    public function setModel($model)
+    {
+        $this->container['model'] = $model;
+        return $this;
+    }
+
+    /**
+    * Gets advancedConfig
+    *  advancedConfig
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\AdvancedConfig|null
+    */
+    public function getAdvancedConfig()
+    {
+        return $this->container['advancedConfig'];
+    }
+
+    /**
+    * Sets advancedConfig
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\AdvancedConfig|null $advancedConfig advancedConfig
+    *
+    * @return $this
+    */
+    public function setAdvancedConfig($advancedConfig)
+    {
+        $this->container['advancedConfig'] = $advancedConfig;
+        return $this;
+    }
+
+    /**
+    * Gets mirrorTrafficEnable
+    *  **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getMirrorTrafficEnable()
+    {
+        return $this->container['mirrorTrafficEnable'];
+    }
+
+    /**
+    * Sets mirrorTrafficEnable
+    *
+    * @param bool|null $mirrorTrafficEnable **参数解释：** 是否开启镜像流量。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setMirrorTrafficEnable($mirrorTrafficEnable)
+    {
+        $this->container['mirrorTrafficEnable'] = $mirrorTrafficEnable;
+        return $this;
+    }
+
+    /**
+    * Gets mirrorTrafficWeight
+    *  **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
-    public function getDeployTimeoutMinutes()
+    public function getMirrorTrafficWeight()
     {
-        return $this->container['deployTimeoutMinutes'];
+        return $this->container['mirrorTrafficWeight'];
     }
 
     /**
-    * Sets deployTimeoutMinutes
+    * Sets mirrorTrafficWeight
     *
-    * @param int|null $deployTimeoutMinutes **参数解释：** 部署超时时间。
+    * @param int|null $mirrorTrafficWeight **参数解释：** 镜像流量权重。 **取值范围：** 不涉及。
     *
     * @return $this
     */
-    public function setDeployTimeoutMinutes($deployTimeoutMinutes)
+    public function setMirrorTrafficWeight($mirrorTrafficWeight)
     {
-        $this->container['deployTimeoutMinutes'] = $deployTimeoutMinutes;
+        $this->container['mirrorTrafficWeight'] = $mirrorTrafficWeight;
         return $this;
     }
 
     /**
-    * Gets schedule
-    *  **参数解释：** 定时停止配置。
-    *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfigResponse[]|null
-    */
-    public function getSchedule()
-    {
-        return $this->container['schedule'];
-    }
-
-    /**
-    * Sets schedule
-    *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduleConfigResponse[]|null $schedule **参数解释：** 定时停止配置。
-    *
-    * @return $this
-    */
-    public function setSchedule($schedule)
-    {
-        $this->container['schedule'] = $schedule;
-        return $this;
-    }
-
-    /**
-    * Gets createAt
-    *  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
+    * Gets userName
+    *  **参数解释：** 用户名。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
-    public function getCreateAt()
+    public function getUserName()
     {
-        return $this->container['createAt'];
+        return $this->container['userName'];
     }
 
     /**
-    * Sets createAt
+    * Sets userName
     *
-    * @param string|null $createAt **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
+    * @param string|null $userName **参数解释：** 用户名。 **取值范围：** 不涉及。
     *
     * @return $this
     */
-    public function setCreateAt($createAt)
+    public function setUserName($userName)
     {
-        $this->container['createAt'] = $createAt;
+        $this->container['userName'] = $userName;
         return $this;
     }
 
     /**
-    * Gets updateAt
-    *  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
+    * Gets agencyName
+    *  **参数解释：** 委托名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
-    public function getUpdateAt()
+    public function getAgencyName()
     {
-        return $this->container['updateAt'];
+        return $this->container['agencyName'];
     }
 
     /**
-    * Sets updateAt
+    * Sets agencyName
     *
-    * @param string|null $updateAt **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字，如1609459200000。
+    * @param string|null $agencyName **参数解释：** 委托名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
-    public function setUpdateAt($updateAt)
+    public function setAgencyName($agencyName)
     {
-        $this->container['updateAt'] = $updateAt;
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 
     /**
-    * Gets taskType
-    *  **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * Gets lastUsedTime
+    *  **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
     *
-    * @return string|null
+    * @return \DateTime|null
     */
-    public function getTaskType()
+    public function getLastUsedTime()
     {
-        return $this->container['taskType'];
+        return $this->container['lastUsedTime'];
     }
 
     /**
-    * Sets taskType
+    * Sets lastUsedTime
     *
-    * @param string|null $taskType **参数解释：** 模型类型。 **取值范围：** - TEXT_GENERATION：文本生成 - IMAGE_UNDERSTANDING：图像理解 - VIDEO_GENERATION：视频生成 - IMAGE_GENERATION：图像生成 - RERANK：重排序 - VECTOR_MODEL：向量模型 - EMBEDDING：Embedding嵌入
+    * @param \DateTime|null $lastUsedTime **参数解释：** 最后使用时间。 **取值范围：** 不涉及。
     *
     * @return $this
     */
-    public function setTaskType($taskType)
+    public function setLastUsedTime($lastUsedTime)
     {
-        $this->container['taskType'] = $taskType;
+        $this->container['lastUsedTime'] = $lastUsedTime;
         return $this;
     }
 
     /**
-    * Gets provider
-    *  **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * Gets deploymentTaskLimit
+    *  deploymentTaskLimit
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\DeploymentTaskLimit|null
     */
-    public function getProvider()
+    public function getDeploymentTaskLimit()
     {
-        return $this->container['provider'];
+        return $this->container['deploymentTaskLimit'];
     }
 
     /**
-    * Sets provider
+    * Sets deploymentTaskLimit
     *
-    * @param string|null $provider **参数解释：** 服务提供者的账号id（创建服务时通过X-Auth-Token-Provider请求头解析iam token而来），该值不为空时，该服务的所有更新操作需要在请求头中添加X-Auth-Token-Provider，取值为该账号id的domain级或project级token。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\DeploymentTaskLimit|null $deploymentTaskLimit deploymentTaskLimit
     *
     * @return $this
     */
-    public function setProvider($provider)
+    public function setDeploymentTaskLimit($deploymentTaskLimit)
     {
-        $this->container['provider'] = $provider;
+        $this->container['deploymentTaskLimit'] = $deploymentTaskLimit;
         return $this;
     }
 
@@ -789,6 +1278,54 @@ class UpdateInferDeploymentResponse implements ModelInterface, ArrayAccess
     public function setFrozenInfos($frozenInfos)
     {
         $this->container['frozenInfos'] = $frozenInfos;
+        return $this;
+    }
+
+    /**
+    * Gets createAt
+    *  **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    *
+    * @return \DateTime|null
+    */
+    public function getCreateAt()
+    {
+        return $this->container['createAt'];
+    }
+
+    /**
+    * Sets createAt
+    *
+    * @param \DateTime|null $createAt **参数解释：** 创建时间，根据创建时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字
+    *
+    * @return $this
+    */
+    public function setCreateAt($createAt)
+    {
+        $this->container['createAt'] = $createAt;
+        return $this;
+    }
+
+    /**
+    * Gets updateAt
+    *  **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
+    *
+    * @return \DateTime|null
+    */
+    public function getUpdateAt()
+    {
+        return $this->container['updateAt'];
+    }
+
+    /**
+    * Sets updateAt
+    *
+    * @param \DateTime|null $updateAt **参数解释：** 更新时间，根据更新时的当前时间自动生成。 **取值范围：** 毫秒级时间戳，13位数字。
+    *
+    * @return $this
+    */
+    public function setUpdateAt($updateAt)
+    {
+        $this->container['updateAt'] = $updateAt;
         return $this;
     }
 

@@ -23,13 +23,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
     * key  **参数解释：** 被攻击的URL路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该URL被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 该URL所属的域名标识（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
             'num' => 'int',
-            'host' => 'string'
+            'host' => 'string',
+            'webTag' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
     * key  **参数解释：** 被攻击的URL路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该URL被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 该URL所属的域名标识（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
         'num' => 'int32',
-        'host' => null
+        'host' => null,
+        'webTag' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
     * key  **参数解释：** 被攻击的URL路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该URL被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 该URL所属的域名标识（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
             'num' => 'num',
-            'host' => 'host'
+            'host' => 'host',
+            'webTag' => 'web_tag'
     ];
 
     /**
@@ -86,13 +92,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
     * key  **参数解释：** 被攻击的URL路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该URL被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 该URL所属的域名标识（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
             'num' => 'setNum',
-            'host' => 'setHost'
+            'host' => 'setHost',
+            'webTag' => 'setWebTag'
     ];
 
     /**
@@ -100,13 +108,15 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
     * key  **参数解释：** 被攻击的URL路径。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * num  **参数解释：** 该URL被攻击的总次数。 **约束限制：** 不涉及 **取值范围：** ≥0 **默认取值：** 0
     * host  **参数解释：** 该URL所属的域名标识（如*:80表示所有域名的80端口）。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * webTag  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
             'num' => 'getNum',
-            'host' => 'getHost'
+            'host' => 'getHost',
+            'webTag' => 'getWebTag'
     ];
 
     /**
@@ -170,6 +180,7 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['num'] = isset($data['num']) ? $data['num'] : null;
         $this->container['host'] = isset($data['host']) ? $data['host'] : null;
+        $this->container['webTag'] = isset($data['webTag']) ? $data['webTag'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class SecurityReportContentResponseReportContentInfoTopAttackedUrlsInfoList impl
     public function setHost($host)
     {
         $this->container['host'] = $host;
+        return $this;
+    }
+
+    /**
+    * Gets webTag
+    *  **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getWebTag()
+    {
+        return $this->container['webTag'];
+    }
+
+    /**
+    * Sets webTag
+    *
+    * @param string|null $webTag **参数解释：** 域名的Web标签。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setWebTag($webTag)
+    {
+        $this->container['webTag'] = $webTag;
         return $this;
     }
 

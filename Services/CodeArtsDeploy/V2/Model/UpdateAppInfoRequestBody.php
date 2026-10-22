@@ -26,9 +26,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     * description  描述
     * isDraft  是否为草稿
     * createType  创建类型，template：部署模板创建
+    * groupId  分组id
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -39,9 +43,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
             'description' => 'string',
             'isDraft' => 'bool',
             'createType' => 'string',
+            'groupId' => 'string',
             'slaveClusterId' => 'string',
             'trigger' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskTriggerVO',
-            'arrangeInfos' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UpdateTaskV2RequestBody[]'
+            'arrangeInfos' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\UpdateTaskV2RequestBody[]',
+            'agencyUrn' => 'string',
+            'slaveResourceType' => 'string',
+            'timeout' => 'int'
     ];
 
     /**
@@ -52,9 +60,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     * description  描述
     * isDraft  是否为草稿
     * createType  创建类型，template：部署模板创建
+    * groupId  分组id
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -65,9 +77,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
         'description' => null,
         'isDraft' => null,
         'createType' => null,
+        'groupId' => null,
         'slaveClusterId' => null,
         'trigger' => null,
-        'arrangeInfos' => null
+        'arrangeInfos' => null,
+        'agencyUrn' => null,
+        'slaveResourceType' => null,
+        'timeout' => 'int32'
     ];
 
     /**
@@ -99,9 +115,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     * description  描述
     * isDraft  是否为草稿
     * createType  创建类型，template：部署模板创建
+    * groupId  分组id
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -112,9 +132,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
             'description' => 'description',
             'isDraft' => 'is_draft',
             'createType' => 'create_type',
+            'groupId' => 'group_id',
             'slaveClusterId' => 'slave_cluster_id',
             'trigger' => 'trigger',
-            'arrangeInfos' => 'arrange_infos'
+            'arrangeInfos' => 'arrange_infos',
+            'agencyUrn' => 'agency_urn',
+            'slaveResourceType' => 'slave_resource_type',
+            'timeout' => 'timeout'
     ];
 
     /**
@@ -125,9 +149,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     * description  描述
     * isDraft  是否为草稿
     * createType  创建类型，template：部署模板创建
+    * groupId  分组id
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -138,9 +166,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'isDraft' => 'setIsDraft',
             'createType' => 'setCreateType',
+            'groupId' => 'setGroupId',
             'slaveClusterId' => 'setSlaveClusterId',
             'trigger' => 'setTrigger',
-            'arrangeInfos' => 'setArrangeInfos'
+            'arrangeInfos' => 'setArrangeInfos',
+            'agencyUrn' => 'setAgencyUrn',
+            'slaveResourceType' => 'setSlaveResourceType',
+            'timeout' => 'setTimeout'
     ];
 
     /**
@@ -151,9 +183,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     * description  描述
     * isDraft  是否为草稿
     * createType  创建类型，template：部署模板创建
+    * groupId  分组id
     * slaveClusterId  自定义slave资源池id
     * trigger  trigger
     * arrangeInfos  部署任务列表信息
+    * agencyUrn  委托URN
+    * slaveResourceType  资源池类型
+    * timeout  任务执行超时时间
     *
     * @var string[]
     */
@@ -164,9 +200,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'isDraft' => 'getIsDraft',
             'createType' => 'getCreateType',
+            'groupId' => 'getGroupId',
             'slaveClusterId' => 'getSlaveClusterId',
             'trigger' => 'getTrigger',
-            'arrangeInfos' => 'getArrangeInfos'
+            'arrangeInfos' => 'getArrangeInfos',
+            'agencyUrn' => 'getAgencyUrn',
+            'slaveResourceType' => 'getSlaveResourceType',
+            'timeout' => 'getTimeout'
     ];
 
     /**
@@ -246,9 +286,13 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isDraft'] = isset($data['isDraft']) ? $data['isDraft'] : null;
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['slaveClusterId'] = isset($data['slaveClusterId']) ? $data['slaveClusterId'] : null;
         $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
         $this->container['arrangeInfos'] = isset($data['arrangeInfos']) ? $data['arrangeInfos'] : null;
+        $this->container['agencyUrn'] = isset($data['agencyUrn']) ? $data['agencyUrn'] : null;
+        $this->container['slaveResourceType'] = isset($data['slaveResourceType']) ? $data['slaveResourceType'] : null;
+        $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
     }
 
     /**
@@ -299,6 +343,18 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
 
             if (!is_null($this->container['slaveClusterId']) && !preg_match("/^[A-Za-z0-9]{32}$/", $this->container['slaveClusterId'])) {
                 $invalidProperties[] = "invalid value for 'slaveClusterId', must be conform to the pattern /^[A-Za-z0-9]{32}$/.";
+            }
+            if (!is_null($this->container['agencyUrn']) && !preg_match("/^iam::[A-Za-z0-9+\/=\\-_]{1,64}:agency:[\\s\\S]{1,64}$/", $this->container['agencyUrn'])) {
+                $invalidProperties[] = "invalid value for 'agencyUrn', must be conform to the pattern /^iam::[A-Za-z0-9+\/=\\-_]{1,64}:agency:[\\s\\S]{1,64}$/.";
+            }
+            if (!is_null($this->container['slaveResourceType']) && !preg_match("/exclusive|self-hosted/", $this->container['slaveResourceType'])) {
+                $invalidProperties[] = "invalid value for 'slaveResourceType', must be conform to the pattern /exclusive|self-hosted/.";
+            }
+            if (!is_null($this->container['timeout']) && ($this->container['timeout'] > 360)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be smaller than or equal to 360.";
+            }
+            if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 10)) {
+                $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 10.";
             }
         return $invalidProperties;
     }
@@ -459,6 +515,30 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets groupId
+    *  分组id
+    *
+    * @return string|null
+    */
+    public function getGroupId()
+    {
+        return $this->container['groupId'];
+    }
+
+    /**
+    * Sets groupId
+    *
+    * @param string|null $groupId 分组id
+    *
+    * @return $this
+    */
+    public function setGroupId($groupId)
+    {
+        $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
     * Gets slaveClusterId
     *  自定义slave资源池id
     *
@@ -527,6 +607,78 @@ class UpdateAppInfoRequestBody implements ModelInterface, ArrayAccess
     public function setArrangeInfos($arrangeInfos)
     {
         $this->container['arrangeInfos'] = $arrangeInfos;
+        return $this;
+    }
+
+    /**
+    * Gets agencyUrn
+    *  委托URN
+    *
+    * @return string|null
+    */
+    public function getAgencyUrn()
+    {
+        return $this->container['agencyUrn'];
+    }
+
+    /**
+    * Sets agencyUrn
+    *
+    * @param string|null $agencyUrn 委托URN
+    *
+    * @return $this
+    */
+    public function setAgencyUrn($agencyUrn)
+    {
+        $this->container['agencyUrn'] = $agencyUrn;
+        return $this;
+    }
+
+    /**
+    * Gets slaveResourceType
+    *  资源池类型
+    *
+    * @return string|null
+    */
+    public function getSlaveResourceType()
+    {
+        return $this->container['slaveResourceType'];
+    }
+
+    /**
+    * Sets slaveResourceType
+    *
+    * @param string|null $slaveResourceType 资源池类型
+    *
+    * @return $this
+    */
+    public function setSlaveResourceType($slaveResourceType)
+    {
+        $this->container['slaveResourceType'] = $slaveResourceType;
+        return $this;
+    }
+
+    /**
+    * Gets timeout
+    *  任务执行超时时间
+    *
+    * @return int|null
+    */
+    public function getTimeout()
+    {
+        return $this->container['timeout'];
+    }
+
+    /**
+    * Sets timeout
+    *
+    * @param int|null $timeout 任务执行超时时间
+    *
+    * @return $this
+    */
+    public function setTimeout($timeout)
+    {
+        $this->container['timeout'] = $timeout;
         return $this;
     }
 

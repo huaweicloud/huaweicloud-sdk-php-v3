@@ -27,6 +27,201 @@ class EvsClient extends Client
 
 
     /**
+     * 绑定自动快照策略
+     *
+     * 绑定自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateAutoSnapshotPolicy($request)
+    {
+        return $this->associateAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function associateAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies/{snapshot_policy_id}/associate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotPolicyId'] !== null) {
+            $pathParams['snapshot_policy_id'] = $localVarParams['snapshotPolicyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\AssociateAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\AssociateAutoSnapshotPolicyRequest');
+    }
+
+    /**
+     * 为指定快照组添加标签
+     *
+     * 为指定快照组添加标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateSnapshotGroupTag($request)
+    {
+        return $this->batchCreateSnapshotGroupTagWithHttpInfo($request);
+    }
+
+    public function batchCreateSnapshotGroupTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/{snapshot_group_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotGroupId'] !== null) {
+            $pathParams['snapshot_group_id'] = $localVarParams['snapshotGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateSnapshotGroupTagResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateSnapshotGroupTagRequest');
+    }
+
+    /**
+     * 为指定快照添加标签
+     *
+     * 为指定快照添加标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateSnapshotTags($request)
+    {
+        return $this->batchCreateSnapshotTagsWithHttpInfo($request);
+    }
+
+    public function batchCreateSnapshotTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/{snapshot_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateSnapshotTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateSnapshotTagsRequest');
+    }
+
+    /**
      * 为指定云硬盘批量添加标签
      *
      * 为指定云硬盘批量添加标签。
@@ -92,6 +287,136 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateVolumeTagsResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchCreateVolumeTagsRequest');
+    }
+
+    /**
+     * 为指定快照组删除标签
+     *
+     * 为指定快照组删除标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSnapshotGroupTag($request)
+    {
+        return $this->batchDeleteSnapshotGroupTagWithHttpInfo($request);
+    }
+
+    public function batchDeleteSnapshotGroupTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/{snapshot_group_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotGroupId'] !== null) {
+            $pathParams['snapshot_group_id'] = $localVarParams['snapshotGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchDeleteSnapshotGroupTagResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchDeleteSnapshotGroupTagRequest');
+    }
+
+    /**
+     * 为指定快照删除标签
+     *
+     * 为指定快照删除标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSnapshotTags($request)
+    {
+        return $this->batchDeleteSnapshotTagsWithHttpInfo($request);
+    }
+
+    public function batchDeleteSnapshotTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/{snapshot_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\BatchDeleteSnapshotTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\BatchDeleteSnapshotTagsRequest');
     }
 
     /**
@@ -788,6 +1113,379 @@ class EvsClient extends Client
     }
 
     /**
+     * 查询自动快照策略总数
+     *
+     * 查询自动快照策略总数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countAutoSnapshotPolicies($request)
+    {
+        return $this->countAutoSnapshotPoliciesWithHttpInfo($request);
+    }
+
+    public function countAutoSnapshotPoliciesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $queryParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CountAutoSnapshotPoliciesResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CountAutoSnapshotPoliciesRequest');
+    }
+
+    /**
+     * 查询快照链个数
+     *
+     * 查询快照链个数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countSnapshotChains($request)
+    {
+        return $this->countSnapshotChainsWithHttpInfo($request);
+    }
+
+    public function countSnapshotChainsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-chains/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $queryParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CountSnapshotChainsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CountSnapshotChainsRequest');
+    }
+
+    /**
+     * 查询快照个数
+     *
+     * 查询快照个数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countSnapshots($request)
+    {
+        return $this->countSnapshotsWithHttpInfo($request);
+    }
+
+    public function countSnapshotsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $queryParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['snapshotType'] !== null) {
+            $queryParams['snapshot_type'] = $localVarParams['snapshotType'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $queryParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['snapshotChainId'] !== null) {
+            $queryParams['snapshot_chain_id'] = $localVarParams['snapshotChainId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CountSnapshotsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CountSnapshotsRequest');
+    }
+
+    /**
+     * 查询快照一致性组个数
+     *
+     * 查询快照一致性组个数。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countSnapshotsGroup($request)
+    {
+        return $this->countSnapshotsGroupWithHttpInfo($request);
+    }
+
+    public function countSnapshotsGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $queryParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CountSnapshotsGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CountSnapshotsGroupRequest');
+    }
+
+    /**
+     * 创建自动快照策略
+     *
+     * 创建自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutoSnapshotPolicy($request)
+    {
+        return $this->createAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function createAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CreateAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CreateAutoSnapshotPolicyRequest');
+    }
+
+    /**
      * 创建云硬盘快照
      *
      * 创建云硬盘快照。
@@ -847,6 +1545,130 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CreateSnapshotResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CreateSnapshotRequest');
+    }
+
+    /**
+     * 创建快照一致性组
+     *
+     * 创建快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSnapshotGroup($request)
+    {
+        return $this->createSnapshotGroupWithHttpInfo($request);
+    }
+
+    public function createSnapshotGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CreateSnapshotGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CreateSnapshotGroupRequest');
+    }
+
+    /**
+     * 创建快照
+     *
+     * 创建标准快照。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createStandardSnapshot($request)
+    {
+        return $this->createStandardSnapshotWithHttpInfo($request);
+    }
+
+    public function createStandardSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\CreateStandardSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\CreateStandardSnapshotRequest');
     }
 
     /**
@@ -920,6 +1742,68 @@ class EvsClient extends Client
     }
 
     /**
+     * 删除单个自动快照策略
+     *
+     * 删除单个自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutoSnapshotPolicy($request)
+    {
+        return $this->deleteAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function deleteAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies/{snapshot_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotPolicyId'] !== null) {
+            $pathParams['snapshot_policy_id'] = $localVarParams['snapshotPolicyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteAutoSnapshotPolicyRequest');
+    }
+
+    /**
      * 删除云硬盘快照
      *
      * 删除云硬盘快照。
@@ -979,6 +1863,130 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteSnapshotResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteSnapshotRequest');
+    }
+
+    /**
+     * 删除快照一致性组
+     *
+     * 删除快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSnapshotGroup($request)
+    {
+        return $this->deleteSnapshotGroupWithHttpInfo($request);
+    }
+
+    public function deleteSnapshotGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/{snapshot_group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotGroupId'] !== null) {
+            $pathParams['snapshot_group_id'] = $localVarParams['snapshotGroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteSnapshotGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteSnapshotGroupRequest');
+    }
+
+    /**
+     * 删除快照
+     *
+     * 删除快照。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteStandardSnapshot($request)
+    {
+        return $this->deleteStandardSnapshotWithHttpInfo($request);
+    }
+
+    public function deleteStandardSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/{snapshot_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteStandardSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DeleteStandardSnapshotRequest');
     }
 
     /**
@@ -1106,6 +2114,441 @@ class EvsClient extends Client
     }
 
     /**
+     * 解绑自动快照策略
+     *
+     * 解绑自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateAutoSnapshotPolicy($request)
+    {
+        return $this->disassociateAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function disassociateAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies/{snapshot_policy_id}/disassociate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotPolicyId'] !== null) {
+            $pathParams['snapshot_policy_id'] = $localVarParams['snapshotPolicyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\DisassociateAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\DisassociateAutoSnapshotPolicyRequest');
+    }
+
+    /**
+     * 查询自动快照策略
+     *
+     * 查询自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutoSnapshotPolicy($request)
+    {
+        return $this->listAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function listAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $queryParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListAutoSnapshotPolicyRequest');
+    }
+
+    /**
+     * 查询快照链列表
+     *
+     * 查询快照链的列表。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotChains($request)
+    {
+        return $this->listSnapshotChainsWithHttpInfo($request);
+    }
+
+    public function listSnapshotChainsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-chains';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $queryParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($localVarParams['category'] !== null) {
+            $queryParams['category'] = $localVarParams['category'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotChainsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotChainsRequest');
+    }
+
+    /**
+     * 查询快照一致性组列表
+     *
+     * 查询快照一致性组列表。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotGroup($request)
+    {
+        return $this->listSnapshotGroupWithHttpInfo($request);
+    }
+
+    public function listSnapshotGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $queryParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $queryParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotGroupRequest');
+    }
+
+    /**
+     * 查询快照组的所有标签
+     *
+     * 查询快照组的所有标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotGroupTags($request)
+    {
+        return $this->listSnapshotGroupTagsWithHttpInfo($request);
+    }
+
+    public function listSnapshotGroupTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotGroupTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotGroupTagsRequest');
+    }
+
+    /**
+     * 查询快照资源的所有标签
+     *
+     * 查询快照资源的所有标签。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotTags($request)
+    {
+        return $this->listSnapshotTagsWithHttpInfo($request);
+    }
+
+    public function listSnapshotTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotTagsRequest');
+    }
+
+    /**
      * 查询云硬盘快照详情列表
      *
      * 查询云硬盘快照详细列表信息。
@@ -1195,6 +2638,116 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotsResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotsRequest');
+    }
+
+    /**
+     * 查询快照详情列表
+     *
+     * 查询快照详情列表。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSnapshotsDetails($request)
+    {
+        return $this->listSnapshotsDetailsWithHttpInfo($request);
+    }
+
+    public function listSnapshotsDetailsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $queryParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['ids'] !== null) {
+            $queryParams['ids'] = $localVarParams['ids'];
+        }
+        if ($localVarParams['snapshotType'] !== null) {
+            $queryParams['snapshot_type'] = $localVarParams['snapshotType'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $queryParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['snapshotChainId'] !== null) {
+            $queryParams['snapshot_chain_id'] = $localVarParams['snapshotChainId'];
+        }
+        if ($localVarParams['snapshotGroupId'] !== null) {
+            $queryParams['snapshot_group_id'] = $localVarParams['snapshotGroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotsDetailsResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ListSnapshotsDetailsRequest');
     }
 
     /**
@@ -1844,6 +3397,133 @@ class EvsClient extends Client
     }
 
     /**
+     * 快照回滚
+     *
+     * 将快照数据回滚到云硬盘。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function rollbackStandardSnapshot($request)
+    {
+        return $this->rollbackStandardSnapshotWithHttpInfo($request);
+    }
+
+    public function rollbackStandardSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/{snapshot_id}/rollback';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\RollbackStandardSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\RollbackStandardSnapshotRequest');
+    }
+
+    /**
+     * 查询单个自动快照策略
+     *
+     * 查询单个自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutoSnapshotPolicy($request)
+    {
+        return $this->showAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function showAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies/{snapshot_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotPolicyId'] !== null) {
+            $pathParams['snapshot_policy_id'] = $localVarParams['snapshotPolicyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowAutoSnapshotPolicyRequest');
+    }
+
+    /**
      * 查询job的状态
      *
      * 查询Job的执行状态。
@@ -2025,6 +3705,130 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowSnapshotResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowSnapshotRequest');
+    }
+
+    /**
+     * 查询单个快照一致性组
+     *
+     * 查询单个快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSnapshotGroup($request)
+    {
+        return $this->showSnapshotGroupWithHttpInfo($request);
+    }
+
+    public function showSnapshotGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/{snapshot_group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotGroupId'] !== null) {
+            $pathParams['snapshot_group_id'] = $localVarParams['snapshotGroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowSnapshotGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowSnapshotGroupRequest');
+    }
+
+    /**
+     * 查询单个快照信息
+     *
+     * 查询单个快照信息。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStandardSnapshot($request)
+    {
+        return $this->showStandardSnapshotWithHttpInfo($request);
+    }
+
+    public function showStandardSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/{snapshot_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\ShowStandardSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\ShowStandardSnapshotRequest');
     }
 
     /**
@@ -2278,6 +4082,71 @@ class EvsClient extends Client
     }
 
     /**
+     * 更新自动快照策略
+     *
+     * 更新自动快照策略。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAutoSnapshotPolicy($request)
+    {
+        return $this->updateAutoSnapshotPolicyWithHttpInfo($request);
+    }
+
+    public function updateAutoSnapshotPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-policies/{snapshot_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotPolicyId'] !== null) {
+            $pathParams['snapshot_policy_id'] = $localVarParams['snapshotPolicyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateAutoSnapshotPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateAutoSnapshotPolicyRequest');
+    }
+
+    /**
      * 更新回收站策略
      *
      * 更新回收站策略。
@@ -2402,6 +4271,136 @@ class EvsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateSnapshotResponse',
             $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateSnapshotRequest');
+    }
+
+    /**
+     * 更新快照一致性组
+     *
+     * 更新快照一致性组。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSnapshotGroup($request)
+    {
+        return $this->updateSnapshotGroupWithHttpInfo($request);
+    }
+
+    public function updateSnapshotGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshot-groups/{snapshot_group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotGroupId'] !== null) {
+            $pathParams['snapshot_group_id'] = $localVarParams['snapshotGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateSnapshotGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateSnapshotGroupRequest');
+    }
+
+    /**
+     * 更新快照信息
+     *
+     * 更新快照信息。标准快照当前只在部分区域支持，具体的区域列表请通过控制台查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateStandardSnapshot($request)
+    {
+        return $this->updateStandardSnapshotWithHttpInfo($request);
+    }
+
+    public function updateStandardSnapshotWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/snapshots/{snapshot_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['snapshotId'] !== null) {
+            $pathParams['snapshot_id'] = $localVarParams['snapshotId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateStandardSnapshotResponse',
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\UpdateStandardSnapshotRequest');
     }
 
     /**

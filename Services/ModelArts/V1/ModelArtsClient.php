@@ -1929,7 +1929,8 @@ class ModelArtsClient extends Client
     /**
      * 更新训练作业描述
      *
-     * 更新训练作业描述。
+     * 更新训练作业接口用于修改已存在的训练作业的描述、事件通知、作业优先级、允许被抢占等信息。
+     * 该接口适用于以下场景：当用户需要更新训练作业的描述、事件通知、作业优先级、允许被抢占等信息时，可以通过此接口进行修改。使用该接口的前提条件是训练作业已存在且用户具有相应的权限。更新操作完成后，训练作业的描述、事件通知、作业优先级、允许被抢占等信息将被更新。若训练作业不存在或用户无权限操作，接口将返回相应的错误信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2565,6 +2566,68 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateHyperClusterResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateHyperClusterRequest');
+    }
+
+    /**
+     * 创建hyperinstance-group
+     *
+     * 创建Hyper Group接口用于在系统中创建一个新的Hyper Group。该接口适用于以下场景：当用户需要使用超平面网络时，可以通过此接口创建Hyper Group。使用该接口的前提条件是用户已登录并具有创建Hyper Group的权限，且系统中已配置了必要的资源。创建操作完成后，将生成一个新的超平面网络，并返回超平面网络的详细信息，包括ID、名称、参数面网络ID。若用户无权限操作、系统中缺少必要的资源或配置参数无效，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHyperinstanceGroup($request)
+    {
+        return $this->createHyperinstanceGroupWithHttpInfo($request);
+    }
+
+    public function createHyperinstanceGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/hyperinstance/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateHyperinstanceGroupResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateHyperinstanceGroupRequest');
     }
 
     /**
@@ -4182,6 +4245,68 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\DeleteHyperinstanceResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\DeleteHyperinstanceRequest');
+    }
+
+    /**
+     * 删除hyperinstance-group
+     *
+     * 删除hyperinstance-group
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHyperinstanceGroup($request)
+    {
+        return $this->deleteHyperinstanceGroupWithHttpInfo($request);
+    }
+
+    public function deleteHyperinstanceGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/hyperinstance/groups/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\DeleteHyperinstanceGroupResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\DeleteHyperinstanceGroupRequest');
     }
 
     /**
@@ -5952,6 +6077,68 @@ class ModelArtsClient extends Client
     }
 
     /**
+     * 查询hyperinstance-group详情
+     *
+     * 查询HyperGroup详情接口用于在系统中查询Hyper Group详情。该接口适用于以下场景：当用户需要查询Hyper Group详情，可以通过此接口完成。使用该接口的前提条件是用户已登录并具有查询Hyper Group的权限，且系统中已配置了必要的资源。查询会返回超平面网络的详细信息，包括ID、名称、参数面网络ID等。若用户无权限操作、系统中缺少必要的资源或配置参数无效，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function getHyperinstanceGroup($request)
+    {
+        return $this->getHyperinstanceGroupWithHttpInfo($request);
+    }
+
+    public function getHyperinstanceGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/hyperinstance/groups/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\GetHyperinstanceGroupResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\GetHyperinstanceGroupRequest');
+    }
+
+    /**
      * 查询超节点Operation详情
      *
      * 查询Operation详情接口用于获取指定Operation的详细信息。该接口适用于以下场景：当用户需要了解某个Operation的具体执行情况和状态，以便进行故障排查或操作审计时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询Operation详情的权限，且指定的Operation已存在。查询操作完成后，接口将返回指定Operation的详细信息，包括Operation ID、操作类型、执行状态、开始时间、结束时间、操作结果等。若用户无权限操作、指定的Operation不存在或Operation ID无效，接口将返回相应的错误信息。
@@ -7166,6 +7353,189 @@ class ModelArtsClient extends Client
     }
 
     /**
+     * 查询hyperinstance-group详情列表
+     *
+     * 查询hyperinstance-group详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHyperinstanceGroup($request)
+    {
+        return $this->listHyperinstanceGroupWithHttpInfo($request);
+    }
+
+    public function listHyperinstanceGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/hyperinstance/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListHyperinstanceGroupResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListHyperinstanceGroupRequest');
+    }
+
+    /**
+     * 查询超节点hyperinstance-groups容量测算结果
+     *
+     * 查询超节点hyperinstance-groups容量测算结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHyperinstanceGroupsCapacity($request)
+    {
+        return $this->listHyperinstanceGroupsCapacityWithHttpInfo($request);
+    }
+
+    public function listHyperinstanceGroupsCapacityWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/hyperinstance/group-capacity-evaluations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListHyperinstanceGroupsCapacityResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListHyperinstanceGroupsCapacityRequest');
+    }
+
+    /**
+     * 查询超节点的所有子节点
+     *
+     * 查询指定超节点下的所有节点实例列表接口用于获取用户名下指定超节点所有Lite Server实例的详细信息。该接口适用于以下场景：用户需要查看其指定超节点下的所有Lite Server实例的状态、配置等信息，以便进行资源管理。使用该接口的前提条件是用户已登录且具有查询指定超节点下的所有节点实例列表接口的权限。调用此接口后，系统将返回指定超节点下所有Lite Server实例的列表，包括实例ID、名称、状态、创建时间等信息。若用户无权限或未登录，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHyperinstanceServers($request)
+    {
+        return $this->listHyperinstanceServersWithHttpInfo($request);
+    }
+
+    public function listHyperinstanceServersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/hyperinstance/{id}/servers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListHyperinstanceServersResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListHyperinstanceServersRequest');
+    }
+
+    /**
      * 查询用户所有超节点实例详情
      *
      * 查询用户所有超节点实例详情接口用于获取用户所有Lite Server超节点实例的详细信息。该接口适用于以下场景：当用户需要查看其所有超节点实例的配置、状态和使用情况时，可以通过此接口获取相关信息。使用该接口的前提条件是用户已登录并具有查询超节点实例的权限。查询操作完成后，接口将返回所有超节点实例的详细信息，包括实例ID、操作系统、运行状态、资源使用情况等。若用户无权限操作或没有超节点实例，接口将返回相应的错误信息。
@@ -7614,8 +7984,8 @@ class ModelArtsClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
-        if ($localVarParams['podName'] !== null) {
-            $queryParams['pod_name'] = $localVarParams['podName'];
+        if ($localVarParams['instanceName'] !== null) {
+            $queryParams['instance_name'] = $localVarParams['instanceName'];
         }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -7779,6 +8149,9 @@ class ModelArtsClient extends Client
         }
         if ($localVarParams['podNodeName'] !== null) {
             $queryParams['pod_node_name'] = $localVarParams['podNodeName'];
+        }
+        if ($localVarParams['podRoleName'] !== null) {
+            $queryParams['pod_role_name'] = $localVarParams['podRoleName'];
         }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -14875,6 +15248,71 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\SyncImageResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\SyncImageRequest');
+    }
+
+    /**
+     * Lite Server解绑EIP
+     *
+     * Lite Server解绑EIP
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unbindDevServerPublicIP($request)
+    {
+        return $this->unbindDevServerPublicIPWithHttpInfo($request);
+    }
+
+    public function unbindDevServerPublicIPWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/dev-servers/{id}/publicips/{publicip_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['publicipId'] !== null) {
+            $pathParams['publicip_id'] = $localVarParams['publicipId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\UnbindDevServerPublicIPResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\UnbindDevServerPublicIPRequest');
     }
 
     /**

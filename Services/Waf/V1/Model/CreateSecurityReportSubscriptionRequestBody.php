@@ -20,11 +20,12 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，设置订阅报告的名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，设置报告发送的SMN主题唯一标识。报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * consoleUrlPrefix  **参数解释：** 控制台URL前缀，用于拼接生成报告中相关资源的控制台访问链接 **格式要求：** 必须以http://或https://开头的有效URL格式 **约束限制：** 仅支持华为云控制台域名及路径 **默认取值：** https://console.huaweicloud.com/console/
@@ -37,6 +38,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
             'reportCategory' => 'string',
             'topicUrn' => 'string',
             'subscriptionType' => 'string',
+            'reportStatus' => 'string',
             'reportContentSubscription' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateSecurityReportSubscriptionRequestBodyReportContentSubscription',
             'statPeriod' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateSecurityReportSubscriptionRequestBodyStatPeriod',
             'consoleUrlPrefix' => 'string'
@@ -44,11 +46,12 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，设置订阅报告的名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，设置报告发送的SMN主题唯一标识。报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * consoleUrlPrefix  **参数解释：** 控制台URL前缀，用于拼接生成报告中相关资源的控制台访问链接 **格式要求：** 必须以http://或https://开头的有效URL格式 **约束限制：** 仅支持华为云控制台域名及路径 **默认取值：** https://console.huaweicloud.com/console/
@@ -61,6 +64,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
         'reportCategory' => null,
         'topicUrn' => null,
         'subscriptionType' => null,
+        'reportStatus' => null,
         'reportContentSubscription' => null,
         'statPeriod' => null,
         'consoleUrlPrefix' => null
@@ -89,11 +93,12 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，设置订阅报告的名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，设置报告发送的SMN主题唯一标识。报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * consoleUrlPrefix  **参数解释：** 控制台URL前缀，用于拼接生成报告中相关资源的控制台访问链接 **格式要求：** 必须以http://或https://开头的有效URL格式 **约束限制：** 仅支持华为云控制台域名及路径 **默认取值：** https://console.huaweicloud.com/console/
@@ -106,6 +111,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
             'reportCategory' => 'report_category',
             'topicUrn' => 'topic_urn',
             'subscriptionType' => 'subscription_type',
+            'reportStatus' => 'report_status',
             'reportContentSubscription' => 'report_content_subscription',
             'statPeriod' => 'stat_period',
             'consoleUrlPrefix' => 'console_url_prefix'
@@ -113,11 +119,12 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，设置订阅报告的名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，设置报告发送的SMN主题唯一标识。报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * consoleUrlPrefix  **参数解释：** 控制台URL前缀，用于拼接生成报告中相关资源的控制台访问链接 **格式要求：** 必须以http://或https://开头的有效URL格式 **约束限制：** 仅支持华为云控制台域名及路径 **默认取值：** https://console.huaweicloud.com/console/
@@ -130,6 +137,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
             'reportCategory' => 'setReportCategory',
             'topicUrn' => 'setTopicUrn',
             'subscriptionType' => 'setSubscriptionType',
+            'reportStatus' => 'setReportStatus',
             'reportContentSubscription' => 'setReportContentSubscription',
             'statPeriod' => 'setStatPeriod',
             'consoleUrlPrefix' => 'setConsoleUrlPrefix'
@@ -137,11 +145,12 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    * sendingPeriod  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     * reportName  **参数解释：** 报告名称，设置订阅报告的名称。 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    * reportCategory  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     * topicUrn  **参数解释：** 主题urn，设置报告发送的SMN主题唯一标识。报告接收方式使用消息主题类型时需要填该参数。 查询可使用的主题，通过 云日志服务的“查询SMN主题”接口，返回体中的\"topic_urn\"字段 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    * subscriptionType  **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
+    * reportStatus  **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
     * reportContentSubscription  reportContentSubscription
     * statPeriod  statPeriod
     * consoleUrlPrefix  **参数解释：** 控制台URL前缀，用于拼接生成报告中相关资源的控制台访问链接 **格式要求：** 必须以http://或https://开头的有效URL格式 **约束限制：** 仅支持华为云控制台域名及路径 **默认取值：** https://console.huaweicloud.com/console/
@@ -154,6 +163,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
             'reportCategory' => 'getReportCategory',
             'topicUrn' => 'getTopicUrn',
             'subscriptionType' => 'getSubscriptionType',
+            'reportStatus' => 'getReportStatus',
             'reportContentSubscription' => 'getReportContentSubscription',
             'statPeriod' => 'getStatPeriod',
             'consoleUrlPrefix' => 'getConsoleUrlPrefix'
@@ -222,6 +232,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
         $this->container['reportCategory'] = isset($data['reportCategory']) ? $data['reportCategory'] : null;
         $this->container['topicUrn'] = isset($data['topicUrn']) ? $data['topicUrn'] : null;
         $this->container['subscriptionType'] = isset($data['subscriptionType']) ? $data['subscriptionType'] : null;
+        $this->container['reportStatus'] = isset($data['reportStatus']) ? $data['reportStatus'] : null;
         $this->container['reportContentSubscription'] = isset($data['reportContentSubscription']) ? $data['reportContentSubscription'] : null;
         $this->container['statPeriod'] = isset($data['statPeriod']) ? $data['statPeriod'] : null;
         $this->container['consoleUrlPrefix'] = isset($data['consoleUrlPrefix']) ? $data['consoleUrlPrefix'] : null;
@@ -251,7 +262,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Gets sendingPeriod
-    *  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    *  **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -263,7 +274,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
     /**
     * Sets sendingPeriod
     *
-    * @param string|null $sendingPeriod **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00  **默认取值：** 不涉及
+    * @param string|null $sendingPeriod **参数解释：** 发送时间段，设置报告的预设发送时间（如morning表示早晨时段）。 **约束限制：** 不涉及 **取值范围：** - morning : 00:00~06:00 - noon : 06:00~12:00 - afternoon : 12:00~18:00 - evening : 12:00~18:00 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -299,7 +310,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Gets reportCategory
-    *  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    *  **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -311,7 +322,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
     /**
     * Sets reportCategory
     *
-    * @param string|null $reportCategory **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义  **默认取值：** 不涉及
+    * @param string|null $reportCategory **参数解释：** 报告类别，设置订阅的报告类型（如daily_report表示安全日报）。 **约束限制：** 不涉及 **取值范围：** - daily_report : 日报 - weekly_report : 周报 - monthly_report : 月报 - custom_report : 自定义 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -347,7 +358,7 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
 
     /**
     * Gets subscriptionType
-    *  **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    *  **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -359,13 +370,37 @@ class CreateSecurityReportSubscriptionRequestBody implements ModelInterface, Arr
     /**
     * Sets subscriptionType
     *
-    * @param string|null $subscriptionType **参数解释：** 订阅类型，接收安全报告的订阅方式（如slient表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心  **默认取值：** 不涉及
+    * @param string|null $subscriptionType **参数解释：** 订阅类型，接收安全报告的订阅方式（如silent表示静默订阅）。 **约束限制：** 不涉及 **取值范围：** - smn_topic : 消息主题 - silent ： 静默 - message_center ： 消息中心 **默认取值：** 不涉及
     *
     * @return $this
     */
     public function setSubscriptionType($subscriptionType)
     {
         $this->container['subscriptionType'] = $subscriptionType;
+        return $this;
+    }
+
+    /**
+    * Gets reportStatus
+    *  **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getReportStatus()
+    {
+        return $this->container['reportStatus'];
+    }
+
+    /**
+    * Sets reportStatus
+    *
+    * @param string|null $reportStatus **参数解释：** 报告状态，标识当前订阅的启用状态（如opened表示已开启，closed表示已关闭）。 **约束限制：** 不涉及 **取值范围：** - opened ： 已开启 - closed ： 已关闭 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setReportStatus($reportStatus)
+    {
+        $this->container['reportStatus'] = $reportStatus;
         return $this;
     }
 
