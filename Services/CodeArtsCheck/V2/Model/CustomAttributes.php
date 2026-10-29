@@ -20,8 +20,8 @@ class CustomAttributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * attribute  配置项属性，severity：为问题级别
-    * rules  规则详细
+    * attribute  **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
+    * rules  **参数解释:** 规则详细。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CustomAttributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * attribute  配置项属性，severity：为问题级别
-    * rules  规则详细
+    * attribute  **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
+    * rules  **参数解释:** 规则详细。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CustomAttributes implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * attribute  配置项属性，severity：为问题级别
-    * rules  规则详细
+    * attribute  **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
+    * rules  **参数解释:** 规则详细。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CustomAttributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * attribute  配置项属性，severity：为问题级别
-    * rules  规则详细
+    * attribute  **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
+    * rules  **参数解释:** 规则详细。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CustomAttributes implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * attribute  配置项属性，severity：为问题级别
-    * rules  规则详细
+    * attribute  **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
+    * rules  **参数解释:** 规则详细。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CustomAttributes implements ModelInterface, ArrayAccess
 
     /**
     * Gets attribute
-    *  配置项属性，severity：为问题级别
+    *  **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CustomAttributes implements ModelInterface, ArrayAccess
     /**
     * Sets attribute
     *
-    * @param string|null $attribute 配置项属性，severity：为问题级别
+    * @param string|null $attribute **参数解释:** 配置项属性，severity：为规则告警等级。 **约束限制:** 不涉及。 **取值范围:** severity。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CustomAttributes implements ModelInterface, ArrayAccess
 
     /**
     * Gets rules
-    *  规则详细
+    *  **参数解释:** 规则详细。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CustomAttributesRule[]|null
     */
@@ -221,7 +221,7 @@ class CustomAttributes implements ModelInterface, ArrayAccess
     /**
     * Sets rules
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CustomAttributesRule[]|null $rules 规则详细
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CustomAttributesRule[]|null $rules **参数解释:** 规则详细。
     *
     * @return $this
     */

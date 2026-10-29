@@ -20,11 +20,11 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * displayName  日志标题
-    * log  日志内容
-    * level  日志级别
-    * analysis  日志分析
-    * faq  常见问题解答
+    * displayName  **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
+    * log  **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
+    * level  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * analysis  **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
+    * faq  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * displayName  日志标题
-    * log  日志内容
-    * level  日志级别
-    * analysis  日志分析
-    * faq  常见问题解答
+    * displayName  **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
+    * log  **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
+    * level  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * analysis  **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
+    * faq  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class LogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * displayName  日志标题
-    * log  日志内容
-    * level  日志级别
-    * analysis  日志分析
-    * faq  常见问题解答
+    * displayName  **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
+    * log  **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
+    * level  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * analysis  **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
+    * faq  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * displayName  日志标题
-    * log  日志内容
-    * level  日志级别
-    * analysis  日志分析
-    * faq  常见问题解答
+    * displayName  **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
+    * log  **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
+    * level  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * analysis  **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
+    * faq  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * displayName  日志标题
-    * log  日志内容
-    * level  日志级别
-    * analysis  日志分析
-    * faq  常见问题解答
+    * displayName  **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
+    * log  **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
+    * level  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * analysis  **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
+    * faq  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  日志标题
+    *  **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class LogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 日志标题
+    * @param string|null $displayName **参数解释：** 检查日志页面所显示的子任务阶段名称。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets log
-    *  日志内容
+    *  **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class LogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets log
     *
-    * @param string|null $log 日志内容
+    * @param string|null $log **参数解释：** 扫描日志内容。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  日志级别
+    *  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class LogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 日志级别
+    * @param string|null $level **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets analysis
-    *  日志分析
+    *  **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class LogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets analysis
     *
-    * @param string|null $analysis 日志分析
+    * @param string|null $analysis **参数解释：** 任务失败的简要原因。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class LogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets faq
-    *  常见问题解答
+    *  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class LogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets faq
     *
-    * @param string|null $faq 常见问题解答
+    * @param string|null $faq **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return $this
     */

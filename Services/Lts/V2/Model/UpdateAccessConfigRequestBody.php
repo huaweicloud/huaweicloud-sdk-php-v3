@@ -37,6 +37,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'processors' => '\HuaweiCloud\SDK\Lts\V2\Model\Processor[]',
             'applicationId' => 'string',
             'environmentId' => 'string',
-            'componentId' => 'string[]'
+            'componentId' => 'string[]',
+            'disableLabelsPrefix' => 'bool'
     ];
 
     /**
@@ -79,6 +81,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         'processors' => null,
         'applicationId' => null,
         'environmentId' => null,
-        'componentId' => null
+        'componentId' => null,
+        'disableLabelsPrefix' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'processors' => 'processors',
             'applicationId' => 'application_id',
             'environmentId' => 'environment_id',
-            'componentId' => 'component_id'
+            'componentId' => 'component_id',
+            'disableLabelsPrefix' => 'disable_labels_prefix'
     ];
 
     /**
@@ -184,6 +190,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'processors' => 'setProcessors',
             'applicationId' => 'setApplicationId',
             'environmentId' => 'setEnvironmentId',
-            'componentId' => 'setComponentId'
+            'componentId' => 'setComponentId',
+            'disableLabelsPrefix' => 'setDisableLabelsPrefix'
     ];
 
     /**
@@ -226,6 +234,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * applicationId  ServiceStage应用ID
     * environmentId  ServiceStage环境ID
     * componentId  ServiceStage组件ID
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'processors' => 'getProcessors',
             'applicationId' => 'getApplicationId',
             'environmentId' => 'getEnvironmentId',
-            'componentId' => 'getComponentId'
+            'componentId' => 'getComponentId',
+            'disableLabelsPrefix' => 'getDisableLabelsPrefix'
     ];
 
     /**
@@ -324,6 +334,7 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['applicationId'] = isset($data['applicationId']) ? $data['applicationId'] : null;
         $this->container['environmentId'] = isset($data['environmentId']) ? $data['environmentId'] : null;
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
+        $this->container['disableLabelsPrefix'] = isset($data['disableLabelsPrefix']) ? $data['disableLabelsPrefix'] : null;
     }
 
     /**
@@ -762,6 +773,30 @@ class UpdateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     public function setComponentId($componentId)
     {
         $this->container['componentId'] = $componentId;
+        return $this;
+    }
+
+    /**
+    * Gets disableLabelsPrefix
+    *  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getDisableLabelsPrefix()
+    {
+        return $this->container['disableLabelsPrefix'];
+    }
+
+    /**
+    * Sets disableLabelsPrefix
+    *
+    * @param bool|null $disableLabelsPrefix **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDisableLabelsPrefix($disableLabelsPrefix)
+    {
+        $this->container['disableLabelsPrefix'] = $disableLabelsPrefix;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkTime  检查任务执行开始时间
-    * checkEndTime  检查任务执行结束时间
+    * checkTime  **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkEndTime  **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * issueCounts  issueCounts
     *
     * @var string[]
@@ -34,8 +34,8 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkTime  检查任务执行开始时间
-    * checkEndTime  检查任务执行结束时间
+    * checkTime  **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkEndTime  **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * issueCounts  issueCounts
     *
     * @var string[]
@@ -69,8 +69,8 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkTime  检查任务执行开始时间
-    * checkEndTime  检查任务执行结束时间
+    * checkTime  **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkEndTime  **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * issueCounts  issueCounts
     *
     * @var string[]
@@ -83,8 +83,8 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkTime  检查任务执行开始时间
-    * checkEndTime  检查任务执行结束时间
+    * checkTime  **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkEndTime  **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * issueCounts  issueCounts
     *
     * @var string[]
@@ -97,8 +97,8 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkTime  检查任务执行开始时间
-    * checkEndTime  检查任务执行结束时间
+    * checkTime  **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkEndTime  **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * issueCounts  issueCounts
     *
     * @var string[]
@@ -196,7 +196,7 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkTime
-    *  检查任务执行开始时间
+    *  **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkTime
     *
-    * @param string|null $checkTime 检查任务执行开始时间
+    * @param string|null $checkTime **参数解释：** 检查任务执行开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkEndTime
-    *  检查任务执行结束时间
+    *  **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class CheckRecordDataInfo implements ModelInterface, ArrayAccess
     /**
     * Sets checkEndTime
     *
-    * @param string|null $checkEndTime 检查任务执行结束时间
+    * @param string|null $checkEndTime **参数解释：** 检查任务执行结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */

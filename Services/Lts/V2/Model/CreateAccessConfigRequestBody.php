@@ -40,6 +40,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
     * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'environmentId' => 'string',
             'componentId' => 'string[]',
             'accessConfigTypeSource' => 'string',
-            'recursiveDepth' => 'int'
+            'recursiveDepth' => 'int',
+            'disableLabelsPrefix' => 'bool'
     ];
 
     /**
@@ -88,6 +90,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
     * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         'environmentId' => null,
         'componentId' => null,
         'accessConfigTypeSource' => null,
-        'recursiveDepth' => 'int32'
+        'recursiveDepth' => 'int32',
+        'disableLabelsPrefix' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
     * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'environmentId' => 'environment_id',
             'componentId' => 'component_id',
             'accessConfigTypeSource' => 'access_config_type_source',
-            'recursiveDepth' => 'recursive_depth'
+            'recursiveDepth' => 'recursive_depth',
+            'disableLabelsPrefix' => 'disable_labels_prefix'
     ];
 
     /**
@@ -205,6 +211,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
     * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'environmentId' => 'setEnvironmentId',
             'componentId' => 'setComponentId',
             'accessConfigTypeSource' => 'setAccessConfigTypeSource',
-            'recursiveDepth' => 'setRecursiveDepth'
+            'recursiveDepth' => 'setRecursiveDepth',
+            'disableLabelsPrefix' => 'setDisableLabelsPrefix'
     ];
 
     /**
@@ -253,6 +261,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     * componentId  ServiceStage组件ID
     * accessConfigTypeSource  日志接入自建软件来源
     * recursiveDepth  **参数解释：** 采集路径递归最大深度。 **取值范围：** 不涉及。
+    * disableLabelsPrefix  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
             'environmentId' => 'getEnvironmentId',
             'componentId' => 'getComponentId',
             'accessConfigTypeSource' => 'getAccessConfigTypeSource',
-            'recursiveDepth' => 'getRecursiveDepth'
+            'recursiveDepth' => 'getRecursiveDepth',
+            'disableLabelsPrefix' => 'getDisableLabelsPrefix'
     ];
 
     /**
@@ -372,6 +382,7 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
         $this->container['accessConfigTypeSource'] = isset($data['accessConfigTypeSource']) ? $data['accessConfigTypeSource'] : null;
         $this->container['recursiveDepth'] = isset($data['recursiveDepth']) ? $data['recursiveDepth'] : null;
+        $this->container['disableLabelsPrefix'] = isset($data['disableLabelsPrefix']) ? $data['disableLabelsPrefix'] : null;
     }
 
     /**
@@ -902,6 +913,30 @@ class CreateAccessConfigRequestBody implements ModelInterface, ArrayAccess
     public function setRecursiveDepth($recursiveDepth)
     {
         $this->container['recursiveDepth'] = $recursiveDepth;
+        return $this;
+    }
+
+    /**
+    * Gets disableLabelsPrefix
+    *  **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
+    *
+    * @return bool|null
+    */
+    public function getDisableLabelsPrefix()
+    {
+        return $this->container['disableLabelsPrefix'];
+    }
+
+    /**
+    * Sets disableLabelsPrefix
+    *
+    * @param bool|null $disableLabelsPrefix **参数解释：** 是否对结构化上报方式中labels字段中非内置字段添加__labels__.前缀的行为进行禁用。 **约束限制：** 不涉及。 **取值范围：** - true：禁用，不添加__labels__.前缀。 - false：不禁用，即添加__labels__.前缀。 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDisableLabelsPrefix($disableLabelsPrefix)
+    {
+        $this->container['disableLabelsPrefix'] = $disableLabelsPrefix;
         return $this;
     }
 

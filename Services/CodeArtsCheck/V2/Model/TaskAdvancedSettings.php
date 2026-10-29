@@ -20,10 +20,10 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
-    * optionValue  高级选项对应的可选项
-    * description  高级选项对应的中文描述
+    * key  **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
+    * optionValue  **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
+    * description  **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
-    * optionValue  高级选项对应的可选项
-    * description  高级选项对应的中文描述
+    * key  **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
+    * optionValue  **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
+    * description  **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
-    * optionValue  高级选项对应的可选项
-    * description  高级选项对应的中文描述
+    * key  **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
+    * optionValue  **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
+    * description  **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
-    * optionValue  高级选项对应的可选项
-    * description  高级选项对应的中文描述
+    * key  **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
+    * optionValue  **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
+    * description  **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
-    * optionValue  高级选项对应的可选项
-    * description  高级选项对应的中文描述
+    * key  **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
+    * optionValue  **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
+    * description  **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  高级选项对应的名称
+    *  **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 高级选项对应的名称
+    * @param string|null $key **参数解释：** 高级配置对应的名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  高级选项对应的取值
+    *  **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 高级选项对应的取值
+    * @param string|null $value **参数解释：** 高级配置对应的取值。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionValue
-    *  高级选项对应的可选项
+    *  **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
     /**
     * Sets optionValue
     *
-    * @param string|null $optionValue 高级选项对应的可选项
+    * @param string|null $optionValue **参数解释：** 高级配置对应的可选项。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  高级选项对应的中文描述
+    *  **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class TaskAdvancedSettings implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 高级选项对应的中文描述
+    * @param string|null $description **参数解释：** 高级配置对应的中文描述。 **取值范围：** 不涉及。
     *
     * @return $this
     */

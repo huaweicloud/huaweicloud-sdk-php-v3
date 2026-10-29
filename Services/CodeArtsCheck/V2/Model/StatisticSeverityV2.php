@@ -20,10 +20,10 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * critical  致命问题数
-    * major  严重问题数
-    * minor  一般问题数
-    * suggestion  提示问题数
+    * critical  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * major  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minor  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestion  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * critical  致命问题数
-    * major  严重问题数
-    * minor  一般问题数
-    * suggestion  提示问题数
+    * critical  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * major  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minor  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestion  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * critical  致命问题数
-    * major  严重问题数
-    * minor  一般问题数
-    * suggestion  提示问题数
+    * critical  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * major  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minor  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestion  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * critical  致命问题数
-    * major  严重问题数
-    * minor  一般问题数
-    * suggestion  提示问题数
+    * critical  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * major  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minor  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestion  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * critical  致命问题数
-    * major  严重问题数
-    * minor  一般问题数
-    * suggestion  提示问题数
+    * critical  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * major  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minor  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestion  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets critical
-    *  致命问题数
+    *  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets critical
     *
-    * @param int|null $critical 致命问题数
+    * @param int|null $critical **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets major
-    *  严重问题数
+    *  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets major
     *
-    * @param int|null $major 严重问题数
+    * @param int|null $major **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets minor
-    *  一般问题数
+    *  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets minor
     *
-    * @param int|null $minor 一般问题数
+    * @param int|null $minor **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestion
-    *  提示问题数
+    *  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class StatisticSeverityV2 implements ModelInterface, ArrayAccess
     /**
     * Sets suggestion
     *
-    * @param int|null $suggestion 提示问题数
+    * @param int|null $suggestion **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */

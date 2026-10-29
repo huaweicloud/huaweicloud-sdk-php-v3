@@ -23,13 +23,17 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     * whetherLogStorage  日志是否存储
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'ttlInDays' => 'int',
             'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]',
-            'whetherLogStorage' => 'bool'
+            'whetherLogStorage' => 'bool',
+            'hotColdSeparation' => 'bool',
+            'hotStorageDays' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     * whetherLogStorage  日志是否存储
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'ttlInDays' => 'int32',
         'tags' => null,
-        'whetherLogStorage' => null
+        'whetherLogStorage' => null,
+        'hotColdSeparation' => null,
+        'hotStorageDays' => 'int32'
     ];
 
     /**
@@ -72,13 +80,17 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     * whetherLogStorage  日志是否存储
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'ttlInDays' => 'ttl_in_days',
             'tags' => 'tags',
-            'whetherLogStorage' => 'whether_log_storage'
+            'whetherLogStorage' => 'whether_log_storage',
+            'hotColdSeparation' => 'hot_cold_separation',
+            'hotStorageDays' => 'hot_storage_days'
     ];
 
     /**
@@ -86,13 +98,17 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     * whetherLogStorage  日志是否存储
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'ttlInDays' => 'setTtlInDays',
             'tags' => 'setTags',
-            'whetherLogStorage' => 'setWhetherLogStorage'
+            'whetherLogStorage' => 'setWhetherLogStorage',
+            'hotColdSeparation' => 'setHotColdSeparation',
+            'hotStorageDays' => 'setHotStorageDays'
     ];
 
     /**
@@ -100,13 +116,17 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     * ttlInDays  日志存储时间（天）。
     * tags  标签字段信息
     * whetherLogStorage  日志是否存储
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'ttlInDays' => 'getTtlInDays',
             'tags' => 'getTags',
-            'whetherLogStorage' => 'getWhetherLogStorage'
+            'whetherLogStorage' => 'getWhetherLogStorage',
+            'hotColdSeparation' => 'getHotColdSeparation',
+            'hotStorageDays' => 'getHotStorageDays'
     ];
 
     /**
@@ -170,6 +190,8 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
         $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['whetherLogStorage'] = isset($data['whetherLogStorage']) ? $data['whetherLogStorage'] : null;
+        $this->container['hotColdSeparation'] = isset($data['hotColdSeparation']) ? $data['hotColdSeparation'] : null;
+        $this->container['hotStorageDays'] = isset($data['hotStorageDays']) ? $data['hotStorageDays'] : null;
     }
 
     /**
@@ -272,6 +294,54 @@ class UpdateLogStreamParams implements ModelInterface, ArrayAccess
     public function setWhetherLogStorage($whetherLogStorage)
     {
         $this->container['whetherLogStorage'] = $whetherLogStorage;
+        return $this;
+    }
+
+    /**
+    * Gets hotColdSeparation
+    *  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    *
+    * @return bool|null
+    */
+    public function getHotColdSeparation()
+    {
+        return $this->container['hotColdSeparation'];
+    }
+
+    /**
+    * Sets hotColdSeparation
+    *
+    * @param bool|null $hotColdSeparation **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** - true：开启智能冷存储。 - false：关闭智能冷存储。 **默认取值：** false
+    *
+    * @return $this
+    */
+    public function setHotColdSeparation($hotColdSeparation)
+    {
+        $this->container['hotColdSeparation'] = $hotColdSeparation;
+        return $this;
+    }
+
+    /**
+    * Gets hotStorageDays
+    *  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getHotStorageDays()
+    {
+        return $this->container['hotStorageDays'];
+    }
+
+    /**
+    * Sets hotStorageDays
+    *
+    * @param int|null $hotStorageDays **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setHotStorageDays($hotStorageDays)
+    {
+        $this->container['hotStorageDays'] = $hotStorageDays;
         return $this;
     }
 

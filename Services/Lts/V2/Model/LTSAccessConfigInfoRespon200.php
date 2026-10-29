@@ -23,7 +23,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     * accessConfigId  跨账号日志接入id
     * projectId  项目ID
     * accessConfigName  跨账号日志接入名称
-    * accessConfigType  跨账号日志接入类型
+    * accessConfigType  **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     * groupId  日志组ID
     * logGroupName  日志组名称
     * logStreamId  日志流ID
@@ -37,7 +37,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
             'accessConfigId' => 'string',
             'projectId' => 'string',
             'accessConfigName' => 'string',
-            'accessConfigType' => 'object',
+            'accessConfigType' => 'string',
             'groupId' => 'string',
             'logGroupName' => 'string',
             'logStreamId' => 'string',
@@ -51,7 +51,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     * accessConfigId  跨账号日志接入id
     * projectId  项目ID
     * accessConfigName  跨账号日志接入名称
-    * accessConfigType  跨账号日志接入类型
+    * accessConfigType  **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     * groupId  日志组ID
     * logGroupName  日志组名称
     * logStreamId  日志流ID
@@ -100,7 +100,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     * accessConfigId  跨账号日志接入id
     * projectId  项目ID
     * accessConfigName  跨账号日志接入名称
-    * accessConfigType  跨账号日志接入类型
+    * accessConfigType  **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     * groupId  日志组ID
     * logGroupName  日志组名称
     * logStreamId  日志流ID
@@ -128,7 +128,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     * accessConfigId  跨账号日志接入id
     * projectId  项目ID
     * accessConfigName  跨账号日志接入名称
-    * accessConfigType  跨账号日志接入类型
+    * accessConfigType  **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     * groupId  日志组ID
     * logGroupName  日志组名称
     * logStreamId  日志流ID
@@ -156,7 +156,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     * accessConfigId  跨账号日志接入id
     * projectId  项目ID
     * accessConfigName  跨账号日志接入名称
-    * accessConfigType  跨账号日志接入类型
+    * accessConfigType  **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     * groupId  日志组ID
     * logGroupName  日志组名称
     * logStreamId  日志流ID
@@ -219,7 +219,30 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACCESS_CONFIG_TYPE_AGENT = 'Agent';
+    const ACCESS_CONFIG_TYPE_CRD = 'CRD';
+    const ACCESS_CONFIG_TYPE_AGENCYACCESS = 'AGENCYACCESS';
+    const ACCESS_CONFIG_TYPE_K8_S_CCE = 'K8S_CCE';
+    const ACCESS_CONFIG_TYPE_K8_S_CUSTOM = 'K8S_CUSTOM';
+    const ACCESS_CONFIG_TYPE_CLOUD_STREAM_AGENCY = 'CLOUD_STREAM_AGENCY';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAccessConfigTypeAllowableValues()
+    {
+        return [
+            self::ACCESS_CONFIG_TYPE_AGENT,
+            self::ACCESS_CONFIG_TYPE_CRD,
+            self::ACCESS_CONFIG_TYPE_AGENCYACCESS,
+            self::ACCESS_CONFIG_TYPE_K8_S_CCE,
+            self::ACCESS_CONFIG_TYPE_K8_S_CUSTOM,
+            self::ACCESS_CONFIG_TYPE_CLOUD_STREAM_AGENCY,
+        ];
+    }
 
 
     /**
@@ -257,6 +280,14 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getAccessConfigTypeAllowableValues();
+                if (!is_null($this->container['accessConfigType']) && !in_array($this->container['accessConfigType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'accessConfigType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -345,9 +376,9 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessConfigType
-    *  跨账号日志接入类型
+    *  **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     *
-    * @return object|null
+    * @return string|null
     */
     public function getAccessConfigType()
     {
@@ -357,7 +388,7 @@ class LTSAccessConfigInfoRespon200 implements ModelInterface, ArrayAccess
     /**
     * Sets accessConfigType
     *
-    * @param object|null $accessConfigType 跨账号日志接入类型
+    * @param string|null $accessConfigType **参数解释：** 委托接入类型。 **约束限制：** 不涉及。 **取值范围：** - AGENCYACCESS：委托接入。
     *
     * @return $this
     */

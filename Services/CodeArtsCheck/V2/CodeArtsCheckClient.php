@@ -506,6 +506,83 @@ class CodeArtsCheckClient extends Client
     }
 
     /**
+     * 根据语言查询规则集
+     *
+     * 该API用于查询项目下某一语言的规则集列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCriterionSetsByLanguage($request)
+    {
+        return $this->listCriterionSetsByLanguageWithHttpInfo($request);
+    }
+
+    public function listCriterionSetsByLanguageWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/criterionsets/language';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['language'] !== null) {
+            $queryParams['language'] = $localVarParams['language'];
+        }
+        if ($localVarParams['search'] !== null) {
+            $queryParams['search'] = $localVarParams['search'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['isReliable'] !== null) {
+            $queryParams['is_reliable'] = $localVarParams['isReliable'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\ListCriterionSetsByLanguageResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\ListCriterionSetsByLanguageRequest');
+    }
+
+    /**
      * 获取规则列表接口
      *
      * 根据语言、问题级别等条件查询规则列表。
@@ -1319,6 +1396,77 @@ class CodeArtsCheckClient extends Client
     }
 
     /**
+     * 根据任务ID查询检查任务
+     *
+     * 根据任务ID查询代码检查任务的基本信息，返回任务ID、任务名、项目ID、项目名、代码仓地址、分支和配置模板ID等信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTaskInfoById($request)
+    {
+        return $this->showTaskInfoByIdWithHttpInfo($request);
+    }
+
+    public function showTaskInfoByIdWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['mergeId'] !== null) {
+            $queryParams['merge_id'] = $localVarParams['mergeId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $queryParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['operator'] !== null) {
+            $headerParams[$arr['operator']] = $localVarParams['operator'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\ShowTaskInfoByIdResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\ShowTaskInfoByIdRequest');
+    }
+
+    /**
      * 查询任务列表
      *
      * 根据DEVCLOUD_PROJECT_UUID查询该项目下的任务列表。
@@ -1600,6 +1748,113 @@ class CodeArtsCheckClient extends Client
     }
 
     /**
+     * 查询任务列表
+     *
+     * 根据项目ID、需要搜索的任务名、任务分组ID和任务执行状态分页查询项目下的代码检查任务，返回任务名称、代码仓地址、分支、配置模板ID和规则集等信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTasksList($request)
+    {
+        return $this->showTasksListWithHttpInfo($request);
+    }
+
+    public function showTasksListWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['search'] !== null) {
+            $queryParams['search'] = $localVarParams['search'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $queryParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['reviewResultTypes'] !== null) {
+            $queryParams['review_result_types'] = $localVarParams['reviewResultTypes'];
+        }
+        if ($localVarParams['jobStatusTypes'] !== null) {
+            $queryParams['job_status_types'] = $localVarParams['jobStatusTypes'];
+        }
+        if ($localVarParams['orderByExecuteTime'] !== null) {
+            $queryParams['order_by_execute_time'] = $localVarParams['orderByExecuteTime'];
+        }
+        if ($localVarParams['taskClassificationId'] !== null) {
+            $queryParams['task_classification_id'] = $localVarParams['taskClassificationId'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['sortField'] !== null) {
+            $queryParams['sort_field'] = $localVarParams['sortField'];
+        }
+        if ($localVarParams['sortOrder'] !== null) {
+            $queryParams['sort_order'] = $localVarParams['sortOrder'];
+        }
+        if ($localVarParams['repoUrl'] !== null) {
+            $queryParams['repo_url'] = $localVarParams['repoUrl'];
+        }
+        if ($localVarParams['branch'] !== null) {
+            $queryParams['branch'] = $localVarParams['branch'];
+        }
+        if ($localVarParams['repoUrlFullMatch'] !== null) {
+            $queryParams['repo_url_full_match'] = $localVarParams['repoUrlFullMatch'];
+        }
+        if ($localVarParams['operator'] !== null) {
+            $headerParams[$arr['operator']] = $localVarParams['operator'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset:utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset:utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\ShowTasksListResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\ShowTasksListRequest');
+    }
+
+    /**
      * 查询任务的已选规则集列表
      *
      * 查询任务的已选规则集列表。
@@ -1730,6 +1985,71 @@ class CodeArtsCheckClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\StopTaskByIdResponse',
             $requestType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\StopTaskByIdRequest');
+    }
+
+    /**
+     * 更新门禁配置
+     *
+     * 根据任务ID设置任务的致命问题数、严重问题数、一般问题数和提示问题数的质量门禁，在检查完成后，超过门禁阈值将提示门禁结果为Failed。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCodeGate($request)
+    {
+        return $this->updateCodeGateWithHttpInfo($request);
+    }
+
+    public function updateCodeGateWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/task/code-gate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['operator'] !== null) {
+            $headerParams[$arr['operator']] = $localVarParams['operator'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\UpdateCodeGateResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\UpdateCodeGateRequest');
     }
 
     /**

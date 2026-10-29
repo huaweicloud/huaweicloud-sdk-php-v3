@@ -20,14 +20,14 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
-    * templateName  新规则集名称
-    * language  规则集语言
-    * isDefault  如果有基于的规则集则是1，没有基于的规则集则是0
-    * ruleIds  新启用规则ids
-    * uncheckIds  新关闭规则id
-    * templateId  规则集ID
-    * customAttributes  自定义规则参数项，支持修改规则阈值
+    * projectId  **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
+    * templateName  **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
+    * language  **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
+    * isDefault  **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
+    * ruleIds  **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * uncheckIds  **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * templateId  **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
+    * customAttributes  自定义规则参数项，支持修改规则阈值。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
-    * templateName  新规则集名称
-    * language  规则集语言
-    * isDefault  如果有基于的规则集则是1，没有基于的规则集则是0
-    * ruleIds  新启用规则ids
-    * uncheckIds  新关闭规则id
-    * templateId  规则集ID
-    * customAttributes  自定义规则参数项，支持修改规则阈值
+    * projectId  **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
+    * templateName  **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
+    * language  **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
+    * isDefault  **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
+    * ruleIds  **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * uncheckIds  **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * templateId  **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
+    * customAttributes  自定义规则参数项，支持修改规则阈值。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
-    * templateName  新规则集名称
-    * language  规则集语言
-    * isDefault  如果有基于的规则集则是1，没有基于的规则集则是0
-    * ruleIds  新启用规则ids
-    * uncheckIds  新关闭规则id
-    * templateId  规则集ID
-    * customAttributes  自定义规则参数项，支持修改规则阈值
+    * projectId  **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
+    * templateName  **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
+    * language  **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
+    * isDefault  **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
+    * ruleIds  **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * uncheckIds  **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * templateId  **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
+    * customAttributes  自定义规则参数项，支持修改规则阈值。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
-    * templateName  新规则集名称
-    * language  规则集语言
-    * isDefault  如果有基于的规则集则是1，没有基于的规则集则是0
-    * ruleIds  新启用规则ids
-    * uncheckIds  新关闭规则id
-    * templateId  规则集ID
-    * customAttributes  自定义规则参数项，支持修改规则阈值
+    * projectId  **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
+    * templateName  **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
+    * language  **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
+    * isDefault  **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
+    * ruleIds  **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * uncheckIds  **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * templateId  **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
+    * customAttributes  自定义规则参数项，支持修改规则阈值。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
-    * templateName  新规则集名称
-    * language  规则集语言
-    * isDefault  如果有基于的规则集则是1，没有基于的规则集则是0
-    * ruleIds  新启用规则ids
-    * uncheckIds  新关闭规则id
-    * templateId  规则集ID
-    * customAttributes  自定义规则参数项，支持修改规则阈值
+    * projectId  **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
+    * templateName  **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
+    * language  **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
+    * isDefault  **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
+    * ruleIds  **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * uncheckIds  **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
+    * templateId  **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
+    * customAttributes  自定义规则参数项，支持修改规则阈值。
     *
     * @var string[]
     */
@@ -271,13 +271,10 @@ class Ruleset implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['isDefault']) < 1)) {
                 $invalidProperties[] = "invalid value for 'isDefault', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['ruleIds'] === null) {
-            $invalidProperties[] = "'ruleIds' can't be null";
-        }
-            if ((mb_strlen($this->container['ruleIds']) > 4000)) {
+            if (!is_null($this->container['ruleIds']) && (mb_strlen($this->container['ruleIds']) > 4000)) {
                 $invalidProperties[] = "invalid value for 'ruleIds', the character length must be smaller than or equal to 4000.";
             }
-            if ((mb_strlen($this->container['ruleIds']) < 1)) {
+            if (!is_null($this->container['ruleIds']) && (mb_strlen($this->container['ruleIds']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ruleIds', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['uncheckIds']) && (mb_strlen($this->container['uncheckIds']) > 4000)) {
@@ -308,7 +305,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
     *
     * @return string
     */
@@ -320,7 +317,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId **参数解释:** 项目的32位UUID，通过[[查询项目列表](https://support.huaweicloud.com/api-projectman/ListProjectsV4.html)](tag:hws)[[查询项目列表](https://support.huaweicloud.com/intl/zh-cn/api-projectman/ListProjectsV4.html)](tag:hws_hk)[查询项目列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)接口获取。 **约束限制:** 不涉及。 **取值范围:** 长度为[1~32]个字符。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -332,7 +329,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  新规则集名称
+    *  **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
     *
     * @return string
     */
@@ -344,7 +341,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string $templateName 新规则集名称
+    * @param string $templateName **参数解释:** 新规则集名称。 **约束限制:** 不能含有任意中英文，数字，点，连字符-及下划线_以外的特殊字符。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -356,7 +353,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  规则集语言
+    *  **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
     *
     * @return string
     */
@@ -368,7 +365,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 规则集语言
+    * @param string $language **参数解释:** 规则集语言。 **约束限制:** 只能选择当前系统上支持的语言。 **取值范围:** 只能传一种语言。当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -380,7 +377,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefault
-    *  如果有基于的规则集则是1，没有基于的规则集则是0
+    *  **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
     *
     * @return string
     */
@@ -392,7 +389,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets isDefault
     *
-    * @param string $isDefault 如果有基于的规则集则是1，没有基于的规则集则是0
+    * @param string $isDefault **参数解释:** 是否基于已存在的规则集创建新规则集。 **约束限制:** 只能填0或1。 **取值范围:** - 0：新建空白规则集。 - 1：基于已存在的规则集创建新规则集。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -404,9 +401,9 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleIds
-    *  新启用规则ids
+    *  **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getRuleIds()
     {
@@ -416,7 +413,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets ruleIds
     *
-    * @param string $ruleIds 新启用规则ids
+    * @param string|null $ruleIds **参数解释:** 新启用规则ID集合，启用多条规则时，id用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -428,7 +425,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets uncheckIds
-    *  新关闭规则id
+    *  **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
     *
     * @return string|null
     */
@@ -440,7 +437,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets uncheckIds
     *
-    * @param string|null $uncheckIds 新关闭规则id
+    * @param string|null $uncheckIds **参数解释:** 新关闭规则ID集合，多个ID用英文逗号相连。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取规则ID。 **约束限制:** 规则ID为32位UUID，多个ID之间用英文逗号分隔。例如：\"00034fc32ee045388365d42ca4e07fe1,002c2eda6d6c11edab16fa163e0fa374\"。 **取值范围:** 长度为[1~4000]个字符。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -452,7 +449,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  规则集ID
+    *  **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
     *
     * @return string|null
     */
@@ -464,7 +461,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 规则集ID
+    * @param string|null $templateId **参数解释:** 规则集ID。当is_default参数为1时，该参数需要传参。可调用[[查询规则集列表](https://support.huaweicloud.com/api-codecheck/ListRulesets.html)](tag:hws)[[查询规则集列表](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRulesets.html)](tag:hws_hk)[查询规则集列表](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取已存在的规则集ID。 **约束限制:** 32位UUID。例如：\"da303d80d2594faca60dbcc2e29c18aa\"。 **取值范围:** 不涉及。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -476,7 +473,7 @@ class Ruleset implements ModelInterface, ArrayAccess
 
     /**
     * Gets customAttributes
-    *  自定义规则参数项，支持修改规则阈值
+    *  自定义规则参数项，支持修改规则阈值。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CustomAttributes[]|null
     */
@@ -488,7 +485,7 @@ class Ruleset implements ModelInterface, ArrayAccess
     /**
     * Sets customAttributes
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CustomAttributes[]|null $customAttributes 自定义规则参数项，支持修改规则阈值
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CustomAttributes[]|null $customAttributes 自定义规则参数项，支持修改规则阈值。
     *
     * @return $this
     */

@@ -27,6 +27,9 @@ class PriceItem implements ModelInterface, ArrayAccess
     * periodType  销售周期类型，0：天 2：月 3：年 4：小时
     * periodNums  销售周期数列表
     * billingUsageFactor  计费因子编码
+    * policyMode  定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    * divisionPattern  divisionPattern
+    * conditionNodes  条件选择定价结构，policy_mode=CONDITION 时有效
     *
     * @var string[]
     */
@@ -37,7 +40,10 @@ class PriceItem implements ModelInterface, ArrayAccess
             'chargingMode' => 'string',
             'periodType' => 'int',
             'periodNums' => 'int[]',
-            'billingUsageFactor' => 'string'
+            'billingUsageFactor' => 'string',
+            'policyMode' => 'string',
+            'divisionPattern' => '\HuaweiCloud\SDK\Bssintl\V2\Model\DivisionPattern',
+            'conditionNodes' => '\HuaweiCloud\SDK\Bssintl\V2\Model\ConditionSelectPattern[]'
     ];
 
     /**
@@ -49,6 +55,9 @@ class PriceItem implements ModelInterface, ArrayAccess
     * periodType  销售周期类型，0：天 2：月 3：年 4：小时
     * periodNums  销售周期数列表
     * billingUsageFactor  计费因子编码
+    * policyMode  定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    * divisionPattern  divisionPattern
+    * conditionNodes  条件选择定价结构，policy_mode=CONDITION 时有效
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class PriceItem implements ModelInterface, ArrayAccess
         'chargingMode' => null,
         'periodType' => 'int32',
         'periodNums' => 'int32',
-        'billingUsageFactor' => null
+        'billingUsageFactor' => null,
+        'policyMode' => null,
+        'divisionPattern' => null,
+        'conditionNodes' => null
     ];
 
     /**
@@ -92,6 +104,9 @@ class PriceItem implements ModelInterface, ArrayAccess
     * periodType  销售周期类型，0：天 2：月 3：年 4：小时
     * periodNums  销售周期数列表
     * billingUsageFactor  计费因子编码
+    * policyMode  定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    * divisionPattern  divisionPattern
+    * conditionNodes  条件选择定价结构，policy_mode=CONDITION 时有效
     *
     * @var string[]
     */
@@ -102,7 +117,10 @@ class PriceItem implements ModelInterface, ArrayAccess
             'chargingMode' => 'charging_mode',
             'periodType' => 'period_type',
             'periodNums' => 'period_nums',
-            'billingUsageFactor' => 'billing_usage_factor'
+            'billingUsageFactor' => 'billing_usage_factor',
+            'policyMode' => 'policy_mode',
+            'divisionPattern' => 'division_pattern',
+            'conditionNodes' => 'condition_nodes'
     ];
 
     /**
@@ -114,6 +132,9 @@ class PriceItem implements ModelInterface, ArrayAccess
     * periodType  销售周期类型，0：天 2：月 3：年 4：小时
     * periodNums  销售周期数列表
     * billingUsageFactor  计费因子编码
+    * policyMode  定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    * divisionPattern  divisionPattern
+    * conditionNodes  条件选择定价结构，policy_mode=CONDITION 时有效
     *
     * @var string[]
     */
@@ -124,7 +145,10 @@ class PriceItem implements ModelInterface, ArrayAccess
             'chargingMode' => 'setChargingMode',
             'periodType' => 'setPeriodType',
             'periodNums' => 'setPeriodNums',
-            'billingUsageFactor' => 'setBillingUsageFactor'
+            'billingUsageFactor' => 'setBillingUsageFactor',
+            'policyMode' => 'setPolicyMode',
+            'divisionPattern' => 'setDivisionPattern',
+            'conditionNodes' => 'setConditionNodes'
     ];
 
     /**
@@ -136,6 +160,9 @@ class PriceItem implements ModelInterface, ArrayAccess
     * periodType  销售周期类型，0：天 2：月 3：年 4：小时
     * periodNums  销售周期数列表
     * billingUsageFactor  计费因子编码
+    * policyMode  定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    * divisionPattern  divisionPattern
+    * conditionNodes  条件选择定价结构，policy_mode=CONDITION 时有效
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class PriceItem implements ModelInterface, ArrayAccess
             'chargingMode' => 'getChargingMode',
             'periodType' => 'getPeriodType',
             'periodNums' => 'getPeriodNums',
-            'billingUsageFactor' => 'getBillingUsageFactor'
+            'billingUsageFactor' => 'getBillingUsageFactor',
+            'policyMode' => 'getPolicyMode',
+            'divisionPattern' => 'getDivisionPattern',
+            'conditionNodes' => 'getConditionNodes'
     ];
 
     /**
@@ -214,6 +244,9 @@ class PriceItem implements ModelInterface, ArrayAccess
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNums'] = isset($data['periodNums']) ? $data['periodNums'] : null;
         $this->container['billingUsageFactor'] = isset($data['billingUsageFactor']) ? $data['billingUsageFactor'] : null;
+        $this->container['policyMode'] = isset($data['policyMode']) ? $data['policyMode'] : null;
+        $this->container['divisionPattern'] = isset($data['divisionPattern']) ? $data['divisionPattern'] : null;
+        $this->container['conditionNodes'] = isset($data['conditionNodes']) ? $data['conditionNodes'] : null;
     }
 
     /**
@@ -427,6 +460,78 @@ class PriceItem implements ModelInterface, ArrayAccess
     public function setBillingUsageFactor($billingUsageFactor)
     {
         $this->container['billingUsageFactor'] = $billingUsageFactor;
+        return $this;
+    }
+
+    /**
+    * Gets policyMode
+    *  定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    *
+    * @return string|null
+    */
+    public function getPolicyMode()
+    {
+        return $this->container['policyMode'];
+    }
+
+    /**
+    * Sets policyMode
+    *
+    * @param string|null $policyMode 定价策略模式，SIMPLE：简单定价、DIVISION：阶梯定价、CONDITION：条件选择定价
+    *
+    * @return $this
+    */
+    public function setPolicyMode($policyMode)
+    {
+        $this->container['policyMode'] = $policyMode;
+        return $this;
+    }
+
+    /**
+    * Gets divisionPattern
+    *  divisionPattern
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\DivisionPattern|null
+    */
+    public function getDivisionPattern()
+    {
+        return $this->container['divisionPattern'];
+    }
+
+    /**
+    * Sets divisionPattern
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\DivisionPattern|null $divisionPattern divisionPattern
+    *
+    * @return $this
+    */
+    public function setDivisionPattern($divisionPattern)
+    {
+        $this->container['divisionPattern'] = $divisionPattern;
+        return $this;
+    }
+
+    /**
+    * Gets conditionNodes
+    *  条件选择定价结构，policy_mode=CONDITION 时有效
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\ConditionSelectPattern[]|null
+    */
+    public function getConditionNodes()
+    {
+        return $this->container['conditionNodes'];
+    }
+
+    /**
+    * Sets conditionNodes
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\ConditionSelectPattern[]|null $conditionNodes 条件选择定价结构，policy_mode=CONDITION 时有效
+    *
+    * @return $this
+    */
+    public function setConditionNodes($conditionNodes)
+    {
+        $this->container['conditionNodes'] = $conditionNodes;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * defects  缺陷详情信息
-    * total  总数
+    * defects  **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
+    * total  **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * defects  缺陷详情信息
-    * total  总数
+    * defects  **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
+    * total  **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * defects  缺陷详情信息
-    * total  总数
+    * defects  **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
+    * total  **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * defects  缺陷详情信息
-    * total  总数
+    * defects  **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
+    * total  **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * defects  缺陷详情信息
-    * total  总数
+    * defects  **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
+    * total  **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets defects
-    *  缺陷详情信息
+    *  **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectInfoV2[]|null
     */
@@ -198,7 +198,7 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets defects
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectInfoV2[]|null $defects 缺陷详情信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectInfoV2[]|null $defects **参数解释：** 缺陷详情列表，注意这里和入参中的limit数据不一定一致，服务会重新对响应数据拆分。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowTaskDefectsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total **参数解释：** 缺陷详情总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */

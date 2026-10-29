@@ -21,7 +21,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  规则集ID
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  规则集ID
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  规则集ID
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  规则集ID
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  规则集ID
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  规则集ID
+    *  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateRulesetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 规则集ID
+    * @param string|null $templateId **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @return $this
     */

@@ -20,13 +20,13 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  仓库地址
-    * branch  仓库分支
-    * language  仓库语言
-    * excludeDir  排除的目录
-    * encode  编码格式
-    * compileConfig  编译配置信息
-    * ruleTemplate  g规则集名称
+    * url  **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
+    * branch  **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
+    * language  **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
+    * excludeDir  **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
+    * encode  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * compileConfig  **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
+    * ruleTemplate  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  仓库地址
-    * branch  仓库分支
-    * language  仓库语言
-    * excludeDir  排除的目录
-    * encode  编码格式
-    * compileConfig  编译配置信息
-    * ruleTemplate  g规则集名称
+    * url  **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
+    * branch  **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
+    * language  **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
+    * excludeDir  **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
+    * encode  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * compileConfig  **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
+    * ruleTemplate  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  仓库地址
-    * branch  仓库分支
-    * language  仓库语言
-    * excludeDir  排除的目录
-    * encode  编码格式
-    * compileConfig  编译配置信息
-    * ruleTemplate  g规则集名称
+    * url  **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
+    * branch  **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
+    * language  **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
+    * excludeDir  **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
+    * encode  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * compileConfig  **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
+    * ruleTemplate  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  仓库地址
-    * branch  仓库分支
-    * language  仓库语言
-    * excludeDir  排除的目录
-    * encode  编码格式
-    * compileConfig  编译配置信息
-    * ruleTemplate  g规则集名称
+    * url  **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
+    * branch  **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
+    * language  **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
+    * excludeDir  **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
+    * encode  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * compileConfig  **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
+    * ruleTemplate  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  仓库地址
-    * branch  仓库分支
-    * language  仓库语言
-    * excludeDir  排除的目录
-    * encode  编码格式
-    * compileConfig  编译配置信息
-    * ruleTemplate  g规则集名称
+    * url  **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
+    * branch  **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
+    * language  **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
+    * excludeDir  **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
+    * encode  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
+    * compileConfig  **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
+    * ruleTemplate  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  仓库地址
+    *  **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url 仓库地址
+    * @param string|null $url **参数解释：** 代码仓地址。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets branch
-    *  仓库分支
+    *  **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets branch
     *
-    * @param string|null $branch 仓库分支
+    * @param string|null $branch **参数解释：** 任务本次扫描的代码仓分支。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  仓库语言
+    *  **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 仓库语言
+    * @param string|null $language **参数解释：** 任务本次扫描的规则语言。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets excludeDir
-    *  排除的目录
+    *  **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets excludeDir
     *
-    * @param string|null $excludeDir 排除的目录
+    * @param string|null $excludeDir **参数解释：** 任务配置的排除目录信息。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets encode
-    *  编码格式
+    *  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets encode
     *
-    * @param string|null $encode 编码格式
+    * @param string|null $encode **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets compileConfig
-    *  编译配置信息
+    *  **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets compileConfig
     *
-    * @param string|null $compileConfig 编译配置信息
+    * @param string|null $compileConfig **参数解释：** 任务的部分检查参数json格式信息。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleTemplate
-    *  g规则集名称
+    *  **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class ParamInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleTemplate
     *
-    * @param string|null $ruleTemplate g规则集名称
+    * @param string|null $ruleTemplate **参数解释：** 废弃字段。 **取值范围:** 不涉及。
     *
     * @return $this
     */

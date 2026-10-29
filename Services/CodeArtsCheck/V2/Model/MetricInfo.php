@@ -20,49 +20,49 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * codeSize  代码规模
-    * rawLines  原始代码行数
-    * methodsTotal  函数总数
-    * cyclomaticComplexityTotal  圈复杂度总数
-    * cyclomaticComplexityPerMethod  平均圈复杂度
-    * maximumCyclomaticComplexity  最大圈复杂度
-    * hugeCyclomaticComplexityTotal  超大圈复杂度数
-    * hugeCyclomaticComplexityRatio  超大圈复杂度比例
-    * ccaCyclomaticComplexityTotal  cca圈复杂度总数
-    * ccaCyclomaticComplexityPerMethod  cca平均圈复杂度
-    * maximumCcaCyclomaticComplexity  cca最大圈复杂度
-    * hugeCcaCyclomaticComplexityTotal  超大圈复杂度函数总数
-    * cyclomaticComplexityAdequacy  圈复杂度满足度
-    * maximumDepth  最大深度
-    * hugeDepthTotal  超大深度数
-    * hugeDepthRatio  超大深度占比
-    * methodLines  函数总行数
-    * linesPerMethod  函数平均代码行
-    * hugeMethodTotal  超大函数数
-    * hugeMethodRatio  超大函数占比
-    * filesTotal  文件总数
-    * foldersTotal  目录总数
-    * linesPerFile  文件平均代码行
-    * hugeHeaderfileTotal  超大头文件数
-    * hugeHeaderfileRatio  超大头文件占比
-    * hugeNonHeaderfileTotal  超大源文件数
-    * hugeNonHeaderfileRatio  超大源文件占比
-    * hugeFolderTotal  超大目录数
-    * hugeFolderRatio  超大目录占比
-    * fileDuplicationTotal  重复文件数
-    * fileDuplicationRatio  文件重复率
-    * nonHfileDuplicationTotal  重复源文件数
-    * nonHfileDuplicationRatio  源文件重复率
-    * codeDuplicationTotal  代码重复数
-    * codeDuplicationRatio  代码重复率
-    * nonHfileCodeDuplicationTotal  源文件代码重复数
-    * nonHfileCodeDuplicationRatio  源文件代码重复率
-    * unsafeFunctionsTotal  危险函数总数
-    * unsafeFunctionsKloc  危险函数密度
-    * redundantCodeTotal  冗余代码数
-    * redundantCodeKloc  冗余代码块密度
-    * warningSuppressionTotal  抑制告警数
-    * warningSuppressionKloc  抑制告警密度
+    * codeSize  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * rawLines  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * methodsTotal  **参数解释：** 函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityTotal  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCyclomaticComplexity  **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityTotal  **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityRatio  **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityTotal  **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityPerMethod  **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCcaCyclomaticComplexity  **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCcaCyclomaticComplexityTotal  **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityAdequacy  **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
+    * maximumDepth  **参数解释：** 最大深度。 **取值范围：** 不涉及。
+    * hugeDepthTotal  **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
+    * hugeDepthRatio  **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
+    * methodLines  **参数解释：** 函数总行数。 **取值范围：** 不涉及。
+    * linesPerMethod  **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
+    * hugeMethodTotal  **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
+    * hugeMethodRatio  **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
+    * filesTotal  **参数解释：** 文件总数。 **取值范围：** 不涉及。
+    * foldersTotal  **参数解释：** 目录总数。 **取值范围：** 不涉及。
+    * linesPerFile  **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
+    * hugeHeaderfileTotal  **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
+    * hugeHeaderfileRatio  **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileTotal  **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileRatio  **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
+    * hugeFolderTotal  **参数解释：** 超大目录数。 **取值范围：** 不涉及。
+    * hugeFolderRatio  **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
+    * fileDuplicationTotal  **参数解释：** 重复文件数。 **取值范围：** 不涉及。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * nonHfileDuplicationTotal  **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
+    * nonHfileDuplicationRatio  **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
+    * codeDuplicationTotal  **参数解释：** 代码重复数。 **取值范围：** 不涉及。
+    * codeDuplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationTotal  **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationRatio  **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
+    * unsafeFunctionsTotal  **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
+    * unsafeFunctionsKloc  **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
+    * redundantCodeTotal  **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
+    * redundantCodeKloc  **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
+    * warningSuppressionTotal  **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
+    * warningSuppressionKloc  **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -114,49 +114,49 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * codeSize  代码规模
-    * rawLines  原始代码行数
-    * methodsTotal  函数总数
-    * cyclomaticComplexityTotal  圈复杂度总数
-    * cyclomaticComplexityPerMethod  平均圈复杂度
-    * maximumCyclomaticComplexity  最大圈复杂度
-    * hugeCyclomaticComplexityTotal  超大圈复杂度数
-    * hugeCyclomaticComplexityRatio  超大圈复杂度比例
-    * ccaCyclomaticComplexityTotal  cca圈复杂度总数
-    * ccaCyclomaticComplexityPerMethod  cca平均圈复杂度
-    * maximumCcaCyclomaticComplexity  cca最大圈复杂度
-    * hugeCcaCyclomaticComplexityTotal  超大圈复杂度函数总数
-    * cyclomaticComplexityAdequacy  圈复杂度满足度
-    * maximumDepth  最大深度
-    * hugeDepthTotal  超大深度数
-    * hugeDepthRatio  超大深度占比
-    * methodLines  函数总行数
-    * linesPerMethod  函数平均代码行
-    * hugeMethodTotal  超大函数数
-    * hugeMethodRatio  超大函数占比
-    * filesTotal  文件总数
-    * foldersTotal  目录总数
-    * linesPerFile  文件平均代码行
-    * hugeHeaderfileTotal  超大头文件数
-    * hugeHeaderfileRatio  超大头文件占比
-    * hugeNonHeaderfileTotal  超大源文件数
-    * hugeNonHeaderfileRatio  超大源文件占比
-    * hugeFolderTotal  超大目录数
-    * hugeFolderRatio  超大目录占比
-    * fileDuplicationTotal  重复文件数
-    * fileDuplicationRatio  文件重复率
-    * nonHfileDuplicationTotal  重复源文件数
-    * nonHfileDuplicationRatio  源文件重复率
-    * codeDuplicationTotal  代码重复数
-    * codeDuplicationRatio  代码重复率
-    * nonHfileCodeDuplicationTotal  源文件代码重复数
-    * nonHfileCodeDuplicationRatio  源文件代码重复率
-    * unsafeFunctionsTotal  危险函数总数
-    * unsafeFunctionsKloc  危险函数密度
-    * redundantCodeTotal  冗余代码数
-    * redundantCodeKloc  冗余代码块密度
-    * warningSuppressionTotal  抑制告警数
-    * warningSuppressionKloc  抑制告警密度
+    * codeSize  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * rawLines  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * methodsTotal  **参数解释：** 函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityTotal  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCyclomaticComplexity  **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityTotal  **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityRatio  **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityTotal  **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityPerMethod  **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCcaCyclomaticComplexity  **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCcaCyclomaticComplexityTotal  **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityAdequacy  **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
+    * maximumDepth  **参数解释：** 最大深度。 **取值范围：** 不涉及。
+    * hugeDepthTotal  **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
+    * hugeDepthRatio  **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
+    * methodLines  **参数解释：** 函数总行数。 **取值范围：** 不涉及。
+    * linesPerMethod  **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
+    * hugeMethodTotal  **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
+    * hugeMethodRatio  **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
+    * filesTotal  **参数解释：** 文件总数。 **取值范围：** 不涉及。
+    * foldersTotal  **参数解释：** 目录总数。 **取值范围：** 不涉及。
+    * linesPerFile  **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
+    * hugeHeaderfileTotal  **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
+    * hugeHeaderfileRatio  **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileTotal  **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileRatio  **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
+    * hugeFolderTotal  **参数解释：** 超大目录数。 **取值范围：** 不涉及。
+    * hugeFolderRatio  **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
+    * fileDuplicationTotal  **参数解释：** 重复文件数。 **取值范围：** 不涉及。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * nonHfileDuplicationTotal  **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
+    * nonHfileDuplicationRatio  **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
+    * codeDuplicationTotal  **参数解释：** 代码重复数。 **取值范围：** 不涉及。
+    * codeDuplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationTotal  **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationRatio  **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
+    * unsafeFunctionsTotal  **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
+    * unsafeFunctionsKloc  **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
+    * redundantCodeTotal  **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
+    * redundantCodeKloc  **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
+    * warningSuppressionTotal  **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
+    * warningSuppressionKloc  **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -229,49 +229,49 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * codeSize  代码规模
-    * rawLines  原始代码行数
-    * methodsTotal  函数总数
-    * cyclomaticComplexityTotal  圈复杂度总数
-    * cyclomaticComplexityPerMethod  平均圈复杂度
-    * maximumCyclomaticComplexity  最大圈复杂度
-    * hugeCyclomaticComplexityTotal  超大圈复杂度数
-    * hugeCyclomaticComplexityRatio  超大圈复杂度比例
-    * ccaCyclomaticComplexityTotal  cca圈复杂度总数
-    * ccaCyclomaticComplexityPerMethod  cca平均圈复杂度
-    * maximumCcaCyclomaticComplexity  cca最大圈复杂度
-    * hugeCcaCyclomaticComplexityTotal  超大圈复杂度函数总数
-    * cyclomaticComplexityAdequacy  圈复杂度满足度
-    * maximumDepth  最大深度
-    * hugeDepthTotal  超大深度数
-    * hugeDepthRatio  超大深度占比
-    * methodLines  函数总行数
-    * linesPerMethod  函数平均代码行
-    * hugeMethodTotal  超大函数数
-    * hugeMethodRatio  超大函数占比
-    * filesTotal  文件总数
-    * foldersTotal  目录总数
-    * linesPerFile  文件平均代码行
-    * hugeHeaderfileTotal  超大头文件数
-    * hugeHeaderfileRatio  超大头文件占比
-    * hugeNonHeaderfileTotal  超大源文件数
-    * hugeNonHeaderfileRatio  超大源文件占比
-    * hugeFolderTotal  超大目录数
-    * hugeFolderRatio  超大目录占比
-    * fileDuplicationTotal  重复文件数
-    * fileDuplicationRatio  文件重复率
-    * nonHfileDuplicationTotal  重复源文件数
-    * nonHfileDuplicationRatio  源文件重复率
-    * codeDuplicationTotal  代码重复数
-    * codeDuplicationRatio  代码重复率
-    * nonHfileCodeDuplicationTotal  源文件代码重复数
-    * nonHfileCodeDuplicationRatio  源文件代码重复率
-    * unsafeFunctionsTotal  危险函数总数
-    * unsafeFunctionsKloc  危险函数密度
-    * redundantCodeTotal  冗余代码数
-    * redundantCodeKloc  冗余代码块密度
-    * warningSuppressionTotal  抑制告警数
-    * warningSuppressionKloc  抑制告警密度
+    * codeSize  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * rawLines  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * methodsTotal  **参数解释：** 函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityTotal  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCyclomaticComplexity  **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityTotal  **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityRatio  **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityTotal  **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityPerMethod  **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCcaCyclomaticComplexity  **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCcaCyclomaticComplexityTotal  **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityAdequacy  **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
+    * maximumDepth  **参数解释：** 最大深度。 **取值范围：** 不涉及。
+    * hugeDepthTotal  **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
+    * hugeDepthRatio  **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
+    * methodLines  **参数解释：** 函数总行数。 **取值范围：** 不涉及。
+    * linesPerMethod  **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
+    * hugeMethodTotal  **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
+    * hugeMethodRatio  **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
+    * filesTotal  **参数解释：** 文件总数。 **取值范围：** 不涉及。
+    * foldersTotal  **参数解释：** 目录总数。 **取值范围：** 不涉及。
+    * linesPerFile  **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
+    * hugeHeaderfileTotal  **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
+    * hugeHeaderfileRatio  **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileTotal  **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileRatio  **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
+    * hugeFolderTotal  **参数解释：** 超大目录数。 **取值范围：** 不涉及。
+    * hugeFolderRatio  **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
+    * fileDuplicationTotal  **参数解释：** 重复文件数。 **取值范围：** 不涉及。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * nonHfileDuplicationTotal  **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
+    * nonHfileDuplicationRatio  **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
+    * codeDuplicationTotal  **参数解释：** 代码重复数。 **取值范围：** 不涉及。
+    * codeDuplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationTotal  **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationRatio  **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
+    * unsafeFunctionsTotal  **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
+    * unsafeFunctionsKloc  **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
+    * redundantCodeTotal  **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
+    * redundantCodeKloc  **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
+    * warningSuppressionTotal  **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
+    * warningSuppressionKloc  **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -323,49 +323,49 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * codeSize  代码规模
-    * rawLines  原始代码行数
-    * methodsTotal  函数总数
-    * cyclomaticComplexityTotal  圈复杂度总数
-    * cyclomaticComplexityPerMethod  平均圈复杂度
-    * maximumCyclomaticComplexity  最大圈复杂度
-    * hugeCyclomaticComplexityTotal  超大圈复杂度数
-    * hugeCyclomaticComplexityRatio  超大圈复杂度比例
-    * ccaCyclomaticComplexityTotal  cca圈复杂度总数
-    * ccaCyclomaticComplexityPerMethod  cca平均圈复杂度
-    * maximumCcaCyclomaticComplexity  cca最大圈复杂度
-    * hugeCcaCyclomaticComplexityTotal  超大圈复杂度函数总数
-    * cyclomaticComplexityAdequacy  圈复杂度满足度
-    * maximumDepth  最大深度
-    * hugeDepthTotal  超大深度数
-    * hugeDepthRatio  超大深度占比
-    * methodLines  函数总行数
-    * linesPerMethod  函数平均代码行
-    * hugeMethodTotal  超大函数数
-    * hugeMethodRatio  超大函数占比
-    * filesTotal  文件总数
-    * foldersTotal  目录总数
-    * linesPerFile  文件平均代码行
-    * hugeHeaderfileTotal  超大头文件数
-    * hugeHeaderfileRatio  超大头文件占比
-    * hugeNonHeaderfileTotal  超大源文件数
-    * hugeNonHeaderfileRatio  超大源文件占比
-    * hugeFolderTotal  超大目录数
-    * hugeFolderRatio  超大目录占比
-    * fileDuplicationTotal  重复文件数
-    * fileDuplicationRatio  文件重复率
-    * nonHfileDuplicationTotal  重复源文件数
-    * nonHfileDuplicationRatio  源文件重复率
-    * codeDuplicationTotal  代码重复数
-    * codeDuplicationRatio  代码重复率
-    * nonHfileCodeDuplicationTotal  源文件代码重复数
-    * nonHfileCodeDuplicationRatio  源文件代码重复率
-    * unsafeFunctionsTotal  危险函数总数
-    * unsafeFunctionsKloc  危险函数密度
-    * redundantCodeTotal  冗余代码数
-    * redundantCodeKloc  冗余代码块密度
-    * warningSuppressionTotal  抑制告警数
-    * warningSuppressionKloc  抑制告警密度
+    * codeSize  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * rawLines  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * methodsTotal  **参数解释：** 函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityTotal  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCyclomaticComplexity  **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityTotal  **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityRatio  **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityTotal  **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityPerMethod  **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCcaCyclomaticComplexity  **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCcaCyclomaticComplexityTotal  **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityAdequacy  **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
+    * maximumDepth  **参数解释：** 最大深度。 **取值范围：** 不涉及。
+    * hugeDepthTotal  **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
+    * hugeDepthRatio  **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
+    * methodLines  **参数解释：** 函数总行数。 **取值范围：** 不涉及。
+    * linesPerMethod  **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
+    * hugeMethodTotal  **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
+    * hugeMethodRatio  **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
+    * filesTotal  **参数解释：** 文件总数。 **取值范围：** 不涉及。
+    * foldersTotal  **参数解释：** 目录总数。 **取值范围：** 不涉及。
+    * linesPerFile  **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
+    * hugeHeaderfileTotal  **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
+    * hugeHeaderfileRatio  **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileTotal  **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileRatio  **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
+    * hugeFolderTotal  **参数解释：** 超大目录数。 **取值范围：** 不涉及。
+    * hugeFolderRatio  **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
+    * fileDuplicationTotal  **参数解释：** 重复文件数。 **取值范围：** 不涉及。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * nonHfileDuplicationTotal  **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
+    * nonHfileDuplicationRatio  **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
+    * codeDuplicationTotal  **参数解释：** 代码重复数。 **取值范围：** 不涉及。
+    * codeDuplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationTotal  **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationRatio  **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
+    * unsafeFunctionsTotal  **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
+    * unsafeFunctionsKloc  **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
+    * redundantCodeTotal  **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
+    * redundantCodeKloc  **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
+    * warningSuppressionTotal  **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
+    * warningSuppressionKloc  **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -417,49 +417,49 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * codeSize  代码规模
-    * rawLines  原始代码行数
-    * methodsTotal  函数总数
-    * cyclomaticComplexityTotal  圈复杂度总数
-    * cyclomaticComplexityPerMethod  平均圈复杂度
-    * maximumCyclomaticComplexity  最大圈复杂度
-    * hugeCyclomaticComplexityTotal  超大圈复杂度数
-    * hugeCyclomaticComplexityRatio  超大圈复杂度比例
-    * ccaCyclomaticComplexityTotal  cca圈复杂度总数
-    * ccaCyclomaticComplexityPerMethod  cca平均圈复杂度
-    * maximumCcaCyclomaticComplexity  cca最大圈复杂度
-    * hugeCcaCyclomaticComplexityTotal  超大圈复杂度函数总数
-    * cyclomaticComplexityAdequacy  圈复杂度满足度
-    * maximumDepth  最大深度
-    * hugeDepthTotal  超大深度数
-    * hugeDepthRatio  超大深度占比
-    * methodLines  函数总行数
-    * linesPerMethod  函数平均代码行
-    * hugeMethodTotal  超大函数数
-    * hugeMethodRatio  超大函数占比
-    * filesTotal  文件总数
-    * foldersTotal  目录总数
-    * linesPerFile  文件平均代码行
-    * hugeHeaderfileTotal  超大头文件数
-    * hugeHeaderfileRatio  超大头文件占比
-    * hugeNonHeaderfileTotal  超大源文件数
-    * hugeNonHeaderfileRatio  超大源文件占比
-    * hugeFolderTotal  超大目录数
-    * hugeFolderRatio  超大目录占比
-    * fileDuplicationTotal  重复文件数
-    * fileDuplicationRatio  文件重复率
-    * nonHfileDuplicationTotal  重复源文件数
-    * nonHfileDuplicationRatio  源文件重复率
-    * codeDuplicationTotal  代码重复数
-    * codeDuplicationRatio  代码重复率
-    * nonHfileCodeDuplicationTotal  源文件代码重复数
-    * nonHfileCodeDuplicationRatio  源文件代码重复率
-    * unsafeFunctionsTotal  危险函数总数
-    * unsafeFunctionsKloc  危险函数密度
-    * redundantCodeTotal  冗余代码数
-    * redundantCodeKloc  冗余代码块密度
-    * warningSuppressionTotal  抑制告警数
-    * warningSuppressionKloc  抑制告警密度
+    * codeSize  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * rawLines  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * methodsTotal  **参数解释：** 函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityTotal  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCyclomaticComplexity  **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityTotal  **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
+    * hugeCyclomaticComplexityRatio  **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityTotal  **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
+    * ccaCyclomaticComplexityPerMethod  **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
+    * maximumCcaCyclomaticComplexity  **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
+    * hugeCcaCyclomaticComplexityTotal  **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
+    * cyclomaticComplexityAdequacy  **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
+    * maximumDepth  **参数解释：** 最大深度。 **取值范围：** 不涉及。
+    * hugeDepthTotal  **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
+    * hugeDepthRatio  **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
+    * methodLines  **参数解释：** 函数总行数。 **取值范围：** 不涉及。
+    * linesPerMethod  **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
+    * hugeMethodTotal  **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
+    * hugeMethodRatio  **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
+    * filesTotal  **参数解释：** 文件总数。 **取值范围：** 不涉及。
+    * foldersTotal  **参数解释：** 目录总数。 **取值范围：** 不涉及。
+    * linesPerFile  **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
+    * hugeHeaderfileTotal  **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
+    * hugeHeaderfileRatio  **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileTotal  **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
+    * hugeNonHeaderfileRatio  **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
+    * hugeFolderTotal  **参数解释：** 超大目录数。 **取值范围：** 不涉及。
+    * hugeFolderRatio  **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
+    * fileDuplicationTotal  **参数解释：** 重复文件数。 **取值范围：** 不涉及。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * nonHfileDuplicationTotal  **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
+    * nonHfileDuplicationRatio  **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
+    * codeDuplicationTotal  **参数解释：** 代码重复数。 **取值范围：** 不涉及。
+    * codeDuplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationTotal  **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
+    * nonHfileCodeDuplicationRatio  **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
+    * unsafeFunctionsTotal  **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
+    * unsafeFunctionsKloc  **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
+    * redundantCodeTotal  **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
+    * redundantCodeKloc  **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
+    * warningSuppressionTotal  **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
+    * warningSuppressionKloc  **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -636,7 +636,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeSize
-    *  代码规模
+    *  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -648,7 +648,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets codeSize
     *
-    * @param string|null $codeSize 代码规模
+    * @param string|null $codeSize **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -660,7 +660,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets rawLines
-    *  原始代码行数
+    *  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -672,7 +672,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets rawLines
     *
-    * @param string|null $rawLines 原始代码行数
+    * @param string|null $rawLines **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -684,7 +684,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets methodsTotal
-    *  函数总数
+    *  **参数解释：** 函数总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -696,7 +696,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets methodsTotal
     *
-    * @param string|null $methodsTotal 函数总数
+    * @param string|null $methodsTotal **参数解释：** 函数总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -708,7 +708,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cyclomaticComplexityTotal
-    *  圈复杂度总数
+    *  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -720,7 +720,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cyclomaticComplexityTotal
     *
-    * @param string|null $cyclomaticComplexityTotal 圈复杂度总数
+    * @param string|null $cyclomaticComplexityTotal **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -732,7 +732,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cyclomaticComplexityPerMethod
-    *  平均圈复杂度
+    *  **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -744,7 +744,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cyclomaticComplexityPerMethod
     *
-    * @param string|null $cyclomaticComplexityPerMethod 平均圈复杂度
+    * @param string|null $cyclomaticComplexityPerMethod **参数解释：** 平均圈复杂度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -756,7 +756,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maximumCyclomaticComplexity
-    *  最大圈复杂度
+    *  **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -768,7 +768,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maximumCyclomaticComplexity
     *
-    * @param string|null $maximumCyclomaticComplexity 最大圈复杂度
+    * @param string|null $maximumCyclomaticComplexity **参数解释：** 最大圈复杂度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -780,7 +780,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeCyclomaticComplexityTotal
-    *  超大圈复杂度数
+    *  **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -792,7 +792,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeCyclomaticComplexityTotal
     *
-    * @param string|null $hugeCyclomaticComplexityTotal 超大圈复杂度数
+    * @param string|null $hugeCyclomaticComplexityTotal **参数解释：** 超大圈复杂度函数总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -804,7 +804,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeCyclomaticComplexityRatio
-    *  超大圈复杂度比例
+    *  **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -816,7 +816,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeCyclomaticComplexityRatio
     *
-    * @param string|null $hugeCyclomaticComplexityRatio 超大圈复杂度比例
+    * @param string|null $hugeCyclomaticComplexityRatio **参数解释：** 超大圈复杂度函数占比。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -828,7 +828,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ccaCyclomaticComplexityTotal
-    *  cca圈复杂度总数
+    *  **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -840,7 +840,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ccaCyclomaticComplexityTotal
     *
-    * @param string|null $ccaCyclomaticComplexityTotal cca圈复杂度总数
+    * @param string|null $ccaCyclomaticComplexityTotal **参数解释：** CCA圈复杂度总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -852,7 +852,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ccaCyclomaticComplexityPerMethod
-    *  cca平均圈复杂度
+    *  **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -864,7 +864,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ccaCyclomaticComplexityPerMethod
     *
-    * @param string|null $ccaCyclomaticComplexityPerMethod cca平均圈复杂度
+    * @param string|null $ccaCyclomaticComplexityPerMethod **参数解释：** CCA平均圈复杂度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -876,7 +876,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maximumCcaCyclomaticComplexity
-    *  cca最大圈复杂度
+    *  **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -888,7 +888,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maximumCcaCyclomaticComplexity
     *
-    * @param string|null $maximumCcaCyclomaticComplexity cca最大圈复杂度
+    * @param string|null $maximumCcaCyclomaticComplexity **参数解释：** CCA最大圈复杂度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -900,7 +900,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeCcaCyclomaticComplexityTotal
-    *  超大圈复杂度函数总数
+    *  **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -912,7 +912,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeCcaCyclomaticComplexityTotal
     *
-    * @param string|null $hugeCcaCyclomaticComplexityTotal 超大圈复杂度函数总数
+    * @param string|null $hugeCcaCyclomaticComplexityTotal **参数解释：** 超大CCA圈复杂度函数总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -924,7 +924,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cyclomaticComplexityAdequacy
-    *  圈复杂度满足度
+    *  **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -936,7 +936,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cyclomaticComplexityAdequacy
     *
-    * @param string|null $cyclomaticComplexityAdequacy 圈复杂度满足度
+    * @param string|null $cyclomaticComplexityAdequacy **参数解释：** 圈复杂度阈值遵从度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -948,7 +948,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets maximumDepth
-    *  最大深度
+    *  **参数解释：** 最大深度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -960,7 +960,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets maximumDepth
     *
-    * @param string|null $maximumDepth 最大深度
+    * @param string|null $maximumDepth **参数解释：** 最大深度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -972,7 +972,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeDepthTotal
-    *  超大深度数
+    *  **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -984,7 +984,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeDepthTotal
     *
-    * @param string|null $hugeDepthTotal 超大深度数
+    * @param string|null $hugeDepthTotal **参数解释：** 超大深度个数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -996,7 +996,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeDepthRatio
-    *  超大深度占比
+    *  **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1008,7 +1008,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeDepthRatio
     *
-    * @param string|null $hugeDepthRatio 超大深度占比
+    * @param string|null $hugeDepthRatio **参数解释：** 超大深度占比。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1020,7 +1020,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets methodLines
-    *  函数总行数
+    *  **参数解释：** 函数总行数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1032,7 +1032,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets methodLines
     *
-    * @param string|null $methodLines 函数总行数
+    * @param string|null $methodLines **参数解释：** 函数总行数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1044,7 +1044,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets linesPerMethod
-    *  函数平均代码行
+    *  **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1056,7 +1056,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets linesPerMethod
     *
-    * @param string|null $linesPerMethod 函数平均代码行
+    * @param string|null $linesPerMethod **参数解释：** 平均函数代码行。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1068,7 +1068,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeMethodTotal
-    *  超大函数数
+    *  **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1080,7 +1080,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeMethodTotal
     *
-    * @param string|null $hugeMethodTotal 超大函数数
+    * @param string|null $hugeMethodTotal **参数解释：** 超大代码行函数数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1092,7 +1092,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeMethodRatio
-    *  超大函数占比
+    *  **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1104,7 +1104,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeMethodRatio
     *
-    * @param string|null $hugeMethodRatio 超大函数占比
+    * @param string|null $hugeMethodRatio **参数解释：** 超大代码行函数占比。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1116,7 +1116,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets filesTotal
-    *  文件总数
+    *  **参数解释：** 文件总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1128,7 +1128,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets filesTotal
     *
-    * @param string|null $filesTotal 文件总数
+    * @param string|null $filesTotal **参数解释：** 文件总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1140,7 +1140,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets foldersTotal
-    *  目录总数
+    *  **参数解释：** 目录总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1152,7 +1152,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets foldersTotal
     *
-    * @param string|null $foldersTotal 目录总数
+    * @param string|null $foldersTotal **参数解释：** 目录总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1164,7 +1164,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets linesPerFile
-    *  文件平均代码行
+    *  **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1176,7 +1176,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets linesPerFile
     *
-    * @param string|null $linesPerFile 文件平均代码行
+    * @param string|null $linesPerFile **参数解释：** 平均文件代码行。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1188,7 +1188,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeHeaderfileTotal
-    *  超大头文件数
+    *  **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1200,7 +1200,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeHeaderfileTotal
     *
-    * @param string|null $hugeHeaderfileTotal 超大头文件数
+    * @param string|null $hugeHeaderfileTotal **参数解释：** 超大头文件数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1212,7 +1212,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeHeaderfileRatio
-    *  超大头文件占比
+    *  **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1224,7 +1224,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeHeaderfileRatio
     *
-    * @param string|null $hugeHeaderfileRatio 超大头文件占比
+    * @param string|null $hugeHeaderfileRatio **参数解释：** 超大头文件占比。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1236,7 +1236,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeNonHeaderfileTotal
-    *  超大源文件数
+    *  **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1248,7 +1248,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeNonHeaderfileTotal
     *
-    * @param string|null $hugeNonHeaderfileTotal 超大源文件数
+    * @param string|null $hugeNonHeaderfileTotal **参数解释：** 超大源文件数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1260,7 +1260,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeNonHeaderfileRatio
-    *  超大源文件占比
+    *  **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1272,7 +1272,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeNonHeaderfileRatio
     *
-    * @param string|null $hugeNonHeaderfileRatio 超大源文件占比
+    * @param string|null $hugeNonHeaderfileRatio **参数解释：** 超大源文件占比。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1284,7 +1284,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeFolderTotal
-    *  超大目录数
+    *  **参数解释：** 超大目录数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1296,7 +1296,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeFolderTotal
     *
-    * @param string|null $hugeFolderTotal 超大目录数
+    * @param string|null $hugeFolderTotal **参数解释：** 超大目录数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1308,7 +1308,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hugeFolderRatio
-    *  超大目录占比
+    *  **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1320,7 +1320,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hugeFolderRatio
     *
-    * @param string|null $hugeFolderRatio 超大目录占比
+    * @param string|null $hugeFolderRatio **参数解释：** 超大目录占比。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1332,7 +1332,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileDuplicationTotal
-    *  重复文件数
+    *  **参数解释：** 重复文件数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1344,7 +1344,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileDuplicationTotal
     *
-    * @param string|null $fileDuplicationTotal 重复文件数
+    * @param string|null $fileDuplicationTotal **参数解释：** 重复文件数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1356,7 +1356,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileDuplicationRatio
-    *  文件重复率
+    *  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1368,7 +1368,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileDuplicationRatio
     *
-    * @param string|null $fileDuplicationRatio 文件重复率
+    * @param string|null $fileDuplicationRatio **参数解释：** 文件重复率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1380,7 +1380,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nonHfileDuplicationTotal
-    *  重复源文件数
+    *  **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1392,7 +1392,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nonHfileDuplicationTotal
     *
-    * @param string|null $nonHfileDuplicationTotal 重复源文件数
+    * @param string|null $nonHfileDuplicationTotal **参数解释：** 重复源文件数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1404,7 +1404,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nonHfileDuplicationRatio
-    *  源文件重复率
+    *  **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1416,7 +1416,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nonHfileDuplicationRatio
     *
-    * @param string|null $nonHfileDuplicationRatio 源文件重复率
+    * @param string|null $nonHfileDuplicationRatio **参数解释：** 源文件重复率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1428,7 +1428,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeDuplicationTotal
-    *  代码重复数
+    *  **参数解释：** 代码重复数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1440,7 +1440,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets codeDuplicationTotal
     *
-    * @param string|null $codeDuplicationTotal 代码重复数
+    * @param string|null $codeDuplicationTotal **参数解释：** 代码重复数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1452,7 +1452,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeDuplicationRatio
-    *  代码重复率
+    *  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1464,7 +1464,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets codeDuplicationRatio
     *
-    * @param string|null $codeDuplicationRatio 代码重复率
+    * @param string|null $codeDuplicationRatio **参数解释：** 代码重复率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1476,7 +1476,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nonHfileCodeDuplicationTotal
-    *  源文件代码重复数
+    *  **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1488,7 +1488,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nonHfileCodeDuplicationTotal
     *
-    * @param string|null $nonHfileCodeDuplicationTotal 源文件代码重复数
+    * @param string|null $nonHfileCodeDuplicationTotal **参数解释：** 源文件代码重复数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1500,7 +1500,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nonHfileCodeDuplicationRatio
-    *  源文件代码重复率
+    *  **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1512,7 +1512,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nonHfileCodeDuplicationRatio
     *
-    * @param string|null $nonHfileCodeDuplicationRatio 源文件代码重复率
+    * @param string|null $nonHfileCodeDuplicationRatio **参数解释：** 源文件代码重复率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1524,7 +1524,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsafeFunctionsTotal
-    *  危险函数总数
+    *  **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1536,7 +1536,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unsafeFunctionsTotal
     *
-    * @param string|null $unsafeFunctionsTotal 危险函数总数
+    * @param string|null $unsafeFunctionsTotal **参数解释：** 危险函数总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1548,7 +1548,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets unsafeFunctionsKloc
-    *  危险函数密度
+    *  **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1560,7 +1560,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets unsafeFunctionsKloc
     *
-    * @param string|null $unsafeFunctionsKloc 危险函数密度
+    * @param string|null $unsafeFunctionsKloc **参数解释：** 危险函数密度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1572,7 +1572,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets redundantCodeTotal
-    *  冗余代码数
+    *  **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1584,7 +1584,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets redundantCodeTotal
     *
-    * @param string|null $redundantCodeTotal 冗余代码数
+    * @param string|null $redundantCodeTotal **参数解释：** 冗余代码数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1596,7 +1596,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets redundantCodeKloc
-    *  冗余代码块密度
+    *  **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1608,7 +1608,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets redundantCodeKloc
     *
-    * @param string|null $redundantCodeKloc 冗余代码块密度
+    * @param string|null $redundantCodeKloc **参数解释：** 冗余代码密度。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1620,7 +1620,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets warningSuppressionTotal
-    *  抑制告警数
+    *  **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1632,7 +1632,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets warningSuppressionTotal
     *
-    * @param string|null $warningSuppressionTotal 抑制告警数
+    * @param string|null $warningSuppressionTotal **参数解释：** 抑制告警数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1644,7 +1644,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets warningSuppressionKloc
-    *  抑制告警密度
+    *  **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1656,7 +1656,7 @@ class MetricInfo implements ModelInterface, ArrayAccess
     /**
     * Sets warningSuppressionKloc
     *
-    * @param string|null $warningSuppressionKloc 抑制告警密度
+    * @param string|null $warningSuppressionKloc **参数解释：** 抑制告警密度。 **取值范围：** 不涉及。
     *
     * @return $this
     */

@@ -20,19 +20,21 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * defectId  缺陷的id
-    * defectCheckerName  缺陷对应检查项的名称
-    * defectStatus  缺陷的状态0为解决 1已解决 2已忽略
-    * ruleSystemTags  规则标签,多个标签用逗号隔开
-    * ruleName  规则名
-    * lineNumber  缺陷所在文件行号
-    * defectContent  缺陷描述
-    * defectLevel  缺陷等级，0致命，1严重，2一般，3提示
-    * filePath  缺陷文件路径
-    * createdAt  创建时间
-    * issueKey  问题唯一标识
-    * fragment  缺陷代码片段详情
-    * events  调用链信息
+    * defectId  **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
+    * defectCheckerName  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * defectStatus  **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
+    * defectOwner  **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    * ruleSystemTags  **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
+    * ruleId  **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    * ruleName  **参数解释：** 规则名称。 **取值范围：** 不涉及。
+    * lineNumber  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * defectContent  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * defectLevel  **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * filePath  **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * issueKey  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * fragment  **参数解释：** 代码片段内容。
+    * events  **参数解释：** 调用链信息。
     *
     * @var string[]
     */
@@ -40,7 +42,9 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
             'defectId' => 'string',
             'defectCheckerName' => 'string',
             'defectStatus' => 'string',
+            'defectOwner' => 'string',
             'ruleSystemTags' => 'string',
+            'ruleId' => 'string',
             'ruleName' => 'string',
             'lineNumber' => 'string',
             'defectContent' => 'string',
@@ -54,19 +58,21 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * defectId  缺陷的id
-    * defectCheckerName  缺陷对应检查项的名称
-    * defectStatus  缺陷的状态0为解决 1已解决 2已忽略
-    * ruleSystemTags  规则标签,多个标签用逗号隔开
-    * ruleName  规则名
-    * lineNumber  缺陷所在文件行号
-    * defectContent  缺陷描述
-    * defectLevel  缺陷等级，0致命，1严重，2一般，3提示
-    * filePath  缺陷文件路径
-    * createdAt  创建时间
-    * issueKey  问题唯一标识
-    * fragment  缺陷代码片段详情
-    * events  调用链信息
+    * defectId  **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
+    * defectCheckerName  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * defectStatus  **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
+    * defectOwner  **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    * ruleSystemTags  **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
+    * ruleId  **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    * ruleName  **参数解释：** 规则名称。 **取值范围：** 不涉及。
+    * lineNumber  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * defectContent  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * defectLevel  **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * filePath  **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * issueKey  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * fragment  **参数解释：** 代码片段内容。
+    * events  **参数解释：** 调用链信息。
     *
     * @var string[]
     */
@@ -74,7 +80,9 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
         'defectId' => null,
         'defectCheckerName' => null,
         'defectStatus' => null,
+        'defectOwner' => null,
         'ruleSystemTags' => null,
+        'ruleId' => null,
         'ruleName' => null,
         'lineNumber' => null,
         'defectContent' => null,
@@ -109,19 +117,21 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * defectId  缺陷的id
-    * defectCheckerName  缺陷对应检查项的名称
-    * defectStatus  缺陷的状态0为解决 1已解决 2已忽略
-    * ruleSystemTags  规则标签,多个标签用逗号隔开
-    * ruleName  规则名
-    * lineNumber  缺陷所在文件行号
-    * defectContent  缺陷描述
-    * defectLevel  缺陷等级，0致命，1严重，2一般，3提示
-    * filePath  缺陷文件路径
-    * createdAt  创建时间
-    * issueKey  问题唯一标识
-    * fragment  缺陷代码片段详情
-    * events  调用链信息
+    * defectId  **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
+    * defectCheckerName  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * defectStatus  **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
+    * defectOwner  **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    * ruleSystemTags  **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
+    * ruleId  **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    * ruleName  **参数解释：** 规则名称。 **取值范围：** 不涉及。
+    * lineNumber  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * defectContent  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * defectLevel  **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * filePath  **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * issueKey  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * fragment  **参数解释：** 代码片段内容。
+    * events  **参数解释：** 调用链信息。
     *
     * @var string[]
     */
@@ -129,7 +139,9 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
             'defectId' => 'defect_id',
             'defectCheckerName' => 'defect_checker_name',
             'defectStatus' => 'defect_status',
+            'defectOwner' => 'defect_owner',
             'ruleSystemTags' => 'rule_system_tags',
+            'ruleId' => 'rule_id',
             'ruleName' => 'rule_name',
             'lineNumber' => 'line_number',
             'defectContent' => 'defect_content',
@@ -143,19 +155,21 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * defectId  缺陷的id
-    * defectCheckerName  缺陷对应检查项的名称
-    * defectStatus  缺陷的状态0为解决 1已解决 2已忽略
-    * ruleSystemTags  规则标签,多个标签用逗号隔开
-    * ruleName  规则名
-    * lineNumber  缺陷所在文件行号
-    * defectContent  缺陷描述
-    * defectLevel  缺陷等级，0致命，1严重，2一般，3提示
-    * filePath  缺陷文件路径
-    * createdAt  创建时间
-    * issueKey  问题唯一标识
-    * fragment  缺陷代码片段详情
-    * events  调用链信息
+    * defectId  **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
+    * defectCheckerName  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * defectStatus  **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
+    * defectOwner  **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    * ruleSystemTags  **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
+    * ruleId  **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    * ruleName  **参数解释：** 规则名称。 **取值范围：** 不涉及。
+    * lineNumber  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * defectContent  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * defectLevel  **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * filePath  **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * issueKey  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * fragment  **参数解释：** 代码片段内容。
+    * events  **参数解释：** 调用链信息。
     *
     * @var string[]
     */
@@ -163,7 +177,9 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
             'defectId' => 'setDefectId',
             'defectCheckerName' => 'setDefectCheckerName',
             'defectStatus' => 'setDefectStatus',
+            'defectOwner' => 'setDefectOwner',
             'ruleSystemTags' => 'setRuleSystemTags',
+            'ruleId' => 'setRuleId',
             'ruleName' => 'setRuleName',
             'lineNumber' => 'setLineNumber',
             'defectContent' => 'setDefectContent',
@@ -177,19 +193,21 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * defectId  缺陷的id
-    * defectCheckerName  缺陷对应检查项的名称
-    * defectStatus  缺陷的状态0为解决 1已解决 2已忽略
-    * ruleSystemTags  规则标签,多个标签用逗号隔开
-    * ruleName  规则名
-    * lineNumber  缺陷所在文件行号
-    * defectContent  缺陷描述
-    * defectLevel  缺陷等级，0致命，1严重，2一般，3提示
-    * filePath  缺陷文件路径
-    * createdAt  创建时间
-    * issueKey  问题唯一标识
-    * fragment  缺陷代码片段详情
-    * events  调用链信息
+    * defectId  **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
+    * defectCheckerName  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * defectStatus  **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
+    * defectOwner  **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    * ruleSystemTags  **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
+    * ruleId  **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    * ruleName  **参数解释：** 规则名称。 **取值范围：** 不涉及。
+    * lineNumber  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * defectContent  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * defectLevel  **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * filePath  **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * issueKey  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * fragment  **参数解释：** 代码片段内容。
+    * events  **参数解释：** 调用链信息。
     *
     * @var string[]
     */
@@ -197,7 +215,9 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
             'defectId' => 'getDefectId',
             'defectCheckerName' => 'getDefectCheckerName',
             'defectStatus' => 'getDefectStatus',
+            'defectOwner' => 'getDefectOwner',
             'ruleSystemTags' => 'getRuleSystemTags',
+            'ruleId' => 'getRuleId',
             'ruleName' => 'getRuleName',
             'lineNumber' => 'getLineNumber',
             'defectContent' => 'getDefectContent',
@@ -270,7 +290,9 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
         $this->container['defectId'] = isset($data['defectId']) ? $data['defectId'] : null;
         $this->container['defectCheckerName'] = isset($data['defectCheckerName']) ? $data['defectCheckerName'] : null;
         $this->container['defectStatus'] = isset($data['defectStatus']) ? $data['defectStatus'] : null;
+        $this->container['defectOwner'] = isset($data['defectOwner']) ? $data['defectOwner'] : null;
         $this->container['ruleSystemTags'] = isset($data['ruleSystemTags']) ? $data['ruleSystemTags'] : null;
+        $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
         $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
         $this->container['lineNumber'] = isset($data['lineNumber']) ? $data['lineNumber'] : null;
         $this->container['defectContent'] = isset($data['defectContent']) ? $data['defectContent'] : null;
@@ -306,7 +328,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets defectId
-    *  缺陷的id
+    *  **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -318,7 +340,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets defectId
     *
-    * @param string|null $defectId 缺陷的id
+    * @param string|null $defectId **参数解释：** MergeKey，问题ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -330,7 +352,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets defectCheckerName
-    *  缺陷对应检查项的名称
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -342,7 +364,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets defectCheckerName
     *
-    * @param string|null $defectCheckerName 缺陷对应检查项的名称
+    * @param string|null $defectCheckerName **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -354,7 +376,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets defectStatus
-    *  缺陷的状态0为解决 1已解决 2已忽略
+    *  **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
     *
     * @return string|null
     */
@@ -366,7 +388,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets defectStatus
     *
-    * @param string|null $defectStatus 缺陷的状态0为解决 1已解决 2已忽略
+    * @param string|null $defectStatus **参数解释：** 问题状态。 **取值范围：** - 0：待处理。 - 1：已解决。 - 2：已忽略。 [- 3：重新打开（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) [- 4：待审核（需打开忽略审核开关）。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm)
     *
     * @return $this
     */
@@ -377,8 +399,32 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets defectOwner
+    *  **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getDefectOwner()
+    {
+        return $this->container['defectOwner'];
+    }
+
+    /**
+    * Sets defectOwner
+    *
+    * @param string|null $defectOwner **参数解释：** 问题责任人。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDefectOwner($defectOwner)
+    {
+        $this->container['defectOwner'] = $defectOwner;
+        return $this;
+    }
+
+    /**
     * Gets ruleSystemTags
-    *  规则标签,多个标签用逗号隔开
+    *  **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -390,7 +436,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSystemTags
     *
-    * @param string|null $ruleSystemTags 规则标签,多个标签用逗号隔开
+    * @param string|null $ruleSystemTags **参数解释：** 标签，多个标签用逗号隔开。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -401,8 +447,32 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets ruleId
+    *  **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getRuleId()
+    {
+        return $this->container['ruleId'];
+    }
+
+    /**
+    * Sets ruleId
+    *
+    * @param string|null $ruleId **参数解释：** 规则ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setRuleId($ruleId)
+    {
+        $this->container['ruleId'] = $ruleId;
+        return $this;
+    }
+
+    /**
     * Gets ruleName
-    *  规则名
+    *  **参数解释：** 规则名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -414,7 +484,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 规则名
+    * @param string|null $ruleName **参数解释：** 规则名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -426,7 +496,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineNumber
-    *  缺陷所在文件行号
+    *  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -438,7 +508,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lineNumber
     *
-    * @param string|null $lineNumber 缺陷所在文件行号
+    * @param string|null $lineNumber **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -450,7 +520,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets defectContent
-    *  缺陷描述
+    *  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -462,7 +532,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets defectContent
     *
-    * @param string|null $defectContent 缺陷描述
+    * @param string|null $defectContent **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -474,7 +544,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets defectLevel
-    *  缺陷等级，0致命，1严重，2一般，3提示
+    *  **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
     *
     * @return string|null
     */
@@ -486,7 +556,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets defectLevel
     *
-    * @param string|null $defectLevel 缺陷等级，0致命，1严重，2一般，3提示
+    * @param string|null $defectLevel **参数解释：** 问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
     *
     * @return $this
     */
@@ -498,7 +568,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  缺陷文件路径
+    *  **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -510,7 +580,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 缺陷文件路径
+    * @param string|null $filePath **参数解释：** 问题文件路径。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -522,7 +592,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间
+    *  **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -534,7 +604,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间
+    * @param string|null $createdAt **参数解释：** 问题发现时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -546,7 +616,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets issueKey
-    *  问题唯一标识
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -558,7 +628,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets issueKey
     *
-    * @param string|null $issueKey 问题唯一标识
+    * @param string|null $issueKey **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -570,7 +640,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets fragment
-    *  缺陷代码片段详情
+    *  **参数解释：** 代码片段内容。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectFragmentV2[]|null
     */
@@ -582,7 +652,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets fragment
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectFragmentV2[]|null $fragment 缺陷代码片段详情
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectFragmentV2[]|null $fragment **参数解释：** 代码片段内容。
     *
     * @return $this
     */
@@ -594,7 +664,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets events
-    *  调用链信息
+    *  **参数解释：** 调用链信息。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectEvents[]|null
     */
@@ -606,7 +676,7 @@ class DefectInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets events
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectEvents[]|null $events 调用链信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectEvents[]|null $events **参数解释：** 调用链信息。
     *
     * @return $this
     */

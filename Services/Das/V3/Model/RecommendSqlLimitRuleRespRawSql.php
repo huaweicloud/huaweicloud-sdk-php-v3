@@ -31,7 +31,7 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'sessionId' => 'float',
+            'sessionId' => 'int',
             'host' => 'string',
             'sql' => 'string',
             'db' => 'string',
@@ -53,7 +53,7 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'sessionId' => null,
+        'sessionId' => 'int64',
         'host' => null,
         'sql' => null,
         'db' => null,
@@ -242,7 +242,7 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     * Gets sessionId
     *  会话id
     *
-    * @return float|null
+    * @return int|null
     */
     public function getSessionId()
     {
@@ -252,7 +252,7 @@ class RecommendSqlLimitRuleRespRawSql implements ModelInterface, ArrayAccess
     /**
     * Sets sessionId
     *
-    * @param float|null $sessionId 会话id
+    * @param int|null $sessionId 会话id
     *
     * @return $this
     */

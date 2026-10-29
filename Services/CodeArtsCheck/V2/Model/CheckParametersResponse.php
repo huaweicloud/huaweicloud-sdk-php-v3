@@ -26,7 +26,7 @@ class CheckParametersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskCheckParamters[]'
+            'body' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskCheckParameters[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class CheckParametersResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskCheckParamters[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskCheckParameters[]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class CheckParametersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskCheckParamters[]|null $body body
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskCheckParameters[]|null $body body
     *
     * @return $this
     */

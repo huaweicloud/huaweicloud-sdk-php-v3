@@ -32,6 +32,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
     * vaultId  存储库ID,该任务操作的资源所属绑定的存储库。
     * vaultName  存储库名称，该任务操作资源所绑定的存储库名称。
     * enterpriseProjectId  企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
+    * destinationRegion  **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * destinationProjectId  **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'vaultId' => 'string',
             'vaultName' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'destinationRegion' => 'string',
+            'destinationProjectId' => 'string'
     ];
 
     /**
@@ -64,6 +68,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
     * vaultId  存储库ID,该任务操作的资源所属绑定的存储库。
     * vaultName  存储库名称，该任务操作资源所绑定的存储库名称。
     * enterpriseProjectId  企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
+    * destinationRegion  **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * destinationProjectId  **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'vaultId' => null,
         'vaultName' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'destinationRegion' => null,
+        'destinationProjectId' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
     * vaultId  存储库ID,该任务操作的资源所属绑定的存储库。
     * vaultName  存储库名称，该任务操作资源所绑定的存储库名称。
     * enterpriseProjectId  企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
+    * destinationRegion  **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * destinationProjectId  **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'vaultId' => 'vault_id',
             'vaultName' => 'vault_name',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'destinationRegion' => 'destination_region',
+            'destinationProjectId' => 'destination_project_id'
     ];
 
     /**
@@ -149,6 +161,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
     * vaultId  存储库ID,该任务操作的资源所属绑定的存储库。
     * vaultName  存储库名称，该任务操作资源所绑定的存储库名称。
     * enterpriseProjectId  企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
+    * destinationRegion  **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * destinationProjectId  **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'vaultId' => 'setVaultId',
             'vaultName' => 'setVaultName',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'destinationRegion' => 'setDestinationRegion',
+            'destinationProjectId' => 'setDestinationProjectId'
     ];
 
     /**
@@ -181,6 +197,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
     * vaultId  存储库ID,该任务操作的资源所属绑定的存储库。
     * vaultName  存储库名称，该任务操作资源所绑定的存储库名称。
     * enterpriseProjectId  企业项目id或all_granted_eps，all_granted_eps表示查询用户有权限的所有企业项目id
+    * destinationRegion  **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * destinationProjectId  **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'vaultId' => 'getVaultId',
             'vaultName' => 'getVaultName',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'destinationRegion' => 'getDestinationRegion',
+            'destinationProjectId' => 'getDestinationProjectId'
     ];
 
     /**
@@ -319,6 +339,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
         $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
         $this->container['vaultName'] = isset($data['vaultName']) ? $data['vaultName'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['destinationRegion'] = isset($data['destinationRegion']) ? $data['destinationRegion'] : null;
+        $this->container['destinationProjectId'] = isset($data['destinationProjectId']) ? $data['destinationProjectId'] : null;
     }
 
     /**
@@ -332,8 +354,8 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] < 1)) {
-                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 1.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getOperationTypeAllowableValues();
                 if (!is_null($this->container['operationType']) && !in_array($this->container['operationType'], $allowedValues, true)) {
@@ -351,6 +373,15 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['destinationRegion']) && (mb_strlen($this->container['destinationRegion']) > 255)) {
+                $invalidProperties[] = "invalid value for 'destinationRegion', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['destinationRegion']) && (mb_strlen($this->container['destinationRegion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'destinationRegion', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['destinationRegion']) && !preg_match("/^[a-zA-Z0-9._\\-]*$/", $this->container['destinationRegion'])) {
+                $invalidProperties[] = "invalid value for 'destinationRegion', must be conform to the pattern /^[a-zA-Z0-9._\\-]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -650,6 +681,54 @@ class ListOpLogsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets destinationRegion
+    *  **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getDestinationRegion()
+    {
+        return $this->container['destinationRegion'];
+    }
+
+    /**
+    * Sets destinationRegion
+    *
+    * @param string|null $destinationRegion **参数解释：** 复制的目标区域 [获取方法请参见\"[地区和终端节点查询](https://console.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。 ](tag:hws) [获取方法请参见\"[地区和终端节点查询](https://console-intl.huaweicloud.com/apiexplorer/#/endpoint/CBR)\"。](tag:hws_hk) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setDestinationRegion($destinationRegion)
+    {
+        $this->container['destinationRegion'] = $destinationRegion;
+        return $this;
+    }
+
+    /**
+    * Gets destinationProjectId
+    *  **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getDestinationProjectId()
+    {
+        return $this->container['destinationProjectId'];
+    }
+
+    /**
+    * Sets destinationProjectId
+    *
+    * @param string|null $destinationProjectId **参数解释：** 复制的目标区域项目ID，获取方法请参见[获取项目ID](cbr_04_0022.xml) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setDestinationProjectId($destinationProjectId)
+    {
+        $this->container['destinationProjectId'] = $destinationProjectId;
         return $this;
     }
 

@@ -20,13 +20,13 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * parentTaskId  需要关联的父任务ID，流水线创建或MR创建任务需要该参数
-    * gitSourceBranch  增量检查代码源分支
-    * gitTargetBranch  增量检查代码目标分支
-    * mergeId  MR唯一标示ID
-    * eventType  webhook触发事件类型,merge_request/push_request
-    * action  webhook事件状态，open/close/update
-    * title  MR标题
+    * parentTaskId  **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitSourceBranch  **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitTargetBranch  **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * mergeId  **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * eventType  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
+    * action  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
+    * title  **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * parentTaskId  需要关联的父任务ID，流水线创建或MR创建任务需要该参数
-    * gitSourceBranch  增量检查代码源分支
-    * gitTargetBranch  增量检查代码目标分支
-    * mergeId  MR唯一标示ID
-    * eventType  webhook触发事件类型,merge_request/push_request
-    * action  webhook事件状态，open/close/update
-    * title  MR标题
+    * parentTaskId  **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitSourceBranch  **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitTargetBranch  **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * mergeId  **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * eventType  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
+    * action  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
+    * title  **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * parentTaskId  需要关联的父任务ID，流水线创建或MR创建任务需要该参数
-    * gitSourceBranch  增量检查代码源分支
-    * gitTargetBranch  增量检查代码目标分支
-    * mergeId  MR唯一标示ID
-    * eventType  webhook触发事件类型,merge_request/push_request
-    * action  webhook事件状态，open/close/update
-    * title  MR标题
+    * parentTaskId  **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitSourceBranch  **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitTargetBranch  **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * mergeId  **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * eventType  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
+    * action  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
+    * title  **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * parentTaskId  需要关联的父任务ID，流水线创建或MR创建任务需要该参数
-    * gitSourceBranch  增量检查代码源分支
-    * gitTargetBranch  增量检查代码目标分支
-    * mergeId  MR唯一标示ID
-    * eventType  webhook触发事件类型,merge_request/push_request
-    * action  webhook事件状态，open/close/update
-    * title  MR标题
+    * parentTaskId  **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitSourceBranch  **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitTargetBranch  **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * mergeId  **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * eventType  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
+    * action  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
+    * title  **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * parentTaskId  需要关联的父任务ID，流水线创建或MR创建任务需要该参数
-    * gitSourceBranch  增量检查代码源分支
-    * gitTargetBranch  增量检查代码目标分支
-    * mergeId  MR唯一标示ID
-    * eventType  webhook触发事件类型,merge_request/push_request
-    * action  webhook事件状态，open/close/update
-    * title  MR标题
+    * parentTaskId  **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitSourceBranch  **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitTargetBranch  **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * mergeId  **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * eventType  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
+    * action  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
+    * title  **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTaskId
-    *  需要关联的父任务ID，流水线创建或MR创建任务需要该参数
+    *  **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets parentTaskId
     *
-    * @param string|null $parentTaskId 需要关联的父任务ID，流水线创建或MR创建任务需要该参数
+    * @param string|null $parentTaskId **参数解释：** 需要关联的任务ID。 **约束限制：** 32位UUID。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitSourceBranch
-    *  增量检查代码源分支
+    *  **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets gitSourceBranch
     *
-    * @param string|null $gitSourceBranch 增量检查代码源分支
+    * @param string|null $gitSourceBranch **参数解释：** MR增量任务的源分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitTargetBranch
-    *  增量检查代码目标分支
+    *  **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets gitTargetBranch
     *
-    * @param string|null $gitTargetBranch 增量检查代码目标分支
+    * @param string|null $gitTargetBranch **参数解释：** MR增量任务的目标分支。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets mergeId
-    *  MR唯一标示ID
+    *  **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets mergeId
     *
-    * @param string|null $mergeId MR唯一标示ID
+    * @param string|null $mergeId **参数解释：** MR编号。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  webhook触发事件类型,merge_request/push_request
+    *  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param string|null $eventType webhook触发事件类型,merge_request/push_request
+    * @param string|null $eventType **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** merge_request。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  webhook事件状态，open/close/update
+    *  **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action webhook事件状态，open/close/update
+    * @param string|null $action **参数解释：** 创建MR增量任务时需传。 **约束限制：** 不涉及。 **取值范围：** open。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  MR标题
+    *  **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class IncConfigV2 implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title MR标题
+    * @param string|null $title **参数解释：** 创建MR增量任务时需传，MR标题。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

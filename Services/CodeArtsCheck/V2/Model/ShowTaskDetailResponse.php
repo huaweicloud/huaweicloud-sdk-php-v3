@@ -21,35 +21,44 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * lastCheckTime  上一次检查时间
-    * codeLineTotal  代码总行数
-    * codeLine  代码有效行数
-    * codeQuality  代码质量
-    * issueCount  问题数
-    * riskCoefficient  危险系数
-    * duplicationRatio  重复比例
-    * complexityCount  复杂度
-    * duplicatedLines  重复行数
-    * commentLines  注释行数
-    * commentRatio  注释比例
-    * duplicatedBlocks  重复块
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
-    * cyclomaticComplexityPerMethod  代码平均复杂度
-    * cyclomaticComplexityPerFile  代码平均复杂度(文件)
-    * criticalCount  致命问题数
-    * majorCount  严重问题数
-    * minorCount  一般问题数
-    * suggestionCount  提示问题数
-    * isAccess  门禁质量是否通过
-    * triggerType  任务触发方式
-    * fileDuplicationRatio  文件重复率
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * codeLineTotal  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * codeLine  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * codeQuality  **参数解释：** 代码质量。 **取值范围：** 不涉及。
+    * issueCount  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * riskCoefficient  **参数解释：** 危险系数。 **取值范围：** 不涉及。
+    * duplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * complexityCount  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * duplicatedLines  **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
+    * commentLines  **参数解释：** 注释行数。 **取值范围：** 不涉及。
+    * commentRatio  **参数解释：** 注释率。 **取值范围：** 不涉及。
+    * duplicatedBlocks  **参数解释：** 重复块个数。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerFile  **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
+    * criticalCount  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * majorCount  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minorCount  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestionCount  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * isAccess  **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
+    * reviewResult  **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    * triggerType  **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * newCount  **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * solveCount  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissedCount  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * duplicatedFiles  **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    * newCriticalCount  **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMajorCount  **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMinorCount  **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newSuggestionCount  **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -81,41 +90,59 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
             'minorCount' => 'string',
             'suggestionCount' => 'string',
             'isAccess' => 'string',
+            'reviewResult' => 'string',
             'triggerType' => 'string',
-            'fileDuplicationRatio' => 'string'
+            'fileDuplicationRatio' => 'string',
+            'newCount' => 'int',
+            'solveCount' => 'int',
+            'dismissedCount' => 'int',
+            'duplicatedFiles' => 'int',
+            'newCriticalCount' => 'string',
+            'newMajorCount' => 'string',
+            'newMinorCount' => 'string',
+            'newSuggestionCount' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * lastCheckTime  上一次检查时间
-    * codeLineTotal  代码总行数
-    * codeLine  代码有效行数
-    * codeQuality  代码质量
-    * issueCount  问题数
-    * riskCoefficient  危险系数
-    * duplicationRatio  重复比例
-    * complexityCount  复杂度
-    * duplicatedLines  重复行数
-    * commentLines  注释行数
-    * commentRatio  注释比例
-    * duplicatedBlocks  重复块
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
-    * cyclomaticComplexityPerMethod  代码平均复杂度
-    * cyclomaticComplexityPerFile  代码平均复杂度(文件)
-    * criticalCount  致命问题数
-    * majorCount  严重问题数
-    * minorCount  一般问题数
-    * suggestionCount  提示问题数
-    * isAccess  门禁质量是否通过
-    * triggerType  任务触发方式
-    * fileDuplicationRatio  文件重复率
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * codeLineTotal  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * codeLine  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * codeQuality  **参数解释：** 代码质量。 **取值范围：** 不涉及。
+    * issueCount  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * riskCoefficient  **参数解释：** 危险系数。 **取值范围：** 不涉及。
+    * duplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * complexityCount  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * duplicatedLines  **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
+    * commentLines  **参数解释：** 注释行数。 **取值范围：** 不涉及。
+    * commentRatio  **参数解释：** 注释率。 **取值范围：** 不涉及。
+    * duplicatedBlocks  **参数解释：** 重复块个数。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerFile  **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
+    * criticalCount  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * majorCount  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minorCount  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestionCount  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * isAccess  **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
+    * reviewResult  **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    * triggerType  **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * newCount  **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * solveCount  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissedCount  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * duplicatedFiles  **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    * newCriticalCount  **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMajorCount  **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMinorCount  **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newSuggestionCount  **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -147,8 +174,17 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
         'minorCount' => null,
         'suggestionCount' => null,
         'isAccess' => null,
+        'reviewResult' => null,
         'triggerType' => null,
-        'fileDuplicationRatio' => null
+        'fileDuplicationRatio' => null,
+        'newCount' => null,
+        'solveCount' => null,
+        'dismissedCount' => null,
+        'duplicatedFiles' => null,
+        'newCriticalCount' => null,
+        'newMajorCount' => null,
+        'newMinorCount' => null,
+        'newSuggestionCount' => null
     ];
 
     /**
@@ -174,35 +210,44 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * lastCheckTime  上一次检查时间
-    * codeLineTotal  代码总行数
-    * codeLine  代码有效行数
-    * codeQuality  代码质量
-    * issueCount  问题数
-    * riskCoefficient  危险系数
-    * duplicationRatio  重复比例
-    * complexityCount  复杂度
-    * duplicatedLines  重复行数
-    * commentLines  注释行数
-    * commentRatio  注释比例
-    * duplicatedBlocks  重复块
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
-    * cyclomaticComplexityPerMethod  代码平均复杂度
-    * cyclomaticComplexityPerFile  代码平均复杂度(文件)
-    * criticalCount  致命问题数
-    * majorCount  严重问题数
-    * minorCount  一般问题数
-    * suggestionCount  提示问题数
-    * isAccess  门禁质量是否通过
-    * triggerType  任务触发方式
-    * fileDuplicationRatio  文件重复率
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * codeLineTotal  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * codeLine  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * codeQuality  **参数解释：** 代码质量。 **取值范围：** 不涉及。
+    * issueCount  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * riskCoefficient  **参数解释：** 危险系数。 **取值范围：** 不涉及。
+    * duplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * complexityCount  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * duplicatedLines  **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
+    * commentLines  **参数解释：** 注释行数。 **取值范围：** 不涉及。
+    * commentRatio  **参数解释：** 注释率。 **取值范围：** 不涉及。
+    * duplicatedBlocks  **参数解释：** 重复块个数。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerFile  **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
+    * criticalCount  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * majorCount  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minorCount  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestionCount  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * isAccess  **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
+    * reviewResult  **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    * triggerType  **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * newCount  **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * solveCount  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissedCount  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * duplicatedFiles  **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    * newCriticalCount  **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMajorCount  **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMinorCount  **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newSuggestionCount  **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -234,41 +279,59 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
             'minorCount' => 'minor_count',
             'suggestionCount' => 'suggestion_count',
             'isAccess' => 'is_access',
+            'reviewResult' => 'review_result',
             'triggerType' => 'trigger_type',
-            'fileDuplicationRatio' => 'file_duplication_ratio'
+            'fileDuplicationRatio' => 'file_duplication_ratio',
+            'newCount' => 'new_count',
+            'solveCount' => 'solve_count',
+            'dismissedCount' => 'dismissed_count',
+            'duplicatedFiles' => 'duplicated_files',
+            'newCriticalCount' => 'new_critical_count',
+            'newMajorCount' => 'new_major_count',
+            'newMinorCount' => 'new_minor_count',
+            'newSuggestionCount' => 'new_suggestion_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * lastCheckTime  上一次检查时间
-    * codeLineTotal  代码总行数
-    * codeLine  代码有效行数
-    * codeQuality  代码质量
-    * issueCount  问题数
-    * riskCoefficient  危险系数
-    * duplicationRatio  重复比例
-    * complexityCount  复杂度
-    * duplicatedLines  重复行数
-    * commentLines  注释行数
-    * commentRatio  注释比例
-    * duplicatedBlocks  重复块
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
-    * cyclomaticComplexityPerMethod  代码平均复杂度
-    * cyclomaticComplexityPerFile  代码平均复杂度(文件)
-    * criticalCount  致命问题数
-    * majorCount  严重问题数
-    * minorCount  一般问题数
-    * suggestionCount  提示问题数
-    * isAccess  门禁质量是否通过
-    * triggerType  任务触发方式
-    * fileDuplicationRatio  文件重复率
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * codeLineTotal  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * codeLine  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * codeQuality  **参数解释：** 代码质量。 **取值范围：** 不涉及。
+    * issueCount  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * riskCoefficient  **参数解释：** 危险系数。 **取值范围：** 不涉及。
+    * duplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * complexityCount  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * duplicatedLines  **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
+    * commentLines  **参数解释：** 注释行数。 **取值范围：** 不涉及。
+    * commentRatio  **参数解释：** 注释率。 **取值范围：** 不涉及。
+    * duplicatedBlocks  **参数解释：** 重复块个数。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerFile  **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
+    * criticalCount  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * majorCount  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minorCount  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestionCount  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * isAccess  **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
+    * reviewResult  **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    * triggerType  **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * newCount  **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * solveCount  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissedCount  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * duplicatedFiles  **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    * newCriticalCount  **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMajorCount  **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMinorCount  **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newSuggestionCount  **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -300,41 +363,59 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
             'minorCount' => 'setMinorCount',
             'suggestionCount' => 'setSuggestionCount',
             'isAccess' => 'setIsAccess',
+            'reviewResult' => 'setReviewResult',
             'triggerType' => 'setTriggerType',
-            'fileDuplicationRatio' => 'setFileDuplicationRatio'
+            'fileDuplicationRatio' => 'setFileDuplicationRatio',
+            'newCount' => 'setNewCount',
+            'solveCount' => 'setSolveCount',
+            'dismissedCount' => 'setDismissedCount',
+            'duplicatedFiles' => 'setDuplicatedFiles',
+            'newCriticalCount' => 'setNewCriticalCount',
+            'newMajorCount' => 'setNewMajorCount',
+            'newMinorCount' => 'setNewMinorCount',
+            'newSuggestionCount' => 'setNewSuggestionCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * lastCheckTime  上一次检查时间
-    * codeLineTotal  代码总行数
-    * codeLine  代码有效行数
-    * codeQuality  代码质量
-    * issueCount  问题数
-    * riskCoefficient  危险系数
-    * duplicationRatio  重复比例
-    * complexityCount  复杂度
-    * duplicatedLines  重复行数
-    * commentLines  注释行数
-    * commentRatio  注释比例
-    * duplicatedBlocks  重复块
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
-    * cyclomaticComplexityPerMethod  代码平均复杂度
-    * cyclomaticComplexityPerFile  代码平均复杂度(文件)
-    * criticalCount  致命问题数
-    * majorCount  严重问题数
-    * minorCount  一般问题数
-    * suggestionCount  提示问题数
-    * isAccess  门禁质量是否通过
-    * triggerType  任务触发方式
-    * fileDuplicationRatio  文件重复率
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * codeLineTotal  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
+    * codeLine  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
+    * codeQuality  **参数解释：** 代码质量。 **取值范围：** 不涉及。
+    * issueCount  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * riskCoefficient  **参数解释：** 危险系数。 **取值范围：** 不涉及。
+    * duplicationRatio  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
+    * complexityCount  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
+    * duplicatedLines  **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
+    * commentLines  **参数解释：** 注释行数。 **取值范围：** 不涉及。
+    * commentRatio  **参数解释：** 注释率。 **取值范围：** 不涉及。
+    * duplicatedBlocks  **参数解释：** 重复块个数。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerMethod  **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
+    * cyclomaticComplexityPerFile  **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
+    * criticalCount  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * majorCount  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * minorCount  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * suggestionCount  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * isAccess  **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
+    * reviewResult  **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    * triggerType  **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
+    * fileDuplicationRatio  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
+    * newCount  **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * solveCount  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissedCount  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * duplicatedFiles  **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    * newCriticalCount  **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMajorCount  **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newMinorCount  **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * newSuggestionCount  **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -366,8 +447,17 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
             'minorCount' => 'getMinorCount',
             'suggestionCount' => 'getSuggestionCount',
             'isAccess' => 'getIsAccess',
+            'reviewResult' => 'getReviewResult',
             'triggerType' => 'getTriggerType',
-            'fileDuplicationRatio' => 'getFileDuplicationRatio'
+            'fileDuplicationRatio' => 'getFileDuplicationRatio',
+            'newCount' => 'getNewCount',
+            'solveCount' => 'getSolveCount',
+            'dismissedCount' => 'getDismissedCount',
+            'duplicatedFiles' => 'getDuplicatedFiles',
+            'newCriticalCount' => 'getNewCriticalCount',
+            'newMajorCount' => 'getNewMajorCount',
+            'newMinorCount' => 'getNewMinorCount',
+            'newSuggestionCount' => 'getNewSuggestionCount'
     ];
 
     /**
@@ -455,8 +545,17 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
         $this->container['minorCount'] = isset($data['minorCount']) ? $data['minorCount'] : null;
         $this->container['suggestionCount'] = isset($data['suggestionCount']) ? $data['suggestionCount'] : null;
         $this->container['isAccess'] = isset($data['isAccess']) ? $data['isAccess'] : null;
+        $this->container['reviewResult'] = isset($data['reviewResult']) ? $data['reviewResult'] : null;
         $this->container['triggerType'] = isset($data['triggerType']) ? $data['triggerType'] : null;
         $this->container['fileDuplicationRatio'] = isset($data['fileDuplicationRatio']) ? $data['fileDuplicationRatio'] : null;
+        $this->container['newCount'] = isset($data['newCount']) ? $data['newCount'] : null;
+        $this->container['solveCount'] = isset($data['solveCount']) ? $data['solveCount'] : null;
+        $this->container['dismissedCount'] = isset($data['dismissedCount']) ? $data['dismissedCount'] : null;
+        $this->container['duplicatedFiles'] = isset($data['duplicatedFiles']) ? $data['duplicatedFiles'] : null;
+        $this->container['newCriticalCount'] = isset($data['newCriticalCount']) ? $data['newCriticalCount'] : null;
+        $this->container['newMajorCount'] = isset($data['newMajorCount']) ? $data['newMajorCount'] : null;
+        $this->container['newMinorCount'] = isset($data['newMinorCount']) ? $data['newMinorCount'] : null;
+        $this->container['newSuggestionCount'] = isset($data['newSuggestionCount']) ? $data['newSuggestionCount'] : null;
     }
 
     /**
@@ -483,7 +582,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -495,7 +594,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务id
+    * @param string|null $taskId **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -507,7 +606,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名字
+    *  **参数解释：** 任务名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -519,7 +618,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务名字
+    * @param string|null $taskName **参数解释：** 任务名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -531,7 +630,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  创建者id
+    *  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -543,7 +642,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string|null $creatorId 创建者id
+    * @param string|null $creatorId **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -555,7 +654,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码仓地址
+    *  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -567,7 +666,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓地址
+    * @param string|null $gitUrl **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -579,7 +678,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitBranch
-    *  代码仓分支,如果是MR模式，为源分支
+    *  **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -591,7 +690,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gitBranch
     *
-    * @param string|null $gitBranch 代码仓分支,如果是MR模式，为源分支
+    * @param string|null $gitBranch **参数解释：** 代码仓分支，如果是MR模式，为源分支。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -603,7 +702,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastCheckTime
-    *  上一次检查时间
+    *  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -615,7 +714,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastCheckTime
     *
-    * @param string|null $lastCheckTime 上一次检查时间
+    * @param string|null $lastCheckTime **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -627,7 +726,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeLineTotal
-    *  代码总行数
+    *  **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -639,7 +738,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets codeLineTotal
     *
-    * @param int|null $codeLineTotal 代码总行数
+    * @param int|null $codeLineTotal **参数解释：** 原始代码行数，包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -651,7 +750,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeLine
-    *  代码有效行数
+    *  **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -663,7 +762,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets codeLine
     *
-    * @param int|null $codeLine 代码有效行数
+    * @param int|null $codeLine **参数解释：** 有效代码行数，不包含空行和注释行。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -675,7 +774,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeQuality
-    *  代码质量
+    *  **参数解释：** 代码质量。 **取值范围：** 不涉及。
     *
     * @return float|null
     */
@@ -687,7 +786,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets codeQuality
     *
-    * @param float|null $codeQuality 代码质量
+    * @param float|null $codeQuality **参数解释：** 代码质量。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -699,7 +798,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets issueCount
-    *  问题数
+    *  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -711,7 +810,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets issueCount
     *
-    * @param int|null $issueCount 问题数
+    * @param int|null $issueCount **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -723,7 +822,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskCoefficient
-    *  危险系数
+    *  **参数解释：** 危险系数。 **取值范围：** 不涉及。
     *
     * @return float|null
     */
@@ -735,7 +834,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets riskCoefficient
     *
-    * @param float|null $riskCoefficient 危险系数
+    * @param float|null $riskCoefficient **参数解释：** 危险系数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -747,7 +846,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets duplicationRatio
-    *  重复比例
+    *  **参数解释：** 代码重复率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -759,7 +858,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets duplicationRatio
     *
-    * @param string|null $duplicationRatio 重复比例
+    * @param string|null $duplicationRatio **参数解释：** 代码重复率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -771,7 +870,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets complexityCount
-    *  复杂度
+    *  **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -783,7 +882,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets complexityCount
     *
-    * @param int|null $complexityCount 复杂度
+    * @param int|null $complexityCount **参数解释：** 圈复杂度总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -795,7 +894,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets duplicatedLines
-    *  重复行数
+    *  **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -807,7 +906,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets duplicatedLines
     *
-    * @param int|null $duplicatedLines 重复行数
+    * @param int|null $duplicatedLines **参数解释：** 重复行数总数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -819,7 +918,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets commentLines
-    *  注释行数
+    *  **参数解释：** 注释行数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -831,7 +930,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets commentLines
     *
-    * @param int|null $commentLines 注释行数
+    * @param int|null $commentLines **参数解释：** 注释行数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -843,7 +942,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets commentRatio
-    *  注释比例
+    *  **参数解释：** 注释率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -855,7 +954,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets commentRatio
     *
-    * @param string|null $commentRatio 注释比例
+    * @param string|null $commentRatio **参数解释：** 注释率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -867,7 +966,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets duplicatedBlocks
-    *  重复块
+    *  **参数解释：** 重复块个数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -879,7 +978,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets duplicatedBlocks
     *
-    * @param int|null $duplicatedBlocks 重复块
+    * @param int|null $duplicatedBlocks **参数解释：** 重复块个数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -891,7 +990,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastExecTime
-    *  上次执行时间
+    *  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -903,7 +1002,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastExecTime
     *
-    * @param string|null $lastExecTime 上次执行时间
+    * @param string|null $lastExecTime **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -915,7 +1014,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkType
-    *  检查类型
+    *  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -927,7 +1026,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string|null $checkType 检查类型
+    * @param string|null $checkType **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -939,7 +1038,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间
+    *  **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -951,7 +1050,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间
+    * @param string|null $createdAt **参数解释：** 创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -963,7 +1062,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cyclomaticComplexityPerMethod
-    *  代码平均复杂度
+    *  **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -975,7 +1074,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cyclomaticComplexityPerMethod
     *
-    * @param string|null $cyclomaticComplexityPerMethod 代码平均复杂度
+    * @param string|null $cyclomaticComplexityPerMethod **参数解释：** 平均圈复杂度（方法）。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -987,7 +1086,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets cyclomaticComplexityPerFile
-    *  代码平均复杂度(文件)
+    *  **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -999,7 +1098,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cyclomaticComplexityPerFile
     *
-    * @param string|null $cyclomaticComplexityPerFile 代码平均复杂度(文件)
+    * @param string|null $cyclomaticComplexityPerFile **参数解释：** 平均圈复杂度（文件）。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1011,7 +1110,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets criticalCount
-    *  致命问题数
+    *  **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1023,7 +1122,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets criticalCount
     *
-    * @param string|null $criticalCount 致命问题数
+    * @param string|null $criticalCount **参数解释：** 致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1035,7 +1134,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets majorCount
-    *  严重问题数
+    *  **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1047,7 +1146,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets majorCount
     *
-    * @param string|null $majorCount 严重问题数
+    * @param string|null $majorCount **参数解释：** 严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1059,7 +1158,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets minorCount
-    *  一般问题数
+    *  **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1071,7 +1170,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets minorCount
     *
-    * @param string|null $minorCount 一般问题数
+    * @param string|null $minorCount **参数解释：** 一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1083,7 +1182,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets suggestionCount
-    *  提示问题数
+    *  **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1095,7 +1194,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets suggestionCount
     *
-    * @param string|null $suggestionCount 提示问题数
+    * @param string|null $suggestionCount **参数解释：** 提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -1107,7 +1206,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAccess
-    *  门禁质量是否通过
+    *  **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
     *
     * @return string|null
     */
@@ -1119,7 +1218,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isAccess
     *
-    * @param string|null $isAccess 门禁质量是否通过
+    * @param string|null $isAccess **参数解释：** 门禁质量是否通过。 **取值范围：** - 1：门禁通过。 - 0：门禁不通过。
     *
     * @return $this
     */
@@ -1130,8 +1229,32 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets reviewResult
+    *  **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getReviewResult()
+    {
+        return $this->container['reviewResult'];
+    }
+
+    /**
+    * Sets reviewResult
+    *
+    * @param string|null $reviewResult **参数解释：** 门禁质量是否通过。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setReviewResult($reviewResult)
+    {
+        $this->container['reviewResult'] = $reviewResult;
+        return $this;
+    }
+
+    /**
     * Gets triggerType
-    *  任务触发方式
+    *  **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
     *
     * @return string|null
     */
@@ -1143,7 +1266,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets triggerType
     *
-    * @param string|null $triggerType 任务触发方式
+    * @param string|null $triggerType **参数解释：** 任务触发方式。 **取值范围：** - 0：手动触发。 - 1：定时触发。 - 2：代码提交触发。 - 3：合并请求触发。
     *
     * @return $this
     */
@@ -1155,7 +1278,7 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileDuplicationRatio
-    *  文件重复率
+    *  **参数解释：** 文件重复率。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -1167,13 +1290,205 @@ class ShowTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets fileDuplicationRatio
     *
-    * @param string|null $fileDuplicationRatio 文件重复率
+    * @param string|null $fileDuplicationRatio **参数解释：** 文件重复率。 **取值范围：** 不涉及。
     *
     * @return $this
     */
     public function setFileDuplicationRatio($fileDuplicationRatio)
     {
         $this->container['fileDuplicationRatio'] = $fileDuplicationRatio;
+        return $this;
+    }
+
+    /**
+    * Gets newCount
+    *  **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getNewCount()
+    {
+        return $this->container['newCount'];
+    }
+
+    /**
+    * Sets newCount
+    *
+    * @param int|null $newCount **参数解释：** 新发现问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNewCount($newCount)
+    {
+        $this->container['newCount'] = $newCount;
+        return $this;
+    }
+
+    /**
+    * Gets solveCount
+    *  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getSolveCount()
+    {
+        return $this->container['solveCount'];
+    }
+
+    /**
+    * Sets solveCount
+    *
+    * @param int|null $solveCount **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setSolveCount($solveCount)
+    {
+        $this->container['solveCount'] = $solveCount;
+        return $this;
+    }
+
+    /**
+    * Gets dismissedCount
+    *  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getDismissedCount()
+    {
+        return $this->container['dismissedCount'];
+    }
+
+    /**
+    * Sets dismissedCount
+    *
+    * @param int|null $dismissedCount **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDismissedCount($dismissedCount)
+    {
+        $this->container['dismissedCount'] = $dismissedCount;
+        return $this;
+    }
+
+    /**
+    * Gets duplicatedFiles
+    *  **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getDuplicatedFiles()
+    {
+        return $this->container['duplicatedFiles'];
+    }
+
+    /**
+    * Sets duplicatedFiles
+    *
+    * @param int|null $duplicatedFiles **参数解释：** 重复文件数量。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setDuplicatedFiles($duplicatedFiles)
+    {
+        $this->container['duplicatedFiles'] = $duplicatedFiles;
+        return $this;
+    }
+
+    /**
+    * Gets newCriticalCount
+    *  **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNewCriticalCount()
+    {
+        return $this->container['newCriticalCount'];
+    }
+
+    /**
+    * Sets newCriticalCount
+    *
+    * @param string|null $newCriticalCount **参数解释：** 新增致命问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNewCriticalCount($newCriticalCount)
+    {
+        $this->container['newCriticalCount'] = $newCriticalCount;
+        return $this;
+    }
+
+    /**
+    * Gets newMajorCount
+    *  **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNewMajorCount()
+    {
+        return $this->container['newMajorCount'];
+    }
+
+    /**
+    * Sets newMajorCount
+    *
+    * @param string|null $newMajorCount **参数解释：** 新增严重问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNewMajorCount($newMajorCount)
+    {
+        $this->container['newMajorCount'] = $newMajorCount;
+        return $this;
+    }
+
+    /**
+    * Gets newMinorCount
+    *  **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNewMinorCount()
+    {
+        return $this->container['newMinorCount'];
+    }
+
+    /**
+    * Sets newMinorCount
+    *
+    * @param string|null $newMinorCount **参数解释：** 新增一般问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNewMinorCount($newMinorCount)
+    {
+        $this->container['newMinorCount'] = $newMinorCount;
+        return $this;
+    }
+
+    /**
+    * Gets newSuggestionCount
+    *  **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getNewSuggestionCount()
+    {
+        return $this->container['newSuggestionCount'];
+    }
+
+    /**
+    * Sets newSuggestionCount
+    *
+    * @param string|null $newSuggestionCount **参数解释：** 新增提示问题数。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setNewSuggestionCount($newSuggestionCount)
+    {
+        $this->container['newSuggestionCount'] = $newSuggestionCount;
         return $this;
     }
 

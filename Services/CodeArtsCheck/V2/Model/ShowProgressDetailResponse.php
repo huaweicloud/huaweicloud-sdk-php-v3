@@ -21,7 +21,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskStatus  任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    * taskStatus  **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     * progress  progress
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskStatus  任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    * taskStatus  **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     * progress  progress
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskStatus  任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    * taskStatus  **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     * progress  progress
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskStatus  任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    * taskStatus  **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     * progress  progress
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskStatus  任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    * taskStatus  **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     * progress  progress
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskStatus
-    *  任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    *  **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ShowProgressDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskStatus
     *
-    * @param int|null $taskStatus 任务状态,0表示检查中，1表示检查失败，2表示检查成功，3表示任务中止
+    * @param int|null $taskStatus **参数解释:** 检查任务的执行状态。 **取值范围:** - 0：检查中。 - 1：检查失败。 - 2：检查成功。 - 3：任务中止。 - null：未检查。
     *
     * @return $this
     */

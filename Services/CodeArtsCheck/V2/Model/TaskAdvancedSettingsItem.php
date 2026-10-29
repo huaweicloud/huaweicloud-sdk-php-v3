@@ -20,8 +20,8 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
+    * key  **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
+    * key  **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
+    * key  **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
+    * key  **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  高级选项对应的名称
-    * value  高级选项对应的取值
+    * key  **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
+    * value  **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -169,22 +169,16 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-            if ((mb_strlen($this->container['key']) > 50)) {
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 50)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 50.";
             }
-            if ((mb_strlen($this->container['key']) < 1)) {
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if ((mb_strlen($this->container['value']) > 1000)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 1000.";
             }
-            if ((mb_strlen($this->container['value']) < 1)) {
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -203,9 +197,9 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  高级选项对应的名称
+    *  **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getKey()
     {
@@ -215,7 +209,7 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 高级选项对应的名称
+    * @param string|null $key **参数解释：** 高级配置对应的名称。 **约束限制：** 不涉及。 **取值范围：** - customImage：自定义镜像。 - includePaths：检查目录。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -227,9 +221,9 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  高级选项对应的取值
+    *  **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -239,7 +233,7 @@ class TaskAdvancedSettingsItem implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 高级选项对应的取值
+    * @param string|null $value **参数解释：** 高级配置对应的取值。 **约束限制：** 不涉及。 **取值范围：** 长度为[1~1000]个字符。 **默认取值：** 不涉及。
     *
     * @return $this
     */

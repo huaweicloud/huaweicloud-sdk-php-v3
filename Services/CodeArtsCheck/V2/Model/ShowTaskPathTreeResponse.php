@@ -21,8 +21,8 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * info  任务的目录树信息
-    * total  数目
+    * info  **参数解释:** 任务的目录树信息。
+    * total  **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * info  任务的目录树信息
-    * total  数目
+    * info  **参数解释:** 任务的目录树信息。
+    * total  **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * info  任务的目录树信息
-    * total  数目
+    * info  **参数解释:** 任务的目录树信息。
+    * total  **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * info  任务的目录树信息
-    * total  数目
+    * info  **参数解释:** 任务的目录树信息。
+    * total  **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * info  任务的目录树信息
-    * total  数目
+    * info  **参数解释:** 任务的目录树信息。
+    * total  **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets info
-    *  任务的目录树信息
+    *  **参数解释:** 任务的目录树信息。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TreeNode[]|null
     */
@@ -198,7 +198,7 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets info
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TreeNode[]|null $info 任务的目录树信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TreeNode[]|null $info **参数解释:** 任务的目录树信息。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  数目
+    *  **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowTaskPathTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 数目
+    * @param int|null $total **参数解释:** 数目。 **取值范围:** ≥0
     *
     * @return $this
     */

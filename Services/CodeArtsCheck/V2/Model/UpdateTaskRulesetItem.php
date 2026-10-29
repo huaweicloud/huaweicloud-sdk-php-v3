@@ -20,10 +20,10 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * language  规则集语言
-    * ruleSetId  规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
-    * ifUse  任务语言和规则集的关系是否启用，1是启用，0是未启用
-    * status  新/老数据表示，默认1
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ruleSetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ifUse  **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
+    * status  **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * language  规则集语言
-    * ruleSetId  规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
-    * ifUse  任务语言和规则集的关系是否启用，1是启用，0是未启用
-    * status  新/老数据表示，默认1
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ruleSetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ifUse  **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
+    * status  **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * language  规则集语言
-    * ruleSetId  规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
-    * ifUse  任务语言和规则集的关系是否启用，1是启用，0是未启用
-    * status  新/老数据表示，默认1
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ruleSetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ifUse  **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
+    * status  **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * language  规则集语言
-    * ruleSetId  规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
-    * ifUse  任务语言和规则集的关系是否启用，1是启用，0是未启用
-    * status  新/老数据表示，默认1
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ruleSetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ifUse  **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
+    * status  **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * language  规则集语言
-    * ruleSetId  规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
-    * ifUse  任务语言和规则集的关系是否启用，1是启用，0是未启用
-    * status  新/老数据表示，默认1
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ruleSetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ifUse  **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
+    * status  **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  规则集语言
+    *  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -255,7 +255,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 规则集语言
+    * @param string $language **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSetId
-    *  规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
+    *  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSetId
     *
-    * @param string $ruleSetId 规则集ID,通过调用ListTaskRuleset接口，根据响应参数中的template_id获得
+    * @param string $ruleSetId **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ifUse
-    *  任务语言和规则集的关系是否启用，1是启用，0是未启用
+    *  **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets ifUse
     *
-    * @param string $ifUse 任务语言和规则集的关系是否启用，1是启用，0是未启用
+    * @param string $ifUse **参数解释：** 是否启用。 **约束限制:** 不涉及。 **取值范围：** - 0：不启用。 - 1：启用。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  新/老数据表示，默认1
+    *  **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -327,7 +327,7 @@ class UpdateTaskRulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 新/老数据表示，默认1
+    * @param string $status **参数解释：** 新/老数据。 **约束限制:** 不涉及。 **取值范围：** 1 **默认取值：** 不涉及。
     *
     * @return $this
     */

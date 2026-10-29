@@ -21,15 +21,16 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支
-    * lastCheckTime  上一次检查时间
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * metricInfo  metricInfo
     *
     * @var string[]
@@ -42,6 +43,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
             'gitBranch' => 'string',
             'lastCheckTime' => 'string',
             'lastExecTime' => 'string',
+            'lastCheckFinishTime' => 'string',
             'checkType' => 'string',
             'createdAt' => 'string',
             'metricInfo' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\MetricInfo'
@@ -49,15 +51,16 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支
-    * lastCheckTime  上一次检查时间
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * metricInfo  metricInfo
     *
     * @var string[]
@@ -70,6 +73,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
         'gitBranch' => null,
         'lastCheckTime' => null,
         'lastExecTime' => null,
+        'lastCheckFinishTime' => null,
         'checkType' => null,
         'createdAt' => null,
         'metricInfo' => null
@@ -98,15 +102,16 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支
-    * lastCheckTime  上一次检查时间
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * metricInfo  metricInfo
     *
     * @var string[]
@@ -119,6 +124,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
             'gitBranch' => 'git_branch',
             'lastCheckTime' => 'last_check_time',
             'lastExecTime' => 'last_exec_time',
+            'lastCheckFinishTime' => 'last_check_finish_time',
             'checkType' => 'check_type',
             'createdAt' => 'created_at',
             'metricInfo' => 'metric_info'
@@ -126,15 +132,16 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支
-    * lastCheckTime  上一次检查时间
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * metricInfo  metricInfo
     *
     * @var string[]
@@ -147,6 +154,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
             'gitBranch' => 'setGitBranch',
             'lastCheckTime' => 'setLastCheckTime',
             'lastExecTime' => 'setLastExecTime',
+            'lastCheckFinishTime' => 'setLastCheckFinishTime',
             'checkType' => 'setCheckType',
             'createdAt' => 'setCreatedAt',
             'metricInfo' => 'setMetricInfo'
@@ -154,15 +162,16 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支
-    * lastCheckTime  上一次检查时间
-    * lastExecTime  上次执行时间
-    * checkType  检查类型
-    * createdAt  创建时间
+    * taskId  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
+    * lastCheckTime  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastExecTime  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * checkType  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     * metricInfo  metricInfo
     *
     * @var string[]
@@ -175,6 +184,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
             'gitBranch' => 'getGitBranch',
             'lastCheckTime' => 'getLastCheckTime',
             'lastExecTime' => 'getLastExecTime',
+            'lastCheckFinishTime' => 'getLastCheckFinishTime',
             'checkType' => 'getCheckType',
             'createdAt' => 'getCreatedAt',
             'metricInfo' => 'getMetricInfo'
@@ -245,6 +255,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
         $this->container['gitBranch'] = isset($data['gitBranch']) ? $data['gitBranch'] : null;
         $this->container['lastCheckTime'] = isset($data['lastCheckTime']) ? $data['lastCheckTime'] : null;
         $this->container['lastExecTime'] = isset($data['lastExecTime']) ? $data['lastExecTime'] : null;
+        $this->container['lastCheckFinishTime'] = isset($data['lastCheckFinishTime']) ? $data['lastCheckFinishTime'] : null;
         $this->container['checkType'] = isset($data['checkType']) ? $data['checkType'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['metricInfo'] = isset($data['metricInfo']) ? $data['metricInfo'] : null;
@@ -274,7 +285,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -286,7 +297,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务id
+    * @param string|null $taskId **参数解释：** 旧版任务ID。即新建检查任务接口的返回值，每个代码检查任务及其下的分支任务、通过API创建的增量任务都有唯一的任务ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -298,7 +309,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名字
+    *  **参数解释：** 任务名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +321,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务名字
+    * @param string|null $taskName **参数解释：** 任务名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -322,7 +333,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  创建者id
+    *  **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -334,7 +345,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string|null $creatorId 创建者id
+    * @param string|null $creatorId **参数解释：** 任务创建者用户ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -346,7 +357,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码仓地址
+    *  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -358,7 +369,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓地址
+    * @param string|null $gitUrl **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -370,7 +381,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitBranch
-    *  代码仓分支
+    *  **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -382,7 +393,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gitBranch
     *
-    * @param string|null $gitBranch 代码仓分支
+    * @param string|null $gitBranch **参数解释：** 代码仓分支。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -394,7 +405,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastCheckTime
-    *  上一次检查时间
+    *  **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -406,7 +417,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastCheckTime
     *
-    * @param string|null $lastCheckTime 上一次检查时间
+    * @param string|null $lastCheckTime **参数解释：** 上一次检查时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -418,7 +429,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastExecTime
-    *  上次执行时间
+    *  **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -430,7 +441,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastExecTime
     *
-    * @param string|null $lastExecTime 上次执行时间
+    * @param string|null $lastExecTime **参数解释：** 上一次执行时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -441,8 +452,32 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets lastCheckFinishTime
+    *  **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLastCheckFinishTime()
+    {
+        return $this->container['lastCheckFinishTime'];
+    }
+
+    /**
+    * Sets lastCheckFinishTime
+    *
+    * @param string|null $lastCheckFinishTime **参数解释：** 上次执行结束时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLastCheckFinishTime($lastCheckFinishTime)
+    {
+        $this->container['lastCheckFinishTime'] = $lastCheckFinishTime;
+        return $this;
+    }
+
+    /**
     * Gets checkType
-    *  检查类型
+    *  **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -454,7 +489,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets checkType
     *
-    * @param string|null $checkType 检查类型
+    * @param string|null $checkType **参数解释：** 废弃字段。 **约束限制：** 不涉及。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -466,7 +501,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间
+    *  **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -478,7 +513,7 @@ class ShowTaskCmetricsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间
+    * @param string|null $createdAt **参数解释：** 任务创建时间。使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @return $this
     */

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TaskCheckParamters implements ModelInterface, ArrayAccess
+class OldTaskIdInResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,24 @@ class TaskCheckParamters implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TaskCheckParamters';
+    protected static $openAPIModelName = 'oldTaskIdInResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkId  检查工具ID
-    * name  编译参数名称
-    * checkerConfigs  检查参数配置信息
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'checkId' => 'int',
-            'name' => 'string',
-            'checkerConfigs' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CheckConfigInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkId  检查工具ID
-    * name  编译参数名称
-    * checkerConfigs  检查参数配置信息
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'checkId' => null,
-        'name' => null,
-        'checkerConfigs' => null
     ];
 
     /**
@@ -69,44 +59,29 @@ class TaskCheckParamters implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkId  检查工具ID
-    * name  编译参数名称
-    * checkerConfigs  检查参数配置信息
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'checkId' => 'check_id',
-            'name' => 'name',
-            'checkerConfigs' => 'checker_configs'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkId  检查工具ID
-    * name  编译参数名称
-    * checkerConfigs  检查参数配置信息
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'checkId' => 'setCheckId',
-            'name' => 'setName',
-            'checkerConfigs' => 'setCheckerConfigs'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkId  检查工具ID
-    * name  编译参数名称
-    * checkerConfigs  检查参数配置信息
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'checkId' => 'getCheckId',
-            'name' => 'getName',
-            'checkerConfigs' => 'getCheckerConfigs'
     ];
 
     /**
@@ -167,9 +142,6 @@ class TaskCheckParamters implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['checkId'] = isset($data['checkId']) ? $data['checkId'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['checkerConfigs'] = isset($data['checkerConfigs']) ? $data['checkerConfigs'] : null;
     }
 
     /**
@@ -192,78 +164,6 @@ class TaskCheckParamters implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets checkId
-    *  检查工具ID
-    *
-    * @return int|null
-    */
-    public function getCheckId()
-    {
-        return $this->container['checkId'];
-    }
-
-    /**
-    * Sets checkId
-    *
-    * @param int|null $checkId 检查工具ID
-    *
-    * @return $this
-    */
-    public function setCheckId($checkId)
-    {
-        $this->container['checkId'] = $checkId;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  编译参数名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 编译参数名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets checkerConfigs
-    *  检查参数配置信息
-    *
-    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CheckConfigInfo[]|null
-    */
-    public function getCheckerConfigs()
-    {
-        return $this->container['checkerConfigs'];
-    }
-
-    /**
-    * Sets checkerConfigs
-    *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\CheckConfigInfo[]|null $checkerConfigs 检查参数配置信息
-    *
-    * @return $this
-    */
-    public function setCheckerConfigs($checkerConfigs)
-    {
-        $this->container['checkerConfigs'] = $checkerConfigs;
-        return $this;
     }
 
     /**

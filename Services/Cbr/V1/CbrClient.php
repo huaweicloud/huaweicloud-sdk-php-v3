@@ -1842,6 +1842,9 @@ class CbrClient extends Client
         if ($localVarParams['incremental'] !== null) {
             $queryParams['incremental'] = $localVarParams['incremental'];
         }
+        if ($localVarParams['existedQuantityBasedRetentionBackups'] !== null) {
+            $queryParams['existed_quantity_based_retention_backups'] = $localVarParams['existedQuantityBasedRetentionBackups'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']
@@ -1978,8 +1981,8 @@ class CbrClient extends Client
         if ($localVarParams['regionId'] !== null) {
             $queryParams['region_id'] = $localVarParams['regionId'];
         }
-        if ($localVarParams['objcetType'] !== null) {
-            $queryParams['objcet_type'] = $localVarParams['objcetType'];
+        if ($localVarParams['objectType'] !== null) {
+            $queryParams['object_type'] = $localVarParams['objectType'];
         }
         if ($localVarParams['cloudType'] !== null) {
             $queryParams['cloud_type'] = $localVarParams['cloudType'];
@@ -2147,6 +2150,12 @@ class CbrClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['destinationRegion'] !== null) {
+            $queryParams['destination_region'] = $localVarParams['destinationRegion'];
+        }
+        if ($localVarParams['destinationProjectId'] !== null) {
+            $queryParams['destination_project_id'] = $localVarParams['destinationProjectId'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2482,6 +2491,9 @@ class CbrClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $queryParams['server_id'] = $localVarParams['serverId'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['protectableType'] !== null) {
             $pathParams['protectable_type'] = $localVarParams['protectableType'];
         }
@@ -2576,6 +2588,9 @@ class CbrClient extends Client
         }
         if ($localVarParams['resourceIds'] !== null) {
             $queryParams['resource_ids'] = $localVarParams['resourceIds'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4237,6 +4252,9 @@ class CbrClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

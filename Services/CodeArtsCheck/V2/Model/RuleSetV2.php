@@ -20,8 +20,8 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rulesetId  规则集id，需要从web界面获取
-    * language  检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    * rulesetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rulesetId  规则集id，需要从web界面获取
-    * language  检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    * rulesetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rulesetId  规则集id，需要从web界面获取
-    * language  检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    * rulesetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rulesetId  规则集id，需要从web界面获取
-    * language  检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    * rulesetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rulesetId  规则集id，需要从web界面获取
-    * language  检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    * rulesetId  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * language  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets rulesetId
-    *  规则集id，需要从web界面获取
+    *  **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
     /**
     * Sets rulesetId
     *
-    * @param string|null $rulesetId 规则集id，需要从web界面获取
+    * @param string|null $rulesetId **参数解释：** 规则集ID。 **约束限制:** 长度为[1~32]个字符。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    *  **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string
     */
@@ -224,7 +224,7 @@ class RuleSetV2 implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 检查语言，支持cpp,java,js,python,php,css,html,go,typescript
+    * @param string $language **参数解释：** 检查语言，支持的语言请关注服务更新特性文档。 **约束限制:** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */

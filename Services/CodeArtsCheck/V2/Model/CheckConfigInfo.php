@@ -20,15 +20,15 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  检查参数名称
-    * cfgKey  检查参数对应的key值
-    * defaultValue  检查参数默认值
-    * optionValue  检查参数可选项
-    * isRequired  0：非必填，1：必填
-    * description  检查参数说明
-    * type  参数类型，0：文本，2：有可选项
-    * status  参数状态，on：启用，off：未启用
-    * value  检查参数值
+    * name  **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
+    * cfgKey  **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
+    * defaultValue  **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
+    * optionValue  **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
+    * isRequired  **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
+    * description  **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
+    * type  **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
+    * status  **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
+    * value  **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  检查参数名称
-    * cfgKey  检查参数对应的key值
-    * defaultValue  检查参数默认值
-    * optionValue  检查参数可选项
-    * isRequired  0：非必填，1：必填
-    * description  检查参数说明
-    * type  参数类型，0：文本，2：有可选项
-    * status  参数状态，on：启用，off：未启用
-    * value  检查参数值
+    * name  **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
+    * cfgKey  **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
+    * defaultValue  **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
+    * optionValue  **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
+    * isRequired  **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
+    * description  **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
+    * type  **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
+    * status  **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
+    * value  **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  检查参数名称
-    * cfgKey  检查参数对应的key值
-    * defaultValue  检查参数默认值
-    * optionValue  检查参数可选项
-    * isRequired  0：非必填，1：必填
-    * description  检查参数说明
-    * type  参数类型，0：文本，2：有可选项
-    * status  参数状态，on：启用，off：未启用
-    * value  检查参数值
+    * name  **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
+    * cfgKey  **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
+    * defaultValue  **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
+    * optionValue  **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
+    * isRequired  **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
+    * description  **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
+    * type  **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
+    * status  **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
+    * value  **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  检查参数名称
-    * cfgKey  检查参数对应的key值
-    * defaultValue  检查参数默认值
-    * optionValue  检查参数可选项
-    * isRequired  0：非必填，1：必填
-    * description  检查参数说明
-    * type  参数类型，0：文本，2：有可选项
-    * status  参数状态，on：启用，off：未启用
-    * value  检查参数值
+    * name  **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
+    * cfgKey  **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
+    * defaultValue  **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
+    * optionValue  **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
+    * isRequired  **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
+    * description  **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
+    * type  **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
+    * status  **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
+    * value  **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  检查参数名称
-    * cfgKey  检查参数对应的key值
-    * defaultValue  检查参数默认值
-    * optionValue  检查参数可选项
-    * isRequired  0：非必填，1：必填
-    * description  检查参数说明
-    * type  参数类型，0：文本，2：有可选项
-    * status  参数状态，on：启用，off：未启用
-    * value  检查参数值
+    * name  **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
+    * cfgKey  **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
+    * defaultValue  **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
+    * optionValue  **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
+    * isRequired  **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
+    * description  **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
+    * type  **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
+    * status  **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
+    * value  **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  检查参数名称
+    *  **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 检查参数名称
+    * @param string|null $name **参数解释：** 检查参数名称。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cfgKey
-    *  检查参数对应的key值
+    *  **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cfgKey
     *
-    * @param string|null $cfgKey 检查参数对应的key值
+    * @param string|null $cfgKey **参数解释：** 检查参数对应的Key值。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultValue
-    *  检查参数默认值
+    *  **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets defaultValue
     *
-    * @param string|null $defaultValue 检查参数默认值
+    * @param string|null $defaultValue **参数解释：** 检查参数默认值。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionValue
-    *  检查参数可选项
+    *  **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets optionValue
     *
-    * @param string|null $optionValue 检查参数可选项
+    * @param string|null $optionValue **参数解释：** 检查参数可选项。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRequired
-    *  0：非必填，1：必填
+    *  **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
     *
     * @return int|null
     */
@@ -370,7 +370,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isRequired
     *
-    * @param int|null $isRequired 0：非必填，1：必填
+    * @param int|null $isRequired **参数解释：** 是否必填参数。 **取值范围:** - 0：非必填。 - 1：必填。
     *
     * @return $this
     */
@@ -382,7 +382,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  检查参数说明
+    *  **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -394,7 +394,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 检查参数说明
+    * @param string|null $description **参数解释：** 检查参数说明。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  参数类型，0：文本，2：有可选项
+    *  **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
     *
     * @return int|null
     */
@@ -418,7 +418,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 参数类型，0：文本，2：有可选项
+    * @param int|null $type **参数解释：** 参数类型。 **取值范围:** - 0：文本。 - 2：有可选项。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  参数状态，on：启用，off：未启用
+    *  **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
     *
     * @return string|null
     */
@@ -442,7 +442,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 参数状态，on：启用，off：未启用
+    * @param string|null $status **参数解释：** 参数状态。 **取值范围:** - on：启用。 - off：未启用。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  检查参数值
+    *  **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -466,7 +466,7 @@ class CheckConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 检查参数值
+    * @param string|null $value **参数解释：** 检查参数值。 **取值范围:** 不涉及。
     *
     * @return $this
     */

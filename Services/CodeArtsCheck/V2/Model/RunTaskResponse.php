@@ -21,7 +21,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * execId  执行id
+    * execId  **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * execId  执行id
+    * execId  **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * execId  执行id
+    * execId  **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * execId  执行id
+    * execId  **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * execId  执行id
+    * execId  **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets execId
-    *  执行id
+    *  **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class RunTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets execId
     *
-    * @param string|null $execId 执行id
+    * @param string|null $execId **参数解释:** 1次代码检查对应的执行记录ID。 **取值范围:** 32位UUID。
     *
     * @return $this
     */

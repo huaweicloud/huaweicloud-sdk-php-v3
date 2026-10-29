@@ -20,17 +20,17 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * events  调用链信息
-    * description  描述
-    * fixSuggestions  fix suggestions
-    * line  缺陷所在行
-    * endLine  缺陷结束行
-    * codeContextStartLine  缺陷开始行
-    * main  代码片段
-    * path  file path
-    * tag  标签
-    * mainBuggyCode  main buggy code
-    * codeContext  code context
+    * events  **参数解释：** 调用链信息。
+    * description  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * fixSuggestions  **参数解释：** 修复建议。
+    * line  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * endLine  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * main  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * path  **参数解释：** 文件路径。 **取值范围：** 不涉及。
+    * tag  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * mainBuggyCode  **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
+    * codeContext  **参数解释：** 代码上下文。 **取值范围：** 不涉及。
+    * codeContextStartLine  **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -40,27 +40,27 @@ class DefectEvents implements ModelInterface, ArrayAccess
             'fixSuggestions' => 'string[]',
             'line' => 'int',
             'endLine' => 'int',
-            'codeContextStartLine' => 'int',
             'main' => 'bool',
             'path' => 'string',
             'tag' => 'string',
             'mainBuggyCode' => 'string',
-            'codeContext' => 'string'
+            'codeContext' => 'string',
+            'codeContextStartLine' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * events  调用链信息
-    * description  描述
-    * fixSuggestions  fix suggestions
-    * line  缺陷所在行
-    * endLine  缺陷结束行
-    * codeContextStartLine  缺陷开始行
-    * main  代码片段
-    * path  file path
-    * tag  标签
-    * mainBuggyCode  main buggy code
-    * codeContext  code context
+    * events  **参数解释：** 调用链信息。
+    * description  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * fixSuggestions  **参数解释：** 修复建议。
+    * line  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * endLine  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * main  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * path  **参数解释：** 文件路径。 **取值范围：** 不涉及。
+    * tag  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * mainBuggyCode  **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
+    * codeContext  **参数解释：** 代码上下文。 **取值范围：** 不涉及。
+    * codeContextStartLine  **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -70,12 +70,12 @@ class DefectEvents implements ModelInterface, ArrayAccess
         'fixSuggestions' => null,
         'line' => null,
         'endLine' => null,
-        'codeContextStartLine' => null,
         'main' => null,
         'path' => null,
         'tag' => null,
         'mainBuggyCode' => null,
-        'codeContext' => null
+        'codeContext' => null,
+        'codeContextStartLine' => null
     ];
 
     /**
@@ -101,17 +101,17 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * events  调用链信息
-    * description  描述
-    * fixSuggestions  fix suggestions
-    * line  缺陷所在行
-    * endLine  缺陷结束行
-    * codeContextStartLine  缺陷开始行
-    * main  代码片段
-    * path  file path
-    * tag  标签
-    * mainBuggyCode  main buggy code
-    * codeContext  code context
+    * events  **参数解释：** 调用链信息。
+    * description  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * fixSuggestions  **参数解释：** 修复建议。
+    * line  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * endLine  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * main  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * path  **参数解释：** 文件路径。 **取值范围：** 不涉及。
+    * tag  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * mainBuggyCode  **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
+    * codeContext  **参数解释：** 代码上下文。 **取值范围：** 不涉及。
+    * codeContextStartLine  **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -121,27 +121,27 @@ class DefectEvents implements ModelInterface, ArrayAccess
             'fixSuggestions' => 'fix_suggestions',
             'line' => 'line',
             'endLine' => 'end_line',
-            'codeContextStartLine' => 'code_context_start_line',
             'main' => 'main',
             'path' => 'path',
             'tag' => 'tag',
             'mainBuggyCode' => 'main_buggy_code',
-            'codeContext' => 'code_context'
+            'codeContext' => 'code_context',
+            'codeContextStartLine' => 'code_context_start_line'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * events  调用链信息
-    * description  描述
-    * fixSuggestions  fix suggestions
-    * line  缺陷所在行
-    * endLine  缺陷结束行
-    * codeContextStartLine  缺陷开始行
-    * main  代码片段
-    * path  file path
-    * tag  标签
-    * mainBuggyCode  main buggy code
-    * codeContext  code context
+    * events  **参数解释：** 调用链信息。
+    * description  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * fixSuggestions  **参数解释：** 修复建议。
+    * line  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * endLine  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * main  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * path  **参数解释：** 文件路径。 **取值范围：** 不涉及。
+    * tag  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * mainBuggyCode  **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
+    * codeContext  **参数解释：** 代码上下文。 **取值范围：** 不涉及。
+    * codeContextStartLine  **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -151,27 +151,27 @@ class DefectEvents implements ModelInterface, ArrayAccess
             'fixSuggestions' => 'setFixSuggestions',
             'line' => 'setLine',
             'endLine' => 'setEndLine',
-            'codeContextStartLine' => 'setCodeContextStartLine',
             'main' => 'setMain',
             'path' => 'setPath',
             'tag' => 'setTag',
             'mainBuggyCode' => 'setMainBuggyCode',
-            'codeContext' => 'setCodeContext'
+            'codeContext' => 'setCodeContext',
+            'codeContextStartLine' => 'setCodeContextStartLine'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * events  调用链信息
-    * description  描述
-    * fixSuggestions  fix suggestions
-    * line  缺陷所在行
-    * endLine  缺陷结束行
-    * codeContextStartLine  缺陷开始行
-    * main  代码片段
-    * path  file path
-    * tag  标签
-    * mainBuggyCode  main buggy code
-    * codeContext  code context
+    * events  **参数解释：** 调用链信息。
+    * description  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
+    * fixSuggestions  **参数解释：** 修复建议。
+    * line  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
+    * endLine  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * main  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * path  **参数解释：** 文件路径。 **取值范围：** 不涉及。
+    * tag  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * mainBuggyCode  **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
+    * codeContext  **参数解释：** 代码上下文。 **取值范围：** 不涉及。
+    * codeContextStartLine  **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -181,12 +181,12 @@ class DefectEvents implements ModelInterface, ArrayAccess
             'fixSuggestions' => 'getFixSuggestions',
             'line' => 'getLine',
             'endLine' => 'getEndLine',
-            'codeContextStartLine' => 'getCodeContextStartLine',
             'main' => 'getMain',
             'path' => 'getPath',
             'tag' => 'getTag',
             'mainBuggyCode' => 'getMainBuggyCode',
-            'codeContext' => 'getCodeContext'
+            'codeContext' => 'getCodeContext',
+            'codeContextStartLine' => 'getCodeContextStartLine'
     ];
 
     /**
@@ -252,12 +252,12 @@ class DefectEvents implements ModelInterface, ArrayAccess
         $this->container['fixSuggestions'] = isset($data['fixSuggestions']) ? $data['fixSuggestions'] : null;
         $this->container['line'] = isset($data['line']) ? $data['line'] : null;
         $this->container['endLine'] = isset($data['endLine']) ? $data['endLine'] : null;
-        $this->container['codeContextStartLine'] = isset($data['codeContextStartLine']) ? $data['codeContextStartLine'] : null;
         $this->container['main'] = isset($data['main']) ? $data['main'] : null;
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['mainBuggyCode'] = isset($data['mainBuggyCode']) ? $data['mainBuggyCode'] : null;
         $this->container['codeContext'] = isset($data['codeContext']) ? $data['codeContext'] : null;
+        $this->container['codeContextStartLine'] = isset($data['codeContextStartLine']) ? $data['codeContextStartLine'] : null;
     }
 
     /**
@@ -284,7 +284,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets events
-    *  调用链信息
+    *  **参数解释：** 调用链信息。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectEvents[]|null
     */
@@ -296,7 +296,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets events
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectEvents[]|null $events 调用链信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\DefectEvents[]|null $events **参数解释：** 调用链信息。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description **参数解释：** 问题详细描述。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets fixSuggestions
-    *  fix suggestions
+    *  **参数解释：** 修复建议。
     *
     * @return string[]|null
     */
@@ -344,7 +344,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets fixSuggestions
     *
-    * @param string[]|null $fixSuggestions fix suggestions
+    * @param string[]|null $fixSuggestions **参数解释：** 修复建议。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets line
-    *  缺陷所在行
+    *  **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -368,7 +368,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets line
     *
-    * @param int|null $line 缺陷所在行
+    * @param int|null $line **参数解释：** 问题所在文件行号。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets endLine
-    *  缺陷结束行
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -392,7 +392,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets endLine
     *
-    * @param int|null $endLine 缺陷结束行
+    * @param int|null $endLine **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -403,32 +403,8 @@ class DefectEvents implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets codeContextStartLine
-    *  缺陷开始行
-    *
-    * @return int|null
-    */
-    public function getCodeContextStartLine()
-    {
-        return $this->container['codeContextStartLine'];
-    }
-
-    /**
-    * Sets codeContextStartLine
-    *
-    * @param int|null $codeContextStartLine 缺陷开始行
-    *
-    * @return $this
-    */
-    public function setCodeContextStartLine($codeContextStartLine)
-    {
-        $this->container['codeContextStartLine'] = $codeContextStartLine;
-        return $this;
-    }
-
-    /**
     * Gets main
-    *  代码片段
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return bool|null
     */
@@ -440,7 +416,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets main
     *
-    * @param bool|null $main 代码片段
+    * @param bool|null $main **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -452,7 +428,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  file path
+    *  **参数解释：** 文件路径。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -464,7 +440,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path file path
+    * @param string|null $path **参数解释：** 文件路径。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -476,7 +452,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets tag
-    *  标签
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -488,7 +464,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets tag
     *
-    * @param string|null $tag 标签
+    * @param string|null $tag **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -500,7 +476,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets mainBuggyCode
-    *  main buggy code
+    *  **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -512,7 +488,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets mainBuggyCode
     *
-    * @param string|null $mainBuggyCode main buggy code
+    * @param string|null $mainBuggyCode **参数解释：** 问题主事件对应的代码片段内容。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -524,7 +500,7 @@ class DefectEvents implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeContext
-    *  code context
+    *  **参数解释：** 代码上下文。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -536,13 +512,37 @@ class DefectEvents implements ModelInterface, ArrayAccess
     /**
     * Sets codeContext
     *
-    * @param string|null $codeContext code context
+    * @param string|null $codeContext **参数解释：** 代码上下文。 **取值范围：** 不涉及。
     *
     * @return $this
     */
     public function setCodeContext($codeContext)
     {
         $this->container['codeContext'] = $codeContext;
+        return $this;
+    }
+
+    /**
+    * Gets codeContextStartLine
+    *  **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCodeContextStartLine()
+    {
+        return $this->container['codeContextStartLine'];
+    }
+
+    /**
+    * Sets codeContextStartLine
+    *
+    * @param int|null $codeContextStartLine **参数解释：** 代码上下文起始行号。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setCodeContextStartLine($codeContextStartLine)
+    {
+        $this->container['codeContextStartLine'] = $codeContextStartLine;
         return $this;
     }
 

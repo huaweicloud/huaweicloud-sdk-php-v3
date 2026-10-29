@@ -31,6 +31,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * status  状态
     * resourceIds  资源id，支持多资源，以英文逗号分隔
+    * availabilityZone  **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
             'id' => 'string[]',
             'policyId' => 'string',
             'status' => 'string',
-            'resourceIds' => 'string'
+            'resourceIds' => 'string',
+            'availabilityZone' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * status  状态
     * resourceIds  资源id，支持多资源，以英文逗号分隔
+    * availabilityZone  **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'policyId' => null,
         'status' => null,
-        'resourceIds' => null
+        'resourceIds' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * status  状态
     * resourceIds  资源id，支持多资源，以英文逗号分隔
+    * availabilityZone  **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'policyId' => 'policy_id',
             'status' => 'status',
-            'resourceIds' => 'resource_ids'
+            'resourceIds' => 'resource_ids',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * status  状态
     * resourceIds  资源id，支持多资源，以英文逗号分隔
+    * availabilityZone  **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'policyId' => 'setPolicyId',
             'status' => 'setStatus',
-            'resourceIds' => 'setResourceIds'
+            'resourceIds' => 'setResourceIds',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     * policyId  策略ID
     * status  状态
     * resourceIds  资源id，支持多资源，以英文逗号分隔
+    * availabilityZone  **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'policyId' => 'getPolicyId',
             'status' => 'getStatus',
-            'resourceIds' => 'getResourceIds'
+            'resourceIds' => 'getResourceIds',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -288,6 +298,7 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['resourceIds'] = isset($data['resourceIds']) ? $data['resourceIds'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -598,6 +609,30 @@ class ListVaultRequest implements ModelInterface, ArrayAccess
     public function setResourceIds($resourceIds)
     {
         $this->container['resourceIds'] = $resourceIds;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone **参数解释：** 存储库可用区信息 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

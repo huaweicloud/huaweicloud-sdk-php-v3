@@ -20,7 +20,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskAdvancedSettings  高级选项参数的相关信息
+    * taskAdvancedSettings  **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskAdvancedSettings  高级选项参数的相关信息
+    * taskAdvancedSettings  **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskAdvancedSettings  高级选项参数的相关信息
+    * taskAdvancedSettings  **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskAdvancedSettings  高级选项参数的相关信息
+    * taskAdvancedSettings  **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskAdvancedSettings  高级选项参数的相关信息
+    * taskAdvancedSettings  **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskAdvancedSettings
-    *  高级选项参数的相关信息
+    *  **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskAdvancedSettingsItem[]
     */
@@ -189,7 +189,7 @@ class UpdateTaskSettingsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets taskAdvancedSettings
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskAdvancedSettingsItem[] $taskAdvancedSettings 高级选项参数的相关信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskAdvancedSettingsItem[] $taskAdvancedSettings **参数解释：** 高级配置参数的相关信息，数组不能为空。 **约束限制：** 不涉及。
     *
     * @return $this
     */

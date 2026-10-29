@@ -275,9 +275,8 @@ class Node implements ModelInterface, ArrayAccess
     const TYPE_SMN = 'SMN';
     const TYPE_MRS_SPARK = 'MRSSpark';
     const TYPE_MAP_REDUCE = 'MapReduce';
-    const TYPE_MRS_FLINK = 'MRSFlink';
     const TYPE_MRS_FLINK_JOB = 'MRSFlinkJob';
-    const TYPE_MRS_HETU_ENGINE = 'MRSHetuEngine';
+    const TYPE_HETU_ENGINE_SQL = 'HetuEngineSQL';
     const TYPE_DATA_MIGRATION = 'DataMigration';
     const FAIL_POLICY_FAIL = 'FAIL';
     const FAIL_POLICY_IGNORE = 'IGNORE';
@@ -309,9 +308,8 @@ class Node implements ModelInterface, ArrayAccess
             self::TYPE_SMN,
             self::TYPE_MRS_SPARK,
             self::TYPE_MAP_REDUCE,
-            self::TYPE_MRS_FLINK,
             self::TYPE_MRS_FLINK_JOB,
-            self::TYPE_MRS_HETU_ENGINE,
+            self::TYPE_HETU_ENGINE_SQL,
             self::TYPE_DATA_MIGRATION,
         ];
     }

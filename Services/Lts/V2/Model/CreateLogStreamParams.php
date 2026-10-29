@@ -25,6 +25,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * tags  标签字段信息
     * logStreamNameAlias  日志流名称别名
     * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
             'ttlInDays' => 'int',
             'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsBody[]',
             'logStreamNameAlias' => 'string',
-            'enterpriseProjectName' => 'string'
+            'enterpriseProjectName' => 'string',
+            'hotColdSeparation' => 'bool',
+            'hotStorageDays' => 'int'
     ];
 
     /**
@@ -43,6 +47,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * tags  标签字段信息
     * logStreamNameAlias  日志流名称别名
     * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
         'ttlInDays' => null,
         'tags' => null,
         'logStreamNameAlias' => null,
-        'enterpriseProjectName' => null
+        'enterpriseProjectName' => null,
+        'hotColdSeparation' => null,
+        'hotStorageDays' => 'int32'
     ];
 
     /**
@@ -82,6 +90,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * tags  标签字段信息
     * logStreamNameAlias  日志流名称别名
     * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
             'ttlInDays' => 'ttl_in_days',
             'tags' => 'tags',
             'logStreamNameAlias' => 'log_stream_name_alias',
-            'enterpriseProjectName' => 'enterprise_project_name'
+            'enterpriseProjectName' => 'enterprise_project_name',
+            'hotColdSeparation' => 'hot_cold_separation',
+            'hotStorageDays' => 'hot_storage_days'
     ];
 
     /**
@@ -100,6 +112,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * tags  标签字段信息
     * logStreamNameAlias  日志流名称别名
     * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
             'ttlInDays' => 'setTtlInDays',
             'tags' => 'setTags',
             'logStreamNameAlias' => 'setLogStreamNameAlias',
-            'enterpriseProjectName' => 'setEnterpriseProjectName'
+            'enterpriseProjectName' => 'setEnterpriseProjectName',
+            'hotColdSeparation' => 'setHotColdSeparation',
+            'hotStorageDays' => 'setHotStorageDays'
     ];
 
     /**
@@ -118,6 +134,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     * tags  标签字段信息
     * logStreamNameAlias  日志流名称别名
     * enterpriseProjectName  企业项目名称 >只能由中文、英文字母、数字、下划线、中划线组成，且不能使用任何大小写形式的“default”； 描述不超过512个字符。
+    * hotColdSeparation  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    * hotStorageDays  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
             'ttlInDays' => 'getTtlInDays',
             'tags' => 'getTags',
             'logStreamNameAlias' => 'getLogStreamNameAlias',
-            'enterpriseProjectName' => 'getEnterpriseProjectName'
+            'enterpriseProjectName' => 'getEnterpriseProjectName',
+            'hotColdSeparation' => 'getHotColdSeparation',
+            'hotStorageDays' => 'getHotStorageDays'
     ];
 
     /**
@@ -192,6 +212,8 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['logStreamNameAlias'] = isset($data['logStreamNameAlias']) ? $data['logStreamNameAlias'] : null;
         $this->container['enterpriseProjectName'] = isset($data['enterpriseProjectName']) ? $data['enterpriseProjectName'] : null;
+        $this->container['hotColdSeparation'] = isset($data['hotColdSeparation']) ? $data['hotColdSeparation'] : null;
+        $this->container['hotStorageDays'] = isset($data['hotStorageDays']) ? $data['hotStorageDays'] : null;
     }
 
     /**
@@ -360,6 +382,54 @@ class CreateLogStreamParams implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectName($enterpriseProjectName)
     {
         $this->container['enterpriseProjectName'] = $enterpriseProjectName;
+        return $this;
+    }
+
+    /**
+    * Gets hotColdSeparation
+    *  **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    *
+    * @return bool|null
+    */
+    public function getHotColdSeparation()
+    {
+        return $this->container['hotColdSeparation'];
+    }
+
+    /**
+    * Sets hotColdSeparation
+    *
+    * @param bool|null $hotColdSeparation **参数解释：** 是否开启智能冷存储。 **约束限制：** 开启智能冷存储需要日志存储时间大于7天。开启智能冷存储后，需要设置标准存储层数据的保存时间。标准存储至少需保存7天才能转换为智能冷存储层数据。当日志保存时间大于标准存储层数据保存时间，且小于日志存储时间时，日志数据将自动转换为智能冷存储层数据存储。 **取值范围：** true/false。 **默认取值：** false
+    *
+    * @return $this
+    */
+    public function setHotColdSeparation($hotColdSeparation)
+    {
+        $this->container['hotColdSeparation'] = $hotColdSeparation;
+        return $this;
+    }
+
+    /**
+    * Gets hotStorageDays
+    *  **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getHotStorageDays()
+    {
+        return $this->container['hotStorageDays'];
+    }
+
+    /**
+    * Sets hotStorageDays
+    *
+    * @param int|null $hotStorageDays **参数解释：** 日志流标准存储时间（单位：天），即日志上报到LTS后日志标准存储的时间。 **约束限制：** 开启智能冷存储需要日志总存储时间大于7天。 **取值范围：** 最小值：7天 最大值：365天 **默认取值：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setHotStorageDays($hotStorageDays)
+    {
+        $this->container['hotStorageDays'] = $hotStorageDays;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  检查任务id
+    * taskId  **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  检查任务id
+    * taskId  **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  检查任务id
+    * taskId  **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  检查任务id
+    * taskId  **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  检查任务id
+    * taskId  **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  检查任务id
+    *  **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 检查任务id
+    * @param string|null $taskId **参数解释：** 任务ID。 **取值范围：** 全量任务为32位UUID，MR增量任务为\"MR_\"+32位UUID。
     *
     * @return $this
     */

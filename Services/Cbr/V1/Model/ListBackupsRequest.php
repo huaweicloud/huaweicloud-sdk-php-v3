@@ -43,6 +43,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     * usedPercent  根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
     * showReplication  是否返回复制记录
     * incremental  是否是增备
+    * existedQuantityBasedRetentionBackups  **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
             'parentId' => 'string',
             'usedPercent' => 'string',
             'showReplication' => 'bool',
-            'incremental' => 'bool'
+            'incremental' => 'bool',
+            'existedQuantityBasedRetentionBackups' => 'bool'
     ];
 
     /**
@@ -97,6 +99,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     * usedPercent  根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
     * showReplication  是否返回复制记录
     * incremental  是否是增备
+    * existedQuantityBasedRetentionBackups  **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
         'parentId' => null,
         'usedPercent' => null,
         'showReplication' => null,
-        'incremental' => null
+        'incremental' => null,
+        'existedQuantityBasedRetentionBackups' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     * usedPercent  根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
     * showReplication  是否返回复制记录
     * incremental  是否是增备
+    * existedQuantityBasedRetentionBackups  **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
             'parentId' => 'parent_id',
             'usedPercent' => 'used_percent',
             'showReplication' => 'show_replication',
-            'incremental' => 'incremental'
+            'incremental' => 'incremental',
+            'existedQuantityBasedRetentionBackups' => 'existed_quantity_based_retention_backups'
     ];
 
     /**
@@ -226,6 +232,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     * usedPercent  根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
     * showReplication  是否返回复制记录
     * incremental  是否是增备
+    * existedQuantityBasedRetentionBackups  **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
             'parentId' => 'setParentId',
             'usedPercent' => 'setUsedPercent',
             'showReplication' => 'setShowReplication',
-            'incremental' => 'setIncremental'
+            'incremental' => 'setIncremental',
+            'existedQuantityBasedRetentionBackups' => 'setExistedQuantityBasedRetentionBackups'
     ];
 
     /**
@@ -280,6 +288,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     * usedPercent  根据存储库使用率过滤备份，取值范围 [1, 100]，含1和100。例如，used_percent=80，表示筛选所属存储库使用率大于等于80%的所有备份。
     * showReplication  是否返回复制记录
     * incremental  是否是增备
+    * existedQuantityBasedRetentionBackups  **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
             'parentId' => 'getParentId',
             'usedPercent' => 'getUsedPercent',
             'showReplication' => 'getShowReplication',
-            'incremental' => 'getIncremental'
+            'incremental' => 'getIncremental',
+            'existedQuantityBasedRetentionBackups' => 'getExistedQuantityBasedRetentionBackups'
     ];
 
     /**
@@ -483,6 +493,7 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
         $this->container['usedPercent'] = isset($data['usedPercent']) ? $data['usedPercent'] : null;
         $this->container['showReplication'] = isset($data['showReplication']) ? $data['showReplication'] : null;
         $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
+        $this->container['existedQuantityBasedRetentionBackups'] = isset($data['existedQuantityBasedRetentionBackups']) ? $data['existedQuantityBasedRetentionBackups'] : null;
     }
 
     /**
@@ -1096,6 +1107,30 @@ class ListBackupsRequest implements ModelInterface, ArrayAccess
     public function setIncremental($incremental)
     {
         $this->container['incremental'] = $incremental;
+        return $this;
+    }
+
+    /**
+    * Gets existedQuantityBasedRetentionBackups
+    *  **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
+    *
+    * @return bool|null
+    */
+    public function getExistedQuantityBasedRetentionBackups()
+    {
+        return $this->container['existedQuantityBasedRetentionBackups'];
+    }
+
+    /**
+    * Sets existedQuantityBasedRetentionBackups
+    *
+    * @param bool|null $existedQuantityBasedRetentionBackups **参数解释：** 是否查询按数量保留或永久保留自动备份 **约束限制：** 不涉及 **取值范围：** - true：返回按数量保留或永久保留自动备份  - false：返回按时间保留自动备份 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setExistedQuantityBasedRetentionBackups($existedQuantityBasedRetentionBackups)
+    {
+        $this->container['existedQuantityBasedRetentionBackups'] = $existedQuantityBasedRetentionBackups;
         return $this;
     }
 

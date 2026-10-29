@@ -20,17 +20,17 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * templateCreateTime  创建人时间
-    * isUsed  使用状态1使用中，0空闲中
-    * ruleIds  规则集包含的规则id
-    * isDefault  是否该语言默认规则集，0不是，1是
-    * isDevcloudProjectDefault  是否是项目下语言默认规则集，0不是，1是
-    * isDefaultTemplate  是否是系统规则集，0不是，1是
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
+    * language  **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * creatorId  **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
+    * creatorName  **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
+    * templateCreateTime  **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
+    * isUsed  **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
+    * ruleIds  **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
+    * isDefault  **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDevcloudProjectDefault  **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDefaultTemplate  **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * templateCreateTime  创建人时间
-    * isUsed  使用状态1使用中，0空闲中
-    * ruleIds  规则集包含的规则id
-    * isDefault  是否该语言默认规则集，0不是，1是
-    * isDevcloudProjectDefault  是否是项目下语言默认规则集，0不是，1是
-    * isDefaultTemplate  是否是系统规则集，0不是，1是
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
+    * language  **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * creatorId  **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
+    * creatorName  **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
+    * templateCreateTime  **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
+    * isUsed  **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
+    * ruleIds  **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
+    * isDefault  **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDevcloudProjectDefault  **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDefaultTemplate  **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * templateCreateTime  创建人时间
-    * isUsed  使用状态1使用中，0空闲中
-    * ruleIds  规则集包含的规则id
-    * isDefault  是否该语言默认规则集，0不是，1是
-    * isDevcloudProjectDefault  是否是项目下语言默认规则集，0不是，1是
-    * isDefaultTemplate  是否是系统规则集，0不是，1是
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
+    * language  **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * creatorId  **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
+    * creatorName  **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
+    * templateCreateTime  **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
+    * isUsed  **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
+    * ruleIds  **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
+    * isDefault  **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDevcloudProjectDefault  **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDefaultTemplate  **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * templateCreateTime  创建人时间
-    * isUsed  使用状态1使用中，0空闲中
-    * ruleIds  规则集包含的规则id
-    * isDefault  是否该语言默认规则集，0不是，1是
-    * isDevcloudProjectDefault  是否是项目下语言默认规则集，0不是，1是
-    * isDefaultTemplate  是否是系统规则集，0不是，1是
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
+    * language  **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * creatorId  **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
+    * creatorName  **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
+    * templateCreateTime  **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
+    * isUsed  **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
+    * ruleIds  **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
+    * isDefault  **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDevcloudProjectDefault  **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDefaultTemplate  **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * creatorId  创建人ID
-    * creatorName  创建人名称
-    * templateCreateTime  创建人时间
-    * isUsed  使用状态1使用中，0空闲中
-    * ruleIds  规则集包含的规则id
-    * isDefault  是否该语言默认规则集，0不是，1是
-    * isDevcloudProjectDefault  是否是项目下语言默认规则集，0不是，1是
-    * isDefaultTemplate  是否是系统规则集，0不是，1是
+    * templateId  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
+    * language  **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * creatorId  **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
+    * creatorName  **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
+    * templateCreateTime  **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
+    * isUsed  **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
+    * ruleIds  **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
+    * isDefault  **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDevcloudProjectDefault  **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
+    * isDefaultTemplate  **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  规则集id
+    *  **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @return string|null
     */
@@ -296,7 +296,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 规则集id
+    * @param string|null $templateId **参数解释:** 规则集ID。 **取值范围:** 32位UUID。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  规则集语言
+    *  **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 规则集语言
+    * @param string|null $language **参数解释:** 规则集语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  规则集名称
+    *  **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 规则集名称
+    * @param string|null $templateName **参数解释:** 规则集语言。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  创建人ID
+    *  **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string|null $creatorId 创建人ID
+    * @param string|null $creatorId **参数解释:** 创建者的user_id，值来源于IAM的用户ID。 **取值范围:** 32位UUID。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorName
-    *  创建人名称
+    *  **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets creatorName
     *
-    * @param string|null $creatorName 创建人名称
+    * @param string|null $creatorName **参数解释:** 创建人名称，值来源于IAM用户名称。 **取值范围:** IAM用户名称。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateCreateTime
-    *  创建人时间
+    *  **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets templateCreateTime
     *
-    * @param string|null $templateCreateTime 创建人时间
+    * @param string|null $templateCreateTime **参数解释:** 创建时间，时区统一为0时区。 **取值范围:** 0时区时间。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets isUsed
-    *  使用状态1使用中，0空闲中
+    *  **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets isUsed
     *
-    * @param string|null $isUsed 使用状态1使用中，0空闲中
+    * @param string|null $isUsed **参数解释:** 使用状态。 **取值范围:** - 0：空闲中。 - 1：使用中。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleIds
-    *  规则集包含的规则id
+    *  **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleIds
     *
-    * @param string|null $ruleIds 规则集包含的规则id
+    * @param string|null $ruleIds **参数解释:** 规则集包含的规则ID，每条规则都有唯一的规则ID。 **取值范围:** 32位UUID列表，多个UUID以英文逗号分隔。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefault
-    *  是否该语言默认规则集，0不是，1是
+    *  **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @return string|null
     */
@@ -488,7 +488,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets isDefault
     *
-    * @param string|null $isDefault 是否该语言默认规则集，0不是，1是
+    * @param string|null $isDefault **参数解释:** 规则集是否是该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDevcloudProjectDefault
-    *  是否是项目下语言默认规则集，0不是，1是
+    *  **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets isDevcloudProjectDefault
     *
-    * @param string|null $isDevcloudProjectDefault 是否是项目下语言默认规则集，0不是，1是
+    * @param string|null $isDevcloudProjectDefault **参数解释:** 规则集是否是项目下该语言默认规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets isDefaultTemplate
-    *  是否是系统规则集，0不是，1是
+    *  **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class RulesetItem implements ModelInterface, ArrayAccess
     /**
     * Sets isDefaultTemplate
     *
-    * @param string|null $isDefaultTemplate 是否是系统规则集，0不是，1是
+    * @param string|null $isDefaultTemplate **参数解释:** 规则集是否是系统规则集。 **取值范围:** - 0：不是。 - 1：是。
     *
     * @return $this
     */

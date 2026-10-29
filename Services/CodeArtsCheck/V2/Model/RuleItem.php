@@ -20,13 +20,13 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * checked  规则状态0：未启用，1：已启用
-    * ruleConfigList  规则配置参数阈值相关信息
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位ID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * checked  **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
+    * ruleConfigList  **参数解释:** 规则配置参数阈值相关信息。
     *
     * @var string[]
     */
@@ -37,18 +37,18 @@ class RuleItem implements ModelInterface, ArrayAccess
             'ruleSeverity' => 'string',
             'ruleTages' => 'string',
             'checked' => 'string',
-            'ruleConfigList' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfig[]'
+            'ruleConfigList' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfigParam[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * checked  规则状态0：未启用，1：已启用
-    * ruleConfigList  规则配置参数阈值相关信息
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位ID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * checked  **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
+    * ruleConfigList  **参数解释:** 规则配置参数阈值相关信息。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * checked  规则状态0：未启用，1：已启用
-    * ruleConfigList  规则配置参数阈值相关信息
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位ID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * checked  **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
+    * ruleConfigList  **参数解释:** 规则配置参数阈值相关信息。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * checked  规则状态0：未启用，1：已启用
-    * ruleConfigList  规则配置参数阈值相关信息
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位ID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * checked  **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
+    * ruleConfigList  **参数解释:** 规则配置参数阈值相关信息。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * checked  规则状态0：未启用，1：已启用
-    * ruleConfigList  规则配置参数阈值相关信息
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位ID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * checked  **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
+    * ruleConfigList  **参数解释:** 规则配置参数阈值相关信息。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则id
+    *  **参数解释:** 规则ID。 **取值范围:** 32位ID。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则id
+    * @param string|null $ruleId **参数解释:** 规则ID。 **取值范围:** 32位ID。
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleLanguage
-    *  规则所属语言
+    *  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleLanguage
     *
-    * @param string|null $ruleLanguage 规则所属语言
+    * @param string|null $ruleLanguage **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  规则名称
+    *  **参数解释:** 规则名称。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 规则名称
+    * @param string|null $ruleName **参数解释:** 规则名称。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSeverity
-    *  规则问题级别
+    *  **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
     *
     * @return string|null
     */
@@ -324,7 +324,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSeverity
     *
-    * @param string|null $ruleSeverity 规则问题级别
+    * @param string|null $ruleSeverity **参数解释:** 规则问题级别。 **取值范围：** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleTages
-    *  规则标签
+    *  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleTages
     *
-    * @param string|null $ruleTages 规则标签
+    * @param string|null $ruleTages **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets checked
-    *  规则状态0：未启用，1：已启用
+    *  **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets checked
     *
-    * @param string|null $checked 规则状态0：未启用，1：已启用
+    * @param string|null $checked **参数解释:** 规则状态。 **取值范围:** - 0：未启用。 - 1：已启用。
     *
     * @return $this
     */
@@ -384,9 +384,9 @@ class RuleItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleConfigList
-    *  规则配置参数阈值相关信息
+    *  **参数解释:** 规则配置参数阈值相关信息。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfig[]|null
+    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfigParam[]|null
     */
     public function getRuleConfigList()
     {
@@ -396,7 +396,7 @@ class RuleItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleConfigList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfig[]|null $ruleConfigList 规则配置参数阈值相关信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfigParam[]|null $ruleConfigList **参数解释:** 规则配置参数阈值相关信息。
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class PortList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * clientPort  终端节点访问的端口。 终端节点提供给用户，作为访问终端节点服务的端口，范围1-65535。
     * serverPort  终端节点服务的端口。 终端节点服务绑定了后端资源，作为提供服务的端口，范围1-65535。
-    * protocol  端口映射协议，支持TCP。
+    * protocol  端口映射协议，支持TCP、UDP。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class PortList implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * clientPort  终端节点访问的端口。 终端节点提供给用户，作为访问终端节点服务的端口，范围1-65535。
     * serverPort  终端节点服务的端口。 终端节点服务绑定了后端资源，作为提供服务的端口，范围1-65535。
-    * protocol  端口映射协议，支持TCP。
+    * protocol  端口映射协议，支持TCP、UDP。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PortList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * clientPort  终端节点访问的端口。 终端节点提供给用户，作为访问终端节点服务的端口，范围1-65535。
     * serverPort  终端节点服务的端口。 终端节点服务绑定了后端资源，作为提供服务的端口，范围1-65535。
-    * protocol  端口映射协议，支持TCP。
+    * protocol  端口映射协议，支持TCP、UDP。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class PortList implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * clientPort  终端节点访问的端口。 终端节点提供给用户，作为访问终端节点服务的端口，范围1-65535。
     * serverPort  终端节点服务的端口。 终端节点服务绑定了后端资源，作为提供服务的端口，范围1-65535。
-    * protocol  端口映射协议，支持TCP。
+    * protocol  端口映射协议，支持TCP、UDP。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class PortList implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * clientPort  终端节点访问的端口。 终端节点提供给用户，作为访问终端节点服务的端口，范围1-65535。
     * serverPort  终端节点服务的端口。 终端节点服务绑定了后端资源，作为提供服务的端口，范围1-65535。
-    * protocol  端口映射协议，支持TCP。
+    * protocol  端口映射协议，支持TCP、UDP。
     *
     * @var string[]
     */
@@ -150,6 +150,7 @@ class PortList implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const PROTOCOL_TCP = 'TCP';
+    const PROTOCOL_UDP = 'UDP';
     
 
     /**
@@ -161,6 +162,7 @@ class PortList implements ModelInterface, ArrayAccess
     {
         return [
             self::PROTOCOL_TCP,
+            self::PROTOCOL_UDP,
         ];
     }
 
@@ -277,7 +279,7 @@ class PortList implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  端口映射协议，支持TCP。
+    *  端口映射协议，支持TCP、UDP。
     *
     * @return string|null
     */
@@ -289,7 +291,7 @@ class PortList implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 端口映射协议，支持TCP。
+    * @param string|null $protocol 端口映射协议，支持TCP、UDP。
     *
     * @return $this
     */

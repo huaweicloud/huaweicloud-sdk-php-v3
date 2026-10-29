@@ -21,6 +21,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agencyAccessType  日志访问类型
+    * agencyAccessConfigId  跨账号日志接入配置id
     * agencyLogAccess  跨账号日志接入配置名称
     * logAgencyStreamName  委托日志流名称
     * logAgencyStreamId  委托日志流id
@@ -39,6 +40,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'agencyAccessType' => 'string',
+            'agencyAccessConfigId' => 'string',
             'agencyLogAccess' => 'string',
             'logAgencyStreamName' => 'string',
             'logAgencyStreamId' => 'string',
@@ -57,6 +59,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agencyAccessType  日志访问类型
+    * agencyAccessConfigId  跨账号日志接入配置id
     * agencyLogAccess  跨账号日志接入配置名称
     * logAgencyStreamName  委托日志流名称
     * logAgencyStreamId  委托日志流id
@@ -75,6 +78,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'agencyAccessType' => null,
+        'agencyAccessConfigId' => null,
         'agencyLogAccess' => null,
         'logAgencyStreamName' => null,
         'logAgencyStreamId' => null,
@@ -114,6 +118,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agencyAccessType  日志访问类型
+    * agencyAccessConfigId  跨账号日志接入配置id
     * agencyLogAccess  跨账号日志接入配置名称
     * logAgencyStreamName  委托日志流名称
     * logAgencyStreamId  委托日志流id
@@ -132,6 +137,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'agencyAccessType' => 'agency_access_type',
+            'agencyAccessConfigId' => 'agency_accessConfig_id',
             'agencyLogAccess' => 'agency_log_access',
             'logAgencyStreamName' => 'log_agencyStream_name',
             'logAgencyStreamId' => 'log_agencyStream_id',
@@ -150,6 +156,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agencyAccessType  日志访问类型
+    * agencyAccessConfigId  跨账号日志接入配置id
     * agencyLogAccess  跨账号日志接入配置名称
     * logAgencyStreamName  委托日志流名称
     * logAgencyStreamId  委托日志流id
@@ -168,6 +175,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'agencyAccessType' => 'setAgencyAccessType',
+            'agencyAccessConfigId' => 'setAgencyAccessConfigId',
             'agencyLogAccess' => 'setAgencyLogAccess',
             'logAgencyStreamName' => 'setLogAgencyStreamName',
             'logAgencyStreamId' => 'setLogAgencyStreamId',
@@ -186,6 +194,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agencyAccessType  日志访问类型
+    * agencyAccessConfigId  跨账号日志接入配置id
     * agencyLogAccess  跨账号日志接入配置名称
     * logAgencyStreamName  委托日志流名称
     * logAgencyStreamId  委托日志流id
@@ -204,6 +213,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'agencyAccessType' => 'getAgencyAccessType',
+            'agencyAccessConfigId' => 'getAgencyAccessConfigId',
             'agencyLogAccess' => 'getAgencyLogAccess',
             'logAgencyStreamName' => 'getLogAgencyStreamName',
             'logAgencyStreamId' => 'getLogAgencyStreamId',
@@ -291,6 +301,7 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['agencyAccessType'] = isset($data['agencyAccessType']) ? $data['agencyAccessType'] : null;
+        $this->container['agencyAccessConfigId'] = isset($data['agencyAccessConfigId']) ? $data['agencyAccessConfigId'] : null;
         $this->container['agencyLogAccess'] = isset($data['agencyLogAccess']) ? $data['agencyLogAccess'] : null;
         $this->container['logAgencyStreamName'] = isset($data['logAgencyStreamName']) ? $data['logAgencyStreamName'] : null;
         $this->container['logAgencyStreamId'] = isset($data['logAgencyStreamId']) ? $data['logAgencyStreamId'] : null;
@@ -399,6 +410,30 @@ class PreviewAgencyLogAccessReqBody implements ModelInterface, ArrayAccess
     public function setAgencyAccessType($agencyAccessType)
     {
         $this->container['agencyAccessType'] = $agencyAccessType;
+        return $this;
+    }
+
+    /**
+    * Gets agencyAccessConfigId
+    *  跨账号日志接入配置id
+    *
+    * @return string|null
+    */
+    public function getAgencyAccessConfigId()
+    {
+        return $this->container['agencyAccessConfigId'];
+    }
+
+    /**
+    * Sets agencyAccessConfigId
+    *
+    * @param string|null $agencyAccessConfigId 跨账号日志接入配置id
+    *
+    * @return $this
+    */
+    public function setAgencyAccessConfigId($agencyAccessConfigId)
+    {
+        $this->container['agencyAccessConfigId'] = $agencyAccessConfigId;
         return $this;
     }
 

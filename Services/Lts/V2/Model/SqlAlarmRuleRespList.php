@@ -41,6 +41,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'int',
             'notificationFrequency' => 'int',
             'alarmActionRuleName' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]',
+            'conditionExpressions' => '\HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]'
     ];
 
     /**
@@ -91,6 +93,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
         'recoveryPolicy' => 'int32',
         'notificationFrequency' => 'int32',
         'alarmActionRuleName' => null,
-        'tags' => null
+        'tags' => null,
+        'conditionExpressions' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'recovery_policy',
             'notificationFrequency' => 'notification_frequency',
             'alarmActionRuleName' => 'alarm_action_rule_name',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'conditionExpressions' => 'condition_expressions'
     ];
 
     /**
@@ -212,6 +218,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'setRecoveryPolicy',
             'notificationFrequency' => 'setNotificationFrequency',
             'alarmActionRuleName' => 'setAlarmActionRuleName',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'conditionExpressions' => 'setConditionExpressions'
     ];
 
     /**
@@ -262,6 +270,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     * notificationFrequency  通知频率,单位(分钟)
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
             'recoveryPolicy' => 'getRecoveryPolicy',
             'notificationFrequency' => 'getNotificationFrequency',
             'alarmActionRuleName' => 'getAlarmActionRuleName',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'conditionExpressions' => 'getConditionExpressions'
     ];
 
     /**
@@ -429,6 +439,7 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
         $this->container['notificationFrequency'] = isset($data['notificationFrequency']) ? $data['notificationFrequency'] : null;
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['conditionExpressions'] = isset($data['conditionExpressions']) ? $data['conditionExpressions'] : null;
     }
 
     /**
@@ -1056,6 +1067,30 @@ class SqlAlarmRuleRespList implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets conditionExpressions
+    *  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]|null
+    */
+    public function getConditionExpressions()
+    {
+        return $this->container['conditionExpressions'];
+    }
+
+    /**
+    * Sets conditionExpressions
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]|null $conditionExpressions **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。
+    *
+    * @return $this
+    */
+    public function setConditionExpressions($conditionExpressions)
+    {
+        $this->container['conditionExpressions'] = $conditionExpressions;
         return $this;
     }
 

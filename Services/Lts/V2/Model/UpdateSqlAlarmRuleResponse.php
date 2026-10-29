@@ -40,6 +40,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
     * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * createTime  **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    * updateTime  **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -62,7 +65,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'triggerConditionFrequency' => 'int',
             'whetherRecoveryPolicy' => 'bool',
             'recoveryPolicy' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]'
+            'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsResBody[]',
+            'createTime' => 'int',
+            'updateTime' => 'int',
+            'conditionExpressions' => '\HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]'
     ];
 
     /**
@@ -86,6 +92,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
     * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * createTime  **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    * updateTime  **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -108,7 +117,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         'triggerConditionFrequency' => 'int32',
         'whetherRecoveryPolicy' => null,
         'recoveryPolicy' => 'int32',
-        'tags' => null
+        'tags' => null,
+        'createTime' => 'int64',
+        'updateTime' => 'int64',
+        'conditionExpressions' => null
     ];
 
     /**
@@ -153,6 +165,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
     * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * createTime  **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    * updateTime  **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -175,7 +190,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'triggerConditionFrequency' => 'trigger_condition_frequency',
             'whetherRecoveryPolicy' => 'whether_recovery_policy',
             'recoveryPolicy' => 'recovery_policy',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'createTime' => 'create_time',
+            'updateTime' => 'update_time',
+            'conditionExpressions' => 'condition_expressions'
     ];
 
     /**
@@ -199,6 +217,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
     * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * createTime  **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    * updateTime  **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -221,7 +242,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'triggerConditionFrequency' => 'setTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'setWhetherRecoveryPolicy',
             'recoveryPolicy' => 'setRecoveryPolicy',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'createTime' => 'setCreateTime',
+            'updateTime' => 'setUpdateTime',
+            'conditionExpressions' => 'setConditionExpressions'
     ];
 
     /**
@@ -245,6 +269,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     * whetherRecoveryPolicy  **参数解释：** 是否打开恢复通知。 **取值范围：** - true：配置告警恢复策略。 - false：不配置告警恢复策略。
     * recoveryPolicy  **参数解释：** 恢复策略周期。 **取值范围：** 不涉及。
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。
+    * createTime  **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    * updateTime  **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -267,7 +294,10 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
             'triggerConditionFrequency' => 'getTriggerConditionFrequency',
             'whetherRecoveryPolicy' => 'getWhetherRecoveryPolicy',
             'recoveryPolicy' => 'getRecoveryPolicy',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'createTime' => 'getCreateTime',
+            'updateTime' => 'getUpdateTime',
+            'conditionExpressions' => 'getConditionExpressions'
     ];
 
     /**
@@ -393,6 +423,9 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
         $this->container['whetherRecoveryPolicy'] = isset($data['whetherRecoveryPolicy']) ? $data['whetherRecoveryPolicy'] : null;
         $this->container['recoveryPolicy'] = isset($data['recoveryPolicy']) ? $data['recoveryPolicy'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
+        $this->container['conditionExpressions'] = isset($data['conditionExpressions']) ? $data['conditionExpressions'] : null;
     }
 
     /**
@@ -916,6 +949,78 @@ class UpdateSqlAlarmRuleResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param int|null $createTime **参数解释：** 告警规则创建的时间，毫秒级的时间戳。 **取值范围** 不涉及。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets updateTime
+    *  **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getUpdateTime()
+    {
+        return $this->container['updateTime'];
+    }
+
+    /**
+    * Sets updateTime
+    *
+    * @param int|null $updateTime **参数解释：** 告警规则最后一次修改的时间，毫秒级的时间戳。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setUpdateTime($updateTime)
+    {
+        $this->container['updateTime'] = $updateTime;
+        return $this;
+    }
+
+    /**
+    * Gets conditionExpressions
+    *  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]|null
+    */
+    public function getConditionExpressions()
+    {
+        return $this->container['conditionExpressions'];
+    }
+
+    /**
+    * Sets conditionExpressions
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]|null $conditionExpressions **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setConditionExpressions($conditionExpressions)
+    {
+        $this->container['conditionExpressions'] = $conditionExpressions;
         return $this;
     }
 

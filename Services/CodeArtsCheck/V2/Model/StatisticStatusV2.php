@@ -20,30 +20,38 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * unresolved  未解决
-    * resolved  已解决
-    * dismissed  已忽略
+    * unresolved  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * resolved  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissed  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * fixed  **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    * solved  **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'unresolved' => 'int',
             'resolved' => 'int',
-            'dismissed' => 'int'
+            'dismissed' => 'int',
+            'fixed' => 'int',
+            'solved' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * unresolved  未解决
-    * resolved  已解决
-    * dismissed  已忽略
+    * unresolved  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * resolved  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissed  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * fixed  **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    * solved  **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'unresolved' => null,
         'resolved' => null,
-        'dismissed' => null
+        'dismissed' => null,
+        'fixed' => null,
+        'solved' => null
     ];
 
     /**
@@ -69,44 +77,56 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * unresolved  未解决
-    * resolved  已解决
-    * dismissed  已忽略
+    * unresolved  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * resolved  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissed  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * fixed  **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    * solved  **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'unresolved' => 'unresolved',
             'resolved' => 'resolved',
-            'dismissed' => 'dismissed'
+            'dismissed' => 'dismissed',
+            'fixed' => 'fixed',
+            'solved' => 'solved'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * unresolved  未解决
-    * resolved  已解决
-    * dismissed  已忽略
+    * unresolved  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * resolved  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissed  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * fixed  **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    * solved  **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'unresolved' => 'setUnresolved',
             'resolved' => 'setResolved',
-            'dismissed' => 'setDismissed'
+            'dismissed' => 'setDismissed',
+            'fixed' => 'setFixed',
+            'solved' => 'setSolved'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * unresolved  未解决
-    * resolved  已解决
-    * dismissed  已忽略
+    * unresolved  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
+    * resolved  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
+    * dismissed  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
+    * fixed  **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    * solved  **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'unresolved' => 'getUnresolved',
             'resolved' => 'getResolved',
-            'dismissed' => 'getDismissed'
+            'dismissed' => 'getDismissed',
+            'fixed' => 'getFixed',
+            'solved' => 'getSolved'
     ];
 
     /**
@@ -170,6 +190,8 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
         $this->container['unresolved'] = isset($data['unresolved']) ? $data['unresolved'] : null;
         $this->container['resolved'] = isset($data['resolved']) ? $data['resolved'] : null;
         $this->container['dismissed'] = isset($data['dismissed']) ? $data['dismissed'] : null;
+        $this->container['fixed'] = isset($data['fixed']) ? $data['fixed'] : null;
+        $this->container['solved'] = isset($data['solved']) ? $data['solved'] : null;
     }
 
     /**
@@ -196,7 +218,7 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets unresolved
-    *  未解决
+    *  **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -208,7 +230,7 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
     /**
     * Sets unresolved
     *
-    * @param int|null $unresolved 未解决
+    * @param int|null $unresolved **参数解释：** [待处理问题数。](tag:hws,hws_hk)[待处理和重新打开（需打开忽略审核开关）问题数。](tag:fcs,hcs,hcs_sm,hcs_site,hcs_sitesm) **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +242,7 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets resolved
-    *  已解决
+    *  **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -232,7 +254,7 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
     /**
     * Sets resolved
     *
-    * @param int|null $resolved 已解决
+    * @param int|null $resolved **参数解释：** 已解决和已修复问题数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +266,7 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets dismissed
-    *  已忽略
+    *  **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -256,13 +278,61 @@ class StatisticStatusV2 implements ModelInterface, ArrayAccess
     /**
     * Sets dismissed
     *
-    * @param int|null $dismissed 已忽略
+    * @param int|null $dismissed **参数解释：** 已忽略问题数。 **取值范围：** 不涉及。
     *
     * @return $this
     */
     public function setDismissed($dismissed)
     {
         $this->container['dismissed'] = $dismissed;
+        return $this;
+    }
+
+    /**
+    * Gets fixed
+    *  **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getFixed()
+    {
+        return $this->container['fixed'];
+    }
+
+    /**
+    * Sets fixed
+    *
+    * @param int|null $fixed **参数解释：** 已修复问题数。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setFixed($fixed)
+    {
+        $this->container['fixed'] = $fixed;
+        return $this;
+    }
+
+    /**
+    * Gets solved
+    *  **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
+    *
+    * @return int|null
+    */
+    public function getSolved()
+    {
+        return $this->container['solved'];
+    }
+
+    /**
+    * Sets solved
+    *
+    * @param int|null $solved **参数解释：** 已解决问题数。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setSolved($solved)
+    {
+        $this->container['solved'] = $solved;
         return $this;
     }
 

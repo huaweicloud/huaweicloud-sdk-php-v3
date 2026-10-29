@@ -20,9 +20,9 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  规则ID
-    * value  attribute的问题级别，0致命，1严重，2一般，3提示
-    * ruleConfigList  规则阈值详细
+    * ruleId  **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
+    * value  **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
+    * ruleConfigList  **参数解释:** 规则阈值详细。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  规则ID
-    * value  attribute的问题级别，0致命，1严重，2一般，3提示
-    * ruleConfigList  规则阈值详细
+    * ruleId  **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
+    * value  **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
+    * ruleConfigList  **参数解释:** 规则阈值详细。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  规则ID
-    * value  attribute的问题级别，0致命，1严重，2一般，3提示
-    * ruleConfigList  规则阈值详细
+    * ruleId  **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
+    * value  **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
+    * ruleConfigList  **参数解释:** 规则阈值详细。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  规则ID
-    * value  attribute的问题级别，0致命，1严重，2一般，3提示
-    * ruleConfigList  规则阈值详细
+    * ruleId  **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
+    * value  **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
+    * ruleConfigList  **参数解释:** 规则阈值详细。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  规则ID
-    * value  attribute的问题级别，0致命，1严重，2一般，3提示
-    * ruleConfigList  规则阈值详细
+    * ruleId  **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
+    * value  **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
+    * ruleConfigList  **参数解释:** 规则阈值详细。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则ID
+    *  **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则ID
+    * @param string|null $ruleId **参数解释:** 规则ID。可调用[[获取规则列表接口](https://support.huaweicloud.com/api-codecheck/ListRules.html)](tag:hws)[[获取规则列表接口](https://support.huaweicloud.com/intl/zh-cn/api-codecheck/ListRules.html)](tag:hws_hk)[获取规则列表接口](tag:hcs,hcs_sm,hcs_site,hcs_sitesm,fcs)获取。 **约束限制:** 不涉及。 **取值范围:** 32位项目ID。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  attribute的问题级别，0致命，1严重，2一般，3提示
+    *  **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value attribute的问题级别，0致命，1严重，2一般，3提示
+    * @param string|null $value **参数解释:** attribute的告警等级。 **约束限制:** 不涉及。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。 **默认取值:** 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleConfigList
-    *  规则阈值详细
+    *  **参数解释:** 规则阈值详细。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfig[]|null
     */
@@ -256,7 +256,7 @@ class CustomAttributesRule implements ModelInterface, ArrayAccess
     /**
     * Sets ruleConfigList
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfig[]|null $ruleConfigList 规则阈值详细
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\RuleConfig[]|null $ruleConfigList **参数解释:** 规则阈值详细。
     *
     * @return $this
     */

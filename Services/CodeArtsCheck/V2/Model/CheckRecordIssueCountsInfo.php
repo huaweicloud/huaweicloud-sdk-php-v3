@@ -20,10 +20,10 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * critical  致命问题
-    * serious  严重问题
-    * normal  常规问题
-    * prompt  提示问题
+    * critical  **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * serious  **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * normal  **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * prompt  **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * critical  致命问题
-    * serious  严重问题
-    * normal  常规问题
-    * prompt  提示问题
+    * critical  **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * serious  **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * normal  **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * prompt  **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * critical  致命问题
-    * serious  严重问题
-    * normal  常规问题
-    * prompt  提示问题
+    * critical  **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * serious  **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * normal  **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * prompt  **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * critical  致命问题
-    * serious  严重问题
-    * normal  常规问题
-    * prompt  提示问题
+    * critical  **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * serious  **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * normal  **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * prompt  **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * critical  致命问题
-    * serious  严重问题
-    * normal  常规问题
-    * prompt  提示问题
+    * critical  **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * serious  **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * normal  **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
+    * prompt  **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets critical
-    *  致命问题
+    *  **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets critical
     *
-    * @param int|null $critical 致命问题
+    * @param int|null $critical **参数解释：** 致命问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serious
-    *  严重问题
+    *  **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serious
     *
-    * @param int|null $serious 严重问题
+    * @param int|null $serious **参数解释：** 严重问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets normal
-    *  常规问题
+    *  **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets normal
     *
-    * @param int|null $normal 常规问题
+    * @param int|null $normal **参数解释：** 一般问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets prompt
-    *  提示问题
+    *  **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class CheckRecordIssueCountsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets prompt
     *
-    * @param int|null $prompt 提示问题
+    * @param int|null $prompt **参数解释：** 提示问题数量。不包括已忽略和已修复问题。 **取值范围：** 不涉及。
     *
     * @return $this
     */

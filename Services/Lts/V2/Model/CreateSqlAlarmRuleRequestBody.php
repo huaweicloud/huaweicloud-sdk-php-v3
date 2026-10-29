@@ -36,6 +36,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'notificationFrequency' => 'int',
             'alarmActionRuleName' => 'string',
             'tags' => '\HuaweiCloud\SDK\Lts\V2\Model\TagsRequestBody[]',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'conditionExpressions' => '\HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]'
     ];
 
     /**
@@ -76,6 +78,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         'notificationFrequency' => 'int32',
         'alarmActionRuleName' => null,
         'tags' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'conditionExpressions' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'notificationFrequency' => 'notification_frequency',
             'alarmActionRuleName' => 'alarm_action_rule_name',
             'tags' => 'tags',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'conditionExpressions' => 'condition_expressions'
     ];
 
     /**
@@ -177,6 +183,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'notificationFrequency' => 'setNotificationFrequency',
             'alarmActionRuleName' => 'setAlarmActionRuleName',
             'tags' => 'setTags',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'conditionExpressions' => 'setConditionExpressions'
     ];
 
     /**
@@ -217,6 +225,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * alarmActionRuleName  告警行动规则名称 >alarm_action_rule_name和notification_save_rule可以选填一个，如果都填，优先选择alarm_action_rule_name
     * tags  **参数解释：** 告警标签信息。标签是以键值对（key-value）的形式表示，key和value为一一对应关系。 **约束限制：** 不涉及。
     * enterpriseProjectId  **参数解释：** 企业项目id信息。 **约束限制：** 不涉及。
+    * conditionExpressions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
             'notificationFrequency' => 'getNotificationFrequency',
             'alarmActionRuleName' => 'getAlarmActionRuleName',
             'tags' => 'getTags',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'conditionExpressions' => 'getConditionExpressions'
     ];
 
     /**
@@ -359,6 +369,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['alarmActionRuleName'] = isset($data['alarmActionRuleName']) ? $data['alarmActionRuleName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['conditionExpressions'] = isset($data['conditionExpressions']) ? $data['conditionExpressions'] : null;
     }
 
     /**
@@ -390,18 +401,12 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['frequency'] === null) {
             $invalidProperties[] = "'frequency' can't be null";
         }
-        if ($this->container['conditionExpression'] === null) {
-            $invalidProperties[] = "'conditionExpression' can't be null";
-        }
-            if ((mb_strlen($this->container['conditionExpression']) > 1024)) {
+            if (!is_null($this->container['conditionExpression']) && (mb_strlen($this->container['conditionExpression']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'conditionExpression', the character length must be smaller than or equal to 1024.";
             }
-            if ((mb_strlen($this->container['conditionExpression']) < 1)) {
+            if (!is_null($this->container['conditionExpression']) && (mb_strlen($this->container['conditionExpression']) < 1)) {
                 $invalidProperties[] = "invalid value for 'conditionExpression', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['sqlAlarmLevel'] === null) {
-            $invalidProperties[] = "'sqlAlarmLevel' can't be null";
-        }
             $allowedValues = $this->getSqlAlarmLevelAllowableValues();
                 if (!is_null($this->container['sqlAlarmLevel']) && !in_array($this->container['sqlAlarmLevel'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -568,7 +573,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets conditionExpression
     *  条件表达式
     *
-    * @return string
+    * @return string|null
     */
     public function getConditionExpression()
     {
@@ -578,7 +583,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets conditionExpression
     *
-    * @param string $conditionExpression 条件表达式
+    * @param string|null $conditionExpression 条件表达式
     *
     * @return $this
     */
@@ -592,7 +597,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     * Gets sqlAlarmLevel
     *  告警级别
     *
-    * @return string
+    * @return string|null
     */
     public function getSqlAlarmLevel()
     {
@@ -602,7 +607,7 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sqlAlarmLevel
     *
-    * @param string $sqlAlarmLevel 告警级别
+    * @param string|null $sqlAlarmLevel 告警级别
     *
     * @return $this
     */
@@ -825,6 +830,30 @@ class CreateSqlAlarmRuleRequestBody implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets conditionExpressions
+    *  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]|null
+    */
+    public function getConditionExpressions()
+    {
+        return $this->container['conditionExpressions'];
+    }
+
+    /**
+    * Sets conditionExpressions
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\AlarmCondition[]|null $conditionExpressions **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视condition_expression、sql_alarm_level参数。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setConditionExpressions($conditionExpressions)
+    {
+        $this->container['conditionExpressions'] = $conditionExpressions;
         return $this;
     }
 

@@ -20,16 +20,16 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleSet  规则集规范分类
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * rightExample  正确示例
-    * errorExample  错误示例
-    * reviseOpinion  修改建议
-    * ruleDesc  规则描述
+    * ruleSet  **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位UUID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * rightExample  **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
+    * errorExample  **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
+    * reviseOpinion  **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
+    * ruleDesc  **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleSet  规则集规范分类
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * rightExample  正确示例
-    * errorExample  错误示例
-    * reviseOpinion  修改建议
-    * ruleDesc  规则描述
+    * ruleSet  **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位UUID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * rightExample  **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
+    * errorExample  **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
+    * reviseOpinion  **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
+    * ruleDesc  **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleSet  规则集规范分类
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * rightExample  正确示例
-    * errorExample  错误示例
-    * reviseOpinion  修改建议
-    * ruleDesc  规则描述
+    * ruleSet  **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位UUID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * rightExample  **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
+    * errorExample  **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
+    * reviseOpinion  **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
+    * ruleDesc  **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleSet  规则集规范分类
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * rightExample  正确示例
-    * errorExample  错误示例
-    * reviseOpinion  修改建议
-    * ruleDesc  规则描述
+    * ruleSet  **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位UUID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * rightExample  **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
+    * errorExample  **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
+    * reviseOpinion  **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
+    * ruleDesc  **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleSet  规则集规范分类
-    * ruleId  规则id
-    * ruleLanguage  规则所属语言
-    * ruleName  规则名称
-    * ruleSeverity  规则问题级别
-    * ruleTages  规则标签
-    * rightExample  正确示例
-    * errorExample  错误示例
-    * reviseOpinion  修改建议
-    * ruleDesc  规则描述
+    * ruleSet  **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
+    * ruleId  **参数解释:** 规则ID。 **取值范围:** 32位UUID。
+    * ruleLanguage  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * ruleName  **参数解释:** 规则名称。 **取值范围:** 不涉及。
+    * ruleSeverity  **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
+    * ruleTages  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
+    * rightExample  **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
+    * errorExample  **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
+    * reviseOpinion  **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
+    * ruleDesc  **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
@@ -273,7 +273,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSet
-    *  规则集规范分类
+    *  **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
     *
     * @return string|null
     */
@@ -285,7 +285,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSet
     *
-    * @param string|null $ruleSet 规则集规范分类
+    * @param string|null $ruleSet **参数解释：** 业务类型分类。 **取值范围:** - common：通用。 - common_standard_recommend：通用建议。 - common_standard_rule：通用规则。 - security：安全。 - security_standard_recommend：安全建议。 - security_standard_rule：安全规则。
     *
     * @return $this
     */
@@ -297,7 +297,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则id
+    *  **参数解释:** 规则ID。 **取值范围:** 32位UUID。
     *
     * @return string|null
     */
@@ -309,7 +309,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则id
+    * @param string|null $ruleId **参数解释:** 规则ID。 **取值范围:** 32位UUID。
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleLanguage
-    *  规则所属语言
+    *  **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleLanguage
     *
-    * @param string|null $ruleLanguage 规则所属语言
+    * @param string|null $ruleLanguage **参数解释:** 规则所属语言。 **取值范围:** 当前支持的语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  规则名称
+    *  **参数解释:** 规则名称。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 规则名称
+    * @param string|null $ruleName **参数解释:** 规则名称。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleSeverity
-    *  规则问题级别
+    *  **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleSeverity
     *
-    * @param string|null $ruleSeverity 规则问题级别
+    * @param string|null $ruleSeverity **参数解释:** 规则问题级别。 **取值范围:** - 0：致命。 - 1：严重。 - 2：一般。 - 3：提示。
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleTages
-    *  规则标签
+    *  **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleTages
     *
-    * @param string|null $ruleTages 规则标签
+    * @param string|null $ruleTages **参数解释:** 规则标签。 **取值范围:** - huawei - iso5055 - cert - cwe - top10 - top25 - misra - GJB - autosar - PCI DSS
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets rightExample
-    *  正确示例
+    *  **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets rightExample
     *
-    * @param string|null $rightExample 正确示例
+    * @param string|null $rightExample **参数解释:** 正确示例。 **取值范围:** 代码块或者文字示例等。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorExample
-    *  错误示例
+    *  **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets errorExample
     *
-    * @param string|null $errorExample 错误示例
+    * @param string|null $errorExample **参数解释:** 错误示例。 **取值范围:** 代码块或者文字示例等。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets reviseOpinion
-    *  修改建议
+    *  **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
     *
     * @return string|null
     */
@@ -477,7 +477,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets reviseOpinion
     *
-    * @param string|null $reviseOpinion 修改建议
+    * @param string|null $reviseOpinion **参数解释:** 修改建议。 **取值范围:** 代码块或者文字示例等。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleDesc
-    *  规则描述
+    *  **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -501,7 +501,7 @@ class RuleListItem implements ModelInterface, ArrayAccess
     /**
     * Sets ruleDesc
     *
-    * @param string|null $ruleDesc 规则描述
+    * @param string|null $ruleDesc **参数解释:** 规则描述。 **取值范围:** 不涉及。
     *
     * @return $this
     */

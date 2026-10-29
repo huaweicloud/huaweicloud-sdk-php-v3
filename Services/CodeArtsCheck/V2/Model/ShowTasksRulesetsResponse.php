@@ -21,25 +21,25 @@ class ShowTasksRulesetsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * info  规则集信息
-    * total  总数
+    * data  **参数解释：** 规则集信息。
+    * total  **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'info' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskRulesetInfo[]',
+            'data' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskRulesetInfo[]',
             'total' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * info  规则集信息
-    * total  总数
+    * data  **参数解释：** 规则集信息。
+    * total  **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'info' => null,
+        'data' => null,
         'total' => null
     ];
 
@@ -66,37 +66,37 @@ class ShowTasksRulesetsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * info  规则集信息
-    * total  总数
+    * data  **参数解释：** 规则集信息。
+    * total  **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'info' => 'info',
+            'data' => 'data',
             'total' => 'total'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * info  规则集信息
-    * total  总数
+    * data  **参数解释：** 规则集信息。
+    * total  **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'info' => 'setInfo',
+            'data' => 'setData',
             'total' => 'setTotal'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * info  规则集信息
-    * total  总数
+    * data  **参数解释：** 规则集信息。
+    * total  **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'info' => 'getInfo',
+            'data' => 'getData',
             'total' => 'getTotal'
     ];
 
@@ -158,7 +158,7 @@ class ShowTasksRulesetsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['info'] = isset($data['info']) ? $data['info'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -185,32 +185,32 @@ class ShowTasksRulesetsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets info
-    *  规则集信息
+    * Gets data
+    *  **参数解释：** 规则集信息。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskRulesetInfo[]|null
     */
-    public function getInfo()
+    public function getData()
     {
-        return $this->container['info'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets info
+    * Sets data
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskRulesetInfo[]|null $info 规则集信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskRulesetInfo[]|null $data **参数解释：** 规则集信息。
     *
     * @return $this
     */
-    public function setInfo($info)
+    public function setData($data)
     {
-        $this->container['info'] = $info;
+        $this->container['data'] = $data;
         return $this;
     }
 
     /**
     * Gets total
-    *  总数
+    *  **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowTasksRulesetsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total **参数解释：** 总数。 **取值范围:** 不涉及。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fileName  目录或文件名
-    * filePath  目录或文件路径
-    * isLeaf  是否为叶子节点，true是，false不是
-    * checkboxStatus  屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    * fileName  **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
+    * filePath  **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
+    * isLeaf  **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
+    * checkboxStatus  **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fileName  目录或文件名
-    * filePath  目录或文件路径
-    * isLeaf  是否为叶子节点，true是，false不是
-    * checkboxStatus  屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    * fileName  **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
+    * filePath  **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
+    * isLeaf  **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
+    * checkboxStatus  **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class TreeNode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fileName  目录或文件名
-    * filePath  目录或文件路径
-    * isLeaf  是否为叶子节点，true是，false不是
-    * checkboxStatus  屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    * fileName  **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
+    * filePath  **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
+    * isLeaf  **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
+    * checkboxStatus  **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fileName  目录或文件名
-    * filePath  目录或文件路径
-    * isLeaf  是否为叶子节点，true是，false不是
-    * checkboxStatus  屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    * fileName  **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
+    * filePath  **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
+    * isLeaf  **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
+    * checkboxStatus  **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fileName  目录或文件名
-    * filePath  目录或文件路径
-    * isLeaf  是否为叶子节点，true是，false不是
-    * checkboxStatus  屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    * fileName  **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
+    * filePath  **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
+    * isLeaf  **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
+    * checkboxStatus  **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileName
-    *  目录或文件名
+    *  **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class TreeNode implements ModelInterface, ArrayAccess
     /**
     * Sets fileName
     *
-    * @param string|null $fileName 目录或文件名
+    * @param string|null $fileName **参数解释:** 目录或文件名。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets filePath
-    *  目录或文件路径
+    *  **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class TreeNode implements ModelInterface, ArrayAccess
     /**
     * Sets filePath
     *
-    * @param string|null $filePath 目录或文件路径
+    * @param string|null $filePath **参数解释:** 目录或文件路径。 **取值范围:** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets isLeaf
-    *  是否为叶子节点，true是，false不是
+    *  **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
     *
     * @return bool|null
     */
@@ -267,7 +267,7 @@ class TreeNode implements ModelInterface, ArrayAccess
     /**
     * Sets isLeaf
     *
-    * @param bool|null $isLeaf 是否为叶子节点，true是，false不是
+    * @param bool|null $isLeaf **参数解释:** 是否为叶子节点。 **取值范围:** - true：叶子节点。 - false：非叶子节点。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class TreeNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkboxStatus
-    *  屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    *  **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class TreeNode implements ModelInterface, ArrayAccess
     /**
     * Sets checkboxStatus
     *
-    * @param string|null $checkboxStatus 屏蔽状态，包括unchecked(不屏蔽)、all(全屏蔽)、half(半屏蔽)
+    * @param string|null $checkboxStatus **参数解释:** 屏蔽状态。 **取值范围:** - unchecked：不屏蔽。 - all：全屏蔽。 - half: 半屏蔽。
     *
     * @return $this
     */

@@ -31,6 +31,7 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'int',
             'searchTimeRangeUnit' => 'string',
             'customDate' => '\HuaweiCloud\SDK\Lts\V2\Model\CustomDate',
-            'isTimeRangeRelative' => 'bool'
+            'isTimeRangeRelative' => 'bool',
+            'conditions' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsAlarmConditions[]'
     ];
 
     /**
@@ -61,6 +63,7 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
         'searchTimeRange' => 'int32',
         'searchTimeRangeUnit' => null,
         'customDate' => null,
-        'isTimeRangeRelative' => null
+        'isTimeRangeRelative' => null,
+        'conditions' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'search_time_range',
             'searchTimeRangeUnit' => 'search_time_range_unit',
             'customDate' => 'custom_date',
-            'isTimeRangeRelative' => 'is_time_range_relative'
+            'isTimeRangeRelative' => 'is_time_range_relative',
+            'conditions' => 'conditions'
     ];
 
     /**
@@ -142,6 +148,7 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'setSearchTimeRange',
             'searchTimeRangeUnit' => 'setSearchTimeRangeUnit',
             'customDate' => 'setCustomDate',
-            'isTimeRangeRelative' => 'setIsTimeRangeRelative'
+            'isTimeRangeRelative' => 'setIsTimeRangeRelative',
+            'conditions' => 'setConditions'
     ];
 
     /**
@@ -172,6 +180,7 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'getSearchTimeRange',
             'searchTimeRangeUnit' => 'getSearchTimeRangeUnit',
             'customDate' => 'getCustomDate',
-            'isTimeRangeRelative' => 'getIsTimeRangeRelative'
+            'isTimeRangeRelative' => 'getIsTimeRangeRelative',
+            'conditions' => 'getConditions'
     ];
 
     /**
@@ -290,6 +300,7 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
         $this->container['searchTimeRangeUnit'] = isset($data['searchTimeRangeUnit']) ? $data['searchTimeRangeUnit'] : null;
         $this->container['customDate'] = isset($data['customDate']) ? $data['customDate'] : null;
         $this->container['isTimeRangeRelative'] = isset($data['isTimeRangeRelative']) ? $data['isTimeRangeRelative'] : null;
+        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
     }
 
     /**
@@ -660,6 +671,30 @@ class KeywordsRequest implements ModelInterface, ArrayAccess
     public function setIsTimeRangeRelative($isTimeRangeRelative)
     {
         $this->container['isTimeRangeRelative'] = $isTimeRangeRelative;
+        return $this;
+    }
+
+    /**
+    * Gets conditions
+    *  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\KeywordsAlarmConditions[]|null
+    */
+    public function getConditions()
+    {
+        return $this->container['conditions'];
+    }
+
+    /**
+    * Sets conditions
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\KeywordsAlarmConditions[]|null $conditions **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setConditions($conditions)
+    {
+        $this->container['conditions'] = $conditions;
         return $this;
     }
 

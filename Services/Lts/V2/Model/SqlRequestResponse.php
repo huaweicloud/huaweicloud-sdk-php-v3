@@ -30,6 +30,8 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  **参数解释：** 查询告警时间范围单位。 **取值范围：** - minute - hour
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'int',
             'searchTimeRangeUnit' => 'string',
             'customDate' => '\HuaweiCloud\SDK\Lts\V2\Model\CustomDate',
-            'isTimeRangeRelative' => 'bool'
+            'isTimeRangeRelative' => 'bool',
+            'logGroupNameAlias' => 'string',
+            'logStreamNameAlias' => 'string'
     ];
 
     /**
@@ -58,6 +62,8 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  **参数解释：** 查询告警时间范围单位。 **取值范围：** - minute - hour
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
         'searchTimeRange' => 'int32',
         'searchTimeRangeUnit' => null,
         'customDate' => null,
-        'isTimeRangeRelative' => null
+        'isTimeRangeRelative' => null,
+        'logGroupNameAlias' => null,
+        'logStreamNameAlias' => null
     ];
 
     /**
@@ -107,6 +115,8 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  **参数解释：** 查询告警时间范围单位。 **取值范围：** - minute - hour
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'search_time_range',
             'searchTimeRangeUnit' => 'search_time_range_unit',
             'customDate' => 'custom_date',
-            'isTimeRangeRelative' => 'is_time_range_relative'
+            'isTimeRangeRelative' => 'is_time_range_relative',
+            'logGroupNameAlias' => 'log_group_name_alias',
+            'logStreamNameAlias' => 'log_stream_name_alias'
     ];
 
     /**
@@ -135,6 +147,8 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  **参数解释：** 查询告警时间范围单位。 **取值范围：** - minute - hour
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'setSearchTimeRange',
             'searchTimeRangeUnit' => 'setSearchTimeRangeUnit',
             'customDate' => 'setCustomDate',
-            'isTimeRangeRelative' => 'setIsTimeRangeRelative'
+            'isTimeRangeRelative' => 'setIsTimeRangeRelative',
+            'logGroupNameAlias' => 'setLogGroupNameAlias',
+            'logStreamNameAlias' => 'setLogStreamNameAlias'
     ];
 
     /**
@@ -163,6 +179,8 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  **参数解释：** 查询告警时间范围单位。 **取值范围：** - minute - hour
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 告警查询日志的时间区间为相对时间还是整点时间。 **约束限制：** 不涉及。 **取值范围：** - true: 相对时间。 - false: 整点时间。 **默认取值：** true
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'getSearchTimeRange',
             'searchTimeRangeUnit' => 'getSearchTimeRangeUnit',
             'customDate' => 'getCustomDate',
-            'isTimeRangeRelative' => 'getIsTimeRangeRelative'
+            'isTimeRangeRelative' => 'getIsTimeRangeRelative',
+            'logGroupNameAlias' => 'getLogGroupNameAlias',
+            'logStreamNameAlias' => 'getLogStreamNameAlias'
     ];
 
     /**
@@ -247,6 +267,8 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
         $this->container['searchTimeRangeUnit'] = isset($data['searchTimeRangeUnit']) ? $data['searchTimeRangeUnit'] : null;
         $this->container['customDate'] = isset($data['customDate']) ? $data['customDate'] : null;
         $this->container['isTimeRangeRelative'] = isset($data['isTimeRangeRelative']) ? $data['isTimeRangeRelative'] : null;
+        $this->container['logGroupNameAlias'] = isset($data['logGroupNameAlias']) ? $data['logGroupNameAlias'] : null;
+        $this->container['logStreamNameAlias'] = isset($data['logStreamNameAlias']) ? $data['logStreamNameAlias'] : null;
     }
 
     /**
@@ -526,6 +548,54 @@ class SqlRequestResponse implements ModelInterface, ArrayAccess
     public function setIsTimeRangeRelative($isTimeRangeRelative)
     {
         $this->container['isTimeRangeRelative'] = $isTimeRangeRelative;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupNameAlias
+    *  **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogGroupNameAlias()
+    {
+        return $this->container['logGroupNameAlias'];
+    }
+
+    /**
+    * Sets logGroupNameAlias
+    *
+    * @param string|null $logGroupNameAlias **参数解释：** 日志组别名。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogGroupNameAlias($logGroupNameAlias)
+    {
+        $this->container['logGroupNameAlias'] = $logGroupNameAlias;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamNameAlias
+    *  **参数解释：** 日志流别名。 **约束限制：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogStreamNameAlias()
+    {
+        return $this->container['logStreamNameAlias'];
+    }
+
+    /**
+    * Sets logStreamNameAlias
+    *
+    * @param string|null $logStreamNameAlias **参数解释：** 日志流别名。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogStreamNameAlias($logStreamNameAlias)
+    {
+        $this->container['logStreamNameAlias'] = $logStreamNameAlias;
         return $this;
     }
 

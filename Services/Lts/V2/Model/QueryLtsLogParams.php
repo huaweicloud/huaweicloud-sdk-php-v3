@@ -35,6 +35,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
     * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
     * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    * sqlTimezone  **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'highlight' => 'bool',
             'isIterative' => 'bool',
             'query' => 'string',
-            'isAnalysisQuery' => 'bool'
+            'isAnalysisQuery' => 'bool',
+            'sqlTimezone' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
     * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
     * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    * sqlTimezone  **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         'highlight' => null,
         'isIterative' => null,
         'query' => null,
-        'isAnalysisQuery' => null
+        'isAnalysisQuery' => null,
+        'sqlTimezone' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
     * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
     * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    * sqlTimezone  **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'highlight' => 'highlight',
             'isIterative' => 'is_iterative',
             'query' => 'query',
-            'isAnalysisQuery' => 'is_analysis_query'
+            'isAnalysisQuery' => 'is_analysis_query',
+            'sqlTimezone' => 'sql_timezone'
     ];
 
     /**
@@ -170,6 +176,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
     * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
     * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    * sqlTimezone  **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'highlight' => 'setHighlight',
             'isIterative' => 'setIsIterative',
             'query' => 'setQuery',
-            'isAnalysisQuery' => 'setIsAnalysisQuery'
+            'isAnalysisQuery' => 'setIsAnalysisQuery',
+            'sqlTimezone' => 'setSqlTimezone'
     ];
 
     /**
@@ -208,6 +216,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
     * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
     * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    * sqlTimezone  **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'highlight' => 'getHighlight',
             'isIterative' => 'getIsIterative',
             'query' => 'getQuery',
-            'isAnalysisQuery' => 'getIsAnalysisQuery'
+            'isAnalysisQuery' => 'getIsAnalysisQuery',
+            'sqlTimezone' => 'getSqlTimezone'
     ];
 
     /**
@@ -317,6 +327,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         $this->container['isIterative'] = isset($data['isIterative']) ? $data['isIterative'] : null;
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
         $this->container['isAnalysisQuery'] = isset($data['isAnalysisQuery']) ? $data['isAnalysisQuery'] : null;
+        $this->container['sqlTimezone'] = isset($data['sqlTimezone']) ? $data['sqlTimezone'] : null;
     }
 
     /**
@@ -736,6 +747,30 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     public function setIsAnalysisQuery($isAnalysisQuery)
     {
         $this->container['isAnalysisQuery'] = $isAnalysisQuery;
+        return $this;
+    }
+
+    /**
+    * Gets sqlTimezone
+    *  **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
+    *
+    * @return string|null
+    */
+    public function getSqlTimezone()
+    {
+        return $this->container['sqlTimezone'];
+    }
+
+    /**
+    * Sets sqlTimezone
+    *
+    * @param string|null $sqlTimezone **参数解释：** 查询时区。 当开启管道符语句查询功能时，将会按照sql_timezone中的时区信息对时间算子进行处理。 **约束限制：** 不涉及。 **取值范围：** 标准时区值 **默认取值：** UTC
+    *
+    * @return $this
+    */
+    public function setSqlTimezone($sqlTimezone)
+    {
+        $this->container['sqlTimezone'] = $sqlTimezone;
         return $this;
     }
 

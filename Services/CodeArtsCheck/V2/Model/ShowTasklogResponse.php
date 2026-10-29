@@ -22,7 +22,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * paramInfo  paramInfo
-    * logInfo  日志信息
+    * logInfo  **参数解释：** 失败日志详情。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * paramInfo  paramInfo
-    * logInfo  日志信息
+    * logInfo  **参数解释：** 失败日志详情。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * paramInfo  paramInfo
-    * logInfo  日志信息
+    * logInfo  **参数解释：** 失败日志详情。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * paramInfo  paramInfo
-    * logInfo  日志信息
+    * logInfo  **参数解释：** 失败日志详情。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * paramInfo  paramInfo
-    * logInfo  日志信息
+    * logInfo  **参数解释：** 失败日志详情。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets logInfo
-    *  日志信息
+    *  **参数解释：** 失败日志详情。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\LogInfo[]|null
     */
@@ -222,7 +222,7 @@ class ShowTasklogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets logInfo
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\LogInfo[]|null $logInfo 日志信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\LogInfo[]|null $logInfo **参数解释：** 失败日志详情。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * lineNum  行号
-    * lineContent  该行代码内容
-    * startOffset  缺陷开始列号
-    * endOffset  缺陷结束列号
+    * lineNum  **参数解释：** 行号。 **取值范围：** 不涉及。
+    * lineContent  **参数解释：** 行代码内容。 **取值范围：** 不涉及。
+    * startOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * endOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * lineNum  行号
-    * lineContent  该行代码内容
-    * startOffset  缺陷开始列号
-    * endOffset  缺陷结束列号
+    * lineNum  **参数解释：** 行号。 **取值范围：** 不涉及。
+    * lineContent  **参数解释：** 行代码内容。 **取值范围：** 不涉及。
+    * startOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * endOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * lineNum  行号
-    * lineContent  该行代码内容
-    * startOffset  缺陷开始列号
-    * endOffset  缺陷结束列号
+    * lineNum  **参数解释：** 行号。 **取值范围：** 不涉及。
+    * lineContent  **参数解释：** 行代码内容。 **取值范围：** 不涉及。
+    * startOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * endOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * lineNum  行号
-    * lineContent  该行代码内容
-    * startOffset  缺陷开始列号
-    * endOffset  缺陷结束列号
+    * lineNum  **参数解释：** 行号。 **取值范围：** 不涉及。
+    * lineContent  **参数解释：** 行代码内容。 **取值范围：** 不涉及。
+    * startOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * endOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * lineNum  行号
-    * lineContent  该行代码内容
-    * startOffset  缺陷开始列号
-    * endOffset  缺陷结束列号
+    * lineNum  **参数解释：** 行号。 **取值范围：** 不涉及。
+    * lineContent  **参数解释：** 行代码内容。 **取值范围：** 不涉及。
+    * startOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
+    * endOffset  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineNum
-    *  行号
+    *  **参数解释：** 行号。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lineNum
     *
-    * @param string|null $lineNum 行号
+    * @param string|null $lineNum **参数解释：** 行号。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets lineContent
-    *  该行代码内容
+    *  **参数解释：** 行代码内容。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lineContent
     *
-    * @param string|null $lineContent 该行代码内容
+    * @param string|null $lineContent **参数解释：** 行代码内容。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets startOffset
-    *  缺陷开始列号
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
     /**
     * Sets startOffset
     *
-    * @param int|null $startOffset 缺陷开始列号
+    * @param int|null $startOffset **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets endOffset
-    *  缺陷结束列号
+    *  **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class DefectFragmentV2 implements ModelInterface, ArrayAccess
     /**
     * Sets endOffset
     *
-    * @param int|null $endOffset 缺陷结束列号
+    * @param int|null $endOffset **参数解释：** 废弃字段。 **取值范围：** 不涉及。
     *
     * @return $this
     */

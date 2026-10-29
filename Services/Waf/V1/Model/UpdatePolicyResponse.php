@@ -33,6 +33,7 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * timestamp  创建防护策略的时间
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -48,7 +49,8 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
             'hosts' => 'string[]',
             'bindHost' => '\HuaweiCloud\SDK\Waf\V1\Model\BindHost[]',
             'extend' => 'map[string,string]',
-            'timestamp' => 'int'
+            'timestamp' => 'int',
+            'scanProtectionOptions' => '\HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption'
     ];
 
     /**
@@ -65,6 +67,7 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * timestamp  创建防护策略的时间
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -80,7 +83,8 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
         'hosts' => null,
         'bindHost' => null,
         'extend' => null,
-        'timestamp' => 'int64'
+        'timestamp' => 'int64',
+        'scanProtectionOptions' => null
     ];
 
     /**
@@ -118,6 +122,7 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * timestamp  创建防护策略的时间
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -133,7 +138,8 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
             'hosts' => 'hosts',
             'bindHost' => 'bind_host',
             'extend' => 'extend',
-            'timestamp' => 'timestamp'
+            'timestamp' => 'timestamp',
+            'scanProtectionOptions' => 'scan_protection_options'
     ];
 
     /**
@@ -150,6 +156,7 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * timestamp  创建防护策略的时间
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -165,7 +172,8 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
             'hosts' => 'setHosts',
             'bindHost' => 'setBindHost',
             'extend' => 'setExtend',
-            'timestamp' => 'setTimestamp'
+            'timestamp' => 'setTimestamp',
+            'scanProtectionOptions' => 'setScanProtectionOptions'
     ];
 
     /**
@@ -182,6 +190,7 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息
     * timestamp  创建防护策略的时间
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -197,7 +206,8 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
             'hosts' => 'getHosts',
             'bindHost' => 'getBindHost',
             'extend' => 'getExtend',
-            'timestamp' => 'getTimestamp'
+            'timestamp' => 'getTimestamp',
+            'scanProtectionOptions' => 'getScanProtectionOptions'
     ];
 
     /**
@@ -270,6 +280,7 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
         $this->container['bindHost'] = isset($data['bindHost']) ? $data['bindHost'] : null;
         $this->container['extend'] = isset($data['extend']) ? $data['extend'] : null;
         $this->container['timestamp'] = isset($data['timestamp']) ? $data['timestamp'] : null;
+        $this->container['scanProtectionOptions'] = isset($data['scanProtectionOptions']) ? $data['scanProtectionOptions'] : null;
     }
 
     /**
@@ -579,6 +590,30 @@ class UpdatePolicyResponse implements ModelInterface, ArrayAccess
     public function setTimestamp($timestamp)
     {
         $this->container['timestamp'] = $timestamp;
+        return $this;
+    }
+
+    /**
+    * Gets scanProtectionOptions
+    *  scanProtectionOptions
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption|null
+    */
+    public function getScanProtectionOptions()
+    {
+        return $this->container['scanProtectionOptions'];
+    }
+
+    /**
+    * Sets scanProtectionOptions
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption|null $scanProtectionOptions scanProtectionOptions
+    *
+    * @return $this
+    */
+    public function setScanProtectionOptions($scanProtectionOptions)
+    {
+        $this->container['scanProtectionOptions'] = $scanProtectionOptions;
         return $this;
     }
 

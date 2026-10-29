@@ -20,11 +20,11 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * type  规则集状态optional：可选，selected：已选
-    * status  规则集属性0 是默认用户规则集,1 是系统默认规则集
+    * templateId  **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
+    * language  **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * type  **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
+    * status  **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * type  规则集状态optional：可选，selected：已选
-    * status  规则集属性0 是默认用户规则集,1 是系统默认规则集
+    * templateId  **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
+    * language  **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * type  **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
+    * status  **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * type  规则集状态optional：可选，selected：已选
-    * status  规则集属性0 是默认用户规则集,1 是系统默认规则集
+    * templateId  **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
+    * language  **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * type  **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
+    * status  **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * type  规则集状态optional：可选，selected：已选
-    * status  规则集属性0 是默认用户规则集,1 是系统默认规则集
+    * templateId  **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
+    * language  **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * type  **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
+    * status  **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * templateId  规则集id
-    * language  规则集语言
-    * templateName  规则集名称
-    * type  规则集状态optional：可选，selected：已选
-    * status  规则集属性0 是默认用户规则集,1 是系统默认规则集
+    * templateId  **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
+    * language  **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
+    * templateName  **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
+    * type  **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
+    * status  **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateId
-    *  规则集id
+    *  **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets templateId
     *
-    * @param string|null $templateId 规则集id
+    * @param string|null $templateId **参数解释：** 规则集ID。 **取值范围:** 长度为[1~32]个字符。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  规则集语言
+    *  **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 规则集语言
+    * @param string|null $language **参数解释：** 规则集语言。 **取值范围:** 自定义语言或者系统内置语言，当前支持的系统内置语言有： - ARKTS - C# - CANGJIE - C++ - CSS - GO - HTML - JAVA - JAVASCRIPT - KOTLIN - LUA - PHP - PYTHON - RUST - SCALA - SHELL - SQL - TERRAFORM - TYPESCRIPT - AZURERESOURCEMANAGER - DOCKER - KUBERNETES
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets templateName
-    *  规则集名称
+    *  **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets templateName
     *
-    * @param string|null $templateName 规则集名称
+    * @param string|null $templateName **参数解释：** 规则集名称。 **取值范围:** 任意中英文，数字，点，连字符-及下划线_。长度为[1~128]个字符。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则集状态optional：可选，selected：已选
+    *  **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 规则集状态optional：可选，selected：已选
+    * @param string|null $type **参数解释：** 规则集选取状态。 **取值范围:** - selected：已选。 - optional：可选，指未开启的语言在当前项目下的默认规则集。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则集属性0 是默认用户规则集,1 是系统默认规则集
+    *  **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class TaskRulesetInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 规则集属性0 是默认用户规则集,1 是系统默认规则集
+    * @param string|null $status **参数解释：** 规则集属性。 **取值范围:** - 0：用户自定义规则集。 - 1：系统规则集。
     *
     * @return $this
     */

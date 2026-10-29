@@ -25,7 +25,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     * offset  偏移值
     * protectType  [保护类型。取值为backup，replication和hybrid。](tag:hws,hws_hk) [保护类型。取值为backup和replication。](tag:ocb) [保护类型。取值为backup。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * regionId  区域ID
-    * objcetType  资源类型
+    * objectType  资源类型
     * cloudType  [云类型。取值为public和hybrid。](tag:hws,hws_hk) [云类型。取值为public。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,ocb,tm,tlf,cmcc,hcso_dt)
     * vaultId  存储库ID，指定存储ID时其他过滤条件不生效。
     *
@@ -37,7 +37,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'protectType' => 'string',
             'regionId' => 'string',
-            'objcetType' => 'string',
+            'objectType' => 'string',
             'cloudType' => 'string',
             'vaultId' => 'string'
     ];
@@ -49,7 +49,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     * offset  偏移值
     * protectType  [保护类型。取值为backup，replication和hybrid。](tag:hws,hws_hk) [保护类型。取值为backup和replication。](tag:ocb) [保护类型。取值为backup。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * regionId  区域ID
-    * objcetType  资源类型
+    * objectType  资源类型
     * cloudType  [云类型。取值为public和hybrid。](tag:hws,hws_hk) [云类型。取值为public。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,ocb,tm,tlf,cmcc,hcso_dt)
     * vaultId  存储库ID，指定存储ID时其他过滤条件不生效。
     *
@@ -61,7 +61,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'protectType' => null,
         'regionId' => null,
-        'objcetType' => null,
+        'objectType' => null,
         'cloudType' => null,
         'vaultId' => null
     ];
@@ -94,7 +94,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     * offset  偏移值
     * protectType  [保护类型。取值为backup，replication和hybrid。](tag:hws,hws_hk) [保护类型。取值为backup和replication。](tag:ocb) [保护类型。取值为backup。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * regionId  区域ID
-    * objcetType  资源类型
+    * objectType  资源类型
     * cloudType  [云类型。取值为public和hybrid。](tag:hws,hws_hk) [云类型。取值为public。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,ocb,tm,tlf,cmcc,hcso_dt)
     * vaultId  存储库ID，指定存储ID时其他过滤条件不生效。
     *
@@ -106,7 +106,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'protectType' => 'protect_type',
             'regionId' => 'region_id',
-            'objcetType' => 'objcet_type',
+            'objectType' => 'object_type',
             'cloudType' => 'cloud_type',
             'vaultId' => 'vault_id'
     ];
@@ -118,7 +118,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     * offset  偏移值
     * protectType  [保护类型。取值为backup，replication和hybrid。](tag:hws,hws_hk) [保护类型。取值为backup和replication。](tag:ocb) [保护类型。取值为backup。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * regionId  区域ID
-    * objcetType  资源类型
+    * objectType  资源类型
     * cloudType  [云类型。取值为public和hybrid。](tag:hws,hws_hk) [云类型。取值为public。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,ocb,tm,tlf,cmcc,hcso_dt)
     * vaultId  存储库ID，指定存储ID时其他过滤条件不生效。
     *
@@ -130,7 +130,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'protectType' => 'setProtectType',
             'regionId' => 'setRegionId',
-            'objcetType' => 'setObjcetType',
+            'objectType' => 'setObjectType',
             'cloudType' => 'setCloudType',
             'vaultId' => 'setVaultId'
     ];
@@ -142,7 +142,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     * offset  偏移值
     * protectType  [保护类型。取值为backup，replication和hybrid。](tag:hws,hws_hk) [保护类型。取值为backup和replication。](tag:ocb) [保护类型。取值为backup。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,tm,tlf,cmcc,hcso_dt)
     * regionId  区域ID
-    * objcetType  资源类型
+    * objectType  资源类型
     * cloudType  [云类型。取值为public和hybrid。](tag:hws,hws_hk) [云类型。取值为public。](tag:g42,hk-g42,sbc,dt,fcs_vm,ctc,ocb,tm,tlf,cmcc,hcso_dt)
     * vaultId  存储库ID，指定存储ID时其他过滤条件不生效。
     *
@@ -154,7 +154,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'protectType' => 'getProtectType',
             'regionId' => 'getRegionId',
-            'objcetType' => 'getObjcetType',
+            'objectType' => 'getObjectType',
             'cloudType' => 'getCloudType',
             'vaultId' => 'getVaultId'
     ];
@@ -222,7 +222,7 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['protectType'] = isset($data['protectType']) ? $data['protectType'] : null;
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
-        $this->container['objcetType'] = isset($data['objcetType']) ? $data['objcetType'] : null;
+        $this->container['objectType'] = isset($data['objectType']) ? $data['objectType'] : null;
         $this->container['cloudType'] = isset($data['cloudType']) ? $data['cloudType'] : null;
         $this->container['vaultId'] = isset($data['vaultId']) ? $data['vaultId'] : null;
     }
@@ -382,26 +382,26 @@ class ListExternalVaultRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets objcetType
+    * Gets objectType
     *  资源类型
     *
     * @return string|null
     */
-    public function getObjcetType()
+    public function getObjectType()
     {
-        return $this->container['objcetType'];
+        return $this->container['objectType'];
     }
 
     /**
-    * Sets objcetType
+    * Sets objectType
     *
-    * @param string|null $objcetType 资源类型
+    * @param string|null $objectType 资源类型
     *
     * @return $this
     */
-    public function setObjcetType($objcetType)
+    public function setObjectType($objectType)
     {
-        $this->container['objcetType'] = $objcetType;
+        $this->container['objectType'] = $objectType;
         return $this;
     }
 

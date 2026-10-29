@@ -20,7 +20,7 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ignorePathSettings  屏蔽目录的节点信息列表
+    * ignorePathSettings  **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ignorePathSettings  屏蔽目录的节点信息列表
+    * ignorePathSettings  **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ignorePathSettings  屏蔽目录的节点信息列表
+    * ignorePathSettings  **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ignorePathSettings  屏蔽目录的节点信息列表
+    * ignorePathSettings  **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ignorePathSettings  屏蔽目录的节点信息列表
+    * ignorePathSettings  **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
     * @var string[]
     */
@@ -158,9 +158,6 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['ignorePathSettings'] === null) {
-            $invalidProperties[] = "'ignorePathSettings' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -177,9 +174,9 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ignorePathSettings
-    *  屏蔽目录的节点信息列表
+    *  **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
-    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\IgnorePathSettingItem[]
+    * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\IgnorePathSettingItem[]|null
     */
     public function getIgnorePathSettings()
     {
@@ -189,7 +186,7 @@ class UpdateIgnorePathRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ignorePathSettings
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\IgnorePathSettingItem[] $ignorePathSettings 屏蔽目录的节点信息列表
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\IgnorePathSettingItem[]|null $ignorePathSettings **参数解释：** 屏蔽目录的节点信息列表。 **约束限制：** 不涉及。
     *
     * @return $this
     */

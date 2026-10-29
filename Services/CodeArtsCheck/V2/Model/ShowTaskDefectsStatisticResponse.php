@@ -23,24 +23,32 @@ class ShowTaskDefectsStatisticResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * severity  severity
     * status  status
+    * lastCheckTime  **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'severity' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\StatisticSeverityV2',
-            'status' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\StatisticStatusV2'
+            'status' => '\HuaweiCloud\SDK\CodeArtsCheck\V2\Model\StatisticStatusV2',
+            'lastCheckTime' => 'string',
+            'lastCheckFinishTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * severity  severity
     * status  status
+    * lastCheckTime  **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'severity' => null,
-        'status' => null
+        'status' => null,
+        'lastCheckTime' => null,
+        'lastCheckFinishTime' => null
     ];
 
     /**
@@ -68,36 +76,48 @@ class ShowTaskDefectsStatisticResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * severity  severity
     * status  status
+    * lastCheckTime  **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'severity' => 'severity',
-            'status' => 'status'
+            'status' => 'status',
+            'lastCheckTime' => 'last_check_time',
+            'lastCheckFinishTime' => 'last_check_finish_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * severity  severity
     * status  status
+    * lastCheckTime  **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'severity' => 'setSeverity',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'lastCheckTime' => 'setLastCheckTime',
+            'lastCheckFinishTime' => 'setLastCheckFinishTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * severity  severity
     * status  status
+    * lastCheckTime  **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    * lastCheckFinishTime  **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'severity' => 'getSeverity',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'lastCheckTime' => 'getLastCheckTime',
+            'lastCheckFinishTime' => 'getLastCheckFinishTime'
     ];
 
     /**
@@ -160,6 +180,8 @@ class ShowTaskDefectsStatisticResponse implements ModelInterface, ArrayAccess
     {
         $this->container['severity'] = isset($data['severity']) ? $data['severity'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['lastCheckTime'] = isset($data['lastCheckTime']) ? $data['lastCheckTime'] : null;
+        $this->container['lastCheckFinishTime'] = isset($data['lastCheckFinishTime']) ? $data['lastCheckFinishTime'] : null;
     }
 
     /**
@@ -229,6 +251,54 @@ class ShowTaskDefectsStatisticResponse implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets lastCheckTime
+    *  **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLastCheckTime()
+    {
+        return $this->container['lastCheckTime'];
+    }
+
+    /**
+    * Sets lastCheckTime
+    *
+    * @param string|null $lastCheckTime **参数解释：** 检查开始时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLastCheckTime($lastCheckTime)
+    {
+        $this->container['lastCheckTime'] = $lastCheckTime;
+        return $this;
+    }
+
+    /**
+    * Gets lastCheckFinishTime
+    *  **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLastCheckFinishTime()
+    {
+        return $this->container['lastCheckFinishTime'];
+    }
+
+    /**
+    * Sets lastCheckFinishTime
+    *
+    * @param string|null $lastCheckFinishTime **参数解释：** 检查结束时间，使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。例如：2020-09-25T12:05:00Z。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLastCheckFinishTime($lastCheckFinishTime)
+    {
+        $this->container['lastCheckFinishTime'] = $lastCheckFinishTime;
         return $this;
     }
 

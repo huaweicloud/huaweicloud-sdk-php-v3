@@ -20,10 +20,11 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * username  该任务对应临时仓库有权限的用户名
-    * accessToken  该任务对应临时仓库有权限的用户token
-    * gitUrl  该任务对应的临时仓库地址
-    * gitBranch  该任务对应的临时仓库分支
+    * username  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * accessToken  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitUrl  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitBranch  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ref  **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
     *
     * @var string[]
     */
@@ -31,15 +32,17 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
             'username' => 'string',
             'accessToken' => 'string',
             'gitUrl' => 'string',
-            'gitBranch' => 'string'
+            'gitBranch' => 'string',
+            'ref' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * username  该任务对应临时仓库有权限的用户名
-    * accessToken  该任务对应临时仓库有权限的用户token
-    * gitUrl  该任务对应的临时仓库地址
-    * gitBranch  该任务对应的临时仓库分支
+    * username  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * accessToken  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitUrl  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitBranch  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ref  **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
         'username' => null,
         'accessToken' => null,
         'gitUrl' => null,
-        'gitBranch' => null
+        'gitBranch' => null,
+        'ref' => null
     ];
 
     /**
@@ -73,10 +77,11 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * username  该任务对应临时仓库有权限的用户名
-    * accessToken  该任务对应临时仓库有权限的用户token
-    * gitUrl  该任务对应的临时仓库地址
-    * gitBranch  该任务对应的临时仓库分支
+    * username  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * accessToken  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitUrl  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitBranch  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ref  **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
     *
     * @var string[]
     */
@@ -84,15 +89,17 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
             'username' => 'username',
             'accessToken' => 'access_token',
             'gitUrl' => 'git_url',
-            'gitBranch' => 'git_branch'
+            'gitBranch' => 'git_branch',
+            'ref' => 'ref'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * username  该任务对应临时仓库有权限的用户名
-    * accessToken  该任务对应临时仓库有权限的用户token
-    * gitUrl  该任务对应的临时仓库地址
-    * gitBranch  该任务对应的临时仓库分支
+    * username  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * accessToken  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitUrl  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitBranch  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ref  **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
     *
     * @var string[]
     */
@@ -100,15 +107,17 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
             'username' => 'setUsername',
             'accessToken' => 'setAccessToken',
             'gitUrl' => 'setGitUrl',
-            'gitBranch' => 'setGitBranch'
+            'gitBranch' => 'setGitBranch',
+            'ref' => 'setRef'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * username  该任务对应临时仓库有权限的用户名
-    * accessToken  该任务对应临时仓库有权限的用户token
-    * gitUrl  该任务对应的临时仓库地址
-    * gitBranch  该任务对应的临时仓库分支
+    * username  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * accessToken  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitUrl  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * gitBranch  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
+    * ref  **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
             'username' => 'getUsername',
             'accessToken' => 'getAccessToken',
             'gitUrl' => 'getGitUrl',
-            'gitBranch' => 'getGitBranch'
+            'gitBranch' => 'getGitBranch',
+            'ref' => 'getRef'
     ];
 
     /**
@@ -181,6 +191,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
         $this->container['accessToken'] = isset($data['accessToken']) ? $data['accessToken'] : null;
         $this->container['gitUrl'] = isset($data['gitUrl']) ? $data['gitUrl'] : null;
         $this->container['gitBranch'] = isset($data['gitBranch']) ? $data['gitBranch'] : null;
+        $this->container['ref'] = isset($data['ref']) ? $data['ref'] : null;
     }
 
     /**
@@ -207,7 +218,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets username
-    *  该任务对应临时仓库有权限的用户名
+    *  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -219,7 +230,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
     /**
     * Sets username
     *
-    * @param string|null $username 该任务对应临时仓库有权限的用户名
+    * @param string|null $username **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -231,7 +242,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessToken
-    *  该任务对应临时仓库有权限的用户token
+    *  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +254,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
     /**
     * Sets accessToken
     *
-    * @param string|null $accessToken 该任务对应临时仓库有权限的用户token
+    * @param string|null $accessToken **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -255,7 +266,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  该任务对应的临时仓库地址
+    *  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -267,7 +278,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 该任务对应的临时仓库地址
+    * @param string|null $gitUrl **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
@@ -279,7 +290,7 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitBranch
-    *  该任务对应的临时仓库分支
+    *  **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return string|null
     */
@@ -291,13 +302,37 @@ class RunRequestV2 implements ModelInterface, ArrayAccess
     /**
     * Sets gitBranch
     *
-    * @param string|null $gitBranch 该任务对应的临时仓库分支
+    * @param string|null $gitBranch **参数解释：** 废弃参数。 **约束限制：** 不涉及。 **取值范围：** 不涉及。 **默认取值：** 不涉及。
     *
     * @return $this
     */
     public function setGitBranch($gitBranch)
     {
         $this->container['gitBranch'] = $gitBranch;
+        return $this;
+    }
+
+    /**
+    * Gets ref
+    *  **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
+    *
+    * @return string|null
+    */
+    public function getRef()
+    {
+        return $this->container['ref'];
+    }
+
+    /**
+    * Sets ref
+    *
+    * @param string|null $ref **参数解释：** 代码仓拉取MR代码的方式，推荐在检查阶段拉取MR代码失败时使用此参数进行拉取方式的指定。 **约束限制：** 不涉及。 **取值范围：** - pull：以pull/xx/xx方式进行拉取。 - merge_request：以merge_request/xx/xx方式进行拉取。 **默认取值：** 后台自动识别代码仓类型以进行MR代码的拉取。 gitee仓：以pull/xx/xx方式进行拉取。 非gitee仓：以merge_request/xx/xx方式进行拉取。
+    *
+    * @return $this
+    */
+    public function setRef($ref)
+    {
+        $this->container['ref'] = $ref;
         return $this;
     }
 

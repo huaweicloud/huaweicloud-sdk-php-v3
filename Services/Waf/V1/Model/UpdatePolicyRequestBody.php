@@ -30,6 +30,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'modulexOptions' => 'map[string,object]',
             'hosts' => 'string[]',
             'bindHost' => '\HuaweiCloud\SDK\Waf\V1\Model\BindHost[]',
-            'extend' => 'map[string,string]'
+            'extend' => 'map[string,string]',
+            'scanProtectionOptions' => '\HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption'
     ];
 
     /**
@@ -58,6 +60,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
         'modulexOptions' => null,
         'hosts' => null,
         'bindHost' => null,
-        'extend' => null
+        'extend' => null,
+        'scanProtectionOptions' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'modulexOptions' => 'modulex_options',
             'hosts' => 'hosts',
             'bindHost' => 'bind_host',
-            'extend' => 'extend'
+            'extend' => 'extend',
+            'scanProtectionOptions' => 'scan_protection_options'
     ];
 
     /**
@@ -135,6 +141,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'modulexOptions' => 'setModulexOptions',
             'hosts' => 'setHosts',
             'bindHost' => 'setBindHost',
-            'extend' => 'setExtend'
+            'extend' => 'setExtend',
+            'scanProtectionOptions' => 'setScanProtectionOptions'
     ];
 
     /**
@@ -163,6 +171,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     * hosts  与防护策略绑定的防护的域名id数组
     * bindHost  与防护策略绑定的防护的域名信息数组，相对于hosts字段，包含更详细的域名信息
     * extend  扩展字段，用于存放Web基础防护中一些开关配置等信息，当修改字段为 shiro_rememberMe_enable,deep_decode,check_all_headers 时，需要额外增加一层extend字段嵌套.示例 key为 extend，value为 {\"shiro_rememberMe_enable\":true}
+    * scanProtectionOptions  scanProtectionOptions
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
             'modulexOptions' => 'getModulexOptions',
             'hosts' => 'getHosts',
             'bindHost' => 'getBindHost',
-            'extend' => 'getExtend'
+            'extend' => 'getExtend',
+            'scanProtectionOptions' => 'getScanProtectionOptions'
     ];
 
     /**
@@ -247,6 +257,7 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['bindHost'] = isset($data['bindHost']) ? $data['bindHost'] : null;
         $this->container['extend'] = isset($data['extend']) ? $data['extend'] : null;
+        $this->container['scanProtectionOptions'] = isset($data['scanProtectionOptions']) ? $data['scanProtectionOptions'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class UpdatePolicyRequestBody implements ModelInterface, ArrayAccess
     public function setExtend($extend)
     {
         $this->container['extend'] = $extend;
+        return $this;
+    }
+
+    /**
+    * Gets scanProtectionOptions
+    *  scanProtectionOptions
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption|null
+    */
+    public function getScanProtectionOptions()
+    {
+        return $this->container['scanProtectionOptions'];
+    }
+
+    /**
+    * Sets scanProtectionOptions
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\ScanProtectionOption|null $scanProtectionOptions scanProtectionOptions
+    *
+    * @return $this
+    */
+    public function setScanProtectionOptions($scanProtectionOptions)
+    {
+        $this->container['scanProtectionOptions'] = $scanProtectionOptions;
         return $this;
     }
 

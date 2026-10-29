@@ -20,8 +20,8 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ratio  进度百分比
-    * info  中文信息
+    * ratio  **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
+    * info  **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ratio  进度百分比
-    * info  中文信息
+    * ratio  **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
+    * info  **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ratio  进度百分比
-    * info  中文信息
+    * ratio  **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
+    * info  **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ratio  进度百分比
-    * info  中文信息
+    * ratio  **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
+    * info  **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ratio  进度百分比
-    * info  中文信息
+    * ratio  **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
+    * info  **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets ratio
-    *  进度百分比
+    *  **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
     /**
     * Sets ratio
     *
-    * @param string|null $ratio 进度百分比
+    * @param string|null $ratio **参数解释:** 检查进度百分比。 **取值范围:** 检查中、检查成功时，为0%-100%； 检查失败、任务中止、未检查时，为null。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets info
-    *  中文信息
+    *  **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ProgressDetailV2 implements ModelInterface, ArrayAccess
     /**
     * Sets info
     *
-    * @param string|null $info 中文信息
+    * @param string|null $info **参数解释:** 检查执行状态。 **取值范围:** - running：检查中。 - success：检查成功。 - null：检查失败、任务中止、未检查。
     *
     * @return $this
     */

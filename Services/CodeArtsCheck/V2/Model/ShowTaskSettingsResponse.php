@@ -21,8 +21,8 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * info  高级选项的相关信息
-    * total  总数
+    * info  **参数解释：** 高级配置的相关信息。
+    * total  **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * info  高级选项的相关信息
-    * total  总数
+    * info  **参数解释：** 高级配置的相关信息。
+    * total  **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * info  高级选项的相关信息
-    * total  总数
+    * info  **参数解释：** 高级配置的相关信息。
+    * total  **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * info  高级选项的相关信息
-    * total  总数
+    * info  **参数解释：** 高级配置的相关信息。
+    * total  **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * info  高级选项的相关信息
-    * total  总数
+    * info  **参数解释：** 高级配置的相关信息。
+    * total  **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets info
-    *  高级选项的相关信息
+    *  **参数解释：** 高级配置的相关信息。
     *
     * @return \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskAdvancedSettings[]|null
     */
@@ -198,7 +198,7 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets info
     *
-    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskAdvancedSettings[]|null $info 高级选项的相关信息
+    * @param \HuaweiCloud\SDK\CodeArtsCheck\V2\Model\TaskAdvancedSettings[]|null $info **参数解释：** 高级配置的相关信息。
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ShowTaskSettingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total **参数解释：** 总数。 **取值范围：** ≥0
     *
     * @return $this
     */

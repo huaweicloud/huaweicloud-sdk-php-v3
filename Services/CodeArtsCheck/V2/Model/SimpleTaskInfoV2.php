@@ -20,13 +20,16 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * createdAt  创建时间
-    * lastCheckTime  上一次检查时间
+    * taskId  **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * lastCheckTime  **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * smLevel  **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    * smLevelNameEn  **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    * smLevelName  **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -37,18 +40,24 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
             'gitUrl' => 'string',
             'gitBranch' => 'string',
             'createdAt' => 'string',
-            'lastCheckTime' => 'string'
+            'lastCheckTime' => 'string',
+            'smLevel' => 'string',
+            'smLevelNameEn' => 'string',
+            'smLevelName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * createdAt  创建时间
-    * lastCheckTime  上一次检查时间
+    * taskId  **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * lastCheckTime  **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * smLevel  **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    * smLevelNameEn  **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    * smLevelName  **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
         'gitUrl' => null,
         'gitBranch' => null,
         'createdAt' => null,
-        'lastCheckTime' => null
+        'lastCheckTime' => null,
+        'smLevel' => null,
+        'smLevelNameEn' => null,
+        'smLevelName' => null
     ];
 
     /**
@@ -85,13 +97,16 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * createdAt  创建时间
-    * lastCheckTime  上一次检查时间
+    * taskId  **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * lastCheckTime  **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * smLevel  **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    * smLevelNameEn  **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    * smLevelName  **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -102,18 +117,24 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
             'gitUrl' => 'git_url',
             'gitBranch' => 'git_branch',
             'createdAt' => 'created_at',
-            'lastCheckTime' => 'last_check_time'
+            'lastCheckTime' => 'last_check_time',
+            'smLevel' => 'sm_level',
+            'smLevelNameEn' => 'sm_level_name_en',
+            'smLevelName' => 'sm_level_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * createdAt  创建时间
-    * lastCheckTime  上一次检查时间
+    * taskId  **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * lastCheckTime  **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * smLevel  **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    * smLevelNameEn  **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    * smLevelName  **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -124,18 +145,24 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
             'gitUrl' => 'setGitUrl',
             'gitBranch' => 'setGitBranch',
             'createdAt' => 'setCreatedAt',
-            'lastCheckTime' => 'setLastCheckTime'
+            'lastCheckTime' => 'setLastCheckTime',
+            'smLevel' => 'setSmLevel',
+            'smLevelNameEn' => 'setSmLevelNameEn',
+            'smLevelName' => 'setSmLevelName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  任务id
-    * taskName  任务名字
-    * creatorId  创建者id
-    * gitUrl  代码仓地址
-    * gitBranch  代码仓分支,如果是MR模式，为源分支
-    * createdAt  创建时间
-    * lastCheckTime  上一次检查时间
+    * taskId  **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
+    * taskName  **参数解释：** 任务名称。 **取值范围：** 不涉及。
+    * creatorId  **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
+    * gitUrl  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
+    * gitBranch  **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
+    * createdAt  **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * lastCheckTime  **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
+    * smLevel  **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    * smLevelNameEn  **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    * smLevelName  **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
             'gitUrl' => 'getGitUrl',
             'gitBranch' => 'getGitBranch',
             'createdAt' => 'getCreatedAt',
-            'lastCheckTime' => 'getLastCheckTime'
+            'lastCheckTime' => 'getLastCheckTime',
+            'smLevel' => 'getSmLevel',
+            'smLevelNameEn' => 'getSmLevelNameEn',
+            'smLevelName' => 'getSmLevelName'
     ];
 
     /**
@@ -214,6 +244,9 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
         $this->container['gitBranch'] = isset($data['gitBranch']) ? $data['gitBranch'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['lastCheckTime'] = isset($data['lastCheckTime']) ? $data['lastCheckTime'] : null;
+        $this->container['smLevel'] = isset($data['smLevel']) ? $data['smLevel'] : null;
+        $this->container['smLevelNameEn'] = isset($data['smLevelNameEn']) ? $data['smLevelNameEn'] : null;
+        $this->container['smLevelName'] = isset($data['smLevelName']) ? $data['smLevelName'] : null;
     }
 
     /**
@@ -240,7 +273,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  任务id
+    *  **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -252,7 +285,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 任务id
+    * @param string|null $taskId **参数解释：** 任务下的默认分支任务的ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -264,7 +297,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskName
-    *  任务名字
+    *  **参数解释：** 任务名称。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -276,7 +309,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets taskName
     *
-    * @param string|null $taskName 任务名字
+    * @param string|null $taskName **参数解释：** 任务名称。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -288,7 +321,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets creatorId
-    *  创建者id
+    *  **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -300,7 +333,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets creatorId
     *
-    * @param string|null $creatorId 创建者id
+    * @param string|null $creatorId **参数解释：** 任务创建者的用户ID。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -312,7 +345,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitUrl
-    *  代码仓地址
+    *  **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -324,7 +357,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets gitUrl
     *
-    * @param string|null $gitUrl 代码仓地址
+    * @param string|null $gitUrl **参数解释：** 代码仓地址。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -336,7 +369,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets gitBranch
-    *  代码仓分支,如果是MR模式，为源分支
+    *  **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
     *
     * @return string|null
     */
@@ -348,7 +381,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets gitBranch
     *
-    * @param string|null $gitBranch 代码仓分支,如果是MR模式，为源分支
+    * @param string|null $gitBranch **参数解释：** 任务的默认分支，非代码仓默认分支。 **取值范围：** 不涉及。
     *
     * @return $this
     */
@@ -360,7 +393,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  创建时间
+    *  **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
     *
     * @return string|null
     */
@@ -372,7 +405,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间
+    * @param string|null $createdAt **参数解释：** 任务创建时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
     *
     * @return $this
     */
@@ -384,7 +417,7 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastCheckTime
-    *  上一次检查时间
+    *  **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
     *
     * @return string|null
     */
@@ -396,13 +429,85 @@ class SimpleTaskInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lastCheckTime
     *
-    * @param string|null $lastCheckTime 上一次检查时间
+    * @param string|null $lastCheckTime **参数解释：** 任务下所有分支任务、增量任务的最近检查时间。 **取值范围：** UTC格式，格式为yyyy-MM-ddTHH:mm:ssZ，例如\"2025-11-28T06:55:41Z\"。
     *
     * @return $this
     */
     public function setLastCheckTime($lastCheckTime)
     {
         $this->container['lastCheckTime'] = $lastCheckTime;
+        return $this;
+    }
+
+    /**
+    * Gets smLevel
+    *  **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    *
+    * @return string|null
+    */
+    public function getSmLevel()
+    {
+        return $this->container['smLevel'];
+    }
+
+    /**
+    * Sets smLevel
+    *
+    * @param string|null $smLevel **参数解释：** [密级ID,可见信息密级的ID，从页面接口GET https://{endpoint}/projects/v1/options的响应参数中获取，其中的code值即为密级ID。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** [不涉及,取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[不涉及。](tag:fcs)
+    *
+    * @return $this
+    */
+    public function setSmLevel($smLevel)
+    {
+        $this->container['smLevel'] = $smLevel;
+        return $this;
+    }
+
+    /**
+    * Gets smLevelNameEn
+    *  **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSmLevelNameEn()
+    {
+        return $this->container['smLevelNameEn'];
+    }
+
+    /**
+    * Sets smLevelNameEn
+    *
+    * @param string|null $smLevelNameEn **参数解释：** [密级英文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setSmLevelNameEn($smLevelNameEn)
+    {
+        $this->container['smLevelNameEn'] = $smLevelNameEn;
+        return $this;
+    }
+
+    /**
+    * Gets smLevelName
+    *  **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getSmLevelName()
+    {
+        return $this->container['smLevelName'];
+    }
+
+    /**
+    * Sets smLevelName
+    *
+    * @param string|null $smLevelName **参数解释：** [密级中文名称，取值根据用户配置的密级情况变化。](tag:hcs_sm,hcs_sitesm)[该参数暂无业务意义，忽略。](tag:fcs) **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setSmLevelName($smLevelName)
+    {
+        $this->container['smLevelName'] = $smLevelName;
         return $this;
     }
 

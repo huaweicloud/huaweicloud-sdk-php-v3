@@ -34,6 +34,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
+    * edition  终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
             'policyDocument' => 'object',
             'ipVersion' => 'string',
-            'ipv6Address' => 'string'
+            'ipv6Address' => 'string',
+            'edition' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
+    * edition  终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
         'policyStatement' => null,
         'policyDocument' => null,
         'ipVersion' => null,
-        'ipv6Address' => 'ipv6'
+        'ipv6Address' => 'ipv6',
+        'edition' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
+    * edition  终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'policyStatement' => 'policy_statement',
             'policyDocument' => 'policy_document',
             'ipVersion' => 'ip_version',
-            'ipv6Address' => 'ipv6_address'
+            'ipv6Address' => 'ipv6_address',
+            'edition' => 'edition'
     ];
 
     /**
@@ -163,6 +169,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
+    * edition  终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'policyStatement' => 'setPolicyStatement',
             'policyDocument' => 'setPolicyDocument',
             'ipVersion' => 'setIpVersion',
-            'ipv6Address' => 'setIpv6Address'
+            'ipv6Address' => 'setIpv6Address',
+            'edition' => 'setEdition'
     ];
 
     /**
@@ -199,6 +207,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
+    * edition  终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'policyStatement' => 'getPolicyStatement',
             'policyDocument' => 'getPolicyDocument',
             'ipVersion' => 'getIpVersion',
-            'ipv6Address' => 'getIpv6Address'
+            'ipv6Address' => 'getIpv6Address',
+            'edition' => 'getEdition'
     ];
 
     /**
@@ -261,6 +271,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     }
     const IP_VERSION_IPV4 = 'ipv4';
     const IP_VERSION_DUALSTACK = 'dualstack';
+    const EDITION_PROFESSION = 'profession';
+    const EDITION_BASIC = 'basic';
     
 
     /**
@@ -273,6 +285,19 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
         return [
             self::IP_VERSION_IPV4,
             self::IP_VERSION_DUALSTACK,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEditionAllowableValues()
+    {
+        return [
+            self::EDITION_PROFESSION,
+            self::EDITION_BASIC,
         ];
     }
 
@@ -306,6 +331,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
         $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['ipv6Address'] = isset($data['ipv6Address']) ? $data['ipv6Address'] : null;
+        $this->container['edition'] = isset($data['edition']) ? $data['edition'] : null;
     }
 
     /**
@@ -356,6 +382,14 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'ipVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getEditionAllowableValues();
+                if (!is_null($this->container['edition']) && !in_array($this->container['edition'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'edition', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -707,6 +741,30 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     public function setIpv6Address($ipv6Address)
     {
         $this->container['ipv6Address'] = $ipv6Address;
+        return $this;
+    }
+
+    /**
+    * Gets edition
+    *  终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
+    *
+    * @return string|null
+    */
+    public function getEdition()
+    {
+        return $this->container['edition'];
+    }
+
+    /**
+    * Sets edition
+    *
+    * @param string|null $edition 终端节点的商用类型。 - profession：专业版 - basic：基础版 不传时默认为基础版。
+    *
+    * @return $this
+    */
+    public function setEdition($edition)
+    {
+        $this->container['edition'] = $edition;
         return $this;
     }
 

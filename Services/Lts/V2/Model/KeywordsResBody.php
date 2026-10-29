@@ -31,6 +31,11 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    * epsId  **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    * timeRange  timeRange
     *
     * @var string[]
     */
@@ -45,7 +50,12 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'int',
             'searchTimeRangeUnit' => 'string',
             'customDate' => '\HuaweiCloud\SDK\Lts\V2\Model\CustomDate',
-            'isTimeRangeRelative' => 'bool'
+            'isTimeRangeRelative' => 'bool',
+            'conditions' => '\HuaweiCloud\SDK\Lts\V2\Model\KeywordsAlarmConditions[]',
+            'logGroupNameAlias' => 'string',
+            'logStreamNameAlias' => 'string',
+            'epsId' => 'string',
+            'timeRange' => '\HuaweiCloud\SDK\Lts\V2\Model\TimeRange'
     ];
 
     /**
@@ -61,6 +71,11 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    * epsId  **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    * timeRange  timeRange
     *
     * @var string[]
     */
@@ -75,7 +90,12 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
         'searchTimeRange' => 'int32',
         'searchTimeRangeUnit' => null,
         'customDate' => null,
-        'isTimeRangeRelative' => null
+        'isTimeRangeRelative' => null,
+        'conditions' => null,
+        'logGroupNameAlias' => null,
+        'logStreamNameAlias' => null,
+        'epsId' => null,
+        'timeRange' => null
     ];
 
     /**
@@ -112,6 +132,11 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    * epsId  **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    * timeRange  timeRange
     *
     * @var string[]
     */
@@ -126,7 +151,12 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'search_time_range',
             'searchTimeRangeUnit' => 'search_time_range_unit',
             'customDate' => 'custom_date',
-            'isTimeRangeRelative' => 'is_time_range_relative'
+            'isTimeRangeRelative' => 'is_time_range_relative',
+            'conditions' => 'conditions',
+            'logGroupNameAlias' => 'log_group_name_alias',
+            'logStreamNameAlias' => 'log_stream_name_alias',
+            'epsId' => 'eps_id',
+            'timeRange' => 'time_range'
     ];
 
     /**
@@ -142,6 +172,11 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    * epsId  **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    * timeRange  timeRange
     *
     * @var string[]
     */
@@ -156,7 +191,12 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'setSearchTimeRange',
             'searchTimeRangeUnit' => 'setSearchTimeRangeUnit',
             'customDate' => 'setCustomDate',
-            'isTimeRangeRelative' => 'setIsTimeRangeRelative'
+            'isTimeRangeRelative' => 'setIsTimeRangeRelative',
+            'conditions' => 'setConditions',
+            'logGroupNameAlias' => 'setLogGroupNameAlias',
+            'logStreamNameAlias' => 'setLogStreamNameAlias',
+            'epsId' => 'setEpsId',
+            'timeRange' => 'setTimeRange'
     ];
 
     /**
@@ -172,6 +212,11 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     * searchTimeRangeUnit  查询时间单位
     * customDate  customDate
     * isTimeRangeRelative  **参数解释：** 是否是相对时间。（暂不开放，后续aom上线该功能后一起开放） **约束限制：** 不涉及。 **取值范围：** - true - false **默认取值：** true
+    * conditions  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    * logGroupNameAlias  **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    * logStreamNameAlias  **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    * epsId  **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    * timeRange  timeRange
     *
     * @var string[]
     */
@@ -186,7 +231,12 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
             'searchTimeRange' => 'getSearchTimeRange',
             'searchTimeRangeUnit' => 'getSearchTimeRangeUnit',
             'customDate' => 'getCustomDate',
-            'isTimeRangeRelative' => 'getIsTimeRangeRelative'
+            'isTimeRangeRelative' => 'getIsTimeRangeRelative',
+            'conditions' => 'getConditions',
+            'logGroupNameAlias' => 'getLogGroupNameAlias',
+            'logStreamNameAlias' => 'getLogStreamNameAlias',
+            'epsId' => 'getEpsId',
+            'timeRange' => 'getTimeRange'
     ];
 
     /**
@@ -277,6 +327,11 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
         $this->container['searchTimeRangeUnit'] = isset($data['searchTimeRangeUnit']) ? $data['searchTimeRangeUnit'] : null;
         $this->container['customDate'] = isset($data['customDate']) ? $data['customDate'] : null;
         $this->container['isTimeRangeRelative'] = isset($data['isTimeRangeRelative']) ? $data['isTimeRangeRelative'] : null;
+        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
+        $this->container['logGroupNameAlias'] = isset($data['logGroupNameAlias']) ? $data['logGroupNameAlias'] : null;
+        $this->container['logStreamNameAlias'] = isset($data['logStreamNameAlias']) ? $data['logStreamNameAlias'] : null;
+        $this->container['epsId'] = isset($data['epsId']) ? $data['epsId'] : null;
+        $this->container['timeRange'] = isset($data['timeRange']) ? $data['timeRange'] : null;
     }
 
     /**
@@ -600,6 +655,126 @@ class KeywordsResBody implements ModelInterface, ArrayAccess
     public function setIsTimeRangeRelative($isTimeRangeRelative)
     {
         $this->container['isTimeRangeRelative'] = $isTimeRangeRelative;
+        return $this;
+    }
+
+    /**
+    * Gets conditions
+    *  **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\KeywordsAlarmConditions[]|null
+    */
+    public function getConditions()
+    {
+        return $this->container['conditions'];
+    }
+
+    /**
+    * Sets conditions
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\KeywordsAlarmConditions[]|null $conditions **参数解释：** 支持根据不同条件触发不同级别的告警。当使用该参数时，将优先使用该参数中的条件触发告警，无视keywords_alarm_level参数以及keywords_requests中的condition、number参数。 **约束限制：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setConditions($conditions)
+    {
+        $this->container['conditions'] = $conditions;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupNameAlias
+    *  **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogGroupNameAlias()
+    {
+        return $this->container['logGroupNameAlias'];
+    }
+
+    /**
+    * Sets logGroupNameAlias
+    *
+    * @param string|null $logGroupNameAlias **参数解释：** 日志组别名。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogGroupNameAlias($logGroupNameAlias)
+    {
+        $this->container['logGroupNameAlias'] = $logGroupNameAlias;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamNameAlias
+    *  **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getLogStreamNameAlias()
+    {
+        return $this->container['logStreamNameAlias'];
+    }
+
+    /**
+    * Sets logStreamNameAlias
+    *
+    * @param string|null $logStreamNameAlias **参数解释：** 日志流别名。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setLogStreamNameAlias($logStreamNameAlias)
+    {
+        $this->container['logStreamNameAlias'] = $logStreamNameAlias;
+        return $this;
+    }
+
+    /**
+    * Gets epsId
+    *  **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    *
+    * @return string|null
+    */
+    public function getEpsId()
+    {
+        return $this->container['epsId'];
+    }
+
+    /**
+    * Sets epsId
+    *
+    * @param string|null $epsId **参数解释：** 企业项目ID。 **取值范围：** 不涉及。
+    *
+    * @return $this
+    */
+    public function setEpsId($epsId)
+    {
+        $this->container['epsId'] = $epsId;
+        return $this;
+    }
+
+    /**
+    * Gets timeRange
+    *  timeRange
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\TimeRange|null
+    */
+    public function getTimeRange()
+    {
+        return $this->container['timeRange'];
+    }
+
+    /**
+    * Sets timeRange
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\TimeRange|null $timeRange timeRange
+    *
+    * @return $this
+    */
+    public function setTimeRange($timeRange)
+    {
+        $this->container['timeRange'] = $timeRange;
         return $this;
     }
 

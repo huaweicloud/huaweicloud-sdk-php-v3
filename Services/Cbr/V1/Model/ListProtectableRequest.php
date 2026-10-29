@@ -28,6 +28,7 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     * status  资源的状态，如available，error 等
     * id  根据资源id过滤
     * serverId  根据该id过滤属于该服务器的所有磁盘，支持企业多项目的用户才能传入此参数
+    * enterpriseProjectId  **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
             'protectableType' => 'string',
             'status' => 'string',
             'id' => 'string',
-            'serverId' => 'string'
+            'serverId' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     * status  资源的状态，如available，error 等
     * id  根据资源id过滤
     * serverId  根据该id过滤属于该服务器的所有磁盘，支持企业多项目的用户才能传入此参数
+    * enterpriseProjectId  **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
         'protectableType' => null,
         'status' => null,
         'id' => null,
-        'serverId' => null
+        'serverId' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     * status  资源的状态，如available，error 等
     * id  根据资源id过滤
     * serverId  根据该id过滤属于该服务器的所有磁盘，支持企业多项目的用户才能传入此参数
+    * enterpriseProjectId  **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
             'protectableType' => 'protectable_type',
             'status' => 'status',
             'id' => 'id',
-            'serverId' => 'server_id'
+            'serverId' => 'server_id',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     * status  资源的状态，如available，error 等
     * id  根据资源id过滤
     * serverId  根据该id过滤属于该服务器的所有磁盘，支持企业多项目的用户才能传入此参数
+    * enterpriseProjectId  **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
             'protectableType' => 'setProtectableType',
             'status' => 'setStatus',
             'id' => 'setId',
-            'serverId' => 'setServerId'
+            'serverId' => 'setServerId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     * status  资源的状态，如available，error 等
     * id  根据资源id过滤
     * serverId  根据该id过滤属于该服务器的所有磁盘，支持企业多项目的用户才能传入此参数
+    * enterpriseProjectId  **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
             'protectableType' => 'getProtectableType',
             'status' => 'getStatus',
             'id' => 'getId',
-            'serverId' => 'getServerId'
+            'serverId' => 'getServerId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -246,6 +256,7 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -470,6 +481,30 @@ class ListProtectableRequest implements ModelInterface, ArrayAccess
     public function setServerId($serverId)
     {
         $this->container['serverId'] = $serverId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数解释：** 企业项目ID，获取企业项目ID请参考[查询企业项目列表](https://support.huaweicloud.com/api-em/zh-cn_topic_0121230880.html)(tag:hws)[查询企业项目列表](https://support.huaweicloud.com/intl/zh-cn/api-em/zh-cn_topic_0121230880.html)(tag:hws_hk)[《企业管理API参考》“查询企业项目列表”章节](tag:ctc,dt,tm,sbc,hws_eu,fcs_vm,hcso_dt,srg) **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

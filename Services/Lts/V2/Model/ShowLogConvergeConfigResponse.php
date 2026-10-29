@@ -30,7 +30,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
     * organizationId  组织id
     * managementAccountId  管理员或者委托管理员账号id
     * managementProjectId  管理员项目id
-    * version  版本
     * logMappingConfig  日志汇聚配置
     *
     * @var string[]
@@ -45,7 +44,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
             'organizationId' => 'string',
             'managementAccountId' => 'string',
             'managementProjectId' => 'string',
-            'version' => 'string',
             'logMappingConfig' => '\HuaweiCloud\SDK\Lts\V2\Model\LogMappingConfig[]'
     ];
 
@@ -60,7 +58,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
     * organizationId  组织id
     * managementAccountId  管理员或者委托管理员账号id
     * managementProjectId  管理员项目id
-    * version  版本
     * logMappingConfig  日志汇聚配置
     *
     * @var string[]
@@ -75,7 +72,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
         'organizationId' => null,
         'managementAccountId' => null,
         'managementProjectId' => null,
-        'version' => null,
         'logMappingConfig' => null
     ];
 
@@ -111,7 +107,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
     * organizationId  组织id
     * managementAccountId  管理员或者委托管理员账号id
     * managementProjectId  管理员项目id
-    * version  版本
     * logMappingConfig  日志汇聚配置
     *
     * @var string[]
@@ -126,7 +121,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
             'organizationId' => 'organization_id',
             'managementAccountId' => 'management_account_id',
             'managementProjectId' => 'management_project_id',
-            'version' => 'version',
             'logMappingConfig' => 'log_mapping_config'
     ];
 
@@ -141,7 +135,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
     * organizationId  组织id
     * managementAccountId  管理员或者委托管理员账号id
     * managementProjectId  管理员项目id
-    * version  版本
     * logMappingConfig  日志汇聚配置
     *
     * @var string[]
@@ -156,7 +149,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
             'organizationId' => 'setOrganizationId',
             'managementAccountId' => 'setManagementAccountId',
             'managementProjectId' => 'setManagementProjectId',
-            'version' => 'setVersion',
             'logMappingConfig' => 'setLogMappingConfig'
     ];
 
@@ -171,7 +163,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
     * organizationId  组织id
     * managementAccountId  管理员或者委托管理员账号id
     * managementProjectId  管理员项目id
-    * version  版本
     * logMappingConfig  日志汇聚配置
     *
     * @var string[]
@@ -186,7 +177,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
             'organizationId' => 'getOrganizationId',
             'managementAccountId' => 'getManagementAccountId',
             'managementProjectId' => 'getManagementProjectId',
-            'version' => 'getVersion',
             'logMappingConfig' => 'getLogMappingConfig'
     ];
 
@@ -272,7 +262,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['managementAccountId'] = isset($data['managementAccountId']) ? $data['managementAccountId'] : null;
         $this->container['managementProjectId'] = isset($data['managementProjectId']) ? $data['managementProjectId'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['logMappingConfig'] = isset($data['logMappingConfig']) ? $data['logMappingConfig'] : null;
     }
 
@@ -519,30 +508,6 @@ class ShowLogConvergeConfigResponse implements ModelInterface, ArrayAccess
     public function setManagementProjectId($managementProjectId)
     {
         $this->container['managementProjectId'] = $managementProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets version
-    *  版本
-    *
-    * @return string|null
-    */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-    * Sets version
-    *
-    * @param string|null $version 版本
-    *
-    * @return $this
-    */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
         return $this;
     }
 

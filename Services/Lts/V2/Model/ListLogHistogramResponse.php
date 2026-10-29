@@ -21,21 +21,21 @@ class ListLogHistogramResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * histogram  直方图结果
+    * histogram  **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     * count  日志条数
     * isQueryComplete  是否查询完成。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'histogram' => 'string',
+            'histogram' => '\HuaweiCloud\SDK\Lts\V2\Model\LogCounts[]',
             'count' => 'int',
             'isQueryComplete' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * histogram  直方图结果
+    * histogram  **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     * count  日志条数
     * isQueryComplete  是否查询完成。
     *
@@ -70,7 +70,7 @@ class ListLogHistogramResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * histogram  直方图结果
+    * histogram  **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     * count  日志条数
     * isQueryComplete  是否查询完成。
     *
@@ -84,7 +84,7 @@ class ListLogHistogramResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * histogram  直方图结果
+    * histogram  **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     * count  日志条数
     * isQueryComplete  是否查询完成。
     *
@@ -98,7 +98,7 @@ class ListLogHistogramResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * histogram  直方图结果
+    * histogram  **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     * count  日志条数
     * isQueryComplete  是否查询完成。
     *
@@ -197,9 +197,9 @@ class ListLogHistogramResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets histogram
-    *  直方图结果
+    *  **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\LogCounts[]|null
     */
     public function getHistogram()
     {
@@ -209,7 +209,7 @@ class ListLogHistogramResponse implements ModelInterface, ArrayAccess
     /**
     * Sets histogram
     *
-    * @param string|null $histogram 直方图结果
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\LogCounts[]|null $histogram **参数解释：** 直方图结果。 **取值范围：** 不涉及。
     *
     * @return $this
     */

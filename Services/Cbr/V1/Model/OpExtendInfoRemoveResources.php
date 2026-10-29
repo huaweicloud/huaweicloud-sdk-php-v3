@@ -29,7 +29,7 @@ class OpExtendInfoRemoveResources implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'failCount' => 'int',
             'totalCount' => 'int',
-            'resources' => '\HuaweiCloud\SDK\Cbr\V1\Model\Resource[]'
+            'resources' => '\HuaweiCloud\SDK\Cbr\V1\Model\OpResourceResp[]'
     ];
 
     /**
@@ -246,7 +246,7 @@ class OpExtendInfoRemoveResources implements ModelInterface, ArrayAccess
     * Gets resources
     *  
     *
-    * @return \HuaweiCloud\SDK\Cbr\V1\Model\Resource[]|null
+    * @return \HuaweiCloud\SDK\Cbr\V1\Model\OpResourceResp[]|null
     */
     public function getResources()
     {
@@ -256,7 +256,7 @@ class OpExtendInfoRemoveResources implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Cbr\V1\Model\Resource[]|null $resources 
+    * @param \HuaweiCloud\SDK\Cbr\V1\Model\OpResourceResp[]|null $resources 
     *
     * @return $this
     */

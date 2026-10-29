@@ -29,7 +29,7 @@ class ChangePaymentModeNewResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'success' => 'bool',
-            'canSetFreeTime' => 'float',
+            'canSetFreeTime' => 'int',
             'errorMsg' => 'string'
     ];
 
@@ -43,7 +43,7 @@ class ChangePaymentModeNewResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'success' => null,
-        'canSetFreeTime' => null,
+        'canSetFreeTime' => 'int64',
         'errorMsg' => null
     ];
 
@@ -223,7 +223,7 @@ class ChangePaymentModeNewResponse implements ModelInterface, ArrayAccess
     * Gets canSetFreeTime
     *  可恢复为免费实例的时间
     *
-    * @return float|null
+    * @return int|null
     */
     public function getCanSetFreeTime()
     {
@@ -233,7 +233,7 @@ class ChangePaymentModeNewResponse implements ModelInterface, ArrayAccess
     /**
     * Sets canSetFreeTime
     *
-    * @param float|null $canSetFreeTime 可恢复为免费实例的时间
+    * @param int|null $canSetFreeTime 可恢复为免费实例的时间
     *
     * @return $this
     */
