@@ -25,7 +25,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
     * updateAt  **参数解释**：更新时间。 **取值范围**：不涉及。
     * chargingMode  **参数解释**：计费模式。 **取值范围**： - [COMMON：同时支持包周期和按需](tag:hws,hws_hk) - POST_PAID：按需模式 - [PRE_PAID：包周期](tag:hws,hws_hk)
     * cloudServer  cloudServer
-    * endpointsResponse  **参数解释**：实例私有IP信息。
     * flavor  **参数解释**：实例规格名称。 **取值范围**：^.{1,128}$。
     * id  **参数解释**：实例ID。 **取值范围**：^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$。
     * keyPairName  **参数解释**：密钥对名称。 **取值范围**：^[-_.a-zA-Z0-9]{1,64}$。
@@ -47,7 +46,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
             'updateAt' => 'int',
             'chargingMode' => 'string',
             'cloudServer' => '\HuaweiCloud\SDK\ModelArts\V1\Model\CloudServer',
-            'endpointsResponse' => '\HuaweiCloud\SDK\ModelArts\V1\Model\Endpoints[]',
             'flavor' => 'string',
             'id' => 'string',
             'keyPairName' => 'string',
@@ -69,7 +67,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
     * updateAt  **参数解释**：更新时间。 **取值范围**：不涉及。
     * chargingMode  **参数解释**：计费模式。 **取值范围**： - [COMMON：同时支持包周期和按需](tag:hws,hws_hk) - POST_PAID：按需模式 - [PRE_PAID：包周期](tag:hws,hws_hk)
     * cloudServer  cloudServer
-    * endpointsResponse  **参数解释**：实例私有IP信息。
     * flavor  **参数解释**：实例规格名称。 **取值范围**：^.{1,128}$。
     * id  **参数解释**：实例ID。 **取值范围**：^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$。
     * keyPairName  **参数解释**：密钥对名称。 **取值范围**：^[-_.a-zA-Z0-9]{1,64}$。
@@ -91,7 +88,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
         'updateAt' => 'int64',
         'chargingMode' => null,
         'cloudServer' => null,
-        'endpointsResponse' => null,
         'flavor' => null,
         'id' => null,
         'keyPairName' => null,
@@ -134,7 +130,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
     * updateAt  **参数解释**：更新时间。 **取值范围**：不涉及。
     * chargingMode  **参数解释**：计费模式。 **取值范围**： - [COMMON：同时支持包周期和按需](tag:hws,hws_hk) - POST_PAID：按需模式 - [PRE_PAID：包周期](tag:hws,hws_hk)
     * cloudServer  cloudServer
-    * endpointsResponse  **参数解释**：实例私有IP信息。
     * flavor  **参数解释**：实例规格名称。 **取值范围**：^.{1,128}$。
     * id  **参数解释**：实例ID。 **取值范围**：^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$。
     * keyPairName  **参数解释**：密钥对名称。 **取值范围**：^[-_.a-zA-Z0-9]{1,64}$。
@@ -156,7 +151,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
             'updateAt' => 'update_at',
             'chargingMode' => 'charging_mode',
             'cloudServer' => 'cloud_server',
-            'endpointsResponse' => 'endpoints_response',
             'flavor' => 'flavor',
             'id' => 'id',
             'keyPairName' => 'key_pair_name',
@@ -178,7 +172,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
     * updateAt  **参数解释**：更新时间。 **取值范围**：不涉及。
     * chargingMode  **参数解释**：计费模式。 **取值范围**： - [COMMON：同时支持包周期和按需](tag:hws,hws_hk) - POST_PAID：按需模式 - [PRE_PAID：包周期](tag:hws,hws_hk)
     * cloudServer  cloudServer
-    * endpointsResponse  **参数解释**：实例私有IP信息。
     * flavor  **参数解释**：实例规格名称。 **取值范围**：^.{1,128}$。
     * id  **参数解释**：实例ID。 **取值范围**：^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$。
     * keyPairName  **参数解释**：密钥对名称。 **取值范围**：^[-_.a-zA-Z0-9]{1,64}$。
@@ -200,7 +193,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
             'updateAt' => 'setUpdateAt',
             'chargingMode' => 'setChargingMode',
             'cloudServer' => 'setCloudServer',
-            'endpointsResponse' => 'setEndpointsResponse',
             'flavor' => 'setFlavor',
             'id' => 'setId',
             'keyPairName' => 'setKeyPairName',
@@ -222,7 +214,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
     * updateAt  **参数解释**：更新时间。 **取值范围**：不涉及。
     * chargingMode  **参数解释**：计费模式。 **取值范围**： - [COMMON：同时支持包周期和按需](tag:hws,hws_hk) - POST_PAID：按需模式 - [PRE_PAID：包周期](tag:hws,hws_hk)
     * cloudServer  cloudServer
-    * endpointsResponse  **参数解释**：实例私有IP信息。
     * flavor  **参数解释**：实例规格名称。 **取值范围**：^.{1,128}$。
     * id  **参数解释**：实例ID。 **取值范围**：^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$。
     * keyPairName  **参数解释**：密钥对名称。 **取值范围**：^[-_.a-zA-Z0-9]{1,64}$。
@@ -244,7 +235,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
             'updateAt' => 'getUpdateAt',
             'chargingMode' => 'getChargingMode',
             'cloudServer' => 'getCloudServer',
-            'endpointsResponse' => 'getEndpointsResponse',
             'flavor' => 'getFlavor',
             'id' => 'getId',
             'keyPairName' => 'getKeyPairName',
@@ -403,7 +393,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
         $this->container['updateAt'] = isset($data['updateAt']) ? $data['updateAt'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['cloudServer'] = isset($data['cloudServer']) ? $data['cloudServer'] : null;
-        $this->container['endpointsResponse'] = isset($data['endpointsResponse']) ? $data['endpointsResponse'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['keyPairName'] = isset($data['keyPairName']) ? $data['keyPairName'] : null;
@@ -597,30 +586,6 @@ class StartDevServerResponse implements ModelInterface, ArrayAccess
     public function setCloudServer($cloudServer)
     {
         $this->container['cloudServer'] = $cloudServer;
-        return $this;
-    }
-
-    /**
-    * Gets endpointsResponse
-    *  **参数解释**：实例私有IP信息。
-    *
-    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\Endpoints[]|null
-    */
-    public function getEndpointsResponse()
-    {
-        return $this->container['endpointsResponse'];
-    }
-
-    /**
-    * Sets endpointsResponse
-    *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\Endpoints[]|null $endpointsResponse **参数解释**：实例私有IP信息。
-    *
-    * @return $this
-    */
-    public function setEndpointsResponse($endpointsResponse)
-    {
-        $this->container['endpointsResponse'] = $endpointsResponse;
         return $this;
     }
 

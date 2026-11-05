@@ -21,7 +21,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  type
-    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    * isAutoPay  isAutoPay
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  type
-    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    * isAutoPay  isAutoPay
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  type
-    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    * isAutoPay  isAutoPay
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  type
-    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    * isAutoPay  isAutoPay
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  type
-    * isAutoPay  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    * isAutoPay  isAutoPay
     *
     * @var string[]
     */
@@ -212,7 +212,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoPay
-    *  是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    *  isAutoPay
     *
     * @return int|null
     */
@@ -224,7 +224,7 @@ class IndependentReq implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoPay
     *
-    * @param int|null $isAutoPay 是否自动支付。下单订购后，是否自动从客户的华为云账户中支付，而不需要客户手动去进行支付。
+    * @param int|null $isAutoPay isAutoPay
     *
     * @return $this
     */

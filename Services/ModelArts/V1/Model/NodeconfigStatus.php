@@ -20,22 +20,26 @@ class NodeconfigStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * phase  **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    * phase  **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
+    * configsStatus  configsStatus
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'phase' => 'string'
+            'phase' => 'string',
+            'configsStatus' => '\HuaweiCloud\SDK\ModelArts\V1\Model\NodeconfigStatusConfigsStatus'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * phase  **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    * phase  **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
+    * configsStatus  configsStatus
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'phase' => null
+        'phase' => null,
+        'configsStatus' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class NodeconfigStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * phase  **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    * phase  **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
+    * configsStatus  configsStatus
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'phase' => 'phase'
+            'phase' => 'phase',
+            'configsStatus' => 'configsStatus'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * phase  **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    * phase  **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
+    * configsStatus  configsStatus
     *
     * @var string[]
     */
     protected static $setters = [
-            'phase' => 'setPhase'
+            'phase' => 'setPhase',
+            'configsStatus' => 'setConfigsStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * phase  **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    * phase  **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
+    * configsStatus  configsStatus
     *
     * @var string[]
     */
     protected static $getters = [
-            'phase' => 'getPhase'
+            'phase' => 'getPhase',
+            'configsStatus' => 'getConfigsStatus'
     ];
 
     /**
@@ -169,6 +179,7 @@ class NodeconfigStatus implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['phase'] = isset($data['phase']) ? $data['phase'] : null;
+        $this->container['configsStatus'] = isset($data['configsStatus']) ? $data['configsStatus'] : null;
     }
 
     /**
@@ -206,7 +217,7 @@ class NodeconfigStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets phase
-    *  **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    *  **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
     *
     * @return string
     */
@@ -218,13 +229,37 @@ class NodeconfigStatus implements ModelInterface, ArrayAccess
     /**
     * Sets phase
     *
-    * @param string $phase **参数解释**： 插件实例的状态。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。
+    * @param string $phase **参数解释**： 节点配置的执行状态。 **约束限制**：不涉及。 **取值范围**： 可选值如下： - Pending：安装中，表示插件正在安装中。 - Running：运行中，表示插件全部实例状态都在运行中，插件正常使用。 - Updating：升级中，表示插件正在更新中。 - Abnormal：不可用，表示插件状态异常，插件不可使用。可单击状态查看失败原因。 - Deleting：删除中，表示插件正在删除中。 **默认取值**：不涉及。
     *
     * @return $this
     */
     public function setPhase($phase)
     {
         $this->container['phase'] = $phase;
+        return $this;
+    }
+
+    /**
+    * Gets configsStatus
+    *  configsStatus
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\NodeconfigStatusConfigsStatus|null
+    */
+    public function getConfigsStatus()
+    {
+        return $this->container['configsStatus'];
+    }
+
+    /**
+    * Sets configsStatus
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\NodeconfigStatusConfigsStatus|null $configsStatus configsStatus
+    *
+    * @return $this
+    */
+    public function setConfigsStatus($configsStatus)
+    {
+        $this->container['configsStatus'] = $configsStatus;
         return $this;
     }
 

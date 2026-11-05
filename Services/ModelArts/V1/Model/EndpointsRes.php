@@ -24,6 +24,7 @@ class EndpointsRes implements ModelInterface, ArrayAccess
     * service  **参数解释**：访问Notebook的途径。 **取值范围**：枚举类型，取值如下： - NOTEBOOK：可以通过https协议访问Notebook。 - SSH：可以通过SSH协议远程连接Notebook。
     * uri  **参数解释**：实例私有IP地址。 **取值范围**：不涉及。
     * keyPairNames  **参数解释**：SSH密钥对名称列表，允许设置多个密钥对实现同时对SSH实例的访问。 **取值范围**：不涉及。
+    * extensions  **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class EndpointsRes implements ModelInterface, ArrayAccess
             'devService' => 'string',
             'service' => 'string',
             'uri' => 'string',
-            'keyPairNames' => 'string[]'
+            'keyPairNames' => 'string[]',
+            'extensions' => 'map[string,string]'
     ];
 
     /**
@@ -40,6 +42,7 @@ class EndpointsRes implements ModelInterface, ArrayAccess
     * service  **参数解释**：访问Notebook的途径。 **取值范围**：枚举类型，取值如下： - NOTEBOOK：可以通过https协议访问Notebook。 - SSH：可以通过SSH协议远程连接Notebook。
     * uri  **参数解释**：实例私有IP地址。 **取值范围**：不涉及。
     * keyPairNames  **参数解释**：SSH密钥对名称列表，允许设置多个密钥对实现同时对SSH实例的访问。 **取值范围**：不涉及。
+    * extensions  **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class EndpointsRes implements ModelInterface, ArrayAccess
         'devService' => null,
         'service' => null,
         'uri' => null,
-        'keyPairNames' => null
+        'keyPairNames' => null,
+        'extensions' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class EndpointsRes implements ModelInterface, ArrayAccess
     * service  **参数解释**：访问Notebook的途径。 **取值范围**：枚举类型，取值如下： - NOTEBOOK：可以通过https协议访问Notebook。 - SSH：可以通过SSH协议远程连接Notebook。
     * uri  **参数解释**：实例私有IP地址。 **取值范围**：不涉及。
     * keyPairNames  **参数解释**：SSH密钥对名称列表，允许设置多个密钥对实现同时对SSH实例的访问。 **取值范围**：不涉及。
+    * extensions  **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class EndpointsRes implements ModelInterface, ArrayAccess
             'devService' => 'dev_service',
             'service' => 'service',
             'uri' => 'uri',
-            'keyPairNames' => 'key_pair_names'
+            'keyPairNames' => 'key_pair_names',
+            'extensions' => 'extensions'
     ];
 
     /**
@@ -93,6 +99,7 @@ class EndpointsRes implements ModelInterface, ArrayAccess
     * service  **参数解释**：访问Notebook的途径。 **取值范围**：枚举类型，取值如下： - NOTEBOOK：可以通过https协议访问Notebook。 - SSH：可以通过SSH协议远程连接Notebook。
     * uri  **参数解释**：实例私有IP地址。 **取值范围**：不涉及。
     * keyPairNames  **参数解释**：SSH密钥对名称列表，允许设置多个密钥对实现同时对SSH实例的访问。 **取值范围**：不涉及。
+    * extensions  **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class EndpointsRes implements ModelInterface, ArrayAccess
             'devService' => 'setDevService',
             'service' => 'setService',
             'uri' => 'setUri',
-            'keyPairNames' => 'setKeyPairNames'
+            'keyPairNames' => 'setKeyPairNames',
+            'extensions' => 'setExtensions'
     ];
 
     /**
@@ -109,6 +117,7 @@ class EndpointsRes implements ModelInterface, ArrayAccess
     * service  **参数解释**：访问Notebook的途径。 **取值范围**：枚举类型，取值如下： - NOTEBOOK：可以通过https协议访问Notebook。 - SSH：可以通过SSH协议远程连接Notebook。
     * uri  **参数解释**：实例私有IP地址。 **取值范围**：不涉及。
     * keyPairNames  **参数解释**：SSH密钥对名称列表，允许设置多个密钥对实现同时对SSH实例的访问。 **取值范围**：不涉及。
+    * extensions  **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class EndpointsRes implements ModelInterface, ArrayAccess
             'devService' => 'getDevService',
             'service' => 'getService',
             'uri' => 'getUri',
-            'keyPairNames' => 'getKeyPairNames'
+            'keyPairNames' => 'getKeyPairNames',
+            'extensions' => 'getExtensions'
     ];
 
     /**
@@ -196,6 +206,7 @@ class EndpointsRes implements ModelInterface, ArrayAccess
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
         $this->container['uri'] = isset($data['uri']) ? $data['uri'] : null;
         $this->container['keyPairNames'] = isset($data['keyPairNames']) ? $data['keyPairNames'] : null;
+        $this->container['extensions'] = isset($data['extensions']) ? $data['extensions'] : null;
     }
 
     /**
@@ -327,6 +338,30 @@ class EndpointsRes implements ModelInterface, ArrayAccess
     public function setKeyPairNames($keyPairNames)
     {
         $this->container['keyPairNames'] = $keyPairNames;
+        return $this;
+    }
+
+    /**
+    * Gets extensions
+    *  **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
+    *
+    * @return map[string,string]|null
+    */
+    public function getExtensions()
+    {
+        return $this->container['extensions'];
+    }
+
+    /**
+    * Sets extensions
+    *
+    * @param map[string,string]|null $extensions **参数解释**：通过应用专属URL直接打开应用进入远程开发模式。包含应用的各种扩展配置。key表示扩展配置名称，value表示扩展配置值。
+    *
+    * @return $this
+    */
+    public function setExtensions($extensions)
+    {
+        $this->container['extensions'] = $extensions;
         return $this;
     }
 

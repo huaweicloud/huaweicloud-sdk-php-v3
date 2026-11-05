@@ -34,7 +34,7 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
             'protocol' => 'string',
             'id' => 'string',
             'name' => 'string',
-            'protocolPort' => 'string',
+            'protocolPort' => 'int',
             'defaultTlsContainerRef' => 'string',
             'clientCaTlsContainerRef' => 'string',
             'ipgroup' => '\HuaweiCloud\SDK\Css\V1\Model\EsIpgroupResource'
@@ -56,7 +56,7 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
         'protocol' => null,
         'id' => null,
         'name' => null,
-        'protocolPort' => null,
+        'protocolPort' => 'int32',
         'defaultTlsContainerRef' => null,
         'clientCaTlsContainerRef' => null,
         'ipgroup' => null
@@ -314,7 +314,7 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     * Gets protocolPort
     *  监听器的前端监听端口。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getProtocolPort()
     {
@@ -324,7 +324,7 @@ class EsListenerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocolPort
     *
-    * @param string|null $protocolPort 监听器的前端监听端口。
+    * @param int|null $protocolPort 监听器的前端监听端口。
     *
     * @return $this
     */

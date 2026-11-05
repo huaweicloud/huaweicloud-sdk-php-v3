@@ -29,6 +29,8 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
     * osModelartsPromotionInfo  **参数解释**：用户在cbc选择的折扣信息。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsServiceConsoleUrl  **参数解释**：订购订单支付完成后跳转的url地址。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsOrderId  **参数解释**：订单id，包周期资源池创建或者计费模式变更的时候该参数必需。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
             'osModelartsAutoPay' => 'string',
             'osModelartsPromotionInfo' => 'string',
             'osModelartsServiceConsoleUrl' => 'string',
-            'osModelartsOrderId' => 'string'
+            'osModelartsOrderId' => 'string',
+            'osModelartsPoolSchedulerQueueStrategy' => 'string',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'string'
     ];
 
     /**
@@ -55,6 +59,8 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
     * osModelartsPromotionInfo  **参数解释**：用户在cbc选择的折扣信息。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsServiceConsoleUrl  **参数解释**：订购订单支付完成后跳转的url地址。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsOrderId  **参数解释**：订单id，包周期资源池创建或者计费模式变更的时候该参数必需。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
         'osModelartsAutoPay' => null,
         'osModelartsPromotionInfo' => null,
         'osModelartsServiceConsoleUrl' => null,
-        'osModelartsOrderId' => null
+        'osModelartsOrderId' => null,
+        'osModelartsPoolSchedulerQueueStrategy' => null,
+        'osModelartsPoolSchedulerQueueStrategyConfig' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
     * osModelartsPromotionInfo  **参数解释**：用户在cbc选择的折扣信息。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsServiceConsoleUrl  **参数解释**：订购订单支付完成后跳转的url地址。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsOrderId  **参数解释**：订单id，包周期资源池创建或者计费模式变更的时候该参数必需。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
             'osModelartsAutoPay' => 'os.modelarts/auto.pay',
             'osModelartsPromotionInfo' => 'os.modelarts/promotion.info',
             'osModelartsServiceConsoleUrl' => 'os.modelarts/service.console.url',
-            'osModelartsOrderId' => 'os.modelarts/order.id'
+            'osModelartsOrderId' => 'os.modelarts/order.id',
+            'osModelartsPoolSchedulerQueueStrategy' => 'os.modelarts.pool/scheduler.queue.strategy',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'os.modelarts.pool/scheduler.queue.strategy.config'
     ];
 
     /**
@@ -128,6 +140,8 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
     * osModelartsPromotionInfo  **参数解释**：用户在cbc选择的折扣信息。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsServiceConsoleUrl  **参数解释**：订购订单支付完成后跳转的url地址。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsOrderId  **参数解释**：订单id，包周期资源池创建或者计费模式变更的时候该参数必需。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
             'osModelartsAutoPay' => 'setOsModelartsAutoPay',
             'osModelartsPromotionInfo' => 'setOsModelartsPromotionInfo',
             'osModelartsServiceConsoleUrl' => 'setOsModelartsServiceConsoleUrl',
-            'osModelartsOrderId' => 'setOsModelartsOrderId'
+            'osModelartsOrderId' => 'setOsModelartsOrderId',
+            'osModelartsPoolSchedulerQueueStrategy' => 'setOsModelartsPoolSchedulerQueueStrategy',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'setOsModelartsPoolSchedulerQueueStrategyConfig'
     ];
 
     /**
@@ -154,6 +170,8 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
     * osModelartsPromotionInfo  **参数解释**：用户在cbc选择的折扣信息。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsServiceConsoleUrl  **参数解释**：订购订单支付完成后跳转的url地址。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsOrderId  **参数解释**：订单id，包周期资源池创建或者计费模式变更的时候该参数必需。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
             'osModelartsAutoPay' => 'getOsModelartsAutoPay',
             'osModelartsPromotionInfo' => 'getOsModelartsPromotionInfo',
             'osModelartsServiceConsoleUrl' => 'getOsModelartsServiceConsoleUrl',
-            'osModelartsOrderId' => 'getOsModelartsOrderId'
+            'osModelartsOrderId' => 'getOsModelartsOrderId',
+            'osModelartsPoolSchedulerQueueStrategy' => 'getOsModelartsPoolSchedulerQueueStrategy',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'getOsModelartsPoolSchedulerQueueStrategyConfig'
     ];
 
     /**
@@ -236,6 +256,8 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
         $this->container['osModelartsPromotionInfo'] = isset($data['osModelartsPromotionInfo']) ? $data['osModelartsPromotionInfo'] : null;
         $this->container['osModelartsServiceConsoleUrl'] = isset($data['osModelartsServiceConsoleUrl']) ? $data['osModelartsServiceConsoleUrl'] : null;
         $this->container['osModelartsOrderId'] = isset($data['osModelartsOrderId']) ? $data['osModelartsOrderId'] : null;
+        $this->container['osModelartsPoolSchedulerQueueStrategy'] = isset($data['osModelartsPoolSchedulerQueueStrategy']) ? $data['osModelartsPoolSchedulerQueueStrategy'] : null;
+        $this->container['osModelartsPoolSchedulerQueueStrategyConfig'] = isset($data['osModelartsPoolSchedulerQueueStrategyConfig']) ? $data['osModelartsPoolSchedulerQueueStrategyConfig'] : null;
     }
 
     /**
@@ -473,6 +495,54 @@ class PoolAnnotationsCreation implements ModelInterface, ArrayAccess
     public function setOsModelartsOrderId($osModelartsOrderId)
     {
         $this->container['osModelartsOrderId'] = $osModelartsOrderId;
+        return $this;
+    }
+
+    /**
+    * Gets osModelartsPoolSchedulerQueueStrategy
+    *  **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    *
+    * @return string|null
+    */
+    public function getOsModelartsPoolSchedulerQueueStrategy()
+    {
+        return $this->container['osModelartsPoolSchedulerQueueStrategy'];
+    }
+
+    /**
+    * Sets osModelartsPoolSchedulerQueueStrategy
+    *
+    * @param string|null $osModelartsPoolSchedulerQueueStrategy **参数解释**：资源池的调度算法。 **约束限制**：不涉及。 **取值范围**：可选值如下： - FIFO：先进先出，默认值 - Range：遍历调度 - Step: 阶梯轮询 - Rank: 分级调度 **默认取值**：FIFO。
+    *
+    * @return $this
+    */
+    public function setOsModelartsPoolSchedulerQueueStrategy($osModelartsPoolSchedulerQueueStrategy)
+    {
+        $this->container['osModelartsPoolSchedulerQueueStrategy'] = $osModelartsPoolSchedulerQueueStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets osModelartsPoolSchedulerQueueStrategyConfig
+    *  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getOsModelartsPoolSchedulerQueueStrategyConfig()
+    {
+        return $this->container['osModelartsPoolSchedulerQueueStrategyConfig'];
+    }
+
+    /**
+    * Sets osModelartsPoolSchedulerQueueStrategyConfig
+    *
+    * @param string|null $osModelartsPoolSchedulerQueueStrategyConfig **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setOsModelartsPoolSchedulerQueueStrategyConfig($osModelartsPoolSchedulerQueueStrategyConfig)
+    {
+        $this->container['osModelartsPoolSchedulerQueueStrategyConfig'] = $osModelartsPoolSchedulerQueueStrategyConfig;
         return $this;
     }
 

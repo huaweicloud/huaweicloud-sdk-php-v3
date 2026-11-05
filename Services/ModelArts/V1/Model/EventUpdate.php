@@ -22,24 +22,28 @@ class EventUpdate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
     * redeployConfig  redeployConfig
+    * instanceId  **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'notBefore' => 'string',
-            'redeployConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RedeployConfig'
+            'redeployConfig' => '\HuaweiCloud\SDK\ModelArts\V1\Model\RedeployConfig',
+            'instanceId' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
     * redeployConfig  redeployConfig
+    * instanceId  **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'notBefore' => null,
-        'redeployConfig' => null
+        'redeployConfig' => null,
+        'instanceId' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class EventUpdate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
     * redeployConfig  redeployConfig
+    * instanceId  **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'notBefore' => 'notBefore',
-            'redeployConfig' => 'redeployConfig'
+            'redeployConfig' => 'redeployConfig',
+            'instanceId' => 'instanceId'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
     * redeployConfig  redeployConfig
+    * instanceId  **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
     *
     * @var string[]
     */
     protected static $setters = [
             'notBefore' => 'setNotBefore',
-            'redeployConfig' => 'setRedeployConfig'
+            'redeployConfig' => 'setRedeployConfig',
+            'instanceId' => 'setInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * notBefore  **参数解释**：计划执行开始时间，格式为yyyy-MM-ddTHH:mm:ssZ。 **约束限制**：不涉及。 **取值范围**：大于当前时间。 **默认取值**：不填表示立即执行。
     * redeployConfig  redeployConfig
+    * instanceId  **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
     *
     * @var string[]
     */
     protected static $getters = [
             'notBefore' => 'getNotBefore',
-            'redeployConfig' => 'getRedeployConfig'
+            'redeployConfig' => 'getRedeployConfig',
+            'instanceId' => 'getInstanceId'
     ];
 
     /**
@@ -159,6 +169,7 @@ class EventUpdate implements ModelInterface, ArrayAccess
     {
         $this->container['notBefore'] = isset($data['notBefore']) ? $data['notBefore'] : null;
         $this->container['redeployConfig'] = isset($data['redeployConfig']) ? $data['redeployConfig'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class EventUpdate implements ModelInterface, ArrayAccess
     public function setRedeployConfig($redeployConfig)
     {
         $this->container['redeployConfig'] = $redeployConfig;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
+    *
+    * @return string[]|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string[]|null $instanceId **参数解释**：授权节点ID列表。授权重部处理时可选填,支持填入单个故障节点ID。 **约束限制**：不涉及。 **取值范围**：计划事件故障节点列表。 **默认取值**：不填表示授权所有节点。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

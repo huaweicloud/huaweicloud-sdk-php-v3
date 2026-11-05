@@ -21,10 +21,10 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  规则ID
-    * ruleName  策略名称
-    * policyId  引用该代答库的规则所属策略ID
-    * policyName  引用该代答库的规则所属策略名称
-    * detectOptsType  规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    * ruleName  规则名称
+    * policyId  引用该规则的规则所属策略ID
+    * policyName  引用该规则的规则所属策略名称
+    * detectOptsType  规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  规则ID
-    * ruleName  策略名称
-    * policyId  引用该代答库的规则所属策略ID
-    * policyName  引用该代答库的规则所属策略名称
-    * detectOptsType  规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    * ruleName  规则名称
+    * policyId  引用该规则的规则所属策略ID
+    * policyName  引用该规则的规则所属策略名称
+    * detectOptsType  规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ruleId  规则ID
-    * ruleName  策略名称
-    * policyId  引用该代答库的规则所属策略ID
-    * policyName  引用该代答库的规则所属策略名称
-    * detectOptsType  规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    * ruleName  规则名称
+    * policyId  引用该规则的规则所属策略ID
+    * policyName  引用该规则的规则所属策略名称
+    * detectOptsType  规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  规则ID
-    * ruleName  策略名称
-    * policyId  引用该代答库的规则所属策略ID
-    * policyName  引用该代答库的规则所属策略名称
-    * detectOptsType  规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    * ruleName  规则名称
+    * policyId  引用该规则的规则所属策略ID
+    * policyName  引用该规则的规则所属策略名称
+    * detectOptsType  规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  规则ID
-    * ruleName  策略名称
-    * policyId  引用该代答库的规则所属策略ID
-    * policyName  引用该代答库的规则所属策略名称
-    * detectOptsType  规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    * ruleName  规则名称
+    * policyId  引用该规则的规则所属策略ID
+    * policyName  引用该规则的规则所属策略名称
+    * detectOptsType  规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  策略名称
+    *  规则名称
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 策略名称
+    * @param string|null $ruleName 规则名称
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyId
-    *  引用该代答库的规则所属策略ID
+    *  引用该规则的规则所属策略ID
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Sets policyId
     *
-    * @param string|null $policyId 引用该代答库的规则所属策略ID
+    * @param string|null $policyId 引用该规则的规则所属策略ID
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyName
-    *  引用该代答库的规则所属策略名称
+    *  引用该规则的规则所属策略名称
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Sets policyName
     *
-    * @param string|null $policyName 引用该代答库的规则所属策略名称
+    * @param string|null $policyName 引用该规则的规则所属策略名称
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectOptsType
-    *  规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    *  规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ReferencedRule implements ModelInterface, ArrayAccess
     /**
     * Sets detectOptsType
     *
-    * @param string|null $detectOptsType 规则检测选项类型，可选：lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
+    * @param string|null $detectOptsType 规则检测选项类型，可选：atlas(黑库图库检测), immunity_atlas(白库图库豁免检测), lexicon(词库检测), compliance(合规检测), inject(注入检测), immunity_lexicon(豁免词库), supported_language(语言检测), pii(PII检测), abuse(算力滥用检测), topic_detect(话题检测)等
     *
     * @return $this
     */

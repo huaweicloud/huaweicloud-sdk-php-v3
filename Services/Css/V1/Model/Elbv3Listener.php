@@ -24,6 +24,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
     * name  监听器的名称。
     * protocol  监听器的监听协议。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    * clientCaTlsContainerRef  **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -33,6 +35,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
             'name' => 'string',
             'protocol' => 'string',
             'protocolPort' => 'int',
+            'defaultTlsContainerRef' => 'string',
+            'clientCaTlsContainerRef' => 'string',
             'ipgroup' => '\HuaweiCloud\SDK\Css\V1\Model\ListenerIpGroup'
     ];
 
@@ -42,6 +46,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
     * name  监听器的名称。
     * protocol  监听器的监听协议。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    * clientCaTlsContainerRef  **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -51,6 +57,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
         'name' => null,
         'protocol' => null,
         'protocolPort' => 'int32',
+        'defaultTlsContainerRef' => null,
+        'clientCaTlsContainerRef' => null,
         'ipgroup' => null
     ];
 
@@ -81,6 +89,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
     * name  监听器的名称。
     * protocol  监听器的监听协议。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    * clientCaTlsContainerRef  **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -90,6 +100,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
             'name' => 'name',
             'protocol' => 'protocol',
             'protocolPort' => 'protocol_port',
+            'defaultTlsContainerRef' => 'default_tls_container_ref',
+            'clientCaTlsContainerRef' => 'client_ca_tls_container_ref',
             'ipgroup' => 'ipgroup'
     ];
 
@@ -99,6 +111,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
     * name  监听器的名称。
     * protocol  监听器的监听协议。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    * clientCaTlsContainerRef  **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -108,6 +122,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'protocol' => 'setProtocol',
             'protocolPort' => 'setProtocolPort',
+            'defaultTlsContainerRef' => 'setDefaultTlsContainerRef',
+            'clientCaTlsContainerRef' => 'setClientCaTlsContainerRef',
             'ipgroup' => 'setIpgroup'
     ];
 
@@ -117,6 +133,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
     * name  监听器的名称。
     * protocol  监听器的监听协议。
     * protocolPort  监听器的前端监听端口。
+    * defaultTlsContainerRef  **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    * clientCaTlsContainerRef  **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
     * ipgroup  ipgroup
     *
     * @var string[]
@@ -126,6 +144,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'protocol' => 'getProtocol',
             'protocolPort' => 'getProtocolPort',
+            'defaultTlsContainerRef' => 'getDefaultTlsContainerRef',
+            'clientCaTlsContainerRef' => 'getClientCaTlsContainerRef',
             'ipgroup' => 'getIpgroup'
     ];
 
@@ -191,6 +211,8 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
+        $this->container['defaultTlsContainerRef'] = isset($data['defaultTlsContainerRef']) ? $data['defaultTlsContainerRef'] : null;
+        $this->container['clientCaTlsContainerRef'] = isset($data['clientCaTlsContainerRef']) ? $data['clientCaTlsContainerRef'] : null;
         $this->container['ipgroup'] = isset($data['ipgroup']) ? $data['ipgroup'] : null;
     }
 
@@ -309,6 +331,54 @@ class Elbv3Listener implements ModelInterface, ArrayAccess
     public function setProtocolPort($protocolPort)
     {
         $this->container['protocolPort'] = $protocolPort;
+        return $this;
+    }
+
+    /**
+    * Gets defaultTlsContainerRef
+    *  **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getDefaultTlsContainerRef()
+    {
+        return $this->container['defaultTlsContainerRef'];
+    }
+
+    /**
+    * Sets defaultTlsContainerRef
+    *
+    * @param string|null $defaultTlsContainerRef **参数解释**： 负载均衡器监听器的服务端证书。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setDefaultTlsContainerRef($defaultTlsContainerRef)
+    {
+        $this->container['defaultTlsContainerRef'] = $defaultTlsContainerRef;
+        return $this;
+    }
+
+    /**
+    * Gets clientCaTlsContainerRef
+    *  **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
+    *
+    * @return string|null
+    */
+    public function getClientCaTlsContainerRef()
+    {
+        return $this->container['clientCaTlsContainerRef'];
+    }
+
+    /**
+    * Sets clientCaTlsContainerRef
+    *
+    * @param string|null $clientCaTlsContainerRef **参数解释**： 负载均衡器监听器的ca证书。 **取值范围**： 不涉及
+    *
+    * @return $this
+    */
+    public function setClientCaTlsContainerRef($clientCaTlsContainerRef)
+    {
+        $this->container['clientCaTlsContainerRef'] = $clientCaTlsContainerRef;
         return $this;
     }
 

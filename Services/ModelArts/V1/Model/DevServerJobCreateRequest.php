@@ -21,7 +21,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**：任务名称。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * description  **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * description  **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * serverIds  **参数解释**：DevServer实例id列表。 **取值范围**：不涉及。
     * type  **参数解释**：任务模板类型。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：-COMMON  -SERVICE_DEPLOY 等。 **默认取值**：不涉及。
     * isReboot  **参数解释**：任务失败后是否重启。 **约束限制**：不涉及。 **取值范围**：- true   -false。 **默认取值**：false。
@@ -41,7 +41,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**：任务名称。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * description  **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * description  **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * serverIds  **参数解释**：DevServer实例id列表。 **取值范围**：不涉及。
     * type  **参数解释**：任务模板类型。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：-COMMON  -SERVICE_DEPLOY 等。 **默认取值**：不涉及。
     * isReboot  **参数解释**：任务失败后是否重启。 **约束限制**：不涉及。 **取值范围**：- true   -false。 **默认取值**：false。
@@ -82,7 +82,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  **参数解释**：任务名称。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * description  **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * description  **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * serverIds  **参数解释**：DevServer实例id列表。 **取值范围**：不涉及。
     * type  **参数解释**：任务模板类型。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：-COMMON  -SERVICE_DEPLOY 等。 **默认取值**：不涉及。
     * isReboot  **参数解释**：任务失败后是否重启。 **约束限制**：不涉及。 **取值范围**：- true   -false。 **默认取值**：false。
@@ -102,7 +102,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**：任务名称。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * description  **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * description  **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * serverIds  **参数解释**：DevServer实例id列表。 **取值范围**：不涉及。
     * type  **参数解释**：任务模板类型。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：-COMMON  -SERVICE_DEPLOY 等。 **默认取值**：不涉及。
     * isReboot  **参数解释**：任务失败后是否重启。 **约束限制**：不涉及。 **取值范围**：- true   -false。 **默认取值**：false。
@@ -122,7 +122,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**：任务名称。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * description  **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * description  **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * serverIds  **参数解释**：DevServer实例id列表。 **取值范围**：不涉及。
     * type  **参数解释**：任务模板类型。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：-COMMON  -SERVICE_DEPLOY 等。 **默认取值**：不涉及。
     * isReboot  **参数解释**：任务失败后是否重启。 **约束限制**：不涉及。 **取值范围**：- true   -false。 **默认取值**：false。
@@ -265,7 +265,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class DevServerJobCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**：任务描述。 **约束限制**：^[-_.a-zA-Z0-9]{1,64}$。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string|null $description **参数解释**：任务描述。 **约束限制**：长度限制为512字符，不可包含特殊字符&<>\"'/。 **取值范围**：不涉及。 **默认取值**：不涉及。
     *
     * @return $this
     */

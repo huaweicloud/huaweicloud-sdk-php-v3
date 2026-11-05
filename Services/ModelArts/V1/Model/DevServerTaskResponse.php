@@ -38,8 +38,8 @@ class DevServerTaskResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'cloudServer' => 'map[string,string]',
             'message' => 'string',
-            'createAt' => 'string',
-            'updateAt' => 'string'
+            'createAt' => 'int',
+            'updateAt' => 'int'
     ];
 
     /**
@@ -62,8 +62,8 @@ class DevServerTaskResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'cloudServer' => null,
         'message' => null,
-        'createAt' => null,
-        'updateAt' => null
+        'createAt' => 'int64',
+        'updateAt' => 'int64'
     ];
 
     /**
@@ -397,7 +397,7 @@ class DevServerTaskResponse implements ModelInterface, ArrayAccess
     * Gets createAt
     *  **参数解释**：创建时间。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreateAt()
     {
@@ -407,7 +407,7 @@ class DevServerTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt **参数解释**：创建时间。 **取值范围**：不涉及。
+    * @param int|null $createAt **参数解释**：创建时间。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class DevServerTaskResponse implements ModelInterface, ArrayAccess
     * Gets updateAt
     *  **参数解释**：更新时间。 **取值范围**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getUpdateAt()
     {
@@ -431,7 +431,7 @@ class DevServerTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt **参数解释**：更新时间。 **取值范围**：不涉及。
+    * @param int|null $updateAt **参数解释**：更新时间。 **取值范围**：不涉及。
     *
     * @return $this
     */

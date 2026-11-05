@@ -1415,11 +1415,11 @@ class CssAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['multipart/form-data', 'application/octet-stream']
+                ['multipart/form-data']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['multipart/form-data', 'application/octet-stream'],
+                ['multipart/form-data'],
                 []
             );
         }

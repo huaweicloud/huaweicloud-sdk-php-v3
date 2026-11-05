@@ -22,6 +22,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  **参数解释**：网络资源的ID。 **取值范围**：不涉及。
     * creationTimestamp  **参数解释**：网络的创建时间。例如\"2025-11-01T03:49:41Z\"。 **取值范围**：不涉及。
+    * deletionTimestamp  **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
     * labels  labels
     * annotations  annotations
     *
@@ -30,6 +31,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'creationTimestamp' => 'string',
+            'deletionTimestamp' => 'string',
             'labels' => '\HuaweiCloud\SDK\ModelArts\V1\Model\NetworkMetadataLabels',
             'annotations' => '\HuaweiCloud\SDK\ModelArts\V1\Model\NetworkMetadataAnnotations'
     ];
@@ -38,6 +40,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  **参数解释**：网络资源的ID。 **取值范围**：不涉及。
     * creationTimestamp  **参数解释**：网络的创建时间。例如\"2025-11-01T03:49:41Z\"。 **取值范围**：不涉及。
+    * deletionTimestamp  **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
     * labels  labels
     * annotations  annotations
     *
@@ -46,6 +49,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'creationTimestamp' => null,
+        'deletionTimestamp' => null,
         'labels' => null,
         'annotations' => null
     ];
@@ -75,6 +79,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  **参数解释**：网络资源的ID。 **取值范围**：不涉及。
     * creationTimestamp  **参数解释**：网络的创建时间。例如\"2025-11-01T03:49:41Z\"。 **取值范围**：不涉及。
+    * deletionTimestamp  **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
     * labels  labels
     * annotations  annotations
     *
@@ -83,6 +88,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'creationTimestamp' => 'creationTimestamp',
+            'deletionTimestamp' => 'deletionTimestamp',
             'labels' => 'labels',
             'annotations' => 'annotations'
     ];
@@ -91,6 +97,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  **参数解释**：网络资源的ID。 **取值范围**：不涉及。
     * creationTimestamp  **参数解释**：网络的创建时间。例如\"2025-11-01T03:49:41Z\"。 **取值范围**：不涉及。
+    * deletionTimestamp  **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
     * labels  labels
     * annotations  annotations
     *
@@ -99,6 +106,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'creationTimestamp' => 'setCreationTimestamp',
+            'deletionTimestamp' => 'setDeletionTimestamp',
             'labels' => 'setLabels',
             'annotations' => 'setAnnotations'
     ];
@@ -107,6 +115,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  **参数解释**：网络资源的ID。 **取值范围**：不涉及。
     * creationTimestamp  **参数解释**：网络的创建时间。例如\"2025-11-01T03:49:41Z\"。 **取值范围**：不涉及。
+    * deletionTimestamp  **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
     * labels  labels
     * annotations  annotations
     *
@@ -115,6 +124,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'creationTimestamp' => 'getCreationTimestamp',
+            'deletionTimestamp' => 'getDeletionTimestamp',
             'labels' => 'getLabels',
             'annotations' => 'getAnnotations'
     ];
@@ -179,6 +189,7 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['creationTimestamp'] = isset($data['creationTimestamp']) ? $data['creationTimestamp'] : null;
+        $this->container['deletionTimestamp'] = isset($data['deletionTimestamp']) ? $data['deletionTimestamp'] : null;
         $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
         $this->container['annotations'] = isset($data['annotations']) ? $data['annotations'] : null;
     }
@@ -259,6 +270,30 @@ class NetworkMetadata implements ModelInterface, ArrayAccess
     public function setCreationTimestamp($creationTimestamp)
     {
         $this->container['creationTimestamp'] = $creationTimestamp;
+        return $this;
+    }
+
+    /**
+    * Gets deletionTimestamp
+    *  **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getDeletionTimestamp()
+    {
+        return $this->container['deletionTimestamp'];
+    }
+
+    /**
+    * Sets deletionTimestamp
+    *
+    * @param string|null $deletionTimestamp **参数解释**：网络的删除时间。例如\"2025-12-01T03:49:41Z\"。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setDeletionTimestamp($deletionTimestamp)
+    {
+        $this->container['deletionTimestamp'] = $deletionTimestamp;
         return $this;
     }
 

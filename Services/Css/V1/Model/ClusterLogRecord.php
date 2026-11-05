@@ -35,7 +35,7 @@ class ClusterLogRecord implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'clusterId' => 'string',
-            'createAt' => 'string',
+            'createAt' => 'int',
             'logPath' => 'string',
             'status' => 'string',
             'finishedAt' => 'int',
@@ -61,7 +61,7 @@ class ClusterLogRecord implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'clusterId' => null,
-        'createAt' => null,
+        'createAt' => 'int32',
         'logPath' => null,
         'status' => null,
         'finishedAt' => 'int64',
@@ -312,7 +312,7 @@ class ClusterLogRecord implements ModelInterface, ArrayAccess
     * Gets createAt
     *  创建时间。格式：Unix时间戳格式。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreateAt()
     {
@@ -322,7 +322,7 @@ class ClusterLogRecord implements ModelInterface, ArrayAccess
     /**
     * Sets createAt
     *
-    * @param string|null $createAt 创建时间。格式：Unix时间戳格式。
+    * @param int|null $createAt 创建时间。格式：Unix时间戳格式。
     *
     * @return $this
     */

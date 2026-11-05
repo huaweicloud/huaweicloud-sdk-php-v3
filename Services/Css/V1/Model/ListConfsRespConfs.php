@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Confs implements ModelInterface, ArrayAccess
+class ListConfsRespConfs implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,17 +16,17 @@ class Confs implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'confs';
+    protected static $openAPIModelName = 'ListConfsRespConfs';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  配置文件名称。
-    * status  配置文件状态。
-    * confContent  配置文件内容。
+    * name  **参数解释**： 配置文件名称。 **取值范围**： 不涉及
+    * status  **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
+    * confContent  **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     * setting  setting
-    * updateAt  更新时间。
+    * updateAt  **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
-    * sensitiveWordsShielding  是否隐藏敏感词
+    * sensitiveWordsShielding  **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class Confs implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'string',
             'confContent' => 'string',
-            'setting' => '\HuaweiCloud\SDK\Css\V1\Model\Setting',
+            'setting' => '\HuaweiCloud\SDK\Css\V1\Model\ListConfsRespConfsSetting',
             'updateAt' => 'string',
             'desc' => 'string',
             'sensitiveWordsShielding' => 'bool'
@@ -42,13 +42,13 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  配置文件名称。
-    * status  配置文件状态。
-    * confContent  配置文件内容。
+    * name  **参数解释**： 配置文件名称。 **取值范围**： 不涉及
+    * status  **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
+    * confContent  **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     * setting  setting
-    * updateAt  更新时间。
+    * updateAt  **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
-    * sensitiveWordsShielding  是否隐藏敏感词
+    * sensitiveWordsShielding  **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  配置文件名称。
-    * status  配置文件状态。
-    * confContent  配置文件内容。
+    * name  **参数解释**： 配置文件名称。 **取值范围**： 不涉及
+    * status  **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
+    * confContent  **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     * setting  setting
-    * updateAt  更新时间。
+    * updateAt  **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
-    * sensitiveWordsShielding  是否隐藏敏感词
+    * sensitiveWordsShielding  **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  配置文件名称。
-    * status  配置文件状态。
-    * confContent  配置文件内容。
+    * name  **参数解释**： 配置文件名称。 **取值范围**： 不涉及
+    * status  **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
+    * confContent  **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     * setting  setting
-    * updateAt  更新时间。
+    * updateAt  **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
-    * sensitiveWordsShielding  是否隐藏敏感词
+    * sensitiveWordsShielding  **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  配置文件名称。
-    * status  配置文件状态。
-    * confContent  配置文件内容。
+    * name  **参数解释**： 配置文件名称。 **取值范围**： 不涉及
+    * status  **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
+    * confContent  **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     * setting  setting
-    * updateAt  更新时间。
+    * updateAt  **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     * desc  **参数解释**： 配置文件描述。 **取值范围**： 长度不超过128个字符。
-    * sensitiveWordsShielding  是否隐藏敏感词
+    * sensitiveWordsShielding  **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  配置文件名称。
+    *  **参数解释**： 配置文件名称。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 配置文件名称。
+    * @param string|null $name **参数解释**： 配置文件名称。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -264,7 +264,7 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  配置文件状态。
+    *  **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
     *
     * @return string|null
     */
@@ -276,7 +276,7 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 配置文件状态。
+    * @param string|null $status **参数解释**： 配置文件状态。 **取值范围**： - checking：正在检查中。 - available：可用。 - unavailable：不可用。 - starting：正开始。 - working：工作中。 - stopping：正在停止。 - stopped：已经停止。 - restoring：正在回滚。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Gets confContent
-    *  配置文件内容。
+    *  **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Sets confContent
     *
-    * @param string|null $confContent 配置文件内容。
+    * @param string|null $confContent **参数解释**： 配置文件内容。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class Confs implements ModelInterface, ArrayAccess
     * Gets setting
     *  setting
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\Setting|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\ListConfsRespConfsSetting|null
     */
     public function getSetting()
     {
@@ -324,7 +324,7 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Sets setting
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\Setting|null $setting setting
+    * @param \HuaweiCloud\SDK\Css\V1\Model\ListConfsRespConfsSetting|null $setting setting
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateAt
-    *  更新时间。
+    *  **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Sets updateAt
     *
-    * @param string|null $updateAt 更新时间。
+    * @param string|null $updateAt **参数解释**： 更新时间，格式：yyyy-MM-dd'T'HH:mm:ss。 **取值范围**： 不涉及
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class Confs implements ModelInterface, ArrayAccess
 
     /**
     * Gets sensitiveWordsShielding
-    *  是否隐藏敏感词
+    *  **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @return bool|null
     */
@@ -396,7 +396,7 @@ class Confs implements ModelInterface, ArrayAccess
     /**
     * Sets sensitiveWordsShielding
     *
-    * @param bool|null $sensitiveWordsShielding 是否隐藏敏感词
+    * @param bool|null $sensitiveWordsShielding **参数解释**： 是否隐藏敏感词。 **取值范围**： - true：隐藏敏感词。 - false：未隐藏敏感词。
     *
     * @return $this
     */

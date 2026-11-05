@@ -27,7 +27,7 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'certsRecords' => '\HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore',
+            'certsRecords' => '\HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore[]',
             'totalSize' => 'int'
     ];
 
@@ -188,7 +188,7 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     * Gets certsRecords
     *  certsRecords
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore[]|null
     */
     public function getCertsRecords()
     {
@@ -198,7 +198,7 @@ class ListCertsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets certsRecords
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore|null $certsRecords certsRecords
+    * @param \HuaweiCloud\SDK\Css\V1\Model\CertsRecordsDatastore[]|null $certsRecords certsRecords
     *
     * @return $this
     */

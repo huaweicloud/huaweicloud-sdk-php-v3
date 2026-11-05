@@ -60,9 +60,6 @@ class ModelArtsClient extends Client
         if ($localVarParams['workspaceId'] !== null) {
             $queryParams['workspaceId'] = $localVarParams['workspaceId'];
         }
-        if ($localVarParams['workspaceId'] !== null) {
-            $queryParams['workspaceId'] = $localVarParams['workspaceId'];
-        }
         if ($localVarParams['eventId'] !== null) {
             $pathParams['event_id'] = $localVarParams['eventId'];
         }
@@ -493,6 +490,68 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\BatchCreatePoolTagsResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\BatchCreatePoolTagsRequest');
+    }
+
+    /**
+     * 一键开通依赖服务
+     *
+     * 一键开通依赖服务接口用于一键开通AOM、CCE、CES、SWR-EE等依赖服务。该接口适用于以下场景：当用户首次使用ModelArts服务或需要批量开通相关依赖服务时，可通过此接口一键完成多个依赖服务的开通操作。使用该接口的前提条件是用户已登录系统、具有相应操作权限且账号余额充足。执行一键开通后，系统将自动为用户开通指定的依赖服务，服务开通后即可正常使用。若用户无权限操作、账号余额不足或服务开通失败，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateServiceOpens($request)
+    {
+        return $this->batchCreateServiceOpensWithHttpInfo($request);
+    }
+
+    public function batchCreateServiceOpensWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/services/batch-open';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\BatchCreateServiceOpensResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\BatchCreateServiceOpensRequest');
     }
 
     /**
@@ -2318,6 +2377,68 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateAlgorithmVersionToGalleryResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateAlgorithmVersionToGalleryRequest');
+    }
+
+    /**
+     * 一键授权或重置授权
+     *
+     * 一键授权或重置授权接口用于一键创建ModelArts委托授权或重置已有委托。该接口适用于以下场景：当用户首次使用ModelArts服务需要开通委托授权时，或当现有委托授权出现异常、过期需要重新配置时，可通过此接口一键完成授权操作。使用该接口的前提条件是用户已登录系统且具有相应的操作权限。执行一键授权后，系统将自动创建委托授权关系；执行重置操作后，原有委托将被替换为新的授权。若用户无权限操作或服务异常，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAuthGrant($request)
+    {
+        return $this->createAuthGrantWithHttpInfo($request);
+    }
+
+    public function createAuthGrantWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/auth/grant';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateAuthGrantResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\CreateAuthGrantRequest');
     }
 
     /**
@@ -7383,6 +7504,18 @@ class ModelArtsClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json;charset=UTF-8', 'application/json']
@@ -7503,6 +7636,18 @@ class ModelArtsClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
@@ -9654,6 +9799,68 @@ class ModelArtsClient extends Client
     }
 
     /**
+     * 查询依赖服务开通状态
+     *
+     * 查询依赖服务开通状态接口用于查询AOM、CCE、CES、SWR-EE等依赖服务的开通状态。该接口适用于以下场景：当用户需要确认ModelArts相关依赖服务是否已开通时，可通过此接口批量查询各依赖服务的当前状态。使用该接口的前提条件是用户已登录系统且具有相应的查询权限。查询结果将返回各依赖服务的开通状态（已开通或未开通），若用户无权限查询或服务异常，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listServiceStatuses($request)
+    {
+        return $this->listServiceStatusesWithHttpInfo($request);
+    }
+
+    public function listServiceStatusesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/services/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['serviceCodes'] !== null) {
+            $queryParams['service_codes'] = $localVarParams['serviceCodes'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListServiceStatusesResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ListServiceStatusesRequest');
+    }
+
+    /**
      * 查询训练实验列表
      *
      * 查询训练实验列表接口用于获取ModelArts平台上用户已创建的训练实验的列表。
@@ -10629,6 +10836,71 @@ class ModelArtsClient extends Client
     }
 
     /**
+     * 更新资源池节点自定义配置
+     *
+     * 更新资源池节点自定义配置接口用于修改资源池节点的个性化设置。该接口适用于以下场景：当资源池节点需要调整资源分配策略、更新性能参数、创建/删除镜像预热任务或变更其他自定义配置时，用户可通过此接口更新指定资源池节点的自定义配置信息。使用该接口的前提条件是资源池节点已存在且用户具有管理员权限。更新操作完成后，资源池节点的自定义配置将被更新并生效，相关变更将被记录以便后续查询。若资源池节点不存在、用户无权限操作或配置参数格式不正确，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function patchNodeConfig($request)
+    {
+        return $this->patchNodeConfigWithHttpInfo($request);
+    }
+
+    public function patchNodeConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/pools/{pool_name}/node-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['poolName'] !== null) {
+            $pathParams['pool_name'] = $localVarParams['poolName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PATCH',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\PatchNodeConfigResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\PatchNodeConfigRequest');
+    }
+
+    /**
      * 更新节点池
      *
      * 更新节点池接口用于修改指定节点池的配置信息。该接口适用于以下场景：当需要扩展节点池容量、调整节点规格、优化资源分配或修复节点池配置时，用户可通过此接口更新节点池的相关信息。使用该接口的前提条件是节点池已存在且用户具有管理员权限。更新操作完成后，节点池的配置将被更新，包括节点数量、规格、网络配置等参数。若节点池不存在、用户无权限操作或配置参数错误，接口将返回相应的错误信息。
@@ -11276,6 +11548,65 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ShowAlgorithmByUuidResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ShowAlgorithmByUuidRequest');
+    }
+
+    /**
+     * 查询委托授权状态
+     *
+     * 查询委托授权状态接口用于查询ModelArts服务的委托授权是否已开通。该接口适用于以下场景：当用户需要确认是否已开通ModelArts委托授权以进行后续操作（如模型训练、部署等）时，可通过此接口查询当前授权状态。使用该接口的前提条件是用户已登录系统且具有相应的查询权限。查询结果将返回委托授权的当前状态（已开通或未开通），若用户无权限查询或服务异常，接口将返回相应的错误信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAuthGrant($request)
+    {
+        return $this->showAuthGrantWithHttpInfo($request);
+    }
+
+    public function showAuthGrantWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/auth/grant';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ShowAuthGrantResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ShowAuthGrantRequest');
     }
 
     /**
@@ -16106,6 +16437,68 @@ class ModelArtsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\ValidateTrainingJobNameResponse',
             $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\ValidateTrainingJobNameRequest');
+    }
+
+    /**
+     * 校验委托使用权限
+     *
+     * 校验当前用户是否有权使用指定委托，仅支持委托给ModelArts服务的委托，通过PDP5的iam:agencies:pass鉴权判定
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function verifyAgency($request)
+    {
+        return $this->verifyAgencyWithHttpInfo($request);
+    }
+
+    public function verifyAgencyWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/atelier/agency/verify';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ModelArts\V1\Model\VerifyAgencyResponse',
+            $requestType='\HuaweiCloud\SDK\ModelArts\V1\Model\VerifyAgencyRequest');
     }
 
     /**

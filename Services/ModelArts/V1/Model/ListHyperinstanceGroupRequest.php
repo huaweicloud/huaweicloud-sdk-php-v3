@@ -20,20 +20,34 @@ class ListHyperinstanceGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * limit  **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    * offset  **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    * sortKey  **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    * sortDir  **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'offset' => 'int',
+            'sortKey' => 'string',
+            'sortDir' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * limit  **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    * offset  **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    * sortKey  **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    * sortDir  **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'offset' => 'int32',
+        'sortKey' => null,
+        'sortDir' => null
     ];
 
     /**
@@ -59,29 +73,50 @@ class ListHyperinstanceGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * limit  **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    * offset  **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    * sortKey  **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    * sortDir  **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'offset' => 'offset',
+            'sortKey' => 'sort_key',
+            'sortDir' => 'sort_dir'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * limit  **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    * offset  **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    * sortKey  **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    * sortDir  **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
+            'sortKey' => 'setSortKey',
+            'sortDir' => 'setSortDir'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * limit  **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    * offset  **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    * sortKey  **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    * sortDir  **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
+            'sortKey' => 'getSortKey',
+            'sortDir' => 'getSortDir'
     ];
 
     /**
@@ -142,6 +177,10 @@ class ListHyperinstanceGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
+        $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
     }
 
     /**
@@ -164,6 +203,102 @@ class ListHyperinstanceGroupRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**：每一页显示实例的数量。 **约束限制**：不涉及。 **取值范围**：[10,20,50]。 **默认取值**：10。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**：分页记录的起始位置偏移量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets sortKey
+    *  **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getSortKey()
+    {
+        return $this->container['sortKey'];
+    }
+
+    /**
+    * Sets sortKey
+    *
+    * @param string|null $sortKey **参数解释**：排序的字段，多个字段使用(“,”)逗号分隔。 **约束限制**：不涉及。 **取值范围**：长度限制为128个字符，支持大小写字母、数字、中划线、下划线和逗号。 **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setSortKey($sortKey)
+    {
+        $this->container['sortKey'] = $sortKey;
+        return $this;
+    }
+
+    /**
+    * Gets sortDir
+    *  **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
+    *
+    * @return string|null
+    */
+    public function getSortDir()
+    {
+        return $this->container['sortDir'];
+    }
+
+    /**
+    * Sets sortDir
+    *
+    * @param string|null $sortDir **参数解释**：实例排序方式。 **约束限制**：不涉及。 **取值范围**： - ASC：升序 - DESC：降序  **默认取值**：DESC。
+    *
+    * @return $this
+    */
+    public function setSortDir($sortDir)
+    {
+        $this->container['sortDir'] = $sortDir;
+        return $this;
     }
 
     /**

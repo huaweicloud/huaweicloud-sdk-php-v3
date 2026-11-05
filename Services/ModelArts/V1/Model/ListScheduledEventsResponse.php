@@ -21,7 +21,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * events  **参数解释**：计划事件列表
+    * events  '**参数解释**：计划事件列表'。
     * count  **参数解释**：计划事件总数。 **取值范围**：不涉及。
     * xRequestId  xRequestId
     *
@@ -35,7 +35,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * events  **参数解释**：计划事件列表
+    * events  '**参数解释**：计划事件列表'。
     * count  **参数解释**：计划事件总数。 **取值范围**：不涉及。
     * xRequestId  xRequestId
     *
@@ -70,7 +70,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * events  **参数解释**：计划事件列表
+    * events  '**参数解释**：计划事件列表'。
     * count  **参数解释**：计划事件总数。 **取值范围**：不涉及。
     * xRequestId  xRequestId
     *
@@ -84,7 +84,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * events  **参数解释**：计划事件列表
+    * events  '**参数解释**：计划事件列表'。
     * count  **参数解释**：计划事件总数。 **取值范围**：不涉及。
     * xRequestId  xRequestId
     *
@@ -98,7 +98,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * events  **参数解释**：计划事件列表
+    * events  '**参数解释**：计划事件列表'。
     * count  **参数解释**：计划事件总数。 **取值范围**：不涉及。
     * xRequestId  xRequestId
     *
@@ -203,7 +203,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets events
-    *  **参数解释**：计划事件列表
+    *  '**参数解释**：计划事件列表'。
     *
     * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduledEvent[]|null
     */
@@ -215,7 +215,7 @@ class ListScheduledEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets events
     *
-    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduledEvent[]|null $events **参数解释**：计划事件列表
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ScheduledEvent[]|null $events '**参数解释**：计划事件列表'。
     *
     * @return $this
     */

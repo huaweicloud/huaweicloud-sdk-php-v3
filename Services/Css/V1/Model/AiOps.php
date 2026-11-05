@@ -39,7 +39,7 @@ class AiOps implements ModelInterface, ArrayAccess
             'name' => 'string',
             'desc' => 'string',
             'status' => 'int',
-            'createTime' => '\DateTime',
+            'createTime' => 'int',
             'summary' => '\HuaweiCloud\SDK\Css\V1\Model\SummaryInfo',
             'taskRisks' => '\HuaweiCloud\SDK\Css\V1\Model\AiOpsRiskObject[]'
     ];
@@ -65,7 +65,7 @@ class AiOps implements ModelInterface, ArrayAccess
         'name' => null,
         'desc' => null,
         'status' => null,
-        'createTime' => 'date',
+        'createTime' => 'int32',
         'summary' => null,
         'taskRisks' => null
     ];
@@ -408,7 +408,7 @@ class AiOps implements ModelInterface, ArrayAccess
     * Gets createTime
     *  **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     *
-    * @return \DateTime|null
+    * @return int|null
     */
     public function getCreateTime()
     {
@@ -418,7 +418,7 @@ class AiOps implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
+    * @param int|null $createTime **参数解释**： 集群风险检测任务创建时间。 **取值范围**： 格式：Unix时间戳格式。
     *
     * @return $this
     */

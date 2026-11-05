@@ -34,8 +34,8 @@ class GetHyperinstanceGroupResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'npuCountLimit' => 'string',
-            'npuCount' => 'string',
+            'npuCountLimit' => 'int',
+            'npuCount' => 'int',
             'hyperinstanceClusterId' => 'string',
             'createdAt' => 'int',
             'updatedAt' => 'int'
@@ -56,8 +56,8 @@ class GetHyperinstanceGroupResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'npuCountLimit' => null,
-        'npuCount' => null,
+        'npuCountLimit' => 'int32',
+        'npuCount' => 'int32',
         'hyperinstanceClusterId' => null,
         'createdAt' => 'int64',
         'updatedAt' => 'int64'
@@ -291,7 +291,7 @@ class GetHyperinstanceGroupResponse implements ModelInterface, ArrayAccess
     * Gets npuCountLimit
     *  **参数解释**：npu数量限制。 **默认取值**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getNpuCountLimit()
     {
@@ -301,7 +301,7 @@ class GetHyperinstanceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets npuCountLimit
     *
-    * @param string|null $npuCountLimit **参数解释**：npu数量限制。 **默认取值**：不涉及。
+    * @param int|null $npuCountLimit **参数解释**：npu数量限制。 **默认取值**：不涉及。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class GetHyperinstanceGroupResponse implements ModelInterface, ArrayAccess
     * Gets npuCount
     *  **参数解释**：npu数量。 **默认取值**：不涉及。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getNpuCount()
     {
@@ -325,7 +325,7 @@ class GetHyperinstanceGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets npuCount
     *
-    * @param string|null $npuCount **参数解释**：npu数量。 **默认取值**：不涉及。
+    * @param int|null $npuCount **参数解释**：npu数量。 **默认取值**：不涉及。
     *
     * @return $this
     */

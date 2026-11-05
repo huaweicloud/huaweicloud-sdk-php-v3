@@ -27,7 +27,7 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'confs' => '\HuaweiCloud\SDK\Css\V1\Model\Confs[]',
+            'confs' => '\HuaweiCloud\SDK\Css\V1\Model\ListConfsRespConfs[]',
             'totalSize' => 'int'
     ];
 
@@ -188,7 +188,7 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     * Gets confs
     *  配置文件列表。
     *
-    * @return \HuaweiCloud\SDK\Css\V1\Model\Confs[]|null
+    * @return \HuaweiCloud\SDK\Css\V1\Model\ListConfsRespConfs[]|null
     */
     public function getConfs()
     {
@@ -198,7 +198,7 @@ class ListConfsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets confs
     *
-    * @param \HuaweiCloud\SDK\Css\V1\Model\Confs[]|null $confs 配置文件列表。
+    * @param \HuaweiCloud\SDK\Css\V1\Model\ListConfsRespConfs[]|null $confs 配置文件列表。
     *
     * @return $this
     */

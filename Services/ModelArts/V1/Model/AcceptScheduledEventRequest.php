@@ -20,7 +20,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     * workspaceId  **参数解释**：工作空间ID，默认值为0，取值于查询workspaces列表的接口的id字段。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度小于63个字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * body  body
     *
@@ -34,7 +34,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     * workspaceId  **参数解释**：工作空间ID，默认值为0，取值于查询workspaces列表的接口的id字段。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度小于63个字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * body  body
     *
@@ -69,7 +69,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     * workspaceId  **参数解释**：工作空间ID，默认值为0，取值于查询workspaces列表的接口的id字段。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度小于63个字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * body  body
     *
@@ -83,7 +83,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     * workspaceId  **参数解释**：工作空间ID，默认值为0，取值于查询workspaces列表的接口的id字段。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度小于63个字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * body  body
     *
@@ -97,7 +97,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    * eventId  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     * workspaceId  **参数解释**：工作空间ID，默认值为0，取值于查询workspaces列表的接口的id字段。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度小于63个字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * body  body
     *
@@ -199,7 +199,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventId
-    *  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    *  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class AcceptScheduledEventRequest implements ModelInterface, ArrayAccess
     /**
     * Sets eventId
     *
-    * @param string $eventId **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 **约束限制**：不涉及。 **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63 **默认取值**：不涉及。
+    * @param string $eventId **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。  **约束限制**：不涉及。  **取值范围**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **默认取值**：不涉及。
     *
     * @return $this
     */

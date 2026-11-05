@@ -22,24 +22,28 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    * systemConfig  systemConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'elasticsearchYml' => 'object',
-            'kibanaYml' => 'object'
+            'kibanaYml' => 'object',
+            'systemConfig' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    * systemConfig  systemConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'elasticsearchYml' => null,
-        'kibanaYml' => null
+        'kibanaYml' => null,
+        'systemConfig' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     * and the value is the original name
     * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    * systemConfig  systemConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'elasticsearchYml' => 'elasticsearch.yml',
-            'kibanaYml' => 'kibana.yml'
+            'kibanaYml' => 'kibana.yml',
+            'systemConfig' => 'system.config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    * systemConfig  systemConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'elasticsearchYml' => 'setElasticsearchYml',
-            'kibanaYml' => 'setKibanaYml'
+            'kibanaYml' => 'setKibanaYml',
+            'systemConfig' => 'setSystemConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * elasticsearchYml  **参数解释**： 参数配置列表，值为需要修改的json数据，OpenSearch集群也使用此参数，即修改opensearch.yml时，这里也是填写elasticsearch.yml。 **约束限制**： 不涉及
     * kibanaYml  **参数解释**： 参数配置列表，值为需要修改的json数据。OpenSearch集群也使用此参数，即修改opensearch_dashboards.yml时，这里也是填写kibana.yml。 **约束限制**： 不涉及
+    * systemConfig  systemConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'elasticsearchYml' => 'getElasticsearchYml',
-            'kibanaYml' => 'getKibanaYml'
+            'kibanaYml' => 'getKibanaYml',
+            'systemConfig' => 'getSystemConfig'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     {
         $this->container['elasticsearchYml'] = isset($data['elasticsearchYml']) ? $data['elasticsearchYml'] : null;
         $this->container['kibanaYml'] = isset($data['kibanaYml']) ? $data['kibanaYml'] : null;
+        $this->container['systemConfig'] = isset($data['systemConfig']) ? $data['systemConfig'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class UpdateYmlsReqEditModify implements ModelInterface, ArrayAccess
     public function setKibanaYml($kibanaYml)
     {
         $this->container['kibanaYml'] = $kibanaYml;
+        return $this;
+    }
+
+    /**
+    * Gets systemConfig
+    *  systemConfig
+    *
+    * @return object|null
+    */
+    public function getSystemConfig()
+    {
+        return $this->container['systemConfig'];
+    }
+
+    /**
+    * Sets systemConfig
+    *
+    * @param object|null $systemConfig systemConfig
+    *
+    * @return $this
+    */
+    public function setSystemConfig($systemConfig)
+    {
+        $this->container['systemConfig'] = $systemConfig;
         return $this;
     }
 

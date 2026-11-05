@@ -21,89 +21,109 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **取值范围**：不涉及。
-    * catalog  **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
-    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * catalog  **参数解释**：事件分类。 **取值范围**：不涉及。
+    * isHyperNode  **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
+    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
     * description  **参数解释**：对计划事件的描述信息。系统自动生成。 **取值范围**：不涉及。
-    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
-    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    * instanceId  **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    * publishTime  **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * startTime  **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
-    * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
-    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
+    * publishTime  **参数解释**：事件发布时间。 **取值范围**：不涉及。
+    * startTime  **参数解释**：事件开始时间。 **取值范围**：不涉及。
+    * finishTime  **参数解释**：事件完成时间。 **取值范围**：不涉及。
+    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * probeMsg  **参数解释**：提示信息。 **取值范围**：不涉及。
+    * executeOptions  executeOptions
+    * redeployType  **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
+    * autoRecoveryCheckTime  **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * nodes  **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    * instanceId  **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    * underLyingInstanceId  **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
+    * flavorSupportRedeploy  **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    * jobProgress  **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'catalog' => 'string',
+            'isHyperNode' => 'string',
             'type' => 'string',
             'description' => 'string',
             'state' => 'string',
-            'instanceType' => 'string',
-            'instanceId' => 'string',
-            'nodeName' => 'string',
-            'poolName' => 'string',
-            'poolDisplayName' => 'string',
             'publishTime' => 'string',
             'startTime' => 'string',
             'finishTime' => 'string',
             'notBefore' => 'string',
             'probeMsg' => 'string',
-            'jobProgress' => 'string',
+            'executeOptions' => '\HuaweiCloud\SDK\ModelArts\V1\Model\ExecuteOptions',
             'redeployType' => 'string[]',
-            'underLyingInstanceId' => 'string'
+            'autoRecoveryCheckTime' => 'string',
+            'nodes' => '\HuaweiCloud\SDK\ModelArts\V1\Model\NodeEvent[]',
+            'instanceId' => 'string',
+            'nodeName' => 'string',
+            'instanceType' => 'string',
+            'underLyingInstanceId' => 'string',
+            'flavorSupportRedeploy' => 'bool',
+            'poolName' => 'string',
+            'poolDisplayName' => 'string',
+            'jobProgress' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **取值范围**：不涉及。
-    * catalog  **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
-    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * catalog  **参数解释**：事件分类。 **取值范围**：不涉及。
+    * isHyperNode  **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
+    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
     * description  **参数解释**：对计划事件的描述信息。系统自动生成。 **取值范围**：不涉及。
-    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
-    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    * instanceId  **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    * publishTime  **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * startTime  **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
-    * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
-    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
+    * publishTime  **参数解释**：事件发布时间。 **取值范围**：不涉及。
+    * startTime  **参数解释**：事件开始时间。 **取值范围**：不涉及。
+    * finishTime  **参数解释**：事件完成时间。 **取值范围**：不涉及。
+    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * probeMsg  **参数解释**：提示信息。 **取值范围**：不涉及。
+    * executeOptions  executeOptions
+    * redeployType  **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
+    * autoRecoveryCheckTime  **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * nodes  **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    * instanceId  **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    * underLyingInstanceId  **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
+    * flavorSupportRedeploy  **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    * jobProgress  **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'catalog' => null,
+        'isHyperNode' => null,
         'type' => null,
         'description' => null,
         'state' => null,
-        'instanceType' => null,
-        'instanceId' => null,
-        'nodeName' => null,
-        'poolName' => null,
-        'poolDisplayName' => null,
         'publishTime' => null,
         'startTime' => null,
         'finishTime' => null,
         'notBefore' => null,
         'probeMsg' => null,
-        'jobProgress' => null,
+        'executeOptions' => null,
         'redeployType' => null,
-        'underLyingInstanceId' => null
+        'autoRecoveryCheckTime' => null,
+        'nodes' => null,
+        'instanceId' => null,
+        'nodeName' => null,
+        'instanceType' => null,
+        'underLyingInstanceId' => null,
+        'flavorSupportRedeploy' => null,
+        'poolName' => null,
+        'poolDisplayName' => null,
+        'jobProgress' => null
     ];
 
     /**
@@ -130,133 +150,163 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **取值范围**：不涉及。
-    * catalog  **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
-    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * catalog  **参数解释**：事件分类。 **取值范围**：不涉及。
+    * isHyperNode  **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
+    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
     * description  **参数解释**：对计划事件的描述信息。系统自动生成。 **取值范围**：不涉及。
-    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
-    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    * instanceId  **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    * publishTime  **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * startTime  **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
-    * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
-    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
+    * publishTime  **参数解释**：事件发布时间。 **取值范围**：不涉及。
+    * startTime  **参数解释**：事件开始时间。 **取值范围**：不涉及。
+    * finishTime  **参数解释**：事件完成时间。 **取值范围**：不涉及。
+    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * probeMsg  **参数解释**：提示信息。 **取值范围**：不涉及。
+    * executeOptions  executeOptions
+    * redeployType  **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
+    * autoRecoveryCheckTime  **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * nodes  **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    * instanceId  **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    * underLyingInstanceId  **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
+    * flavorSupportRedeploy  **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    * jobProgress  **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'catalog' => 'catalog',
+            'isHyperNode' => 'isHyperNode',
             'type' => 'type',
             'description' => 'description',
             'state' => 'state',
-            'instanceType' => 'instanceType',
-            'instanceId' => 'instanceId',
-            'nodeName' => 'nodeName',
-            'poolName' => 'poolName',
-            'poolDisplayName' => 'poolDisplayName',
             'publishTime' => 'publishTime',
             'startTime' => 'startTime',
             'finishTime' => 'finishTime',
             'notBefore' => 'notBefore',
             'probeMsg' => 'probeMsg',
-            'jobProgress' => 'jobProgress',
+            'executeOptions' => 'executeOptions',
             'redeployType' => 'redeployType',
-            'underLyingInstanceId' => 'underLyingInstanceId'
+            'autoRecoveryCheckTime' => 'autoRecoveryCheckTime',
+            'nodes' => 'nodes',
+            'instanceId' => 'instanceId',
+            'nodeName' => 'nodeName',
+            'instanceType' => 'instanceType',
+            'underLyingInstanceId' => 'underLyingInstanceId',
+            'flavorSupportRedeploy' => 'flavorSupportRedeploy',
+            'poolName' => 'poolName',
+            'poolDisplayName' => 'poolDisplayName',
+            'jobProgress' => 'jobProgress'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **取值范围**：不涉及。
-    * catalog  **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
-    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * catalog  **参数解释**：事件分类。 **取值范围**：不涉及。
+    * isHyperNode  **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
+    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
     * description  **参数解释**：对计划事件的描述信息。系统自动生成。 **取值范围**：不涉及。
-    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
-    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    * instanceId  **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    * publishTime  **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * startTime  **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
-    * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
-    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
+    * publishTime  **参数解释**：事件发布时间。 **取值范围**：不涉及。
+    * startTime  **参数解释**：事件开始时间。 **取值范围**：不涉及。
+    * finishTime  **参数解释**：事件完成时间。 **取值范围**：不涉及。
+    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * probeMsg  **参数解释**：提示信息。 **取值范围**：不涉及。
+    * executeOptions  executeOptions
+    * redeployType  **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
+    * autoRecoveryCheckTime  **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * nodes  **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    * instanceId  **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    * underLyingInstanceId  **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
+    * flavorSupportRedeploy  **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    * jobProgress  **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'catalog' => 'setCatalog',
+            'isHyperNode' => 'setIsHyperNode',
             'type' => 'setType',
             'description' => 'setDescription',
             'state' => 'setState',
-            'instanceType' => 'setInstanceType',
-            'instanceId' => 'setInstanceId',
-            'nodeName' => 'setNodeName',
-            'poolName' => 'setPoolName',
-            'poolDisplayName' => 'setPoolDisplayName',
             'publishTime' => 'setPublishTime',
             'startTime' => 'setStartTime',
             'finishTime' => 'setFinishTime',
             'notBefore' => 'setNotBefore',
             'probeMsg' => 'setProbeMsg',
-            'jobProgress' => 'setJobProgress',
+            'executeOptions' => 'setExecuteOptions',
             'redeployType' => 'setRedeployType',
-            'underLyingInstanceId' => 'setUnderLyingInstanceId'
+            'autoRecoveryCheckTime' => 'setAutoRecoveryCheckTime',
+            'nodes' => 'setNodes',
+            'instanceId' => 'setInstanceId',
+            'nodeName' => 'setNodeName',
+            'instanceType' => 'setInstanceType',
+            'underLyingInstanceId' => 'setUnderLyingInstanceId',
+            'flavorSupportRedeploy' => 'setFlavorSupportRedeploy',
+            'poolName' => 'setPoolName',
+            'poolDisplayName' => 'setPoolDisplayName',
+            'jobProgress' => 'setJobProgress'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  **参数解释**：计划事件ID，取值查询计划事件列表接口的event_id字段。 系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63。 **取值范围**：不涉及。
-    * catalog  **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
-    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * catalog  **参数解释**：事件分类。 **取值范围**：不涉及。
+    * isHyperNode  **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
+    * type  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
     * description  **参数解释**：对计划事件的描述信息。系统自动生成。 **取值范围**：不涉及。
-    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
-    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    * instanceId  **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    * publishTime  **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * startTime  **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * finishTime  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
-    * probeMsg  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * jobProgress  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * redeployType  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
-    * underLyingInstanceId  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    * state  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
+    * publishTime  **参数解释**：事件发布时间。 **取值范围**：不涉及。
+    * startTime  **参数解释**：事件开始时间。 **取值范围**：不涉及。
+    * finishTime  **参数解释**：事件完成时间。 **取值范围**：不涉及。
+    * notBefore  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * probeMsg  **参数解释**：提示信息。 **取值范围**：不涉及。
+    * executeOptions  executeOptions
+    * redeployType  **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
+    * autoRecoveryCheckTime  **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    * nodes  **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    * instanceId  **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    * nodeName  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    * instanceType  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    * underLyingInstanceId  **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
+    * flavorSupportRedeploy  **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    * poolName  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    * poolDisplayName  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    * jobProgress  **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'catalog' => 'getCatalog',
+            'isHyperNode' => 'getIsHyperNode',
             'type' => 'getType',
             'description' => 'getDescription',
             'state' => 'getState',
-            'instanceType' => 'getInstanceType',
-            'instanceId' => 'getInstanceId',
-            'nodeName' => 'getNodeName',
-            'poolName' => 'getPoolName',
-            'poolDisplayName' => 'getPoolDisplayName',
             'publishTime' => 'getPublishTime',
             'startTime' => 'getStartTime',
             'finishTime' => 'getFinishTime',
             'notBefore' => 'getNotBefore',
             'probeMsg' => 'getProbeMsg',
-            'jobProgress' => 'getJobProgress',
+            'executeOptions' => 'getExecuteOptions',
             'redeployType' => 'getRedeployType',
-            'underLyingInstanceId' => 'getUnderLyingInstanceId'
+            'autoRecoveryCheckTime' => 'getAutoRecoveryCheckTime',
+            'nodes' => 'getNodes',
+            'instanceId' => 'getInstanceId',
+            'nodeName' => 'getNodeName',
+            'instanceType' => 'getInstanceType',
+            'underLyingInstanceId' => 'getUnderLyingInstanceId',
+            'flavorSupportRedeploy' => 'getFlavorSupportRedeploy',
+            'poolName' => 'getPoolName',
+            'poolDisplayName' => 'getPoolDisplayName',
+            'jobProgress' => 'getJobProgress'
     ];
 
     /**
@@ -314,6 +364,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     const STATE_COMPLETED = 'completed';
     const STATE_FAILED = 'failed';
     const STATE_CANCELED = 'canceled';
+    const STATE_PART_COMPLETED = 'part-completed';
     const INSTANCE_TYPE_DEVSERVER = 'devserver';
     const INSTANCE_TYPE_LITE_CLUSTER = 'lite-cluster';
     const INSTANCE_TYPE_STANDARD = 'standard';
@@ -364,6 +415,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
             self::STATE_COMPLETED,
             self::STATE_FAILED,
             self::STATE_CANCELED,
+            self::STATE_PART_COMPLETED,
         ];
     }
 
@@ -399,22 +451,27 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['catalog'] = isset($data['catalog']) ? $data['catalog'] : null;
+        $this->container['isHyperNode'] = isset($data['isHyperNode']) ? $data['isHyperNode'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['nodeName'] = isset($data['nodeName']) ? $data['nodeName'] : null;
-        $this->container['poolName'] = isset($data['poolName']) ? $data['poolName'] : null;
-        $this->container['poolDisplayName'] = isset($data['poolDisplayName']) ? $data['poolDisplayName'] : null;
         $this->container['publishTime'] = isset($data['publishTime']) ? $data['publishTime'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['finishTime'] = isset($data['finishTime']) ? $data['finishTime'] : null;
         $this->container['notBefore'] = isset($data['notBefore']) ? $data['notBefore'] : null;
         $this->container['probeMsg'] = isset($data['probeMsg']) ? $data['probeMsg'] : null;
-        $this->container['jobProgress'] = isset($data['jobProgress']) ? $data['jobProgress'] : null;
+        $this->container['executeOptions'] = isset($data['executeOptions']) ? $data['executeOptions'] : null;
         $this->container['redeployType'] = isset($data['redeployType']) ? $data['redeployType'] : null;
+        $this->container['autoRecoveryCheckTime'] = isset($data['autoRecoveryCheckTime']) ? $data['autoRecoveryCheckTime'] : null;
+        $this->container['nodes'] = isset($data['nodes']) ? $data['nodes'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['nodeName'] = isset($data['nodeName']) ? $data['nodeName'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
         $this->container['underLyingInstanceId'] = isset($data['underLyingInstanceId']) ? $data['underLyingInstanceId'] : null;
+        $this->container['flavorSupportRedeploy'] = isset($data['flavorSupportRedeploy']) ? $data['flavorSupportRedeploy'] : null;
+        $this->container['poolName'] = isset($data['poolName']) ? $data['poolName'] : null;
+        $this->container['poolDisplayName'] = isset($data['poolDisplayName']) ? $data['poolDisplayName'] : null;
+        $this->container['jobProgress'] = isset($data['jobProgress']) ? $data['jobProgress'] : null;
     }
 
     /**
@@ -428,9 +485,6 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['catalog'] === null) {
-            $invalidProperties[] = "'catalog' can't be null";
-        }
             $allowedValues = $this->getCatalogAllowableValues();
                 if (!is_null($this->container['catalog']) && !in_array($this->container['catalog'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -439,9 +493,6 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -461,6 +512,18 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['publishTime'] === null) {
+            $invalidProperties[] = "'publishTime' can't be null";
+        }
+        if ($this->container['redeployType'] === null) {
+            $invalidProperties[] = "'redeployType' can't be null";
+        }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['nodeName'] === null) {
+            $invalidProperties[] = "'nodeName' can't be null";
+        }
         if ($this->container['instanceType'] === null) {
             $invalidProperties[] = "'instanceType' can't be null";
         }
@@ -472,18 +535,6 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
-        if ($this->container['nodeName'] === null) {
-            $invalidProperties[] = "'nodeName' can't be null";
-        }
-        if ($this->container['publishTime'] === null) {
-            $invalidProperties[] = "'publishTime' can't be null";
-        }
-        if ($this->container['redeployType'] === null) {
-            $invalidProperties[] = "'redeployType' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -524,9 +575,9 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalog
-    *  **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
+    *  **参数解释**：事件分类。 **取值范围**：不涉及。
     *
-    * @return string
+    * @return string|null
     */
     public function getCatalog()
     {
@@ -536,7 +587,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets catalog
     *
-    * @param string $catalog **参数解释**：事件分类。 **取值范围**：可选值如下： - hardware：硬件维修。 - software：软件维修。
+    * @param string|null $catalog **参数解释**：事件分类。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -547,10 +598,34 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets type
-    *  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * Gets isHyperNode
+    *  **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
     *
-    * @return string
+    * @return string|null
+    */
+    public function getIsHyperNode()
+    {
+        return $this->container['isHyperNode'];
+    }
+
+    /**
+    * Sets isHyperNode
+    *
+    * @param string|null $isHyperNode **参数解释**：超节点标识。 **约束限制**：不涉及。 **取值范围**：true / false **默认取值**：false
+    *
+    * @return $this
+    */
+    public function setIsHyperNode($isHyperNode)
+    {
+        $this->container['isHyperNode'] = $isHyperNode;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
+    *
+    * @return string|null
     */
     public function getType()
     {
@@ -560,7 +635,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复。
+    * @param string|null $type **参数解释**：事件类型。 **取值范围**：可选值如下： - system-maintenance：系统维护 - localdisk-recovery：本地盘恢复 - node_reboot：节点重启 - operation-request：运维授权 - node_maintenance：超节点维护 - node_redeploy：超节点重部署 - node_localdisk_recovery 超节点本地盘恢复
     *
     * @return $this
     */
@@ -596,7 +671,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
+    *  **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
     *
     * @return string
     */
@@ -608,7 +683,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权, - scheduled: 待执行, - executing: 执行中, - completed: 执行成功 - failed: 执行失败 - canceled: 取消
+    * @param string $state **参数解释**：事件状态。 **取值范围**：可选择值如下： - inquiring: 待授权 - scheduled: 待执行 - executing: 执行中 - completed: 执行成功 - failed: 执行失败 - canceled: 取消 - part-completed: 部分成功
     *
     * @return $this
     */
@@ -619,128 +694,8 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceType
-    *  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    *
-    * @return string
-    */
-    public function getInstanceType()
-    {
-        return $this->container['instanceType'];
-    }
-
-    /**
-    * Sets instanceType
-    *
-    * @param string $instanceType **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点 - lite-cluster lite池 - standard 标准池
-    *
-    * @return $this
-    */
-    public function setInstanceType($instanceType)
-    {
-        $this->container['instanceType'] = $instanceType;
-        return $this;
-    }
-
-    /**
-    * Gets instanceId
-    *  **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    *
-    * @return string
-    */
-    public function getInstanceId()
-    {
-        return $this->container['instanceId'];
-    }
-
-    /**
-    * Sets instanceId
-    *
-    * @param string $instanceId **参数解释**：服务器ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。
-    *
-    * @return $this
-    */
-    public function setInstanceId($instanceId)
-    {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets nodeName
-    *  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    *
-    * @return string
-    */
-    public function getNodeName()
-    {
-        return $this->container['nodeName'];
-    }
-
-    /**
-    * Sets nodeName
-    *
-    * @param string $nodeName **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    *
-    * @return $this
-    */
-    public function setNodeName($nodeName)
-    {
-        $this->container['nodeName'] = $nodeName;
-        return $this;
-    }
-
-    /**
-    * Gets poolName
-    *  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    *
-    * @return string|null
-    */
-    public function getPoolName()
-    {
-        return $this->container['poolName'];
-    }
-
-    /**
-    * Sets poolName
-    *
-    * @param string|null $poolName **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。
-    *
-    * @return $this
-    */
-    public function setPoolName($poolName)
-    {
-        $this->container['poolName'] = $poolName;
-        return $this;
-    }
-
-    /**
-    * Gets poolDisplayName
-    *  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    *
-    * @return string|null
-    */
-    public function getPoolDisplayName()
-    {
-        return $this->container['poolDisplayName'];
-    }
-
-    /**
-    * Sets poolDisplayName
-    *
-    * @param string|null $poolDisplayName **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。
-    *
-    * @return $this
-    */
-    public function setPoolDisplayName($poolDisplayName)
-    {
-        $this->container['poolDisplayName'] = $poolDisplayName;
-        return $this;
-    }
-
-    /**
     * Gets publishTime
-    *  **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：事件发布时间。 **取值范围**：不涉及。
     *
     * @return string
     */
@@ -752,7 +707,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets publishTime
     *
-    * @param string $publishTime **参数解释**：事件发布时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string $publishTime **参数解释**：事件发布时间。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -764,7 +719,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：事件开始时间。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -776,7 +731,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime **参数解释**：事件开始时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string|null $startTime **参数解释**：事件开始时间。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -788,7 +743,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets finishTime
-    *  **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：事件完成时间。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -800,7 +755,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets finishTime
     *
-    * @param string|null $finishTime **参数解释**：事件完成时间。 **约束限制**：格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string|null $finishTime **参数解释**：事件完成时间。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -812,7 +767,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets notBefore
-    *  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
+    *  **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -824,7 +779,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets notBefore
     *
-    * @param string|null $notBefore **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **约束限制**：大于当前时间。 **取值范围**：不涉及。 **默认取值**：不填表示立即执行。
+    * @param string|null $notBefore **参数解释**：事件计划执行开始时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -836,7 +791,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
 
     /**
     * Gets probeMsg
-    *  **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：提示信息。 **取值范围**：不涉及。
     *
     * @return string|null
     */
@@ -848,7 +803,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets probeMsg
     *
-    * @param string|null $probeMsg **参数解释**：提示信息。 **约束限制**：系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，长度小于63字符。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string|null $probeMsg **参数解释**：提示信息。 **取值范围**：不涉及。
     *
     * @return $this
     */
@@ -859,32 +814,32 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets jobProgress
-    *  **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * Gets executeOptions
+    *  executeOptions
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\ExecuteOptions|null
     */
-    public function getJobProgress()
+    public function getExecuteOptions()
     {
-        return $this->container['jobProgress'];
+        return $this->container['executeOptions'];
     }
 
     /**
-    * Sets jobProgress
+    * Sets executeOptions
     *
-    * @param string|null $jobProgress **参数解释**：计划事件执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\ExecuteOptions|null $executeOptions executeOptions
     *
     * @return $this
     */
-    public function setJobProgress($jobProgress)
+    public function setExecuteOptions($executeOptions)
     {
-        $this->container['jobProgress'] = $jobProgress;
+        $this->container['executeOptions'] = $executeOptions;
         return $this;
     }
 
     /**
     * Gets redeployType
-    *  **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    *  **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
     *
     * @return string[]
     */
@@ -896,7 +851,7 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets redeployType
     *
-    * @param string[] $redeployType **参数解释**：节点的重部署类型。 **约束限制**：不涉及。 **取值范围**：可选值如下：- HARD：表示支持强制重部署, - SOFT：表示支持重部署 **默认取值**：不涉及。
+    * @param string[] $redeployType **参数解释**：节点重部署类型列表，标识该计划事件支持的重部署方式。 **约束限制**：不涉及。 **取值范围**：可选值如下： - SOFT：表示支持重部署 - HARD：表示支持强制重部署 **默认取值**：不涉及。
     *
     * @return $this
     */
@@ -907,8 +862,128 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets autoRecoveryCheckTime
+    *  **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getAutoRecoveryCheckTime()
+    {
+        return $this->container['autoRecoveryCheckTime'];
+    }
+
+    /**
+    * Sets autoRecoveryCheckTime
+    *
+    * @param string|null $autoRecoveryCheckTime **参数解释**：事件系统自动授权执行时间，格式为UTC时间字符串：2025-09-15T07:02:30Z。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setAutoRecoveryCheckTime($autoRecoveryCheckTime)
+    {
+        $this->container['autoRecoveryCheckTime'] = $autoRecoveryCheckTime;
+        return $this;
+    }
+
+    /**
+    * Gets nodes
+    *  **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\NodeEvent[]|null
+    */
+    public function getNodes()
+    {
+        return $this->container['nodes'];
+    }
+
+    /**
+    * Sets nodes
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\NodeEvent[]|null $nodes **参数解释**：事件关联节点信息列表。 **取值范围**：不涉及。
+    *
+    * @return $this
+    */
+    public function setNodes($nodes)
+    {
+        $this->container['nodes'] = $nodes;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    *
+    * @return string
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string $instanceId **参数解释**：节点ID。计算服务系统自动生成的实例ID，长度小于63。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].InstanceId。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets nodeName
+    *  **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    *
+    * @return string
+    */
+    public function getNodeName()
+    {
+        return $this->container['nodeName'];
+    }
+
+    /**
+    * Sets nodeName
+    *
+    * @param string $nodeName **参数解释**：节点名称，取值自节点详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].nodeName。
+    *
+    * @return $this
+    */
+    public function setNodeName($nodeName)
+    {
+        $this->container['nodeName'] = $nodeName;
+        return $this;
+    }
+
+    /**
+    * Gets instanceType
+    *  **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    *
+    * @return string
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string $instanceType **参数解释**：节点类型归属。 **取值范围**可选择值如下： - devserver：lite-server节点  - lite-cluster lite池  - standard 标准池 **约束限制**：待废弃: 请使用 nodes[0].instanceType。
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
     * Gets underLyingInstanceId
-    *  **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    *  **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
     *
     * @return string|null
     */
@@ -920,13 +995,109 @@ class ScheduledEvent implements ModelInterface, ArrayAccess
     /**
     * Sets underLyingInstanceId
     *
-    * @param string|null $underLyingInstanceId **参数解释**：snt9b23 场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：snt9b23 涉及, snt9b 不涉及。
+    * @param string|null $underLyingInstanceId **参数解释**：超节点场景对应ECS服务器ID。计算服务系统自动生成的实例ID，长度小于63。  **取值范围**：超节点涉及, snt9b 不涉及。 **约束限制**：待废弃: 请使用 nodes[0].underLyingInstanceId。
     *
     * @return $this
     */
     public function setUnderLyingInstanceId($underLyingInstanceId)
     {
         $this->container['underLyingInstanceId'] = $underLyingInstanceId;
+        return $this;
+    }
+
+    /**
+    * Gets flavorSupportRedeploy
+    *  **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    *
+    * @return bool|null
+    */
+    public function getFlavorSupportRedeploy()
+    {
+        return $this->container['flavorSupportRedeploy'];
+    }
+
+    /**
+    * Sets flavorSupportRedeploy
+    *
+    * @param bool|null $flavorSupportRedeploy **参数解释**：规格是否支持重部署。 **取值范围**：true/false。 **约束限制**：待废弃: 请使用 nodes[0].flavorSupportRedeploy。
+    *
+    * @return $this
+    */
+    public function setFlavorSupportRedeploy($flavorSupportRedeploy)
+    {
+        $this->container['flavorSupportRedeploy'] = $flavorSupportRedeploy;
+        return $this;
+    }
+
+    /**
+    * Gets poolName
+    *  **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    *
+    * @return string|null
+    */
+    public function getPoolName()
+    {
+        return $this->container['poolName'];
+    }
+
+    /**
+    * Sets poolName
+    *
+    * @param string|null $poolName **参数解释**：资源池名称, lite-cluster、standard才具有，取值自资源池详情的metadata.name字段。系统自动生成，只能以小写字母开头，数字、中划线组成，不能以中划线结尾，小于63个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolName。
+    *
+    * @return $this
+    */
+    public function setPoolName($poolName)
+    {
+        $this->container['poolName'] = $poolName;
+        return $this;
+    }
+
+    /**
+    * Gets poolDisplayName
+    *  **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    *
+    * @return string|null
+    */
+    public function getPoolDisplayName()
+    {
+        return $this->container['poolDisplayName'];
+    }
+
+    /**
+    * Sets poolDisplayName
+    *
+    * @param string|null $poolDisplayName **参数解释**：资源池对外显示的名称, lite-cluster、standard才具有，取值自资源池详情的metadata.labels字段。只能以小写字母开头，数字、中划线组成，不能以中划线结尾，且长度为[36-63]个字符。 **取值范围**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].poolDisplayName。
+    *
+    * @return $this
+    */
+    public function setPoolDisplayName($poolDisplayName)
+    {
+        $this->container['poolDisplayName'] = $poolDisplayName;
+        return $this;
+    }
+
+    /**
+    * Gets jobProgress
+    *  **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
+    *
+    * @return string|null
+    */
+    public function getJobProgress()
+    {
+        return $this->container['jobProgress'];
+    }
+
+    /**
+    * Sets jobProgress
+    *
+    * @param string|null $jobProgress **参数解释**：重部署执行的实时进度信息，系统自动生成。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。 **约束限制**：待废弃: 请使用 nodes[0].jobProgress。
+    *
+    * @return $this
+    */
+    public function setJobProgress($jobProgress)
+    {
+        $this->container['jobProgress'] = $jobProgress;
         return $this;
     }
 

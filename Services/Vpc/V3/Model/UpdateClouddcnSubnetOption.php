@@ -21,25 +21,29 @@ class UpdateClouddcnSubnetOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
+    * dnsNameservers  功能说明：子网关联的DNS服务器信息。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'dnsNameservers' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
+    * dnsNameservers  功能说明：子网关联的DNS服务器信息。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'description' => null
+        'description' => null,
+        'dnsNameservers' => null
     ];
 
     /**
@@ -66,37 +70,43 @@ class UpdateClouddcnSubnetOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
+    * dnsNameservers  功能说明：子网关联的DNS服务器信息。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'description' => 'description'
+            'description' => 'description',
+            'dnsNameservers' => 'dns_nameservers'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
+    * dnsNameservers  功能说明：子网关联的DNS服务器信息。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'dnsNameservers' => 'setDnsNameservers'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  功能说明：子网名称 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
-    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * description  功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
+    * dnsNameservers  功能说明：子网关联的DNS服务器信息。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'dnsNameservers' => 'getDnsNameservers'
     ];
 
     /**
@@ -159,6 +169,7 @@ class UpdateClouddcnSubnetOption implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['dnsNameservers'] = isset($data['dnsNameservers']) ? $data['dnsNameservers'] : null;
     }
 
     /**
@@ -209,7 +220,7 @@ class UpdateClouddcnSubnetOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    *  功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
     *
     * @return string|null
     */
@@ -221,13 +232,37 @@ class UpdateClouddcnSubnetOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 功能说明：子网描述 取值范围：0-255个字符，不能包含“<”和“>”。
+    * @param string|null $description 功能说明：子网描述 取值范围：0-255个字符，不能包含\"<\"和\">\"。
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets dnsNameservers
+    *  功能说明：子网关联的DNS服务器信息。
+    *
+    * @return string[]|null
+    */
+    public function getDnsNameservers()
+    {
+        return $this->container['dnsNameservers'];
+    }
+
+    /**
+    * Sets dnsNameservers
+    *
+    * @param string[]|null $dnsNameservers 功能说明：子网关联的DNS服务器信息。
+    *
+    * @return $this
+    */
+    public function setDnsNameservers($dnsNameservers)
+    {
+        $this->container['dnsNameservers'] = $dnsNameservers;
         return $this;
     }
 

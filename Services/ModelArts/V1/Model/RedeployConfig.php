@@ -20,20 +20,20 @@ class RedeployConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
-    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
+    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'autoFlow' => 'string'
+            'autoFlow' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
-    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
+    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RedeployConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
-    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
+    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RedeployConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
-    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
+    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RedeployConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
-    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    * type  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
+    * autoFlow  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
     * @var string[]
     */
@@ -141,8 +141,6 @@ class RedeployConfig implements ModelInterface, ArrayAccess
     }
     const TYPE_SOFT = 'SOFT';
     const TYPE_HARD = 'HARD';
-    const AUTO_FLOW_TRUE = 'true';
-    const AUTO_FLOW_FALSE = 'false';
     
 
     /**
@@ -155,19 +153,6 @@ class RedeployConfig implements ModelInterface, ArrayAccess
         return [
             self::TYPE_SOFT,
             self::TYPE_HARD,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAutoFlowAllowableValues()
-    {
-        return [
-            self::AUTO_FLOW_TRUE,
-            self::AUTO_FLOW_FALSE,
         ];
     }
 
@@ -207,14 +192,6 @@ class RedeployConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            $allowedValues = $this->getAutoFlowAllowableValues();
-                if (!is_null($this->container['autoFlow']) && !in_array($this->container['autoFlow'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'autoFlow', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -231,7 +208,7 @@ class RedeployConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
+    *  节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
     *
     * @return string|null
     */
@@ -243,7 +220,7 @@ class RedeployConfig implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作
+    * @param string|null $type 节点的重部署类型。若节点状态为不可用，将无法进行SOFT模式，只能进行HARD模式，HARD模式包含节点重置操作，会导致本地盘及云盘上的全部数据丢失，请谨慎操作。
     *
     * @return $this
     */
@@ -255,9 +232,9 @@ class RedeployConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoFlow
-    *  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    *  静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getAutoFlow()
     {
@@ -267,7 +244,7 @@ class RedeployConfig implements ModelInterface, ArrayAccess
     /**
     * Sets autoFlow
     *
-    * @param string|null $autoFlow 静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，并产生新的计划事件，该过程自动授权，无需二次授权
+    * @param bool|null $autoFlow 静默修复开关。开启autoFlow开关时，如重部署失败系统将自动流转至\"系统维护\"或发起\"二次重部署\"，该过程自动授权，无需二次授权。
     *
     * @return $this
     */

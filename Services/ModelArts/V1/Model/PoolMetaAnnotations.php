@@ -30,7 +30,8 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
     * osModelartsOrderId  **参数解释**：包周期资源池购买时传递的订单ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsFlavorResourceIds  **参数解释**：包周期资源池中资源规格对应的资源ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTmsTags  **参数解释**：资源池上的资源标签。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     * osModelartsPoolSubpoolsCount  **参数解释**：资源池包含的逻辑子池的数量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTenantDomainName  **参数解释**：资源池的租户账号 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsPoolScopeExternalDependencyTrain  **参数解释**：训练外部依赖标识 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
@@ -49,6 +50,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
             'osModelartsFlavorResourceIds' => 'string',
             'osModelartsTmsTags' => 'string',
             'osModelartsPoolSchedulerQueueStrategy' => 'string',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'string',
             'osModelartsPoolSubpoolsCount' => 'string',
             'osModelartsTenantDomainName' => 'string',
             'osModelartsPoolScopeExternalDependencyTrain' => 'string'
@@ -66,7 +68,8 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
     * osModelartsOrderId  **参数解释**：包周期资源池购买时传递的订单ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsFlavorResourceIds  **参数解释**：包周期资源池中资源规格对应的资源ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTmsTags  **参数解释**：资源池上的资源标签。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     * osModelartsPoolSubpoolsCount  **参数解释**：资源池包含的逻辑子池的数量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTenantDomainName  **参数解释**：资源池的租户账号 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsPoolScopeExternalDependencyTrain  **参数解释**：训练外部依赖标识 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
@@ -85,6 +88,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
         'osModelartsFlavorResourceIds' => null,
         'osModelartsTmsTags' => null,
         'osModelartsPoolSchedulerQueueStrategy' => null,
+        'osModelartsPoolSchedulerQueueStrategyConfig' => null,
         'osModelartsPoolSubpoolsCount' => null,
         'osModelartsTenantDomainName' => null,
         'osModelartsPoolScopeExternalDependencyTrain' => null
@@ -123,7 +127,8 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
     * osModelartsOrderId  **参数解释**：包周期资源池购买时传递的订单ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsFlavorResourceIds  **参数解释**：包周期资源池中资源规格对应的资源ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTmsTags  **参数解释**：资源池上的资源标签。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     * osModelartsPoolSubpoolsCount  **参数解释**：资源池包含的逻辑子池的数量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTenantDomainName  **参数解释**：资源池的租户账号 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsPoolScopeExternalDependencyTrain  **参数解释**：训练外部依赖标识 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
@@ -142,6 +147,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
             'osModelartsFlavorResourceIds' => 'os.modelarts/flavor.resource.ids',
             'osModelartsTmsTags' => 'os.modelarts/tms.tags',
             'osModelartsPoolSchedulerQueueStrategy' => 'os.modelarts.pool/scheduler.queue.strategy',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'os.modelarts.pool/scheduler.queue.strategy.config',
             'osModelartsPoolSubpoolsCount' => 'os.modelarts.pool/subpools.count',
             'osModelartsTenantDomainName' => 'os.modelarts/tenant.domain.name',
             'osModelartsPoolScopeExternalDependencyTrain' => 'os.modelarts.pool/scope.external.dependency.train'
@@ -159,7 +165,8 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
     * osModelartsOrderId  **参数解释**：包周期资源池购买时传递的订单ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsFlavorResourceIds  **参数解释**：包周期资源池中资源规格对应的资源ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTmsTags  **参数解释**：资源池上的资源标签。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     * osModelartsPoolSubpoolsCount  **参数解释**：资源池包含的逻辑子池的数量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTenantDomainName  **参数解释**：资源池的租户账号 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsPoolScopeExternalDependencyTrain  **参数解释**：训练外部依赖标识 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
@@ -178,6 +185,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
             'osModelartsFlavorResourceIds' => 'setOsModelartsFlavorResourceIds',
             'osModelartsTmsTags' => 'setOsModelartsTmsTags',
             'osModelartsPoolSchedulerQueueStrategy' => 'setOsModelartsPoolSchedulerQueueStrategy',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'setOsModelartsPoolSchedulerQueueStrategyConfig',
             'osModelartsPoolSubpoolsCount' => 'setOsModelartsPoolSubpoolsCount',
             'osModelartsTenantDomainName' => 'setOsModelartsTenantDomainName',
             'osModelartsPoolScopeExternalDependencyTrain' => 'setOsModelartsPoolScopeExternalDependencyTrain'
@@ -195,7 +203,8 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
     * osModelartsOrderId  **参数解释**：包周期资源池购买时传递的订单ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsFlavorResourceIds  **参数解释**：包周期资源池中资源规格对应的资源ID。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTmsTags  **参数解释**：资源池上的资源标签。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
-    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * osModelartsPoolSchedulerQueueStrategy  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
+    * osModelartsPoolSchedulerQueueStrategyConfig  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
     * osModelartsPoolSubpoolsCount  **参数解释**：资源池包含的逻辑子池的数量。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsTenantDomainName  **参数解释**：资源池的租户账号 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
     * osModelartsPoolScopeExternalDependencyTrain  **参数解释**：训练外部依赖标识 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
@@ -214,6 +223,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
             'osModelartsFlavorResourceIds' => 'getOsModelartsFlavorResourceIds',
             'osModelartsTmsTags' => 'getOsModelartsTmsTags',
             'osModelartsPoolSchedulerQueueStrategy' => 'getOsModelartsPoolSchedulerQueueStrategy',
+            'osModelartsPoolSchedulerQueueStrategyConfig' => 'getOsModelartsPoolSchedulerQueueStrategyConfig',
             'osModelartsPoolSubpoolsCount' => 'getOsModelartsPoolSubpoolsCount',
             'osModelartsTenantDomainName' => 'getOsModelartsTenantDomainName',
             'osModelartsPoolScopeExternalDependencyTrain' => 'getOsModelartsPoolScopeExternalDependencyTrain'
@@ -288,6 +298,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
         $this->container['osModelartsFlavorResourceIds'] = isset($data['osModelartsFlavorResourceIds']) ? $data['osModelartsFlavorResourceIds'] : null;
         $this->container['osModelartsTmsTags'] = isset($data['osModelartsTmsTags']) ? $data['osModelartsTmsTags'] : null;
         $this->container['osModelartsPoolSchedulerQueueStrategy'] = isset($data['osModelartsPoolSchedulerQueueStrategy']) ? $data['osModelartsPoolSchedulerQueueStrategy'] : null;
+        $this->container['osModelartsPoolSchedulerQueueStrategyConfig'] = isset($data['osModelartsPoolSchedulerQueueStrategyConfig']) ? $data['osModelartsPoolSchedulerQueueStrategyConfig'] : null;
         $this->container['osModelartsPoolSubpoolsCount'] = isset($data['osModelartsPoolSubpoolsCount']) ? $data['osModelartsPoolSubpoolsCount'] : null;
         $this->container['osModelartsTenantDomainName'] = isset($data['osModelartsTenantDomainName']) ? $data['osModelartsTenantDomainName'] : null;
         $this->container['osModelartsPoolScopeExternalDependencyTrain'] = isset($data['osModelartsPoolScopeExternalDependencyTrain']) ? $data['osModelartsPoolScopeExternalDependencyTrain'] : null;
@@ -557,7 +568,7 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
 
     /**
     * Gets osModelartsPoolSchedulerQueueStrategy
-    *  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    *  **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
     *
     * @return string|null
     */
@@ -569,13 +580,37 @@ class PoolMetaAnnotations implements ModelInterface, ArrayAccess
     /**
     * Sets osModelartsPoolSchedulerQueueStrategy
     *
-    * @param string|null $osModelartsPoolSchedulerQueueStrategy **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **约束限制**：不涉及。 **取值范围**：不涉及。 **默认取值**：不涉及。
+    * @param string|null $osModelartsPoolSchedulerQueueStrategy **参数解释**：资源池调度队列的策略，用于定义任务调度的规则。 **取值范围**：枚举：FIFO、Range、Step、Rank。
     *
     * @return $this
     */
     public function setOsModelartsPoolSchedulerQueueStrategy($osModelartsPoolSchedulerQueueStrategy)
     {
         $this->container['osModelartsPoolSchedulerQueueStrategy'] = $osModelartsPoolSchedulerQueueStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets osModelartsPoolSchedulerQueueStrategyConfig
+    *  **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
+    *
+    * @return string|null
+    */
+    public function getOsModelartsPoolSchedulerQueueStrategyConfig()
+    {
+        return $this->container['osModelartsPoolSchedulerQueueStrategyConfig'];
+    }
+
+    /**
+    * Sets osModelartsPoolSchedulerQueueStrategyConfig
+    *
+    * @param string|null $osModelartsPoolSchedulerQueueStrategyConfig **参数解释**：资源池的调度策略配置。 **约束限制**：仅当调度策略为Step或Rank时生效。 **取值范围**：Json字符串，自行配置，示例如下： - Step: {\"step_config\":{\"timeout\":300}} - Rank: {\"rank_config\":[{\"max_priority\":3,\"min_priority\":3,\"rank_strategy\":\"Step\",\"step_config\":{\"timeout\":300}},{\"max_priority\":2,\"min_priority\":1,\"rank_strategy\":\"Range\"}]} **默认取值**：不涉及。
+    *
+    * @return $this
+    */
+    public function setOsModelartsPoolSchedulerQueueStrategyConfig($osModelartsPoolSchedulerQueueStrategyConfig)
+    {
+        $this->container['osModelartsPoolSchedulerQueueStrategyConfig'] = $osModelartsPoolSchedulerQueueStrategyConfig;
         return $this;
     }
 

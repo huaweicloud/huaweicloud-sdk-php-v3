@@ -21,21 +21,25 @@ class ModelArtsAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * agencyNameSuffix  委托名称后缀。  长度不大于50位。  委托名称前缀固定为ma_agency。  如该字段为iam-user01，则创建出来的委托名称为ma_agency_iam-user01。  默认为空，表示创建名称为modelarts_agency的委托。
+    * agencyServices  **参数解释**：细粒度权限列表。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'agencyNameSuffix' => 'string'
+            'agencyNameSuffix' => 'string',
+            'agencyServices' => '\HuaweiCloud\SDK\ModelArts\V1\Model\AgencyServices[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * agencyNameSuffix  委托名称后缀。  长度不大于50位。  委托名称前缀固定为ma_agency。  如该字段为iam-user01，则创建出来的委托名称为ma_agency_iam-user01。  默认为空，表示创建名称为modelarts_agency的委托。
+    * agencyServices  **参数解释**：细粒度权限列表。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'agencyNameSuffix' => null
+        'agencyNameSuffix' => null,
+        'agencyServices' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ModelArtsAgencyRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * agencyNameSuffix  委托名称后缀。  长度不大于50位。  委托名称前缀固定为ma_agency。  如该字段为iam-user01，则创建出来的委托名称为ma_agency_iam-user01。  默认为空，表示创建名称为modelarts_agency的委托。
+    * agencyServices  **参数解释**：细粒度权限列表。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'agencyNameSuffix' => 'agency_name_suffix'
+            'agencyNameSuffix' => 'agency_name_suffix',
+            'agencyServices' => 'agency_services'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * agencyNameSuffix  委托名称后缀。  长度不大于50位。  委托名称前缀固定为ma_agency。  如该字段为iam-user01，则创建出来的委托名称为ma_agency_iam-user01。  默认为空，表示创建名称为modelarts_agency的委托。
+    * agencyServices  **参数解释**：细粒度权限列表。
     *
     * @var string[]
     */
     protected static $setters = [
-            'agencyNameSuffix' => 'setAgencyNameSuffix'
+            'agencyNameSuffix' => 'setAgencyNameSuffix',
+            'agencyServices' => 'setAgencyServices'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * agencyNameSuffix  委托名称后缀。  长度不大于50位。  委托名称前缀固定为ma_agency。  如该字段为iam-user01，则创建出来的委托名称为ma_agency_iam-user01。  默认为空，表示创建名称为modelarts_agency的委托。
+    * agencyServices  **参数解释**：细粒度权限列表。
     *
     * @var string[]
     */
     protected static $getters = [
-            'agencyNameSuffix' => 'getAgencyNameSuffix'
+            'agencyNameSuffix' => 'getAgencyNameSuffix',
+            'agencyServices' => 'getAgencyServices'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ModelArtsAgencyRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['agencyNameSuffix'] = isset($data['agencyNameSuffix']) ? $data['agencyNameSuffix'] : null;
+        $this->container['agencyServices'] = isset($data['agencyServices']) ? $data['agencyServices'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class ModelArtsAgencyRequest implements ModelInterface, ArrayAccess
     public function setAgencyNameSuffix($agencyNameSuffix)
     {
         $this->container['agencyNameSuffix'] = $agencyNameSuffix;
+        return $this;
+    }
+
+    /**
+    * Gets agencyServices
+    *  **参数解释**：细粒度权限列表。
+    *
+    * @return \HuaweiCloud\SDK\ModelArts\V1\Model\AgencyServices[]|null
+    */
+    public function getAgencyServices()
+    {
+        return $this->container['agencyServices'];
+    }
+
+    /**
+    * Sets agencyServices
+    *
+    * @param \HuaweiCloud\SDK\ModelArts\V1\Model\AgencyServices[]|null $agencyServices **参数解释**：细粒度权限列表。
+    *
+    * @return $this
+    */
+    public function setAgencyServices($agencyServices)
+    {
+        $this->container['agencyServices'] = $agencyServices;
         return $this;
     }
 

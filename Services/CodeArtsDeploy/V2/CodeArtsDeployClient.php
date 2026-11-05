@@ -4431,6 +4431,83 @@ class CodeArtsDeployClient extends Client
             $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowProjectSuccessRateRequest');
     }
 
+    /**
+     * 查询部署记录的执行日志
+     *
+     * 查询部署记录的执行日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTaskLogs($request)
+    {
+        return $this->showTaskLogsWithHttpInfo($request);
+    }
+
+    public function showTaskLogsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/applications/{app_id}/records/{record_id}/logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['endOffset'] !== null) {
+            $queryParams['end_offset'] = $localVarParams['endOffset'];
+        }
+        if ($localVarParams['stepId'] !== null) {
+            $queryParams['step_id'] = $localVarParams['stepId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $pathParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['recordId'] !== null) {
+            $pathParams['record_id'] = $localVarParams['recordId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowTaskLogsResponse',
+            $requestType='\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\ShowTaskLogsRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

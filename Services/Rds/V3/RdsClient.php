@@ -24450,6 +24450,1226 @@ class RdsClient extends Client
     }
 
     /**
+     * 创建Supabase应用
+     *
+     * 创建Supabase应用。支持两类路径：
+     * 1) 同时创建托管的PostgreSQL实例（manage_type&#x3D;newly_instance）；
+     * 2) 关联已有PostgreSQL实例（manage_type&#x3D;existed_instance）。
+     * 异步接口，返回job_id（按需）或order_id（包周期）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSupabaseApplication($request)
+    {
+        return $this->createSupabaseApplicationWithHttpInfo($request);
+    }
+
+    public function createSupabaseApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/supabases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\CreateSupabaseApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\CreateSupabaseApplicationRequest');
+    }
+
+    /**
+     * 删除Supabase应用
+     *
+     * 删除Supabase应用。仅删除应用本身，保留底层PG实例及关联关系。
+     * 注：HTTP无请求体，delete_instance字段不对外暴露，恒为仅删应用。
+     * PG级联删除为反向触发（PG删→自动删关联Supabase）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSupabaseApplication($request)
+    {
+        return $this->deleteSupabaseApplicationWithHttpInfo($request);
+    }
+
+    public function deleteSupabaseApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteSupabaseApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteSupabaseApplicationRequest');
+    }
+
+    /**
+     * 查询AI应用列表
+     *
+     * 查询AI应用列表，含应用状态和关联PG实例信息。删除应用前通常先调此接口定位目标。支持按type过滤Supabase应用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAiApplications($request)
+    {
+        return $this->listAiApplicationsWithHttpInfo($request);
+    }
+
+    public function listAiApplicationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/applications';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['managedInstanceId'] !== null) {
+            $queryParams['managed_instance_id'] = $localVarParams['managedInstanceId'];
+        }
+        if ($localVarParams['managedInstanceName'] !== null) {
+            $queryParams['managed_instance_name'] = $localVarParams['managedInstanceName'];
+        }
+        if ($localVarParams['enableSsl'] !== null) {
+            $queryParams['enable_ssl'] = $localVarParams['enableSsl'];
+        }
+        if ($localVarParams['startCreatedTime'] !== null) {
+            $queryParams['start_created_time'] = $localVarParams['startCreatedTime'];
+        }
+        if ($localVarParams['endCreatedTime'] !== null) {
+            $queryParams['end_created_time'] = $localVarParams['endCreatedTime'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListAiApplicationsResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListAiApplicationsRequest');
+    }
+
+    /**
+     * 查询Supabase应用ApiKey列表
+     *
+     * 分页查询ApiKey元数据。列表不含明文。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSupabaseApplicationApiKeys($request)
+    {
+        return $this->listSupabaseApplicationApiKeysWithHttpInfo($request);
+    }
+
+    public function listSupabaseApplicationApiKeysWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/api-keys';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['startCreatedTime'] !== null) {
+            $queryParams['start_created_time'] = $localVarParams['startCreatedTime'];
+        }
+        if ($localVarParams['endCreatedTime'] !== null) {
+            $queryParams['end_created_time'] = $localVarParams['endCreatedTime'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListSupabaseApplicationApiKeysResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListSupabaseApplicationApiKeysRequest');
+    }
+
+    /**
+     * 查询Supabase应用规格列表
+     *
+     * 查询可用规格，含每个AZ的可售状态和支持版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSupabaseApplicationFlavors($request)
+    {
+        return $this->listSupabaseApplicationFlavorsWithHttpInfo($request);
+    }
+
+    public function listSupabaseApplicationFlavorsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/supabase/flavors';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+        if ($localVarParams['specCode'] !== null) {
+            $queryParams['spec_code'] = $localVarParams['specCode'];
+        }
+        if ($localVarParams['azCode'] !== null) {
+            $queryParams['az_code'] = $localVarParams['azCode'];
+        }
+        if ($localVarParams['isFree'] !== null) {
+            $queryParams['is_free'] = $localVarParams['isFree'];
+        }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListSupabaseApplicationFlavorsResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListSupabaseApplicationFlavorsRequest');
+    }
+
+    /**
+     * 修改Supabase应用Auth配置
+     *
+     * 部分更新：仅更新传入的非空字段，省略字段保留原值（@JsonInclude NON_EMPTY）。
+     * enable_github&#x3D;false时清空github子字段；enable_email_sign_up&#x3D;false时清空smtp_config子字段。
+     * 秘密字段（smtp_pwd、oauth_client_secret）需通过受控方式输入，show不返回故不会回显覆盖。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifySupabaseApplicationAuthConfig($request)
+    {
+        return $this->modifySupabaseApplicationAuthConfigWithHttpInfo($request);
+    }
+
+    public function modifySupabaseApplicationAuthConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/auth-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ModifySupabaseApplicationAuthConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ModifySupabaseApplicationAuthConfigRequest');
+    }
+
+    /**
+     * 修改Supabase应用密码
+     *
+     * 可单独修改应用密码或实例密码，但不能同时为空。不修改底层PG其他账号。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifySupabaseApplicationPassword($request)
+    {
+        return $this->modifySupabaseApplicationPasswordWithHttpInfo($request);
+    }
+
+    public function modifySupabaseApplicationPasswordWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/password';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ModifySupabaseApplicationPasswordResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ModifySupabaseApplicationPasswordRequest');
+    }
+
+    /**
+     * 修改Supabase应用Storage配置
+     *
+     * enabled&#x3D;false时bucket_name/ak/sk必须全空；enabled&#x3D;true时全必填。
+     * show不返回sk，故部分更新省略sk即保留。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifySupabaseApplicationStorage($request)
+    {
+        return $this->modifySupabaseApplicationStorageWithHttpInfo($request);
+    }
+
+    public function modifySupabaseApplicationStorageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/storage';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ModifySupabaseApplicationStorageResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ModifySupabaseApplicationStorageRequest');
+    }
+
+    /**
+     * 重置Supabase应用ApiKey
+     *
+     * 异步重置ApiKey。agent异步动作成功后，旧Key置deleted、新Key置normal，同事务原子切换。
+     * 新Key不沿用旧Key ID。返回job_id，需轮询list_job_info。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetSupabaseApplicationApiKey($request)
+    {
+        return $this->resetSupabaseApplicationApiKeyWithHttpInfo($request);
+    }
+
+    public function resetSupabaseApplicationApiKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/api-key/{key_id}/reset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['keyId'] !== null) {
+            $pathParams['key_id'] = $localVarParams['keyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ResetSupabaseApplicationApiKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ResetSupabaseApplicationApiKeyRequest');
+    }
+
+    /**
+     * 重启Supabase应用
+     *
+     * 异步重启Supabase应用。返回job_id，需轮询list_job_info。无requestBody。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function restartSupabaseApplication($request)
+    {
+        return $this->restartSupabaseApplicationWithHttpInfo($request);
+    }
+
+    public function restartSupabaseApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/restart';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\RestartSupabaseApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\RestartSupabaseApplicationRequest');
+    }
+
+    /**
+     * 查询Supabase应用详情
+     *
+     * 查询Supabase应用详情，含运行状态、关联PG、SSL/EIP/Storage配置等。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSupabaseApplication($request)
+    {
+        return $this->showSupabaseApplicationWithHttpInfo($request);
+    }
+
+    public function showSupabaseApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ShowSupabaseApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ShowSupabaseApplicationRequest');
+    }
+
+    /**
+     * 查询Supabase应用ApiKey明文值
+     *
+     * 受控查看指定ApiKey的明文值。敏感操作，需明确授权。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSupabaseApplicationApiKeyValue($request)
+    {
+        return $this->showSupabaseApplicationApiKeyValueWithHttpInfo($request);
+    }
+
+    public function showSupabaseApplicationApiKeyValueWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/api-key/{key_id}/value';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['keyId'] !== null) {
+            $pathParams['key_id'] = $localVarParams['keyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ShowSupabaseApplicationApiKeyValueResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ShowSupabaseApplicationApiKeyValueRequest');
+    }
+
+    /**
+     * 查询Supabase应用Auth配置
+     *
+     * 查询Auth配置。敏感秘密（smtp_pwd、oauth_client_secret）在响应中省略，非脱敏占位。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSupabaseApplicationAuthConfig($request)
+    {
+        return $this->showSupabaseApplicationAuthConfigWithHttpInfo($request);
+    }
+
+    public function showSupabaseApplicationAuthConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/auth-config';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ShowSupabaseApplicationAuthConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ShowSupabaseApplicationAuthConfigRequest');
+    }
+
+    /**
+     * 启动Supabase应用
+     *
+     * 异步启动Supabase应用。返回job_id，需轮询list_job_info。无requestBody。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startSupabaseApplication($request)
+    {
+        return $this->startSupabaseApplicationWithHttpInfo($request);
+    }
+
+    public function startSupabaseApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/start';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\StartSupabaseApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\StartSupabaseApplicationRequest');
+    }
+
+    /**
+     * 停止Supabase应用
+     *
+     * 异步停止Supabase应用。返回job_id，需轮询list_job_info。无requestBody。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopSupabaseApplication($request)
+    {
+        return $this->stopSupabaseApplicationWithHttpInfo($request);
+    }
+
+    public function stopSupabaseApplicationWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/stop';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\StopSupabaseApplicationResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\StopSupabaseApplicationRequest');
+    }
+
+    /**
+     * 绑定或解绑Supabase应用EIP
+     *
+     * 异步绑定/解绑EIP。is_bind&#x3D;true时public_ip_id和public_ip_address必填。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchSupabaseApplicationEipBind($request)
+    {
+        return $this->switchSupabaseApplicationEipBindWithHttpInfo($request);
+    }
+
+    public function switchSupabaseApplicationEipBindWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/public-eip';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSupabaseApplicationEipBindResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSupabaseApplicationEipBindRequest');
+    }
+
+    /**
+     * 开启或关闭Supabase应用SSL
+     *
+     * 异步开关SSL。enable_ssl&#x3D;false时cert_id必须为空；enable_ssl&#x3D;true时cert_id必填。
+     * SSL切换后需手动同步Auth相关URL协议（http&lt;-&gt;https），否则认证可能故障。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function switchSupabaseApplicationSsl($request)
+    {
+        return $this->switchSupabaseApplicationSslWithHttpInfo($request);
+    }
+
+    public function switchSupabaseApplicationSslWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ai-application/{application_id}/supabase/switch-ssl';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSupabaseApplicationSslResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSupabaseApplicationSslRequest');
+    }
+
+    /**
      * 根据实例ID和管理网子网信息，返回可用的数据子网
      *
      * 根据实例ID和管理网子网信息，返回可用的数据子网。

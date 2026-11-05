@@ -32,6 +32,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
     * subnetCidrs  **参数解释**： OpenStack Neutron子网信息。 **取值范围**： 不涉及。
     * tags  **参数解释**： 子网的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     * extraDhcpOpts  **参数解释**： 子网的DHCP属性，支持配置NTP地址、DNS域名或租约到期时间。 **取值范围**： 不涉及。
+    * enableNetworkAddressUsageMetrics  **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    * availableIpAddressCount  **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
     * createdAt  **参数解释**： 子网的创建时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  **参数解释**： 子网的更新时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     *
@@ -50,6 +52,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
             'subnetCidrs' => '\HuaweiCloud\SDK\Vpc\V3\Model\SubnetCidr[]',
             'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResponseTag[]',
             'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V3\Model\SubnetExtraDhcpOpt[]',
+            'enableNetworkAddressUsageMetrics' => 'bool',
+            'availableIpAddressCount' => 'int',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime'
     ];
@@ -68,6 +72,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
     * subnetCidrs  **参数解释**： OpenStack Neutron子网信息。 **取值范围**： 不涉及。
     * tags  **参数解释**： 子网的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     * extraDhcpOpts  **参数解释**： 子网的DHCP属性，支持配置NTP地址、DNS域名或租约到期时间。 **取值范围**： 不涉及。
+    * enableNetworkAddressUsageMetrics  **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    * availableIpAddressCount  **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
     * createdAt  **参数解释**： 子网的创建时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  **参数解释**： 子网的更新时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     *
@@ -86,6 +92,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
         'subnetCidrs' => null,
         'tags' => null,
         'extraDhcpOpts' => null,
+        'enableNetworkAddressUsageMetrics' => null,
+        'availableIpAddressCount' => 'int32',
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time'
     ];
@@ -125,6 +133,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
     * subnetCidrs  **参数解释**： OpenStack Neutron子网信息。 **取值范围**： 不涉及。
     * tags  **参数解释**： 子网的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     * extraDhcpOpts  **参数解释**： 子网的DHCP属性，支持配置NTP地址、DNS域名或租约到期时间。 **取值范围**： 不涉及。
+    * enableNetworkAddressUsageMetrics  **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    * availableIpAddressCount  **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
     * createdAt  **参数解释**： 子网的创建时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  **参数解释**： 子网的更新时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     *
@@ -143,6 +153,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
             'subnetCidrs' => 'subnet_cidrs',
             'tags' => 'tags',
             'extraDhcpOpts' => 'extra_dhcp_opts',
+            'enableNetworkAddressUsageMetrics' => 'enable_network_address_usage_metrics',
+            'availableIpAddressCount' => 'available_ip_address_count',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at'
     ];
@@ -161,6 +173,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
     * subnetCidrs  **参数解释**： OpenStack Neutron子网信息。 **取值范围**： 不涉及。
     * tags  **参数解释**： 子网的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     * extraDhcpOpts  **参数解释**： 子网的DHCP属性，支持配置NTP地址、DNS域名或租约到期时间。 **取值范围**： 不涉及。
+    * enableNetworkAddressUsageMetrics  **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    * availableIpAddressCount  **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
     * createdAt  **参数解释**： 子网的创建时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  **参数解释**： 子网的更新时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     *
@@ -179,6 +193,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
             'subnetCidrs' => 'setSubnetCidrs',
             'tags' => 'setTags',
             'extraDhcpOpts' => 'setExtraDhcpOpts',
+            'enableNetworkAddressUsageMetrics' => 'setEnableNetworkAddressUsageMetrics',
+            'availableIpAddressCount' => 'setAvailableIpAddressCount',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt'
     ];
@@ -197,6 +213,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
     * subnetCidrs  **参数解释**： OpenStack Neutron子网信息。 **取值范围**： 不涉及。
     * tags  **参数解释**： 子网的标签信息，包括标签键和标签值，可用来分类和标识资源。详情请参见Tag对象。 **取值范围**： 不涉及。
     * extraDhcpOpts  **参数解释**： 子网的DHCP属性，支持配置NTP地址、DNS域名或租约到期时间。 **取值范围**： 不涉及。
+    * enableNetworkAddressUsageMetrics  **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    * availableIpAddressCount  **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
     * createdAt  **参数解释**： 子网的创建时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  **参数解释**： 子网的更新时间。 **取值范围**： UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     *
@@ -215,6 +233,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
             'subnetCidrs' => 'getSubnetCidrs',
             'tags' => 'getTags',
             'extraDhcpOpts' => 'getExtraDhcpOpts',
+            'enableNetworkAddressUsageMetrics' => 'getEnableNetworkAddressUsageMetrics',
+            'availableIpAddressCount' => 'getAvailableIpAddressCount',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt'
     ];
@@ -289,6 +309,8 @@ class Virsubnet implements ModelInterface, ArrayAccess
         $this->container['subnetCidrs'] = isset($data['subnetCidrs']) ? $data['subnetCidrs'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['extraDhcpOpts'] = isset($data['extraDhcpOpts']) ? $data['extraDhcpOpts'] : null;
+        $this->container['enableNetworkAddressUsageMetrics'] = isset($data['enableNetworkAddressUsageMetrics']) ? $data['enableNetworkAddressUsageMetrics'] : null;
+        $this->container['availableIpAddressCount'] = isset($data['availableIpAddressCount']) ? $data['availableIpAddressCount'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
@@ -336,6 +358,12 @@ class Virsubnet implements ModelInterface, ArrayAccess
         }
         if ($this->container['extraDhcpOpts'] === null) {
             $invalidProperties[] = "'extraDhcpOpts' can't be null";
+        }
+        if ($this->container['enableNetworkAddressUsageMetrics'] === null) {
+            $invalidProperties[] = "'enableNetworkAddressUsageMetrics' can't be null";
+        }
+        if ($this->container['availableIpAddressCount'] === null) {
+            $invalidProperties[] = "'availableIpAddressCount' can't be null";
         }
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
@@ -642,6 +670,54 @@ class Virsubnet implements ModelInterface, ArrayAccess
     public function setExtraDhcpOpts($extraDhcpOpts)
     {
         $this->container['extraDhcpOpts'] = $extraDhcpOpts;
+        return $this;
+    }
+
+    /**
+    * Gets enableNetworkAddressUsageMetrics
+    *  **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    *
+    * @return bool
+    */
+    public function getEnableNetworkAddressUsageMetrics()
+    {
+        return $this->container['enableNetworkAddressUsageMetrics'];
+    }
+
+    /**
+    * Sets enableNetworkAddressUsageMetrics
+    *
+    * @param bool $enableNetworkAddressUsageMetrics **参数解释**： 是否开启当前子网的IPv4地址使用量指标监控。 **取值范围**： true：开启。 false：不开启。
+    *
+    * @return $this
+    */
+    public function setEnableNetworkAddressUsageMetrics($enableNetworkAddressUsageMetrics)
+    {
+        $this->container['enableNetworkAddressUsageMetrics'] = $enableNetworkAddressUsageMetrics;
+        return $this;
+    }
+
+    /**
+    * Gets availableIpAddressCount
+    *  **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
+    *
+    * @return int
+    */
+    public function getAvailableIpAddressCount()
+    {
+        return $this->container['availableIpAddressCount'];
+    }
+
+    /**
+    * Sets availableIpAddressCount
+    *
+    * @param int $availableIpAddressCount **参数解释**： 子网内剩余可用的IPv4地址数量。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setAvailableIpAddressCount($availableIpAddressCount)
+    {
+        $this->container['availableIpAddressCount'] = $availableIpAddressCount;
         return $this;
     }
 

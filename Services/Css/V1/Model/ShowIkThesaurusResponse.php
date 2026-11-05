@@ -47,7 +47,7 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
             'staticStopObj' => 'string',
             'extraMainObj' => 'string',
             'extraStopObj' => 'string',
-            'updateTime' => 'string',
+            'updateTime' => 'int',
             'updateDetails' => 'string',
             'clusterId' => 'string',
             'id' => 'string'
@@ -81,7 +81,7 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
         'staticStopObj' => null,
         'extraMainObj' => null,
         'extraStopObj' => null,
-        'updateTime' => null,
+        'updateTime' => 'int32',
         'updateDetails' => null,
         'clusterId' => null,
         'id' => null
@@ -525,7 +525,7 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     * Gets updateTime
     *  词库最近更新时间。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getUpdateTime()
     {
@@ -535,7 +535,7 @@ class ShowIkThesaurusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 词库最近更新时间。
+    * @param int|null $updateTime 词库最近更新时间。
     *
     * @return $this
     */
