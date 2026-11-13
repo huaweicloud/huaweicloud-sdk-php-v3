@@ -23,7 +23,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
     * templateId  模板ID
     * template  SQL模板
     * databases  数据库名
-    * time  执行次数
+    * times  执行次数
     * avgQueryTime  平均执行时间
     * maxQueryTime  最大执行时间
     * avgRowsExamined  平均扫描行
@@ -38,7 +38,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
             'templateId' => 'string',
             'template' => 'string',
             'databases' => 'string[]',
-            'time' => 'int',
+            'times' => 'int',
             'avgQueryTime' => 'double',
             'maxQueryTime' => 'double',
             'avgRowsExamined' => 'double',
@@ -53,7 +53,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
     * templateId  模板ID
     * template  SQL模板
     * databases  数据库名
-    * time  执行次数
+    * times  执行次数
     * avgQueryTime  平均执行时间
     * maxQueryTime  最大执行时间
     * avgRowsExamined  平均扫描行
@@ -68,7 +68,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
         'templateId' => null,
         'template' => null,
         'databases' => null,
-        'time' => 'int64',
+        'times' => 'int64',
         'avgQueryTime' => 'double',
         'maxQueryTime' => 'double',
         'avgRowsExamined' => 'double',
@@ -104,7 +104,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
     * templateId  模板ID
     * template  SQL模板
     * databases  数据库名
-    * time  执行次数
+    * times  执行次数
     * avgQueryTime  平均执行时间
     * maxQueryTime  最大执行时间
     * avgRowsExamined  平均扫描行
@@ -119,7 +119,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
             'templateId' => 'template_id',
             'template' => 'template',
             'databases' => 'databases',
-            'time' => 'time',
+            'times' => 'times',
             'avgQueryTime' => 'avg_query_time',
             'maxQueryTime' => 'max_query_time',
             'avgRowsExamined' => 'avg_rows_examined',
@@ -134,7 +134,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
     * templateId  模板ID
     * template  SQL模板
     * databases  数据库名
-    * time  执行次数
+    * times  执行次数
     * avgQueryTime  平均执行时间
     * maxQueryTime  最大执行时间
     * avgRowsExamined  平均扫描行
@@ -149,7 +149,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
             'templateId' => 'setTemplateId',
             'template' => 'setTemplate',
             'databases' => 'setDatabases',
-            'time' => 'setTime',
+            'times' => 'setTimes',
             'avgQueryTime' => 'setAvgQueryTime',
             'maxQueryTime' => 'setMaxQueryTime',
             'avgRowsExamined' => 'setAvgRowsExamined',
@@ -164,7 +164,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
     * templateId  模板ID
     * template  SQL模板
     * databases  数据库名
-    * time  执行次数
+    * times  执行次数
     * avgQueryTime  平均执行时间
     * maxQueryTime  最大执行时间
     * avgRowsExamined  平均扫描行
@@ -179,7 +179,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
             'templateId' => 'getTemplateId',
             'template' => 'getTemplate',
             'databases' => 'getDatabases',
-            'time' => 'getTime',
+            'times' => 'getTimes',
             'avgQueryTime' => 'getAvgQueryTime',
             'maxQueryTime' => 'getMaxQueryTime',
             'avgRowsExamined' => 'getAvgRowsExamined',
@@ -250,7 +250,7 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['times'] = isset($data['times']) ? $data['times'] : null;
         $this->container['avgQueryTime'] = isset($data['avgQueryTime']) ? $data['avgQueryTime'] : null;
         $this->container['maxQueryTime'] = isset($data['maxQueryTime']) ? $data['maxQueryTime'] : null;
         $this->container['avgRowsExamined'] = isset($data['avgRowsExamined']) ? $data['avgRowsExamined'] : null;
@@ -355,26 +355,26 @@ class InsTopSlowLogInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets time
+    * Gets times
     *  执行次数
     *
     * @return int|null
     */
-    public function getTime()
+    public function getTimes()
     {
-        return $this->container['time'];
+        return $this->container['times'];
     }
 
     /**
-    * Sets time
+    * Sets times
     *
-    * @param int|null $time 执行次数
+    * @param int|null $times 执行次数
     *
     * @return $this
     */
-    public function setTime($time)
+    public function setTimes($times)
     {
-        $this->container['time'] = $time;
+        $this->container['times'] = $times;
         return $this;
     }
 

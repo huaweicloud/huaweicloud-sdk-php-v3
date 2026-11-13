@@ -20,7 +20,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * schemaName  Schema名称
     * originName  原始名称
     * name  名称
     * start  开始
@@ -29,7 +28,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'schemaName' => 'string',
             'originName' => 'string',
             'name' => 'string',
             'start' => 'int',
@@ -38,7 +36,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * schemaName  Schema名称
     * originName  原始名称
     * name  名称
     * start  开始
@@ -47,7 +44,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'schemaName' => null,
         'originName' => null,
         'name' => null,
         'start' => 'int32',
@@ -77,7 +73,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * schemaName  Schema名称
     * originName  原始名称
     * name  名称
     * start  开始
@@ -86,7 +81,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'schemaName' => 'schema_name',
             'originName' => 'origin_name',
             'name' => 'name',
             'start' => 'start',
@@ -95,7 +89,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * schemaName  Schema名称
     * originName  原始名称
     * name  名称
     * start  开始
@@ -104,7 +97,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'schemaName' => 'setSchemaName',
             'originName' => 'setOriginName',
             'name' => 'setName',
             'start' => 'setStart',
@@ -113,7 +105,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * schemaName  Schema名称
     * originName  原始名称
     * name  名称
     * start  开始
@@ -122,7 +113,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'schemaName' => 'getSchemaName',
             'originName' => 'getOriginName',
             'name' => 'getName',
             'start' => 'getStart',
@@ -187,7 +177,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['schemaName'] = isset($data['schemaName']) ? $data['schemaName'] : null;
         $this->container['originName'] = isset($data['originName']) ? $data['originName'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
@@ -214,30 +203,6 @@ class TbPosInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets schemaName
-    *  Schema名称
-    *
-    * @return string|null
-    */
-    public function getSchemaName()
-    {
-        return $this->container['schemaName'];
-    }
-
-    /**
-    * Sets schemaName
-    *
-    * @param string|null $schemaName Schema名称
-    *
-    * @return $this
-    */
-    public function setSchemaName($schemaName)
-    {
-        $this->container['schemaName'] = $schemaName;
-        return $this;
     }
 
     /**

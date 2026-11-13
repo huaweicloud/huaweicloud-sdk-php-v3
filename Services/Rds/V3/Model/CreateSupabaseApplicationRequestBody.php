@@ -23,9 +23,9 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     * name  Supabase应用名称，4~64个字符。
     * basicConfig  basicConfig
     * version  Supabase版本号，格式 x.y.z。
-    * mode  部署模式。
-    * flavorRef  规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
-    * availabilityZone  可用区ID。Single=1个，Ha=2个逗号分隔。
+    * mode  部署模式。当前仅支持Single。
+    * flavorRef  规格码，格式 rds.supabase.{...}。
+    * availabilityZone  可用区ID。Single模式下为1个可用区。
     * dataVip  指定实例内网IP（可选）。IPv4格式。
     * securityGroupId  指定实例所属安全组（可选）。UUID格式。
     * password  默认用户supabase的密码。
@@ -57,9 +57,9 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     * name  Supabase应用名称，4~64个字符。
     * basicConfig  basicConfig
     * version  Supabase版本号，格式 x.y.z。
-    * mode  部署模式。
-    * flavorRef  规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
-    * availabilityZone  可用区ID。Single=1个，Ha=2个逗号分隔。
+    * mode  部署模式。当前仅支持Single。
+    * flavorRef  规格码，格式 rds.supabase.{...}。
+    * availabilityZone  可用区ID。Single模式下为1个可用区。
     * dataVip  指定实例内网IP（可选）。IPv4格式。
     * securityGroupId  指定实例所属安全组（可选）。UUID格式。
     * password  默认用户supabase的密码。
@@ -112,9 +112,9 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     * name  Supabase应用名称，4~64个字符。
     * basicConfig  basicConfig
     * version  Supabase版本号，格式 x.y.z。
-    * mode  部署模式。
-    * flavorRef  规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
-    * availabilityZone  可用区ID。Single=1个，Ha=2个逗号分隔。
+    * mode  部署模式。当前仅支持Single。
+    * flavorRef  规格码，格式 rds.supabase.{...}。
+    * availabilityZone  可用区ID。Single模式下为1个可用区。
     * dataVip  指定实例内网IP（可选）。IPv4格式。
     * securityGroupId  指定实例所属安全组（可选）。UUID格式。
     * password  默认用户supabase的密码。
@@ -146,9 +146,9 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     * name  Supabase应用名称，4~64个字符。
     * basicConfig  basicConfig
     * version  Supabase版本号，格式 x.y.z。
-    * mode  部署模式。
-    * flavorRef  规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
-    * availabilityZone  可用区ID。Single=1个，Ha=2个逗号分隔。
+    * mode  部署模式。当前仅支持Single。
+    * flavorRef  规格码，格式 rds.supabase.{...}。
+    * availabilityZone  可用区ID。Single模式下为1个可用区。
     * dataVip  指定实例内网IP（可选）。IPv4格式。
     * securityGroupId  指定实例所属安全组（可选）。UUID格式。
     * password  默认用户supabase的密码。
@@ -180,9 +180,9 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     * name  Supabase应用名称，4~64个字符。
     * basicConfig  basicConfig
     * version  Supabase版本号，格式 x.y.z。
-    * mode  部署模式。
-    * flavorRef  规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
-    * availabilityZone  可用区ID。Single=1个，Ha=2个逗号分隔。
+    * mode  部署模式。当前仅支持Single。
+    * flavorRef  规格码，格式 rds.supabase.{...}。
+    * availabilityZone  可用区ID。Single模式下为1个可用区。
     * dataVip  指定实例内网IP（可选）。IPv4格式。
     * securityGroupId  指定实例所属安全组（可选）。UUID格式。
     * password  默认用户supabase的密码。
@@ -250,7 +250,6 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
     const MODE_SINGLE = 'Single';
-    const MODE_HA = 'Ha';
     const MANAGE_TYPE_NEWLY_INSTANCE = 'newly_instance';
     const MANAGE_TYPE_EXISTED_INSTANCE = 'existed_instance';
     
@@ -264,7 +263,6 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     {
         return [
             self::MODE_SINGLE,
-            self::MODE_HA,
         ];
     }
 
@@ -460,7 +458,7 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets mode
-    *  部署模式。
+    *  部署模式。当前仅支持Single。
     *
     * @return string
     */
@@ -472,7 +470,7 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets mode
     *
-    * @param string $mode 部署模式。
+    * @param string $mode 部署模式。当前仅支持Single。
     *
     * @return $this
     */
@@ -484,7 +482,7 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets flavorRef
-    *  规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
+    *  规格码，格式 rds.supabase.{...}。
     *
     * @return string
     */
@@ -496,7 +494,7 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets flavorRef
     *
-    * @param string $flavorRef 规格码，格式 rds.supabase.{...}。Ha模式必须以.ha结尾，Single不得以.ha结尾。
+    * @param string $flavorRef 规格码，格式 rds.supabase.{...}。
     *
     * @return $this
     */
@@ -508,7 +506,7 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets availabilityZone
-    *  可用区ID。Single=1个，Ha=2个逗号分隔。
+    *  可用区ID。Single模式下为1个可用区。
     *
     * @return string
     */
@@ -520,7 +518,7 @@ class CreateSupabaseApplicationRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets availabilityZone
     *
-    * @param string $availabilityZone 可用区ID。Single=1个，Ha=2个逗号分隔。
+    * @param string $availabilityZone 可用区ID。Single模式下为1个可用区。
     *
     * @return $this
     */

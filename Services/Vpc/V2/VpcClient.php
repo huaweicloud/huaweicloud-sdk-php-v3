@@ -2442,6 +2442,86 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询对等连接信息列表
+     *
+     * 当您的对等连接创建成功后，您可以通过该接口查询所有对等连接信息，包括对等连接的名称、两端vpc的信息等
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpcPeeringInfos($request)
+    {
+        return $this->listVpcPeeringInfosWithHttpInfo($request);
+    }
+
+    public function listVpcPeeringInfosWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/vpc/peering-infos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['tenantId'] !== null) {
+            $queryParams['tenant_id'] = $localVarParams['tenantId'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListVpcPeeringInfosResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListVpcPeeringInfosRequest');
+    }
+
+    /**
      * 查询对等连接列表
      *
      * 查询提交请求的租户的所有对等连接。根据过滤条件进行过滤。

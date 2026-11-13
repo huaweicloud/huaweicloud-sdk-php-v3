@@ -1,3 +1,91 @@
+# 3.1.208 2026-11-12
+
+### HuaweiCloud SDK DAS
+
+- _API Version_
+  - V3
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **ListAllTypeInstances**
+    - changes of response param
+      - `+ instances`
+      - `+ total_count`
+      - `- entry_names`
+  - **ChangeQuotaNew**
+    - changes of response param
+      - `+ success`
+      - `- instances`
+      - `- total_count`
+  - **ShowWaitingLocksSnapshot**
+    - changes of response param
+      - `+ lock_waits_infos.requesting_trx_id`
+      - `+ lock_waits_infos.requested_lock_id`
+      - `+ lock_waits_infos.blocking_trx_id`
+      - `+ lock_waits_infos.blocking_lock_id`
+      - `* lock_waits_infos: list<object> -> list<InnodbLockWaitsInfo>`
+      - `+ trx.trx_unique_checks`
+      - `+ trx.trx_foreign_key_checks`
+      - `+ trx.trx_last_foreign_key_error`
+      - `+ trx.trx_adaptive_hash_latched`
+      - `+ trx.trx_adaptive_hash_timeout`
+      - `+ trx.wait_locks`
+      - `+ trx.hold_locks`
+  - **ShowInstanceTopSlowLog**
+    - changes of response param
+      - `+ top_execute_slow_logs.times`
+      - `- top_execute_slow_logs.time`
+  - **ShowTuning**
+    - changes of response param
+      - `- tune_result.tb_pos_infos.schema_name`
+      - `* tune_result.feedback_infos.id: string -> int64`
+  - **ShowTuningResult**
+    - changes of response param
+      - `- tune_result.tb_pos_infos.schema_name`
+      - `* tune_result.feedback_infos.id: string -> int64`
+  - **CompareSlowLogTemplates**
+    - changes of response param
+      - `- contrasts.template_of_pre_day.sql_sample_user`
+      - `* contrasts.template_of_pre_day: list<SlowSqlTemplate> -> list<SlowSqlTplTemplate>`
+
+### HuaweiCloud SDK RDS
+
+- _API Version_
+  - V3
+- _Features_
+  - None
+- _Bug Fix_
+  - None
+- _Change_
+  - **CreateSupabaseApplication**
+    - changes of request param
+      - `- mode: enum value [Ha]`
+      - `- managed_instance.ha`
+
+### HuaweiCloud SDK VPC
+
+- _API Version_
+  - V2
+- _Features_
+  - Support the API `ListVpcPeeringInfos`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### HuaweiCloud SDK VPC
+
+- _API Version_
+  - V3
+- _Features_
+  - Support the APIs `ListResourceAssociations`, `BatchCreateTrafficMirrorFilterRules`
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 3.1.207 2026-11-05
 
 ### HuaweiCloud SDK CodeArtsDeploy

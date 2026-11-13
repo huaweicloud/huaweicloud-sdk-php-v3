@@ -39,6 +39,13 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
     * trxRowsModified  事务更改的行数
     * trxConcurrencyTickets  事务并发票数
     * trxIsolationLevel  事务隔离级别
+    * trxUniqueChecks  是否打开唯一性检查的标识
+    * trxForeignKeyChecks  是否打开外键检查的标识
+    * trxLastForeignKeyError  最后一次的外键错误信息
+    * trxAdaptiveHashLatched  自适应散列索引是否被当前事务锁住的标识
+    * trxAdaptiveHashTimeout  是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    * waitLocks  等待的锁列表
+    * holdLocks  持有的锁列表
     *
     * @var string[]
     */
@@ -61,7 +68,14 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
             'trxRowsLocked' => 'string',
             'trxRowsModified' => 'string',
             'trxConcurrencyTickets' => 'string',
-            'trxIsolationLevel' => 'string'
+            'trxIsolationLevel' => 'string',
+            'trxUniqueChecks' => 'string',
+            'trxForeignKeyChecks' => 'string',
+            'trxLastForeignKeyError' => 'string',
+            'trxAdaptiveHashLatched' => 'string',
+            'trxAdaptiveHashTimeout' => 'string',
+            'waitLocks' => '\HuaweiCloud\SDK\Das\V3\Model\InnodbLock[]',
+            'holdLocks' => '\HuaweiCloud\SDK\Das\V3\Model\InnodbLock[]'
     ];
 
     /**
@@ -85,6 +99,13 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
     * trxRowsModified  事务更改的行数
     * trxConcurrencyTickets  事务并发票数
     * trxIsolationLevel  事务隔离级别
+    * trxUniqueChecks  是否打开唯一性检查的标识
+    * trxForeignKeyChecks  是否打开外键检查的标识
+    * trxLastForeignKeyError  最后一次的外键错误信息
+    * trxAdaptiveHashLatched  自适应散列索引是否被当前事务锁住的标识
+    * trxAdaptiveHashTimeout  是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    * waitLocks  等待的锁列表
+    * holdLocks  持有的锁列表
     *
     * @var string[]
     */
@@ -107,7 +128,14 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
         'trxRowsLocked' => null,
         'trxRowsModified' => null,
         'trxConcurrencyTickets' => null,
-        'trxIsolationLevel' => null
+        'trxIsolationLevel' => null,
+        'trxUniqueChecks' => null,
+        'trxForeignKeyChecks' => null,
+        'trxLastForeignKeyError' => null,
+        'trxAdaptiveHashLatched' => null,
+        'trxAdaptiveHashTimeout' => null,
+        'waitLocks' => null,
+        'holdLocks' => null
     ];
 
     /**
@@ -152,6 +180,13 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
     * trxRowsModified  事务更改的行数
     * trxConcurrencyTickets  事务并发票数
     * trxIsolationLevel  事务隔离级别
+    * trxUniqueChecks  是否打开唯一性检查的标识
+    * trxForeignKeyChecks  是否打开外键检查的标识
+    * trxLastForeignKeyError  最后一次的外键错误信息
+    * trxAdaptiveHashLatched  自适应散列索引是否被当前事务锁住的标识
+    * trxAdaptiveHashTimeout  是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    * waitLocks  等待的锁列表
+    * holdLocks  持有的锁列表
     *
     * @var string[]
     */
@@ -174,7 +209,14 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
             'trxRowsLocked' => 'trx_rows_locked',
             'trxRowsModified' => 'trx_rows_modified',
             'trxConcurrencyTickets' => 'trx_concurrency_tickets',
-            'trxIsolationLevel' => 'trx_isolation_level'
+            'trxIsolationLevel' => 'trx_isolation_level',
+            'trxUniqueChecks' => 'trx_unique_checks',
+            'trxForeignKeyChecks' => 'trx_foreign_key_checks',
+            'trxLastForeignKeyError' => 'trx_last_foreign_key_error',
+            'trxAdaptiveHashLatched' => 'trx_adaptive_hash_latched',
+            'trxAdaptiveHashTimeout' => 'trx_adaptive_hash_timeout',
+            'waitLocks' => 'wait_locks',
+            'holdLocks' => 'hold_locks'
     ];
 
     /**
@@ -198,6 +240,13 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
     * trxRowsModified  事务更改的行数
     * trxConcurrencyTickets  事务并发票数
     * trxIsolationLevel  事务隔离级别
+    * trxUniqueChecks  是否打开唯一性检查的标识
+    * trxForeignKeyChecks  是否打开外键检查的标识
+    * trxLastForeignKeyError  最后一次的外键错误信息
+    * trxAdaptiveHashLatched  自适应散列索引是否被当前事务锁住的标识
+    * trxAdaptiveHashTimeout  是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    * waitLocks  等待的锁列表
+    * holdLocks  持有的锁列表
     *
     * @var string[]
     */
@@ -220,7 +269,14 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
             'trxRowsLocked' => 'setTrxRowsLocked',
             'trxRowsModified' => 'setTrxRowsModified',
             'trxConcurrencyTickets' => 'setTrxConcurrencyTickets',
-            'trxIsolationLevel' => 'setTrxIsolationLevel'
+            'trxIsolationLevel' => 'setTrxIsolationLevel',
+            'trxUniqueChecks' => 'setTrxUniqueChecks',
+            'trxForeignKeyChecks' => 'setTrxForeignKeyChecks',
+            'trxLastForeignKeyError' => 'setTrxLastForeignKeyError',
+            'trxAdaptiveHashLatched' => 'setTrxAdaptiveHashLatched',
+            'trxAdaptiveHashTimeout' => 'setTrxAdaptiveHashTimeout',
+            'waitLocks' => 'setWaitLocks',
+            'holdLocks' => 'setHoldLocks'
     ];
 
     /**
@@ -244,6 +300,13 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
     * trxRowsModified  事务更改的行数
     * trxConcurrencyTickets  事务并发票数
     * trxIsolationLevel  事务隔离级别
+    * trxUniqueChecks  是否打开唯一性检查的标识
+    * trxForeignKeyChecks  是否打开外键检查的标识
+    * trxLastForeignKeyError  最后一次的外键错误信息
+    * trxAdaptiveHashLatched  自适应散列索引是否被当前事务锁住的标识
+    * trxAdaptiveHashTimeout  是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    * waitLocks  等待的锁列表
+    * holdLocks  持有的锁列表
     *
     * @var string[]
     */
@@ -266,7 +329,14 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
             'trxRowsLocked' => 'getTrxRowsLocked',
             'trxRowsModified' => 'getTrxRowsModified',
             'trxConcurrencyTickets' => 'getTrxConcurrencyTickets',
-            'trxIsolationLevel' => 'getTrxIsolationLevel'
+            'trxIsolationLevel' => 'getTrxIsolationLevel',
+            'trxUniqueChecks' => 'getTrxUniqueChecks',
+            'trxForeignKeyChecks' => 'getTrxForeignKeyChecks',
+            'trxLastForeignKeyError' => 'getTrxLastForeignKeyError',
+            'trxAdaptiveHashLatched' => 'getTrxAdaptiveHashLatched',
+            'trxAdaptiveHashTimeout' => 'getTrxAdaptiveHashTimeout',
+            'waitLocks' => 'getWaitLocks',
+            'holdLocks' => 'getHoldLocks'
     ];
 
     /**
@@ -346,6 +416,13 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
         $this->container['trxRowsModified'] = isset($data['trxRowsModified']) ? $data['trxRowsModified'] : null;
         $this->container['trxConcurrencyTickets'] = isset($data['trxConcurrencyTickets']) ? $data['trxConcurrencyTickets'] : null;
         $this->container['trxIsolationLevel'] = isset($data['trxIsolationLevel']) ? $data['trxIsolationLevel'] : null;
+        $this->container['trxUniqueChecks'] = isset($data['trxUniqueChecks']) ? $data['trxUniqueChecks'] : null;
+        $this->container['trxForeignKeyChecks'] = isset($data['trxForeignKeyChecks']) ? $data['trxForeignKeyChecks'] : null;
+        $this->container['trxLastForeignKeyError'] = isset($data['trxLastForeignKeyError']) ? $data['trxLastForeignKeyError'] : null;
+        $this->container['trxAdaptiveHashLatched'] = isset($data['trxAdaptiveHashLatched']) ? $data['trxAdaptiveHashLatched'] : null;
+        $this->container['trxAdaptiveHashTimeout'] = isset($data['trxAdaptiveHashTimeout']) ? $data['trxAdaptiveHashTimeout'] : null;
+        $this->container['waitLocks'] = isset($data['waitLocks']) ? $data['waitLocks'] : null;
+        $this->container['holdLocks'] = isset($data['holdLocks']) ? $data['holdLocks'] : null;
     }
 
     /**
@@ -823,6 +900,174 @@ class InnodbTrxInfo implements ModelInterface, ArrayAccess
     public function setTrxIsolationLevel($trxIsolationLevel)
     {
         $this->container['trxIsolationLevel'] = $trxIsolationLevel;
+        return $this;
+    }
+
+    /**
+    * Gets trxUniqueChecks
+    *  是否打开唯一性检查的标识
+    *
+    * @return string|null
+    */
+    public function getTrxUniqueChecks()
+    {
+        return $this->container['trxUniqueChecks'];
+    }
+
+    /**
+    * Sets trxUniqueChecks
+    *
+    * @param string|null $trxUniqueChecks 是否打开唯一性检查的标识
+    *
+    * @return $this
+    */
+    public function setTrxUniqueChecks($trxUniqueChecks)
+    {
+        $this->container['trxUniqueChecks'] = $trxUniqueChecks;
+        return $this;
+    }
+
+    /**
+    * Gets trxForeignKeyChecks
+    *  是否打开外键检查的标识
+    *
+    * @return string|null
+    */
+    public function getTrxForeignKeyChecks()
+    {
+        return $this->container['trxForeignKeyChecks'];
+    }
+
+    /**
+    * Sets trxForeignKeyChecks
+    *
+    * @param string|null $trxForeignKeyChecks 是否打开外键检查的标识
+    *
+    * @return $this
+    */
+    public function setTrxForeignKeyChecks($trxForeignKeyChecks)
+    {
+        $this->container['trxForeignKeyChecks'] = $trxForeignKeyChecks;
+        return $this;
+    }
+
+    /**
+    * Gets trxLastForeignKeyError
+    *  最后一次的外键错误信息
+    *
+    * @return string|null
+    */
+    public function getTrxLastForeignKeyError()
+    {
+        return $this->container['trxLastForeignKeyError'];
+    }
+
+    /**
+    * Sets trxLastForeignKeyError
+    *
+    * @param string|null $trxLastForeignKeyError 最后一次的外键错误信息
+    *
+    * @return $this
+    */
+    public function setTrxLastForeignKeyError($trxLastForeignKeyError)
+    {
+        $this->container['trxLastForeignKeyError'] = $trxLastForeignKeyError;
+        return $this;
+    }
+
+    /**
+    * Gets trxAdaptiveHashLatched
+    *  自适应散列索引是否被当前事务锁住的标识
+    *
+    * @return string|null
+    */
+    public function getTrxAdaptiveHashLatched()
+    {
+        return $this->container['trxAdaptiveHashLatched'];
+    }
+
+    /**
+    * Sets trxAdaptiveHashLatched
+    *
+    * @param string|null $trxAdaptiveHashLatched 自适应散列索引是否被当前事务锁住的标识
+    *
+    * @return $this
+    */
+    public function setTrxAdaptiveHashLatched($trxAdaptiveHashLatched)
+    {
+        $this->container['trxAdaptiveHashLatched'] = $trxAdaptiveHashLatched;
+        return $this;
+    }
+
+    /**
+    * Gets trxAdaptiveHashTimeout
+    *  是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    *
+    * @return string|null
+    */
+    public function getTrxAdaptiveHashTimeout()
+    {
+        return $this->container['trxAdaptiveHashTimeout'];
+    }
+
+    /**
+    * Sets trxAdaptiveHashTimeout
+    *
+    * @param string|null $trxAdaptiveHashTimeout 是否立刻放弃为自适应散列索引搜索 LATCH 的标识
+    *
+    * @return $this
+    */
+    public function setTrxAdaptiveHashTimeout($trxAdaptiveHashTimeout)
+    {
+        $this->container['trxAdaptiveHashTimeout'] = $trxAdaptiveHashTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets waitLocks
+    *  等待的锁列表
+    *
+    * @return \HuaweiCloud\SDK\Das\V3\Model\InnodbLock[]|null
+    */
+    public function getWaitLocks()
+    {
+        return $this->container['waitLocks'];
+    }
+
+    /**
+    * Sets waitLocks
+    *
+    * @param \HuaweiCloud\SDK\Das\V3\Model\InnodbLock[]|null $waitLocks 等待的锁列表
+    *
+    * @return $this
+    */
+    public function setWaitLocks($waitLocks)
+    {
+        $this->container['waitLocks'] = $waitLocks;
+        return $this;
+    }
+
+    /**
+    * Gets holdLocks
+    *  持有的锁列表
+    *
+    * @return \HuaweiCloud\SDK\Das\V3\Model\InnodbLock[]|null
+    */
+    public function getHoldLocks()
+    {
+        return $this->container['holdLocks'];
+    }
+
+    /**
+    * Sets holdLocks
+    *
+    * @param \HuaweiCloud\SDK\Das\V3\Model\InnodbLock[]|null $holdLocks 持有的锁列表
+    *
+    * @return $this
+    */
+    public function setHoldLocks($holdLocks)
+    {
+        $this->container['holdLocks'] = $holdLocks;
         return $this;
     }
 

@@ -32,7 +32,7 @@ class ShowWaitingLocksSnapshotResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'trx' => '\HuaweiCloud\SDK\Das\V3\Model\InnodbTrxInfo[]',
-            'lockWaitsInfos' => 'object[]',
+            'lockWaitsInfos' => '\HuaweiCloud\SDK\Das\V3\Model\InnodbLockWaitsInfo[]',
             'waitLockCount' => 'int',
             'holdLockCount' => 'int',
             'timeGreaterThanCount' => 'int',
@@ -256,7 +256,7 @@ class ShowWaitingLocksSnapshotResponse implements ModelInterface, ArrayAccess
     * Gets lockWaitsInfos
     *  InnoDB锁等待信息
     *
-    * @return object[]|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\InnodbLockWaitsInfo[]|null
     */
     public function getLockWaitsInfos()
     {
@@ -266,7 +266,7 @@ class ShowWaitingLocksSnapshotResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lockWaitsInfos
     *
-    * @param object[]|null $lockWaitsInfos InnoDB锁等待信息
+    * @param \HuaweiCloud\SDK\Das\V3\Model\InnodbLockWaitsInfo[]|null $lockWaitsInfos InnoDB锁等待信息
     *
     * @return $this
     */

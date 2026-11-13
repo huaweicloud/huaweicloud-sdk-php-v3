@@ -21,26 +21,22 @@ class ChangeQuotaNewResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instances  实例列表
-    * totalCount  总记录数
+    * success  是否成功
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instances' => '\HuaweiCloud\SDK\Das\V3\Model\DasCommonInstanceDto[]',
-            'totalCount' => 'int'
+            'success' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instances  实例列表
-    * totalCount  总记录数
+    * success  是否成功
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instances' => null,
-        'totalCount' => 'int64'
+        'success' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class ChangeQuotaNewResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instances  实例列表
-    * totalCount  总记录数
+    * success  是否成功
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instances' => 'instances',
-            'totalCount' => 'total_count'
+            'success' => 'success'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instances  实例列表
-    * totalCount  总记录数
+    * success  是否成功
     *
     * @var string[]
     */
     protected static $setters = [
-            'instances' => 'setInstances',
-            'totalCount' => 'setTotalCount'
+            'success' => 'setSuccess'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instances  实例列表
-    * totalCount  总记录数
+    * success  是否成功
     *
     * @var string[]
     */
     protected static $getters = [
-            'instances' => 'getInstances',
-            'totalCount' => 'getTotalCount'
+            'success' => 'getSuccess'
     ];
 
     /**
@@ -158,8 +148,7 @@ class ChangeQuotaNewResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
     }
 
     /**
@@ -185,50 +174,26 @@ class ChangeQuotaNewResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instances
-    *  实例列表
+    * Gets success
+    *  是否成功
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\DasCommonInstanceDto[]|null
+    * @return bool|null
     */
-    public function getInstances()
+    public function getSuccess()
     {
-        return $this->container['instances'];
+        return $this->container['success'];
     }
 
     /**
-    * Sets instances
+    * Sets success
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\DasCommonInstanceDto[]|null $instances 实例列表
+    * @param bool|null $success 是否成功
     *
     * @return $this
     */
-    public function setInstances($instances)
+    public function setSuccess($success)
     {
-        $this->container['instances'] = $instances;
-        return $this;
-    }
-
-    /**
-    * Gets totalCount
-    *  总记录数
-    *
-    * @return int|null
-    */
-    public function getTotalCount()
-    {
-        return $this->container['totalCount'];
-    }
-
-    /**
-    * Sets totalCount
-    *
-    * @param int|null $totalCount 总记录数
-    *
-    * @return $this
-    */
-    public function setTotalCount($totalCount)
-    {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['success'] = $success;
         return $this;
     }
 

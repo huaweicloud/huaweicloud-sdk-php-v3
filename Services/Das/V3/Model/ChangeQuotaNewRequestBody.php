@@ -158,6 +158,9 @@ class ChangeQuotaNewRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['openNum'] === null) {
+            $invalidProperties[] = "'openNum' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class ChangeQuotaNewRequestBody implements ModelInterface, ArrayAccess
     * Gets openNum
     *  修改配额的数量
     *
-    * @return int|null
+    * @return int
     */
     public function getOpenNum()
     {
@@ -186,7 +189,7 @@ class ChangeQuotaNewRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets openNum
     *
-    * @param int|null $openNum 修改配额的数量
+    * @param int $openNum 修改配额的数量
     *
     * @return $this
     */

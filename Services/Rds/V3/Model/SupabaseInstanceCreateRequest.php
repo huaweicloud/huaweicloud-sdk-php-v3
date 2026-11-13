@@ -24,8 +24,7 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * flavorRef  PG实例规格码。
     * volume  volume
-    * availabilityZone  可用区，≤2个逗号分隔，首个=顶层主AZ。
-    * ha  ha
+    * availabilityZone  可用区，Single模式下为1个，需与顶层主AZ一致。
     * configurationId  参数模板ID（可选）。
     * port  数据库端口，2100~9500，默认5432。
     * securityGroupId  安全组ID。
@@ -42,7 +41,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
             'flavorRef' => 'string',
             'volume' => '\HuaweiCloud\SDK\Rds\V3\Model\SupabaseVolumeConfig',
             'availabilityZone' => 'string',
-            'ha' => '\HuaweiCloud\SDK\Rds\V3\Model\SupabaseHaConfig',
             'configurationId' => 'string',
             'port' => 'int',
             'securityGroupId' => 'string',
@@ -58,8 +56,7 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * flavorRef  PG实例规格码。
     * volume  volume
-    * availabilityZone  可用区，≤2个逗号分隔，首个=顶层主AZ。
-    * ha  ha
+    * availabilityZone  可用区，Single模式下为1个，需与顶层主AZ一致。
     * configurationId  参数模板ID（可选）。
     * port  数据库端口，2100~9500，默认5432。
     * securityGroupId  安全组ID。
@@ -76,7 +73,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
         'flavorRef' => null,
         'volume' => null,
         'availabilityZone' => null,
-        'ha' => null,
         'configurationId' => null,
         'port' => null,
         'securityGroupId' => null,
@@ -113,8 +109,7 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * flavorRef  PG实例规格码。
     * volume  volume
-    * availabilityZone  可用区，≤2个逗号分隔，首个=顶层主AZ。
-    * ha  ha
+    * availabilityZone  可用区，Single模式下为1个，需与顶层主AZ一致。
     * configurationId  参数模板ID（可选）。
     * port  数据库端口，2100~9500，默认5432。
     * securityGroupId  安全组ID。
@@ -131,7 +126,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
             'flavorRef' => 'flavor_ref',
             'volume' => 'volume',
             'availabilityZone' => 'availability_zone',
-            'ha' => 'ha',
             'configurationId' => 'configuration_id',
             'port' => 'port',
             'securityGroupId' => 'security_group_id',
@@ -147,8 +141,7 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * flavorRef  PG实例规格码。
     * volume  volume
-    * availabilityZone  可用区，≤2个逗号分隔，首个=顶层主AZ。
-    * ha  ha
+    * availabilityZone  可用区，Single模式下为1个，需与顶层主AZ一致。
     * configurationId  参数模板ID（可选）。
     * port  数据库端口，2100~9500，默认5432。
     * securityGroupId  安全组ID。
@@ -165,7 +158,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
             'flavorRef' => 'setFlavorRef',
             'volume' => 'setVolume',
             'availabilityZone' => 'setAvailabilityZone',
-            'ha' => 'setHa',
             'configurationId' => 'setConfigurationId',
             'port' => 'setPort',
             'securityGroupId' => 'setSecurityGroupId',
@@ -181,8 +173,7 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
     * chargeInfo  chargeInfo
     * flavorRef  PG实例规格码。
     * volume  volume
-    * availabilityZone  可用区，≤2个逗号分隔，首个=顶层主AZ。
-    * ha  ha
+    * availabilityZone  可用区，Single模式下为1个，需与顶层主AZ一致。
     * configurationId  参数模板ID（可选）。
     * port  数据库端口，2100~9500，默认5432。
     * securityGroupId  安全组ID。
@@ -199,7 +190,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
             'flavorRef' => 'getFlavorRef',
             'volume' => 'getVolume',
             'availabilityZone' => 'getAvailabilityZone',
-            'ha' => 'getHa',
             'configurationId' => 'getConfigurationId',
             'port' => 'getPort',
             'securityGroupId' => 'getSecurityGroupId',
@@ -272,7 +262,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
-        $this->container['ha'] = isset($data['ha']) ? $data['ha'] : null;
         $this->container['configurationId'] = isset($data['configurationId']) ? $data['configurationId'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
@@ -304,9 +293,6 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
         }
         if ($this->container['availabilityZone'] === null) {
             $invalidProperties[] = "'availabilityZone' can't be null";
-        }
-        if ($this->container['ha'] === null) {
-            $invalidProperties[] = "'ha' can't be null";
         }
             if (!is_null($this->container['port']) && ($this->container['port'] > 9500)) {
                 $invalidProperties[] = "invalid value for 'port', must be smaller than or equal to 9500.";
@@ -435,7 +421,7 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  可用区，≤2个逗号分隔，首个=顶层主AZ。
+    *  可用区，Single模式下为1个，需与顶层主AZ一致。
     *
     * @return string
     */
@@ -447,37 +433,13 @@ class SupabaseInstanceCreateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string $availabilityZone 可用区，≤2个逗号分隔，首个=顶层主AZ。
+    * @param string $availabilityZone 可用区，Single模式下为1个，需与顶层主AZ一致。
     *
     * @return $this
     */
     public function setAvailabilityZone($availabilityZone)
     {
         $this->container['availabilityZone'] = $availabilityZone;
-        return $this;
-    }
-
-    /**
-    * Gets ha
-    *  ha
-    *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\SupabaseHaConfig
-    */
-    public function getHa()
-    {
-        return $this->container['ha'];
-    }
-
-    /**
-    * Sets ha
-    *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\SupabaseHaConfig $ha ha
-    *
-    * @return $this
-    */
-    public function setHa($ha)
-    {
-        $this->container['ha'] = $ha;
         return $this;
     }
 

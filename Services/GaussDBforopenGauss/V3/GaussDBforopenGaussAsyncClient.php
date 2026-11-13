@@ -13016,7 +13016,7 @@ class GaussDBforopenGaussAsyncClient extends Client
     
     public function switchLoggerReplicaAvailabilityZonesAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v3/{project_id}/instances/{instance_id}/switch-logger-replica/availability_zones';
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/switch-logger-replica/availability-zones';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

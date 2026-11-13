@@ -21,22 +21,26 @@ class ListAllTypeInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * entryNames  错误信息条件列表
+    * instances  实例列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'entryNames' => 'string[]'
+            'instances' => '\HuaweiCloud\SDK\Das\V3\Model\DasCommonInstanceDto[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * entryNames  错误信息条件列表
+    * instances  实例列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'entryNames' => null
+        'instances' => null,
+        'totalCount' => 'int64'
     ];
 
     /**
@@ -62,32 +66,38 @@ class ListAllTypeInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * entryNames  错误信息条件列表
+    * instances  实例列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'entryNames' => 'entry_names'
+            'instances' => 'instances',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * entryNames  错误信息条件列表
+    * instances  实例列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
     protected static $setters = [
-            'entryNames' => 'setEntryNames'
+            'instances' => 'setInstances',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * entryNames  错误信息条件列表
+    * instances  实例列表
+    * totalCount  总记录数
     *
     * @var string[]
     */
     protected static $getters = [
-            'entryNames' => 'getEntryNames'
+            'instances' => 'getInstances',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -148,7 +158,8 @@ class ListAllTypeInstancesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['entryNames'] = isset($data['entryNames']) ? $data['entryNames'] : null;
+        $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -174,26 +185,50 @@ class ListAllTypeInstancesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets entryNames
-    *  错误信息条件列表
+    * Gets instances
+    *  实例列表
     *
-    * @return string[]|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\DasCommonInstanceDto[]|null
     */
-    public function getEntryNames()
+    public function getInstances()
     {
-        return $this->container['entryNames'];
+        return $this->container['instances'];
     }
 
     /**
-    * Sets entryNames
+    * Sets instances
     *
-    * @param string[]|null $entryNames 错误信息条件列表
+    * @param \HuaweiCloud\SDK\Das\V3\Model\DasCommonInstanceDto[]|null $instances 实例列表
     *
     * @return $this
     */
-    public function setEntryNames($entryNames)
+    public function setInstances($instances)
     {
-        $this->container['entryNames'] = $entryNames;
+        $this->container['instances'] = $instances;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  总记录数
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 总记录数
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

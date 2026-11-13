@@ -31,7 +31,7 @@ class FeedbackInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
+            'id' => 'int',
             'projectId' => 'string',
             'messageId' => 'string',
             'feedbackGrade' => 'string',
@@ -53,7 +53,7 @@ class FeedbackInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
+        'id' => 'int64',
         'projectId' => null,
         'messageId' => null,
         'feedbackGrade' => null,
@@ -242,7 +242,7 @@ class FeedbackInfo implements ModelInterface, ArrayAccess
     * Gets id
     *  编号
     *
-    * @return string|null
+    * @return int|null
     */
     public function getId()
     {
@@ -252,7 +252,7 @@ class FeedbackInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编号
+    * @param int|null $id 编号
     *
     * @return $this
     */

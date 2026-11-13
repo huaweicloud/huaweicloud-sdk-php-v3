@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\Vpc\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SupabaseHaConfig implements ModelInterface, ArrayAccess
+class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,34 @@ class SupabaseHaConfig implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SupabaseHaConfig';
+    protected static $openAPIModelName = 'BatchCreateTrafficMirrorFilterRulesResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * mode  mode
-    * replicationMode  replicationMode
+    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
+    * pageInfo  pageInfo
+    * requestId  请求ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'mode' => 'string',
-            'replicationMode' => 'string'
+            'trafficMirrorFilterRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Vpc\V3\Model\PageInfo',
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * mode  mode
-    * replicationMode  replicationMode
+    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
+    * pageInfo  pageInfo
+    * requestId  请求ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'mode' => null,
-        'replicationMode' => null
+        'trafficMirrorFilterRules' => null,
+        'pageInfo' => null,
+        'requestId' => null
     ];
 
     /**
@@ -65,38 +70,44 @@ class SupabaseHaConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * mode  mode
-    * replicationMode  replicationMode
+    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
+    * pageInfo  pageInfo
+    * requestId  请求ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'mode' => 'mode',
-            'replicationMode' => 'replication_mode'
+            'trafficMirrorFilterRules' => 'traffic_mirror_filter_rules',
+            'pageInfo' => 'page_info',
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * mode  mode
-    * replicationMode  replicationMode
+    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
+    * pageInfo  pageInfo
+    * requestId  请求ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'mode' => 'setMode',
-            'replicationMode' => 'setReplicationMode'
+            'trafficMirrorFilterRules' => 'setTrafficMirrorFilterRules',
+            'pageInfo' => 'setPageInfo',
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * mode  mode
-    * replicationMode  replicationMode
+    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
+    * pageInfo  pageInfo
+    * requestId  请求ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'mode' => 'getMode',
-            'replicationMode' => 'getReplicationMode'
+            'trafficMirrorFilterRules' => 'getTrafficMirrorFilterRules',
+            'pageInfo' => 'getPageInfo',
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -139,37 +150,7 @@ class SupabaseHaConfig implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const MODE_HA = 'Ha';
-    const MODE_SINGLE = 'Single';
-    const REPLICATION_MODE_ASYNC = 'async';
-    const REPLICATION_MODE_SYNC = 'sync';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getModeAllowableValues()
-    {
-        return [
-            self::MODE_HA,
-            self::MODE_SINGLE,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getReplicationModeAllowableValues()
-    {
-        return [
-            self::REPLICATION_MODE_ASYNC,
-            self::REPLICATION_MODE_SYNC,
-        ];
-    }
 
 
     /**
@@ -187,8 +168,9 @@ class SupabaseHaConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
-        $this->container['replicationMode'] = isset($data['replicationMode']) ? $data['replicationMode'] : null;
+        $this->container['trafficMirrorFilterRules'] = isset($data['trafficMirrorFilterRules']) ? $data['trafficMirrorFilterRules'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -199,22 +181,6 @@ class SupabaseHaConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getModeAllowableValues();
-                if (!is_null($this->container['mode']) && !in_array($this->container['mode'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'mode', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getReplicationModeAllowableValues();
-                if (!is_null($this->container['replicationMode']) && !in_array($this->container['replicationMode'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'replicationMode', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -230,50 +196,74 @@ class SupabaseHaConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets mode
-    *  mode
+    * Gets trafficMirrorFilterRules
+    *  流量镜像筛选条件规则对象
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]|null
     */
-    public function getMode()
+    public function getTrafficMirrorFilterRules()
     {
-        return $this->container['mode'];
+        return $this->container['trafficMirrorFilterRules'];
     }
 
     /**
-    * Sets mode
+    * Sets trafficMirrorFilterRules
     *
-    * @param string|null $mode mode
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]|null $trafficMirrorFilterRules 流量镜像筛选条件规则对象
     *
     * @return $this
     */
-    public function setMode($mode)
+    public function setTrafficMirrorFilterRules($trafficMirrorFilterRules)
     {
-        $this->container['mode'] = $mode;
+        $this->container['trafficMirrorFilterRules'] = $trafficMirrorFilterRules;
         return $this;
     }
 
     /**
-    * Gets replicationMode
-    *  replicationMode
+    * Gets pageInfo
+    *  pageInfo
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null
     */
-    public function getReplicationMode()
+    public function getPageInfo()
     {
-        return $this->container['replicationMode'];
+        return $this->container['pageInfo'];
     }
 
     /**
-    * Sets replicationMode
+    * Sets pageInfo
     *
-    * @param string|null $replicationMode replicationMode
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null $pageInfo pageInfo
     *
     * @return $this
     */
-    public function setReplicationMode($replicationMode)
+    public function setPageInfo($pageInfo)
     {
-        $this->container['replicationMode'] = $replicationMode;
+        $this->container['pageInfo'] = $pageInfo;
+        return $this;
+    }
+
+    /**
+    * Gets requestId
+    *  请求ID
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId 请求ID
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 

@@ -29,8 +29,8 @@ class SlowLogTplContrast implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'templateOfPreDay' => '\HuaweiCloud\SDK\Das\V3\Model\SlowSqlTemplate[]',
-            'templateOfCurDay' => '\HuaweiCloud\SDK\Das\V3\Model\SlowSqlTemplate[]',
+            'templateOfPreDay' => '\HuaweiCloud\SDK\Das\V3\Model\SlowSqlTplTemplate[]',
+            'templateOfCurDay' => '\HuaweiCloud\SDK\Das\V3\Model\SlowSqlTplTemplate[]',
             'executeTimeIncrease' => 'bool',
             'lockWaitIncrease' => 'bool',
             'newTemplate' => 'bool'
@@ -220,7 +220,7 @@ class SlowLogTplContrast implements ModelInterface, ArrayAccess
     * Gets templateOfPreDay
     *  前一日慢日志模板数据列表
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTemplate[]|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTplTemplate[]|null
     */
     public function getTemplateOfPreDay()
     {
@@ -230,7 +230,7 @@ class SlowLogTplContrast implements ModelInterface, ArrayAccess
     /**
     * Sets templateOfPreDay
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTemplate[]|null $templateOfPreDay 前一日慢日志模板数据列表
+    * @param \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTplTemplate[]|null $templateOfPreDay 前一日慢日志模板数据列表
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class SlowLogTplContrast implements ModelInterface, ArrayAccess
     * Gets templateOfCurDay
     *  当日慢日志模板数据列表
     *
-    * @return \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTemplate[]|null
+    * @return \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTplTemplate[]|null
     */
     public function getTemplateOfCurDay()
     {
@@ -254,7 +254,7 @@ class SlowLogTplContrast implements ModelInterface, ArrayAccess
     /**
     * Sets templateOfCurDay
     *
-    * @param \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTemplate[]|null $templateOfCurDay 当日慢日志模板数据列表
+    * @param \HuaweiCloud\SDK\Das\V3\Model\SlowSqlTplTemplate[]|null $templateOfCurDay 当日慢日志模板数据列表
     *
     * @return $this
     */

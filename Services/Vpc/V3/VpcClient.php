@@ -501,6 +501,74 @@ class VpcClient extends Client
     }
 
     /**
+     * 批量创建流量镜像筛选规则
+     *
+     * 批量创建流量镜像筛选规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateTrafficMirrorFilterRules($request)
+    {
+        return $this->batchCreateTrafficMirrorFilterRulesWithHttpInfo($request);
+    }
+
+    public function batchCreateTrafficMirrorFilterRulesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/traffic-mirror-filters/{traffic_mirror_filter_id}/traffic-mirror-filter-rules/batch-create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['trafficMirrorFilterId'] !== null) {
+            $pathParams['traffic_mirror_filter_id'] = $localVarParams['trafficMirrorFilterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateTrafficMirrorFilterRulesResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateTrafficMirrorFilterRulesRequest');
+    }
+
+    /**
      * 批量删除端口资源标签
      *
      * 为指定的端口资源实例批量删除标签。
@@ -2275,6 +2343,86 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortsByTagsResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortsByTagsRequest');
+    }
+
+    /**
+     * 查询资源关联的实例信息列表
+     *
+     * 网卡等资源可以关联高阶服务的资源实例，如ELB，您可以通过此接口查询资源关联的实例信息列表，包括资源和实例的类型、ID和所属的项目ID。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listResourceAssociations($request)
+    {
+        return $this->listResourceAssociationsWithHttpInfo($request);
+    }
+
+    public function listResourceAssociationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/resource-associations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceType'] !== null) {
+            $queryParams['resource_type'] = $localVarParams['resourceType'];
+        }
+        if ($localVarParams['resourceProjectId'] !== null) {
+            $queryParams['resource_project_id'] = $localVarParams['resourceProjectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['instanceType'] !== null) {
+            $queryParams['instance_type'] = $localVarParams['instanceType'];
+        }
+        if ($localVarParams['instanceProjectId'] !== null) {
+            $queryParams['instance_project_id'] = $localVarParams['instanceProjectId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListResourceAssociationsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListResourceAssociationsRequest');
     }
 
     /**
