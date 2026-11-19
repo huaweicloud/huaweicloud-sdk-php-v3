@@ -23,7 +23,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
-    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
@@ -49,7 +49,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
-    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
@@ -96,7 +96,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
-    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
@@ -122,7 +122,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
-    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
@@ -148,7 +148,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  **参数解释**: 企业项目ID，用于过滤不同企业项目下的资产。获取方式请参见[获取企业项目ID](hss_02_0027.xml)。 如需查询所有企业项目下的资产请传参“all_granted_eps”。 **约束限制**: 开通企业项目功能后才需要配置企业项目ID参数。 **取值范围**: 字符长度1-256位 **默认取值**: 0，表示默认企业项目（default）。
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
-    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    * imageType  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * namespace  **参数解释**: 组织名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
@@ -415,7 +415,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    *  **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -427,7 +427,7 @@ class ListImageFilesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像 **默认取值**: 不涉及
+    * @param string $imageType **参数解释**: 镜像类型 **取值范围**: - private_image : 私有镜像仓库 - shared_image : 共享镜像仓库 - instance_image : 企业镜像 - cicd : cicd镜像 - harbor ：Harbor仓库镜像  **默认取值**: 不涉及
     *
     * @return $this
     */

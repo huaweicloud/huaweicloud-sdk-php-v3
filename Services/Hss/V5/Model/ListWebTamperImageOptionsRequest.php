@@ -26,7 +26,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
     * registryType  **参数解释**: 仓库镜像镜像仓类型 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * imageNamespace  **参数解释**: 仓库镜像的组织名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * registryName  **参数解释**: 仓库镜像镜像仓名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
-    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -50,7 +50,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
     * registryType  **参数解释**: 仓库镜像镜像仓类型 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * imageNamespace  **参数解释**: 仓库镜像的组织名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * registryName  **参数解释**: 仓库镜像镜像仓名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
-    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -95,7 +95,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
     * registryType  **参数解释**: 仓库镜像镜像仓类型 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * imageNamespace  **参数解释**: 仓库镜像的组织名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * registryName  **参数解释**: 仓库镜像镜像仓名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
-    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
     * registryType  **参数解释**: 仓库镜像镜像仓类型 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * imageNamespace  **参数解释**: 仓库镜像的组织名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * registryName  **参数解释**: 仓库镜像镜像仓名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
-    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
     * registryType  **参数解释**: 仓库镜像镜像仓类型 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * imageNamespace  **参数解释**: 仓库镜像的组织名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     * registryName  **参数解释**: 仓库镜像镜像仓名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
-    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    * imageType  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     * imageName  **参数解释**: 镜像名称 **约束限制**: 不涉及。 **取值范围**: 字符长度1-512位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -464,7 +464,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    *  **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -476,7 +476,7 @@ class ListWebTamperImageOptionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string $imageType **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。 **默认取值**: 不涉及
+    * @param string $imageType **参数解释**: 查询镜像类型 **约束限制**: 不涉及。 **取值范围**: - registry：仓库镜像。 - local：本地镜像。  **默认取值**: 不涉及
     *
     * @return $this
     */

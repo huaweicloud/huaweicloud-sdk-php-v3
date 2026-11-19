@@ -27,6 +27,9 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
     * scaleOutSwitch  **参数解释**:  增删只读节点开关。  **取值范围**： - true: 开启增删只读节点。 - false: 关闭增删只读节点。
     * maxReadonlyNodeCount  **参数解释**：  最大只读节点个数。  **取值范围**：  ≥2。
     * minReadonlyNodeCount  **参数解释**：  最小只读节点个数。  **取值范围**：  ≥1。
+    * scaleToZero  **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    * idleDurationSeconds  **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    * scaleToZeroStatus  **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
     *
     * @var string[]
     */
@@ -36,7 +39,10 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
             'maxVcpus' => 'string',
             'scaleOutSwitch' => 'bool',
             'maxReadonlyNodeCount' => 'int',
-            'minReadonlyNodeCount' => 'int'
+            'minReadonlyNodeCount' => 'int',
+            'scaleToZero' => 'bool',
+            'idleDurationSeconds' => 'int',
+            'scaleToZeroStatus' => 'string'
     ];
 
     /**
@@ -47,6 +53,9 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
     * scaleOutSwitch  **参数解释**:  增删只读节点开关。  **取值范围**： - true: 开启增删只读节点。 - false: 关闭增删只读节点。
     * maxReadonlyNodeCount  **参数解释**：  最大只读节点个数。  **取值范围**：  ≥2。
     * minReadonlyNodeCount  **参数解释**：  最小只读节点个数。  **取值范围**：  ≥1。
+    * scaleToZero  **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    * idleDurationSeconds  **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    * scaleToZeroStatus  **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
     *
     * @var string[]
     */
@@ -56,7 +65,10 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
         'maxVcpus' => null,
         'scaleOutSwitch' => null,
         'maxReadonlyNodeCount' => null,
-        'minReadonlyNodeCount' => null
+        'minReadonlyNodeCount' => null,
+        'scaleToZero' => null,
+        'idleDurationSeconds' => null,
+        'scaleToZeroStatus' => null
     ];
 
     /**
@@ -88,6 +100,9 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
     * scaleOutSwitch  **参数解释**:  增删只读节点开关。  **取值范围**： - true: 开启增删只读节点。 - false: 关闭增删只读节点。
     * maxReadonlyNodeCount  **参数解释**：  最大只读节点个数。  **取值范围**：  ≥2。
     * minReadonlyNodeCount  **参数解释**：  最小只读节点个数。  **取值范围**：  ≥1。
+    * scaleToZero  **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    * idleDurationSeconds  **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    * scaleToZeroStatus  **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
     *
     * @var string[]
     */
@@ -97,7 +112,10 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
             'maxVcpus' => 'max_vcpus',
             'scaleOutSwitch' => 'scale_out_switch',
             'maxReadonlyNodeCount' => 'max_readonly_node_count',
-            'minReadonlyNodeCount' => 'min_readonly_node_count'
+            'minReadonlyNodeCount' => 'min_readonly_node_count',
+            'scaleToZero' => 'scale_to_zero',
+            'idleDurationSeconds' => 'idle_duration_seconds',
+            'scaleToZeroStatus' => 'scale_to_zero_status'
     ];
 
     /**
@@ -108,6 +126,9 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
     * scaleOutSwitch  **参数解释**:  增删只读节点开关。  **取值范围**： - true: 开启增删只读节点。 - false: 关闭增删只读节点。
     * maxReadonlyNodeCount  **参数解释**：  最大只读节点个数。  **取值范围**：  ≥2。
     * minReadonlyNodeCount  **参数解释**：  最小只读节点个数。  **取值范围**：  ≥1。
+    * scaleToZero  **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    * idleDurationSeconds  **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    * scaleToZeroStatus  **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
     *
     * @var string[]
     */
@@ -117,7 +138,10 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
             'maxVcpus' => 'setMaxVcpus',
             'scaleOutSwitch' => 'setScaleOutSwitch',
             'maxReadonlyNodeCount' => 'setMaxReadonlyNodeCount',
-            'minReadonlyNodeCount' => 'setMinReadonlyNodeCount'
+            'minReadonlyNodeCount' => 'setMinReadonlyNodeCount',
+            'scaleToZero' => 'setScaleToZero',
+            'idleDurationSeconds' => 'setIdleDurationSeconds',
+            'scaleToZeroStatus' => 'setScaleToZeroStatus'
     ];
 
     /**
@@ -128,6 +152,9 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
     * scaleOutSwitch  **参数解释**:  增删只读节点开关。  **取值范围**： - true: 开启增删只读节点。 - false: 关闭增删只读节点。
     * maxReadonlyNodeCount  **参数解释**：  最大只读节点个数。  **取值范围**：  ≥2。
     * minReadonlyNodeCount  **参数解释**：  最小只读节点个数。  **取值范围**：  ≥1。
+    * scaleToZero  **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    * idleDurationSeconds  **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    * scaleToZeroStatus  **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
     *
     * @var string[]
     */
@@ -137,7 +164,10 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
             'maxVcpus' => 'getMaxVcpus',
             'scaleOutSwitch' => 'getScaleOutSwitch',
             'maxReadonlyNodeCount' => 'getMaxReadonlyNodeCount',
-            'minReadonlyNodeCount' => 'getMinReadonlyNodeCount'
+            'minReadonlyNodeCount' => 'getMinReadonlyNodeCount',
+            'scaleToZero' => 'getScaleToZero',
+            'idleDurationSeconds' => 'getIdleDurationSeconds',
+            'scaleToZeroStatus' => 'getScaleToZeroStatus'
     ];
 
     /**
@@ -204,6 +234,9 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
         $this->container['scaleOutSwitch'] = isset($data['scaleOutSwitch']) ? $data['scaleOutSwitch'] : null;
         $this->container['maxReadonlyNodeCount'] = isset($data['maxReadonlyNodeCount']) ? $data['maxReadonlyNodeCount'] : null;
         $this->container['minReadonlyNodeCount'] = isset($data['minReadonlyNodeCount']) ? $data['minReadonlyNodeCount'] : null;
+        $this->container['scaleToZero'] = isset($data['scaleToZero']) ? $data['scaleToZero'] : null;
+        $this->container['idleDurationSeconds'] = isset($data['idleDurationSeconds']) ? $data['idleDurationSeconds'] : null;
+        $this->container['scaleToZeroStatus'] = isset($data['scaleToZeroStatus']) ? $data['scaleToZeroStatus'] : null;
     }
 
     /**
@@ -369,6 +402,78 @@ class ShowServerlessComputeAbilityPolicyResponse implements ModelInterface, Arra
     public function setMinReadonlyNodeCount($minReadonlyNodeCount)
     {
         $this->container['minReadonlyNodeCount'] = $minReadonlyNodeCount;
+        return $this;
+    }
+
+    /**
+    * Gets scaleToZero
+    *  **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    *
+    * @return bool|null
+    */
+    public function getScaleToZero()
+    {
+        return $this->container['scaleToZero'];
+    }
+
+    /**
+    * Sets scaleToZero
+    *
+    * @param bool|null $scaleToZero **参数解释**：  Scale to Zero开关。  **取值范围**： - true: 开启Scale to Zero。 - false: 关闭Scale to Zero。
+    *
+    * @return $this
+    */
+    public function setScaleToZero($scaleToZero)
+    {
+        $this->container['scaleToZero'] = $scaleToZero;
+        return $this;
+    }
+
+    /**
+    * Gets idleDurationSeconds
+    *  **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    *
+    * @return int|null
+    */
+    public function getIdleDurationSeconds()
+    {
+        return $this->container['idleDurationSeconds'];
+    }
+
+    /**
+    * Sets idleDurationSeconds
+    *
+    * @param int|null $idleDurationSeconds **参数解释**：  空闲持续时长阈值，单位是秒。  所有节点活跃连接数为0且持续达到该阈值时触发Scale to Zero（停止计算计费）。  **取值范围**：  300-3600。
+    *
+    * @return $this
+    */
+    public function setIdleDurationSeconds($idleDurationSeconds)
+    {
+        $this->container['idleDurationSeconds'] = $idleDurationSeconds;
+        return $this;
+    }
+
+    /**
+    * Gets scaleToZeroStatus
+    *  **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
+    *
+    * @return string|null
+    */
+    public function getScaleToZeroStatus()
+    {
+        return $this->container['scaleToZeroStatus'];
+    }
+
+    /**
+    * Sets scaleToZeroStatus
+    *
+    * @param string|null $scaleToZeroStatus **参数解释**：  Scale to Zero开启后实例的运行状态。  **取值范围**： - ACTIVE：实例已唤醒，正常计费。 - SCALED_TO_ZERO：计算资源停止计费。
+    *
+    * @return $this
+    */
+    public function setScaleToZeroStatus($scaleToZeroStatus)
+    {
+        $this->container['scaleToZeroStatus'] = $scaleToZeroStatus;
         return $this;
     }
 

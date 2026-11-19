@@ -27,6 +27,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * periodWithLoginFailures  限定时间长度（分钟），取值范围[15,60]。
     * sessionTimeout  登录会话失效时间，取值范围[15,1440]。
     * showRecentLoginInfo  显示最近一次的登录信息。取值范围true或false。
+    * allowSmsLogin  允许账号短信登录。取值范围true或false。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
             'loginFailedTimes' => 'int',
             'periodWithLoginFailures' => 'int',
             'sessionTimeout' => 'int',
-            'showRecentLoginInfo' => 'bool'
+            'showRecentLoginInfo' => 'bool',
+            'allowSmsLogin' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * periodWithLoginFailures  限定时间长度（分钟），取值范围[15,60]。
     * sessionTimeout  登录会话失效时间，取值范围[15,1440]。
     * showRecentLoginInfo  显示最近一次的登录信息。取值范围true或false。
+    * allowSmsLogin  允许账号短信登录。取值范围true或false。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
         'loginFailedTimes' => null,
         'periodWithLoginFailures' => 'int32',
         'sessionTimeout' => null,
-        'showRecentLoginInfo' => null
+        'showRecentLoginInfo' => null,
+        'allowSmsLogin' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * periodWithLoginFailures  限定时间长度（分钟），取值范围[15,60]。
     * sessionTimeout  登录会话失效时间，取值范围[15,1440]。
     * showRecentLoginInfo  显示最近一次的登录信息。取值范围true或false。
+    * allowSmsLogin  允许账号短信登录。取值范围true或false。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
             'loginFailedTimes' => 'login_failed_times',
             'periodWithLoginFailures' => 'period_with_login_failures',
             'sessionTimeout' => 'session_timeout',
-            'showRecentLoginInfo' => 'show_recent_login_info'
+            'showRecentLoginInfo' => 'show_recent_login_info',
+            'allowSmsLogin' => 'allow_sms_login'
     ];
 
     /**
@@ -114,6 +120,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * periodWithLoginFailures  限定时间长度（分钟），取值范围[15,60]。
     * sessionTimeout  登录会话失效时间，取值范围[15,1440]。
     * showRecentLoginInfo  显示最近一次的登录信息。取值范围true或false。
+    * allowSmsLogin  允许账号短信登录。取值范围true或false。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
             'loginFailedTimes' => 'setLoginFailedTimes',
             'periodWithLoginFailures' => 'setPeriodWithLoginFailures',
             'sessionTimeout' => 'setSessionTimeout',
-            'showRecentLoginInfo' => 'setShowRecentLoginInfo'
+            'showRecentLoginInfo' => 'setShowRecentLoginInfo',
+            'allowSmsLogin' => 'setAllowSmsLogin'
     ];
 
     /**
@@ -136,6 +144,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     * periodWithLoginFailures  限定时间长度（分钟），取值范围[15,60]。
     * sessionTimeout  登录会话失效时间，取值范围[15,1440]。
     * showRecentLoginInfo  显示最近一次的登录信息。取值范围true或false。
+    * allowSmsLogin  允许账号短信登录。取值范围true或false。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
             'loginFailedTimes' => 'getLoginFailedTimes',
             'periodWithLoginFailures' => 'getPeriodWithLoginFailures',
             'sessionTimeout' => 'getSessionTimeout',
-            'showRecentLoginInfo' => 'getShowRecentLoginInfo'
+            'showRecentLoginInfo' => 'getShowRecentLoginInfo',
+            'allowSmsLogin' => 'getAllowSmsLogin'
     ];
 
     /**
@@ -214,6 +224,7 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
         $this->container['periodWithLoginFailures'] = isset($data['periodWithLoginFailures']) ? $data['periodWithLoginFailures'] : null;
         $this->container['sessionTimeout'] = isset($data['sessionTimeout']) ? $data['sessionTimeout'] : null;
         $this->container['showRecentLoginInfo'] = isset($data['showRecentLoginInfo']) ? $data['showRecentLoginInfo'] : null;
+        $this->container['allowSmsLogin'] = isset($data['allowSmsLogin']) ? $data['allowSmsLogin'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class LoginPolicyOption implements ModelInterface, ArrayAccess
     public function setShowRecentLoginInfo($showRecentLoginInfo)
     {
         $this->container['showRecentLoginInfo'] = $showRecentLoginInfo;
+        return $this;
+    }
+
+    /**
+    * Gets allowSmsLogin
+    *  允许账号短信登录。取值范围true或false。
+    *
+    * @return bool|null
+    */
+    public function getAllowSmsLogin()
+    {
+        return $this->container['allowSmsLogin'];
+    }
+
+    /**
+    * Sets allowSmsLogin
+    *
+    * @param bool|null $allowSmsLogin 允许账号短信登录。取值范围true或false。
+    *
+    * @return $this
+    */
+    public function setAllowSmsLogin($allowSmsLogin)
+    {
+        $this->container['allowSmsLogin'] = $allowSmsLogin;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
     * operateAll  若为true全量查询，可筛选条件全部查询
     * vulType  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     * handleStatus  漏洞处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     * imageName  镜像名称
     * imageVersion  镜像版本
     * imageSize  镜像大小
@@ -60,7 +60,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
     * operateAll  若为true全量查询，可筛选条件全部查询
     * vulType  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     * handleStatus  漏洞处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     * imageName  镜像名称
     * imageVersion  镜像版本
     * imageSize  镜像大小
@@ -117,7 +117,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
     * operateAll  若为true全量查询，可筛选条件全部查询
     * vulType  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     * handleStatus  漏洞处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     * imageName  镜像名称
     * imageVersion  镜像版本
     * imageSize  镜像大小
@@ -153,7 +153,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
     * operateAll  若为true全量查询，可筛选条件全部查询
     * vulType  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     * handleStatus  漏洞处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     * imageName  镜像名称
     * imageVersion  镜像版本
     * imageSize  镜像大小
@@ -189,7 +189,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
     * operateAll  若为true全量查询，可筛选条件全部查询
     * vulType  漏洞类型，包含如下：   -linux_vul : linux漏洞   -app_vul : 应用漏洞
     * handleStatus  漏洞处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
-    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    * scanStatus  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     * imageName  镜像名称
     * imageVersion  镜像版本
     * imageSize  镜像大小
@@ -488,7 +488,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanStatus
-    *  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    *  **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class BatchExportLocalVulInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。 **默认取值**: 不涉及
+    * @param string|null $scanStatus **参数解释**: 扫描状态 **约束限制**: 不涉及 **取值范围**:   - unscan : 未扫描。   - success : 扫描完成。   - scanning : 扫描中。   - failed : 扫描失败。   - download_failed : 下载失败。   - image_oversized : 镜像超大。   - waiting_for_scan : 等待扫描。   - image_scan_stop : 扫描终止。  **默认取值**: 不涉及
     *
     * @return $this
     */

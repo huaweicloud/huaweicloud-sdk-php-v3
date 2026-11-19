@@ -21,21 +21,25 @@ class TaurusRestartInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * delay  实例是否延迟重启，默认false，立即重启。  - true: 延迟重启，实例将在运维时间窗内自动重启。 - false: 立即重启。
+    * maxConnections  **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'delay' => 'bool'
+            'delay' => 'bool',
+            'maxConnections' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * delay  实例是否延迟重启，默认false，立即重启。  - true: 延迟重启，实例将在运维时间窗内自动重启。 - false: 立即重启。
+    * maxConnections  **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'delay' => null
+        'delay' => null,
+        'maxConnections' => 'int32'
     ];
 
     /**
@@ -62,31 +66,37 @@ class TaurusRestartInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * delay  实例是否延迟重启，默认false，立即重启。  - true: 延迟重启，实例将在运维时间窗内自动重启。 - false: 立即重启。
+    * maxConnections  **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'delay' => 'delay'
+            'delay' => 'delay',
+            'maxConnections' => 'max_connections'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * delay  实例是否延迟重启，默认false，立即重启。  - true: 延迟重启，实例将在运维时间窗内自动重启。 - false: 立即重启。
+    * maxConnections  **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
-            'delay' => 'setDelay'
+            'delay' => 'setDelay',
+            'maxConnections' => 'setMaxConnections'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * delay  实例是否延迟重启，默认false，立即重启。  - true: 延迟重启，实例将在运维时间窗内自动重启。 - false: 立即重启。
+    * maxConnections  **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
-            'delay' => 'getDelay'
+            'delay' => 'getDelay',
+            'maxConnections' => 'getMaxConnections'
     ];
 
     /**
@@ -148,6 +158,7 @@ class TaurusRestartInstanceRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
+        $this->container['maxConnections'] = isset($data['maxConnections']) ? $data['maxConnections'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class TaurusRestartInstanceRequest implements ModelInterface, ArrayAccess
     public function setDelay($delay)
     {
         $this->container['delay'] = $delay;
+        return $this;
+    }
+
+    /**
+    * Gets maxConnections
+    *  **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getMaxConnections()
+    {
+        return $this->container['maxConnections'];
+    }
+
+    /**
+    * Sets maxConnections
+    *
+    * @param int|null $maxConnections **参数解释**：  实例重启后生效的max_connections内核参数配置值。max_connections用于设置允许同时连接到数据库实例的最大客户端连接数。  **约束限制**：  不涉及。  **取值范围**： 30-100000。  **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setMaxConnections($maxConnections)
+    {
+        $this->container['maxConnections'] = $maxConnections;
         return $this;
     }
 

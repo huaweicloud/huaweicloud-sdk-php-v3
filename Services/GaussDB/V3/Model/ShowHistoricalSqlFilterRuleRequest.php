@@ -24,6 +24,8 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in07，长度为36个字符。  **默认取值**：  不涉及。
     * nodeId  **参数解释**：  节点ID，此参数是节点的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     * sqlType  **参数解释**：  SQL限流类型。  **约束限制**：  不涉及。  **取值范围**：  - SELECT：查询语句。 - UPDATE：更新语句。 - DELETE：删除语句。 - INSERT：插入语句。  **默认取值**：  不传则默认查询所有类型的限流规则。
+    * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    * limit  **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'string',
             'instanceId' => 'string',
             'nodeId' => 'string',
-            'sqlType' => 'string'
+            'sqlType' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in07，长度为36个字符。  **默认取值**：  不涉及。
     * nodeId  **参数解释**：  节点ID，此参数是节点的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     * sqlType  **参数解释**：  SQL限流类型。  **约束限制**：  不涉及。  **取值范围**：  - SELECT：查询语句。 - UPDATE：更新语句。 - DELETE：删除语句。 - INSERT：插入语句。  **默认取值**：  不传则默认查询所有类型的限流规则。
+    * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    * limit  **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
         'xLanguage' => null,
         'instanceId' => null,
         'nodeId' => null,
-        'sqlType' => null
+        'sqlType' => null,
+        'offset' => 'int32',
+        'limit' => 'int32'
     ];
 
     /**
@@ -77,6 +85,8 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in07，长度为36个字符。  **默认取值**：  不涉及。
     * nodeId  **参数解释**：  节点ID，此参数是节点的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     * sqlType  **参数解释**：  SQL限流类型。  **约束限制**：  不涉及。  **取值范围**：  - SELECT：查询语句。 - UPDATE：更新语句。 - DELETE：删除语句。 - INSERT：插入语句。  **默认取值**：  不传则默认查询所有类型的限流规则。
+    * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    * limit  **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'X-Language',
             'instanceId' => 'instance_id',
             'nodeId' => 'node_id',
-            'sqlType' => 'sql_type'
+            'sqlType' => 'sql_type',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in07，长度为36个字符。  **默认取值**：  不涉及。
     * nodeId  **参数解释**：  节点ID，此参数是节点的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     * sqlType  **参数解释**：  SQL限流类型。  **约束限制**：  不涉及。  **取值范围**：  - SELECT：查询语句。 - UPDATE：更新语句。 - DELETE：删除语句。 - INSERT：插入语句。  **默认取值**：  不传则默认查询所有类型的限流规则。
+    * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    * limit  **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'setXLanguage',
             'instanceId' => 'setInstanceId',
             'nodeId' => 'setNodeId',
-            'sqlType' => 'setSqlType'
+            'sqlType' => 'setSqlType',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**：  实例ID，此参数是实例的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，后缀为in07，长度为36个字符。  **默认取值**：  不涉及。
     * nodeId  **参数解释**：  节点ID，此参数是节点的唯一标识。  **约束限制**：  不涉及。  **取值范围**：  只能由英文字母、数字组成，前面为UUID，后缀为no07，长度为36个字符。  **默认取值**：  不涉及。
     * sqlType  **参数解释**：  SQL限流类型。  **约束限制**：  不涉及。  **取值范围**：  - SELECT：查询语句。 - UPDATE：更新语句。 - DELETE：删除语句。 - INSERT：插入语句。  **默认取值**：  不传则默认查询所有类型的限流规则。
+    * offset  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    * limit  **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
             'xLanguage' => 'getXLanguage',
             'instanceId' => 'getInstanceId',
             'nodeId' => 'getNodeId',
-            'sqlType' => 'getSqlType'
+            'sqlType' => 'getSqlType',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
         $this->container['sqlType'] = isset($data['sqlType']) ? $data['sqlType'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -197,6 +219,12 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
         if ($this->container['nodeId'] === null) {
             $invalidProperties[] = "'nodeId' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -304,6 +332,54 @@ class ShowHistoricalSqlFilterRuleRequest implements ModelInterface, ArrayAccess
     public function setSqlType($sqlType)
     {
         $this->container['sqlType'] = $sqlType;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset **参数解释**：  索引位置，偏移量。从第一条数据偏移offset条数据后开始查询。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  ≥0。  **默认取值**：  0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**：  查询记录数。  **约束限制**：  必须为整数，不能为负数。  **取值范围**：  1-100。  **默认取值**：  100。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

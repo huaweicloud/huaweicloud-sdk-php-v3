@@ -24,7 +24,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 必填 **取值范围**: 最小值0，最大值2000000 **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 必填 **取值范围**: 最小值0，最大值2000000 **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 必填 **取值范围**: 最小值0，最大值2000000 **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 必填 **取值范围**: 最小值0，最大值2000000 **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 必填 **取值范围**: 最小值0，最大值2000000 **默认取值**: 0
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  策略名称
-    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -356,7 +356,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    *  **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class ListAntiVirusPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string|null $scanType **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描 **默认取值**: 不涉及
+    * @param string|null $scanType **参数解释**: 任务类型 **约束限制**: 不涉及 **取值范围**: - quick ：快速扫描 - full：全盘扫描 - custom : 自定义扫描  **默认取值**: 不涉及
     *
     * @return $this
     */

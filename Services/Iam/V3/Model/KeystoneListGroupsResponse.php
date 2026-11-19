@@ -23,24 +23,28 @@ class KeystoneListGroupsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groups  用户组信息列表。
     * links  links
+    * totalNumber  满足查询条件的用户组总数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'groups' => '\HuaweiCloud\SDK\Iam\V3\Model\KeystoneGroupResult[]',
-            'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links'
+            'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links',
+            'totalNumber' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groups  用户组信息列表。
     * links  links
+    * totalNumber  满足查询条件的用户组总数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'groups' => null,
-        'links' => null
+        'links' => null,
+        'totalNumber' => 'int32'
     ];
 
     /**
@@ -68,36 +72,42 @@ class KeystoneListGroupsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groups  用户组信息列表。
     * links  links
+    * totalNumber  满足查询条件的用户组总数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'groups' => 'groups',
-            'links' => 'links'
+            'links' => 'links',
+            'totalNumber' => 'total_number'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groups  用户组信息列表。
     * links  links
+    * totalNumber  满足查询条件的用户组总数。
     *
     * @var string[]
     */
     protected static $setters = [
             'groups' => 'setGroups',
-            'links' => 'setLinks'
+            'links' => 'setLinks',
+            'totalNumber' => 'setTotalNumber'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groups  用户组信息列表。
     * links  links
+    * totalNumber  满足查询条件的用户组总数。
     *
     * @var string[]
     */
     protected static $getters = [
             'groups' => 'getGroups',
-            'links' => 'getLinks'
+            'links' => 'getLinks',
+            'totalNumber' => 'getTotalNumber'
     ];
 
     /**
@@ -160,6 +170,7 @@ class KeystoneListGroupsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['totalNumber'] = isset($data['totalNumber']) ? $data['totalNumber'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class KeystoneListGroupsResponse implements ModelInterface, ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+        return $this;
+    }
+
+    /**
+    * Gets totalNumber
+    *  满足查询条件的用户组总数。
+    *
+    * @return int|null
+    */
+    public function getTotalNumber()
+    {
+        return $this->container['totalNumber'];
+    }
+
+    /**
+    * Sets totalNumber
+    *
+    * @param int|null $totalNumber 满足查询条件的用户组总数。
+    *
+    * @return $this
+    */
+    public function setTotalNumber($totalNumber)
+    {
+        $this->container['totalNumber'] = $totalNumber;
         return $this;
     }
 

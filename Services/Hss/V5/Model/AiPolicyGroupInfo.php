@@ -22,7 +22,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度1-20位
     * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
-    * groupType  **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    * groupType  **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     * projectId  项目ID
     * protectionObject  **参数解释**： 防护对象 **取值范围**： 字符长度1-128位
     * objectType  **参数解释**: 防护对象类型 **取值范围**: - 0：云服务 - 1：三方
@@ -62,7 +62,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度1-20位
     * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
-    * groupType  **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    * groupType  **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     * projectId  项目ID
     * protectionObject  **参数解释**： 防护对象 **取值范围**： 字符长度1-128位
     * objectType  **参数解释**: 防护对象类型 **取值范围**: - 0：云服务 - 1：三方
@@ -123,7 +123,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度1-20位
     * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
-    * groupType  **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    * groupType  **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     * projectId  项目ID
     * protectionObject  **参数解释**： 防护对象 **取值范围**： 字符长度1-128位
     * objectType  **参数解释**: 防护对象类型 **取值范围**: - 0：云服务 - 1：三方
@@ -163,7 +163,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度1-20位
     * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
-    * groupType  **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    * groupType  **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     * projectId  项目ID
     * protectionObject  **参数解释**： 防护对象 **取值范围**： 字符长度1-128位
     * objectType  **参数解释**: 防护对象类型 **取值范围**: - 0：云服务 - 1：三方
@@ -203,7 +203,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  **参数解释**： 策略组ID **取值范围**： 字符长度1-20位
     * groupName  **参数解释**: 策略组名称 **取值范围**: 字符长度1-128位
-    * groupType  **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    * groupType  **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     * projectId  项目ID
     * protectionObject  **参数解释**： 防护对象 **取值范围**： 字符长度1-128位
     * objectType  **参数解释**: 防护对象类型 **取值范围**: - 0：云服务 - 1：三方
@@ -420,7 +420,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupType
-    *  **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    *  **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     *
     * @return int|null
     */
@@ -432,7 +432,7 @@ class AiPolicyGroupInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupType
     *
-    * @param int|null $groupType **参数解释**： 策略组ID **取值范围**： 最小值0，最大值2147483647
+    * @param int|null $groupType **参数解释**： 策略组类型 **取值范围**： - 0：Agent运行时防护-OfficeAce - 1：Agent行为轨迹检测-OfficeAce - 2：Agent角色限定 - 3：Agent运行时防护-AgentArts - 4：Agent行为轨迹检测-AgentArts - 5：Agent运行时防护-OpenClaw - 6：Agent运行时防护-其他三方Claw
     *
     * @return $this
     */

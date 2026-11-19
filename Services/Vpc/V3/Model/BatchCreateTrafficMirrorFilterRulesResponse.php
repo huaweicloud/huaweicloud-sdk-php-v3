@@ -21,29 +21,25 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
-    * pageInfo  pageInfo
-    * requestId  请求ID
+    * trafficMirrorFilterRules  **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'trafficMirrorFilterRules' => '\HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]',
-            'pageInfo' => '\HuaweiCloud\SDK\Vpc\V3\Model\PageInfo',
             'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
-    * pageInfo  pageInfo
-    * requestId  请求ID
+    * trafficMirrorFilterRules  **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'trafficMirrorFilterRules' => null,
-        'pageInfo' => null,
         'requestId' => null
     ];
 
@@ -70,43 +66,37 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
-    * pageInfo  pageInfo
-    * requestId  请求ID
+    * trafficMirrorFilterRules  **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'trafficMirrorFilterRules' => 'traffic_mirror_filter_rules',
-            'pageInfo' => 'page_info',
             'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
-    * pageInfo  pageInfo
-    * requestId  请求ID
+    * trafficMirrorFilterRules  **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'trafficMirrorFilterRules' => 'setTrafficMirrorFilterRules',
-            'pageInfo' => 'setPageInfo',
             'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * trafficMirrorFilterRules  流量镜像筛选条件规则对象
-    * pageInfo  pageInfo
-    * requestId  请求ID
+    * trafficMirrorFilterRules  **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
+    * requestId  **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'trafficMirrorFilterRules' => 'getTrafficMirrorFilterRules',
-            'pageInfo' => 'getPageInfo',
             'requestId' => 'getRequestId'
     ];
 
@@ -169,7 +159,6 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
     public function __construct(array $data = null)
     {
         $this->container['trafficMirrorFilterRules'] = isset($data['trafficMirrorFilterRules']) ? $data['trafficMirrorFilterRules'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
@@ -197,7 +186,7 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
 
     /**
     * Gets trafficMirrorFilterRules
-    *  流量镜像筛选条件规则对象
+    *  **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
     *
     * @return \HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]|null
     */
@@ -209,7 +198,7 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
     /**
     * Sets trafficMirrorFilterRules
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]|null $trafficMirrorFilterRules 流量镜像筛选条件规则对象
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\TrafficMirrorFilterRule[]|null $trafficMirrorFilterRules **参数解释**： 流量镜像筛选规则列表的响应体。 **取值范围**： 不涉及。
     *
     * @return $this
     */
@@ -220,32 +209,8 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
     }
 
     /**
-    * Gets pageInfo
-    *  pageInfo
-    *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null
-    */
-    public function getPageInfo()
-    {
-        return $this->container['pageInfo'];
-    }
-
-    /**
-    * Sets pageInfo
-    *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\PageInfo|null $pageInfo pageInfo
-    *
-    * @return $this
-    */
-    public function setPageInfo($pageInfo)
-    {
-        $this->container['pageInfo'] = $pageInfo;
-        return $this;
-    }
-
-    /**
     * Gets requestId
-    *  请求ID
+    *  **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @return string|null
     */
@@ -257,7 +222,7 @@ class BatchCreateTrafficMirrorFilterRulesResponse implements ModelInterface, Arr
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID
+    * @param string|null $requestId **参数解释**： 请求ID。 **取值范围**： 不涉及。
     *
     * @return $this
     */

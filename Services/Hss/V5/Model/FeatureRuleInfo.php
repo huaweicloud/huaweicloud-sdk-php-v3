@@ -23,7 +23,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureId  检测特性规则ID
     * chkFeatureName  检测特性规则标识
     * chkFeatureDesc  检测特性规则描述
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     * featureConfigure  检测特性规则配置信息
     * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
@@ -47,7 +47,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureId  检测特性规则ID
     * chkFeatureName  检测特性规则标识
     * chkFeatureDesc  检测特性规则描述
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     * featureConfigure  检测特性规则配置信息
     * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
@@ -92,7 +92,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureId  检测特性规则ID
     * chkFeatureName  检测特性规则标识
     * chkFeatureDesc  检测特性规则描述
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     * featureConfigure  检测特性规则配置信息
     * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
@@ -116,7 +116,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureId  检测特性规则ID
     * chkFeatureName  检测特性规则标识
     * chkFeatureDesc  检测特性规则描述
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     * featureConfigure  检测特性规则配置信息
     * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
@@ -140,7 +140,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     * chkFeatureId  检测特性规则ID
     * chkFeatureName  检测特性规则标识
     * chkFeatureDesc  检测特性规则描述
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     * featureConfigure  检测特性规则配置信息
     * optionalProtectiveAction  可选防护动作，包含如下 -1 检测 -2 检测并阻断/拦截 -3 都可以
     * protectiveAction  默认防护动作，包含如下 -1 检测 -2 检测并阻断/拦截
@@ -374,7 +374,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -386,7 +386,7 @@ class FeatureRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * @param string|null $osType **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return $this
     */

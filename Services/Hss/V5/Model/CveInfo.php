@@ -20,10 +20,10 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * cveId  **参数解释** CVE id **取值范围** 字符长度0-128位
-    * cvssScore  **参数解释** CVSS分数 **取值范围** 取值0-100
-    * publishTime  **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
-    * description  **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    * cveId  **参数解释**: CVE id **取值范围**: 字符长度0-64位
+    * cvssScore  **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
+    * publishTime  **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
+    * description  **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * cveId  **参数解释** CVE id **取值范围** 字符长度0-128位
-    * cvssScore  **参数解释** CVSS分数 **取值范围** 取值0-100
-    * publishTime  **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
-    * description  **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    * cveId  **参数解释**: CVE id **取值范围**: 字符长度0-64位
+    * cvssScore  **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
+    * publishTime  **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
+    * description  **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CveInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * cveId  **参数解释** CVE id **取值范围** 字符长度0-128位
-    * cvssScore  **参数解释** CVSS分数 **取值范围** 取值0-100
-    * publishTime  **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
-    * description  **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    * cveId  **参数解释**: CVE id **取值范围**: 字符长度0-64位
+    * cvssScore  **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
+    * publishTime  **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
+    * description  **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * cveId  **参数解释** CVE id **取值范围** 字符长度0-128位
-    * cvssScore  **参数解释** CVSS分数 **取值范围** 取值0-100
-    * publishTime  **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
-    * description  **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    * cveId  **参数解释**: CVE id **取值范围**: 字符长度0-64位
+    * cvssScore  **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
+    * publishTime  **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
+    * description  **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * cveId  **参数解释** CVE id **取值范围** 字符长度0-128位
-    * cvssScore  **参数解释** CVSS分数 **取值范围** 取值0-100
-    * publishTime  **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
-    * description  **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    * cveId  **参数解释**: CVE id **取值范围**: 字符长度0-64位
+    * cvssScore  **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
+    * publishTime  **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
+    * description  **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @var string[]
     */
@@ -191,26 +191,26 @@ class CveInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'cveId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'cveId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['cveId']) && (mb_strlen($this->container['cveId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'cveId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['cvssScore']) && ($this->container['cvssScore'] > 1E+2)) {
-                $invalidProperties[] = "invalid value for 'cvssScore', must be smaller than or equal to 1E+2.";
+            if (!is_null($this->container['cvssScore']) && ($this->container['cvssScore'] > 1E+1)) {
+                $invalidProperties[] = "invalid value for 'cvssScore', must be smaller than or equal to 1E+1.";
             }
             if (!is_null($this->container['cvssScore']) && ($this->container['cvssScore'] < 0)) {
                 $invalidProperties[] = "invalid value for 'cvssScore', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['publishTime']) && ($this->container['publishTime'] > 3857960855552)) {
-                $invalidProperties[] = "invalid value for 'publishTime', must be smaller than or equal to 3857960855552.";
+            if (!is_null($this->container['publishTime']) && ($this->container['publishTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'publishTime', must be smaller than or equal to 9223372036854775807.";
             }
             if (!is_null($this->container['publishTime']) && ($this->container['publishTime'] < 0)) {
                 $invalidProperties[] = "invalid value for 'publishTime', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 256)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 4096.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
@@ -231,7 +231,7 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cveId
-    *  **参数解释** CVE id **取值范围** 字符长度0-128位
+    *  **参数解释**: CVE id **取值范围**: 字符长度0-64位
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class CveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cveId
     *
-    * @param string|null $cveId **参数解释** CVE id **取值范围** 字符长度0-128位
+    * @param string|null $cveId **参数解释**: CVE id **取值范围**: 字符长度0-64位
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cvssScore
-    *  **参数解释** CVSS分数 **取值范围** 取值0-100
+    *  **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
     *
     * @return float|null
     */
@@ -267,7 +267,7 @@ class CveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cvssScore
     *
-    * @param float|null $cvssScore **参数解释** CVSS分数 **取值范围** 取值0-100
+    * @param float|null $cvssScore **参数解释**: CVSS分数 **取值范围**: 最小值0，最大值10
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publishTime
-    *  **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
+    *  **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class CveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publishTime
     *
-    * @param int|null $publishTime **参数解释** CVE公布时间，时间单位：毫秒（ms） **取值范围** 取值0-3857960855552
+    * @param int|null $publishTime **参数解释**: CVE公布时间，毫秒级时间戳 **取值范围**: 最小值0，最大值9223372036854775807
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class CveInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    *  **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class CveInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释** CVE描述 **取值范围** 字符长度0-256位
+    * @param string|null $description **参数解释**: CVE描述 **取值范围**: 字符长度0-4096位
     *
     * @return $this
     */

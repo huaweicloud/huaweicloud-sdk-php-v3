@@ -7,9 +7,8 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListCceClusterDetectRiskResponse implements ModelInterface, ArrayAccess
+class DisplayNameRes implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,24 @@ class ListCceClusterDetectRiskResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListCceClusterDetectRiskResponse';
+    protected static $openAPIModelName = 'DisplayNameRes';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalNum  集群总数
-    * dataList  集群信息列表
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalNum' => 'int',
-            'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\NodeDetectRiskResponseInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalNum  集群总数
-    * dataList  集群信息列表
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalNum' => null,
-        'dataList' => null
     ];
 
     /**
@@ -66,38 +59,29 @@ class ListCceClusterDetectRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalNum  集群总数
-    * dataList  集群信息列表
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalNum' => 'total_num',
-            'dataList' => 'data_list'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalNum  集群总数
-    * dataList  集群信息列表
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalNum' => 'setTotalNum',
-            'dataList' => 'setDataList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalNum  集群总数
-    * dataList  集群信息列表
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalNum' => 'getTotalNum',
-            'dataList' => 'getDataList'
     ];
 
     /**
@@ -158,8 +142,6 @@ class ListCceClusterDetectRiskResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalNum'] = isset($data['totalNum']) ? $data['totalNum'] : null;
-        $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
     }
 
     /**
@@ -170,12 +152,6 @@ class ListCceClusterDetectRiskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] > 200)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be smaller than or equal to 200.";
-            }
-            if (!is_null($this->container['totalNum']) && ($this->container['totalNum'] < 0)) {
-                $invalidProperties[] = "invalid value for 'totalNum', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -188,54 +164,6 @@ class ListCceClusterDetectRiskResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets totalNum
-    *  集群总数
-    *
-    * @return int|null
-    */
-    public function getTotalNum()
-    {
-        return $this->container['totalNum'];
-    }
-
-    /**
-    * Sets totalNum
-    *
-    * @param int|null $totalNum 集群总数
-    *
-    * @return $this
-    */
-    public function setTotalNum($totalNum)
-    {
-        $this->container['totalNum'] = $totalNum;
-        return $this;
-    }
-
-    /**
-    * Gets dataList
-    *  集群信息列表
-    *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\NodeDetectRiskResponseInfo[]|null
-    */
-    public function getDataList()
-    {
-        return $this->container['dataList'];
-    }
-
-    /**
-    * Sets dataList
-    *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\NodeDetectRiskResponseInfo[]|null $dataList 集群信息列表
-    *
-    * @return $this
-    */
-    public function setDataList($dataList)
-    {
-        $this->container['dataList'] = $dataList;
-        return $this;
     }
 
     /**

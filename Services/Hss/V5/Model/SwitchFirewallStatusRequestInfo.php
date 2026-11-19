@@ -20,7 +20,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    * firewallStatus  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 不涉及 **默认取值**： 不涉及
     *
     * @var string[]
@@ -191,7 +191,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallStatus
-    *  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    *  **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class SwitchFirewallStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets firewallStatus
     *
-    * @param string $firewallStatus **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙 **默认取值**： 不涉及
+    * @param string $firewallStatus **参数解释**： 防火墙开启状态 **约束限制**： 不涉及 **取值范围**：   - Opened：开启windows防火墙   - Closed：关闭windows防火墙  **默认取值**： 不涉及
     *
     * @return $this
     */

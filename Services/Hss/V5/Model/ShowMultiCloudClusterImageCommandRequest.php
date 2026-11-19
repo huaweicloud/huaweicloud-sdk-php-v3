@@ -24,7 +24,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
     * organization  组织名称
     * username  用户名
     * password  密码
-    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
     * organization  组织名称
     * username  用户名
     * password  密码
-    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
     * organization  组织名称
     * username  用户名
     * password  密码
-    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
     * organization  组织名称
     * username  用户名
     * password  密码
-    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
     * organization  组织名称
     * username  用户名
     * password  密码
-    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    * plugType  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -371,7 +371,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
 
     /**
     * Gets plugType
-    *  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    *  **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -383,7 +383,7 @@ class ShowMultiCloudClusterImageCommandRequest implements ModelInterface, ArrayA
     /**
     * Sets plugType
     *
-    * @param string|null $plugType **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像 **默认取值**: 不涉及
+    * @param string|null $plugType **参数解释**: 插件类型 **约束限制**: 不涉及 **取值范围**: - docker: docker插件镜像 - agent: hostguard镜像  **默认取值**: 不涉及
     *
     * @return $this
     */

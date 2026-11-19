@@ -21,21 +21,25 @@ class TaurusSwitchoverRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * nodeId  只读节点ID，倒换后为主节点。
+    * force  **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'nodeId' => 'string'
+            'nodeId' => 'string',
+            'force' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * nodeId  只读节点ID，倒换后为主节点。
+    * force  **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'nodeId' => null
+        'nodeId' => null,
+        'force' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class TaurusSwitchoverRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * nodeId  只读节点ID，倒换后为主节点。
+    * force  **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'nodeId' => 'node_id'
+            'nodeId' => 'node_id',
+            'force' => 'force'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * nodeId  只读节点ID，倒换后为主节点。
+    * force  **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
     *
     * @var string[]
     */
     protected static $setters = [
-            'nodeId' => 'setNodeId'
+            'nodeId' => 'setNodeId',
+            'force' => 'setForce'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * nodeId  只读节点ID，倒换后为主节点。
+    * force  **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
     *
     * @var string[]
     */
     protected static $getters = [
-            'nodeId' => 'getNodeId'
+            'nodeId' => 'getNodeId',
+            'force' => 'getForce'
     ];
 
     /**
@@ -148,6 +158,7 @@ class TaurusSwitchoverRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
+        $this->container['force'] = isset($data['force']) ? $data['force'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class TaurusSwitchoverRequest implements ModelInterface, ArrayAccess
     public function setNodeId($nodeId)
     {
         $this->container['nodeId'] = $nodeId;
+        return $this;
+    }
+
+    /**
+    * Gets force
+    *  **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
+    *
+    * @return bool|null
+    */
+    public function getForce()
+    {
+        return $this->container['force'];
+    }
+
+    /**
+    * Sets force
+    *
+    * @param bool|null $force **参数解释**：  是否进行强制倒换。强制倒换将导致主节点重启，未提交的事务会被中断，请在业务低峰期执行该操作。  **约束限制**：  不涉及。  **取值范围**：  - true：强制倒换。 - false：普通倒换。  **默认取值**：  false。
+    *
+    * @return $this
+    */
+    public function setForce($force)
+    {
+        $this->container['force'] = $force;
         return $this;
     }
 

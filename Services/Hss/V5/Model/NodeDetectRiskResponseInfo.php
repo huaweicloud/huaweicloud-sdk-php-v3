@@ -20,14 +20,14 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * imagesNum  有风险镜像数量
-    * baselineRiskNum  基线检查风险项总和
-    * vulNum  漏洞数量
-    * eventNum  告警数量
-    * protectNodeNum  集群开启防护节点数量
-    * nodeTotalNum  集群节点总数
-    * clusterId  集群id
-    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
+    * imagesNum  **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
+    * baselineRiskNum  **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
+    * vulNum  **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
+    * eventNum  **参数解释**： 告警数量 **取值范围**： 0~2147483647
+    * protectNodeNum  **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
+    * nodeTotalNum  **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度0-128位
+    * chargingMode  **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * imagesNum  有风险镜像数量
-    * baselineRiskNum  基线检查风险项总和
-    * vulNum  漏洞数量
-    * eventNum  告警数量
-    * protectNodeNum  集群开启防护节点数量
-    * nodeTotalNum  集群节点总数
-    * clusterId  集群id
-    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
+    * imagesNum  **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
+    * baselineRiskNum  **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
+    * vulNum  **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
+    * eventNum  **参数解释**： 告警数量 **取值范围**： 0~2147483647
+    * protectNodeNum  **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
+    * nodeTotalNum  **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度0-128位
+    * chargingMode  **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * imagesNum  有风险镜像数量
-    * baselineRiskNum  基线检查风险项总和
-    * vulNum  漏洞数量
-    * eventNum  告警数量
-    * protectNodeNum  集群开启防护节点数量
-    * nodeTotalNum  集群节点总数
-    * clusterId  集群id
-    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
+    * imagesNum  **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
+    * baselineRiskNum  **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
+    * vulNum  **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
+    * eventNum  **参数解释**： 告警数量 **取值范围**： 0~2147483647
+    * protectNodeNum  **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
+    * nodeTotalNum  **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度0-128位
+    * chargingMode  **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * imagesNum  有风险镜像数量
-    * baselineRiskNum  基线检查风险项总和
-    * vulNum  漏洞数量
-    * eventNum  告警数量
-    * protectNodeNum  集群开启防护节点数量
-    * nodeTotalNum  集群节点总数
-    * clusterId  集群id
-    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
+    * imagesNum  **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
+    * baselineRiskNum  **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
+    * vulNum  **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
+    * eventNum  **参数解释**： 告警数量 **取值范围**： 0~2147483647
+    * protectNodeNum  **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
+    * nodeTotalNum  **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度0-128位
+    * chargingMode  **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * imagesNum  有风险镜像数量
-    * baselineRiskNum  基线检查风险项总和
-    * vulNum  漏洞数量
-    * eventNum  告警数量
-    * protectNodeNum  集群开启防护节点数量
-    * nodeTotalNum  集群节点总数
-    * clusterId  集群id
-    * chargingMode  付费模式包括： - on_demand：按需 - free：免费
+    * imagesNum  **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
+    * baselineRiskNum  **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
+    * vulNum  **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
+    * eventNum  **参数解释**： 告警数量 **取值范围**： 0~2147483647
+    * protectNodeNum  **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
+    * nodeTotalNum  **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
+    * clusterId  **参数解释**： 集群ID **取值范围**： 字符长度0-128位
+    * chargingMode  **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @var string[]
     */
@@ -293,7 +293,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imagesNum
-    *  有风险镜像数量
+    *  **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
     *
     * @return int|null
     */
@@ -305,7 +305,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imagesNum
     *
-    * @param int|null $imagesNum 有风险镜像数量
+    * @param int|null $imagesNum **参数解释**： 有风险镜像数量 **取值范围**： 0~2147483647
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets baselineRiskNum
-    *  基线检查风险项总和
+    *  **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
     *
     * @return int|null
     */
@@ -329,7 +329,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets baselineRiskNum
     *
-    * @param int|null $baselineRiskNum 基线检查风险项总和
+    * @param int|null $baselineRiskNum **参数解释**： 基线检查风险项总和 **取值范围**： 0~2147483647
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulNum
-    *  漏洞数量
+    *  **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
     *
     * @return int|null
     */
@@ -353,7 +353,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulNum
     *
-    * @param int|null $vulNum 漏洞数量
+    * @param int|null $vulNum **参数解释**： 漏洞数量 **取值范围**： 0~2147483647
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventNum
-    *  告警数量
+    *  **参数解释**： 告警数量 **取值范围**： 0~2147483647
     *
     * @return int|null
     */
@@ -377,7 +377,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventNum
     *
-    * @param int|null $eventNum 告警数量
+    * @param int|null $eventNum **参数解释**： 告警数量 **取值范围**： 0~2147483647
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectNodeNum
-    *  集群开启防护节点数量
+    *  **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
     *
     * @return int|null
     */
@@ -401,7 +401,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectNodeNum
     *
-    * @param int|null $protectNodeNum 集群开启防护节点数量
+    * @param int|null $protectNodeNum **参数解释**： 集群开启防护节点数量 **取值范围**： 0~2147483647
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeTotalNum
-    *  集群节点总数
+    *  **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
     *
     * @return int|null
     */
@@ -425,7 +425,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nodeTotalNum
     *
-    * @param int|null $nodeTotalNum 集群节点总数
+    * @param int|null $nodeTotalNum **参数解释**： 集群节点总数 **取值范围**： 0~2147483647
     *
     * @return $this
     */
@@ -437,7 +437,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  集群id
+    *  **参数解释**： 集群ID **取值范围**： 字符长度0-128位
     *
     * @return string|null
     */
@@ -449,7 +449,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 集群id
+    * @param string|null $clusterId **参数解释**： 集群ID **取值范围**： 字符长度0-128位
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  付费模式包括： - on_demand：按需 - free：免费
+    *  **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @return string|null
     */
@@ -473,7 +473,7 @@ class NodeDetectRiskResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 付费模式包括： - on_demand：按需 - free：免费
+    * @param string|null $chargingMode **参数解释**： 付费模式 **取值范围**： - on_demand：按需 - free：免费
     *
     * @return $this
     */

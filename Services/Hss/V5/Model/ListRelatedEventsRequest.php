@@ -24,7 +24,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     * eventId  **参数解释**： 事件编号 **约束限制**： 必填 **取值范围**： 字符长度1-256位 **默认取值**： 不涉及
     * occurTime  **参数解释**: 事件发生时间 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
@@ -46,7 +46,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     * eventId  **参数解释**： 事件编号 **约束限制**： 必填 **取值范围**： 字符长度1-256位 **默认取值**： 不涉及
     * occurTime  **参数解释**: 事件发生时间 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
@@ -89,7 +89,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     * eventId  **参数解释**： 事件编号 **约束限制**： 必填 **取值范围**： 字符长度1-256位 **默认取值**： 不涉及
     * occurTime  **参数解释**: 事件发生时间 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
@@ -111,7 +111,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     * eventId  **参数解释**： 事件编号 **约束限制**： 必填 **取值范围**： 字符长度1-256位 **默认取值**： 不涉及
     * occurTime  **参数解释**: 事件发生时间 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
@@ -133,7 +133,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 不涉及
     * limit  **参数解释**: 每页显示个数 **约束限制**: 必填 **取值范围**: 取值10-200 **默认取值**: 10
     * region  **参数解释**: 区域ID，用于查询目的区域内的资产。获取方式请参见[获取区域ID](hss_02_0026.xml)。 **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     * eventId  **参数解释**： 事件编号 **约束限制**： 必填 **取值范围**： 字符长度1-256位 **默认取值**： 不涉及
     * occurTime  **参数解释**: 事件发生时间 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值9223372036854775807 **默认取值**: 不涉及
     *
@@ -269,8 +269,8 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['category']) < 0)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
-                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            if (!preg_match("/^(host|container|serverless)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container|serverless)$/.";
             }
         if ($this->container['eventId'] === null) {
             $invalidProperties[] = "'eventId' can't be null";
@@ -402,7 +402,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @return string
     */
@@ -414,7 +414,7 @@ class ListRelatedEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @return $this
     */

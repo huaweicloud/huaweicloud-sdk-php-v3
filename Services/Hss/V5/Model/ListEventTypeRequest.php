@@ -25,7 +25,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * beginTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 需小于等于end_time，未传end_time时默认查询至当前时间 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
@@ -71,7 +71,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * beginTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 需小于等于end_time，未传end_time时默认查询至当前时间 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
@@ -138,7 +138,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * beginTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 需小于等于end_time，未传end_time时默认查询至当前时间 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
@@ -184,7 +184,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * beginTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 需小于等于end_time，未传end_time时默认查询至当前时间 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
@@ -230,7 +230,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     * beginTime  **参数解释**: 开始时间，13位时间戳 **约束限制**: 需小于等于end_time，未传end_time时默认查询至当前时间 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * endTime  **参数解释**: 结束时间，13位时间戳 **约束限制**: 需大于等于begin_time，未传begin_time时默认从时间戳0开始查询 **取值范围**: 最小值0，最大值9223372036854775807（UTC时区，从1970-01-01 00:00:00开始计算） **默认取值**: 不涉及
     * lastDays  查询时间范围天数，与自定义查询时间begin_time，end_time互斥
-    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    * category  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     * hostName  服务器名称
     * hostId  服务器ID
     * privateIp  服务器私有IP
@@ -636,7 +636,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    *  **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -648,7 +648,7 @@ class ListEventTypeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件 **默认取值**: 不涉及
+    * @param string $category **参数解释**: 事件类别 **约束限制**: 不涉及 **取值范围**: - host : 主机安全事件 - container : 容器安全事件 - serverless : serverless场景安全事件  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 列表大小为1-200条 **默认取值**： 不涉及
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 列表大小为1-200条 **默认取值**： 不涉及
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 列表大小为1-200条 **默认取值**： 不涉及
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 列表大小为1-200条 **默认取值**： 不涉及
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    * assetValue  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     * hostIdList  **参数解释**： 主机ID列表 **约束限制**： 不涉及 **取值范围**： 列表大小为1-200条 **默认取值**： 不涉及
     *
     * @var string[]
@@ -191,7 +191,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetValue
-    *  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    *  **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class AssociateHostAssetValueRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetValue
     *
-    * @param string $assetValue **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产 **默认取值**： 不涉及
+    * @param string $assetValue **参数解释**： 资产重要性 **约束限制**： 不涉及 **取值范围**： - important：重要资产 - common：一般资产 - test：测试资产  **默认取值**： 不涉及
     *
     * @return $this
     */

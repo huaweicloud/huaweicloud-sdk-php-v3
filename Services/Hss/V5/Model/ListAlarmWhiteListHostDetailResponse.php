@@ -22,7 +22,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  **参数解释**： 规则ID **取值范围**： 字符长度1-36位
-    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
     * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID **默认取值**: 不涉及
     *
@@ -38,7 +38,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  **参数解释**： 规则ID **取值范围**： 字符长度1-36位
-    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
     * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID **默认取值**: 不涉及
     *
@@ -75,7 +75,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ruleId  **参数解释**： 规则ID **取值范围**： 字符长度1-36位
-    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
     * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID **默认取值**: 不涉及
     *
@@ -91,7 +91,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  **参数解释**： 规则ID **取值范围**： 字符长度1-36位
-    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
     * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID **默认取值**: 不涉及
     *
@@ -107,7 +107,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  **参数解释**： 规则ID **取值范围**： 字符长度1-36位
-    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * scope  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     * agentIds  **参数解释**: agent列表 **约束限制**: 不涉及 **取值范围**: 1-1000个agentID **默认取值**: 不涉及
     * instanceIds  **参数解释**: 实例ID列表 **约束限制**: 当需要为serverless配置规则时，传入此字段 **取值范围**: 1-1000个实例ID **默认取值**: 不涉及
     *
@@ -238,7 +238,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets scope
-    *  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    *  **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     *
     * @return bool|null
     */
@@ -250,7 +250,7 @@ class ListAlarmWhiteListHostDetailResponse implements ModelInterface, ArrayAcces
     /**
     * Sets scope
     *
-    * @param bool|null $scope **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否 **默认取值**: false
+    * @param bool|null $scope **参数解释**: 是否选择所有主机 **约束限制**: 不涉及 **取值范围**: - true：是 - false：否  **默认取值**: false
     *
     * @return $this
     */

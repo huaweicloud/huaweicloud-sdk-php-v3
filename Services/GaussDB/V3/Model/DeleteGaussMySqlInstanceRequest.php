@@ -22,24 +22,28 @@ class DeleteGaussMySqlInstanceRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。
     * instanceId  实例ID，严格匹配UUID规则。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'xLanguage' => 'string',
-            'instanceId' => 'string'
+            'instanceId' => 'string',
+            'body' => '\HuaweiCloud\SDK\GaussDB\V3\Model\DeleteGaussMySqlInstanceRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。
     * instanceId  实例ID，严格匹配UUID规则。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'xLanguage' => null,
-        'instanceId' => null
+        'instanceId' => null,
+        'body' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class DeleteGaussMySqlInstanceRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。
     * instanceId  实例ID，严格匹配UUID规则。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
-            'instanceId' => 'instance_id'
+            'instanceId' => 'instance_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。
     * instanceId  实例ID，严格匹配UUID规则。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
-            'instanceId' => 'setInstanceId'
+            'instanceId' => 'setInstanceId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。
     * instanceId  实例ID，严格匹配UUID规则。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
-            'instanceId' => 'getInstanceId'
+            'instanceId' => 'getInstanceId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -159,6 +169,7 @@ class DeleteGaussMySqlInstanceRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class DeleteGaussMySqlInstanceRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DeleteGaussMySqlInstanceRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DeleteGaussMySqlInstanceRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

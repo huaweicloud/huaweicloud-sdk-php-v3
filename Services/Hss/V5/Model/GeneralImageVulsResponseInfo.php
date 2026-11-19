@@ -22,10 +22,10 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * vulName  **参数解释**： 漏洞名称 **取值范围**： 字符长度0-128位
     * vulId  **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
-    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
-    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     * labelList  **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
-    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     * imageNum  **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位
     * cveList  **参数解释**： CVE列表 **取值范围**： 最小值0，最大值10000
     * maxCvssScore  **参数解释**： 镜像最大CVSS分值 **取值范围**： 字符长度0-10位
@@ -58,10 +58,10 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * vulName  **参数解释**： 漏洞名称 **取值范围**： 字符长度0-128位
     * vulId  **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
-    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
-    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     * labelList  **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
-    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     * imageNum  **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位
     * cveList  **参数解释**： CVE列表 **取值范围**： 最小值0，最大值10000
     * maxCvssScore  **参数解释**： 镜像最大CVSS分值 **取值范围**： 字符长度0-10位
@@ -115,10 +115,10 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * vulName  **参数解释**： 漏洞名称 **取值范围**： 字符长度0-128位
     * vulId  **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
-    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
-    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     * labelList  **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
-    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     * imageNum  **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位
     * cveList  **参数解释**： CVE列表 **取值范围**： 最小值0，最大值10000
     * maxCvssScore  **参数解释**： 镜像最大CVSS分值 **取值范围**： 字符长度0-10位
@@ -151,10 +151,10 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * vulName  **参数解释**： 漏洞名称 **取值范围**： 字符长度0-128位
     * vulId  **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
-    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
-    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     * labelList  **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
-    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     * imageNum  **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位
     * cveList  **参数解释**： CVE列表 **取值范围**： 最小值0，最大值10000
     * maxCvssScore  **参数解释**： 镜像最大CVSS分值 **取值范围**： 字符长度0-10位
@@ -187,10 +187,10 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * vulName  **参数解释**： 漏洞名称 **取值范围**： 字符长度0-128位
     * vulId  **参数解释**： 漏洞ID **取值范围**： 字符长度0-128位
-    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
-    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    * type  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
+    * imageType  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     * labelList  **参数解释**： 漏洞标签列表 **取值范围**： 最小值0，最大值10
-    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    * severityLevel  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     * imageNum  **参数解释**： 受影响镜像总数 **取值范围**： 字符长度0-2147483547位
     * cveList  **参数解释**： CVE列表 **取值范围**： 最小值0，最大值10000
     * maxCvssScore  **参数解释**： 镜像最大CVSS分值 **取值范围**： 字符长度0-10位
@@ -428,7 +428,7 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
+    *  **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞 **默认取值**: 不涉及
+    * @param string|null $type **参数解释**： 漏洞类型 **约束限制**: 不涉及 **取值范围**： - linux_vul：linux漏洞 - app_vul：应用漏洞  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageType
-    *  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    *  **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -464,7 +464,7 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets imageType
     *
-    * @param string|null $imageType **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像 **默认取值**: 不涉及
+    * @param string|null $imageType **参数解释**： 镜像类型 **约束限制**: 不涉及 **取值范围**： - local：本地镜像 - registry：仓库镜像 - cicd：CI/CD镜像 - cluster：集群镜像  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -500,7 +500,7 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets severityLevel
-    *  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    *  **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -512,7 +512,7 @@ class GeneralImageVulsResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets severityLevel
     *
-    * @param string|null $severityLevel **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危 **默认取值**: 不涉及
+    * @param string|null $severityLevel **参数解释**： 漏洞的风险程度 **约束限制**: 不涉及 **取值范围**： - Critical：严重 - High：高危 - Medium：中危 - Low：低危  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class ShowHistoricalSqlFilterRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * totalCount  **参数解释**：  总记录数。  **取值范围**：  大于等于0。
     * sqlFilterRules  **参数解释**：  历史SQL限流规则。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'totalCount' => 'int',
             'sqlFilterRules' => '\HuaweiCloud\SDK\GaussDB\V3\Model\HistoricalSqlFilterRule[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * totalCount  **参数解释**：  总记录数。  **取值范围**：  大于等于0。
     * sqlFilterRules  **参数解释**：  历史SQL限流规则。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'totalCount' => 'int32',
         'sqlFilterRules' => null
     ];
 
@@ -62,31 +66,37 @@ class ShowHistoricalSqlFilterRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * totalCount  **参数解释**：  总记录数。  **取值范围**：  大于等于0。
     * sqlFilterRules  **参数解释**：  历史SQL限流规则。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'totalCount' => 'total_count',
             'sqlFilterRules' => 'sql_filter_rules'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * totalCount  **参数解释**：  总记录数。  **取值范围**：  大于等于0。
     * sqlFilterRules  **参数解释**：  历史SQL限流规则。
     *
     * @var string[]
     */
     protected static $setters = [
+            'totalCount' => 'setTotalCount',
             'sqlFilterRules' => 'setSqlFilterRules'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * totalCount  **参数解释**：  总记录数。  **取值范围**：  大于等于0。
     * sqlFilterRules  **参数解释**：  历史SQL限流规则。
     *
     * @var string[]
     */
     protected static $getters = [
+            'totalCount' => 'getTotalCount',
             'sqlFilterRules' => 'getSqlFilterRules'
     ];
 
@@ -148,6 +158,7 @@ class ShowHistoricalSqlFilterRuleResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
         $this->container['sqlFilterRules'] = isset($data['sqlFilterRules']) ? $data['sqlFilterRules'] : null;
     }
 
@@ -171,6 +182,30 @@ class ShowHistoricalSqlFilterRuleResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets totalCount
+    *  **参数解释**：  总记录数。  **取值范围**：  大于等于0。
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount **参数解释**：  总记录数。  **取值范围**：  大于等于0。
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
     }
 
     /**

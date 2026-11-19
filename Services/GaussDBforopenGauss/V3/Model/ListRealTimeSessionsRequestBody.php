@@ -22,6 +22,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * nodeId  **参数解释**： 节点ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * componentId  **参数解释**： 组件ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**: 不涉及。
+    * supportLocal  **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
     * queryInfo  queryInfo
     *
     * @var string[]
@@ -29,6 +30,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'nodeId' => 'string',
             'componentId' => 'string',
+            'supportLocal' => 'bool',
             'queryInfo' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\SessionQueryInfoOption'
     ];
 
@@ -36,6 +38,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * nodeId  **参数解释**： 节点ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * componentId  **参数解释**： 组件ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**: 不涉及。
+    * supportLocal  **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
     * queryInfo  queryInfo
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'nodeId' => null,
         'componentId' => null,
+        'supportLocal' => null,
         'queryInfo' => null
     ];
 
@@ -71,6 +75,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * nodeId  **参数解释**： 节点ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * componentId  **参数解释**： 组件ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**: 不涉及。
+    * supportLocal  **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
     * queryInfo  queryInfo
     *
     * @var string[]
@@ -78,6 +83,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'nodeId' => 'node_id',
             'componentId' => 'component_id',
+            'supportLocal' => 'support_local',
             'queryInfo' => 'query_info'
     ];
 
@@ -85,6 +91,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * nodeId  **参数解释**： 节点ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * componentId  **参数解释**： 组件ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**: 不涉及。
+    * supportLocal  **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
     * queryInfo  queryInfo
     *
     * @var string[]
@@ -92,6 +99,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'nodeId' => 'setNodeId',
             'componentId' => 'setComponentId',
+            'supportLocal' => 'setSupportLocal',
             'queryInfo' => 'setQueryInfo'
     ];
 
@@ -99,6 +107,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * nodeId  **参数解释**： 节点ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**： 不涉及。
     * componentId  **参数解释**： 组件ID。 **约束限制**： 仅支持非日志类型的CN或DN节点。 **取值范围**： 不涉及。 **默认取值**: 不涉及。
+    * supportLocal  **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
     * queryInfo  queryInfo
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'nodeId' => 'getNodeId',
             'componentId' => 'getComponentId',
+            'supportLocal' => 'getSupportLocal',
             'queryInfo' => 'getQueryInfo'
     ];
 
@@ -169,6 +179,7 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['nodeId'] = isset($data['nodeId']) ? $data['nodeId'] : null;
         $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
+        $this->container['supportLocal'] = isset($data['supportLocal']) ? $data['supportLocal'] : null;
         $this->container['queryInfo'] = isset($data['queryInfo']) ? $data['queryInfo'] : null;
     }
 
@@ -245,6 +256,30 @@ class ListRealTimeSessionsRequestBody implements ModelInterface, ArrayAccess
     public function setComponentId($componentId)
     {
         $this->container['componentId'] = $componentId;
+        return $this;
+    }
+
+    /**
+    * Gets supportLocal
+    *  **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
+    *
+    * @return bool|null
+    */
+    public function getSupportLocal()
+    {
+        return $this->container['supportLocal'];
+    }
+
+    /**
+    * Sets supportLocal
+    *
+    * @param bool|null $supportLocal **参数解释**： 是否展示本地会话。 **约束限制**： 不涉及。 **取值范围**： - true：展示本地会话 - false：不展示本地会话  **默认取值**: false。
+    *
+    * @return $this
+    */
+    public function setSupportLocal($supportLocal)
+    {
+        $this->container['supportLocal'] = $supportLocal;
         return $this;
     }
 

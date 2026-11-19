@@ -21,7 +21,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isAdminAccount  是否是管理员账号
+    * isAdminAccount  **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isAdminAccount  是否是管理员账号
+    * isAdminAccount  **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isAdminAccount  是否是管理员账号
+    * isAdminAccount  **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isAdminAccount  是否是管理员账号
+    * isAdminAccount  **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isAdminAccount  是否是管理员账号
+    * isAdminAccount  **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAdminAccount
-    *  是否是管理员账号
+    *  **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @return bool|null
     */
@@ -187,7 +187,7 @@ class ValidateAdminResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isAdminAccount
     *
-    * @param bool|null $isAdminAccount 是否是管理员账号
+    * @param bool|null $isAdminAccount **参数解释**： 当前账号是否是管理员账号 **取值范围**： - true：是管理员账号 - false：不是管理员账号
     *
     * @return $this
     */

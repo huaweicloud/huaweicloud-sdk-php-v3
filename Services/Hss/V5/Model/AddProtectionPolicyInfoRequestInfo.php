@@ -28,7 +28,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     * excludeDirectory  排除目录(选填)，多个目录请用英文分号隔开，最多支持填写20个排除目录
     * operatingSystem  操作系统，包含如下：   - Windows : Windows系统   - Linux : Linux系统
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @var string[]
     */
@@ -520,7 +520,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aiProtectionStatus
-    *  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    *  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @return string|null
     */
@@ -532,7 +532,7 @@ class AddProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aiProtectionStatus
     *
-    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @return $this
     */

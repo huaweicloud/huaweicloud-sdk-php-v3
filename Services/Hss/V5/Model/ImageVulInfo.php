@@ -20,20 +20,25 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
-    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
-    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
-    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
-    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
-    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
-    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
-    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
-    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
+    * description  **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
+    * position  **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
+    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * version  **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
+    * solution  **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
+    * url  **参数解释**: URL **取值范围**: 字符长度0-2048位
+    * dataList  **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    * status  **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'vulId' => 'string',
+            'vulName' => 'string',
             'repairNecessity' => 'string',
             'description' => 'string',
             'position' => 'string',
@@ -41,25 +46,33 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'appPath' => 'string',
             'version' => 'string',
             'solution' => 'string',
-            'url' => 'string'
+            'url' => 'string',
+            'dataList' => '\HuaweiCloud\SDK\Hss\V5\Model\CveInfo[]',
+            'status' => 'string',
+            'severityLevel' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
-    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
-    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
-    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
-    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
-    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
-    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
-    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
-    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
+    * description  **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
+    * position  **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
+    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * version  **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
+    * solution  **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
+    * url  **参数解释**: URL **取值范围**: 字符长度0-2048位
+    * dataList  **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    * status  **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'vulId' => null,
+        'vulName' => null,
         'repairNecessity' => null,
         'description' => null,
         'position' => null,
@@ -67,7 +80,10 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
         'appPath' => null,
         'version' => null,
         'solution' => null,
-        'url' => null
+        'url' => null,
+        'dataList' => null,
+        'status' => null,
+        'severityLevel' => null
     ];
 
     /**
@@ -93,20 +109,25 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
-    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
-    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
-    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
-    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
-    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
-    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
-    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
-    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
+    * description  **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
+    * position  **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
+    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * version  **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
+    * solution  **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
+    * url  **参数解释**: URL **取值范围**: 字符长度0-2048位
+    * dataList  **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    * status  **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'vulId' => 'vul_id',
+            'vulName' => 'vul_name',
             'repairNecessity' => 'repair_necessity',
             'description' => 'description',
             'position' => 'position',
@@ -114,25 +135,33 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'appPath' => 'app_path',
             'version' => 'version',
             'solution' => 'solution',
-            'url' => 'url'
+            'url' => 'url',
+            'dataList' => 'data_list',
+            'status' => 'status',
+            'severityLevel' => 'severity_level'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
-    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
-    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
-    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
-    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
-    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
-    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
-    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
-    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
+    * description  **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
+    * position  **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
+    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * version  **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
+    * solution  **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
+    * url  **参数解释**: URL **取值范围**: 字符长度0-2048位
+    * dataList  **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    * status  **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
     *
     * @var string[]
     */
     protected static $setters = [
             'vulId' => 'setVulId',
+            'vulName' => 'setVulName',
             'repairNecessity' => 'setRepairNecessity',
             'description' => 'setDescription',
             'position' => 'setPosition',
@@ -140,25 +169,33 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'appPath' => 'setAppPath',
             'version' => 'setVersion',
             'solution' => 'setSolution',
-            'url' => 'setUrl'
+            'url' => 'setUrl',
+            'dataList' => 'setDataList',
+            'status' => 'setStatus',
+            'severityLevel' => 'setSeverityLevel'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
-    * repairNecessity  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
-    * description  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
-    * position  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
-    * appName  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
-    * appPath  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
-    * version  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
-    * solution  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
-    * url  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    * vulId  **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
+    * vulName  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    * repairNecessity  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
+    * description  **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
+    * position  **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
+    * appName  **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
+    * appPath  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
+    * version  **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
+    * solution  **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
+    * url  **参数解释**: URL **取值范围**: 字符长度0-2048位
+    * dataList  **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    * status  **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    * severityLevel  **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
     *
     * @var string[]
     */
     protected static $getters = [
             'vulId' => 'getVulId',
+            'vulName' => 'getVulName',
             'repairNecessity' => 'getRepairNecessity',
             'description' => 'getDescription',
             'position' => 'getPosition',
@@ -166,7 +203,10 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             'appPath' => 'getAppPath',
             'version' => 'getVersion',
             'solution' => 'getSolution',
-            'url' => 'getUrl'
+            'url' => 'getUrl',
+            'dataList' => 'getDataList',
+            'status' => 'getStatus',
+            'severityLevel' => 'getSeverityLevel'
     ];
 
     /**
@@ -228,6 +268,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['vulId'] = isset($data['vulId']) ? $data['vulId'] : null;
+        $this->container['vulName'] = isset($data['vulName']) ? $data['vulName'] : null;
         $this->container['repairNecessity'] = isset($data['repairNecessity']) ? $data['repairNecessity'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -236,6 +277,9 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['solution'] = isset($data['solution']) ? $data['solution'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['dataList'] = isset($data['dataList']) ? $data['dataList'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
     }
 
     /**
@@ -246,26 +290,26 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'vulId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['vulId']) && (mb_strlen($this->container['vulId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'vulId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['repairNecessity']) && (mb_strlen($this->container['repairNecessity']) > 128)) {
-                $invalidProperties[] = "invalid value for 'repairNecessity', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['vulName']) && (mb_strlen($this->container['vulName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'vulName', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['repairNecessity']) && (mb_strlen($this->container['repairNecessity']) < 0)) {
-                $invalidProperties[] = "invalid value for 'repairNecessity', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['vulName']) && (mb_strlen($this->container['vulName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vulName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 128)) {
-                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 4096.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['position']) && (mb_strlen($this->container['position']) > 128)) {
-                $invalidProperties[] = "invalid value for 'position', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['position']) && (mb_strlen($this->container['position']) > 512)) {
+                $invalidProperties[] = "invalid value for 'position', the character length must be smaller than or equal to 512.";
             }
             if (!is_null($this->container['position']) && (mb_strlen($this->container['position']) < 0)) {
                 $invalidProperties[] = "invalid value for 'position', the character length must be bigger than or equal to 0.";
@@ -279,8 +323,8 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) > 512)) {
                 $invalidProperties[] = "invalid value for 'appPath', the character length must be smaller than or equal to 512.";
             }
-            if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) < 1)) {
-                $invalidProperties[] = "invalid value for 'appPath', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['appPath']) && (mb_strlen($this->container['appPath']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appPath', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 128)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 128.";
@@ -288,17 +332,23 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['solution']) && (mb_strlen($this->container['solution']) > 256)) {
-                $invalidProperties[] = "invalid value for 'solution', the character length must be smaller than or equal to 256.";
+            if (!is_null($this->container['solution']) && (mb_strlen($this->container['solution']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'solution', the character length must be smaller than or equal to 4096.";
             }
             if (!is_null($this->container['solution']) && (mb_strlen($this->container['solution']) < 0)) {
                 $invalidProperties[] = "invalid value for 'solution', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 128)) {
-                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 128.";
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 2048.";
             }
             if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) < 0)) {
                 $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -316,7 +366,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets vulId
-    *  **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    *  **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
     *
     * @return string|null
     */
@@ -328,7 +378,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets vulId
     *
-    * @param string|null $vulId **参数解释**: 漏洞ID **取值范围**: 字符长度0-128
+    * @param string|null $vulId **参数解释**: 漏洞ID **取值范围**: 字符长度1-64位
     *
     * @return $this
     */
@@ -339,8 +389,32 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets vulName
+    *  **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    *
+    * @return string|null
+    */
+    public function getVulName()
+    {
+        return $this->container['vulName'];
+    }
+
+    /**
+    * Sets vulName
+    *
+    * @param string|null $vulName **参数解释**: 漏洞名称 **取值范围**: 字符长度0-256位
+    *
+    * @return $this
+    */
+    public function setVulName($vulName)
+    {
+        $this->container['vulName'] = $vulName;
+        return $this;
+    }
+
+    /**
     * Gets repairNecessity
-    *  **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    *  **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
     *
     * @return string|null
     */
@@ -352,7 +426,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets repairNecessity
     *
-    * @param string|null $repairNecessity **参数解释**: 危险程度 **取值范围**: - immediate_repair：高危 - delay_repair：中危 - not_needed_repair：低危
+    * @param string|null $repairNecessity **参数解释**: 修复紧急度 **取值范围**: - immediate_repair：紧急修复 - delay_repair：延迟修复 - not_needed_repair：无需修复
     *
     * @return $this
     */
@@ -364,7 +438,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    *  **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
     *
     * @return string|null
     */
@@ -376,7 +450,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description **参数解释**: 漏洞描述 **取值范围** : 字符长度0-128
+    * @param string|null $description **参数解释**: 漏洞描述 **取值范围**: 字符长度0-4096位
     *
     * @return $this
     */
@@ -388,7 +462,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets position
-    *  **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    *  **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -400,7 +474,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets position
     *
-    * @param string|null $position **参数解释**: 漏洞所在镜像层 **取值范围** : 字符长度0-128
+    * @param string|null $position **参数解释**: 漏洞位置 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -412,7 +486,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appName
-    *  **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    *  **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -424,7 +498,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appName
     *
-    * @param string|null $appName **参数解释**: 漏洞的软件名称 **取值范围** : 字符长度0-128
+    * @param string|null $appName **参数解释**: 软件名称 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -436,7 +510,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appPath
-    *  **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    *  **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
     *
     * @return string|null
     */
@@ -448,7 +522,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appPath
     *
-    * @param string|null $appPath **参数解释**: 应用软件的路径（只有应用漏洞有该字段） **取值范围** : 字符长度1-512
+    * @param string|null $appPath **参数解释**: 软件路径 **取值范围**: 字符长度0-512位
     *
     * @return $this
     */
@@ -460,7 +534,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    *  **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
     *
     * @return string|null
     */
@@ -472,7 +546,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version **参数解释**: 软件版本 **取值范围** : 字符长度0-128
+    * @param string|null $version **参数解释**: 软件版本 **取值范围**: 字符长度0-128位
     *
     * @return $this
     */
@@ -484,7 +558,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets solution
-    *  **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    *  **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
     *
     * @return string|null
     */
@@ -496,7 +570,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets solution
     *
-    * @param string|null $solution **参数解释**: 解决方案 **取值范围** : 字符长度0-256
+    * @param string|null $solution **参数解释**: 修复建议 **取值范围**: 字符长度0-4096位
     *
     * @return $this
     */
@@ -508,7 +582,7 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    *  **参数解释**: URL **取值范围**: 字符长度0-2048位
     *
     * @return string|null
     */
@@ -520,13 +594,85 @@ class ImageVulInfo implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string|null $url **参数解释**: 补丁地址 **取值范围** : 字符长度0-128
+    * @param string|null $url **参数解释**: URL **取值范围**: 字符长度0-2048位
     *
     * @return $this
     */
     public function setUrl($url)
     {
         $this->container['url'] = $url;
+        return $this;
+    }
+
+    /**
+    * Gets dataList
+    *  **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    *
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\CveInfo[]|null
+    */
+    public function getDataList()
+    {
+        return $this->container['dataList'];
+    }
+
+    /**
+    * Sets dataList
+    *
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\CveInfo[]|null $dataList **参数解释**: CVE列表 **取值范围**: 取值0-100个CveInfo对象
+    *
+    * @return $this
+    */
+    public function setDataList($dataList)
+    {
+        $this->container['dataList'] = $dataList;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数解释**: 漏洞状态 **取值范围**: 字符长度0-64位
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets severityLevel
+    *  **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    *
+    * @return string|null
+    */
+    public function getSeverityLevel()
+    {
+        return $this->container['severityLevel'];
+    }
+
+    /**
+    * Sets severityLevel
+    *
+    * @param string|null $severityLevel **参数解释**: 危险程度 **取值范围**: - Low：低危 - Medium：中危 - High：高危 - Critical：危急
+    *
+    * @return $this
+    */
+    public function setSeverityLevel($severityLevel)
+    {
+        $this->container['severityLevel'] = $severityLevel;
         return $this;
     }
 

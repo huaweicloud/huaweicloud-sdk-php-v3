@@ -42,7 +42,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度1-256位
     * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度1-255位
     * osKernel  **参数解释**: 操作系统内核 **取值范围**: 字符长度1-64位
-    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
@@ -114,7 +114,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度1-256位
     * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度1-255位
     * osKernel  **参数解释**: 操作系统内核 **取值范围**: 字符长度1-64位
-    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
@@ -207,7 +207,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度1-256位
     * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度1-255位
     * osKernel  **参数解释**: 操作系统内核 **取值范围**: 字符长度1-64位
-    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
@@ -279,7 +279,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度1-256位
     * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度1-255位
     * osKernel  **参数解释**: 操作系统内核 **取值范围**: 字符长度1-64位
-    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
@@ -351,7 +351,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     * osName  **参数解释**: 操作系统名称 **取值范围**: 字符长度1-256位
     * osVersion  **参数解释**: 操作系统版本 **取值范围**: 字符长度1-255位
     * osKernel  **参数解释**: 操作系统内核 **取值范围**: 字符长度1-64位
-    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     * firstScanTime  **参数解释**: 首次扫描时间 **取值范围**: 最小值0，最大值9223372036854775807
     * scanTime  **参数解释**: 扫描时间，时间戳单位：毫秒 **取值范围**: 最小值0，最大值9223372036854775807
     * failedReason  **参数解释**: 修复失败原因 **取值范围**: 字符长度1-65535位
@@ -1211,7 +1211,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    *  **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -1223,7 +1223,7 @@ class VulHostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。 **默认取值**: 不涉及
+    * @param string|null $hostStatus **参数解释**: 主机状态 **取值范围**: - ACTIVE：正在运行。 - SHUTOFF：关机。 - BUILDING：创建中。 - ERROR：故障。  **默认取值**: 不涉及
     *
     * @return $this
     */

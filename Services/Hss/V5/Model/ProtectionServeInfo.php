@@ -26,12 +26,12 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * publicIp  弹性ip地址
     * privateIp  私有ip
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     * policyName  防护策略名称
     * isFriendlyUser  是否为友好用户
     * agentSupportAutoAttach  agent是否支持动态加载
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
     * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
@@ -70,12 +70,12 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * publicIp  弹性ip地址
     * privateIp  私有ip
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     * policyName  防护策略名称
     * isFriendlyUser  是否为友好用户
     * agentSupportAutoAttach  agent是否支持动态加载
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
     * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
@@ -135,12 +135,12 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * publicIp  弹性ip地址
     * privateIp  私有ip
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     * policyName  防护策略名称
     * isFriendlyUser  是否为友好用户
     * agentSupportAutoAttach  agent是否支持动态加载
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
     * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
@@ -179,12 +179,12 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * publicIp  弹性ip地址
     * privateIp  私有ip
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     * policyName  防护策略名称
     * isFriendlyUser  是否为友好用户
     * agentSupportAutoAttach  agent是否支持动态加载
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
     * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
@@ -223,12 +223,12 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * publicIp  弹性ip地址
     * privateIp  私有ip
-    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    * osType  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * raspStatus  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     * policyName  防护策略名称
     * isFriendlyUser  是否为友好用户
     * agentSupportAutoAttach  agent是否支持动态加载
-    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    * agentStatus  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     * autoAttach  动态加载是否开启
     * protectStatus  防护状态 |- agent防护状态，包含如下2种。 - closed ：关闭。 - opened ：开启。
     * groupId  服务器组ID
@@ -598,7 +598,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets osType
-    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -610,7 +610,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string|null $osType **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * @param string|null $osType **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -622,7 +622,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets raspStatus
-    *  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    *  **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -634,7 +634,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets raspStatus
     *
-    * @param string|null $raspStatus **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。 **默认取值**: 不涉及
+    * @param string|null $raspStatus **参数解释**: 应用防护状态 **约束限制**: 不涉及 **取值范围**: 包含如下7种。 - app_install_processing：防护开启中。 - app_protected：防护成功。 - app_install_failed：防护失败（安装失败）。 - app_not_configure：未防护。 - app_partially_protected：部分防护。 - app_all_failed：防护失败。 - app_uninstall_processing：卸载中。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -718,7 +718,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentStatus
-    *  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    *  **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -730,7 +730,7 @@ class ProtectionServeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentStatus
     *
-    * @param string|null $agentStatus **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。 **默认取值**: 不涉及
+    * @param string|null $agentStatus **参数解释**: Agent状态 **约束限制**: 不涉及 **取值范围**: 包含如下6种。 - installed ：已安装。 - not_installed ：未安装。 - online ：在线。 - offline ：离线。 - install_failed ：安装失败。 - installing ：安装中。  **默认取值**: 不涉及
     *
     * @return $this
     */

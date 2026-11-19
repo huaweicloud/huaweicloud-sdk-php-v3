@@ -24,7 +24,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * userName  **参数解释**: 用于筛选指定名称的账号统计数据（支持模糊匹配） **约束限制**: 符合Windows文件命名规则，不包含中文标点符号 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * userName  **参数解释**: 用于筛选指定名称的账号统计数据（支持模糊匹配） **约束限制**: 符合Windows文件命名规则，不包含中文标点符号 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * userName  **参数解释**: 用于筛选指定名称的账号统计数据（支持模糊匹配） **约束限制**: 符合Windows文件命名规则，不包含中文标点符号 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * userName  **参数解释**: 用于筛选指定名称的账号统计数据（支持模糊匹配） **约束限制**: 符合Windows文件命名规则，不包含中文标点符号 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * offset  **参数解释**: 偏移量：指定返回记录的开始位置 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值2000000 **默认取值**: 默认为0
     * userName  **参数解释**: 用于筛选指定名称的账号统计数据（支持模糊匹配） **约束限制**: 符合Windows文件命名规则，不包含中文标点符号 **取值范围**: 字符长度1-64位 **默认取值**: 不涉及
-    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * category  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @var string[]
     */
@@ -238,8 +238,8 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['category']) < 0)) {
                 $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^(host|container)$/", $this->container['category'])) {
-                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container)$/.";
+            if (!preg_match("/^(host|container|serverless)$/", $this->container['category'])) {
+                $invalidProperties[] = "invalid value for 'category', must be conform to the pattern /^(host|container|serverless)$/.";
             }
         return $invalidProperties;
     }
@@ -353,7 +353,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets category
-    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    *  **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @return string
     */
@@ -365,7 +365,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets category
     *
-    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产  **默认取值**: host
+    * @param string $category **参数解释**: 资产类别 **约束限制**: 不涉及 **取值范围**: - host：主机资产 - container：容器资产 - serverless：Serverless安全场景  **默认取值**: host
     *
     * @return $this
     */

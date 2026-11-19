@@ -22,7 +22,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * hostIds  **参数解释**: 下发任务的主机列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
     * serverGroup  **参数解释**: 下发任务的主机组列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
-    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
     * Array of property to format mappings. Used for (de)serialization
     * hostIds  **参数解释**: 下发任务的主机列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
     * serverGroup  **参数解释**: 下发任务的主机组列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
-    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
     * and the value is the original name
     * hostIds  **参数解释**: 下发任务的主机列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
     * serverGroup  **参数解释**: 下发任务的主机组列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
-    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
     * Array of attributes to setter functions (for deserialization of responses)
     * hostIds  **参数解释**: 下发任务的主机列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
     * serverGroup  **参数解释**: 下发任务的主机组列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
-    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
     * Array of attributes to getter functions (for serialization of requests)
     * hostIds  **参数解释**: 下发任务的主机列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
     * serverGroup  **参数解释**: 下发任务的主机组列表 **约束限制**: 不涉及 **取值范围**: 最小值0，最大值200 **默认取值**: 不涉及
-    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    * allHosts  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
 
     /**
     * Gets allHosts
-    *  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    *  **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -256,7 +256,7 @@ class CreateGlobalAssetScanTaskRequestInfo implements ModelInterface, ArrayAcces
     /**
     * Sets allHosts
     *
-    * @param bool|null $allHosts **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机 **默认取值**: 不涉及
+    * @param bool|null $allHosts **参数解释**: 下发全部主机的扫描 **约束限制**: 不涉及 **取值范围**: - true：扫描全部主机 - false：不扫描全部主机  **默认取值**: 不涉及
     *
     * @return $this
     */

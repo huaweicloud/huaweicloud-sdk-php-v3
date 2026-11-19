@@ -61,6 +61,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     * infofeatures  规格特性
+    * hwcpuPolicy  规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    * hwcpuThreads  规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
     *
     * @var string[]
     */
@@ -105,7 +107,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'securityenclaveSupported' => 'string',
             'infogpus' => 'string',
             'infoasicAccelerators' => 'string',
-            'infofeatures' => 'string'
+            'infofeatures' => 'string',
+            'hwcpuPolicy' => 'string',
+            'hwcpuThreads' => 'string'
     ];
 
     /**
@@ -151,6 +155,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     * infofeatures  规格特性
+    * hwcpuPolicy  规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    * hwcpuThreads  规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
     *
     * @var string[]
     */
@@ -195,7 +201,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'securityenclaveSupported' => null,
         'infogpus' => null,
         'infoasicAccelerators' => null,
-        'infofeatures' => null
+        'infofeatures' => null,
+        'hwcpuPolicy' => null,
+        'hwcpuThreads' => null
     ];
 
     /**
@@ -262,6 +270,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     * infofeatures  规格特性
+    * hwcpuPolicy  规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    * hwcpuThreads  规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
     *
     * @var string[]
     */
@@ -306,7 +316,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'securityenclaveSupported' => 'security:enclave_supported',
             'infogpus' => 'info:gpus',
             'infoasicAccelerators' => 'info:asic_accelerators',
-            'infofeatures' => 'info:features'
+            'infofeatures' => 'info:features',
+            'hwcpuPolicy' => 'hw:cpu_policy',
+            'hwcpuThreads' => 'hw:cpu_threads'
     ];
 
     /**
@@ -352,6 +364,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     * infofeatures  规格特性
+    * hwcpuPolicy  规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    * hwcpuThreads  规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
     *
     * @var string[]
     */
@@ -396,7 +410,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'securityenclaveSupported' => 'setSecurityenclaveSupported',
             'infogpus' => 'setInfogpus',
             'infoasicAccelerators' => 'setInfoasicAccelerators',
-            'infofeatures' => 'setInfofeatures'
+            'infofeatures' => 'setInfofeatures',
+            'hwcpuPolicy' => 'setHwcpuPolicy',
+            'hwcpuThreads' => 'setHwcpuThreads'
     ];
 
     /**
@@ -442,6 +458,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
     * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     * infofeatures  规格特性
+    * hwcpuPolicy  规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    * hwcpuThreads  规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
     *
     * @var string[]
     */
@@ -486,7 +504,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'securityenclaveSupported' => 'getSecurityenclaveSupported',
             'infogpus' => 'getInfogpus',
             'infoasicAccelerators' => 'getInfoasicAccelerators',
-            'infofeatures' => 'getInfofeatures'
+            'infofeatures' => 'getInfofeatures',
+            'hwcpuPolicy' => 'getHwcpuPolicy',
+            'hwcpuThreads' => 'getHwcpuThreads'
     ];
 
     /**
@@ -588,6 +608,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['infogpus'] = isset($data['infogpus']) ? $data['infogpus'] : null;
         $this->container['infoasicAccelerators'] = isset($data['infoasicAccelerators']) ? $data['infoasicAccelerators'] : null;
         $this->container['infofeatures'] = isset($data['infofeatures']) ? $data['infofeatures'] : null;
+        $this->container['hwcpuPolicy'] = isset($data['hwcpuPolicy']) ? $data['hwcpuPolicy'] : null;
+        $this->container['hwcpuThreads'] = isset($data['hwcpuThreads']) ? $data['hwcpuThreads'] : null;
     }
 
     /**
@@ -1593,6 +1615,54 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setInfofeatures($infofeatures)
     {
         $this->container['infofeatures'] = $infofeatures;
+        return $this;
+    }
+
+    /**
+    * Gets hwcpuPolicy
+    *  规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    *
+    * @return string|null
+    */
+    public function getHwcpuPolicy()
+    {
+        return $this->container['hwcpuPolicy'];
+    }
+
+    /**
+    * Sets hwcpuPolicy
+    *
+    * @param string|null $hwcpuPolicy 规格的CPU资源绑定策略。（该字段是否返回根据云服务器规格而定）  - dedicated，CPU资源独占绑定。
+    *
+    * @return $this
+    */
+    public function setHwcpuPolicy($hwcpuPolicy)
+    {
+        $this->container['hwcpuPolicy'] = $hwcpuPolicy;
+        return $this;
+    }
+
+    /**
+    * Gets hwcpuThreads
+    *  规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
+    *
+    * @return string|null
+    */
+    public function getHwcpuThreads()
+    {
+        return $this->container['hwcpuThreads'];
+    }
+
+    /**
+    * Sets hwcpuThreads
+    *
+    * @param string|null $hwcpuThreads 规格的CPU超线程数（每核线程数）。（该字段是否返回根据云服务器规格而定）  - 1，每核1线程，未开启超线程。 - 2，每核2线程，开启超线程。
+    *
+    * @return $this
+    */
+    public function setHwcpuThreads($hwcpuThreads)
+    {
+        $this->container['hwcpuThreads'] = $hwcpuThreads;
         return $this;
     }
 

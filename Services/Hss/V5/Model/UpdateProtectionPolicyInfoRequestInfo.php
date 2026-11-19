@@ -22,17 +22,17 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * Array of property to type mappings. Used for (de)serialization
     * policyId  **参数解释**: 需要修改的防护策略ID，您可以通过[查询勒索病毒的防护策略列表](ListProtectionPolicy.xml)接口获取ID。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * agentIdList  **参数解释**: 开启了此勒索防护策略的agent的id列表 **约束限制**: 不涉及 **取值范围**: 列表最大1000条 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -56,17 +56,17 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * Array of property to format mappings. Used for (de)serialization
     * policyId  **参数解释**: 需要修改的防护策略ID，您可以通过[查询勒索病毒的防护策略列表](ListProtectionPolicy.xml)接口获取ID。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * agentIdList  **参数解释**: 开启了此勒索防护策略的agent的id列表 **约束限制**: 不涉及 **取值范围**: 列表最大1000条 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -111,17 +111,17 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * and the value is the original name
     * policyId  **参数解释**: 需要修改的防护策略ID，您可以通过[查询勒索病毒的防护策略列表](ListProtectionPolicy.xml)接口获取ID。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * agentIdList  **参数解释**: 开启了此勒索防护策略的agent的id列表 **约束限制**: 不涉及 **取值范围**: 列表最大1000条 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -145,17 +145,17 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * Array of attributes to setter functions (for deserialization of responses)
     * policyId  **参数解释**: 需要修改的防护策略ID，您可以通过[查询勒索病毒的防护策略列表](ListProtectionPolicy.xml)接口获取ID。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * agentIdList  **参数解释**: 开启了此勒索防护策略的agent的id列表 **约束限制**: 不涉及 **取值范围**: 列表最大1000条 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -179,17 +179,17 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     * Array of attributes to getter functions (for serialization of requests)
     * policyId  **参数解释**: 需要修改的防护策略ID，您可以通过[查询勒索病毒的防护策略列表](ListProtectionPolicy.xml)接口获取ID。 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * policyName  **参数解释**: 策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
-    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
-    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * protectionMode  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
+    * baitProtectionStatus  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
+    * deployMode  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     * protectionDirectory  **参数解释**: 防护目录 **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个防护目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * protectionType  **参数解释**: 需要防护的文件类型 **约束限制**: 不涉及 **取值范围**: txt、csv、rtf、doc、docx、xls、xlsx、ppt、pptx、pdf、xml、json、sql、mdf、dbf、ldf、db、myd、wdb、si、cfs、cfe、fnm、fdx、fdt、tvx、tvf、tvd、tim、nvd、nvm、dvd、dvm、jpeg、bmp、gif、png、tiff、eps、mp3、mp4、avi、mpg、wmv、RMVB、mov、3pg、swf、flv、rar、gz、tgz、zip、7z、cpp、c、java、asp、php、python、html、js、vdi、vmdk、vdx、ovf、qcow2、vmem、vswp、img、bak、back、cer、crt、pem、key、csr **默认取值**: 不涉及
     * excludeDirectory  **参数解释**: 排除目录(选填) **约束限制**: 多个目录请用英文分号隔开，最多支持填写20个排除目录 **取值范围**: 字符长度0-128位，特殊符号只允许使用._-+，不能以空格开头，防护目录长度不得超过256个字符。 **默认取值**: 不涉及
     * agentIdList  **参数解释**: 开启了此勒索防护策略的agent的id列表 **约束限制**: 不涉及 **取值范围**: 列表最大1000条 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
-    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
+    * runtimeDetectionStatus  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     * processWhitelist  进程白名单
-    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * aiProtectionStatus  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -435,7 +435,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets protectionMode
-    *  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
+    *  **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -447,7 +447,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets protectionMode
     *
-    * @param string $protectionMode **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。 **默认取值**: 不涉及
+    * @param string $protectionMode **参数解释**: 防护动作 **约束限制**: 不涉及 **取值范围**: 包含两种：   - alarm_and_isolation ：告警并自动隔离。   - alarm_only ：仅告警。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets baitProtectionStatus
-    *  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
+    *  **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets baitProtectionStatus
     *
-    * @param string|null $baitProtectionStatus **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。 **默认取值**: 不涉及
+    * @param string|null $baitProtectionStatus **参数解释**: 是否开启诱饵防护 **约束限制**: 不涉及 **取值范围**:   - opened ：开启。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets deployMode
-    *  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    *  **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets deployMode
     *
-    * @param string|null $deployMode **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: closed
+    * @param string|null $deployMode **参数解释**: 是否开启动态诱饵 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: closed
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets operatingSystem
-    *  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    *  **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -615,7 +615,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets operatingSystem
     *
-    * @param string $operatingSystem **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * @param string $operatingSystem **参数解释**: 支持该策略的操作系统 **约束限制**: 不涉及 **取值范围**: 包含两种：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -627,7 +627,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets runtimeDetectionStatus
-    *  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    *  **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -639,7 +639,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets runtimeDetectionStatus
     *
-    * @param string|null $runtimeDetectionStatus **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * @param string|null $runtimeDetectionStatus **参数解释**: 是否运行时检测 **约束限制**: 不涉及 **取值范围**: 包含如下2种，暂时只有关闭一种状态，为保留字段。   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -675,7 +675,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
 
     /**
     * Gets aiProtectionStatus
-    *  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    *  **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -687,7 +687,7 @@ class UpdateProtectionPolicyInfoRequestInfo implements ModelInterface, ArrayAcce
     /**
     * Sets aiProtectionStatus
     *
-    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。 **默认取值**: 不涉及
+    * @param string|null $aiProtectionStatus **参数解释**: 是否开启AI勒索防护 **约束限制**: 不涉及 **取值范围**: 包含两种：   - opened ：开启。   - closed ：关闭。  **默认取值**: 不涉及
     *
     * @return $this
     */

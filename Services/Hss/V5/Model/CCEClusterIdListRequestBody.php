@@ -20,8 +20,8 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterIdList  集群id列表
-    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    * clusterIdList  **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
+    * detectType  **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterIdList  集群id列表
-    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    * clusterIdList  **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
+    * detectType  **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterIdList  集群id列表
-    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    * clusterIdList  **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
+    * detectType  **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterIdList  集群id列表
-    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    * clusterIdList  **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
+    * detectType  **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterIdList  集群id列表
-    * detectType  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    * clusterIdList  **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
+    * detectType  **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterIdList
-    *  集群id列表
+    *  **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
     *
     * @return string[]
     */
@@ -203,7 +203,7 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets clusterIdList
     *
-    * @param string[] $clusterIdList 集群id列表
+    * @param string[] $clusterIdList **参数解释**： 集群ID列表 **约束限制**： 不涉及 **取值范围**： 数组长度0-200，每个元素字符长度0-128位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets detectType
-    *  查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    *  **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -227,7 +227,7 @@ class CCEClusterIdListRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets detectType
     *
-    * @param string|null $detectType 查询类型，包含如下:     - image : 镜像风险     - baseline : 基线风险     - vul : 漏洞风险     - event : 入侵风险
+    * @param string|null $detectType **参数解释**： 查询类型 **约束限制**： 不涉及 **取值范围**： - image：镜像风险 - baseline：基线风险 - vul：漏洞风险 - event：入侵风险  **默认取值**： 不涉及
     *
     * @return $this
     */

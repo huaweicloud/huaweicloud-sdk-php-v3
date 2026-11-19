@@ -172,12 +172,6 @@ class CheckScheduleTaskExistRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['scheduleType'] === null) {
             $invalidProperties[] = "'scheduleType' can't be null";
         }
-            if (!is_null($this->container['proxyId']) && (mb_strlen($this->container['proxyId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'proxyId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['proxyId']) && (mb_strlen($this->container['proxyId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'proxyId', the character length must be bigger than or equal to 36.";
-            }
         return $invalidProperties;
     }
 

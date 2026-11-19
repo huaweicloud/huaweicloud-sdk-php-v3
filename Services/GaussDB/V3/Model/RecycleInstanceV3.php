@@ -28,8 +28,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * payModel  计费模式。
     * createAt  创建时间。
     * deletedAt  删除时间。
-    * volumeType  磁盘类型。
-    * volumeSize  磁盘大小。
     * dataVip  数据面VIP。
     * dataVipIpv6  数据面IPV6。
     * enterpriseProjectId  企业项目ID。
@@ -37,6 +35,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * retentionDays  **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
     * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
@@ -50,8 +49,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'payModel' => 'string',
             'createAt' => 'int',
             'deletedAt' => 'int',
-            'volumeType' => 'string',
-            'volumeSize' => 'string',
             'dataVip' => 'string',
             'dataVipIpv6' => 'string',
             'enterpriseProjectId' => 'string',
@@ -59,6 +56,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'string',
             'recycleBackupId' => 'string',
             'recycleStatus' => 'string',
+            'retentionDays' => 'int',
             'recycleBackups' => '\HuaweiCloud\SDK\GaussDB\V3\Model\RecycleBackupV3[]'
     ];
 
@@ -72,8 +70,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * payModel  计费模式。
     * createAt  创建时间。
     * deletedAt  删除时间。
-    * volumeType  磁盘类型。
-    * volumeSize  磁盘大小。
     * dataVip  数据面VIP。
     * dataVipIpv6  数据面IPV6。
     * enterpriseProjectId  企业项目ID。
@@ -81,6 +77,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * retentionDays  **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
     * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
@@ -94,8 +91,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         'payModel' => null,
         'createAt' => 'int64',
         'deletedAt' => 'int64',
-        'volumeType' => null,
-        'volumeSize' => null,
         'dataVip' => null,
         'dataVipIpv6' => null,
         'enterpriseProjectId' => null,
@@ -103,6 +98,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         'backupLevel' => null,
         'recycleBackupId' => null,
         'recycleStatus' => null,
+        'retentionDays' => null,
         'recycleBackups' => null
     ];
 
@@ -137,8 +133,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * payModel  计费模式。
     * createAt  创建时间。
     * deletedAt  删除时间。
-    * volumeType  磁盘类型。
-    * volumeSize  磁盘大小。
     * dataVip  数据面VIP。
     * dataVipIpv6  数据面IPV6。
     * enterpriseProjectId  企业项目ID。
@@ -146,6 +140,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * retentionDays  **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
     * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
@@ -159,8 +154,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'payModel' => 'pay_model',
             'createAt' => 'create_at',
             'deletedAt' => 'deleted_at',
-            'volumeType' => 'volume_type',
-            'volumeSize' => 'volume_size',
             'dataVip' => 'data_vip',
             'dataVipIpv6' => 'data_vip_ipv6',
             'enterpriseProjectId' => 'enterprise_project_id',
@@ -168,6 +161,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'backup_level',
             'recycleBackupId' => 'recycle_backup_id',
             'recycleStatus' => 'recycle_status',
+            'retentionDays' => 'retention_days',
             'recycleBackups' => 'recycle_backups'
     ];
 
@@ -181,8 +175,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * payModel  计费模式。
     * createAt  创建时间。
     * deletedAt  删除时间。
-    * volumeType  磁盘类型。
-    * volumeSize  磁盘大小。
     * dataVip  数据面VIP。
     * dataVipIpv6  数据面IPV6。
     * enterpriseProjectId  企业项目ID。
@@ -190,6 +182,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * retentionDays  **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
     * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
@@ -203,8 +196,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'payModel' => 'setPayModel',
             'createAt' => 'setCreateAt',
             'deletedAt' => 'setDeletedAt',
-            'volumeType' => 'setVolumeType',
-            'volumeSize' => 'setVolumeSize',
             'dataVip' => 'setDataVip',
             'dataVipIpv6' => 'setDataVipIpv6',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
@@ -212,6 +203,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'setBackupLevel',
             'recycleBackupId' => 'setRecycleBackupId',
             'recycleStatus' => 'setRecycleStatus',
+            'retentionDays' => 'setRetentionDays',
             'recycleBackups' => 'setRecycleBackups'
     ];
 
@@ -225,8 +217,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * payModel  计费模式。
     * createAt  创建时间。
     * deletedAt  删除时间。
-    * volumeType  磁盘类型。
-    * volumeSize  磁盘大小。
     * dataVip  数据面VIP。
     * dataVipIpv6  数据面IPV6。
     * enterpriseProjectId  企业项目ID。
@@ -234,6 +224,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     * backupLevel  备份级别。
     * recycleBackupId  备份ID。
     * recycleStatus  回收状态。
+    * retentionDays  **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
     * recycleBackups  **参数解释**：  实例所有的回收站备份列表。
     *
     * @var string[]
@@ -247,8 +238,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'payModel' => 'getPayModel',
             'createAt' => 'getCreateAt',
             'deletedAt' => 'getDeletedAt',
-            'volumeType' => 'getVolumeType',
-            'volumeSize' => 'getVolumeSize',
             'dataVip' => 'getDataVip',
             'dataVipIpv6' => 'getDataVipIpv6',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
@@ -256,6 +245,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
             'backupLevel' => 'getBackupLevel',
             'recycleBackupId' => 'getRecycleBackupId',
             'recycleStatus' => 'getRecycleStatus',
+            'retentionDays' => 'getRetentionDays',
             'recycleBackups' => 'getRecycleBackups'
     ];
 
@@ -325,8 +315,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         $this->container['payModel'] = isset($data['payModel']) ? $data['payModel'] : null;
         $this->container['createAt'] = isset($data['createAt']) ? $data['createAt'] : null;
         $this->container['deletedAt'] = isset($data['deletedAt']) ? $data['deletedAt'] : null;
-        $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
-        $this->container['volumeSize'] = isset($data['volumeSize']) ? $data['volumeSize'] : null;
         $this->container['dataVip'] = isset($data['dataVip']) ? $data['dataVip'] : null;
         $this->container['dataVipIpv6'] = isset($data['dataVipIpv6']) ? $data['dataVipIpv6'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
@@ -334,6 +322,7 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
         $this->container['backupLevel'] = isset($data['backupLevel']) ? $data['backupLevel'] : null;
         $this->container['recycleBackupId'] = isset($data['recycleBackupId']) ? $data['recycleBackupId'] : null;
         $this->container['recycleStatus'] = isset($data['recycleStatus']) ? $data['recycleStatus'] : null;
+        $this->container['retentionDays'] = isset($data['retentionDays']) ? $data['retentionDays'] : null;
         $this->container['recycleBackups'] = isset($data['recycleBackups']) ? $data['recycleBackups'] : null;
     }
 
@@ -552,54 +541,6 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets volumeType
-    *  磁盘类型。
-    *
-    * @return string|null
-    */
-    public function getVolumeType()
-    {
-        return $this->container['volumeType'];
-    }
-
-    /**
-    * Sets volumeType
-    *
-    * @param string|null $volumeType 磁盘类型。
-    *
-    * @return $this
-    */
-    public function setVolumeType($volumeType)
-    {
-        $this->container['volumeType'] = $volumeType;
-        return $this;
-    }
-
-    /**
-    * Gets volumeSize
-    *  磁盘大小。
-    *
-    * @return string|null
-    */
-    public function getVolumeSize()
-    {
-        return $this->container['volumeSize'];
-    }
-
-    /**
-    * Sets volumeSize
-    *
-    * @param string|null $volumeSize 磁盘大小。
-    *
-    * @return $this
-    */
-    public function setVolumeSize($volumeSize)
-    {
-        $this->container['volumeSize'] = $volumeSize;
-        return $this;
-    }
-
-    /**
     * Gets dataVip
     *  数据面VIP。
     *
@@ -764,6 +705,30 @@ class RecycleInstanceV3 implements ModelInterface, ArrayAccess
     public function setRecycleStatus($recycleStatus)
     {
         $this->container['recycleStatus'] = $recycleStatus;
+        return $this;
+    }
+
+    /**
+    * Gets retentionDays
+    *  **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
+    *
+    * @return int|null
+    */
+    public function getRetentionDays()
+    {
+        return $this->container['retentionDays'];
+    }
+
+    /**
+    * Sets retentionDays
+    *
+    * @param int|null $retentionDays **参数解释**：  回收站备份剩余保留天数。由总保留天数减去实例删除后已过天数得出，为0表示即将清理。  **取值范围**：  - 0：回收站备份即将被清理。 - -1：永久保留（retain_all 策略，不主动清理）。 - 其他值：剩余保留天数。  **默认取值**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setRetentionDays($retentionDays)
+    {
+        $this->container['retentionDays'] = $retentionDays;
         return $this;
     }
 

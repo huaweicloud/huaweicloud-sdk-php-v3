@@ -27,6 +27,8 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID，填写后按照ID进行过滤，支持传入多个ID过滤。 **取值范围**： ELB实例的ID。
     * instanceType  **参数解释**： 实例的类型，填写后按照实例类型进行过滤，支持传入多个实例类型过滤。 **取值范围**： - ELB：ELB实例。
     * instanceProjectId  **参数解释**： 实例所属的项目ID，填写后按照项目ID进行过滤。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
             'resourceProjectId' => 'string',
             'instanceId' => 'string[]',
             'instanceType' => 'string[]',
-            'instanceProjectId' => 'string'
+            'instanceProjectId' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID，填写后按照ID进行过滤，支持传入多个ID过滤。 **取值范围**： ELB实例的ID。
     * instanceType  **参数解释**： 实例的类型，填写后按照实例类型进行过滤，支持传入多个实例类型过滤。 **取值范围**： - ELB：ELB实例。
     * instanceProjectId  **参数解释**： 实例所属的项目ID，填写后按照项目ID进行过滤。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
         'resourceProjectId' => null,
         'instanceId' => null,
         'instanceType' => null,
-        'instanceProjectId' => null
+        'instanceProjectId' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID，填写后按照ID进行过滤，支持传入多个ID过滤。 **取值范围**： ELB实例的ID。
     * instanceType  **参数解释**： 实例的类型，填写后按照实例类型进行过滤，支持传入多个实例类型过滤。 **取值范围**： - ELB：ELB实例。
     * instanceProjectId  **参数解释**： 实例所属的项目ID，填写后按照项目ID进行过滤。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
             'resourceProjectId' => 'resource_project_id',
             'instanceId' => 'instance_id',
             'instanceType' => 'instance_type',
-            'instanceProjectId' => 'instance_project_id'
+            'instanceProjectId' => 'instance_project_id',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
@@ -114,6 +126,8 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID，填写后按照ID进行过滤，支持传入多个ID过滤。 **取值范围**： ELB实例的ID。
     * instanceType  **参数解释**： 实例的类型，填写后按照实例类型进行过滤，支持传入多个实例类型过滤。 **取值范围**： - ELB：ELB实例。
     * instanceProjectId  **参数解释**： 实例所属的项目ID，填写后按照项目ID进行过滤。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
             'resourceProjectId' => 'setResourceProjectId',
             'instanceId' => 'setInstanceId',
             'instanceType' => 'setInstanceType',
-            'instanceProjectId' => 'setInstanceProjectId'
+            'instanceProjectId' => 'setInstanceProjectId',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -136,6 +152,8 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
     * instanceId  **参数解释**： 实例ID，填写后按照ID进行过滤，支持传入多个ID过滤。 **取值范围**： ELB实例的ID。
     * instanceType  **参数解释**： 实例的类型，填写后按照实例类型进行过滤，支持传入多个实例类型过滤。 **取值范围**： - ELB：ELB实例。
     * instanceProjectId  **参数解释**： 实例所属的项目ID，填写后按照项目ID进行过滤。 **取值范围**： 不涉及。
+    * limit  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    * marker  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
             'resourceProjectId' => 'getResourceProjectId',
             'instanceId' => 'getInstanceId',
             'instanceType' => 'getInstanceType',
-            'instanceProjectId' => 'getInstanceProjectId'
+            'instanceProjectId' => 'getInstanceProjectId',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -214,6 +234,8 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
         $this->container['instanceProjectId'] = isset($data['instanceProjectId']) ? $data['instanceProjectId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -406,6 +428,54 @@ class ListResourceAssociationsRequest implements ModelInterface, ArrayAccess
     public function setInstanceProjectId($instanceProjectId)
     {
         $this->container['instanceProjectId'] = $instanceProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit **参数解释**： 每页返回的个数。 **取值范围**： 0-2000。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker **参数解释**： 分页查询起始的资源ID，为空时查询第一页。 **取值范围**： 带“-”的标准UUID格式。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

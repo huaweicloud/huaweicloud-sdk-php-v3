@@ -27,7 +27,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。 字符长度0-64 **默认取值**: 不涉及
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
-    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     * lastDays  **参数解释**: 查询时间范围天数 **约束限制**: 不涉及 **取值范围**: 长度1-30。若不填，则默认查询一天内的防护事件和已有备份数。 **默认取值**: 不涉及
     *
     * @var string[]
@@ -53,7 +53,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。 字符长度0-64 **默认取值**: 不涉及
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
-    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     * lastDays  **参数解释**: 查询时间范围天数 **约束限制**: 不涉及 **取值范围**: 长度1-30。若不填，则默认查询一天内的防护事件和已有备份数。 **默认取值**: 不涉及
     *
     * @var string[]
@@ -100,7 +100,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。 字符长度0-64 **默认取值**: 不涉及
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
-    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     * lastDays  **参数解释**: 查询时间范围天数 **约束限制**: 不涉及 **取值范围**: 长度1-30。若不填，则默认查询一天内的防护事件和已有备份数。 **默认取值**: 不涉及
     *
     * @var string[]
@@ -126,7 +126,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。 字符长度0-64 **默认取值**: 不涉及
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
-    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     * lastDays  **参数解释**: 查询时间范围天数 **约束限制**: 不涉及 **取值范围**: 长度1-30。若不填，则默认查询一天内的防护事件和已有备份数。 **默认取值**: 不涉及
     *
     * @var string[]
@@ -152,7 +152,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     * hostName  **参数解释**: 服务器名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-256位 **默认取值**: 不涉及
     * osType  **参数解释**: 操作系统类型 **约束限制**: 不涉及 **取值范围**: 包含如下2种。   - Linux ：Linux。   - Windows ：Windows。 字符长度0-64 **默认取值**: 不涉及
     * hostIp  **参数解释**: 服务器IP地址 **约束限制**: 不涉及 **取值范围**: 字符长度0-256 **默认取值**: 不涉及
-    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    * hostStatus  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     * lastDays  **参数解释**: 查询时间范围天数 **约束限制**: 不涉及 **取值范围**: 长度1-30。若不填，则默认查询一天内的防护事件和已有备份数。 **默认取值**: 不涉及
     *
     * @var string[]
@@ -487,7 +487,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostStatus
-    *  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    *  **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -499,7 +499,7 @@ class ListProtectionServerRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostStatus
     *
-    * @param string|null $hostStatus **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。 **默认取值**: 不涉及
+    * @param string|null $hostStatus **参数解释**: 主机状态 **约束限制**: 不涉及 **取值范围**: 包含如下3种。   - 不传参默认为全部。   - ACTIVE ：正在运行。   - SHUTOFF ：关机。  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -41,6 +41,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
     * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
     * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
@@ -81,6 +82,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'rollbackNum' => 'string',
             'sqlNum' => 'string',
             'clientPort' => 'string',
+            'serverPort' => 'string',
             'queryId' => 'string',
             'transactionTimeCost' => 'string',
             'traceId' => 'string',
@@ -121,6 +123,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
     * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
     * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
@@ -161,6 +164,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
         'rollbackNum' => null,
         'sqlNum' => null,
         'clientPort' => null,
+        'serverPort' => null,
         'queryId' => null,
         'transactionTimeCost' => null,
         'traceId' => null,
@@ -222,6 +226,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
     * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
     * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
@@ -262,6 +267,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'rollbackNum' => 'rollback_num',
             'sqlNum' => 'sql_num',
             'clientPort' => 'client_port',
+            'serverPort' => 'server_port',
             'queryId' => 'query_id',
             'transactionTimeCost' => 'transaction_time_cost',
             'traceId' => 'trace_id',
@@ -302,6 +308,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
     * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
     * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
@@ -342,6 +349,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'rollbackNum' => 'setRollbackNum',
             'sqlNum' => 'setSqlNum',
             'clientPort' => 'setClientPort',
+            'serverPort' => 'setServerPort',
             'queryId' => 'setQueryId',
             'transactionTimeCost' => 'setTransactionTimeCost',
             'traceId' => 'setTraceId',
@@ -382,6 +390,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     * rollbackNum  **参数解释**： 会话中事务回滚的次数。 **取值范围**： 不涉及。
     * sqlNum  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * clientPort  **参数解释**： 客户端用于与后台通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    * serverPort  **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
     * queryId  **参数解释**： 会话执行的sql数。 **取值范围**： 不涉及。
     * transactionTimeCost  **参数解释**： 当前用户上一次执行的事务持续时间。 **取值范围**： 不涉及。
     * traceId  **参数解释**： 驱动传入的trace id，用于标识应用的一次请求。 **取值范围**： 不涉及。
@@ -422,6 +431,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
             'rollbackNum' => 'getRollbackNum',
             'sqlNum' => 'getSqlNum',
             'clientPort' => 'getClientPort',
+            'serverPort' => 'getServerPort',
             'queryId' => 'getQueryId',
             'transactionTimeCost' => 'getTransactionTimeCost',
             'traceId' => 'getTraceId',
@@ -518,6 +528,7 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
         $this->container['rollbackNum'] = isset($data['rollbackNum']) ? $data['rollbackNum'] : null;
         $this->container['sqlNum'] = isset($data['sqlNum']) ? $data['sqlNum'] : null;
         $this->container['clientPort'] = isset($data['clientPort']) ? $data['clientPort'] : null;
+        $this->container['serverPort'] = isset($data['serverPort']) ? $data['serverPort'] : null;
         $this->container['queryId'] = isset($data['queryId']) ? $data['queryId'] : null;
         $this->container['transactionTimeCost'] = isset($data['transactionTimeCost']) ? $data['transactionTimeCost'] : null;
         $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
@@ -1058,6 +1069,30 @@ class RealTimeSessionResult implements ModelInterface, ArrayAccess
     public function setClientPort($clientPort)
     {
         $this->container['clientPort'] = $clientPort;
+        return $this;
+    }
+
+    /**
+    * Gets serverPort
+    *  **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    *
+    * @return string|null
+    */
+    public function getServerPort()
+    {
+        return $this->container['serverPort'];
+    }
+
+    /**
+    * Sets serverPort
+    *
+    * @param string|null $serverPort **参数解释**： 服务端用于通讯的TCP端口号，如果使用Unix套接字，则为-1。 **取值范围**： 不涉及。
+    *
+    * @return $this
+    */
+    public function setServerPort($serverPort)
+    {
+        $this->container['serverPort'] = $serverPort;
         return $this;
     }
 

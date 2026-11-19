@@ -21,7 +21,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
@@ -35,7 +35,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
@@ -70,7 +70,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
@@ -84,7 +84,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
@@ -98,7 +98,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * serverId  **参数解释**: 恢复的目标虚拟机ID **约束限制**: 不涉及 **取值范围**: 字符长度1-128位 **默认取值**: 不涉及
-    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    * powerOn  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     * mappings  **参数解释**： 恢复的映射关系（整机恢复时必填，卷恢复时可选但是不会用到填写的值） **取值范围**: 不涉及
     *
     * @var string[]
@@ -226,7 +226,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets powerOn
-    *  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    *  **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     *
     * @return bool|null
     */
@@ -238,7 +238,7 @@ class RestoreDuplicationRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets powerOn
     *
-    * @param bool|null $powerOn **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机 **默认取值**: true
+    * @param bool|null $powerOn **参数解释**： 恢复后是否开机, 默认开机。 **约束限制**: 不涉及 **取值范围**: - true：开机 - false: 不开机  **默认取值**: true
     *
     * @return $this
     */

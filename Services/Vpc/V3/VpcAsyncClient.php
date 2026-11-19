@@ -2495,6 +2495,12 @@ class VpcAsyncClient extends Client
         if ($localVarParams['instanceProjectId'] !== null) {
             $queryParams['instance_project_id'] = $localVarParams['instanceProjectId'];
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -2841,6 +2847,36 @@ class VpcAsyncClient extends Client
         }
         if ($localVarParams['parentId'] !== null) {
             $queryParams['parent_id'] = $localVarParams['parentId'];
+        }
+        if ($localVarParams['enableEip'] !== null) {
+            $queryParams['enable_eip'] = $localVarParams['enableEip'];
+        }
+        if ($localVarParams['scope'] !== null) {
+            $queryParams['scope'] = $localVarParams['scope'];
+        }
+        if ($localVarParams['securityGroups'] !== null) {
+            $queryParams['security_groups'] = $localVarParams['securityGroups'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['parentDeviceId'] !== null) {
+            $queryParams['parent_device_id'] = $localVarParams['parentDeviceId'];
+        }
+        if ($localVarParams['vlanId'] !== null) {
+            $queryParams['vlan_id'] = $localVarParams['vlanId'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['ipv6IpAddress'] !== null) {
+            $queryParams['ipv6_ip_address'] = $localVarParams['ipv6IpAddress'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $queryParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['instanceType'] !== null) {
+            $queryParams['instance_type'] = $localVarParams['instanceType'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];

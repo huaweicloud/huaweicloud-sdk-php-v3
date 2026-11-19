@@ -1289,6 +1289,68 @@ class KmsClient extends Client
     }
 
     /**
+     * 创建密钥空间
+     *
+     * 用于创建密钥空间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTrustedKeySpace($request)
+    {
+        return $this->createTrustedKeySpaceWithHttpInfo($request);
+    }
+
+    public function createTrustedKeySpaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-spaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\CreateTrustedKeySpaceResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\CreateTrustedKeySpaceRequest');
+    }
+
+    /**
      * 解密数据
      *
      * - 功能介绍：解密数据。
@@ -1909,6 +1971,68 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteTagResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteTagRequest');
+    }
+
+    /**
+     * 删除密钥空间
+     *
+     * 用于删除密钥空间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTrustedKeySpace($request)
+    {
+        return $this->deleteTrustedKeySpaceWithHttpInfo($request);
+    }
+
+    public function deleteTrustedKeySpaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-spaces/{keyspace_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyspaceId'] !== null) {
+            $pathParams['keyspace_id'] = $localVarParams['keyspaceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteTrustedKeySpaceResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\DeleteTrustedKeySpaceRequest');
     }
 
     /**
@@ -3491,6 +3615,77 @@ class KmsClient extends Client
     }
 
     /**
+     * 查询密钥空间列表
+     *
+     * 用于查询密钥空间列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTrustedKeySpace($request)
+    {
+        return $this->listTrustedKeySpaceWithHttpInfo($request);
+    }
+
+    public function listTrustedKeySpaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-spaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['keyspaceId'] !== null) {
+            $queryParams['keyspace_id'] = $localVarParams['keyspaceId'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ListTrustedKeySpaceResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ListTrustedKeySpaceRequest');
+    }
+
+    /**
      * 重加密
      *
      * 将密文使用源密钥解密后，再使用指定的新密钥加密。
@@ -3868,6 +4063,74 @@ class KmsClient extends Client
     }
 
     /**
+     * 查询密钥使用流
+     *
+     * 查询指定密钥空间下指定密钥的使用流关系图，返回节点和边的图结构。
+     * - 节点按类型分组：vpc（VPC节点，含ECS、CCE子节点）、custom（接入点节点）、modelarts（ModelArts节点）、policy（策略节点）、unknown_node（未知起点节点）、key（密钥节点）。
+     * - 边表示使用流关系：起点节点到策略节点、策略节点到密钥节点。
+     * - 该接口仅支持查询已记录使用流关系的密钥，若密钥不存在使用流记录，则返回空的节点和边。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showKeyUsageFlow($request)
+    {
+        return $this->showKeyUsageFlowWithHttpInfo($request);
+    }
+
+    public function showKeyUsageFlowWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-spaces/usage-flow';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyspaceId'] !== null) {
+            $queryParams['keyspace_id'] = $localVarParams['keyspaceId'];
+        }
+        if ($localVarParams['keyId'] !== null) {
+            $queryParams['key_id'] = $localVarParams['keyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ShowKeyUsageFlowResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ShowKeyUsageFlowRequest');
+    }
+
+    /**
      * 查询密钥标签
      *
      * - 功能介绍：查询密钥标签。
@@ -4172,6 +4435,69 @@ class KmsClient extends Client
     }
 
     /**
+     * 转移密钥
+     *
+     * 用于将密钥从一个密钥空间转移到另一个密钥空间
+     * - ASSIGN：将密钥分配给目标密钥空间，仅支持对称密钥，且密钥必须未属于任何密钥空间。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function transferKey($request)
+    {
+        return $this->transferKeyWithHttpInfo($request);
+    }
+
+    public function transferKeyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/key-spaces/transfer-key';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\TransferKeyResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\TransferKeyRequest');
+    }
+
+    /**
      * 修改密钥别名
      *
      * - 功能介绍：修改用户主密钥别名。
@@ -4426,6 +4752,71 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyRotationIntervalResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyRotationIntervalRequest');
+    }
+
+    /**
+     * 更新专属密钥库
+     *
+     * 仅XKS类型的密钥库支持更新访问凭证信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateKeyStore($request)
+    {
+        return $this->updateKeyStoreWithHttpInfo($request);
+    }
+
+    public function updateKeyStoreWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/keystores/{keystore_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keystoreId'] !== null) {
+            $pathParams['keystore_id'] = $localVarParams['keystoreId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyStoreResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyStoreRequest');
     }
 
     /**

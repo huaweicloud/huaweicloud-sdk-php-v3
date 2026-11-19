@@ -34,7 +34,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: 不涉及
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -74,7 +74,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: 不涉及
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -135,7 +135,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: 不涉及
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -175,7 +175,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: 不涉及
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -215,7 +215,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     * type  **参数解释**: 查询的漏洞类型 **约束限制**: 不涉及 **取值范围**: - linux_vul：linux漏洞 - windows_vul：windows漏洞 - web_cms：Web-CMS漏洞 - app_vul：应用漏洞 - urgent_vul：应急漏洞  **默认取值**: 不涉及
     * repairType  **参数解释**: 查询漏洞的修复紧急程度类型 **约束限制**: 不涉及 **取值范围**: - need_urgent_repair：需要紧急修复的漏洞 - unrepair：未完成修复的漏洞  **默认取值**: 不涉及
     * severityLevel  **参数解释**: 漏洞风险等级 **约束限制**: 不涉及 **取值范围**: - Critical: 紧急 - High: 高 - Medium: 中 - Low: 低  **默认取值**: 不涉及
-    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * repairPriority  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     * hostIdList  **参数解释**: 主机id列表，多个主机id用英文逗号分隔 **约束限制**: 不涉及 **取值范围**: 字符长度0-1850位 **默认取值**: 不涉及
     *
     * @var string[]
@@ -756,7 +756,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets repairPriority
-    *  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    *  **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -768,7 +768,7 @@ class ListVulHostVulsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets repairPriority
     *
-    * @param string|null $repairPriority **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低 **默认取值**: 不涉及
+    * @param string|null $repairPriority **参数解释**: 漏洞修复优先级 **约束限制**: 不涉及 **取值范围**: - Critical：紧急 - High：高 - Medium：中 - Low：低  **默认取值**: 不涉及
     *
     * @return $this
     */

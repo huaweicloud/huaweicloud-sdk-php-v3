@@ -21,7 +21,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
-    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
@@ -55,7 +55,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
-    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
@@ -110,7 +110,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
-    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
@@ -144,7 +144,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
-    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
@@ -178,7 +178,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  **参数解释** : HSS配额的资源ID **取值范围** : 字符长度1-128位
-    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * version  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     * quotaStatus  **参数解释**： 配额状态 **取值范围**： 包含如下3种。 - normal : 正常 - expired : 已过期 - freeze : 已冻结
     * usedStatus  **参数解释**： 使用状态 **取值范围**： 包含如下2种。 - idle : 空闲 - used : 使用中
     * hostId  **参数解释**: 服务器ID **取值范围**: 字符长度1-64位
@@ -402,7 +402,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    *  **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     *
     * @return string|null
     */
@@ -414,7 +414,7 @@ class QuotaResourcesResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。
+    * @param string|null $version **参数解释**： 资源规格编码 **取值范围**： 包含如下6种。 - hss.version.basic ：基础版。 - hss.version.advanced ：专业版。 - hss.version.enterprise ：企业版。 - hss.version.premium ：旗舰版。 - hss.version.wtp ：网页防篡改版。 - hss.version.container.enterprise：容器版。 - hss.version.container.wtp：容器网页防篡改增值项。
     *
     * @return $this
     */

@@ -26,7 +26,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     * limit  **参数解释**: 每页显示个数 **约束限制**: 不涉及 **取值范围**: 取值10-200 **默认取值**: 10
     * policyName  **参数解释**: 防护策略名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-255 **默认取值**: 不涉及
     * protectPolicyId  **参数解释**: 防护策略id **约束限制**: 不涉及 **取值范围**: 字符长度0-128 **默认取值**: 不涉及
-    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * operatingSystem  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -441,7 +441,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingSystem
-    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    *  **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class ListProtectionPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets operatingSystem
     *
-    * @param string|null $operatingSystem **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统 **默认取值**: 不涉及
+    * @param string|null $operatingSystem **参数解释**: 策略支持的操作系统 **约束限制**: 不涉及 **取值范围**: 包含如下：   - Windows : Windows系统   - Linux : Linux系统  **默认取值**: 不涉及
     *
     * @return $this
     */

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListCceClusterDetectRiskRequest implements ModelInterface, ArrayAccess
+class AddSecurityReportRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class ListCceClusterDetectRiskRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListCceClusterDetectRiskRequest';
+    protected static $openAPIModelName = 'AddSecurityReportRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -27,7 +27,7 @@ class ListCceClusterDetectRiskRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'enterpriseProjectId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Hss\V5\Model\CCEClusterIdListRequestBody'
+            'body' => '\HuaweiCloud\SDK\Hss\V5\Model\AddSecurityReportRequestInfo'
     ];
 
     /**
@@ -220,7 +220,7 @@ class ListCceClusterDetectRiskRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Hss\V5\Model\CCEClusterIdListRequestBody|null
+    * @return \HuaweiCloud\SDK\Hss\V5\Model\AddSecurityReportRequestInfo|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class ListCceClusterDetectRiskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\CCEClusterIdListRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\AddSecurityReportRequestInfo|null $body body
     *
     * @return $this
     */

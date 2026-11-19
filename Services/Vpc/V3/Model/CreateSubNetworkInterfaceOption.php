@@ -30,6 +30,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
             'ipv6IpAddress' => 'string',
             'securityGroups' => 'string[]',
             'projectId' => 'string',
-            'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]'
+            'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]'
     ];
 
     /**
@@ -58,6 +60,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
         'ipv6IpAddress' => null,
         'securityGroups' => null,
         'projectId' => null,
-        'allowedAddressPairs' => null
+        'allowedAddressPairs' => null,
+        'tags' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
             'ipv6IpAddress' => 'ipv6_ip_address',
             'securityGroups' => 'security_groups',
             'projectId' => 'project_id',
-            'allowedAddressPairs' => 'allowed_address_pairs'
+            'allowedAddressPairs' => 'allowed_address_pairs',
+            'tags' => 'tags'
     ];
 
     /**
@@ -135,6 +141,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
             'ipv6IpAddress' => 'setIpv6IpAddress',
             'securityGroups' => 'setSecurityGroups',
             'projectId' => 'setProjectId',
-            'allowedAddressPairs' => 'setAllowedAddressPairs'
+            'allowedAddressPairs' => 'setAllowedAddressPairs',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -163,6 +171,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     * securityGroups  功能说明：安全组的ID列表；例如：\"security_groups\": [\"a0608cbf-d047-4f54-8b28-cd7b59853fff\"] 取值范围：默认值为系统默认安全组
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
     * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
             'ipv6IpAddress' => 'getIpv6IpAddress',
             'securityGroups' => 'getSecurityGroups',
             'projectId' => 'getProjectId',
-            'allowedAddressPairs' => 'getAllowedAddressPairs'
+            'allowedAddressPairs' => 'getAllowedAddressPairs',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -247,6 +257,7 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
         $this->container['securityGroups'] = isset($data['securityGroups']) ? $data['securityGroups'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -514,6 +525,30 @@ class CreateSubNetworkInterfaceOption implements ModelInterface, ArrayAccess
     public function setAllowedAddressPairs($allowedAddressPairs)
     {
         $this->container['allowedAddressPairs'] = $allowedAddressPairs;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  辅助弹性网卡资源标签
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 辅助弹性网卡资源标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

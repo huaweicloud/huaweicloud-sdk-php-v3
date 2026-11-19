@@ -29,7 +29,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
     * hostPrivateIp  **参数解释**: 主机私有IP **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerName  **参数解释**: 容器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerId  **参数解释**: 受影响容器id **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
     * hostPrivateIp  **参数解释**: 主机私有IP **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerName  **参数解释**: 容器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerId  **参数解释**: 受影响容器id **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
     * hostPrivateIp  **参数解释**: 主机私有IP **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerName  **参数解释**: 容器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerId  **参数解释**: 受影响容器id **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
     * hostPrivateIp  **参数解释**: 主机私有IP **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerName  **参数解释**: 容器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerId  **参数解释**: 受影响容器id **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
     * hostPrivateIp  **参数解释**: 主机私有IP **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerName  **参数解释**: 容器名称 **约束限制**: 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
     * containerId  **参数解释**: 受影响容器id **约束限制**: 不涉及 **取值范围**: 字符长度0-256位 **默认取值**: 不涉及
-    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    * status  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -570,7 +570,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
 
     /**
     * Gets status
-    *  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    *  **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -582,7 +582,7 @@ class ListWebTamperProtectionContainerRequest implements ModelInterface, ArrayAc
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败 **默认取值**: 不涉及
+    * @param string|null $status **参数解释**: 防护状态 **约束限制**: 不涉及 **取值范围**: - protected：防护中 - partial_protected：部分防护 - protect_failed：防护失败  **默认取值**: 不涉及
     *
     * @return $this
     */

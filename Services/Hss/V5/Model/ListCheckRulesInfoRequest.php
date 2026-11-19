@@ -30,7 +30,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
     * imageVersion  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符串大小0-65535 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID，swr共享版无需使用该参数 **约束限制**: 不涉及 **取值范围**: 字符串大小0-128 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**： 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
     * imageVersion  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符串大小0-65535 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID，swr共享版无需使用该参数 **约束限制**: 不涉及 **取值范围**: 字符串大小0-128 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**： 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
     * imageVersion  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符串大小0-65535 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID，swr共享版无需使用该参数 **约束限制**: 不涉及 **取值范围**: 字符串大小0-128 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**： 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
     * imageVersion  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符串大小0-65535 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID，swr共享版无需使用该参数 **约束限制**: 不涉及 **取值范围**: 字符串大小0-128 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**： 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
     * imageVersion  **参数解释**: 镜像版本名称 **约束限制**: 不涉及 **取值范围**: 字符串大小0-65535 **默认取值**: 不涉及
     * instanceId  **参数解释**: 企业仓库实例ID，swr共享版无需使用该参数 **约束限制**: 不涉及 **取值范围**: 字符串大小0-128 **默认取值**: 不涉及
     * imageId  **参数解释**: 镜像id **约束限制**： 不涉及 **取值范围**: 字符长度0-128位 **默认取值**: 不涉及
-    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    * scanResult  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -623,7 +623,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanResult
-    *  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    *  **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -635,7 +635,7 @@ class ListCheckRulesInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanResult
     *
-    * @param string|null $scanResult **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过 **默认取值**: 不涉及
+    * @param string|null $scanResult **参数解释**: 检测结果 **约束限制**: 不涉及 **取值范围**:   - pass：通过   - failed：未通过  **默认取值**: 不涉及
     *
     * @return $this
     */

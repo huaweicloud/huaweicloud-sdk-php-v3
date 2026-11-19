@@ -23,14 +23,14 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     * fileId  **参数解释**: 文件ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     * fileName  **参数解释**: 文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-512 **默认取值**: 不涉及
     * fileType  **参数解释**: 文件类型 **约束限制**: 不涉及 **取值范围**: - dockerfile：Dockerfile文件 - k8s_yaml：k8s yaml文件  **默认取值**: 不涉及
-    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     * riskNum  风险项数量
     * firstScanTime  首次扫描时间
     * lastScanTime  最近扫描时间
     * uploadFileTime  上传文件时间
     * cicdId  **参数解释**: cicd标识 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * cicdName  **参数解释**: CI/CD名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
-    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -53,14 +53,14 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     * fileId  **参数解释**: 文件ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     * fileName  **参数解释**: 文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-512 **默认取值**: 不涉及
     * fileType  **参数解释**: 文件类型 **约束限制**: 不涉及 **取值范围**: - dockerfile：Dockerfile文件 - k8s_yaml：k8s yaml文件  **默认取值**: 不涉及
-    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     * riskNum  风险项数量
     * firstScanTime  首次扫描时间
     * lastScanTime  最近扫描时间
     * uploadFileTime  上传文件时间
     * cicdId  **参数解释**: cicd标识 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * cicdName  **参数解释**: CI/CD名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
-    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -104,14 +104,14 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     * fileId  **参数解释**: 文件ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     * fileName  **参数解释**: 文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-512 **默认取值**: 不涉及
     * fileType  **参数解释**: 文件类型 **约束限制**: 不涉及 **取值范围**: - dockerfile：Dockerfile文件 - k8s_yaml：k8s yaml文件  **默认取值**: 不涉及
-    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     * riskNum  风险项数量
     * firstScanTime  首次扫描时间
     * lastScanTime  最近扫描时间
     * uploadFileTime  上传文件时间
     * cicdId  **参数解释**: cicd标识 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * cicdName  **参数解释**: CI/CD名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
-    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -134,14 +134,14 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     * fileId  **参数解释**: 文件ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     * fileName  **参数解释**: 文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-512 **默认取值**: 不涉及
     * fileType  **参数解释**: 文件类型 **约束限制**: 不涉及 **取值范围**: - dockerfile：Dockerfile文件 - k8s_yaml：k8s yaml文件  **默认取值**: 不涉及
-    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     * riskNum  风险项数量
     * firstScanTime  首次扫描时间
     * lastScanTime  最近扫描时间
     * uploadFileTime  上传文件时间
     * cicdId  **参数解释**: cicd标识 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * cicdName  **参数解释**: CI/CD名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
-    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -164,14 +164,14 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     * fileId  **参数解释**: 文件ID **约束限制**: 不涉及 **取值范围**: 字符长度1-64 **默认取值**: 不涉及
     * fileName  **参数解释**: 文件名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-512 **默认取值**: 不涉及
     * fileType  **参数解释**: 文件类型 **约束限制**: 不涉及 **取值范围**: - dockerfile：Dockerfile文件 - k8s_yaml：k8s yaml文件  **默认取值**: 不涉及
-    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    * risky  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     * riskNum  风险项数量
     * firstScanTime  首次扫描时间
     * lastScanTime  最近扫描时间
     * uploadFileTime  上传文件时间
     * cicdId  **参数解释**: cicd标识 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
     * cicdName  **参数解释**: CI/CD名称 **约束限制**: 不涉及 **取值范围**: 字符长度1-128 **默认取值**: 不涉及
-    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    * scanType  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @var string[]
     */
@@ -422,7 +422,7 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
 
     /**
     * Gets risky
-    *  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    *  **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     *
     * @return bool|null
     */
@@ -434,7 +434,7 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     /**
     * Sets risky
     *
-    * @param bool|null $risky **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险 **默认取值**: 不涉及
+    * @param bool|null $risky **参数解释**: 是否有风险 **约束限制**: 不涉及 **取值范围**: - true：有风险 - false：无风险  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanType
-    *  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    *  **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @return string|null
     */
@@ -602,7 +602,7 @@ class ListIacFilesResponseInfoDataList implements ModelInterface, ArrayAccess
     /**
     * Sets scanType
     *
-    * @param string|null $scanType **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描 **默认取值**: 不涉及
+    * @param string|null $scanType **参数解释**: 扫描方式 **约束限制**: 不涉及 **取值范围**: - manual_scan：手动扫描 - cicd_scan：cicd扫描  **默认取值**: 不涉及
     *
     * @return $this
     */

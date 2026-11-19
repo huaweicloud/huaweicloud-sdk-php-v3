@@ -22,24 +22,28 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    * supportRollback  **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'isDelayed' => 'bool',
-            'secondSwitch' => 'bool'
+            'secondSwitch' => 'bool',
+            'supportRollback' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    * supportRollback  **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'isDelayed' => null,
-        'secondSwitch' => null
+        'secondSwitch' => null,
+        'supportRollback' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     * and the value is the original name
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    * supportRollback  **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'isDelayed' => 'is_delayed',
-            'secondSwitch' => 'second_switch'
+            'secondSwitch' => 'second_switch',
+            'supportRollback' => 'support_rollback'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    * supportRollback  **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
     *
     * @var string[]
     */
     protected static $setters = [
             'isDelayed' => 'setIsDelayed',
-            'secondSwitch' => 'setSecondSwitch'
+            'secondSwitch' => 'setSecondSwitch',
+            'supportRollback' => 'setSupportRollback'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * isDelayed  是否延迟至可维护时间段内升级。 取值范围： - true：延迟升级。表示实例将在设置的可维护时间段内升级。 - false：立即升级，默认该方式。
     * secondSwitch  设置仅对RDS for MySQL数据库实例（主备）生效。主备实例升级过程中，备机升级成功后，会触发主备倒换继续升级主机，主机升级完成后，若主备可用区不同则触发第二次倒换，保证可用区不变。若主备可用区相同，该选项无效。 取值范围： - true：默认该方式。表示升级过程中会进行二次倒换保证主备实例可用区不变。 - false：升级过程中不进行第二次主备倒换，适合对主备所在可用区不敏感，对业务连续性敏感的客户。
+    * supportRollback  **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
     *
     * @var string[]
     */
     protected static $getters = [
             'isDelayed' => 'getIsDelayed',
-            'secondSwitch' => 'getSecondSwitch'
+            'secondSwitch' => 'getSecondSwitch',
+            'supportRollback' => 'getSupportRollback'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     {
         $this->container['isDelayed'] = isset($data['isDelayed']) ? $data['isDelayed'] : null;
         $this->container['secondSwitch'] = isset($data['secondSwitch']) ? $data['secondSwitch'] : null;
+        $this->container['supportRollback'] = isset($data['supportRollback']) ? $data['supportRollback'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class CustomerUpgradeDatabaseVersionReqNew implements ModelInterface, ArrayAcces
     public function setSecondSwitch($secondSwitch)
     {
         $this->container['secondSwitch'] = $secondSwitch;
+        return $this;
+    }
+
+    /**
+    * Gets supportRollback
+    *  **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
+    *
+    * @return bool|null
+    */
+    public function getSupportRollback()
+    {
+        return $this->container['supportRollback'];
+    }
+
+    /**
+    * Sets supportRollback
+    *
+    * @param bool|null $supportRollback **参数解释**： 是否支持升级成功后能够回滚。  **约束限制**： 该配置仅对RDS for MySQL 8.0 和5.7实例生效。  **取值范围**： - true：支持小版本升级成功后回滚，小版本升级时长会增加。升级完成后实例会进入观察状态，期间数据库可以正常读写。如果确认无误，需要确认完成。如果出现问题，可以回滚，恢复到原始小版本。 - false：小版本升级后不支持回滚。  **默认取值**： false
+    *
+    * @return $this
+    */
+    public function setSupportRollback($supportRollback)
+    {
+        $this->container['supportRollback'] = $supportRollback;
         return $this;
     }
 

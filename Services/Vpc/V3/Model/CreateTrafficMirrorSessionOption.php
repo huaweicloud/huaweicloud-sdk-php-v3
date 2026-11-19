@@ -274,9 +274,6 @@ class CreateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
         if ($this->container['trafficMirrorFilterId'] === null) {
             $invalidProperties[] = "'trafficMirrorFilterId' can't be null";
         }
-        if ($this->container['trafficMirrorSources'] === null) {
-            $invalidProperties[] = "'trafficMirrorSources' can't be null";
-        }
         if ($this->container['trafficMirrorTargetId'] === null) {
             $invalidProperties[] = "'trafficMirrorTargetId' can't be null";
         }
@@ -376,7 +373,7 @@ class CreateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     * Gets trafficMirrorSources
     *  功能说明：镜像源ID列表，支持弹性网卡作为镜像源。 约束：一个镜像会话默认最大支持10个镜像源。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getTrafficMirrorSources()
     {
@@ -386,7 +383,7 @@ class CreateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     /**
     * Sets trafficMirrorSources
     *
-    * @param string[] $trafficMirrorSources 功能说明：镜像源ID列表，支持弹性网卡作为镜像源。 约束：一个镜像会话默认最大支持10个镜像源。
+    * @param string[]|null $trafficMirrorSources 功能说明：镜像源ID列表，支持弹性网卡作为镜像源。 约束：一个镜像会话默认最大支持10个镜像源。
     *
     * @return $this
     */

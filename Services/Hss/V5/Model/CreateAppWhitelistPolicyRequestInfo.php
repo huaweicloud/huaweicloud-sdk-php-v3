@@ -23,7 +23,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
-    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * autoDetect  **参数解释**： 是否自动开启检测 **取值范围**: - true：是 - false：否
     * autoConfirm  是否自动确认学习结果
@@ -51,7 +51,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
-    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * autoDetect  **参数解释**： 是否自动开启检测 **取值范围**: - true：是 - false：否
     * autoConfirm  是否自动确认学习结果
@@ -100,7 +100,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
-    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * autoDetect  **参数解释**： 是否自动开启检测 **取值范围**: - true：是 - false：否
     * autoConfirm  是否自动确认学习结果
@@ -128,7 +128,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
-    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * autoDetect  **参数解释**： 是否自动开启检测 **取值范围**: - true：是 - false：否
     * autoConfirm  是否自动确认学习结果
@@ -156,7 +156,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     * policyName  策略名称
     * policyType  **参数解释**： 进程白名单策略类型 **取值范围**: - block：日常运营模式
     * learningDays  **参数解释**: 策略学习天数 **取值范围**: 最小值3，最大值30
-    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    * specifiedDir  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     * intercept  **参数解释**： 是否开启阻断 **取值范围**: - true：是 - false：否
     * autoDetect  **参数解释**： 是否自动开启检测 **取值范围**: - true：是 - false：否
     * autoConfirm  是否自动确认学习结果
@@ -387,7 +387,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets specifiedDir
-    *  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    *  **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     *
     * @return bool|null
     */
@@ -399,7 +399,7 @@ class CreateAppWhitelistPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets specifiedDir
     *
-    * @param bool|null $specifiedDir **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否 **默认取值**： 不涉及
+    * @param bool|null $specifiedDir **参数解释**： 是否指定学习目录 **约束限制**： 不涉及 **取值范围**: - true：是 - false：否  **默认取值**： 不涉及
     *
     * @return $this
     */

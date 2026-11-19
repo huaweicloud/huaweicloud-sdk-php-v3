@@ -20,8 +20,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
-    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
@@ -40,8 +40,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
-    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
@@ -81,8 +81,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
-    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
@@ -101,8 +101,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
-    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
@@ -121,8 +121,8 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
-    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * scanPeriod  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
+    * scanRangeType  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     * hostIds  **参数解释**: 主机ID列表； **约束限制**: 当scan_range_type的值为specific_host时 表示扫描的主机列表 必填 **取值范围**: 最小值0，最大值20000 **默认取值**: 不涉及
     * scanVulTypes  **参数解释**: \"扫描的漏洞类型列表\" **约束限制**: 不涉及 **取值范围**: 最小值0，最大值5 **默认取值**: 不涉及
     * status  **参数解释**: 扫描策略状态 **约束限制**: 不涉及 **取值范围**: - open : 开启 - close : 关闭  **默认取值** : 不涉及
@@ -256,7 +256,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanPeriod
-    *  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    *  **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanPeriod
     *
-    * @param string $scanPeriod **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月 **默认取值**: 不涉及
+    * @param string $scanPeriod **参数解释**: 扫描周期 **约束限制**: 不涉及 **取值范围**: - one_day：每天 - three_day：每三天 - one_week：每周 - one_month：每月  **默认取值**: 不涉及
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanRangeType
-    *  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    *  **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     *
     * @return string
     */
@@ -292,7 +292,7 @@ class ChangeVulScanPolicyRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scanRangeType
     *
-    * @param string $scanRangeType **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机 **默认取值**: 不涉及
+    * @param string $scanRangeType **参数解释**: 扫描主机的范围 **约束限制**: 不涉及 **取值范围**: - all_host：扫描全部主机 - specific_host：扫描指定主机  **默认取值**: 不涉及
     *
     * @return $this
     */
