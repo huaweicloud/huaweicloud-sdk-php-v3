@@ -20,10 +20,10 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  规则id
-    * name  规则名称
+    * ruleId  **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     * status  规则状态，on：开启，off：关闭。
-    * priority  此条规则的优先级，数值越大，优先级越高。
+    * priority  **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     * conditions  conditions
     * actions  满足规则条件后执行的动作列表
     *
@@ -40,10 +40,10 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  规则id
-    * name  规则名称
+    * ruleId  **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     * status  规则状态，on：开启，off：关闭。
-    * priority  此条规则的优先级，数值越大，优先级越高。
+    * priority  **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     * conditions  conditions
     * actions  满足规则条件后执行的动作列表
     *
@@ -81,10 +81,10 @@ class RuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  规则id
-    * name  规则名称
+    * ruleId  **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     * status  规则状态，on：开启，off：关闭。
-    * priority  此条规则的优先级，数值越大，优先级越高。
+    * priority  **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     * conditions  conditions
     * actions  满足规则条件后执行的动作列表
     *
@@ -101,10 +101,10 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  规则id
-    * name  规则名称
+    * ruleId  **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     * status  规则状态，on：开启，off：关闭。
-    * priority  此条规则的优先级，数值越大，优先级越高。
+    * priority  **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     * conditions  conditions
     * actions  满足规则条件后执行的动作列表
     *
@@ -121,10 +121,10 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  规则id
-    * name  规则名称
+    * ruleId  **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     * status  规则状态，on：开启，off：关闭。
-    * priority  此条规则的优先级，数值越大，优先级越高。
+    * priority  **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     * conditions  conditions
     * actions  满足规则条件后执行的动作列表
     *
@@ -247,7 +247,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleId
-    *  规则id
+    *  **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string
     */
@@ -259,7 +259,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ruleId
     *
-    * @param string $ruleId 规则id
+    * @param string $ruleId **参数解释：** 规则id **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -271,7 +271,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规则名称
+    *  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string
     */
@@ -283,7 +283,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规则名称
+    * @param string $name **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  此条规则的优先级，数值越大，优先级越高。
+    *  **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     *
     * @return int
     */
@@ -331,7 +331,7 @@ class RuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority 此条规则的优先级，数值越大，优先级越高。
+    * @param int $priority **参数解释：** 此条规则的优先级，数值越大，优先级越高。 **约束限制：** 不涉及 **取值范围：** 1-1000
     *
     * @return $this
     */

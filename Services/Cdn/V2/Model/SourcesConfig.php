@@ -20,19 +20,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
-    * originAddr  源站IP或者域名。
-    * priority  源站优先级，70：主，30：备。
-    * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
-    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
-    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
-    * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
-    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
-    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
-    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
-    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    * originType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
+    * originAddr  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * weight  **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
+    * obsWebHostingStatus  **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    * obsBucketType  **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
+    * bucketAccessKey  **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketSecretKey  **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketRegion  **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketName  **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
-    * originAddr  源站IP或者域名。
-    * priority  源站优先级，70：主，30：备。
-    * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
-    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
-    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
-    * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
-    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
-    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
-    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
-    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    * originType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
+    * originAddr  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * weight  **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
+    * obsWebHostingStatus  **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    * obsBucketType  **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
+    * bucketAccessKey  **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketSecretKey  **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketRegion  **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketName  **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
-    * originAddr  源站IP或者域名。
-    * priority  源站优先级，70：主，30：备。
-    * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
-    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
-    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
-    * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
-    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
-    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
-    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
-    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    * originType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
+    * originAddr  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * weight  **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
+    * obsWebHostingStatus  **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    * obsBucketType  **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
+    * bucketAccessKey  **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketSecretKey  **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketRegion  **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketName  **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
-    * originAddr  源站IP或者域名。
-    * priority  源站优先级，70：主，30：备。
-    * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
-    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
-    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
-    * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
-    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
-    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
-    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
-    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    * originType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
+    * originAddr  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * weight  **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
+    * obsWebHostingStatus  **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    * obsBucketType  **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
+    * bucketAccessKey  **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketSecretKey  **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketRegion  **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketName  **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * originType  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
-    * originAddr  源站IP或者域名。
-    * priority  源站优先级，70：主，30：备。
-    * weight  权重，取值范围1-100。
-    * obsWebHostingStatus  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
-    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
-    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
-    * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
-    * bucketAccessKey  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
-    * bucketSecretKey  第三方对象存储密钥。  > 源站类型为第三方桶时必填
-    * bucketRegion  第三方对象存储区域。  > 源站类型为第三方桶时必填
-    * bucketName  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    * originType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
+    * originAddr  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * priority  **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * weight  **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
+    * obsWebHostingStatus  **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    * obsBucketType  **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
+    * bucketAccessKey  **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketSecretKey  **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketRegion  **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * bucketName  **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets originType
-    *  源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
+    *  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -327,7 +327,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets originType
     *
-    * @param string $originType 源站类型， - ipaddr：源站IP； - domain：源站域名； - obs_bucket：OBS桶域名； - third_bucket：第三方桶。
+    * @param string $originType **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名 - third_bucket: 第三方桶，使用该源站类型需要提交工单申请  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets originAddr
-    *  源站IP或者域名。
+    *  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -351,7 +351,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets originAddr
     *
-    * @param string $originAddr 源站IP或者域名。
+    * @param string $originAddr **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  源站优先级，70：主，30：备。
+    *  **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -375,7 +375,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority 源站优先级，70：主，30：备。
+    * @param int $priority **参数解释：** 源站优先级 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets weight
-    *  权重，取值范围1-100。
+    *  **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
     *
     * @return int|null
     */
@@ -399,7 +399,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets weight
     *
-    * @param int|null $weight 权重，取值范围1-100。
+    * @param int|null $weight **参数解释：** 权重 **约束限制：** 不涉及 **取值范围：** 1-100 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -411,7 +411,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsWebHostingStatus
-    *  是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    *  **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -423,7 +423,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsWebHostingStatus
     *
-    * @param string|null $obsWebHostingStatus 是否开启OBS静态网站托管，源站类型为obs_bucket时传递，off：关闭，on：开启。
+    * @param string|null $obsWebHostingStatus **参数解释：** 是否开启静态网站托管功能，如果您的源站是OBS桶域名且配置了静态网站托管，开启该功能后，客户端即可访问静态网站托管页面 > 开启该功能后将自动给桶源站地址加上website字段，如果地址中已有website字段，该参数不生效 **约束限制：** - 源站类型为obs_bucket时需要传该参数 - 只有当源站OBS桶已经开启静态网站托管时，才可开启，否则将导致业务异常  **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -435,7 +435,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpPort
-    *  HTTP端口，默认80,端口取值取值范围1-65535。
+    *  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
     *
     * @return int|null
     */
@@ -447,7 +447,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets httpPort
     *
-    * @param int|null $httpPort HTTP端口，默认80,端口取值取值范围1-65535。
+    * @param int|null $httpPort **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsPort
-    *  HTTPS端口，默认443,端口取值取值范围1-65535。
+    *  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
     *
     * @return int|null
     */
@@ -471,7 +471,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets httpsPort
     *
-    * @param int|null $httpsPort HTTPS端口，默认443,端口取值取值范围1-65535。
+    * @param int|null $httpsPort **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
     *
     * @return $this
     */
@@ -483,7 +483,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostName
-    *  回源HOST，默认加速域名。
+    *  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @return string|null
     */
@@ -495,7 +495,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets hostName
     *
-    * @param string|null $hostName 回源HOST，默认加速域名。
+    * @param string|null $hostName **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @return $this
     */
@@ -507,7 +507,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketType
-    *  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
+    *  **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
     *
     * @return string|null
     */
@@ -519,7 +519,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketType
     *
-    * @param string|null $obsBucketType OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
+    * @param string|null $obsBucketType **参数解释：** OBS回源鉴权开关，适用于OBS桶源站场景，如果桶需要带鉴权访问，则需要打开OBS回源鉴权开关。如此，CDN节点回源时会携带鉴权信息，鉴权信息与OBS桶不匹配时，回源失败，避免非授权的请求盗刷流量 **约束限制：** 源站类型是“OBS桶域名”时需要传该参数 **取值范围：** - private: 开启回源鉴权开关 - public: 关闭回源鉴权开关  **默认取值：** public: 关闭回源鉴权开关
     *
     * @return $this
     */
@@ -531,7 +531,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketAccessKey
-    *  第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    *  **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -543,7 +543,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets bucketAccessKey
     *
-    * @param string|null $bucketAccessKey 第三方对象存储访问密钥。  > 源站类型为第三方桶时必填
+    * @param string|null $bucketAccessKey **参数解释：** 第三方对象存储访问密钥ID，即AK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -555,7 +555,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketSecretKey
-    *  第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    *  **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -567,7 +567,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets bucketSecretKey
     *
-    * @param string|null $bucketSecretKey 第三方对象存储密钥。  > 源站类型为第三方桶时必填
+    * @param string|null $bucketSecretKey **参数解释：** 第三方对象存储私密访问密钥，即SK **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -579,7 +579,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketRegion
-    *  第三方对象存储区域。  > 源站类型为第三方桶时必填
+    *  **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -591,7 +591,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets bucketRegion
     *
-    * @param string|null $bucketRegion 第三方对象存储区域。  > 源站类型为第三方桶时必填
+    * @param string|null $bucketRegion **参数解释：** 第三方对象存储区域 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -603,7 +603,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets bucketName
-    *  第三方对象存储名称。  > 源站类型为第三方桶时必填
+    *  **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -615,7 +615,7 @@ class SourcesConfig implements ModelInterface, ArrayAccess
     /**
     * Sets bucketName
     *
-    * @param string|null $bucketName 第三方对象存储名称。  > 源站类型为第三方桶时必填
+    * @param string|null $bucketName **参数解释：** 第三方对象存储名称 **约束限制：** 源站类型为第三方桶时必填 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

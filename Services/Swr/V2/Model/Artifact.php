@@ -32,6 +32,8 @@ class Artifact implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class Artifact implements ModelInterface, ArrayAccess
             'pullTime' => 'string',
             'pushTime' => 'string',
             'size' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ArtifactTag[]'
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ArtifactTag[]',
+            'extraAttrs' => 'map[string,object]',
+            'references' => '\HuaweiCloud\SDK\Swr\V2\Model\Reference[]'
     ];
 
     /**
@@ -64,6 +68,8 @@ class Artifact implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class Artifact implements ModelInterface, ArrayAccess
         'pullTime' => null,
         'pushTime' => null,
         'size' => 'int64',
-        'tags' => null
+        'tags' => null,
+        'extraAttrs' => null,
+        'references' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class Artifact implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class Artifact implements ModelInterface, ArrayAccess
             'pullTime' => 'pull_time',
             'pushTime' => 'push_time',
             'size' => 'size',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'extraAttrs' => 'extra_attrs',
+            'references' => 'references'
     ];
 
     /**
@@ -149,6 +161,8 @@ class Artifact implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class Artifact implements ModelInterface, ArrayAccess
             'pullTime' => 'setPullTime',
             'pushTime' => 'setPushTime',
             'size' => 'setSize',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'extraAttrs' => 'setExtraAttrs',
+            'references' => 'setReferences'
     ];
 
     /**
@@ -181,6 +197,8 @@ class Artifact implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class Artifact implements ModelInterface, ArrayAccess
             'pullTime' => 'getPullTime',
             'pushTime' => 'getPushTime',
             'size' => 'getSize',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'extraAttrs' => 'getExtraAttrs',
+            'references' => 'getReferences'
     ];
 
     /**
@@ -269,6 +289,8 @@ class Artifact implements ModelInterface, ArrayAccess
         $this->container['pushTime'] = isset($data['pushTime']) ? $data['pushTime'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['extraAttrs'] = isset($data['extraAttrs']) ? $data['extraAttrs'] : null;
+        $this->container['references'] = isset($data['references']) ? $data['references'] : null;
     }
 
     /**
@@ -578,6 +600,54 @@ class Artifact implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets extraAttrs
+    *  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    *
+    * @return map[string,object]|null
+    */
+    public function getExtraAttrs()
+    {
+        return $this->container['extraAttrs'];
+    }
+
+    /**
+    * Sets extraAttrs
+    *
+    * @param map[string,object]|null $extraAttrs 制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    *
+    * @return $this
+    */
+    public function setExtraAttrs($extraAttrs)
+    {
+        $this->container['extraAttrs'] = $extraAttrs;
+        return $this;
+    }
+
+    /**
+    * Gets references
+    *  当制品为多架构镜像索引时，显示其引用的所有子制品。
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\Reference[]|null
+    */
+    public function getReferences()
+    {
+        return $this->container['references'];
+    }
+
+    /**
+    * Sets references
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\Reference[]|null $references 当制品为多架构镜像索引时，显示其引用的所有子制品。
+    *
+    * @return $this
+    */
+    public function setReferences($references)
+    {
+        $this->container['references'] = $references;
         return $this;
     }
 

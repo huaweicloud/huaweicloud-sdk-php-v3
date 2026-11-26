@@ -25,6 +25,9 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
     * enableArtifactGc  是否支持制品清理
+    * enableRepositoryTag  仓库是否支持标签
+    * enableNamespaceTag  创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    * enableArtifactMetadata  是否支持查询制品的Manifest信息
     *
     * @var string[]
     */
@@ -32,7 +35,10 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableDomainName' => 'bool',
             'enableCombinationRetention' => 'bool',
             'enableArtifactScanning' => 'bool',
-            'enableArtifactGc' => 'bool'
+            'enableArtifactGc' => 'bool',
+            'enableRepositoryTag' => 'bool',
+            'enableNamespaceTag' => 'bool',
+            'enableArtifactMetadata' => 'bool'
     ];
 
     /**
@@ -41,6 +47,9 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
     * enableArtifactGc  是否支持制品清理
+    * enableRepositoryTag  仓库是否支持标签
+    * enableNamespaceTag  创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    * enableArtifactMetadata  是否支持查询制品的Manifest信息
     *
     * @var string[]
     */
@@ -48,7 +57,10 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
         'enableDomainName' => null,
         'enableCombinationRetention' => null,
         'enableArtifactScanning' => null,
-        'enableArtifactGc' => null
+        'enableArtifactGc' => null,
+        'enableRepositoryTag' => null,
+        'enableNamespaceTag' => null,
+        'enableArtifactMetadata' => null
     ];
 
     /**
@@ -78,6 +90,9 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
     * enableArtifactGc  是否支持制品清理
+    * enableRepositoryTag  仓库是否支持标签
+    * enableNamespaceTag  创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    * enableArtifactMetadata  是否支持查询制品的Manifest信息
     *
     * @var string[]
     */
@@ -85,7 +100,10 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableDomainName' => 'enableDomainName',
             'enableCombinationRetention' => 'enableCombinationRetention',
             'enableArtifactScanning' => 'enableArtifactScanning',
-            'enableArtifactGc' => 'enableArtifactGc'
+            'enableArtifactGc' => 'enableArtifactGc',
+            'enableRepositoryTag' => 'enableRepositoryTag',
+            'enableNamespaceTag' => 'enableNamespaceTag',
+            'enableArtifactMetadata' => 'enableArtifactMetadata'
     ];
 
     /**
@@ -94,6 +112,9 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
     * enableArtifactGc  是否支持制品清理
+    * enableRepositoryTag  仓库是否支持标签
+    * enableNamespaceTag  创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    * enableArtifactMetadata  是否支持查询制品的Manifest信息
     *
     * @var string[]
     */
@@ -101,7 +122,10 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableDomainName' => 'setEnableDomainName',
             'enableCombinationRetention' => 'setEnableCombinationRetention',
             'enableArtifactScanning' => 'setEnableArtifactScanning',
-            'enableArtifactGc' => 'setEnableArtifactGc'
+            'enableArtifactGc' => 'setEnableArtifactGc',
+            'enableRepositoryTag' => 'setEnableRepositoryTag',
+            'enableNamespaceTag' => 'setEnableNamespaceTag',
+            'enableArtifactMetadata' => 'setEnableArtifactMetadata'
     ];
 
     /**
@@ -110,6 +134,9 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableCombinationRetention  老化策略是否支持多条规则
     * enableArtifactScanning  是否支持制品扫描
     * enableArtifactGc  是否支持制品清理
+    * enableRepositoryTag  仓库是否支持标签
+    * enableNamespaceTag  创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    * enableArtifactMetadata  是否支持查询制品的Manifest信息
     *
     * @var string[]
     */
@@ -117,7 +144,10 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableDomainName' => 'getEnableDomainName',
             'enableCombinationRetention' => 'getEnableCombinationRetention',
             'enableArtifactScanning' => 'getEnableArtifactScanning',
-            'enableArtifactGc' => 'getEnableArtifactGc'
+            'enableArtifactGc' => 'getEnableArtifactGc',
+            'enableRepositoryTag' => 'getEnableRepositoryTag',
+            'enableNamespaceTag' => 'getEnableNamespaceTag',
+            'enableArtifactMetadata' => 'getEnableArtifactMetadata'
     ];
 
     /**
@@ -182,6 +212,9 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableCombinationRetention'] = isset($data['enableCombinationRetention']) ? $data['enableCombinationRetention'] : null;
         $this->container['enableArtifactScanning'] = isset($data['enableArtifactScanning']) ? $data['enableArtifactScanning'] : null;
         $this->container['enableArtifactGc'] = isset($data['enableArtifactGc']) ? $data['enableArtifactGc'] : null;
+        $this->container['enableRepositoryTag'] = isset($data['enableRepositoryTag']) ? $data['enableRepositoryTag'] : null;
+        $this->container['enableNamespaceTag'] = isset($data['enableNamespaceTag']) ? $data['enableNamespaceTag'] : null;
+        $this->container['enableArtifactMetadata'] = isset($data['enableArtifactMetadata']) ? $data['enableArtifactMetadata'] : null;
     }
 
     /**
@@ -299,6 +332,78 @@ class ListFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnableArtifactGc($enableArtifactGc)
     {
         $this->container['enableArtifactGc'] = $enableArtifactGc;
+        return $this;
+    }
+
+    /**
+    * Gets enableRepositoryTag
+    *  仓库是否支持标签
+    *
+    * @return bool|null
+    */
+    public function getEnableRepositoryTag()
+    {
+        return $this->container['enableRepositoryTag'];
+    }
+
+    /**
+    * Sets enableRepositoryTag
+    *
+    * @param bool|null $enableRepositoryTag 仓库是否支持标签
+    *
+    * @return $this
+    */
+    public function setEnableRepositoryTag($enableRepositoryTag)
+    {
+        $this->container['enableRepositoryTag'] = $enableRepositoryTag;
+        return $this;
+    }
+
+    /**
+    * Gets enableNamespaceTag
+    *  创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    *
+    * @return bool|null
+    */
+    public function getEnableNamespaceTag()
+    {
+        return $this->container['enableNamespaceTag'];
+    }
+
+    /**
+    * Sets enableNamespaceTag
+    *
+    * @param bool|null $enableNamespaceTag 创建命名空间时是否支持传入标签以及查询命名空间列表是否支持根据标签过滤
+    *
+    * @return $this
+    */
+    public function setEnableNamespaceTag($enableNamespaceTag)
+    {
+        $this->container['enableNamespaceTag'] = $enableNamespaceTag;
+        return $this;
+    }
+
+    /**
+    * Gets enableArtifactMetadata
+    *  是否支持查询制品的Manifest信息
+    *
+    * @return bool|null
+    */
+    public function getEnableArtifactMetadata()
+    {
+        return $this->container['enableArtifactMetadata'];
+    }
+
+    /**
+    * Sets enableArtifactMetadata
+    *
+    * @param bool|null $enableArtifactMetadata 是否支持查询制品的Manifest信息
+    *
+    * @return $this
+    */
+    public function setEnableArtifactMetadata($enableArtifactMetadata)
+    {
+        $this->container['enableArtifactMetadata'] = $enableArtifactMetadata;
         return $this;
     }
 

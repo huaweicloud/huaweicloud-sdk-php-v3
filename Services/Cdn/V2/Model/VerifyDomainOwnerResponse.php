@@ -22,24 +22,28 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * result  验证是否通过，true：通过，false：不通过。
+    * status  **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'result' => 'bool',
+            'status' => 'string',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  验证是否通过，true：通过，false：不通过。
+    * status  **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'result' => null,
+        'status' => null,
         'xRequestId' => null
     ];
 
@@ -67,36 +71,42 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * result  验证是否通过，true：通过，false：不通过。
+    * status  **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'result' => 'result',
+            'status' => 'status',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  验证是否通过，true：通过，false：不通过。
+    * status  **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'result' => 'setResult',
+            'status' => 'setStatus',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  验证是否通过，true：通过，false：不通过。
+    * status  **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'result' => 'getResult',
+            'status' => 'getStatus',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -159,6 +169,7 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -205,6 +216,30 @@ class VerifyDomainOwnerResponse implements ModelInterface, ArrayAccess
     public function setResult($result)
     {
         $this->container['result'] = $result;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数解释：** 域名校验状态，表示当前账号下是否存在该域名 **约束限制：** 不涉及 **取值范围：** - DomainExist: 该域名已存在 - DomainNotExist: 该域名不存在  **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
         return $this;
     }
 

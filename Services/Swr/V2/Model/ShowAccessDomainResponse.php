@@ -24,7 +24,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
     * exist  true：存在；false：不存在
     * namespace  组织名称
     * repository  镜像仓库名称
-    * accessDomain  共享帐号名
+    * accessDomain  共享账号名
     * permit  权限
     * deadline  截止时间
     * description  描述
@@ -56,7 +56,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
     * exist  true：存在；false：不存在
     * namespace  组织名称
     * repository  镜像仓库名称
-    * accessDomain  共享帐号名
+    * accessDomain  共享账号名
     * permit  权限
     * deadline  截止时间
     * description  描述
@@ -109,7 +109,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
     * exist  true：存在；false：不存在
     * namespace  组织名称
     * repository  镜像仓库名称
-    * accessDomain  共享帐号名
+    * accessDomain  共享账号名
     * permit  权限
     * deadline  截止时间
     * description  描述
@@ -141,7 +141,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
     * exist  true：存在；false：不存在
     * namespace  组织名称
     * repository  镜像仓库名称
-    * accessDomain  共享帐号名
+    * accessDomain  共享账号名
     * permit  权限
     * deadline  截止时间
     * description  描述
@@ -173,7 +173,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
     * exist  true：存在；false：不存在
     * namespace  组织名称
     * repository  镜像仓库名称
-    * accessDomain  共享帐号名
+    * accessDomain  共享账号名
     * permit  权限
     * deadline  截止时间
     * description  描述
@@ -368,7 +368,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessDomain
-    *  共享帐号名
+    *  共享账号名
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class ShowAccessDomainResponse implements ModelInterface, ArrayAccess
     /**
     * Sets accessDomain
     *
-    * @param string|null $accessDomain 共享帐号名
+    * @param string|null $accessDomain 共享账号名
     *
     * @return $this
     */

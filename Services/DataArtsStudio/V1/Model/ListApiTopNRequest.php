@@ -23,7 +23,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
+    * apiId  API编号。
     * instanceId  集群编号。
     * startTime  开始时间（13位时间戳）。
     * endTime  结束时间（13位时间戳）。
@@ -51,7 +51,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
+    * apiId  API编号。
     * instanceId  集群编号。
     * startTime  开始时间（13位时间戳）。
     * endTime  结束时间（13位时间戳）。
@@ -100,7 +100,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
+    * apiId  API编号。
     * instanceId  集群编号。
     * startTime  开始时间（13位时间戳）。
     * endTime  结束时间（13位时间戳）。
@@ -128,7 +128,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
+    * apiId  API编号。
     * instanceId  集群编号。
     * startTime  开始时间（13位时间戳）。
     * endTime  结束时间（13位时间戳）。
@@ -156,7 +156,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
+    * apiId  API编号。
     * instanceId  集群编号。
     * startTime  开始时间（13位时间戳）。
     * endTime  结束时间（13位时间戳）。
@@ -458,7 +458,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiId
-    *  api编号。
+    *  API编号。
     *
     * @return string
     */
@@ -470,7 +470,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets apiId
     *
-    * @param string $apiId api编号。
+    * @param string $apiId API编号。
     *
     * @return $this
     */

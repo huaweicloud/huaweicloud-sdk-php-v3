@@ -20,11 +20,13 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
-    * ipOrDomain  源站IP或者域名。
-    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
-    * httpPort  HTTP端口，取值范围：1-65535。
-    * httpsPort  HTTPS端口，取值范围：1-65535。
+    * sourcesType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
+    * ipOrDomain  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * obsBucketType  **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * originProtocol  **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @var string[]
     */
@@ -33,16 +35,20 @@ class BackSources implements ModelInterface, ArrayAccess
             'ipOrDomain' => 'string',
             'obsBucketType' => 'string',
             'httpPort' => 'int',
-            'httpsPort' => 'int'
+            'httpsPort' => 'int',
+            'originProtocol' => 'string',
+            'hostName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
-    * ipOrDomain  源站IP或者域名。
-    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
-    * httpPort  HTTP端口，取值范围：1-65535。
-    * httpsPort  HTTPS端口，取值范围：1-65535。
+    * sourcesType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
+    * ipOrDomain  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * obsBucketType  **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * originProtocol  **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class BackSources implements ModelInterface, ArrayAccess
         'ipOrDomain' => null,
         'obsBucketType' => null,
         'httpPort' => 'int32',
-        'httpsPort' => 'int32'
+        'httpsPort' => 'int32',
+        'originProtocol' => null,
+        'hostName' => null
     ];
 
     /**
@@ -77,11 +85,13 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
-    * ipOrDomain  源站IP或者域名。
-    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
-    * httpPort  HTTP端口，取值范围：1-65535。
-    * httpsPort  HTTPS端口，取值范围：1-65535。
+    * sourcesType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
+    * ipOrDomain  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * obsBucketType  **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * originProtocol  **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @var string[]
     */
@@ -90,16 +100,20 @@ class BackSources implements ModelInterface, ArrayAccess
             'ipOrDomain' => 'ip_or_domain',
             'obsBucketType' => 'obs_bucket_type',
             'httpPort' => 'http_port',
-            'httpsPort' => 'https_port'
+            'httpsPort' => 'https_port',
+            'originProtocol' => 'origin_protocol',
+            'hostName' => 'host_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
-    * ipOrDomain  源站IP或者域名。
-    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
-    * httpPort  HTTP端口，取值范围：1-65535。
-    * httpsPort  HTTPS端口，取值范围：1-65535。
+    * sourcesType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
+    * ipOrDomain  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * obsBucketType  **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * originProtocol  **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @var string[]
     */
@@ -108,16 +122,20 @@ class BackSources implements ModelInterface, ArrayAccess
             'ipOrDomain' => 'setIpOrDomain',
             'obsBucketType' => 'setObsBucketType',
             'httpPort' => 'setHttpPort',
-            'httpsPort' => 'setHttpsPort'
+            'httpsPort' => 'setHttpsPort',
+            'originProtocol' => 'setOriginProtocol',
+            'hostName' => 'setHostName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sourcesType  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
-    * ipOrDomain  源站IP或者域名。
-    * obsBucketType  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
-    * httpPort  HTTP端口，取值范围：1-65535。
-    * httpsPort  HTTPS端口，取值范围：1-65535。
+    * sourcesType  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
+    * ipOrDomain  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * obsBucketType  **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
+    * httpPort  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
+    * httpsPort  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
+    * originProtocol  **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    * hostName  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class BackSources implements ModelInterface, ArrayAccess
             'ipOrDomain' => 'getIpOrDomain',
             'obsBucketType' => 'getObsBucketType',
             'httpPort' => 'getHttpPort',
-            'httpsPort' => 'getHttpsPort'
+            'httpsPort' => 'getHttpsPort',
+            'originProtocol' => 'getOriginProtocol',
+            'hostName' => 'getHostName'
     ];
 
     /**
@@ -192,6 +212,8 @@ class BackSources implements ModelInterface, ArrayAccess
         $this->container['obsBucketType'] = isset($data['obsBucketType']) ? $data['obsBucketType'] : null;
         $this->container['httpPort'] = isset($data['httpPort']) ? $data['httpPort'] : null;
         $this->container['httpsPort'] = isset($data['httpsPort']) ? $data['httpsPort'] : null;
+        $this->container['originProtocol'] = isset($data['originProtocol']) ? $data['originProtocol'] : null;
+        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
     }
 
     /**
@@ -224,7 +246,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourcesType
-    *  源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    *  **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -236,7 +258,7 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets sourcesType
     *
-    * @param string $sourcesType 源站类型, ipaddr：源站IP，domain：源站域名，obs_bucket：OBS桶域名。
+    * @param string $sourcesType **参数解释：** 源站类型 **约束限制：** 不涉及 **取值范围：** - ipaddr: 源站IP - domain: 源站域名 - obs_bucket: OBS桶域名  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -248,7 +270,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipOrDomain
-    *  源站IP或者域名。
+    *  **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -260,7 +282,7 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets ipOrDomain
     *
-    * @param string $ipOrDomain 源站IP或者域名。
+    * @param string $ipOrDomain **参数解释：** 源站IP或者域名 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -272,7 +294,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketType
-    *  OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
+    *  **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
     *
     * @return string|null
     */
@@ -284,7 +306,7 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketType
     *
-    * @param string|null $obsBucketType OBS桶类型： - “private”， 私有桶： - “public”，公有桶。
+    * @param string|null $obsBucketType **参数解释：** OBS桶类型 **约束限制：** 不涉及 **取值范围：** - private: 私有桶 - public: 公有桶  **默认取值：** public: 公有桶
     *
     * @return $this
     */
@@ -296,7 +318,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpPort
-    *  HTTP端口，取值范围：1-65535。
+    *  **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
     *
     * @return int|null
     */
@@ -308,7 +330,7 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets httpPort
     *
-    * @param int|null $httpPort HTTP端口，取值范围：1-65535。
+    * @param int|null $httpPort **参数解释：** HTTP端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 80
     *
     * @return $this
     */
@@ -320,7 +342,7 @@ class BackSources implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsPort
-    *  HTTPS端口，取值范围：1-65535。
+    *  **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
     *
     * @return int|null
     */
@@ -332,13 +354,61 @@ class BackSources implements ModelInterface, ArrayAccess
     /**
     * Sets httpsPort
     *
-    * @param int|null $httpsPort HTTPS端口，取值范围：1-65535。
+    * @param int|null $httpsPort **参数解释：** HTTPS端口 **约束限制：** 不涉及 **取值范围：** 1-65535 **默认取值：** 443
     *
     * @return $this
     */
     public function setHttpsPort($httpsPort)
     {
         $this->container['httpsPort'] = $httpsPort;
+        return $this;
+    }
+
+    /**
+    * Gets originProtocol
+    *  **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    *
+    * @return string|null
+    */
+    public function getOriginProtocol()
+    {
+        return $this->container['originProtocol'];
+    }
+
+    /**
+    * Sets originProtocol
+    *
+    * @param string|null $originProtocol **参数解释：** 指定CDN回源时的请求协议 **约束限制：** 不涉及 **取值范围：** - follow: 协议跟随 - http: http协议 - https: https协议  **默认取值：** http: http协议
+    *
+    * @return $this
+    */
+    public function setOriginProtocol($originProtocol)
+    {
+        $this->container['originProtocol'] = $originProtocol;
+        return $this;
+    }
+
+    /**
+    * Gets hostName
+    *  **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    *
+    * @return string|null
+    */
+    public function getHostName()
+    {
+        return $this->container['hostName'];
+    }
+
+    /**
+    * Sets hostName
+    *
+    * @param string|null $hostName **参数解释：** 回源HOST **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 加速域名
+    *
+    * @return $this
+    */
+    public function setHostName($hostName)
+    {
+        $this->container['hostName'] = $hostName;
         return $this;
     }
 

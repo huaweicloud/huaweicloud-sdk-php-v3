@@ -20,7 +20,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     * limit  **参数解释：** 分页查询每页的数量 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 10
     * offset  **参数解释：** 查询偏移量 > 表示跳过多少个数据开始查询  **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     *
@@ -34,7 +34,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     * limit  **参数解释：** 分页查询每页的数量 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 10
     * offset  **参数解释：** 查询偏移量 > 表示跳过多少个数据开始查询  **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     *
@@ -69,7 +69,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     * limit  **参数解释：** 分页查询每页的数量 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 10
     * offset  **参数解释：** 查询偏移量 > 表示跳过多少个数据开始查询  **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     *
@@ -83,7 +83,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     * limit  **参数解释：** 分页查询每页的数量 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 10
     * offset  **参数解释：** 查询偏移量 > 表示跳过多少个数据开始查询  **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     *
@@ -97,7 +97,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * configType  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     * limit  **参数解释：** 分页查询每页的数量 **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 10
     * offset  **参数解释：** 查询偏移量 > 表示跳过多少个数据开始查询  **约束限制：** 不涉及 **取值范围：** 0-65535 **默认取值：** 0
     *
@@ -199,7 +199,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets configType
-    *  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    *  **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     *
     * @return int
     */
@@ -211,7 +211,7 @@ class ShowStatsConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets configType
     *
-    * @param int $configType **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报 **默认取值：** 不涉及
+    * @param int $configType **参数解释：** 配置类型 **约束限制：** 不涉及 **取值范围：** - 0：热点统计 - 1：ces上报  **默认取值：** 不涉及
     *
     * @return $this
     */

@@ -33,6 +33,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
@@ -50,6 +52,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pushTime' => 'string',
             'size' => 'int',
             'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ArtifactTag[]',
+            'extraAttrs' => 'map[string,object]',
+            'references' => '\HuaweiCloud\SDK\Swr\V2\Model\Reference[]',
             'scanOverview' => 'map[string,\HuaweiCloud\SDK\Swr\V2\Model\NativeReportSummary]'
     ];
 
@@ -67,6 +71,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
@@ -84,6 +90,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
         'pushTime' => null,
         'size' => 'int64',
         'tags' => null,
+        'extraAttrs' => null,
+        'references' => null,
         'scanOverview' => null
     ];
 
@@ -122,6 +130,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
@@ -139,6 +149,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pushTime' => 'push_time',
             'size' => 'size',
             'tags' => 'tags',
+            'extraAttrs' => 'extra_attrs',
+            'references' => 'references',
             'scanOverview' => 'scan_overview'
     ];
 
@@ -156,6 +168,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
@@ -173,6 +187,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pushTime' => 'setPushTime',
             'size' => 'setSize',
             'tags' => 'setTags',
+            'extraAttrs' => 'setExtraAttrs',
+            'references' => 'setReferences',
             'scanOverview' => 'setScanOverview'
     ];
 
@@ -190,6 +206,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     * pushTime  最近一次上传时间
     * size  制品大小，单位：Byte
     * tags  制品版本的Tag列表
+    * extraAttrs  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    * references  当制品为多架构镜像索引时，显示其引用的所有子制品。
     * scanOverview  制品扫描摘要,支持制品扫描报告类型为application/vnd.security.vulnerability.report; version=1.1的制品扫描摘要
     *
     * @var string[]
@@ -207,6 +225,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
             'pushTime' => 'getPushTime',
             'size' => 'getSize',
             'tags' => 'getTags',
+            'extraAttrs' => 'getExtraAttrs',
+            'references' => 'getReferences',
             'scanOverview' => 'getScanOverview'
     ];
 
@@ -280,6 +300,8 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
         $this->container['pushTime'] = isset($data['pushTime']) ? $data['pushTime'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['extraAttrs'] = isset($data['extraAttrs']) ? $data['extraAttrs'] : null;
+        $this->container['references'] = isset($data['references']) ? $data['references'] : null;
         $this->container['scanOverview'] = isset($data['scanOverview']) ? $data['scanOverview'] : null;
     }
 
@@ -590,6 +612,54 @@ class ShowInstanceArtifactResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets extraAttrs
+    *  制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    *
+    * @return map[string,object]|null
+    */
+    public function getExtraAttrs()
+    {
+        return $this->container['extraAttrs'];
+    }
+
+    /**
+    * Sets extraAttrs
+    *
+    * @param map[string,object]|null $extraAttrs 制品的一些额外属性，比如制品的构建时间(created)、支持的操作系统(os)、支持CPU架构(architecture)等信息。
+    *
+    * @return $this
+    */
+    public function setExtraAttrs($extraAttrs)
+    {
+        $this->container['extraAttrs'] = $extraAttrs;
+        return $this;
+    }
+
+    /**
+    * Gets references
+    *  当制品为多架构镜像索引时，显示其引用的所有子制品。
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\Reference[]|null
+    */
+    public function getReferences()
+    {
+        return $this->container['references'];
+    }
+
+    /**
+    * Sets references
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\Reference[]|null $references 当制品为多架构镜像索引时，显示其引用的所有子制品。
+    *
+    * @return $this
+    */
+    public function setReferences($references)
+    {
+        $this->container['references'] = $references;
         return $this;
     }
 

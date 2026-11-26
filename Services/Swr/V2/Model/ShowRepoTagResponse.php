@@ -34,7 +34,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
     * isTrusted  默认值为false
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * tagType  0：manifest类型；1：manifest list类型
     *
     * @var string[]
@@ -72,7 +72,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
     * isTrusted  默认值为false
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * tagType  0：manifest类型；1：manifest list类型
     *
     * @var string[]
@@ -131,7 +131,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
     * isTrusted  默认值为false
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * tagType  0：manifest类型；1：manifest list类型
     *
     * @var string[]
@@ -169,7 +169,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
     * isTrusted  默认值为false
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * tagType  0：manifest类型；1：manifest list类型
     *
     * @var string[]
@@ -207,7 +207,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
     * isTrusted  默认值为false
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * tagType  0：manifest类型；1：manifest list类型
     *
     * @var string[]
@@ -641,7 +641,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  帐号ID
+    *  账号ID
     *
     * @return string|null
     */
@@ -653,7 +653,7 @@ class ShowRepoTagResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 帐号ID
+    * @param string|null $domainId 账号ID
     *
     * @return $this
     */

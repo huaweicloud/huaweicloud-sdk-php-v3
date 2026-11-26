@@ -20,6 +20,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * taskId  **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * startTime  查询起始时间戳（毫秒），不传默认为当前时间，需与结束时间戳同时指定，时间跨度不能超过7天。
     * endTime  查询结束时间戳（毫秒），不传默认3天前，需与开始时间戳同时指定，时间跨度不能超过7天。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
@@ -29,6 +30,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'taskId' => 'string',
             'startTime' => 'int',
             'endTime' => 'int',
             'offset' => 'int',
@@ -38,6 +40,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * taskId  **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * startTime  查询起始时间戳（毫秒），不传默认为当前时间，需与结束时间戳同时指定，时间跨度不能超过7天。
     * endTime  查询结束时间戳（毫秒），不传默认3天前，需与开始时间戳同时指定，时间跨度不能超过7天。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
@@ -47,6 +50,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'taskId' => null,
         'startTime' => 'int64',
         'endTime' => 'int64',
         'offset' => null,
@@ -77,6 +81,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * taskId  **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * startTime  查询起始时间戳（毫秒），不传默认为当前时间，需与结束时间戳同时指定，时间跨度不能超过7天。
     * endTime  查询结束时间戳（毫秒），不传默认3天前，需与开始时间戳同时指定，时间跨度不能超过7天。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
@@ -86,6 +91,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'taskId' => 'task_id',
             'startTime' => 'start_time',
             'endTime' => 'end_time',
             'offset' => 'offset',
@@ -95,6 +101,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * taskId  **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * startTime  查询起始时间戳（毫秒），不传默认为当前时间，需与结束时间戳同时指定，时间跨度不能超过7天。
     * endTime  查询结束时间戳（毫秒），不传默认3天前，需与开始时间戳同时指定，时间跨度不能超过7天。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
@@ -104,6 +111,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'taskId' => 'setTaskId',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime',
             'offset' => 'setOffset',
@@ -113,6 +121,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * taskId  **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
     * startTime  查询起始时间戳（毫秒），不传默认为当前时间，需与结束时间戳同时指定，时间跨度不能超过7天。
     * endTime  查询结束时间戳（毫秒），不传默认3天前，需与开始时间戳同时指定，时间跨度不能超过7天。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
@@ -122,6 +131,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'taskId' => 'getTaskId',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime',
             'offset' => 'getOffset',
@@ -187,6 +197,7 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -214,6 +225,30 @@ class ListAccessControlTaskRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets taskId
+    *  **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getTaskId()
+    {
+        return $this->container['taskId'];
+    }
+
+    /**
+    * Sets taskId
+    *
+    * @param string|null $taskId **参数解释：** 封禁/解禁任务ID **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setTaskId($taskId)
+    {
+        $this->container['taskId'] = $taskId;
+        return $this;
     }
 
     /**

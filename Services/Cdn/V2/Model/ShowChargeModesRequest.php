@@ -20,9 +20,9 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
-    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
-    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
+    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
-    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
-    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
+    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
-    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
-    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
+    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
-    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
-    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
+    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
-    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
-    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    * productType  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
+    * status  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
+    * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @var string[]
     */
@@ -199,7 +199,7 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets productType
-    *  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
+    *  **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets productType
     *
-    * @param string $productType **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速 **默认取值：** 不涉及
+    * @param string $productType **参数解释：** 加速类型 **约束限制：** 不涉及 **取值范围：** - base：基础加速  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
+    *  **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效 **默认取值：** active：已生效
+    * @param string|null $status **参数解释：** 查询计费模式状态 **约束限制：** 不涉及 **取值范围：** - active：已生效 - upcoming：待生效  **默认取值：** active：已生效
     *
     * @return $this
     */
@@ -247,7 +247,7 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceArea
-    *  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    *  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class ShowChargeModesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceArea
     *
-    * @param string|null $serviceArea **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外 **默认取值：** mainland_china：中国大陆
+    * @param string|null $serviceArea **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** - mainland_china：中国大陆 - outside_mainland_china：中国大陆境外  **默认取值：** mainland_china：中国大陆
     *
     * @return $this
     */

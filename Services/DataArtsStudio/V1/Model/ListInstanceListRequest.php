@@ -23,12 +23,12 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
-    * action  api操作。
-    * showAll  全部展示(包括不可执行当前操作的实例)。
-    * checkStatus  校验api状态。
-    * checkDebug  校验api调试状态。
-    * appId  app编号(用于判断授权操作app可选的实例)。
+    * apiId  API编号。
+    * action  API操作。
+    * showAll  全部展示（包括不可执行当前操作的实例）。
+    * checkStatus  校验API状态。
+    * checkDebug  校验API调试状态。
+    * appId  APP编号（用于判断授权操作APP可选的实例）。
     * limit  limit。
     * offset  offset。
     *
@@ -53,12 +53,12 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
-    * action  api操作。
-    * showAll  全部展示(包括不可执行当前操作的实例)。
-    * checkStatus  校验api状态。
-    * checkDebug  校验api调试状态。
-    * appId  app编号(用于判断授权操作app可选的实例)。
+    * apiId  API编号。
+    * action  API操作。
+    * showAll  全部展示（包括不可执行当前操作的实例）。
+    * checkStatus  校验API状态。
+    * checkDebug  校验API调试状态。
+    * appId  APP编号（用于判断授权操作APP可选的实例）。
     * limit  limit。
     * offset  offset。
     *
@@ -104,12 +104,12 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
-    * action  api操作。
-    * showAll  全部展示(包括不可执行当前操作的实例)。
-    * checkStatus  校验api状态。
-    * checkDebug  校验api调试状态。
-    * appId  app编号(用于判断授权操作app可选的实例)。
+    * apiId  API编号。
+    * action  API操作。
+    * showAll  全部展示（包括不可执行当前操作的实例）。
+    * checkStatus  校验API状态。
+    * checkDebug  校验API调试状态。
+    * appId  APP编号（用于判断授权操作APP可选的实例）。
     * limit  limit。
     * offset  offset。
     *
@@ -134,12 +134,12 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
-    * action  api操作。
-    * showAll  全部展示(包括不可执行当前操作的实例)。
-    * checkStatus  校验api状态。
-    * checkDebug  校验api调试状态。
-    * appId  app编号(用于判断授权操作app可选的实例)。
+    * apiId  API编号。
+    * action  API操作。
+    * showAll  全部展示（包括不可执行当前操作的实例）。
+    * checkStatus  校验API状态。
+    * checkDebug  校验API调试状态。
+    * appId  APP编号（用于判断授权操作APP可选的实例）。
     * limit  limit。
     * offset  offset。
     *
@@ -164,12 +164,12 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * apiId  api编号。
-    * action  api操作。
-    * showAll  全部展示(包括不可执行当前操作的实例)。
-    * checkStatus  校验api状态。
-    * checkDebug  校验api调试状态。
-    * appId  app编号(用于判断授权操作app可选的实例)。
+    * apiId  API编号。
+    * action  API操作。
+    * showAll  全部展示（包括不可执行当前操作的实例）。
+    * checkStatus  校验API状态。
+    * checkDebug  校验API调试状态。
+    * appId  APP编号（用于判断授权操作APP可选的实例）。
     * limit  limit。
     * offset  offset。
     *
@@ -422,7 +422,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiId
-    *  api编号。
+    *  API编号。
     *
     * @return string
     */
@@ -434,7 +434,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets apiId
     *
-    * @param string $apiId api编号。
+    * @param string $apiId API编号。
     *
     * @return $this
     */
@@ -446,7 +446,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  api操作。
+    *  API操作。
     *
     * @return string
     */
@@ -458,7 +458,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action api操作。
+    * @param string $action API操作。
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets showAll
-    *  全部展示(包括不可执行当前操作的实例)。
+    *  全部展示（包括不可执行当前操作的实例）。
     *
     * @return bool|null
     */
@@ -482,7 +482,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets showAll
     *
-    * @param bool|null $showAll 全部展示(包括不可执行当前操作的实例)。
+    * @param bool|null $showAll 全部展示（包括不可执行当前操作的实例）。
     *
     * @return $this
     */
@@ -494,7 +494,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkStatus
-    *  校验api状态。
+    *  校验API状态。
     *
     * @return bool|null
     */
@@ -506,7 +506,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkStatus
     *
-    * @param bool|null $checkStatus 校验api状态。
+    * @param bool|null $checkStatus 校验API状态。
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets checkDebug
-    *  校验api调试状态。
+    *  校验API调试状态。
     *
     * @return bool|null
     */
@@ -530,7 +530,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets checkDebug
     *
-    * @param bool|null $checkDebug 校验api调试状态。
+    * @param bool|null $checkDebug 校验API调试状态。
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  app编号(用于判断授权操作app可选的实例)。
+    *  APP编号（用于判断授权操作APP可选的实例）。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class ListInstanceListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId app编号(用于判断授权操作app可选的实例)。
+    * @param string|null $appId APP编号（用于判断授权操作APP可选的实例）。
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * accessDomain  共享帐号
+    * accessDomain  共享账号
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * accessDomain  共享帐号
+    * accessDomain  共享账号
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * accessDomain  共享帐号
+    * accessDomain  共享账号
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * accessDomain  共享帐号
+    * accessDomain  共享账号
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * namespace  组织名称。小写字母开头，后面跟小写字母、数字、小数点、下划线或中划线（其中下划线最多允许连续两个，小数点、下划线、中划线不能直接相连），小写字母或数字结尾，1-64个字符。
     * repository  镜像仓库名称
-    * accessDomain  共享帐号
+    * accessDomain  共享账号
     * body  body
     *
     * @var string[]
@@ -264,7 +264,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets accessDomain
-    *  共享帐号
+    *  共享账号
     *
     * @return string
     */
@@ -276,7 +276,7 @@ class UpdateRepoDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets accessDomain
     *
-    * @param string $accessDomain 共享帐号
+    * @param string $accessDomain 共享账号
     *
     * @return $this
     */

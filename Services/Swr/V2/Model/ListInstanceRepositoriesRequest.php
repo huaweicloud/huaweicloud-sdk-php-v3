@@ -26,6 +26,10 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
     * orderColumn  排序字段，支持created_at、updated_at，默认为created_at
     * orderType  排序方式，支持desc、asc，默认desc
     * namespaceId  所属命名空间ID
+    * name  根据仓库名称或命名空间名称进行模糊查询
+    * withTag  是否返回仓库的标签
+    * tags  根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    * namespaceIds  支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
     *
     * @var string[]
     */
@@ -35,7 +39,11 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'orderColumn' => 'string',
             'orderType' => 'string',
-            'namespaceId' => 'int'
+            'namespaceId' => 'int',
+            'name' => 'string',
+            'withTag' => 'bool',
+            'tags' => 'string',
+            'namespaceIds' => 'string'
     ];
 
     /**
@@ -46,6 +54,10 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
     * orderColumn  排序字段，支持created_at、updated_at，默认为created_at
     * orderType  排序方式，支持desc、asc，默认desc
     * namespaceId  所属命名空间ID
+    * name  根据仓库名称或命名空间名称进行模糊查询
+    * withTag  是否返回仓库的标签
+    * tags  根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    * namespaceIds  支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
         'limit' => null,
         'orderColumn' => null,
         'orderType' => null,
-        'namespaceId' => null
+        'namespaceId' => null,
+        'name' => null,
+        'withTag' => null,
+        'tags' => null,
+        'namespaceIds' => null
     ];
 
     /**
@@ -87,6 +103,10 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
     * orderColumn  排序字段，支持created_at、updated_at，默认为created_at
     * orderType  排序方式，支持desc、asc，默认desc
     * namespaceId  所属命名空间ID
+    * name  根据仓库名称或命名空间名称进行模糊查询
+    * withTag  是否返回仓库的标签
+    * tags  根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    * namespaceIds  支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
     *
     * @var string[]
     */
@@ -96,7 +116,11 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'orderColumn' => 'order_column',
             'orderType' => 'order_type',
-            'namespaceId' => 'namespace_id'
+            'namespaceId' => 'namespace_id',
+            'name' => 'name',
+            'withTag' => 'with_tag',
+            'tags' => 'tags',
+            'namespaceIds' => 'namespace_ids'
     ];
 
     /**
@@ -107,6 +131,10 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
     * orderColumn  排序字段，支持created_at、updated_at，默认为created_at
     * orderType  排序方式，支持desc、asc，默认desc
     * namespaceId  所属命名空间ID
+    * name  根据仓库名称或命名空间名称进行模糊查询
+    * withTag  是否返回仓库的标签
+    * tags  根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    * namespaceIds  支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
     *
     * @var string[]
     */
@@ -116,7 +144,11 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'orderColumn' => 'setOrderColumn',
             'orderType' => 'setOrderType',
-            'namespaceId' => 'setNamespaceId'
+            'namespaceId' => 'setNamespaceId',
+            'name' => 'setName',
+            'withTag' => 'setWithTag',
+            'tags' => 'setTags',
+            'namespaceIds' => 'setNamespaceIds'
     ];
 
     /**
@@ -127,6 +159,10 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
     * orderColumn  排序字段，支持created_at、updated_at，默认为created_at
     * orderType  排序方式，支持desc、asc，默认desc
     * namespaceId  所属命名空间ID
+    * name  根据仓库名称或命名空间名称进行模糊查询
+    * withTag  是否返回仓库的标签
+    * tags  根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    * namespaceIds  支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'orderColumn' => 'getOrderColumn',
             'orderType' => 'getOrderType',
-            'namespaceId' => 'getNamespaceId'
+            'namespaceId' => 'getNamespaceId',
+            'name' => 'getName',
+            'withTag' => 'getWithTag',
+            'tags' => 'getTags',
+            'namespaceIds' => 'getNamespaceIds'
     ];
 
     /**
@@ -233,6 +273,10 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
         $this->container['orderColumn'] = isset($data['orderColumn']) ? $data['orderColumn'] : null;
         $this->container['orderType'] = isset($data['orderType']) ? $data['orderType'] : null;
         $this->container['namespaceId'] = isset($data['namespaceId']) ? $data['namespaceId'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['withTag'] = isset($data['withTag']) ? $data['withTag'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['namespaceIds'] = isset($data['namespaceIds']) ? $data['namespaceIds'] : null;
     }
 
     /**
@@ -423,6 +467,102 @@ class ListInstanceRepositoriesRequest implements ModelInterface, ArrayAccess
     public function setNamespaceId($namespaceId)
     {
         $this->container['namespaceId'] = $namespaceId;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  根据仓库名称或命名空间名称进行模糊查询
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 根据仓库名称或命名空间名称进行模糊查询
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets withTag
+    *  是否返回仓库的标签
+    *
+    * @return bool|null
+    */
+    public function getWithTag()
+    {
+        return $this->container['withTag'];
+    }
+
+    /**
+    * Sets withTag
+    *
+    * @param bool|null $withTag 是否返回仓库的标签
+    *
+    * @return $this
+    */
+    public function setWithTag($withTag)
+    {
+        $this->container['withTag'] = $withTag;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags 根据标签过滤，多个标签以英文逗号隔开，最多支持20个标签同时过滤查询。格式为key1=value1,key2=value2。如果标签的key/value值中有特殊字符=，请先把 = 替换成 %3D 再进行请求。注意：使用curl命令请求，需要把 = 替换成 %253D(即 %3D 的 %25 被编码为 %25)再次请求。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets namespaceIds
+    *  支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
+    *
+    * @return string|null
+    */
+    public function getNamespaceIds()
+    {
+        return $this->container['namespaceIds'];
+    }
+
+    /**
+    * Sets namespaceIds
+    *
+    * @param string|null $namespaceIds 支持按多个所属命名空间ID过滤，多个ID之间用英文逗号分隔。注意：namespace_id与namespace_ids不支持同时传参。
+    *
+    * @return $this
+    */
+    public function setNamespaceIds($namespaceIds)
+    {
+        $this->container['namespaceIds'] = $namespaceIds;
         return $this;
     }
 

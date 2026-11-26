@@ -24,8 +24,8 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * xReturnPublishMessages  是否返回专享版API的发布信息。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
     * name  根据API名称模糊查询。
     * description  根据API描述信息模糊查询。
     * createUser  根据API创建用户模糊查询。
@@ -62,8 +62,8 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * xReturnPublishMessages  是否返回专享版API的发布信息。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
     * name  根据API名称模糊查询。
     * description  根据API描述信息模糊查询。
     * createUser  根据API创建用户模糊查询。
@@ -121,8 +121,8 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * xReturnPublishMessages  是否返回专享版API的发布信息。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
     * name  根据API名称模糊查询。
     * description  根据API描述信息模糊查询。
     * createUser  根据API创建用户模糊查询。
@@ -159,8 +159,8 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * xReturnPublishMessages  是否返回专享版API的发布信息。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
     * name  根据API名称模糊查询。
     * description  根据API描述信息模糊查询。
     * createUser  根据API创建用户模糊查询。
@@ -197,8 +197,8 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * xReturnPublishMessages  是否返回专享版API的发布信息。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
     * name  根据API名称模糊查询。
     * description  根据API描述信息模糊查询。
     * createUser  根据API创建用户模糊查询。
@@ -505,7 +505,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    *  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
     *
     * @return int|null
     */
@@ -517,7 +517,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * @param int|null $offset 查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数, 即查询Y条数据。
+    *  查询条数，即查询Y条数据。
     *
     * @return int|null
     */
@@ -541,7 +541,7 @@ class ListApisRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数, 即查询Y条数据。
+    * @param int|null $limit 查询条数，即查询Y条数据。
     *
     * @return $this
     */

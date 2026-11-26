@@ -25,7 +25,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
     * version  若该版本API支持微版本，则填支持的最大微版本号，如果不支持微版本，则填空。
     * status  版本状态，为如下3种：  CURRENT：表示该版本为主推版本；  SUPPORTED：表示为老版本，但是现在还继续支持；  DEPRECATED：表示为废弃版本，存在后续删除的可能。
     * updated  版本发布时间，要求用UTC时间表示。如v1发布的时间2014-06-28T12:20:21Z。
-    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
     * version  若该版本API支持微版本，则填支持的最大微版本号，如果不支持微版本，则填空。
     * status  版本状态，为如下3种：  CURRENT：表示该版本为主推版本；  SUPPORTED：表示为老版本，但是现在还继续支持；  DEPRECATED：表示为废弃版本，存在后续删除的可能。
     * updated  版本发布时间，要求用UTC时间表示。如v1发布的时间2014-06-28T12:20:21Z。
-    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
     * version  若该版本API支持微版本，则填支持的最大微版本号，如果不支持微版本，则填空。
     * status  版本状态，为如下3种：  CURRENT：表示该版本为主推版本；  SUPPORTED：表示为老版本，但是现在还继续支持；  DEPRECATED：表示为废弃版本，存在后续删除的可能。
     * updated  版本发布时间，要求用UTC时间表示。如v1发布的时间2014-06-28T12:20:21Z。
-    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
     * version  若该版本API支持微版本，则填支持的最大微版本号，如果不支持微版本，则填空。
     * status  版本状态，为如下3种：  CURRENT：表示该版本为主推版本；  SUPPORTED：表示为老版本，但是现在还继续支持；  DEPRECATED：表示为废弃版本，存在后续删除的可能。
     * updated  版本发布时间，要求用UTC时间表示。如v1发布的时间2014-06-28T12:20:21Z。
-    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
     * version  若该版本API支持微版本，则填支持的最大微版本号，如果不支持微版本，则填空。
     * status  版本状态，为如下3种：  CURRENT：表示该版本为主推版本；  SUPPORTED：表示为老版本，但是现在还继续支持；  DEPRECATED：表示为废弃版本，存在后续删除的可能。
     * updated  版本发布时间，要求用UTC时间表示。如v1发布的时间2014-06-28T12:20:21Z。
-    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    * minVersion  若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @var string[]
     */
@@ -367,7 +367,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets minVersion
-    *  若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    *  若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @return string
     */
@@ -379,7 +379,7 @@ class VersionDetail implements ModelInterface, ArrayAccess
     /**
     * Sets minVersion
     *
-    * @param string $minVersion 若该版本API 支持微版本，则填支持的最小微版本号， 如果不支持微版本，则填空。
+    * @param string $minVersion 若该版本API 支持微版本，则填支持的最小微版本号。当前版本为2.0。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
-    * primaryDomain  **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
+    * primaryDomain  **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     * shareCacheRecords  **参数解释：** 关联域名 **约束限制：** - 必须传入主域名 - 最多可包含50个关联域名
     *
     * @var string[]
@@ -34,8 +34,8 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
-    * primaryDomain  **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
+    * primaryDomain  **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     * shareCacheRecords  **参数解释：** 关联域名 **约束限制：** - 必须传入主域名 - 最多可包含50个关联域名
     *
     * @var string[]
@@ -69,8 +69,8 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
-    * primaryDomain  **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
+    * primaryDomain  **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     * shareCacheRecords  **参数解释：** 关联域名 **约束限制：** - 必须传入主域名 - 最多可包含50个关联域名
     *
     * @var string[]
@@ -83,8 +83,8 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
-    * primaryDomain  **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
+    * primaryDomain  **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     * shareCacheRecords  **参数解释：** 关联域名 **约束限制：** - 必须传入主域名 - 最多可包含50个关联域名
     *
     * @var string[]
@@ -97,8 +97,8 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
-    * primaryDomain  **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * groupName  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
+    * primaryDomain  **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     * shareCacheRecords  **参数解释：** 关联域名 **约束限制：** - 必须传入主域名 - 最多可包含50个关联域名
     *
     * @var string[]
@@ -196,7 +196,7 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
+    *  **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”\"、“\"”、“<”、“>”  **默认取值：** 不涉及
+    * @param string|null $groupName **参数解释：** 共享缓存组名称 **约束限制：** 不涉及 **取值范围：** - 1-128个字符 - 不支持特殊字符“%”、“&”、“=”、“?”、“$”、“\"”、“<”、“>” **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets primaryDomain
-    *  **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    *  **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class CreateShareCacheGroupsRequstBody implements ModelInterface, ArrayAccess
     /**
     * Sets primaryDomain
     *
-    * @param string|null $primaryDomain **参数解释：** 主域名 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * @param string|null $primaryDomain **参数解释：** 共享缓存组的主域名，作为缓存共享的核心域名，关联域名将共享主域名缓存。 **约束限制：** 只能有一个主域名 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

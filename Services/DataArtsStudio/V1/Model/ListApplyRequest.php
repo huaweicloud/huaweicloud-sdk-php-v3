@@ -23,10 +23,10 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
-    * apiName  api名称。
-    * queryType  查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
+    * apiName  API名称。
+    * queryType  查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @var string[]
     */
@@ -45,10 +45,10 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
-    * apiName  api名称。
-    * queryType  查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
+    * apiName  API名称。
+    * queryType  查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @var string[]
     */
@@ -88,10 +88,10 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
-    * apiName  api名称。
-    * queryType  查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
+    * apiName  API名称。
+    * queryType  查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @var string[]
     */
@@ -110,10 +110,10 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
-    * apiName  api名称。
-    * queryType  查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
+    * apiName  API名称。
+    * queryType  查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @var string[]
     */
@@ -132,10 +132,10 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
-    * offset  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
-    * limit  查询条数, 即查询Y条数据。
-    * apiName  api名称。
-    * queryType  查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    * offset  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * limit  查询条数，即查询Y条数据。
+    * apiName  API名称。
+    * queryType  查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @var string[]
     */
@@ -341,7 +341,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    *  查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
     *
     * @return int|null
     */
@@ -353,7 +353,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询起始坐标, 即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
+    * @param int|null $offset 查询起始坐标，即跳过前X条数据。仅支持0或limit的整数倍，不满足则向下取整。
     *
     * @return $this
     */
@@ -365,7 +365,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数, 即查询Y条数据。
+    *  查询条数，即查询Y条数据。
     *
     * @return int|null
     */
@@ -377,7 +377,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数, 即查询Y条数据。
+    * @param int|null $limit 查询条数，即查询Y条数据。
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiName
-    *  api名称。
+    *  API名称。
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets apiName
     *
-    * @param string|null $apiName api名称。
+    * @param string|null $apiName API名称。
     *
     * @return $this
     */
@@ -413,7 +413,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryType
-    *  查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    *  查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @return int|null
     */
@@ -425,7 +425,7 @@ class ListApplyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets queryType
     *
-    * @param int|null $queryType 查询类型, 0:收到的申请(待审核), 1:收到的申请(已审核), 2:发出的申请(开发), 3:发出的申请(调用)。
+    * @param int|null $queryType 查询类型，0:收到的申请（待审核），1:收到的申请（已审核），2:发出的申请（开发），3:发出的申请（调用）。
     *
     * @return $this
     */

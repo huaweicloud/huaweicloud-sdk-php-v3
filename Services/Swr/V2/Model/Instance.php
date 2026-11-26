@@ -32,7 +32,7 @@ class Instance implements ModelInterface, ArrayAccess
     * createdAt  实例创建时间
     * updatedAt  实例更新时间
     * expiresAt  实例过期时间
-    * status  实例状态
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * obsBucketName  obs桶名称
     * projectId  项目ID
     * enterpriseProjectId  企业项目ID
@@ -44,6 +44,7 @@ class Instance implements ModelInterface, ArrayAccess
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
     * vpcepServiceId  实例对应的VPC终端节点服务ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class Instance implements ModelInterface, ArrayAccess
             'vpcCidr' => 'string',
             'subnetName' => 'string',
             'subnetCidr' => 'string',
-            'vpcepServiceId' => 'string'
+            'vpcepServiceId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -88,7 +90,7 @@ class Instance implements ModelInterface, ArrayAccess
     * createdAt  实例创建时间
     * updatedAt  实例更新时间
     * expiresAt  实例过期时间
-    * status  实例状态
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * obsBucketName  obs桶名称
     * projectId  项目ID
     * enterpriseProjectId  企业项目ID
@@ -100,6 +102,7 @@ class Instance implements ModelInterface, ArrayAccess
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
     * vpcepServiceId  实例对应的VPC终端节点服务ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class Instance implements ModelInterface, ArrayAccess
         'vpcCidr' => null,
         'subnetName' => null,
         'subnetCidr' => null,
-        'vpcepServiceId' => null
+        'vpcepServiceId' => null,
+        'tags' => null
     ];
 
     /**
@@ -165,7 +169,7 @@ class Instance implements ModelInterface, ArrayAccess
     * createdAt  实例创建时间
     * updatedAt  实例更新时间
     * expiresAt  实例过期时间
-    * status  实例状态
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * obsBucketName  obs桶名称
     * projectId  项目ID
     * enterpriseProjectId  企业项目ID
@@ -177,6 +181,7 @@ class Instance implements ModelInterface, ArrayAccess
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
     * vpcepServiceId  实例对应的VPC终端节点服务ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class Instance implements ModelInterface, ArrayAccess
             'vpcCidr' => 'vpc_cidr',
             'subnetName' => 'subnet_name',
             'subnetCidr' => 'subnet_cidr',
-            'vpcepServiceId' => 'vpcep_service_id'
+            'vpcepServiceId' => 'vpcep_service_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -221,7 +227,7 @@ class Instance implements ModelInterface, ArrayAccess
     * createdAt  实例创建时间
     * updatedAt  实例更新时间
     * expiresAt  实例过期时间
-    * status  实例状态
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * obsBucketName  obs桶名称
     * projectId  项目ID
     * enterpriseProjectId  企业项目ID
@@ -233,6 +239,7 @@ class Instance implements ModelInterface, ArrayAccess
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
     * vpcepServiceId  实例对应的VPC终端节点服务ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class Instance implements ModelInterface, ArrayAccess
             'vpcCidr' => 'setVpcCidr',
             'subnetName' => 'setSubnetName',
             'subnetCidr' => 'setSubnetCidr',
-            'vpcepServiceId' => 'setVpcepServiceId'
+            'vpcepServiceId' => 'setVpcepServiceId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -277,7 +285,7 @@ class Instance implements ModelInterface, ArrayAccess
     * createdAt  实例创建时间
     * updatedAt  实例更新时间
     * expiresAt  实例过期时间
-    * status  实例状态
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * obsBucketName  obs桶名称
     * projectId  项目ID
     * enterpriseProjectId  企业项目ID
@@ -289,6 +297,7 @@ class Instance implements ModelInterface, ArrayAccess
     * subnetName  VPC的子网名称
     * subnetCidr  子网的网段
     * vpcepServiceId  实例对应的VPC终端节点服务ID
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class Instance implements ModelInterface, ArrayAccess
             'vpcCidr' => 'getVpcCidr',
             'subnetName' => 'getSubnetName',
             'subnetCidr' => 'getSubnetCidr',
-            'vpcepServiceId' => 'getVpcepServiceId'
+            'vpcepServiceId' => 'getVpcepServiceId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -364,6 +374,10 @@ class Instance implements ModelInterface, ArrayAccess
     const STATUS_CREATING = 'Creating';
     const STATUS_RUNNING = 'Running';
     const STATUS_UNAVAILABLE = 'Unavailable';
+    const STATUS_FROZEN = 'Frozen';
+    const STATUS_DEPLOYMENT_ABNORMAL = 'DeploymentAbnormal';
+    const STATUS_PARTIALLY_UNAVAILABLE = 'PartiallyUnavailable';
+    const STATUS_CORE_DIAL_FAILED = 'CoreDialFailed';
     
 
     /**
@@ -390,6 +404,10 @@ class Instance implements ModelInterface, ArrayAccess
             self::STATUS_CREATING,
             self::STATUS_RUNNING,
             self::STATUS_UNAVAILABLE,
+            self::STATUS_FROZEN,
+            self::STATUS_DEPLOYMENT_ABNORMAL,
+            self::STATUS_PARTIALLY_UNAVAILABLE,
+            self::STATUS_CORE_DIAL_FAILED,
         ];
     }
 
@@ -433,6 +451,7 @@ class Instance implements ModelInterface, ArrayAccess
         $this->container['subnetName'] = isset($data['subnetName']) ? $data['subnetName'] : null;
         $this->container['subnetCidr'] = isset($data['subnetCidr']) ? $data['subnetCidr'] : null;
         $this->container['vpcepServiceId'] = isset($data['vpcepServiceId']) ? $data['vpcepServiceId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -763,7 +782,7 @@ class Instance implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态
+    *  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     *
     * @return string|null
     */
@@ -775,7 +794,7 @@ class Instance implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例状态
+    * @param string|null $status 实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     *
     * @return $this
     */
@@ -1046,6 +1065,30 @@ class Instance implements ModelInterface, ArrayAccess
     public function setVpcepServiceId($vpcepServiceId)
     {
         $this->container['vpcepServiceId'] = $vpcepServiceId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

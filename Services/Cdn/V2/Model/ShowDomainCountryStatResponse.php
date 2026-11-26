@@ -25,7 +25,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
-    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -43,7 +43,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
-    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
-    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
-    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -118,7 +118,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     * startTime  **参数解释：** 查询起始时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * endTime  **参数解释：** 查询结束时间 **取值范围：** 相对于UTC 1970-01-01到当前时间相隔的毫秒数
     * statType  **参数解释：** 统计指标类型 **取值范围：** - flux：流量 - req_num：请求总数
-    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    * result  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @var string[]
     */
@@ -315,7 +315,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    *  **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @return map[string,object]|null
     */
@@ -327,7 +327,7 @@ class ShowDomainCountryStatResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param map[string,object]|null $result **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组 **默认取值：** 默认不分组
+    * @param map[string,object]|null $result **参数解释：** 按指定的分组方式组织的数据 **取值范围：** - domain：按域名分组 - country：按国际&地区分组 - province：按省份分组 - isp：按运营商分组  **默认取值：** 默认不分组
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * matchType  URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
-    * matchPattern  file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
-    * priority  优先级取值范围为1-100，数值越大优先级越高。
-    * backSources  回源信息。  > 每个目录的回源源站数量不超过1个。
+    * matchType  **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
+    * matchPattern  **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
+    * priority  **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * backSources  **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * matchType  URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
-    * matchPattern  file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
-    * priority  优先级取值范围为1-100，数值越大优先级越高。
-    * backSources  回源信息。  > 每个目录的回源源站数量不超过1个。
+    * matchType  **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
+    * matchPattern  **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
+    * priority  **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * backSources  **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * matchType  URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
-    * matchPattern  file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
-    * priority  优先级取值范围为1-100，数值越大优先级越高。
-    * backSources  回源信息。  > 每个目录的回源源站数量不超过1个。
+    * matchType  **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
+    * matchPattern  **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
+    * priority  **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * backSources  **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * matchType  URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
-    * matchPattern  file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
-    * priority  优先级取值范围为1-100，数值越大优先级越高。
-    * backSources  回源信息。  > 每个目录的回源源站数量不超过1个。
+    * matchType  **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
+    * matchPattern  **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
+    * priority  **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * backSources  **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * matchType  URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
-    * matchPattern  file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
-    * priority  优先级取值范围为1-100，数值越大优先级越高。
-    * backSources  回源信息。  > 每个目录的回源源站数量不超过1个。
+    * matchType  **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
+    * matchPattern  **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
+    * priority  **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
+    * backSources  **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
@@ -194,9 +194,6 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
         if ($this->container['matchType'] === null) {
             $invalidProperties[] = "'matchType' can't be null";
         }
-        if ($this->container['matchPattern'] === null) {
-            $invalidProperties[] = "'matchPattern' can't be null";
-        }
         if ($this->container['priority'] === null) {
             $invalidProperties[] = "'priority' can't be null";
         }
@@ -219,7 +216,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Gets matchType
-    *  URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
+    *  **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -231,7 +228,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
     /**
     * Sets matchType
     *
-    * @param string $matchType URI的匹配方式，支持文件后缀（file_extension）和路径前缀（file_path）。
+    * @param string $matchType **参数解释：** URI的匹配方式 **约束限制：** 不涉及 **取值范围：** - file_extension: 文件后缀匹配 - file_path: 目录路径 - all: 匹配所有文件  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -243,9 +240,9 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Gets matchPattern
-    *  file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
+    *  **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getMatchPattern()
     {
@@ -255,7 +252,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
     /**
     * Sets matchPattern
     *
-    * @param string $matchPattern file_extension（文件后缀）： 支持所有格式的文件类型。 输入首字符为“.”，以“;”进行分隔。 输入的文件后缀名总数不能超过20个。 file_path（目录路径）：输入要求以“/”作为首字符，以“;”进行分隔，输入的目录路径总数不能超过20个。
+    * @param string|null $matchPattern **参数解释：** URI的匹配规则 **约束限制：** match_type为file_extension时：   - 支持所有格式的文件类型   - 输入首字符为“.”，以“;”进行分隔   - 输入的文件后缀名总数不能超过20个  match_type为file_path时：   - 要求以“/”作为首字符   - 以“;”进行分隔   - 输入的目录路径总数不能超过20个  match_type为all时：置空  > 文件名后缀英文字符大、小写代表不同资源  **取值范围：** 1-512个字符 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -267,7 +264,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  优先级取值范围为1-100，数值越大优先级越高。
+    *  **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -279,7 +276,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority 优先级取值范围为1-100，数值越大优先级越高。
+    * @param int $priority **参数解释：** 优先级 > 数值越大优先级越高  **约束限制：** 不涉及 **取值范围：** 1-1000 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -291,7 +288,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
 
     /**
     * Gets backSources
-    *  回源信息。  > 每个目录的回源源站数量不超过1个。
+    *  **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\BackSources[]
     */
@@ -303,7 +300,7 @@ class FlexibleOrigins implements ModelInterface, ArrayAccess
     /**
     * Sets backSources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\BackSources[] $backSources 回源信息。  > 每个目录的回源源站数量不超过1个。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\BackSources[] $backSources **参数解释：** 配置客户端请求匹配当前规则时，CDN节点回源访问的源站 **约束限制：** 每条规则的回源源站数量不超过1个 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */

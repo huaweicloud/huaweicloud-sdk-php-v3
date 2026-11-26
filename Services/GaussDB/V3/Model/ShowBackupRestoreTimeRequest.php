@@ -22,7 +22,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言。
     * instanceId  租户在某一project下的实例ID。
-    * date  **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    * date  所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     * startTime  **参数解释**：  所需查询的起始时间戳。  **约束限制**：  - “start_time”有值时，“end_time”必选。 - “date”有值时，“start_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     * endTime  **参数解释**：  所需查询的结束时间戳。  **约束限制**：  - “end_time”有值时，“start_time”必选。 - “date”有值时，“end_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     *
@@ -40,7 +40,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言。
     * instanceId  租户在某一project下的实例ID。
-    * date  **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    * date  所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     * startTime  **参数解释**：  所需查询的起始时间戳。  **约束限制**：  - “start_time”有值时，“end_time”必选。 - “date”有值时，“start_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     * endTime  **参数解释**：  所需查询的结束时间戳。  **约束限制**：  - “end_time”有值时，“start_time”必选。 - “date”有值时，“end_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     *
@@ -79,7 +79,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言。
     * instanceId  租户在某一project下的实例ID。
-    * date  **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    * date  所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     * startTime  **参数解释**：  所需查询的起始时间戳。  **约束限制**：  - “start_time”有值时，“end_time”必选。 - “date”有值时，“start_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     * endTime  **参数解释**：  所需查询的结束时间戳。  **约束限制**：  - “end_time”有值时，“start_time”必选。 - “date”有值时，“end_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     *
@@ -97,7 +97,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言。
     * instanceId  租户在某一project下的实例ID。
-    * date  **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    * date  所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     * startTime  **参数解释**：  所需查询的起始时间戳。  **约束限制**：  - “start_time”有值时，“end_time”必选。 - “date”有值时，“start_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     * endTime  **参数解释**：  所需查询的结束时间戳。  **约束限制**：  - “end_time”有值时，“start_time”必选。 - “date”有值时，“end_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     *
@@ -115,7 +115,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言。
     * instanceId  租户在某一project下的实例ID。
-    * date  **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    * date  所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     * startTime  **参数解释**：  所需查询的起始时间戳。  **约束限制**：  - “start_time”有值时，“end_time”必选。 - “date”有值时，“start_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     * endTime  **参数解释**：  所需查询的结束时间戳。  **约束限制**：  - “end_time”有值时，“start_time”必选。 - “date”有值时，“end_time”失效。  **取值范围**：  格式为UNIX时间戳，单位是毫秒，时区为UTC标准时区。传参时需要将对应时区的时间转为标准时区对应的时间戳，比如，北京时区的时间点需要-8h后再转为时间戳。  **默认取值**：  不涉及。
     *
@@ -269,7 +269,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets date
-    *  **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    *  所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     *
     * @return string|null
     */
@@ -281,7 +281,7 @@ class ShowBackupRestoreTimeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets date
     *
-    * @param string|null $date **参数解释**：  所需查询的日期。  **约束限制**：  不涉及。  **取值范围**：  yyyy-mm-dd字符串格式，时区为UTC。  **默认取值**：  不涉及。
+    * @param string|null $date 所需查询的日志，为yyyy-mm-dd字符串格式，时区为UTC。
     *
     * @return $this
     */

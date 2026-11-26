@@ -20,7 +20,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     * productType  **参数解释：** 产品模式 **约束限制：** 不涉及 **取值范围：** base：基础加速 **默认取值：** 不涉及
     * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** mainland_china：中国大陆 **默认取值：** 不涉及
     *
@@ -34,7 +34,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     * productType  **参数解释：** 产品模式 **约束限制：** 不涉及 **取值范围：** base：基础加速 **默认取值：** 不涉及
     * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** mainland_china：中国大陆 **默认取值：** 不涉及
     *
@@ -69,7 +69,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     * productType  **参数解释：** 产品模式 **约束限制：** 不涉及 **取值范围：** base：基础加速 **默认取值：** 不涉及
     * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** mainland_china：中国大陆 **默认取值：** 不涉及
     *
@@ -83,7 +83,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     * productType  **参数解释：** 产品模式 **约束限制：** 不涉及 **取值范围：** base：基础加速 **默认取值：** 不涉及
     * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** mainland_china：中国大陆 **默认取值：** 不涉及
     *
@@ -97,7 +97,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    * chargeMode  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     * productType  **参数解释：** 产品模式 **约束限制：** 不涉及 **取值范围：** base：基础加速 **默认取值：** 不涉及
     * serviceArea  **参数解释：** 服务范围 **约束限制：** 不涉及 **取值范围：** mainland_china：中国大陆 **默认取值：** 不涉及
     *
@@ -205,7 +205,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    *  **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class SetChargeModesBody implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽 **默认取值：** 不涉及
+    * @param string $chargeMode **参数解释：** 计费模式 **约束限制：** v2及以上客户支持bw（带宽）计费模式 **取值范围：** - flux：流量 - bw：带宽  **默认取值：** 不涉及
     *
     * @return $this
     */

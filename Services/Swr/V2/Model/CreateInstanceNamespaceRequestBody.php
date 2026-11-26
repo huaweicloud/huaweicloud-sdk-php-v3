@@ -22,24 +22,28 @@ class CreateInstanceNamespaceRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * namespaceName  命名空间名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，1-64个字符。
     * metadata  metadata
+    * tags  资源标签, 最多支持20个标签
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'namespaceName' => 'string',
-            'metadata' => '\HuaweiCloud\SDK\Swr\V2\Model\NamespaceMetadata'
+            'metadata' => '\HuaweiCloud\SDK\Swr\V2\Model\NamespaceMetadata',
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * namespaceName  命名空间名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，1-64个字符。
     * metadata  metadata
+    * tags  资源标签, 最多支持20个标签
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'namespaceName' => null,
-        'metadata' => null
+        'metadata' => null,
+        'tags' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class CreateInstanceNamespaceRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * namespaceName  命名空间名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，1-64个字符。
     * metadata  metadata
+    * tags  资源标签, 最多支持20个标签
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'namespaceName' => 'namespace_name',
-            'metadata' => 'metadata'
+            'metadata' => 'metadata',
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * namespaceName  命名空间名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，1-64个字符。
     * metadata  metadata
+    * tags  资源标签, 最多支持20个标签
     *
     * @var string[]
     */
     protected static $setters = [
             'namespaceName' => 'setNamespaceName',
-            'metadata' => 'setMetadata'
+            'metadata' => 'setMetadata',
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * namespaceName  命名空间名称，小写字母或数字开头，后面跟小写字母、数字、点、下划线或中划线（其中点、下划线、中划线不能直接连续），小写字母或数字结尾，1-64个字符。
     * metadata  metadata
+    * tags  资源标签, 最多支持20个标签
     *
     * @var string[]
     */
     protected static $getters = [
             'namespaceName' => 'getNamespaceName',
-            'metadata' => 'getMetadata'
+            'metadata' => 'getMetadata',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -159,6 +169,7 @@ class CreateInstanceNamespaceRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['namespaceName'] = isset($data['namespaceName']) ? $data['namespaceName'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class CreateInstanceNamespaceRequestBody implements ModelInterface, ArrayAccess
     public function setMetadata($metadata)
     {
         $this->container['metadata'] = $metadata;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  资源标签, 最多支持20个标签
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null $tags 资源标签, 最多支持20个标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -31,6 +31,7 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -44,7 +45,8 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
             'artifactCount' => 'int',
             'description' => 'string',
             'createdAt' => 'string',
-            'updatedAt' => 'string'
+            'updatedAt' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -59,6 +61,7 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -72,7 +75,8 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
         'artifactCount' => null,
         'description' => null,
         'createdAt' => null,
-        'updatedAt' => null
+        'updatedAt' => null,
+        'tags' => null
     ];
 
     /**
@@ -108,6 +112,7 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -121,7 +126,8 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
             'artifactCount' => 'artifact_count',
             'description' => 'description',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'tags' => 'tags'
     ];
 
     /**
@@ -136,6 +142,7 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -149,7 +156,8 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
             'artifactCount' => 'setArtifactCount',
             'description' => 'setDescription',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -164,6 +172,7 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -177,7 +186,8 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
             'artifactCount' => 'getArtifactCount',
             'description' => 'getDescription',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -248,6 +258,7 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -509,6 +520,30 @@ class ShowInstanceRepositoryResponse implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

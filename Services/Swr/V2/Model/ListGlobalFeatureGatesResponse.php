@@ -25,6 +25,9 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
     * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
+    * enableConsoleAgency  是否支持Console侧的一键委托
+    * enableV5CustomAgency  是否支持IAM新平面的信任委托
+    * agencyName  委托名称
     *
     * @var string[]
     */
@@ -32,7 +35,10 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableUserDefObs' => 'bool',
             'enableEnterprise' => 'bool',
             'cerAvailable' => 'bool',
-            'enableIntranetAccessSwitch' => 'bool'
+            'enableIntranetAccessSwitch' => 'bool',
+            'enableConsoleAgency' => 'bool',
+            'enableV5CustomAgency' => 'bool',
+            'agencyName' => 'string'
     ];
 
     /**
@@ -41,6 +47,9 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
     * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
+    * enableConsoleAgency  是否支持Console侧的一键委托
+    * enableV5CustomAgency  是否支持IAM新平面的信任委托
+    * agencyName  委托名称
     *
     * @var string[]
     */
@@ -48,7 +57,10 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
         'enableUserDefObs' => null,
         'enableEnterprise' => null,
         'cerAvailable' => null,
-        'enableIntranetAccessSwitch' => null
+        'enableIntranetAccessSwitch' => null,
+        'enableConsoleAgency' => null,
+        'enableV5CustomAgency' => null,
+        'agencyName' => null
     ];
 
     /**
@@ -78,6 +90,9 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
     * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
+    * enableConsoleAgency  是否支持Console侧的一键委托
+    * enableV5CustomAgency  是否支持IAM新平面的信任委托
+    * agencyName  委托名称
     *
     * @var string[]
     */
@@ -85,7 +100,10 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableUserDefObs' => 'enableUserDefObs',
             'enableEnterprise' => 'enableEnterprise',
             'cerAvailable' => 'cerAvailable',
-            'enableIntranetAccessSwitch' => 'enableIntranetAccessSwitch'
+            'enableIntranetAccessSwitch' => 'enableIntranetAccessSwitch',
+            'enableConsoleAgency' => 'enableConsoleAgency',
+            'enableV5CustomAgency' => 'enableV5CustomAgency',
+            'agencyName' => 'agencyName'
     ];
 
     /**
@@ -94,6 +112,9 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
     * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
+    * enableConsoleAgency  是否支持Console侧的一键委托
+    * enableV5CustomAgency  是否支持IAM新平面的信任委托
+    * agencyName  委托名称
     *
     * @var string[]
     */
@@ -101,7 +122,10 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableUserDefObs' => 'setEnableUserDefObs',
             'enableEnterprise' => 'setEnableEnterprise',
             'cerAvailable' => 'setCerAvailable',
-            'enableIntranetAccessSwitch' => 'setEnableIntranetAccessSwitch'
+            'enableIntranetAccessSwitch' => 'setEnableIntranetAccessSwitch',
+            'enableConsoleAgency' => 'setEnableConsoleAgency',
+            'enableV5CustomAgency' => 'setEnableV5CustomAgency',
+            'agencyName' => 'setAgencyName'
     ];
 
     /**
@@ -110,6 +134,9 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     * enableEnterprise  是否支持支持企业项目
     * cerAvailable  是否支持SWR企业版功能
     * enableIntranetAccessSwitch  是否展示创建内网访问的开关按钮
+    * enableConsoleAgency  是否支持Console侧的一键委托
+    * enableV5CustomAgency  是否支持IAM新平面的信任委托
+    * agencyName  委托名称
     *
     * @var string[]
     */
@@ -117,7 +144,10 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
             'enableUserDefObs' => 'getEnableUserDefObs',
             'enableEnterprise' => 'getEnableEnterprise',
             'cerAvailable' => 'getCerAvailable',
-            'enableIntranetAccessSwitch' => 'getEnableIntranetAccessSwitch'
+            'enableIntranetAccessSwitch' => 'getEnableIntranetAccessSwitch',
+            'enableConsoleAgency' => 'getEnableConsoleAgency',
+            'enableV5CustomAgency' => 'getEnableV5CustomAgency',
+            'agencyName' => 'getAgencyName'
     ];
 
     /**
@@ -182,6 +212,9 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
         $this->container['enableEnterprise'] = isset($data['enableEnterprise']) ? $data['enableEnterprise'] : null;
         $this->container['cerAvailable'] = isset($data['cerAvailable']) ? $data['cerAvailable'] : null;
         $this->container['enableIntranetAccessSwitch'] = isset($data['enableIntranetAccessSwitch']) ? $data['enableIntranetAccessSwitch'] : null;
+        $this->container['enableConsoleAgency'] = isset($data['enableConsoleAgency']) ? $data['enableConsoleAgency'] : null;
+        $this->container['enableV5CustomAgency'] = isset($data['enableV5CustomAgency']) ? $data['enableV5CustomAgency'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
     }
 
     /**
@@ -299,6 +332,78 @@ class ListGlobalFeatureGatesResponse implements ModelInterface, ArrayAccess
     public function setEnableIntranetAccessSwitch($enableIntranetAccessSwitch)
     {
         $this->container['enableIntranetAccessSwitch'] = $enableIntranetAccessSwitch;
+        return $this;
+    }
+
+    /**
+    * Gets enableConsoleAgency
+    *  是否支持Console侧的一键委托
+    *
+    * @return bool|null
+    */
+    public function getEnableConsoleAgency()
+    {
+        return $this->container['enableConsoleAgency'];
+    }
+
+    /**
+    * Sets enableConsoleAgency
+    *
+    * @param bool|null $enableConsoleAgency 是否支持Console侧的一键委托
+    *
+    * @return $this
+    */
+    public function setEnableConsoleAgency($enableConsoleAgency)
+    {
+        $this->container['enableConsoleAgency'] = $enableConsoleAgency;
+        return $this;
+    }
+
+    /**
+    * Gets enableV5CustomAgency
+    *  是否支持IAM新平面的信任委托
+    *
+    * @return bool|null
+    */
+    public function getEnableV5CustomAgency()
+    {
+        return $this->container['enableV5CustomAgency'];
+    }
+
+    /**
+    * Sets enableV5CustomAgency
+    *
+    * @param bool|null $enableV5CustomAgency 是否支持IAM新平面的信任委托
+    *
+    * @return $this
+    */
+    public function setEnableV5CustomAgency($enableV5CustomAgency)
+    {
+        $this->container['enableV5CustomAgency'] = $enableV5CustomAgency;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  委托名称
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 委托名称
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

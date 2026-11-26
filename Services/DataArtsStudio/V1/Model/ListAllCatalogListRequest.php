@@ -24,8 +24,8 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * catalogId  目录编号。
-    * offset  查询起始坐标, 即跳过前X条数据。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。
+    * limit  查询条数，即查询Y条数据。
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * catalogId  目录编号。
-    * offset  查询起始坐标, 即跳过前X条数据。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。
+    * limit  查询条数，即查询Y条数据。
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * catalogId  目录编号。
-    * offset  查询起始坐标, 即跳过前X条数据。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。
+    * limit  查询条数，即查询Y条数据。
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * catalogId  目录编号。
-    * offset  查询起始坐标, 即跳过前X条数据。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。
+    * limit  查询条数，即查询Y条数据。
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * catalogId  目录编号。
-    * offset  查询起始坐标, 即跳过前X条数据。
-    * limit  查询条数, 即查询Y条数据。
+    * offset  查询起始坐标，即跳过前X条数据。
+    * limit  查询条数，即查询Y条数据。
     *
     * @var string[]
     */
@@ -357,7 +357,7 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询起始坐标, 即跳过前X条数据。
+    *  查询起始坐标，即跳过前X条数据。
     *
     * @return int|null
     */
@@ -369,7 +369,7 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询起始坐标, 即跳过前X条数据。
+    * @param int|null $offset 查询起始坐标，即跳过前X条数据。
     *
     * @return $this
     */
@@ -381,7 +381,7 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数, 即查询Y条数据。
+    *  查询条数，即查询Y条数据。
     *
     * @return int|null
     */
@@ -393,7 +393,7 @@ class ListAllCatalogListRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数, 即查询Y条数据。
+    * @param int|null $limit 查询条数，即查询Y条数据。
     *
     * @return $this
     */

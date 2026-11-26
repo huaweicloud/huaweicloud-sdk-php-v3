@@ -25,6 +25,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认值为空值
+    * destNamespaceReplaceCount  在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
     * filters  过滤器（目前只支持harbor类型的仓库）
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
@@ -39,6 +40,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
             'srcRegistry' => '\HuaweiCloud\SDK\Swr\V2\Model\ReplicationRegistry',
             'destRegistry' => '\HuaweiCloud\SDK\Swr\V2\Model\ReplicationRegistry',
             'destNamespace' => 'string',
+            'destNamespaceReplaceCount' => 'int',
             'filters' => '\HuaweiCloud\SDK\Swr\V2\Model\Filter[]',
             'repoScopeMode' => 'string',
             'trigger' => '\HuaweiCloud\SDK\Swr\V2\Model\TriggerConfig',
@@ -53,6 +55,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认值为空值
+    * destNamespaceReplaceCount  在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
     * filters  过滤器（目前只支持harbor类型的仓库）
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
@@ -67,6 +70,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
         'srcRegistry' => null,
         'destRegistry' => null,
         'destNamespace' => null,
+        'destNamespaceReplaceCount' => null,
         'filters' => null,
         'repoScopeMode' => null,
         'trigger' => null,
@@ -102,6 +106,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认值为空值
+    * destNamespaceReplaceCount  在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
     * filters  过滤器（目前只支持harbor类型的仓库）
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
@@ -116,6 +121,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
             'srcRegistry' => 'src_registry',
             'destRegistry' => 'dest_registry',
             'destNamespace' => 'dest_namespace',
+            'destNamespaceReplaceCount' => 'dest_namespace_replace_count',
             'filters' => 'filters',
             'repoScopeMode' => 'repo_scope_mode',
             'trigger' => 'trigger',
@@ -130,6 +136,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认值为空值
+    * destNamespaceReplaceCount  在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
     * filters  过滤器（目前只支持harbor类型的仓库）
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
@@ -144,6 +151,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
             'srcRegistry' => 'setSrcRegistry',
             'destRegistry' => 'setDestRegistry',
             'destNamespace' => 'setDestNamespace',
+            'destNamespaceReplaceCount' => 'setDestNamespaceReplaceCount',
             'filters' => 'setFilters',
             'repoScopeMode' => 'setRepoScopeMode',
             'trigger' => 'setTrigger',
@@ -158,6 +166,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     * srcRegistry  srcRegistry
     * destRegistry  destRegistry
     * destNamespace  目标命名空间名，默认值为空值
+    * destNamespaceReplaceCount  在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
     * filters  过滤器（目前只支持harbor类型的仓库）
     * repoScopeMode  repo的选择方式，regular，selection
     * trigger  trigger
@@ -172,6 +181,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
             'srcRegistry' => 'getSrcRegistry',
             'destRegistry' => 'getDestRegistry',
             'destNamespace' => 'getDestNamespace',
+            'destNamespaceReplaceCount' => 'getDestNamespaceReplaceCount',
             'filters' => 'getFilters',
             'repoScopeMode' => 'getRepoScopeMode',
             'trigger' => 'getTrigger',
@@ -242,6 +252,7 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
         $this->container['srcRegistry'] = isset($data['srcRegistry']) ? $data['srcRegistry'] : null;
         $this->container['destRegistry'] = isset($data['destRegistry']) ? $data['destRegistry'] : null;
         $this->container['destNamespace'] = isset($data['destNamespace']) ? $data['destNamespace'] : null;
+        $this->container['destNamespaceReplaceCount'] = isset($data['destNamespaceReplaceCount']) ? $data['destNamespaceReplaceCount'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['repoScopeMode'] = isset($data['repoScopeMode']) ? $data['repoScopeMode'] : null;
         $this->container['trigger'] = isset($data['trigger']) ? $data['trigger'] : null;
@@ -403,6 +414,30 @@ class CreateReplicationPolicyRequestBody implements ModelInterface, ArrayAccess
     public function setDestNamespace($destNamespace)
     {
         $this->container['destNamespace'] = $destNamespace;
+        return $this;
+    }
+
+    /**
+    * Gets destNamespaceReplaceCount
+    *  在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
+    *
+    * @return int|null
+    */
+    public function getDestNamespaceReplaceCount()
+    {
+        return $this->container['destNamespaceReplaceCount'];
+    }
+
+    /**
+    * Sets destNamespaceReplaceCount
+    *
+    * @param int|null $destNamespaceReplaceCount 在镜像复制过程中，针对多路径镜像名称，可通过设置替换层级来优化仓库目录结构。支持的值为-1,0,1,2,3。dest_namespace_replace_count不传值，则默认为-1。假设原始镜像路径为 a/b/c/d/img，其中a为原始镜像的命名空间名称，目标命名空间为 ns，不同替换级别的效果如下： -1：替换所有级：'a/b/c/d/img' -> 'ns/img' 0：无替换：'a/b/c/d/img' -> 'ns/a/b/c/d/img' 1：替换1级：'a/b/c/d/img' -> 'ns/b/c/d/img' 2：替换2级：'a/b/c/d/img' -> 'ns/c/d/img' 3：替换3级：'a/b/c/d/img' -> 'ns/d/img'
+    *
+    * @return $this
+    */
+    public function setDestNamespaceReplaceCount($destNamespaceReplaceCount)
+    {
+        $this->container['destNamespaceReplaceCount'] = $destNamespaceReplaceCount;
         return $this;
     }
 

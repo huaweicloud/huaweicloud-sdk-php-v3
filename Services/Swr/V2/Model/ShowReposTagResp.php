@@ -34,7 +34,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * deleted  镜像删除时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * scanned  镜像是否被扫描过
     * tagType  0：manifest类型；1：manifest list类型
     *
@@ -76,7 +76,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * deleted  镜像删除时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * scanned  镜像是否被扫描过
     * tagType  0：manifest类型；1：manifest list类型
     *
@@ -139,7 +139,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * deleted  镜像删除时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * scanned  镜像是否被扫描过
     * tagType  0：manifest类型；1：manifest list类型
     *
@@ -181,7 +181,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * deleted  镜像删除时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * scanned  镜像是否被扫描过
     * tagType  0：manifest类型；1：manifest list类型
     *
@@ -223,7 +223,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
     * created  镜像创建时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  镜像更新时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * deleted  镜像删除时间，UTC时间格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * scanned  镜像是否被扫描过
     * tagType  0：manifest类型；1：manifest list类型
     *
@@ -737,7 +737,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  帐号ID
+    *  账号ID
     *
     * @return string
     */
@@ -749,7 +749,7 @@ class ShowReposTagResp implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 帐号ID
+    * @param string $domainId 账号ID
     *
     * @return $this
     */

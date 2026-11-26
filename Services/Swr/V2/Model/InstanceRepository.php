@@ -30,6 +30,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     * instanceId  企业仓库实例ID
     * instanceName  企业仓库实例名称
     * resourceUrn  资源URN的值，格式为：swr:<region-id>:<account-id>:repository:<registry-name>/<repository-path>
@@ -47,6 +48,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
             'description' => 'string',
             'createdAt' => 'string',
             'updatedAt' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]',
             'instanceId' => 'string',
             'instanceName' => 'string',
             'resourceUrn' => 'string'
@@ -64,6 +66,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     * instanceId  企业仓库实例ID
     * instanceName  企业仓库实例名称
     * resourceUrn  资源URN的值，格式为：swr:<region-id>:<account-id>:repository:<registry-name>/<repository-path>
@@ -81,6 +84,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
         'description' => null,
         'createdAt' => null,
         'updatedAt' => null,
+        'tags' => null,
         'instanceId' => null,
         'instanceName' => null,
         'resourceUrn' => null
@@ -119,6 +123,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     * instanceId  企业仓库实例ID
     * instanceName  企业仓库实例名称
     * resourceUrn  资源URN的值，格式为：swr:<region-id>:<account-id>:repository:<registry-name>/<repository-path>
@@ -136,6 +141,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
             'description' => 'description',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
+            'tags' => 'tags',
             'instanceId' => 'instance_id',
             'instanceName' => 'instance_name',
             'resourceUrn' => 'resource_urn'
@@ -153,6 +159,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     * instanceId  企业仓库实例ID
     * instanceName  企业仓库实例名称
     * resourceUrn  资源URN的值，格式为：swr:<region-id>:<account-id>:repository:<registry-name>/<repository-path>
@@ -170,6 +177,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
+            'tags' => 'setTags',
             'instanceId' => 'setInstanceId',
             'instanceName' => 'setInstanceName',
             'resourceUrn' => 'setResourceUrn'
@@ -187,6 +195,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
     * description  描述
     * createdAt  创建时间
     * updatedAt  更新时间
+    * tags  标签列表
     * instanceId  企业仓库实例ID
     * instanceName  企业仓库实例名称
     * resourceUrn  资源URN的值，格式为：swr:<region-id>:<account-id>:repository:<registry-name>/<repository-path>
@@ -204,6 +213,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
+            'tags' => 'getTags',
             'instanceId' => 'getInstanceId',
             'instanceName' => 'getInstanceName',
             'resourceUrn' => 'getResourceUrn'
@@ -277,6 +287,7 @@ class InstanceRepository implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['instanceName'] = isset($data['instanceName']) ? $data['instanceName'] : null;
         $this->container['resourceUrn'] = isset($data['resourceUrn']) ? $data['resourceUrn'] : null;
@@ -541,6 +552,30 @@ class InstanceRepository implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

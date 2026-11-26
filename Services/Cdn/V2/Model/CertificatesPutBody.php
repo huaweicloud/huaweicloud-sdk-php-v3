@@ -241,12 +241,6 @@ class CertificatesPutBody implements ModelInterface, ArrayAccess
         if ($this->container['certificateName'] === null) {
             $invalidProperties[] = "'certificateName' can't be null";
         }
-        if ($this->container['certificateValue'] === null) {
-            $invalidProperties[] = "'certificateValue' can't be null";
-        }
-        if ($this->container['privateKey'] === null) {
-            $invalidProperties[] = "'privateKey' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -361,7 +355,7 @@ class CertificatesPutBody implements ModelInterface, ArrayAccess
     * Gets certificateValue
     *  HTTPS协议使用的证书内容。  > PEM编码格式。
     *
-    * @return string
+    * @return string|null
     */
     public function getCertificateValue()
     {
@@ -371,7 +365,7 @@ class CertificatesPutBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateValue
     *
-    * @param string $certificateValue HTTPS协议使用的证书内容。  > PEM编码格式。
+    * @param string|null $certificateValue HTTPS协议使用的证书内容。  > PEM编码格式。
     *
     * @return $this
     */
@@ -385,7 +379,7 @@ class CertificatesPutBody implements ModelInterface, ArrayAccess
     * Gets privateKey
     *  HTTPS协议使用的私钥。  > PEM编码格式。
     *
-    * @return string
+    * @return string|null
     */
     public function getPrivateKey()
     {
@@ -395,7 +389,7 @@ class CertificatesPutBody implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string $privateKey HTTPS协议使用的私钥。  > PEM编码格式。
+    * @param string|null $privateKey HTTPS协议使用的私钥。  > PEM编码格式。
     *
     * @return $this
     */

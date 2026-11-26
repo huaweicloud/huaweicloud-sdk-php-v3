@@ -20,30 +20,42 @@ class ClientCert implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  客户端证书配置开关，on：打开；off：关闭。
-    * trustedCert  客户端CA证书的内容，仅支持PEM格式。
-    * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    * status  **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * trustedCert  **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * hosts  **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * trustedCerts  **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    * smTrustedCerts  **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    * smCertHosts  **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'string',
             'trustedCert' => 'string',
-            'hosts' => 'string'
+            'hosts' => 'string',
+            'trustedCerts' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCertTrustedCerts[]',
+            'smTrustedCerts' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCertTrustedCerts[]',
+            'smCertHosts' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  客户端证书配置开关，on：打开；off：关闭。
-    * trustedCert  客户端CA证书的内容，仅支持PEM格式。
-    * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    * status  **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * trustedCert  **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * hosts  **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * trustedCerts  **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    * smTrustedCerts  **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    * smCertHosts  **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => null,
         'trustedCert' => null,
-        'hosts' => null
+        'hosts' => null,
+        'trustedCerts' => null,
+        'smTrustedCerts' => null,
+        'smCertHosts' => null
     ];
 
     /**
@@ -69,44 +81,62 @@ class ClientCert implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  客户端证书配置开关，on：打开；off：关闭。
-    * trustedCert  客户端CA证书的内容，仅支持PEM格式。
-    * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    * status  **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * trustedCert  **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * hosts  **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * trustedCerts  **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    * smTrustedCerts  **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    * smCertHosts  **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
             'trustedCert' => 'trusted_cert',
-            'hosts' => 'hosts'
+            'hosts' => 'hosts',
+            'trustedCerts' => 'trusted_certs',
+            'smTrustedCerts' => 'sm_trusted_certs',
+            'smCertHosts' => 'sm_cert_hosts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  客户端证书配置开关，on：打开；off：关闭。
-    * trustedCert  客户端CA证书的内容，仅支持PEM格式。
-    * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    * status  **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * trustedCert  **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * hosts  **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * trustedCerts  **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    * smTrustedCerts  **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    * smCertHosts  **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
             'trustedCert' => 'setTrustedCert',
-            'hosts' => 'setHosts'
+            'hosts' => 'setHosts',
+            'trustedCerts' => 'setTrustedCerts',
+            'smTrustedCerts' => 'setSmTrustedCerts',
+            'smCertHosts' => 'setSmCertHosts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  客户端证书配置开关，on：打开；off：关闭。
-    * trustedCert  客户端CA证书的内容，仅支持PEM格式。
-    * hosts  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    * status  **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
+    * trustedCert  **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * hosts  **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * trustedCerts  **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    * smTrustedCerts  **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    * smCertHosts  **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
             'trustedCert' => 'getTrustedCert',
-            'hosts' => 'getHosts'
+            'hosts' => 'getHosts',
+            'trustedCerts' => 'getTrustedCerts',
+            'smTrustedCerts' => 'getSmTrustedCerts',
+            'smCertHosts' => 'getSmCertHosts'
     ];
 
     /**
@@ -170,6 +200,9 @@ class ClientCert implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['trustedCert'] = isset($data['trustedCert']) ? $data['trustedCert'] : null;
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
+        $this->container['trustedCerts'] = isset($data['trustedCerts']) ? $data['trustedCerts'] : null;
+        $this->container['smTrustedCerts'] = isset($data['smTrustedCerts']) ? $data['smTrustedCerts'] : null;
+        $this->container['smCertHosts'] = isset($data['smCertHosts']) ? $data['smCertHosts'] : null;
     }
 
     /**
@@ -182,9 +215,6 @@ class ClientCert implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
-        }
-        if ($this->container['trustedCert'] === null) {
-            $invalidProperties[] = "'trustedCert' can't be null";
         }
         return $invalidProperties;
     }
@@ -202,7 +232,7 @@ class ClientCert implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  客户端证书配置开关，on：打开；off：关闭。
+    *  **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -214,7 +244,7 @@ class ClientCert implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 客户端证书配置开关，on：打开；off：关闭。
+    * @param string $status **参数解释：** 客户端证书配置开关 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -226,9 +256,9 @@ class ClientCert implements ModelInterface, ArrayAccess
 
     /**
     * Gets trustedCert
-    *  客户端CA证书的内容，仅支持PEM格式。
+    *  **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
-    * @return string
+    * @return string|null
     */
     public function getTrustedCert()
     {
@@ -238,7 +268,7 @@ class ClientCert implements ModelInterface, ArrayAccess
     /**
     * Sets trustedCert
     *
-    * @param string $trustedCert 客户端CA证书的内容，仅支持PEM格式。
+    * @param string|null $trustedCert **参数解释：** 客户端CA证书的内容 **约束限制：** 仅支持PEM格式 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -250,7 +280,7 @@ class ClientCert implements ModelInterface, ArrayAccess
 
     /**
     * Gets hosts
-    *  客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    *  **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -262,13 +292,85 @@ class ClientCert implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param string|null $hosts 客户端CA证书指定的域名。   > 1. 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求。   > 2. 最多可配置100个域名，多个域名用“,”或“|”分隔。
+    * @param string|null $hosts **参数解释：** 客户端CA证书指定的域名 **约束限制：** - 如果不配置域名，则CDN会放行所有持有该CA证书的客户端请求 - 最多可配置100个域名 - 多个域名用“,”或“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
     public function setHosts($hosts)
     {
         $this->container['hosts'] = $hosts;
+        return $this;
+    }
+
+    /**
+    * Gets trustedCerts
+    *  **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\ClientCertTrustedCerts[]|null
+    */
+    public function getTrustedCerts()
+    {
+        return $this->container['trustedCerts'];
+    }
+
+    /**
+    * Sets trustedCerts
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ClientCertTrustedCerts[]|null $trustedCerts **参数解释：** 多证书场景下客户端CA证书列表 **约束限制：** 不涉及
+    *
+    * @return $this
+    */
+    public function setTrustedCerts($trustedCerts)
+    {
+        $this->container['trustedCerts'] = $trustedCerts;
+        return $this;
+    }
+
+    /**
+    * Gets smTrustedCerts
+    *  **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\ClientCertTrustedCerts[]|null
+    */
+    public function getSmTrustedCerts()
+    {
+        return $this->container['smTrustedCerts'];
+    }
+
+    /**
+    * Sets smTrustedCerts
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\ClientCertTrustedCerts[]|null $smTrustedCerts **参数解释：** 国密证书场景下客户端CA证书列表 **约束限制：** - 开启国密证书后配置 - 仅支持PEM格式
+    *
+    * @return $this
+    */
+    public function setSmTrustedCerts($smTrustedCerts)
+    {
+        $this->container['smTrustedCerts'] = $smTrustedCerts;
+        return $this;
+    }
+
+    /**
+    * Gets smCertHosts
+    *  **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getSmCertHosts()
+    {
+        return $this->container['smCertHosts'];
+    }
+
+    /**
+    * Sets smCertHosts
+    *
+    * @param string|null $smCertHosts **参数解释：** 国密证书指定访问的客户端域名 **约束限制：** - 开启国密证书后配置 - 最多可配置100个域名 - 多个域名用“|”分隔  **取值范围：** 不涉及 **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setSmCertHosts($smCertHosts)
+    {
+        $this->container['smCertHosts'] = $smCertHosts;
         return $this;
     }
 

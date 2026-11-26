@@ -27,6 +27,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * repoCount  镜像数量
     * cveAllowlist  cveAllowlist
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'repoCount' => 'int',
-            'cveAllowlist' => '\HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlist'
+            'cveAllowlist' => '\HuaweiCloud\SDK\Swr\V2\Model\CVEAllowlist',
+            'tags' => '\HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * repoCount  镜像数量
     * cveAllowlist  cveAllowlist
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'updatedAt' => null,
         'repoCount' => null,
-        'cveAllowlist' => null
+        'cveAllowlist' => null,
+        'tags' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * repoCount  镜像数量
     * cveAllowlist  cveAllowlist
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'repoCount' => 'repo_count',
-            'cveAllowlist' => 'cve_allowlist'
+            'cveAllowlist' => 'cve_allowlist',
+            'tags' => 'tags'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * repoCount  镜像数量
     * cveAllowlist  cveAllowlist
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'repoCount' => 'setRepoCount',
-            'cveAllowlist' => 'setCveAllowlist'
+            'cveAllowlist' => 'setCveAllowlist',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     * updatedAt  更新时间
     * repoCount  镜像数量
     * cveAllowlist  cveAllowlist
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ModelNamespace implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'repoCount' => 'getRepoCount',
-            'cveAllowlist' => 'getCveAllowlist'
+            'cveAllowlist' => 'getCveAllowlist',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ModelNamespace implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['repoCount'] = isset($data['repoCount']) ? $data['repoCount'] : null;
         $this->container['cveAllowlist'] = isset($data['cveAllowlist']) ? $data['cveAllowlist'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class ModelNamespace implements ModelInterface, ArrayAccess
     public function setCveAllowlist($cveAllowlist)
     {
         $this->container['cveAllowlist'] = $cveAllowlist;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Swr\V2\Model\ResourceTag[]|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

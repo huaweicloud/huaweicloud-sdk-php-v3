@@ -20,16 +20,18 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  域名列表。
+    * domainName  **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
     * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。
-    * certificate  证书内容。
+    * certName  **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificateCategory  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    * certificates  **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -43,21 +45,25 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
             'certName' => 'string',
             'certificate' => 'string',
             'certificateType' => 'int',
-            'expirationTime' => 'int'
+            'expirationTime' => 'int',
+            'certificateCategory' => 'int',
+            'certificates' => '\HuaweiCloud\SDK\Cdn\V2\Model\MultiCertificateBatchVo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  域名列表。
+    * domainName  **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
     * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。
-    * certificate  证书内容。
+    * certName  **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificateCategory  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    * certificates  **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
         'certName' => null,
         'certificate' => null,
         'certificateType' => 'int32',
-        'expirationTime' => 'int64'
+        'expirationTime' => 'int64',
+        'certificateCategory' => 'int32',
+        'certificates' => null
     ];
 
     /**
@@ -97,16 +105,18 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  域名列表。
+    * domainName  **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
     * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。
-    * certificate  证书内容。
+    * certName  **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificateCategory  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    * certificates  **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -120,21 +130,25 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
             'certName' => 'cert_name',
             'certificate' => 'certificate',
             'certificateType' => 'certificate_type',
-            'expirationTime' => 'expiration_time'
+            'expirationTime' => 'expiration_time',
+            'certificateCategory' => 'certificate_category',
+            'certificates' => 'certificates'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  域名列表。
+    * domainName  **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
     * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。
-    * certificate  证书内容。
+    * certName  **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificateCategory  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    * certificates  **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -148,21 +162,25 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
             'certName' => 'setCertName',
             'certificate' => 'setCertificate',
             'certificateType' => 'setCertificateType',
-            'expirationTime' => 'setExpirationTime'
+            'expirationTime' => 'setExpirationTime',
+            'certificateCategory' => 'setCertificateCategory',
+            'certificates' => 'setCertificates'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  域名列表。
+    * domainName  **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsSwitch  https开关(0：\"关闭\"；1：\"设置证书\")。
     * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"HTTP\"(默认)，3：https（自建）。
     * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 。
     * forceRedirectConfig  forceRedirectConfig
     * http2  http2.0（0：关闭；1：开启）
-    * certName  证书名称。
-    * certificate  证书内容。
+    * certName  **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型。取值意义： - 0：自有证书 - 2：SCM证书
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificateCategory  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    * certificates  **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
             'certName' => 'getCertName',
             'certificate' => 'getCertificate',
             'certificateType' => 'getCertificateType',
-            'expirationTime' => 'getExpirationTime'
+            'expirationTime' => 'getExpirationTime',
+            'certificateCategory' => 'getCertificateCategory',
+            'certificates' => 'getCertificates'
     ];
 
     /**
@@ -247,6 +267,8 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
         $this->container['expirationTime'] = isset($data['expirationTime']) ? $data['expirationTime'] : null;
+        $this->container['certificateCategory'] = isset($data['certificateCategory']) ? $data['certificateCategory'] : null;
+        $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
     }
 
     /**
@@ -276,7 +298,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets domainName
-    *  域名列表。
+    *  **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string
     */
@@ -288,7 +310,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets domainName
     *
-    * @param string $domainName 域名列表。
+    * @param string $domainName **参数解释：** 域名列表 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -420,7 +442,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets certName
-    *  证书名称。
+    *  **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -432,7 +454,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets certName
     *
-    * @param string|null $certName 证书名称。
+    * @param string|null $certName **参数解释：** 证书名称 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -444,7 +466,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets certificate
-    *  证书内容。
+    *  **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -456,7 +478,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets certificate
     *
-    * @param string|null $certificate 证书内容。
+    * @param string|null $certificate **参数解释：** 证书内容 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -492,7 +514,7 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
 
     /**
     * Gets expirationTime
-    *  证书过期时间。
+    *  **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -504,13 +526,61 @@ class UpdateDomainMultiCertificatesResponseBodyContent implements ModelInterface
     /**
     * Sets expirationTime
     *
-    * @param int|null $expirationTime 证书过期时间。
+    * @param int|null $expirationTime **参数解释：** 证书最近过期时间，Unix时间戳格式，单位为毫秒 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
     public function setExpirationTime($expirationTime)
     {
         $this->container['expirationTime'] = $expirationTime;
+        return $this;
+    }
+
+    /**
+    * Gets certificateCategory
+    *  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    *
+    * @return int|null
+    */
+    public function getCertificateCategory()
+    {
+        return $this->container['certificateCategory'];
+    }
+
+    /**
+    * Sets certificateCategory
+    *
+    * @param int|null $certificateCategory **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 国际证书 - 1: 国密证书  **默认取值：** 不涉及
+    *
+    * @return $this
+    */
+    public function setCertificateCategory($certificateCategory)
+    {
+        $this->container['certificateCategory'] = $certificateCategory;
+        return $this;
+    }
+
+    /**
+    * Gets certificates
+    *  **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\MultiCertificateBatchVo[]|null
+    */
+    public function getCertificates()
+    {
+        return $this->container['certificates'];
+    }
+
+    /**
+    * Sets certificates
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\MultiCertificateBatchVo[]|null $certificates **参数解释：** 双证书场景下的证书列表 **约束限制：** 不涉及
+    *
+    * @return $this
+    */
+    public function setCertificates($certificates)
+    {
+        $this->container['certificates'] = $certificates;
         return $this;
     }
 

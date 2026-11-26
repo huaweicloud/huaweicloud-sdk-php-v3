@@ -21,9 +21,9 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  **参数解释：** 规则ID，可以通过查询规则引擎列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     * status  **参数解释：** 是否开启规则 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
-    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     * conditions  conditions
     * actions  **参数解释：** 满足规则条件后执行的动作 **约束限制：** 不涉及
     *
@@ -41,9 +41,9 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  **参数解释：** 规则ID，可以通过查询规则引擎列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     * status  **参数解释：** 是否开启规则 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
-    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     * conditions  conditions
     * actions  **参数解释：** 满足规则条件后执行的动作 **约束限制：** 不涉及
     *
@@ -82,9 +82,9 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ruleId  **参数解释：** 规则ID，可以通过查询规则引擎列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     * status  **参数解释：** 是否开启规则 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
-    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     * conditions  conditions
     * actions  **参数解释：** 满足规则条件后执行的动作 **约束限制：** 不涉及
     *
@@ -102,9 +102,9 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  **参数解释：** 规则ID，可以通过查询规则引擎列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     * status  **参数解释：** 是否开启规则 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
-    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     * conditions  conditions
     * actions  **参数解释：** 满足规则条件后执行的动作 **约束限制：** 不涉及
     *
@@ -122,9 +122,9 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  **参数解释：** 规则ID，可以通过查询规则引擎列表接口获取 **约束限制：** 不涉及 **取值范围：** 不涉及 **默认取值：** 不涉及
-    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    * name  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     * status  **参数解释：** 是否开启规则 **约束限制：** 不涉及 **取值范围：** - on: 开启 - off: 关闭  **默认取值：** 不涉及
-    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    * priority  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     * conditions  conditions
     * actions  **参数解释：** 满足规则条件后执行的动作 **约束限制：** 不涉及
     *
@@ -268,7 +268,7 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    *  **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     *
     * @return string
     */
@@ -280,7 +280,7 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** 1-50个字符 **默认取值：** 不涉及
+    * @param string $name **参数解释：** 规则名称 **约束限制：** 不涉及 **取值范围：** - 1-50个字符 - 由中文字符、英文字母、数字及“-”、“_”组成  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    *  **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     *
     * @return int
     */
@@ -328,7 +328,7 @@ class FullUpdateRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int $priority **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-100 **默认取值：** 不涉及
+    * @param int $priority **参数解释：** 规则的优先级，数值越大，优先级越高 **约束限制：** 优先级不能重复 **取值范围：** 1-1000 **默认取值：** 不涉及
     *
     * @return $this
     */

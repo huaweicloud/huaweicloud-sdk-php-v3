@@ -20,17 +20,18 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    * domainName  **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * httpsSwitch  **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
+    * accessOriginWay  **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
+    * forceRedirectHttps  **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
-    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
-    * scmCertificateId  SCM证书id
+    * http2  **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
+    * certName  **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
+    * certificate  **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
+    * privateKey  **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificateType  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
+    * scmCertificateId  **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificates  **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -45,22 +46,24 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certificate' => 'string',
             'privateKey' => 'string',
             'certificateType' => 'int',
-            'scmCertificateId' => 'string'
+            'scmCertificateId' => 'string',
+            'certificates' => '\HuaweiCloud\SDK\Cdn\V2\Model\MultiCertificateBatchVo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    * domainName  **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * httpsSwitch  **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
+    * accessOriginWay  **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
+    * forceRedirectHttps  **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
-    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
-    * scmCertificateId  SCM证书id
+    * http2  **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
+    * certName  **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
+    * certificate  **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
+    * privateKey  **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificateType  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
+    * scmCertificateId  **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificates  **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
         'certificate' => null,
         'privateKey' => null,
         'certificateType' => 'int32',
-        'scmCertificateId' => null
+        'scmCertificateId' => null,
+        'certificates' => null
     ];
 
     /**
@@ -101,17 +105,18 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    * domainName  **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * httpsSwitch  **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
+    * accessOriginWay  **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
+    * forceRedirectHttps  **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
-    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
-    * scmCertificateId  SCM证书id
+    * http2  **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
+    * certName  **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
+    * certificate  **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
+    * privateKey  **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificateType  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
+    * scmCertificateId  **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificates  **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -126,22 +131,24 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certificate' => 'certificate',
             'privateKey' => 'private_key',
             'certificateType' => 'certificate_type',
-            'scmCertificateId' => 'scm_certificate_id'
+            'scmCertificateId' => 'scm_certificate_id',
+            'certificates' => 'certificates'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    * domainName  **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * httpsSwitch  **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
+    * accessOriginWay  **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
+    * forceRedirectHttps  **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
-    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
-    * scmCertificateId  SCM证书id
+    * http2  **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
+    * certName  **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
+    * certificate  **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
+    * privateKey  **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificateType  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
+    * scmCertificateId  **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificates  **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -156,22 +163,24 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certificate' => 'setCertificate',
             'privateKey' => 'setPrivateKey',
             'certificateType' => 'setCertificateType',
-            'scmCertificateId' => 'setScmCertificateId'
+            'scmCertificateId' => 'setScmCertificateId',
+            'certificates' => 'setCertificates'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainName  域名列表,逗号分割，上限50个域名
-    * httpsSwitch  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
-    * accessOriginWay  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
-    * forceRedirectHttps  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    * domainName  **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * httpsSwitch  **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
+    * accessOriginWay  **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
+    * forceRedirectHttps  **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     * forceRedirectConfig  forceRedirectConfig
-    * http2  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
-    * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
-    * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
-    * scmCertificateId  SCM证书id
+    * http2  **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
+    * certName  **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
+    * certificate  **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
+    * privateKey  **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificateType  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
+    * scmCertificateId  **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
+    * certificates  **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certificate' => 'getCertificate',
             'privateKey' => 'getPrivateKey',
             'certificateType' => 'getCertificateType',
-            'scmCertificateId' => 'getScmCertificateId'
+            'scmCertificateId' => 'getScmCertificateId',
+            'certificates' => 'getCertificates'
     ];
 
     /**
@@ -258,6 +268,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
         $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
         $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
+        $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
     }
 
     /**
@@ -290,7 +301,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets domainName
-    *  域名列表,逗号分割，上限50个域名
+    *  **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string
     */
@@ -302,7 +313,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets domainName
     *
-    * @param string $domainName 域名列表,逗号分割，上限50个域名
+    * @param string $domainName **参数解释：** 需要配置HTTPS证书的域名 **约束限制：** - 域名间以“,”分隔 - 最多配置50个域名  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -314,7 +325,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets httpsSwitch
-    *  https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
+    *  **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
     *
     * @return int
     */
@@ -326,7 +337,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets httpsSwitch
     *
-    * @param int $httpsSwitch https开关（0：\"关闭\"；1：\"设置证书\" https_switch为1时，证书参数不能为空）
+    * @param int $httpsSwitch **参数解释：** 证书配置开关 **约束限制：** https_switch为1时，证书参数不能为空 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -338,7 +349,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets accessOriginWay
-    *  回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
+    *  **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
     *
     * @return int|null
     */
@@ -350,7 +361,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets accessOriginWay
     *
-    * @param int|null $accessOriginWay 回源方式:1：\"回源跟随\"；2：\"http\"(默认)，3：\"https\"  为空值时默认设置为http
+    * @param int|null $accessOriginWay **参数解释：** 回源协议 **约束限制：** 不涉及 **取值范围：** - 1: 协议跟随 - 2: http协议 - 3: https协议  **默认取值：** 2: http协议
     *
     * @return $this
     */
@@ -362,7 +373,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets forceRedirectHttps
-    *  强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    *  **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     *
     * @return int|null
     */
@@ -374,7 +385,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets forceRedirectHttps
     *
-    * @param int|null $forceRedirectHttps 强制跳转HTTPS（0：不强制；1：强制） 为空值时默认设置为关闭。（此参数即将下线，建议使用force_redirect_config修改配置）
+    * @param int|null $forceRedirectHttps **参数解释：** 是否开启HTTPS强制跳转，强制客户端使用HTTPS协议访问CDN节点 > 此参数即将下线，建议使用force_redirect_config修改配置  **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     *
     * @return $this
     */
@@ -410,7 +421,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets http2
-    *  http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
+    *  **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     *
     * @return int|null
     */
@@ -422,7 +433,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets http2
     *
-    * @param int|null $http2 http2.0（0：关闭；1：开启） 为空值时默认设置为关闭
+    * @param int|null $http2 **参数解释：** HTTP/2开关，支持客户端采用HTTP/2协议访问CDN节点 **约束限制：** 不涉及 **取值范围：** - 0: 关闭 - 1: 开启  **默认取值：** 0: 关闭
     *
     * @return $this
     */
@@ -434,7 +445,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets certName
-    *  证书名称（设置证书必填）（长度限制为3-64字符）。
+    *  **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -446,7 +457,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets certName
     *
-    * @param string|null $certName 证书名称（设置证书必填）（长度限制为3-64字符）。
+    * @param string|null $certName **参数解释：** 证书名称 **约束限制：** https_switch为1时，该参数必填 **取值范围：** 3-64个字符，由英文字母、数字及“-”、“_”、空格组成 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -458,7 +469,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets certificate
-    *  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    *  **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -470,7 +481,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets certificate
     *
-    * @param string|null $certificate HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * @param string|null $certificate **参数解释：** SSL证书内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传 - 需要传入完整证书链  **取值范围：** 证书链长度不超过20KB **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -482,7 +493,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets privateKey
-    *  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    *  **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -494,7 +505,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
+    * @param string|null $privateKey **参数解释：** SSL证书私钥内容 **约束限制：** - 仅支持PEM编码格式 - 不启用证书则无需输入 - 初次配置证书时必传  **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
@@ -506,7 +517,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets certificateType
-    *  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    *  **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
     *
     * @return int|null
     */
@@ -518,7 +529,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets certificateType
     *
-    * @param int|null $certificateType 证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    * @param int|null $certificateType **参数解释：** 证书类型 **约束限制：** 不涉及 **取值范围：** - 0: 自有证书 - 2: SCM证书  **默认取值：** 0: 自有证书
     *
     * @return $this
     */
@@ -530,7 +541,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets scmCertificateId
-    *  SCM证书id
+    *  **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -542,13 +553,37 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets scmCertificateId
     *
-    * @param string|null $scmCertificateId SCM证书id
+    * @param string|null $scmCertificateId **参数解释：** SCM证书ID，可使用云证书与管理服务（CCM）的查询证书列表接口获取 **约束限制：** 配置SCM证书时必传 **取值范围：** 不涉及 **默认取值：** 不涉及
     *
     * @return $this
     */
     public function setScmCertificateId($scmCertificateId)
     {
         $this->container['scmCertificateId'] = $scmCertificateId;
+        return $this;
+    }
+
+    /**
+    * Gets certificates
+    *  **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\MultiCertificateBatchVo[]|null
+    */
+    public function getCertificates()
+    {
+        return $this->container['certificates'];
+    }
+
+    /**
+    * Sets certificates
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\MultiCertificateBatchVo[]|null $certificates **参数解释：** 配置国际证书和国密证书双证书场景下的证书列表 **约束限制：** - 配置双证书时最多传2个证书，只能包含1个国际证书和1个国密证书 - 使用双证书配置时，cert_name/certificate/private_key等单证书参数不可再使用  **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setCertificates($certificates)
+    {
+        $this->container['certificates'] = $certificates;
         return $this;
     }
 

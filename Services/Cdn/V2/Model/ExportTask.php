@@ -22,7 +22,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskId  **参数解释：** 导出任务id **取值范围：** 不涉及
     * taskName  **参数解释：** 导出任务名称 **取值范围：** 不涉及
-    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     * downloadLink  **参数解释：** 下载链接 **取值范围：** 不涉及
     * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
     * updateTime  **参数解释：** 最近更新时间 **取值范围：** 不涉及
@@ -42,7 +42,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * taskId  **参数解释：** 导出任务id **取值范围：** 不涉及
     * taskName  **参数解释：** 导出任务名称 **取值范围：** 不涉及
-    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     * downloadLink  **参数解释：** 下载链接 **取值范围：** 不涉及
     * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
     * updateTime  **参数解释：** 最近更新时间 **取值范围：** 不涉及
@@ -83,7 +83,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskId  **参数解释：** 导出任务id **取值范围：** 不涉及
     * taskName  **参数解释：** 导出任务名称 **取值范围：** 不涉及
-    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     * downloadLink  **参数解释：** 下载链接 **取值范围：** 不涉及
     * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
     * updateTime  **参数解释：** 最近更新时间 **取值范围：** 不涉及
@@ -103,7 +103,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  **参数解释：** 导出任务id **取值范围：** 不涉及
     * taskName  **参数解释：** 导出任务名称 **取值范围：** 不涉及
-    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     * downloadLink  **参数解释：** 下载链接 **取值范围：** 不涉及
     * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
     * updateTime  **参数解释：** 最近更新时间 **取值范围：** 不涉及
@@ -123,7 +123,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  **参数解释：** 导出任务id **取值范围：** 不涉及
     * taskName  **参数解释：** 导出任务名称 **取值范围：** 不涉及
-    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    * status  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     * downloadLink  **参数解释：** 下载链接 **取值范围：** 不涉及
     * createTime  **参数解释：** 创建时间 **取值范围：** 不涉及
     * updateTime  **参数解释：** 最近更新时间 **取值范围：** 不涉及
@@ -289,7 +289,7 @@ class ExportTask implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    *  **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class ExportTask implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败 **默认取值：** 不涉及
+    * @param string|null $status **参数解释：** 任务状态 **约束限制：** 不涉及 **取值范围：** - success: 成功 - fail: 失败  **默认取值：** 不涉及
     *
     * @return $this
     */

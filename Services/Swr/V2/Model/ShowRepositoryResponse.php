@@ -37,7 +37,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
     * internalPath  镜像pull路径，格式为 10.125.0.198:20202/namespace/repository
     * created  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * priority  镜像排序优先级
     *
     * @var string[]
@@ -81,7 +81,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
     * internalPath  镜像pull路径，格式为 10.125.0.198:20202/namespace/repository
     * created  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * priority  镜像排序优先级
     *
     * @var string[]
@@ -146,7 +146,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
     * internalPath  镜像pull路径，格式为 10.125.0.198:20202/namespace/repository
     * created  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * priority  镜像排序优先级
     *
     * @var string[]
@@ -190,7 +190,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
     * internalPath  镜像pull路径，格式为 10.125.0.198:20202/namespace/repository
     * created  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * priority  镜像排序优先级
     *
     * @var string[]
@@ -234,7 +234,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
     * internalPath  镜像pull路径，格式为 10.125.0.198:20202/namespace/repository
     * created  仓库创建时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
     * updated  仓库更新时间，UTC日期格式，时间为UTC标准时间，用户需要根据本地时间计算偏移量；如东8区需要+8:00
-    * domainId  帐号ID
+    * domainId  账号ID
     * priority  镜像排序优先级
     *
     * @var string[]
@@ -746,7 +746,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  帐号ID
+    *  账号ID
     *
     * @return string|null
     */
@@ -758,7 +758,7 @@ class ShowRepositoryResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 帐号ID
+    * @param string|null $domainId 账号ID
     *
     * @return $this
     */

@@ -10100,7 +10100,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 获取当前目录下的api列表
+     * 获取当前目录下的API列表
      *
      * 获取当前目录下的API列表。
      * 
@@ -10177,7 +10177,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询指定api 应用调用topN
+     * 查询指定API应用调用TopN
      *
      * 查询指定API应用调用TopN。
      * 
@@ -10346,9 +10346,9 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 获取网关实例(专享版)
+     * 获取网关实例（专享版）
      *
-     * 获取网关实例(专享版)。
+     * 获取网关实例（专享版）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10423,7 +10423,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询api 服务调用topN
+     * 查询API服务调用TopN
      *
      * 查询API服务调用TopN。
      * 
@@ -10746,9 +10746,9 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询app 服务使用topN
+     * 查询APP服务使用TopN
      *
-     * 查询app 服务使用topN。
+     * 查询APP服务使用TopN。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11848,6 +11848,83 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataArtsStudioInstancesResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataArtsStudioInstancesRequest');
+    }
+
+    /**
+     * 获取审批人列表
+     *
+     * 获取审批人列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDataServiceApprovers($request)
+    {
+        return $this->listDataServiceApproversWithHttpInfo($request);
+    }
+
+    public function listDataServiceApproversWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/service/authorizeapply/approver';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['page'] !== null) {
+            $queryParams['page'] = $localVarParams['page'];
+        }
+        if ($localVarParams['size'] !== null) {
+            $queryParams['size'] = $localVarParams['size'];
+        }
+        if ($localVarParams['approverName'] !== null) {
+            $queryParams['approver_name'] = $localVarParams['approverName'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams[$arr['dlmType']] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams[$arr['contentType']] = $localVarParams['contentType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceApproversResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceApproversRequest');
     }
 
     /**
@@ -17837,7 +17914,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 批量移动api至新目录
+     * 批量移动API至新目录
      *
      * 批量移动API至新目录。
      * 
@@ -17911,7 +17988,7 @@ class DataArtsStudioClient extends Client
      * 移动当前目录至新目录
      *
      * 移动当前目录至新目录。
-     * 移动目录的的同时会移动其下的所有子目录与api。
+     * 移动目录的的同时会移动其下的所有子目录与API。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19674,7 +19751,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 通过路径获取id
+     * 通过路径获取ID
      *
      * 通过路径获取ID。
      * 
@@ -20270,7 +20347,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询指定api 仪表板数据详情
+     * 查询指定API仪表板数据详情
      *
      * 查询指定API仪表板数据详情。
      * 
@@ -20353,7 +20430,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询api 仪表板数据详情
+     * 查询API仪表板数据详情
      *
      * 查询API仪表板数据详情。
      * 
@@ -20439,7 +20516,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询api 统计数据详情
+     * 查询API统计数据详情
      *
      * 查询API统计数据详情。
      * 
@@ -20742,7 +20819,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询app 仪表板数据详情
+     * 查询APP仪表板数据详情
      *
      * 查询APP仪表板数据详情。
      * 
@@ -20825,7 +20902,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查询app 统计数据详情
+     * 查询APP统计数据详情
      *
      * 查询APP统计数据详情。
      * 
@@ -24110,7 +24187,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 通过id获取路径
+     * 通过ID获取路径
      *
      * 通过ID获取路径。
      * 
@@ -24187,9 +24264,9 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 通过id获取路径对象
+     * 通过目录ID获取路径对象
      *
-     * 通过目录id获取从根目录至当前目录链路上每一层的路径信息。
+     * 通过目录ID获取从根目录至当前目录链路上每一层的路径信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -29174,9 +29251,9 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * API授权操作(授权/取消授权/申请/续约)
+     * API授权操作（授权/取消授权/申请/续约）
      *
-     * API授权操作(授权/取消授权/申请/续约)。
+     * API授权操作（授权/取消授权/申请/续约）。
      * - API主动授权：  API审核人可发起，API主动授权成功后，在有效期内，APP即可访问该API。API授权包含授权和续约两部分功能。
      * * 授权：授权会给予APP在有效期内访问API的权利。
      * * 续约：续约会更新授权有效期，仅支持延长有效期，不能减少。
@@ -29254,7 +29331,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 批量授权API(专享版)
+     * 批量授权API（专享版）
      *
      * APP创建成功后，还不能访问API，如果想要访问某个API，需要将该API授权给APP。API主动授权成功后，在有效期内，APP即可访问该API。
      * API授权包含授权和续约两部分功能。
@@ -29553,7 +29630,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * API操作(下线/停用/恢复)
+     * API操作（下线/停用/恢复）
      *
      * 下线API、停用API或恢复API。
      * - 下线API。将已发布的API下线。下线后，所有授权关系都会被解除，API将无法再被调用。
@@ -29636,7 +29713,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 导出包含API信息的excel文件
+     * 导出包含API信息的EXCEL文件
      *
      * 导出包含API信息的EXCEL文件。
      * 
@@ -29704,7 +29781,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 下载excel模板
+     * 下载EXCEL模板
      *
      * 下载EXCEL模板。
      * 
@@ -29769,7 +29846,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 全量导出包含API的excel压缩文件
+     * 全量导出包含API的EXCEL压缩文件
      *
      * 全量导出包含API的EXCEL压缩文件。
      * 
@@ -29840,7 +29917,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 导入包含API信息的excel文件
+     * 导入包含API信息的EXCEL文件
      *
      * 导入包含API信息的EXCEL文件。
      * 
@@ -30020,7 +30097,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查看API不同操作对应的实例信息(专享版)
+     * 查看API不同操作对应的实例信息（专享版）
      *
      * 查看API不同操作对应的实例信息。
      * 
@@ -30192,7 +30269,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查看API调试信息(专享版)
+     * 查看API调试信息（专享版）
      *
      * 查看API在不同集群上的调试信息。
      * 
@@ -30269,7 +30346,7 @@ class DataArtsStudioClient extends Client
     }
 
     /**
-     * 查看API发布信息(专享版)
+     * 查看API发布信息（专享版）
      *
      * 查看API在不同集群上的发布信息。
      * API在集群上进行过操作后会存在发布信息，例如调试、注册类发布等。

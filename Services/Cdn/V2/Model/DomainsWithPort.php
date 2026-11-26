@@ -20,17 +20,17 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  加速域名ID。
-    * domainName  加速域名。
+    * id  **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
-    * userDomainId  域名所属用户的domain_id。
+    * userDomainId  **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
-    * cname  加速域名对应的CNAME。
-    * sources  源站配置。
+    * cname  **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * sources  **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
-    * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * createTime  **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * modifyTime  **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
@@ -39,8 +39,10 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
     * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
     * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * lockedReason  **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * cnames  **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * tags  **参数解释：** 标签信息 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -65,22 +67,24 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'originStatus' => 'string',
             'bannedReason' => 'string',
             'lockedReason' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'cnames' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Cdn\V2\Model\EpResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  加速域名ID。
-    * domainName  加速域名。
+    * id  **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
-    * userDomainId  域名所属用户的domain_id。
+    * userDomainId  **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
-    * cname  加速域名对应的CNAME。
-    * sources  源站配置。
+    * cname  **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * sources  **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
-    * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * createTime  **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * modifyTime  **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
@@ -89,8 +93,10 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
     * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
     * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * lockedReason  **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * cnames  **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * tags  **参数解释：** 标签信息 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -115,7 +121,9 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
         'originStatus' => null,
         'bannedReason' => null,
         'lockedReason' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'cnames' => null,
+        'tags' => null
     ];
 
     /**
@@ -141,17 +149,17 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  加速域名ID。
-    * domainName  加速域名。
+    * id  **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
-    * userDomainId  域名所属用户的domain_id。
+    * userDomainId  **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
-    * cname  加速域名对应的CNAME。
-    * sources  源站配置。
+    * cname  **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * sources  **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
-    * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * createTime  **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * modifyTime  **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
@@ -160,8 +168,10 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
     * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
     * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * lockedReason  **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * cnames  **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * tags  **参数解释：** 标签信息 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -186,22 +196,24 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'originStatus' => 'origin_status',
             'bannedReason' => 'banned_reason',
             'lockedReason' => 'locked_reason',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'cnames' => 'cnames',
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  加速域名ID。
-    * domainName  加速域名。
+    * id  **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
-    * userDomainId  域名所属用户的domain_id。
+    * userDomainId  **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
-    * cname  加速域名对应的CNAME。
-    * sources  源站配置。
+    * cname  **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * sources  **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
-    * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * createTime  **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * modifyTime  **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
@@ -210,8 +222,10 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
     * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
     * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * lockedReason  **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * cnames  **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * tags  **参数解释：** 标签信息 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -236,22 +250,24 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'originStatus' => 'setOriginStatus',
             'bannedReason' => 'setBannedReason',
             'lockedReason' => 'setLockedReason',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'cnames' => 'setCnames',
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  加速域名ID。
-    * domainName  加速域名。
+    * id  **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * businessType  域名业务类型，若为web，则表示类型为网站加速；若为download，则表示业务类型为文件下载加速；若为video，则表示业务类型为点播加速；若为wholeSite，则表示类型为全站加速。
-    * userDomainId  域名所属用户的domain_id。
+    * userDomainId  **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * domainStatus  加速域名状态。取值意义： - online表示“已开启” - offline表示“已停用” - configuring表示“配置中” - configure_failed表示“配置失败” - checking表示“审核中” - check_failed表示“审核未通过” - deleting表示“删除中”。
-    * cname  加速域名对应的CNAME。
-    * sources  源站配置。
+    * cname  **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * sources  **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     * domainOriginHost  domainOriginHost
     * httpsStatus  是否开启HTTPS加速。 0：代表未开启HTTPS加速； 1：代表开启HTTPS加速，且回源方式为协议跟随； 2：代表开启HTTPS加速，且回源方式为HTTP； 3：代表开启HTTPS加速，且回源方式为HTTPS。
-    * createTime  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
-    * modifyTime  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * createTime  **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * modifyTime  **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * disabled  封禁状态（0代表未禁用；1代表禁用）。
     * locked  锁定状态（0代表未锁定；1代表锁定）。
     * autoRefreshPreheat  自动刷新预热（0代表关闭；1代表打开）。
@@ -260,8 +276,10 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     * followStatus  回源跟随状态（off代表关闭 on代表开启）。
     * originStatus  是否暂停源站回源（off代表关闭 on代表开启）。
     * bannedReason  域名禁用原因。 1：该域名涉嫌违规内容（涉黄/涉赌/涉毒/涉政）已被禁用； 2：该域名因备案失效已被禁用； 3：该域名遭受攻击，已被禁用； 150：该域名涉嫌违规内容涉黄已被禁用； 151：该域名涉嫌违规内容涉政已被禁用； 152：该域名涉嫌违规内容涉暴已被禁用； 153：该域名涉嫌违规内容涉赌已被禁用。
-    * lockedReason  域名锁定原因（Changing the config, please wait）。
-    * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * lockedReason  **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * enterpriseProjectId  **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * cnames  **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * tags  **参数解释：** 标签信息 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -286,7 +304,9 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
             'originStatus' => 'getOriginStatus',
             'bannedReason' => 'getBannedReason',
             'lockedReason' => 'getLockedReason',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'cnames' => 'getCnames',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -385,6 +405,8 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
         $this->container['bannedReason'] = isset($data['bannedReason']) ? $data['bannedReason'] : null;
         $this->container['lockedReason'] = isset($data['lockedReason']) ? $data['lockedReason'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['cnames'] = isset($data['cnames']) ? $data['cnames'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -419,7 +441,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  加速域名ID。
+    *  **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -431,7 +453,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 加速域名ID。
+    * @param string|null $id **参数解释：** 加速域名ID。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -443,7 +465,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  加速域名。
+    *  **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -455,7 +477,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 加速域名。
+    * @param string|null $domainName **参数解释：** 加速域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -491,7 +513,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets userDomainId
-    *  域名所属用户的domain_id。
+    *  **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -503,7 +525,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets userDomainId
     *
-    * @param string|null $userDomainId 域名所属用户的domain_id。
+    * @param string|null $userDomainId **参数解释：** 域名所属用户的domain_id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -539,7 +561,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets cname
-    *  加速域名对应的CNAME。
+    *  **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -551,7 +573,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets cname
     *
-    * @param string|null $cname 加速域名对应的CNAME。
+    * @param string|null $cname **参数解释：** 加速域名对应的CNAME。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -563,7 +585,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets sources
-    *  源站配置。
+    *  **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\SourceWithPort[]|null
     */
@@ -575,7 +597,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourceWithPort[]|null $sources 源站配置。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourceWithPort[]|null $sources **参数解释：** 域名的源站，包含源站类型、端口等信息。 **约束限制：** 不涉及
     *
     * @return $this
     */
@@ -635,7 +657,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    *  **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -647,7 +669,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * @param int|null $createTime **参数解释：** 域名创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -659,7 +681,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifyTime
-    *  域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    *  **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -671,7 +693,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets modifyTime
     *
-    * @param int|null $modifyTime 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
+    * @param int|null $modifyTime **参数解释：** 域名修改时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -875,7 +897,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets lockedReason
-    *  域名锁定原因（Changing the config, please wait）。
+    *  **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -887,7 +909,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets lockedReason
     *
-    * @param string|null $lockedReason 域名锁定原因（Changing the config, please wait）。
+    * @param string|null $lockedReason **参数解释：** 域名锁定原因（Changing the config, please wait）。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -899,7 +921,7 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    *  **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -911,13 +933,61 @@ class DomainsWithPort implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，不传表示查询默认项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
+    * @param string|null $enterpriseProjectId **参数解释：** 企业项目ID。 您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets cnames
+    *  **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    *
+    * @return string|null
+    */
+    public function getCnames()
+    {
+        return $this->container['cnames'];
+    }
+
+    /**
+    * Sets cnames
+    *
+    * @param string|null $cnames **参数解释：** 加速域名对应的CNAME，多个CNAME以英文逗号分隔 **约束限制：** 不涉及 **取值范围：** 不涉及
+    *
+    * @return $this
+    */
+    public function setCnames($cnames)
+    {
+        $this->container['cnames'] = $cnames;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数解释：** 标签信息 **约束限制：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\EpResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\EpResourceTag[]|null $tags **参数解释：** 标签信息 **约束限制：** 不涉及
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

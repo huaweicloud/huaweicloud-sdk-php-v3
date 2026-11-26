@@ -20,17 +20,18 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  域名id。
-    * domainName  绑定该证书的域名。
-    * certName  证书名字。
-    * certificate  证书内容。
-    * privateKey  私钥内容。
+    * domainId  **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certName  **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * privateKey  **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
+    * certificates  **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -45,22 +46,24 @@ class HttpsDetail implements ModelInterface, ArrayAccess
             'httpsStatus' => 'int',
             'forceRedirectHttps' => 'int',
             'forceRedirectConfig' => '\HuaweiCloud\SDK\Cdn\V2\Model\ForceRedirect',
-            'http2' => 'int'
+            'http2' => 'int',
+            'certificates' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsDetailCertificates[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  域名id。
-    * domainName  绑定该证书的域名。
-    * certName  证书名字。
-    * certificate  证书内容。
-    * privateKey  私钥内容。
+    * domainId  **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certName  **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * privateKey  **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
+    * certificates  **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class HttpsDetail implements ModelInterface, ArrayAccess
         'httpsStatus' => 'int32',
         'forceRedirectHttps' => 'int32',
         'forceRedirectConfig' => null,
-        'http2' => 'int32'
+        'http2' => 'int32',
+        'certificates' => null
     ];
 
     /**
@@ -101,17 +105,18 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  域名id。
-    * domainName  绑定该证书的域名。
-    * certName  证书名字。
-    * certificate  证书内容。
-    * privateKey  私钥内容。
+    * domainId  **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certName  **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * privateKey  **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
+    * certificates  **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -126,22 +131,24 @@ class HttpsDetail implements ModelInterface, ArrayAccess
             'httpsStatus' => 'https_status',
             'forceRedirectHttps' => 'force_redirect_https',
             'forceRedirectConfig' => 'force_redirect_config',
-            'http2' => 'http2'
+            'http2' => 'http2',
+            'certificates' => 'certificates'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  域名id。
-    * domainName  绑定该证书的域名。
-    * certName  证书名字。
-    * certificate  证书内容。
-    * privateKey  私钥内容。
+    * domainId  **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certName  **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * privateKey  **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
+    * certificates  **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -156,22 +163,24 @@ class HttpsDetail implements ModelInterface, ArrayAccess
             'httpsStatus' => 'setHttpsStatus',
             'forceRedirectHttps' => 'setForceRedirectHttps',
             'forceRedirectConfig' => 'setForceRedirectConfig',
-            'http2' => 'setHttp2'
+            'http2' => 'setHttp2',
+            'certificates' => 'setCertificates'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  域名id。
-    * domainName  绑定该证书的域名。
-    * certName  证书名字。
-    * certificate  证书内容。
-    * privateKey  私钥内容。
+    * domainId  **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * domainName  **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certName  **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * certificate  **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * privateKey  **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * certificateType  证书类型，0：自有证书，1：云托管证书，2：SCM证书。
-    * expirationTime  证书过期时间。
+    * expirationTime  **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * httpsStatus  HTTPS证书是否启用，取值0：不启用；1：启用HTTPS加速并协议跟随回源；2：启用HTTPS加速并HTTP回源。
     * forceRedirectHttps  客户端请求是否强制重定向。1是，0否。（如果为2，表示强制跳转HTTP）
     * forceRedirectConfig  forceRedirectConfig
     * http2  是否使用HTTP2.0。（1是，0否。）
+    * certificates  **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class HttpsDetail implements ModelInterface, ArrayAccess
             'httpsStatus' => 'getHttpsStatus',
             'forceRedirectHttps' => 'getForceRedirectHttps',
             'forceRedirectConfig' => 'getForceRedirectConfig',
-            'http2' => 'getHttp2'
+            'http2' => 'getHttp2',
+            'certificates' => 'getCertificates'
     ];
 
     /**
@@ -258,6 +268,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
         $this->container['forceRedirectHttps'] = isset($data['forceRedirectHttps']) ? $data['forceRedirectHttps'] : null;
         $this->container['forceRedirectConfig'] = isset($data['forceRedirectConfig']) ? $data['forceRedirectConfig'] : null;
         $this->container['http2'] = isset($data['http2']) ? $data['http2'] : null;
+        $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
     }
 
     /**
@@ -284,7 +295,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  域名id。
+    *  **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -296,7 +307,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 域名id。
+    * @param string|null $domainId **参数解释：** 域名id。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -308,7 +319,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  绑定该证书的域名。
+    *  **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -320,7 +331,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 绑定该证书的域名。
+    * @param string|null $domainName **参数解释：** 绑定该证书的域名。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -332,7 +343,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets certName
-    *  证书名字。
+    *  **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -344,7 +355,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets certName
     *
-    * @param string|null $certName 证书名字。
+    * @param string|null $certName **参数解释：** 证书名字。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -356,7 +367,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificate
-    *  证书内容。
+    *  **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -368,7 +379,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets certificate
     *
-    * @param string|null $certificate 证书内容。
+    * @param string|null $certificate **参数解释：** 证书内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -380,7 +391,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets privateKey
-    *  私钥内容。
+    *  **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -392,7 +403,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets privateKey
     *
-    * @param string|null $privateKey 私钥内容。
+    * @param string|null $privateKey **参数解释：** 私钥内容。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -428,7 +439,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets expirationTime
-    *  证书过期时间。
+    *  **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -440,7 +451,7 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     /**
     * Sets expirationTime
     *
-    * @param int|null $expirationTime 证书过期时间。
+    * @param int|null $expirationTime **参数解释：** 证书过期时间，Unix时间戳格式，单位为毫秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -543,6 +554,30 @@ class HttpsDetail implements ModelInterface, ArrayAccess
     public function setHttp2($http2)
     {
         $this->container['http2'] = $http2;
+        return $this;
+    }
+
+    /**
+    * Gets certificates
+    *  **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\HttpsDetailCertificates[]|null
+    */
+    public function getCertificates()
+    {
+        return $this->container['certificates'];
+    }
+
+    /**
+    * Sets certificates
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\HttpsDetailCertificates[]|null $certificates **参数解释：** 证书列表，配置双证书场景下包含国际证书和国密证书两项 **约束限制：** 不涉及
+    *
+    * @return $this
+    */
+    public function setCertificates($certificates)
+    {
+        $this->container['certificates'] = $certificates;
         return $this;
     }
 

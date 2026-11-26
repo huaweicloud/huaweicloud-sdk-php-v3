@@ -22,9 +22,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
-    * remark  域名备注。
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * remark  **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -43,11 +43,11 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * originRequestUrlRewrite  改写回源URL。
     * flexibleOrigin  高级回源。
     * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
-    * originReceiveTimeout  回源超时时间，单位：秒。
+    * originReceiveTimeout  **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
-    * requestLimitRules  请求限速。
+    * requestLimitRules  requestLimitRules
     * ipFrequencyLimit  ipFrequencyLimit
     * hsts  hsts
     * quic  quic
@@ -59,6 +59,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
     * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    * bandwidthAlarmStrategy  bandwidthAlarmStrategy
     *
     * @var string[]
     */
@@ -101,16 +102,17 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'accessAreaFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]',
             'clientCert' => '\HuaweiCloud\SDK\Cdn\V2\Model\ClientCert',
             'httpsTlsVersion' => '\HuaweiCloud\SDK\Cdn\V2\Model\HttpsTlsVersion',
-            'flowLimitStrategy' => '\HuaweiCloud\SDK\Cdn\V2\Model\FlowLimitStrategy[]'
+            'flowLimitStrategy' => '\HuaweiCloud\SDK\Cdn\V2\Model\FlowLimitStrategy[]',
+            'bandwidthAlarmStrategy' => '\HuaweiCloud\SDK\Cdn\V2\Model\BandwidthAlarmStrategy'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
-    * remark  域名备注。
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * remark  **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -129,11 +131,11 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * originRequestUrlRewrite  改写回源URL。
     * flexibleOrigin  高级回源。
     * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
-    * originReceiveTimeout  回源超时时间，单位：秒。
+    * originReceiveTimeout  **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
-    * requestLimitRules  请求限速。
+    * requestLimitRules  requestLimitRules
     * ipFrequencyLimit  ipFrequencyLimit
     * hsts  hsts
     * quic  quic
@@ -145,6 +147,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
     * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    * bandwidthAlarmStrategy  bandwidthAlarmStrategy
     *
     * @var string[]
     */
@@ -187,7 +190,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         'accessAreaFilter' => null,
         'clientCert' => null,
         'httpsTlsVersion' => null,
-        'flowLimitStrategy' => null
+        'flowLimitStrategy' => null,
+        'bandwidthAlarmStrategy' => null
     ];
 
     /**
@@ -215,9 +219,9 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
-    * remark  域名备注。
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * remark  **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -236,11 +240,11 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * originRequestUrlRewrite  改写回源URL。
     * flexibleOrigin  高级回源。
     * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
-    * originReceiveTimeout  回源超时时间，单位：秒。
+    * originReceiveTimeout  **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
-    * requestLimitRules  请求限速。
+    * requestLimitRules  requestLimitRules
     * ipFrequencyLimit  ipFrequencyLimit
     * hsts  hsts
     * quic  quic
@@ -252,6 +256,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
     * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    * bandwidthAlarmStrategy  bandwidthAlarmStrategy
     *
     * @var string[]
     */
@@ -294,16 +299,17 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'accessAreaFilter' => 'access_area_filter',
             'clientCert' => 'client_cert',
             'httpsTlsVersion' => 'https_tls_version',
-            'flowLimitStrategy' => 'flow_limit_strategy'
+            'flowLimitStrategy' => 'flow_limit_strategy',
+            'bandwidthAlarmStrategy' => 'bandwidth_alarm_strategy'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
-    * remark  域名备注。
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * remark  **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -322,11 +328,11 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * originRequestUrlRewrite  改写回源URL。
     * flexibleOrigin  高级回源。
     * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
-    * originReceiveTimeout  回源超时时间，单位：秒。
+    * originReceiveTimeout  **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
-    * requestLimitRules  请求限速。
+    * requestLimitRules  requestLimitRules
     * ipFrequencyLimit  ipFrequencyLimit
     * hsts  hsts
     * quic  quic
@@ -338,6 +344,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
     * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    * bandwidthAlarmStrategy  bandwidthAlarmStrategy
     *
     * @var string[]
     */
@@ -380,16 +387,17 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'accessAreaFilter' => 'setAccessAreaFilter',
             'clientCert' => 'setClientCert',
             'httpsTlsVersion' => 'setHttpsTlsVersion',
-            'flowLimitStrategy' => 'setFlowLimitStrategy'
+            'flowLimitStrategy' => 'setFlowLimitStrategy',
+            'bandwidthAlarmStrategy' => 'setBandwidthAlarmStrategy'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * businessType  业务类型： - web：网站加速； - download：文件下载加速； - video：点播加速； - wholesite：全站加速。
     * serviceArea  服务区域： - mainland_china：中国大陆； - global：全球； - outside_mainland_china：中国大陆境外。
-    * remark  域名备注。
-    * originRequestHeader  回源请求头配置
-    * httpResponseHeader  http header配置
+    * remark  **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
+    * originRequestHeader  回源请求头配置。
+    * httpResponseHeader  http header配置。
     * urlAuth  urlAuth
     * https  https
     * sources  源站配置。
@@ -408,11 +416,11 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * originRequestUrlRewrite  改写回源URL。
     * flexibleOrigin  高级回源。
     * sliceEtagStatus  回源是否校验ETag，on：开启，off：关闭。
-    * originReceiveTimeout  回源超时时间，单位：秒。
+    * originReceiveTimeout  **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     * remoteAuth  remoteAuth
     * websocket  websocket
     * videoSeek  videoSeek
-    * requestLimitRules  请求限速。
+    * requestLimitRules  requestLimitRules
     * ipFrequencyLimit  ipFrequencyLimit
     * hsts  hsts
     * quic  quic
@@ -424,6 +432,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     * clientCert  clientCert
     * httpsTlsVersion  httpsTlsVersion
     * flowLimitStrategy  **参数解释：** 设置用量封顶阈值，当实际用量大于阈值时停用域名，有效预防流量盗刷或恶意攻击带来的高额账单。  > 由于监控数据存在时延，域名将在用量达到阈值后的10分钟左右被停用  **约束限制：** 不涉及
+    * bandwidthAlarmStrategy  bandwidthAlarmStrategy
     *
     * @var string[]
     */
@@ -466,7 +475,8 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
             'accessAreaFilter' => 'getAccessAreaFilter',
             'clientCert' => 'getClientCert',
             'httpsTlsVersion' => 'getHttpsTlsVersion',
-            'flowLimitStrategy' => 'getFlowLimitStrategy'
+            'flowLimitStrategy' => 'getFlowLimitStrategy',
+            'bandwidthAlarmStrategy' => 'getBandwidthAlarmStrategy'
     ];
 
     /**
@@ -566,6 +576,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
         $this->container['clientCert'] = isset($data['clientCert']) ? $data['clientCert'] : null;
         $this->container['httpsTlsVersion'] = isset($data['httpsTlsVersion']) ? $data['httpsTlsVersion'] : null;
         $this->container['flowLimitStrategy'] = isset($data['flowLimitStrategy']) ? $data['flowLimitStrategy'] : null;
+        $this->container['bandwidthAlarmStrategy'] = isset($data['bandwidthAlarmStrategy']) ? $data['bandwidthAlarmStrategy'] : null;
     }
 
     /**
@@ -640,7 +651,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets remark
-    *  域名备注。
+    *  **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return string|null
     */
@@ -652,7 +663,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 域名备注。
+    * @param string|null $remark **参数解释：** 域名备注。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -664,7 +675,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originRequestHeader
-    *  回源请求头配置
+    *  回源请求头配置。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestHeader[]|null
     */
@@ -676,7 +687,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originRequestHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\OriginRequestHeader[]|null $originRequestHeader 回源请求头配置。
     *
     * @return $this
     */
@@ -688,7 +699,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpResponseHeader
-    *  http header配置
+    *  http header配置。
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\HttpResponseHeader[]|null
     */
@@ -700,7 +711,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets httpResponseHeader
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\HttpResponseHeader[]|null $httpResponseHeader http header配置。
     *
     * @return $this
     */
@@ -1144,7 +1155,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets originReceiveTimeout
-    *  回源超时时间，单位：秒。
+    *  **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return int|null
     */
@@ -1156,7 +1167,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets originReceiveTimeout
     *
-    * @param int|null $originReceiveTimeout 回源超时时间，单位：秒。
+    * @param int|null $originReceiveTimeout **参数解释：** 回源超时时间，单位：秒。 **约束限制：** 不涉及 **取值范围：** 不涉及
     *
     * @return $this
     */
@@ -1240,7 +1251,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestLimitRules
-    *  请求限速。
+    *  requestLimitRules
     *
     * @return \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]|null
     */
@@ -1252,7 +1263,7 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets requestLimitRules
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]|null $requestLimitRules 请求限速。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RequestLimitRules[]|null $requestLimitRules requestLimitRules
     *
     * @return $this
     */
@@ -1523,6 +1534,30 @@ class ConfigsGetBody implements ModelInterface, ArrayAccess
     public function setFlowLimitStrategy($flowLimitStrategy)
     {
         $this->container['flowLimitStrategy'] = $flowLimitStrategy;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthAlarmStrategy
+    *  bandwidthAlarmStrategy
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\BandwidthAlarmStrategy|null
+    */
+    public function getBandwidthAlarmStrategy()
+    {
+        return $this->container['bandwidthAlarmStrategy'];
+    }
+
+    /**
+    * Sets bandwidthAlarmStrategy
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\BandwidthAlarmStrategy|null $bandwidthAlarmStrategy bandwidthAlarmStrategy
+    *
+    * @return $this
+    */
+    public function setBandwidthAlarmStrategy($bandwidthAlarmStrategy)
+    {
+        $this->container['bandwidthAlarmStrategy'] = $bandwidthAlarmStrategy;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
-    * status  实例状态, Initial, Creating, Running, Unavailable
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * enterpriseProjectId  企业项目ID
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
-    * status  实例状态, Initial, Creating, Running, Unavailable
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * enterpriseProjectId  企业项目ID
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
-    * status  实例状态, Initial, Creating, Running, Unavailable
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * enterpriseProjectId  企业项目ID
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
-    * status  实例状态, Initial, Creating, Running, Unavailable
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * enterpriseProjectId  企业项目ID
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * offset  起始索引，默认为0。**注意：offset和limit参数需要配套使用。**
     * limit  返回条数，默认为100，最大值为100。**注意：offset和limit参数需要配套使用。**
-    * status  实例状态, Initial, Creating, Running, Unavailable
+    * status  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     * enterpriseProjectId  企业项目ID
     *
     * @var string[]
@@ -163,6 +163,10 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     const STATUS_CREATING = 'Creating';
     const STATUS_RUNNING = 'Running';
     const STATUS_UNAVAILABLE = 'Unavailable';
+    const STATUS_FROZEN = 'Frozen';
+    const STATUS_DEPLOYMENT_ABNORMAL = 'DeploymentAbnormal';
+    const STATUS_PARTIALLY_UNAVAILABLE = 'PartiallyUnavailable';
+    const STATUS_CORE_DIAL_FAILED = 'CoreDialFailed';
     
 
     /**
@@ -177,6 +181,10 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
             self::STATUS_CREATING,
             self::STATUS_RUNNING,
             self::STATUS_UNAVAILABLE,
+            self::STATUS_FROZEN,
+            self::STATUS_DEPLOYMENT_ABNORMAL,
+            self::STATUS_PARTIALLY_UNAVAILABLE,
+            self::STATUS_CORE_DIAL_FAILED,
         ];
     }
 
@@ -288,7 +296,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态, Initial, Creating, Running, Unavailable
+    *  实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     *
     * @return string|null
     */
@@ -300,7 +308,7 @@ class ListInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例状态, Initial, Creating, Running, Unavailable
+    * @param string|null $status 实例状态 取值范围： - Initial：初始化 - Creating：创建中 - Running：运行中 - Unavailable：不可用 - Frozen：已冻结 - DeploymentAbnormal：部署异常 - PartiallyUnavailable：部分不可用 - CoreDialFailed：核心拨测失败
     *
     * @return $this
     */
